@@ -7,17 +7,23 @@ describe('runtime backend configuration', () => {
     window.env = undefined
   })
 
-  it('uses ENDURAIN_HOST from env.js for API calls', () => {
-    window.env = { ENDURAIN_HOST: 'https://endurain.example.test/' }
+  it('uses ZAPFIT_HOST from env.js for API calls', () => {
+    window.env = { ZAPFIT_HOST: 'https://zapfit.example.test/' }
 
-    expect(getApiBaseUrl()).toBe('https://endurain.example.test/api/v1')
+    expect(getApiBaseUrl()).toBe('https://zapfit.example.test/api/v1')
   })
 
-  it('uses ENDURAIN_HOST from env.js for backend assets', () => {
-    window.env = { ENDURAIN_HOST: 'https://endurain.example.test' }
+  it('uses ZAPFIT_HOST from env.js for backend assets', () => {
+    window.env = { ZAPFIT_HOST: 'https://zapfit.example.test' }
 
     expect(getBackendAssetUrl('/server_images/login.png')).toBe(
-      'https://endurain.example.test/server_images/login.png',
+      'https://zapfit.example.test/server_images/login.png',
     )
+  })
+
+  it('falls back to ENDURAIN_HOST for backwards compatibility', () => {
+    window.env = { ENDURAIN_HOST: 'https://legacy.example.test/' }
+
+    expect(getApiBaseUrl()).toBe('https://legacy.example.test/api/v1')
   })
 })

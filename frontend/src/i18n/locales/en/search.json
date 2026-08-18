@@ -1,6 +1,6 @@
 {
   "title": "Search",
-  "subtitle": "Find users, activities, and gear across Endurain.",
+  "subtitle": "Find users, activities, and gear across ZAPFIT.",
   "placeholder": "Search…",
   "clear": "Clear search",
   "scopes": {
@@ -28,7 +28,7 @@
     "inactive": "Inactive"
   },
   "idle": {
-    "title": "Search Endurain",
+    "title": "Search ZAPFIT",
     "description": "Pick what to look for, then start typing to see matches."
   },
   "empty": {

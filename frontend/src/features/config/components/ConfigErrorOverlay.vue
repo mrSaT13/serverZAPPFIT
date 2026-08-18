@@ -14,7 +14,7 @@ const { t } = useI18n()
 const configuredHost = getRuntimeBackendHost()
 
 // Full reload re-runs bootstrap, which re-reads `/env.js` and re-attempts the
-// config fetch — the natural way to recover after fixing ENDURAIN_HOST.
+// config fetch — the natural way to recover after fixing ZAPFIT_HOST.
 function reloadPage(): void {
   window.location.reload()
 }
@@ -42,7 +42,7 @@ function reloadPage(): void {
         <div
           class="mb-4 select-all break-all rounded-card border border-border bg-muted-foreground/10 px-3 py-2 text-left font-mono text-sm"
         >
-          <span class="font-medium">ENDURAIN_HOST</span>:
+          <span class="font-medium">ZAPFIT_HOST</span>:
           {{ configuredHost || t('app.configError.notSet') }}
         </div>
         <p class="text-body">{{ t('app.configError.help') }}</p>

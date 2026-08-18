@@ -728,7 +728,7 @@
       "retrievingGear": "Retrieving your Strava gear in the background\u2026",
       "retrieveGearError": "Couldn't start retrieving Strava gear. Please try again.",
       "unlinkTitle": "Disconnect Strava?",
-      "unlinkBody": "Endurain will stop importing from Strava. Your existing activities are kept.",
+      "unlinkBody": "ZAPFIT will stop importing from Strava. Your existing activities are kept.",
       "unlinkSuccess": "Strava disconnected",
       "unlinkError": "Couldn't disconnect Strava. Please try again."
     },
@@ -758,7 +758,7 @@
       "retrievingHealth": "Retrieving your Garmin Connect health data in the background\u2026",
       "retrieveHealthError": "Couldn't start retrieving Garmin Connect health data. Please try again.",
       "unlinkTitle": "Disconnect Garmin Connect?",
-      "unlinkBody": "Endurain will stop importing from Garmin Connect. Your existing data is kept.",
+      "unlinkBody": "ZAPFIT will stop importing from Garmin Connect. Your existing data is kept.",
       "unlinkSuccess": "Garmin Connect disconnected",
       "unlinkError": "Couldn't disconnect Garmin Connect. Please try again."
     }
