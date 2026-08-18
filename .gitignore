@@ -1,5 +1,4 @@
 # General
-docker-compose.yml
 .vscode/
 .env
 .venv/
