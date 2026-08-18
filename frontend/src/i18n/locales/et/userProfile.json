@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Kasutajat ei leitud",
+    "description": "Seda profiili ei ole olemas või see pole sulle nähtav."
+  },
+  "error": {
+    "title": "Profiili ei õnnestunud laadida",
+    "description": "Selle profiili laadimisel läks midagi valesti.",
+    "retry": "Proovi uuesti"
+  },
+  "editProfile": "Muuda profiili",
+  "activities": {
+    "weekNav": "Sirvi tegevusi nädalate kaupa",
+    "thisWeek": "See nädal",
+    "oneYearAgo": "Aasta tagasi"
+  },
+  "stats": {
+    "thisMonth": "Selle kuu tegevused",
+    "following": "Jälgitavad",
+    "followers": "Jälgijad"
+  },
+  "tabs": {
+    "activities": "Tegevused",
+    "following": "Jälgitavad",
+    "followers": "Jälgijad"
+  },
+  "activitiesError": {
+    "title": "Tegevusi ei õnnestunud laadida",
+    "description": "Tegevuste laadimisel läks midagi valesti.",
+    "retry": "Proovi uuesti"
+  },
+  "listError": {
+    "title": "Loendit ei õnnestunud laadida",
+    "description": "Midagi läks valesti. Palun proovi uuesti.",
+    "retry": "Proovi uuesti"
+  },
+  "follow": {
+    "follow": "Jälgi",
+    "requested": "Taotletud",
+    "following": "Jälgid",
+    "withdraw": "Võta taotlus tagasi",
+    "unfollow": "Lõpeta jälgimine",
+    "cancel": "Tühista",
+    "close": "Sulge",
+    "followError": "Jälgimistaotlust ei õnnestunud saata.",
+    "unfollowError": "Jälgimistaotlust ei õnnestunud uuendada.",
+    "confirmCancelTitle": "Võta taotlus tagasi",
+    "confirmCancelBody": "Kas võtta tagasi oma jälgimistaotlus kasutajale {name}?",
+    "confirmUnfollowTitle": "Lõpeta {name} jälgimine",
+    "confirmUnfollowBody": "Kas lõpetada {name} jälgimine? Saad teda hiljem uuesti jälgida."
+  },
+  "list": {
+    "accept": "Nõustu",
+    "decline": "Keeldu",
+    "remove": "Eemalda",
+    "unfollow": "Lõpeta jälgimine",
+    "cancel": "Tühista",
+    "close": "Sulge",
+    "accepted": "Nõustutud",
+    "pending": "Ootel",
+    "acceptError": "Taotlust ei õnnestunud heaks kiita.",
+    "removeError": "Seda jälgijat ei õnnestunud uuendada.",
+    "unfollowError": "Selle kasutaja jälgimist ei õnnestunud lõpetada.",
+    "confirmUnfollowTitle": "Lõpeta {name} jälgimine",
+    "confirmUnfollowBody": "Kas lõpetada {name} jälgimine? Saad teda hiljem uuesti jälgida.",
+    "confirmDeclineTitle": "Keeldu taotlusest",
+    "confirmDeclineBody": "Kas keelduda {name} jälgimistaotlusest?",
+    "confirmRemoveTitle": "Eemalda jälgija",
+    "confirmRemoveBody": "Kas eemaldada {name} oma jälgijate hulgast?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Veel pole ühtegi tegevust",
+      "ownDescription": "Sinu tegevused ilmuvad siia, kui oled need lisanud või importinud.",
+      "otherTitle": "Pole tegevusi, mida näidata"
+    },
+    "following": {
+      "ownTitle": "Sa ei jälgi veel kedagi.",
+      "otherTitle": "Ei jälgi veel kedagi."
+    },
+    "followers": {
+      "ownTitle": "Sul pole veel ühtegi jälgijat.",
+      "otherTitle": "Veel pole ühtegi jälgijat."
+    }
+  }
+}

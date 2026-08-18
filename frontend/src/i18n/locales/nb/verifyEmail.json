@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Bekrefter e-posten din",
+  "verifyingBody": "Vent litt mens vi bekrefter adressen din.",
+  "successTitle": "E-post bekreftet",
+  "successBody": "E-postadressen din er bekreftet.",
+  "adminApprovalBody": "Kontoen din venter nå på godkjenning fra en administrator.",
+  "continueButton": "Fortsett til innlogging",
+  "invalidTitle": "Bekreftelse mislyktes",
+  "missingTokenBody": "Denne bekreftelseslenken mangler tokenet sitt.",
+  "errorInvalidToken": "Denne bekreftelseslenken er ugyldig eller utløpt.",
+  "errorNotFound": "Vi fant ingen konto for denne lenken.",
+  "errorGeneral": "Vi kunne ikke bekrefte e-posten din. Vennligst prøv igjen.",
+  "retry": "Prøv igjen",
+  "backToLogin": "Tilbake til innlogging"
+}

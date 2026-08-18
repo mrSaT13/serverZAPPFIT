@@ -1,0 +1,44 @@
+name: Conventional Commits
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ${{ forgejo.workflow }}-${{ forgejo.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: local-runner
+
+    steps:
+      - name: Checkout code
+        uses: https://data.forgejo.org/actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Validate PR title
+        # The PR title is passed through an environment variable to prevent
+        # shell injection via crafted titles (see security-and-owasp guidelines).
+        env:
+          PR_TITLE: ${{ forgejo.event.pull_request.title }}
+        run: |
+          python3 .forgejo/scripts/check_conventional_commits.py "$PR_TITLE"
+
+      - name: Validate commits in PR
+        # Validates every commit subject between the PR base and head. Use the
+        # base/head SHAs from the event payload so we don't depend on the local
+        # checkout ref layout.
+        env:
+          BASE_SHA: ${{ forgejo.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ forgejo.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$BASE_SHA" "$HEAD_SHA"
+          git log --no-merges --format=%s "$BASE_SHA".."$HEAD_SHA" \
+            | python3 .forgejo/scripts/check_conventional_commits.py --stdin

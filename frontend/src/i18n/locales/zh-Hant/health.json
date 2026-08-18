@@ -1,0 +1,648 @@
+{
+  "title": "健康",
+  "subtitle": "在一處查看您的所有健康數據",
+  "nav": {
+    "label": "健康區段",
+    "soon": "即將推出",
+    "dashboard": "總覽",
+    "sleep": "睡眠",
+    "rhr": "靜止心率",
+    "steps": "步數",
+    "weight": "體重",
+    "fasting": "斷食",
+    "water": "飲水量",
+    "poop": "排便"
+  },
+  "dashboard": {
+    "title": "總覽",
+    "subtitle": "一眼掌握您的每日健康狀況",
+    "sleep": "睡眠",
+    "restingHeartRate": "靜止心率",
+    "avgSkinTemperatureDeviation": "皮膚溫度偏差",
+    "weight": "體重",
+    "bmi": "BMI",
+    "steps": "步數",
+    "fasting": "斷食",
+    "water": "飲水量",
+    "poop": "排便",
+    "noSleepTarget": "未設定睡眠目標",
+    "noWeightTarget": "未設定體重目標",
+    "noStepsTarget": "未設定步數目標",
+    "noFastingTarget": "未設定斷食目標",
+    "noWaterTarget": "未設定飲水目標",
+    "noPoopTarget": "未設定排便目標",
+    "stepsTargetLabel": "步",
+    "poopTargetLabel": "/ 天",
+    "noWeightData": "無體重數據",
+    "bmiUnderweight": "體重過輕",
+    "bmiNormalWeight": "正常體重",
+    "bmiOverweight": "過重",
+    "bmiObesityClass1": "肥胖（第一級）",
+    "bmiObesityClass2": "肥胖（第二級）",
+    "bmiObesityClass3": "極度肥胖（第三級）",
+    "hrvBalanced": "平衡",
+    "hrvUnbalanced": "不平衡",
+    "hrvLow": "偏低",
+    "hrvPoor": "差",
+    "labelNoData": "無數據",
+    "errorTitle": "無法載入您的健康數據",
+    "errorDescription": "載入每日健康統計時發生錯誤。請再試一次。",
+    "retry": "再試一次"
+  },
+  "weight": {
+    "title": "體重",
+    "subtitle": "追蹤您的體重與身體組成變化",
+    "logButton": "記錄體重",
+    "targetButton": "設定目標",
+    "sourceGarmin": "來自 Garmin Connect",
+    "toggleDetails": "切換身體組成詳情",
+    "chartTitle": "體重趨勢",
+    "chartWeightSeries": "體重",
+    "chartTargetSeries": "目標",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯記錄",
+      "delete": "刪除記錄"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "體脂肪",
+      "bodyWater": "體水分",
+      "boneMass": "骨量",
+      "muscleMass": "肌肉量"
+    },
+    "form": {
+      "addTitle": "記錄體重",
+      "editTitle": "編輯體重記錄",
+      "description": "記錄您的體重，以及選填的身體組成數據。",
+      "date": "日期",
+      "dateRequired": "請選擇日期。",
+      "weight": "體重",
+      "weightRequired": "請輸入您的體重。",
+      "weightInvalid": "請輸入大於零的體重。",
+      "bodyComposition": "身體組成（選填）",
+      "bmi": "BMI",
+      "bodyFat": "體脂肪（%）",
+      "bodyWater": "體水分（%）",
+      "boneMass": "骨量",
+      "muscleMass": "肌肉量",
+      "create": "記錄",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "已記錄體重。",
+      "updateSuccess": "體重記錄已更新。",
+      "saveError": "無法儲存您的體重記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定體重目標",
+      "description": "設定目標體重，或清空欄位以移除目標。",
+      "weight": "目標體重",
+      "hint": "留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "體重目標已更新。",
+      "saveError": "無法更新您的體重目標。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無體重記錄",
+      "description": "記錄您的體重以開始追蹤長期進展。"
+    },
+    "error": {
+      "title": "無法載入您的體重記錄",
+      "description": "載入體重記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除體重記錄",
+      "body": "此體重記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "體重記錄已刪除。",
+      "error": "無法刪除體重記錄。請再試一次。"
+    }
+  },
+  "steps": {
+    "title": "步數",
+    "subtitle": "追蹤您的每日步數變化",
+    "logButton": "記錄步數",
+    "targetButton": "設定目標",
+    "sourceGarmin": "來自 Garmin Connect",
+    "chartTitle": "步數趨勢",
+    "chartStepsSeries": "步數",
+    "chartTargetSeries": "目標",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯記錄",
+      "delete": "刪除記錄"
+    },
+    "form": {
+      "addTitle": "記錄步數",
+      "editTitle": "編輯步數記錄",
+      "description": "記錄當天的步數。",
+      "date": "日期",
+      "dateRequired": "請選擇日期。",
+      "steps": "步數",
+      "stepsRequired": "請輸入步數。",
+      "stepsInvalid": "請輸入大於零的步數。",
+      "create": "記錄",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "步數已記錄。",
+      "updateSuccess": "步數記錄已更新。",
+      "saveError": "無法儲存您的步數記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定步數目標",
+      "description": "設定每日步數目標，或清空欄位以移除目標。",
+      "steps": "每日目標步數",
+      "hint": "留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "步數目標已更新。",
+      "saveError": "無法更新您的步數目標。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無步數記錄",
+      "description": "記錄您的步數以開始追蹤長期活動量。"
+    },
+    "error": {
+      "title": "無法載入您的步數記錄",
+      "description": "載入步數記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除步數記錄",
+      "body": "此步數記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "步數記錄已刪除。",
+      "error": "無法刪除步數記錄。請再試一次。"
+    }
+  },
+  "rhr": {
+    "title": "靜止心率",
+    "subtitle": "追蹤您的靜止心率變化",
+    "sourceGarmin": "來自 Garmin Connect",
+    "chartTitle": "靜止心率趨勢",
+    "chartSeries": "靜止心率",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "empty": {
+      "title": "尚無靜止心率數據",
+      "description": "靜止心率會與睡眠數據一起記錄。請同步能追蹤此數據的裝置，以查看您的趨勢。"
+    },
+    "error": {
+      "title": "無法載入您的靜止心率記錄",
+      "description": "載入靜止心率數據時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    }
+  },
+  "sleep": {
+    "title": "睡眠",
+    "subtitle": "追蹤您的睡眠時長與品質變化",
+    "logButton": "記錄睡眠",
+    "targetButton": "設定目標",
+    "sourceGarmin": "來自 Garmin Connect",
+    "toggleDetails": "切換睡眠詳情",
+    "chartTitle": "睡眠趨勢",
+    "chartSleepSeries": "睡眠",
+    "chartTargetSeries": "目標",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯記錄",
+      "delete": "刪除記錄"
+    },
+    "score": "分數",
+    "hrvBalanced": "平衡",
+    "hrvUnbalanced": "不平衡",
+    "hrvLow": "偏低",
+    "hrvPoor": "差",
+    "scoreExcellent": "優秀",
+    "scoreGood": "良好",
+    "scoreFair": "普通",
+    "scorePoor": "差",
+    "detail": {
+      "tabsLabel": "睡眠詳情區段",
+      "tabScore": "睡眠分數",
+      "tabDetails": "睡眠詳情",
+      "deep": "深層睡眠",
+      "light": "淺層睡眠",
+      "rem": "REM",
+      "awake": "清醒",
+      "score": "睡眠分數",
+      "quality": "品質",
+      "duration": "時長",
+      "restingHeartRate": "靜止心率",
+      "avgHeartRate": "平均心率",
+      "minHeartRate": "最低心率",
+      "maxHeartRate": "最高心率",
+      "skinTempDeviation": "皮膚溫度偏差",
+      "hrv": "HRV 狀態",
+      "spo2": "平均 SpO₂",
+      "lowestSpo2": "最低 SpO₂",
+      "highestSpo2": "最高 SpO₂",
+      "avgRespiration": "平均呼吸率",
+      "lowestRespiration": "最低呼吸率",
+      "highestRespiration": "最高呼吸率",
+      "avgSleepStress": "平均睡眠壓力",
+      "awakeCount": "清醒次數",
+      "summary": "摘要",
+      "breakdown": "分析",
+      "overview": "概覽",
+      "heartRate": "心率",
+      "bloodOxygen": "血氧",
+      "respiration": "呼吸",
+      "avg": "平均",
+      "min": "最低",
+      "max": "最高",
+      "noData": "未記錄任何數據。"
+    },
+    "hypnogram": {
+      "title": "睡眠階段",
+      "deep": "深層",
+      "light": "淺層",
+      "rem": "REM",
+      "awake": "清醒",
+      "noData": "無睡眠階段時間軸資料。"
+    },
+    "form": {
+      "addTitle": "記錄睡眠",
+      "editTitle": "編輯睡眠記錄",
+      "description": "記錄睡眠時長，以及選填的睡眠階段細項與指標。",
+      "date": "日期",
+      "dateRequired": "請選擇日期。",
+      "totalSleep": "總睡眠時長",
+      "totalSleepRequired": "請輸入睡眠時長。",
+      "hours": "小時",
+      "minutes": "分鐘",
+      "stageBreakdown": "睡眠階段細項（選填）",
+      "deep": "深層睡眠",
+      "light": "淺層睡眠",
+      "rem": "REM 睡眠",
+      "awake": "清醒",
+      "metrics": "指標（選填）",
+      "sleepScore": "睡眠分數（0–100）",
+      "restingHeartRate": "靜止心率（bpm）",
+      "skinTempDeviation": "皮膚溫度偏差（°C）",
+      "spo2": "平均 SpO₂（%）",
+      "sleepTimes": "睡眠時間（選填）",
+      "startTime": "入睡時間",
+      "endTime": "起床時間",
+      "endBeforeStart": "起床時間必須晚於入睡時間。",
+      "awakeCount": "清醒次數",
+      "heartRate": "心率（選填）",
+      "avgHeartRate": "平均心率（bpm）",
+      "minHeartRate": "最低心率（bpm）",
+      "maxHeartRate": "最高心率（bpm）",
+      "bloodOxygen": "血氧（選填）",
+      "lowestSpo2": "最低 SpO₂（%）",
+      "highestSpo2": "最高 SpO₂（%）",
+      "avgSleepStress": "平均睡眠壓力（0–100）",
+      "sleepStages": "睡眠階段（選填）",
+      "noStages": "尚未新增任何階段。",
+      "addStage": "新增階段",
+      "removeStage": "移除階段",
+      "stageLabel": "階段 {index}",
+      "stageType": "階段",
+      "stageDeep": "深層",
+      "stageLight": "淺層",
+      "stageRem": "REM",
+      "stageAwake": "清醒",
+      "stageStart": "開始",
+      "stageEnd": "結束",
+      "stageDuration": "時長",
+      "create": "記錄",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "睡眠已記錄。",
+      "updateSuccess": "睡眠記錄已更新。",
+      "saveError": "無法儲存您的睡眠記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定睡眠目標",
+      "description": "設定每晚的睡眠目標，或清空欄位以移除目標。",
+      "hours": "小時",
+      "minutes": "分鐘",
+      "hint": "留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "睡眠目標已更新。",
+      "saveError": "無法更新您的睡眠目標。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無睡眠記錄",
+      "description": "記錄一晚的睡眠以開始追蹤長期休息狀況。"
+    },
+    "error": {
+      "title": "無法載入您的睡眠記錄",
+      "description": "載入睡眠記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除睡眠記錄",
+      "body": "此睡眠記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "睡眠記錄已刪除。",
+      "error": "無法刪除睡眠記錄。請再試一次。"
+    }
+  },
+  "water": {
+    "title": "飲水量",
+    "subtitle": "追蹤您的每日飲水量變化",
+    "logButton": "記錄飲水",
+    "targetButton": "設定目標",
+    "sourceGarmin": "來自 Garmin Connect",
+    "chartTitle": "飲水量趨勢",
+    "chartWaterSeries": "飲水量",
+    "chartTargetSeries": "目標",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯記錄",
+      "delete": "刪除記錄"
+    },
+    "form": {
+      "addTitle": "記錄飲水",
+      "editTitle": "編輯飲水記錄",
+      "description": "記錄當天的飲水量。",
+      "date": "日期",
+      "dateRequired": "請選擇日期。",
+      "amount": "飲水量",
+      "amountRequired": "請輸入飲水量。",
+      "amountInvalid": "請輸入大於零的飲水量。",
+      "create": "記錄",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "飲水已記錄。",
+      "updateSuccess": "飲水記錄已更新。",
+      "saveError": "無法儲存您的飲水記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定飲水目標",
+      "description": "設定每日飲水目標，或清空欄位以移除目標。",
+      "amount": "每日目標",
+      "hint": "留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "飲水目標已更新。",
+      "saveError": "無法更新您的飲水目標。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無飲水記錄",
+      "description": "記錄您的飲水量以開始追蹤長期補水狀況。"
+    },
+    "error": {
+      "title": "無法載入您的飲水記錄",
+      "description": "載入飲水記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除飲水記錄",
+      "body": "此飲水記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "飲水記錄已刪除。",
+      "error": "無法刪除飲水記錄。請再試一次。"
+    }
+  },
+  "poop": {
+    "title": "排便",
+    "subtitle": "追蹤您的排便狀況變化",
+    "logButton": "記錄排便",
+    "targetButton": "設定目標",
+    "chartTitle": "每日頻率",
+    "chartCountSeries": "排便次數",
+    "chartTargetSeries": "目標",
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯記錄",
+      "delete": "刪除記錄"
+    },
+    "list": {
+      "bristolBadge": "布里斯托 {type} 型",
+      "noDetails": "排便"
+    },
+    "form": {
+      "addTitle": "記錄排便",
+      "editTitle": "編輯排便記錄",
+      "description": "記錄排便的時間與詳情。",
+      "dateTime": "日期與時間",
+      "dateTimeRequired": "請選擇日期與時間。",
+      "bristolType": "布里斯托大便分類",
+      "color": "顏色",
+      "notes": "備註",
+      "none": "無",
+      "colors": {
+        "brown": "棕色",
+        "dark_brown": "深棕色",
+        "light_brown": "淺棕色",
+        "yellow": "黃色",
+        "green": "綠色",
+        "black": "黑色",
+        "red": "紅色",
+        "white": "白色"
+      },
+      "create": "記錄",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "排便已記錄。",
+      "updateSuccess": "排便記錄已更新。",
+      "saveError": "無法儲存您的記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定排便目標",
+      "description": "設定每日排便目標次數，或清空欄位以移除目標。",
+      "count": "每日目標次數",
+      "hint": "留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "排便目標已更新。",
+      "saveError": "無法更新您的目標。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無排便記錄",
+      "description": "記錄一次排便以開始追蹤長期狀況。"
+    },
+    "error": {
+      "title": "無法載入您的排便記錄",
+      "description": "載入排便記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除排便記錄",
+      "body": "此記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "記錄已刪除。",
+      "error": "無法刪除此記錄。請再試一次。"
+    }
+  },
+  "fasting": {
+    "title": "斷食",
+    "subtitle": "開始斷食、追蹤進度並回顧記錄",
+    "startButton": "開始斷食",
+    "targetButton": "設定目標",
+    "sourceGarmin": "來自 Garmin Connect",
+    "active": {
+      "title": "斷食進行中",
+      "started": "開始時間",
+      "target": "目標",
+      "complete": "完成",
+      "break": "中斷斷食",
+      "cancel": "取消",
+      "completeHint": "達到目標後即可完成斷食。"
+    },
+    "stats": {
+      "totalFasts": "總斷食次數",
+      "currentStreak": "目前連續天數",
+      "longestStreak": "最長連續天數",
+      "avgDuration": "平均時長",
+      "totalTime": "總斷食時間",
+      "completionRate": "完成率",
+      "days": "天"
+    },
+    "types": {
+      "16:8": "16:8（斷食 16 小時，進食 8 小時）",
+      "18:6": "18:6（斷食 18 小時，進食 6 小時）",
+      "20:4": "20:4（斷食 20 小時，進食 4 小時）",
+      "OMAD": "OMAD（每日一餐）",
+      "24h": "24 小時斷食",
+      "36h": "36 小時斷食",
+      "48h": "48 小時斷食",
+      "72h": "72 小時斷食",
+      "custom": "自訂"
+    },
+    "status": {
+      "in_progress": "進行中",
+      "completed": "已完成",
+      "broken": "已中斷",
+      "cancelled": "已取消"
+    },
+    "interval": {
+      "label": "時間範圍",
+      "last_7_days": "最近 7 天",
+      "last_30_days": "最近 30 天",
+      "last_90_days": "最近 90 天",
+      "last_year": "最近一年",
+      "all_time": "全部時間"
+    },
+    "actions": {
+      "edit": "編輯斷食記錄",
+      "delete": "刪除斷食記錄"
+    },
+    "list": {
+      "notesLabel": "備註"
+    },
+    "form": {
+      "addTitle": "開始斷食",
+      "editTitle": "編輯斷食記錄",
+      "description": "選擇斷食方案及開始時間。",
+      "type": "斷食方案",
+      "customDuration": "自訂時長",
+      "customDurationHint": "斷食時長，以小時計（1–72）。",
+      "hours": "小時",
+      "startTime": "開始時間",
+      "startTimeRequired": "請選擇開始時間。",
+      "endTime": "結束時間",
+      "status": "狀態",
+      "notes": "備註",
+      "create": "開始",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "斷食已開始。",
+      "updateSuccess": "斷食記錄已更新。",
+      "saveError": "無法儲存您的斷食記錄。請再試一次。"
+    },
+    "target": {
+      "title": "設定斷食目標",
+      "description": "設定目標斷食時長，或清空兩個欄位以移除目標。",
+      "hours": "小時",
+      "minutes": "分鐘",
+      "hint": "兩個欄位均留空以移除目標。",
+      "save": "儲存",
+      "cancel": "取消",
+      "close": "關閉",
+      "saveSuccess": "斷食目標已更新。",
+      "saveError": "無法更新您的斷食目標。請再試一次。"
+    },
+    "complete": {
+      "success": "斷食已結束。",
+      "error": "無法結束您的斷食。請再試一次。"
+    },
+    "empty": {
+      "title": "尚無斷食記錄",
+      "description": "開始一次斷食以記錄您的斷食歷程。"
+    },
+    "error": {
+      "title": "無法載入您的斷食記錄",
+      "description": "載入斷食記錄時發生錯誤。請再試一次。",
+      "retry": "再試一次"
+    },
+    "delete": {
+      "title": "刪除斷食記錄",
+      "body": "此斷食記錄將永久刪除，此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "斷食記錄已刪除。",
+      "error": "無法刪除斷食記錄。請再試一次。"
+    }
+  }
+}

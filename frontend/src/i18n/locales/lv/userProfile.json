@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Lietotājs nav atrasts",
+    "description": "Šis profils neeksistē vai nav jums redzams."
+  },
+  "error": {
+    "title": "Neizdevās ielādēt profilu",
+    "description": "Ielādējot šo profilu, kaut kas nogāja greizi.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "editProfile": "Rediģēt profilu",
+  "activities": {
+    "weekNav": "Pārlūkot aktivitātes pēc nedēļas",
+    "thisWeek": "Šonedēļ",
+    "oneYearAgo": "Pirms gada"
+  },
+  "stats": {
+    "thisMonth": "Aktivitātes šomēnes",
+    "following": "Sekoju",
+    "followers": "Sekotāji"
+  },
+  "tabs": {
+    "activities": "Aktivitātes",
+    "following": "Sekoju",
+    "followers": "Sekotāji"
+  },
+  "activitiesError": {
+    "title": "Neizdevās ielādēt aktivitātes",
+    "description": "Ielādējot aktivitātes, kaut kas nogāja greizi.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "listError": {
+    "title": "Neizdevās ielādēt sarakstu",
+    "description": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "follow": {
+    "follow": "Sekot",
+    "requested": "Pieprasīts",
+    "following": "Sekoju",
+    "withdraw": "Atsaukt pieprasījumu",
+    "unfollow": "Pārtraukt sekot",
+    "cancel": "Atcelt",
+    "close": "Aizvērt",
+    "followError": "Neizdevās nosūtīt sekošanas pieprasījumu.",
+    "unfollowError": "Neizdevās atjaunināt sekošanas pieprasījumu.",
+    "confirmCancelTitle": "Atsaukt pieprasījumu",
+    "confirmCancelBody": "Atsaukt savu sekošanas pieprasījumu lietotājam {name}?",
+    "confirmUnfollowTitle": "Pārtraukt sekot {name}",
+    "confirmUnfollowBody": "Pārtraukt sekot {name}? Vēlāk varat tam atkal sekot."
+  },
+  "list": {
+    "accept": "Pieņemt",
+    "decline": "Noraidīt",
+    "remove": "Noņemt",
+    "unfollow": "Pārtraukt sekot",
+    "cancel": "Atcelt",
+    "close": "Aizvērt",
+    "accepted": "Pieņemts",
+    "pending": "Gaida",
+    "acceptError": "Neizdevās pieņemt pieprasījumu.",
+    "removeError": "Neizdevās atjaunināt šo sekotāju.",
+    "unfollowError": "Neizdevās pārtraukt sekot šim lietotājam.",
+    "confirmUnfollowTitle": "Pārtraukt sekot {name}",
+    "confirmUnfollowBody": "Pārtraukt sekot {name}? Vēlāk varat tam atkal sekot.",
+    "confirmDeclineTitle": "Noraidīt pieprasījumu",
+    "confirmDeclineBody": "Noraidīt sekošanas pieprasījumu no {name}?",
+    "confirmRemoveTitle": "Noņemt sekotāju",
+    "confirmRemoveBody": "Noņemt {name} no saviem sekotājiem?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Vēl nav aktivitāšu",
+      "ownDescription": "Jūsu aktivitātes parādīsies šeit, tiklĭz tās pievienosiet vai importēsiet.",
+      "otherTitle": "Nav aktivitāšu, ko rādīt"
+    },
+    "following": {
+      "ownTitle": "Jūs vēl nevienam nesekojat.",
+      "otherTitle": "Vēl nevienam neseko."
+    },
+    "followers": {
+      "ownTitle": "Jums vēl nav neviena sekotāja.",
+      "otherTitle": "Vēl nav sekotāju."
+    }
+  }
+}

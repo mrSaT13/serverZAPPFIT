@@ -1,0 +1,152 @@
+{
+  "title": "Attrezzatura",
+  "subtitle": "Bici, scarpe e attrezzatura con cui registri le attività",
+  "buttonAddGear": "Aggiungi attrezzatura",
+  "searchPlaceholder": "Cerca per soprannome",
+  "clearSearch": "Cancella ricerca",
+  "showInactive": "Mostra inattiva",
+  "inactive": "Inattiva",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtri",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicicletta",
+    "shoes": "Scarpe",
+    "wetsuit": "Muta",
+    "racquet": "Racchetta",
+    "skis": "Sci",
+    "snowboard": "Snowboard",
+    "windsurf": "Tavola da windsurf",
+    "waterSportsBoard": "Tavola per sport acquatici",
+    "unknown": "Attrezzatura"
+  },
+  "actions": {
+    "edit": "Modifica attrezzatura",
+    "delete": "Elimina attrezzatura"
+  },
+  "form": {
+    "title": "Statistiche",
+    "addTitle": "Aggiungi attrezzatura",
+    "editTitle": "Modifica attrezzatura",
+    "description": "Monitora l'attrezzatura che usi per le tue attività.",
+    "nickname": "Soprannome",
+    "nicknameRequired": "Il soprannome è obbligatorio",
+    "nicknameTooLong": "Il soprannome deve avere al massimo 250 caratteri",
+    "nicknameTaken": "Hai già un'attrezzatura con quel soprannome",
+    "gearType": "Tipo",
+    "brand": "Marca",
+    "brandTooLong": "La marca deve avere al massimo 250 caratteri",
+    "model": "Modello",
+    "modelTooLong": "Il modello deve avere al massimo 250 caratteri",
+    "active": "Attiva",
+    "createdAt": "Creata il",
+    "createdAtRequired": "Una data di creazione è obbligatoria",
+    "initialDistance": "Distanza iniziale",
+    "purchaseValue": "Valore d'acquisto",
+    "totalCost": "Costo totale",
+    "create": "Aggiungi attrezzatura",
+    "save": "Salva modifiche",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "createSuccess": "Attrezzatura aggiunta",
+    "updateSuccess": "Attrezzatura aggiornata",
+    "saveError": "Impossibile salvare l'attrezzatura. Riprova."
+  },
+  "delete": {
+    "title": "Elimina attrezzatura",
+    "body": "Sei sicuro di voler eliminare \"{nickname}\"? Non sarà possibile annullare l'operazione.",
+    "confirm": "Elimina",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "success": "Attrezzatura eliminata",
+    "error": "Impossibile eliminare l'attrezzatura. Riprova."
+  },
+  "error": {
+    "title": "Impossibile caricare l'attrezzatura",
+    "description": "Si è verificato un errore durante il caricamento dell'attrezzatura.",
+    "retry": "Riprova"
+  },
+  "empty": {
+    "title": "Ancora nessuna attrezzatura",
+    "description": "Aggiungi le bici, le scarpe e l'attrezzatura che usi per iniziare a monitorarne l'utilizzo.",
+    "searchTitle": "Nessuna attrezzatura corrisponde alla ricerca",
+    "searchDescription": "Prova un soprannome diverso.",
+    "activeTitle": "Nessuna attrezzatura attiva",
+    "activeDescription": "Aggiungi attrezzatura, oppure abilita \"Mostra inattiva\" per vedere l'attrezzatura inattiva."
+  },
+  "detail": {
+    "back": "Torna all'attrezzatura",
+    "notFoundTitle": "Attrezzatura non trovata",
+    "notFoundDescription": "Questa attrezzatura potrebbe essere stata eliminata o non appartiene a te.",
+    "totalDistance": "Distanza",
+    "totalTime": "Tempo",
+    "componentsCost": "Componenti"
+  },
+  "components": {
+    "title": "Componenti",
+    "add": "Aggiungi componente",
+    "empty": "Ancora nessun componente. Aggiungi i pezzi di cui vuoi monitorare l'usura.",
+    "unsupported": "Questo tipo di attrezzatura non tiene traccia dei componenti.",
+    "noneActive": "Tutti i componenti sono inattivi. Attiva \"Mostra inattiva\" per vederli.",
+    "inactive": "Inattivo",
+    "unitHours": "h",
+    "purchasedOn": "Acquistato {date}",
+    "wearLabel": "Usura {name}",
+    "actions": {
+      "edit": "Modifica componente",
+      "delete": "Elimina componente"
+    },
+    "form": {
+      "addTitle": "Aggiungi componente",
+      "editTitle": "Modifica componente",
+      "description": "Monitora i pezzi che sostituisci per controllarne l'usura.",
+      "type": "Tipo",
+      "typePlaceholder": "Seleziona un tipo",
+      "typeRequired": "Un tipo è obbligatorio",
+      "brand": "Marca",
+      "brandRequired": "La marca è obbligatoria",
+      "brandTooLong": "La marca deve avere al massimo 250 caratteri",
+      "model": "Modello",
+      "modelRequired": "Il modello è obbligatorio",
+      "modelTooLong": "Il modello deve avere al massimo 250 caratteri",
+      "purchaseDate": "Acquistato il",
+      "purchaseDateRequired": "Una data di acquisto è obbligatoria",
+      "retiredDate": "Ritirato il",
+      "expectedDistance": "Distanza prevista",
+      "expectedTime": "Tempo previsto",
+      "purchaseValue": "Valore d'acquisto",
+      "active": "Attivo",
+      "retiredBeforePurchase": "La data di ritiro deve essere successiva alla data di acquisto.",
+      "create": "Aggiungi componente",
+      "save": "Salva modifiche",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Componente aggiunto",
+      "updateSuccess": "Componente aggiornato",
+      "saveError": "Impossibile salvare il componente. Riprova."
+    },
+    "delete": {
+      "title": "Elimina componente",
+      "body": "Sei sicuro di voler eliminare \"{name}\"? Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Componente eliminato",
+      "error": "Impossibile eliminare il componente. Riprova."
+    },
+    "error": {
+      "title": "Impossibile caricare i componenti",
+      "description": "Si è verificato un errore durante il caricamento dei componenti di questa attrezzatura."
+    }
+  },
+  "activities": {
+    "title": "Attività",
+    "empty": "Ancora nessuna attività registrata con questa attrezzatura.",
+    "error": {
+      "title": "Impossibile caricare le attività",
+      "description": "Si è verificato un errore durante il caricamento delle attività di questa attrezzatura."
+    }
+  }
+}

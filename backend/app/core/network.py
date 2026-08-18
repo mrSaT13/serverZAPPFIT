@@ -1,0 +1,430 @@
+"""Network helpers shared across the application.
+
+Currently provides proxy-aware client IP extraction
+and SSRF guards for outbound HTTP calls. Lives in
+``core/`` so any module — including other ``core/``
+modules such as rate limiting — can use it without
+creating a dependency on the ``users`` package.
+"""
+
+import ipaddress
+import re
+import socket
+import threading
+import time
+from urllib.parse import urlparse
+
+from fastapi import HTTPException, Request, status
+
+import core.config as core_config
+import core.logger as core_logger
+
+_TRUSTED_PROXY_HOSTNAME_REFRESH_SECONDS = 60.0
+_trusted_proxy_hostname_refresh_lock = threading.Lock()
+_trusted_proxy_hostname_last_refresh = float("-inf")
+
+# RFC 1123 hostname syntax: labels of 1-63 alphanumeric/hyphen
+# characters, separated by dots. Hyphens may not start or end
+# a label. Total length is capped at 253 characters.
+_HOSTNAME_RE = re.compile(
+    r"^(?:[a-z0-9](?:[a-z0-9\-]{0,61}[a-z0-9])?)"  # first label
+    r"(?:\.(?:[a-z0-9](?:[a-z0-9\-]{0,61}[a-z0-9])?))*$",  # more
+    re.IGNORECASE,
+)
+
+
+def _looks_like_ip(value: str) -> bool:
+    """Best-effort check that ``value`` is an IP literal.
+
+    Used by startup/config validation helpers to decide
+    whether an entry is an IP literal or a hostname.
+
+    Args:
+        value: Candidate IP literal or hostname.
+
+    Returns:
+        True when ``value`` is an IPv4/IPv6 literal.
+    """
+    try:
+        ipaddress.ip_address(value)
+        return True
+    except ValueError:
+        return False
+
+
+def _is_valid_hostname(value: str) -> bool:
+    """Return True when value is a syntactically valid hostname.
+
+    Validates RFC 1123 hostname syntax. Rejects values that
+    contain URL schemes, ports, or other non-hostname characters
+    (e.g., ``caddy:8080`` or ``http://caddy``).
+
+    Args:
+        value: Candidate hostname to validate.
+
+    Returns:
+        True when value conforms to RFC 1123 hostname syntax.
+    """
+    return len(value) <= 253 and _HOSTNAME_RE.match(value) is not None
+
+
+def _resolve_hostname(hostname: str) -> list[str]:
+    """Resolve a hostname to a list of IP addresses.
+
+    Called when refreshing TRUSTED_PROXIES hostnames to their
+    IP addresses. Uses socket.getaddrinfo() to resolve both
+    IPv4 and IPv6 addresses.
+
+    Args:
+        hostname: The hostname to resolve (e.g., 'proxy.internal').
+
+    Returns:
+        List of resolved IP addresses (e.g., ['10.0.0.5', '10.0.0.6']).
+        Returns an empty list if resolution fails (a warning is logged).
+    """
+    try:
+        infos = socket.getaddrinfo(hostname, None)
+        ips = [str(info[4][0]) for info in infos]
+        # Deduplicate while preserving order
+        seen: set[str] = set()
+        unique_ips = []
+        for ip in ips:
+            if ip not in seen:
+                seen.add(ip)
+                unique_ips.append(ip)
+        return unique_ips
+    except socket.gaierror as err:
+        core_logger.print_to_log_and_console(
+            f"Failed to resolve TRUSTED_PROXIES hostname '{hostname}': {err}",
+            "warning",
+        )
+        return []
+
+
+def _trusted_proxy_hostname_entries() -> list[str]:
+    """Return configured TRUSTED_PROXIES hostnames.
+
+    Returns:
+        Hostname entries that need DNS resolution.
+    """
+    hostnames: list[str] = []
+    for configured_entry in core_config.settings.TRUSTED_PROXIES:
+        entry = configured_entry.strip()
+        if not entry:
+            continue
+        if entry == "*" or "/" in entry or _looks_like_ip(entry):
+            continue
+        hostnames.append(entry)
+    return hostnames
+
+
+def _trusted_proxy_hostname_cache_is_fresh(now: float) -> bool:
+    """Check whether trusted proxy hostname cache is fresh.
+
+    Args:
+        now: Current monotonic timestamp.
+
+    Returns:
+        True when the refresh throttle window has not elapsed.
+    """
+    cache_age = now - _trusted_proxy_hostname_last_refresh
+    return cache_age < _TRUSTED_PROXY_HOSTNAME_REFRESH_SECONDS
+
+
+def refresh_trusted_proxy_hostnames(
+    *,
+    force: bool = False,
+    log_success: bool = False,
+) -> dict[str, list[str]]:
+    """Refresh TRUSTED_PROXIES hostname resolutions.
+
+    Args:
+        force: Refresh even when the cache is still fresh.
+        log_success: Log successful hostname resolutions.
+
+    Returns:
+        Mapping of hostnames to resolved IP addresses.
+    """
+    global _trusted_proxy_hostname_last_refresh
+
+    hostnames = _trusted_proxy_hostname_entries()
+    if not hostnames:
+        core_config.settings._resolved_trusted_proxy_ips = set()
+        return {}
+
+    now = time.monotonic()
+    if not force and _trusted_proxy_hostname_cache_is_fresh(now):
+        return {}
+
+    with _trusted_proxy_hostname_refresh_lock:
+        now = time.monotonic()
+        if not force and _trusted_proxy_hostname_cache_is_fresh(now):
+            return {}
+
+        resolved_map: dict[str, list[str]] = {}
+        all_resolved_ips: set[str] = set()
+        for hostname in hostnames:
+            ips = _resolve_hostname(hostname)
+            if not ips:
+                continue
+
+            resolved_map[hostname] = ips
+            all_resolved_ips.update(ips)
+            if log_success:
+                core_logger.print_to_log_and_console(
+                    f"Resolved TRUSTED_PROXIES hostname '{hostname}' to {ips}",
+                    "info",
+                )
+
+        core_config.settings._resolved_trusted_proxy_ips = all_resolved_ips
+        _trusted_proxy_hostname_last_refresh = now
+
+    return resolved_map
+
+
+def _is_trusted_peer(peer_ip: str) -> bool:
+    """Check whether ``peer_ip`` is in the TRUSTED_PROXIES allow-list.
+
+    Supports exact IPs and CIDR notation. The special value ``"*"``
+    (the default) trusts every peer. Also supports resolved hostnames
+    (cached from startup resolution).
+
+    Args:
+        peer_ip: The direct TCP-connection IP of the caller.
+
+    Returns:
+        True if the peer is trusted, False otherwise.
+    """
+    trusted = core_config.settings.TRUSTED_PROXIES
+    if trusted == ["*"]:
+        return True
+    try:
+        addr = ipaddress.ip_address(peer_ip)
+        for entry in trusted:
+            entry = entry.strip()
+            if not entry:
+                continue
+            try:
+                network = ipaddress.ip_network(entry, strict=False)
+                if addr in network:
+                    return True
+            except ValueError:
+                # Entry is not a valid network — compare as plain string
+                if peer_ip == entry:
+                    return True
+    except ValueError:
+        pass
+
+    hostnames = _trusted_proxy_hostname_entries()
+    if not hostnames:
+        return False
+
+    resolved_ips = core_config.settings._resolved_trusted_proxy_ips
+    return peer_ip in resolved_ips
+
+
+def get_ip_address(request: Request) -> str:
+    """
+    Extract client IP address from request, respecting TRUSTED_PROXIES.
+
+    Proxy headers (``X-Forwarded-For``, ``X-Real-IP``) are only trusted
+    when the direct TCP peer matches an entry in ``TRUSTED_PROXIES``.
+    This prevents attackers from spoofing their IP by injecting those
+    headers on direct connections.
+
+    When ``TRUSTED_PROXIES`` is ``["*"]`` (the default) all peers are
+    trusted.
+
+    Args:
+        request: Request object with headers and client info.
+
+    Returns:
+        Client IP address or "unknown" if indeterminate.
+    """
+    peer_ip = request.client.host if request.client else None
+
+    if peer_ip and _is_trusted_peer(peer_ip):
+        # Peer is a trusted proxy — honour the forwarded headers
+        forwarded_for = request.headers.get("X-Forwarded-For")
+        if forwarded_for:
+            # Take the leftmost IP: the original client
+            return forwarded_for.split(",")[0].strip()
+
+        real_ip = request.headers.get("X-Real-IP")
+        if real_ip:
+            return real_ip
+
+    # Untrusted peer or no peer info — use the raw socket IP
+    return peer_ip or "unknown"
+
+
+# Schemes the application is willing to dial. Anything
+# else (file://, gopher://, ftp://, data://, javascript:)
+# is rejected outright.
+_ALLOWED_OUTBOUND_SCHEMES: frozenset[str] = frozenset({"http", "https"})
+
+
+def _is_private_or_reserved(
+    addr: ipaddress.IPv4Address | ipaddress.IPv6Address,
+) -> bool:
+    """Return True if ``addr`` belongs to any non-routable range.
+
+    Combines every "do not dial" predicate Python's
+    ``ipaddress`` module exposes: private (RFC1918,
+    fc00::/7), loopback, link-local, multicast,
+    unspecified (0.0.0.0, ::), and reserved blocks. Any
+    of these would let an attacker pivot to internal
+    infrastructure or cloud metadata services.
+    """
+    return (
+        addr.is_private
+        or addr.is_loopback
+        or addr.is_link_local
+        or addr.is_multicast
+        or addr.is_unspecified
+        or addr.is_reserved
+    )
+
+
+def _load_ssrf_allowlist() -> tuple[
+    frozenset[str],
+    tuple[ipaddress.IPv4Network | ipaddress.IPv6Network, ...],
+]:
+    """Split the configured allowlist into hostnames and IP networks.
+
+    Entries have already been validated by the
+    ``SSRF_ALLOWED_HOSTS`` field validator in
+    :mod:`core.config`. This helper just classifies them
+    for the lookup below.
+    """
+    hosts: set[str] = set()
+    networks: list[ipaddress.IPv4Network | ipaddress.IPv6Network] = []
+    for entry in core_config.settings.SSRF_ALLOWED_HOSTS:
+        try:
+            networks.append(ipaddress.ip_network(entry, strict=False))
+        except ValueError:
+            hosts.add(entry.lower())
+    return frozenset(hosts), tuple(networks)
+
+
+def _is_ssrf_allowlisted(
+    hostname: str,
+    addr: ipaddress.IPv4Address | ipaddress.IPv6Address,
+) -> bool:
+    """Return True if ``hostname`` or ``addr`` is allowlisted.
+
+    The allowlist is only consulted when the resolved
+    address would otherwise be rejected by
+    :func:`_is_private_or_reserved`. Both the hostname
+    (exact, case-insensitive) and the resolved IP (CIDR
+    membership) are checked so administrators can opt
+    in by either dimension.
+    """
+    hosts, networks = _load_ssrf_allowlist()
+    if hostname.lower() in hosts:
+        return True
+    return any(addr in network for network in networks)
+
+
+def reject_private_url(url: str, *, purpose: str | None = None) -> None:
+    """Refuse to dial URLs that resolve to private/internal hosts.
+
+    Mitigates Server-Side Request Forgery (SSRF) by
+    enforcing two checks before any outbound HTTP call:
+
+    1. The scheme must be ``http`` or ``https``.
+    2. Every address the hostname resolves to (both A
+       and AAAA records) must be a public unicast
+       address. A single private/loopback/link-local
+       answer aborts the request — this defends against
+       DNS rebinding where an attacker-controlled host
+       returns a public IP on the first lookup and a
+       private IP on the next.
+
+    Note: this is a *time-of-check* guard. Callers that
+    want full TOCTOU safety should also pin the resolved
+    public IP and dial it directly with the original
+    Host header. For our current use cases (admin-set
+    OIDC discovery / JWKS endpoints) the time-of-check
+    guard is sufficient hardening.
+
+    Args:
+        url: The fully-qualified URL the caller intends
+            to fetch.
+        purpose: Optional short tag identifying the
+            outbound call (e.g. ``"oidc_discovery"``).
+            Used only for audit logging when a private
+            destination is allowed via
+            ``SSRF_ALLOWED_HOSTS``; never trusted as a
+            security boundary.
+
+    Raises:
+        HTTPException: 400 if the URL is malformed,
+            uses a forbidden scheme, has no hostname,
+            or resolves to any non-public address that
+            is not covered by the
+            ``SSRF_ALLOWED_HOSTS`` allowlist.
+    """
+    try:
+        parsed = urlparse(url)
+    except ValueError as err:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Malformed URL",
+        ) from err
+
+    if parsed.scheme.lower() not in _ALLOWED_OUTBOUND_SCHEMES:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="URL scheme is not permitted",
+        )
+
+    hostname = parsed.hostname
+    if not hostname:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="URL has no hostname",
+        )
+
+    # Resolve every A/AAAA record and require that all
+    # of them be public. ``getaddrinfo`` returns a list
+    # of ``(family, type, proto, canonname, sockaddr)``
+    # tuples; ``sockaddr[0]`` is the textual IP.
+    try:
+        infos = socket.getaddrinfo(hostname, None)
+    except socket.gaierror as err:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="URL hostname could not be resolved",
+        ) from err
+
+    for info in infos:
+        sockaddr = info[4]
+        ip_text = sockaddr[0]
+        try:
+            addr = ipaddress.ip_address(ip_text)
+        except ValueError as err:
+            # Defensive: if the resolver hands back
+            # something we can't parse, treat as unsafe.
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="URL resolves to an unparseable address",
+            ) from err
+        if _is_private_or_reserved(addr):
+            if _is_ssrf_allowlisted(hostname, addr):
+                # Audit trail: every allowlisted private
+                # destination is logged so operators can
+                # review what the SSRF exception is being
+                # used for.
+                core_logger.print_to_log(
+                    "SSRF allowlist hit: dialing private "
+                    f"address {ip_text} for host "
+                    f"{hostname} (purpose="
+                    f"{purpose or 'unspecified'})",
+                    "info",
+                )
+                continue
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="URL resolves to a non-public address",
+            )

@@ -1,0 +1,73 @@
+{
+  "addActivity": "Engadir actividade",
+  "upload": {
+    "uploading": "Subindo…",
+    "success": "Actividade subida correctamente",
+    "error": "Non se puido subir o ficheiro de actividade"
+  },
+  "refresh": {
+    "label": "Actualizar",
+    "refreshing": "Actualizando…",
+    "success": "Actualización iniciada",
+    "error": "Non se puideron actualizar as actividades"
+  },
+  "feed": {
+    "scopeLabel": "Ámbito do feed",
+    "myActivities": "As miñas actividades",
+    "following": "A seguir",
+    "loadMore": "Cargar máis",
+    "loading": "Cargando…",
+    "error": {
+      "title": "Non se puideron cargar as actividades",
+      "description": "Produciuse un erro ao cargar o feed.",
+      "retry": "Tentar de novo"
+    },
+    "empty": {
+      "mine": {
+        "title": "Aínda non hai actividades",
+        "description": "Engade unha actividade ou conecta unha integración para comezar."
+      },
+      "following": {
+        "title": "Nada aquí aínda",
+        "description": "As actividades das persoas que segues aparecerán aquí."
+      }
+    }
+  },
+  "stats": {
+    "title": "Estatísticas",
+    "metricLabel": "Métrica de estatísticas",
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mes",
+    "empty": "Sen actividade neste período",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distancia",
+      "time": "Tempo",
+      "calories": "Calorías"
+    }
+  },
+  "sports": {
+    "run": "Carreira",
+    "bike": "Ciclismo",
+    "swim": "Natación",
+    "walk": "Camiñada",
+    "hike": "Sendeirismo",
+    "rowing": "Remo",
+    "snow_ski": "Esquí",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddle surf",
+    "surfing": "Surf",
+    "kayaking": "Kayak",
+    "sailing": "Vela",
+    "snowshoeing": "Raquetas de neve",
+    "inline_skating": "Patinaxe en liña"
+  },
+  "goals": {
+    "title": "Obxectivos",
+    "empty": {
+      "title": "Sen obxectivos definidos",
+      "description": "Define obxectivos na configuración para rexistrar o teu progreso aquí."
+    }
+  }
+}

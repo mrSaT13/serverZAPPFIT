@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Ar cieņu,",
+  "common.team": "Endurain komanda",
+  "common.system": "Endurain sistēma",
+  "common.visit": "Apmeklējiet Endurain:",
+  "common.source_code": "Pirmkods:",
+  "common.copy_link": "Ja poga augšā nedarbojas, varat nokopēt un ielīmēt šo saiti savā pārlūkprogrammā:",
+
+  "password_reset.subject": "Endurain - Paroles atiestatīšana",
+  "password_reset.heading": "Paroles atiestatīšanas pieprasījums",
+  "password_reset.greeting": "Sveiki, {name}!",
+  "password_reset.intro": "Jūs pieprasījāt atiestatīt sava Endurain konta paroli. Noklikšķiniet uz pogas zemāk, lai atiestatītu savu paroli:",
+  "password_reset.cta": "Atiestatīt paroli",
+  "password_reset.security_label": "Drošības paziņojums:",
+  "password_reset.security_notice": "Drošības apsvērumu dēļ šīs saites derīgums beigsies pēc 1 stundas.",
+  "password_reset.ignore": "Ja nepieprasījāt šo paroles atiestatīšanu, lūdzu, ignorējiet šo e-pastu. Jūsu parole paliks nemainīta.",
+
+  "signup_confirmation.subject": "Endurain - Apstipriniet savu kontu",
+  "signup_confirmation.heading": "Apstipriniet savu kontu",
+  "signup_confirmation.greeting": "Sveiki, {name}!",
+  "signup_confirmation.intro": "Paldies, ka reģistrējāties Endurain! Lūdzu, apstipriniet savu kontu, noklikšķinot uz pogas zemāk:",
+  "signup_confirmation.cta": "Apstiprināt kontu",
+  "signup_confirmation.security_label": "Drošības paziņojums:",
+  "signup_confirmation.security_notice": "Šīs apstiprinājuma saites derīgums beigsies pēc 24 stundām.",
+  "signup_confirmation.ignore": "Ja neizveidojāt Endurain kontu, lūdzu, ignorējiet šo e-pastu.",
+
+  "admin_signup.subject": "Endurain - Jauna lietotāja reģistrācija gaida apstiprinājumu",
+  "admin_signup.heading": "Jaunai reģistrācijai nepieciešams apstiprinājums",
+  "admin_signup.greeting": "Sveiki, {name}!",
+  "admin_signup.intro": "Jauns lietotājs ir reģistrējies un gaida apstiprinājumu:",
+  "admin_signup.user_label": "Lietotājs:",
+  "admin_signup.review": "Lūdzu, piesakieties Endurain administratora panelī, lai pārskatītu un apstiprinātu šo pieprasījumu.",
+  "admin_signup.cta": "Doties uz administratora paneli",
+
+  "signup_approved.subject": "Endurain - Jūsu konts ir apstiprināts",
+  "signup_approved.heading": "Jūsu konts tagad ir aktīvs",
+  "signup_approved.greeting": "Sveiki, {name}!",
+  "signup_approved.intro": "Labas ziņas! Jūsu konts ir apstiprināts un tagad ir aktīvs.",
+  "signup_approved.username_label": "Lietotājvārds:",
+  "signup_approved.login_intro": "Tagad varat pieteikties un sākt izmantot Endurain:",
+  "signup_approved.cta": "Pieteikties Endurain"
+}

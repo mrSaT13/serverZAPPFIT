@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "A felhasználó nem található",
+    "description": "Ez a profil nem létezik, vagy nem látható számodra."
+  },
+  "error": {
+    "title": "Nem sikerült betölteni a profilt",
+    "description": "Valami hiba történt a profil betöltése közben.",
+    "retry": "Próbáld újra"
+  },
+  "editProfile": "Profil szerkesztése",
+  "activities": {
+    "weekNav": "Tevékenységek böngészése hetenként",
+    "thisWeek": "Ezen a héten",
+    "oneYearAgo": "Egy évvel ezelőtt"
+  },
+  "stats": {
+    "thisMonth": "Tevékenységek ebben a hónapban",
+    "following": "Követett",
+    "followers": "Követők"
+  },
+  "tabs": {
+    "activities": "Tevékenységek",
+    "following": "Követett",
+    "followers": "Követők"
+  },
+  "activitiesError": {
+    "title": "Nem sikerült betölteni a tevékenységeket",
+    "description": "Valami hiba történt a tevékenységek betöltése közben.",
+    "retry": "Próbáld újra"
+  },
+  "listError": {
+    "title": "Nem sikerült betölteni a listát",
+    "description": "Valami hiba történt. Kérjük, próbáld újra.",
+    "retry": "Próbáld újra"
+  },
+  "follow": {
+    "follow": "Követés",
+    "requested": "Kérelmezve",
+    "following": "Követed",
+    "withdraw": "Kérelem visszavonása",
+    "unfollow": "Követés megszüntetése",
+    "cancel": "Mégse",
+    "close": "Bezárás",
+    "followError": "Nem sikerült elküldeni a követési kérelmet.",
+    "unfollowError": "Nem sikerült frissíteni a követési kérelmet.",
+    "confirmCancelTitle": "Kérelem visszavonása",
+    "confirmCancelBody": "Visszavonod a(z) {name} felé küldött követési kérelmedet?",
+    "confirmUnfollowTitle": "{name} követésének megszüntetése",
+    "confirmUnfollowBody": "Megszünteted {name} követését? Később újra követheted."
+  },
+  "list": {
+    "accept": "Elfogadás",
+    "decline": "Elutasítás",
+    "remove": "Eltávolítás",
+    "unfollow": "Követés megszüntetése",
+    "cancel": "Mégse",
+    "close": "Bezárás",
+    "accepted": "Elfogadva",
+    "pending": "Függőben",
+    "acceptError": "Nem sikerült elfogadni a kérelmet.",
+    "removeError": "Nem sikerült frissíteni ezt a követőt.",
+    "unfollowError": "Nem sikerült megszüntetni ennek a felhasználónak a követését.",
+    "confirmUnfollowTitle": "{name} követésének megszüntetése",
+    "confirmUnfollowBody": "Megszünteted {name} követését? Később újra követheted.",
+    "confirmDeclineTitle": "Kérelem elutasítása",
+    "confirmDeclineBody": "Elutasítod {name} követési kérelmét?",
+    "confirmRemoveTitle": "Követő eltávolítása",
+    "confirmRemoveBody": "Eltávolítod {name} felhasználót a követőid közül?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Még nincs tevékenység",
+      "ownDescription": "A tevékenységeid itt jelennek meg, miután hozzáadod vagy importálod őket.",
+      "otherTitle": "Nincs megjeleníthető tevékenység"
+    },
+    "following": {
+      "ownTitle": "Még nem követsz senkit.",
+      "otherTitle": "Még nem követ senkit."
+    },
+    "followers": {
+      "ownTitle": "Még nincsenek követőid.",
+      "otherTitle": "Még nincsenek követők."
+    }
+  }
+}

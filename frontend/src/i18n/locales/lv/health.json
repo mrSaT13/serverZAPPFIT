@@ -1,0 +1,648 @@
+{
+  "title": "Veselība",
+  "subtitle": "Skatiet visus savus veselības datus vienuviet",
+  "nav": {
+    "label": "Veselības sadaļas",
+    "soon": "Drīzumā",
+    "dashboard": "Informācijas panelis",
+    "sleep": "Miegs",
+    "rhr": "Miera sirdsdarbība",
+    "steps": "Soļi",
+    "weight": "Svars",
+    "fasting": "Badošanās",
+    "water": "Ūdens patēriņš",
+    "poop": "Vēdera izeja"
+  },
+  "dashboard": {
+    "title": "Informācijas panelis",
+    "subtitle": "Jūsu ikdienas labsajūta vienā mirklī",
+    "sleep": "Miegs",
+    "restingHeartRate": "Miera SD",
+    "avgSkinTemperatureDeviation": "Ādas temp. nov.",
+    "weight": "Svars",
+    "bmi": "BMI",
+    "steps": "Soļi",
+    "fasting": "Badošanās",
+    "water": "Ūdens patēriņš",
+    "poop": "Vēdera izeja",
+    "noSleepTarget": "Nav miega mērķa",
+    "noWeightTarget": "Nav svara mērķa",
+    "noStepsTarget": "Nav soļu mērķa",
+    "noFastingTarget": "Nav badošanās mērķa",
+    "noWaterTarget": "Nav ūdens mērķa",
+    "noPoopTarget": "Nav vēdera izejas mērķa",
+    "stepsTargetLabel": "soļi",
+    "poopTargetLabel": "/ dienā",
+    "noWeightData": "Nav svara datu",
+    "bmiUnderweight": "Nepietiekams svars",
+    "bmiNormalWeight": "Normāls svars",
+    "bmiOverweight": "Liekais svars",
+    "bmiObesityClass1": "Aptaukošanās (1. klase)",
+    "bmiObesityClass2": "Aptaukošanās (2. klase)",
+    "bmiObesityClass3": "Galēja aptaukošanās (3. klase)",
+    "hrvBalanced": "Līdzsvarots",
+    "hrvUnbalanced": "Nelīdzsvarots",
+    "hrvLow": "Zems",
+    "hrvPoor": "Vājš",
+    "labelNoData": "Nav datu",
+    "errorTitle": "Neizdevās ielādēt jūsu veselības datus",
+    "errorDescription": "Ielādējot jūsu ikdienas veselības statistiku, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "weight": {
+    "title": "Svars",
+    "subtitle": "Izsekojiet savu svaru un ķermeņa uzbūvi laika gaitā",
+    "logButton": "Reģistrēt svaru",
+    "targetButton": "Iestatīt mērķi",
+    "sourceGarmin": "No Garmin Connect",
+    "toggleDetails": "Pārslēgt ķermeņa uzbūves detaļas",
+    "chartTitle": "Svara tendence",
+    "chartWeightSeries": "Svars",
+    "chartTargetSeries": "Mērķis",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt ierakstu",
+      "delete": "Dzēst ierakstu"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Ķermeņa tauki",
+      "bodyWater": "Ķermeņa ūdens",
+      "boneMass": "Kaulu masa",
+      "muscleMass": "Muskuļu masa"
+    },
+    "form": {
+      "addTitle": "Reģistrēt svaru",
+      "editTitle": "Rediģēt svara ierakstu",
+      "description": "Reģistrējiet savu svaru un pēc izvēles ķermeņa uzbūvi.",
+      "date": "Datums",
+      "dateRequired": "Lūdzu, izvēlieties datumu.",
+      "weight": "Svars",
+      "weightRequired": "Lūdzu, ievadiet savu svaru.",
+      "weightInvalid": "Ievadiet svaru, kas lielāks par nulli.",
+      "bodyComposition": "Ķermeņa uzbūve (neobligāti)",
+      "bmi": "BMI",
+      "bodyFat": "Ķermeņa tauki (%)",
+      "bodyWater": "Ķermeņa ūdens (%)",
+      "boneMass": "Kaulu masa",
+      "muscleMass": "Muskuļu masa",
+      "create": "Reģistrēt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Svars reģistrēts.",
+      "updateSuccess": "Svara ieraksts atjaunināts.",
+      "saveError": "Neizdevās saglabāt jūsu svara ierakstu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt svara mērķi",
+      "description": "Izvēlieties mērķa svaru vai notīriet lauku, lai to noņemtu.",
+      "weight": "Mērķa svars",
+      "hint": "Atstājiet tukšu, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Svara mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu svara mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav svara ierakstu",
+      "description": "Reģistrējiet savu svaru, lai sāktu izsekot savu progresu laika gaitā."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu svara vēsturi",
+      "description": "Ielādējot jūsu svara ierakstus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst svara ierakstu",
+      "body": "Šis svara ieraksts tiks neatgriezeniski dzēsts. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Svara ieraksts dzēsts.",
+      "error": "Neizdevās dzēst svara ierakstu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "steps": {
+    "title": "Soļi",
+    "subtitle": "Izsekojiet savu ikdienas soļu skaitu laika gaitā",
+    "logButton": "Reģistrēt soļus",
+    "targetButton": "Iestatīt mērķi",
+    "sourceGarmin": "No Garmin Connect",
+    "chartTitle": "Soļu tendence",
+    "chartStepsSeries": "Soļi",
+    "chartTargetSeries": "Mērķis",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt ierakstu",
+      "delete": "Dzēst ierakstu"
+    },
+    "form": {
+      "addTitle": "Reģistrēt soļus",
+      "editTitle": "Rediģēt soļu ierakstu",
+      "description": "Reģistrējiet savu dienas soļu skaitu.",
+      "date": "Datums",
+      "dateRequired": "Lūdzu, izvēlieties datumu.",
+      "steps": "Soļi",
+      "stepsRequired": "Lūdzu, ievadiet savu soļu skaitu.",
+      "stepsInvalid": "Ievadiet soļu skaitu, kas lielāks par nulli.",
+      "create": "Reģistrēt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Soļi reģistrēti.",
+      "updateSuccess": "Soļu ieraksts atjaunināts.",
+      "saveError": "Neizdevās saglabāt jūsu soļu ierakstu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt soļu mērķi",
+      "description": "Izvēlieties ikdienas soļu mērķi vai notīriet lauku, lai to noņemtu.",
+      "steps": "Mērķa ikdienas soļi",
+      "hint": "Atstājiet tukšu, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Soļu mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu soļu mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav soļu ierakstu",
+      "description": "Reģistrējiet savus soļus, lai sāktu izsekot savu aktivitāti laika gaitā."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu soļu vēsturi",
+      "description": "Ielādējot jūsu soļu ierakstus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst soļu ierakstu",
+      "body": "Šis soļu ieraksts tiks neatgriezeniski dzēsts. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Soļu ieraksts dzēsts.",
+      "error": "Neizdevās dzēst soļu ierakstu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "rhr": {
+    "title": "Miera sirdsdarbība",
+    "subtitle": "Izsekojiet savu miera sirdsdarbību laika gaitā",
+    "sourceGarmin": "No Garmin Connect",
+    "chartTitle": "Miera sirdsdarbības tendence",
+    "chartSeries": "Miera sirdsdarbība",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "empty": {
+      "title": "Vēl nav miera sirdsdarbības datu",
+      "description": "Miera sirdsdarbība tiek reģistrēta līdz ar jūsu miegu. Sinhronizējiet ierīci, kas to izseko, lai šeit redzētu savu tendenci."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu miera sirdsdarbības vēsturi",
+      "description": "Ielādējot jūsu miera sirdsdarbības datus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    }
+  },
+  "sleep": {
+    "title": "Miegs",
+    "subtitle": "Izsekojiet sava miega ilgumu un kvalitāti laika gaitā",
+    "logButton": "Reģistrēt miegu",
+    "targetButton": "Iestatīt mērķi",
+    "sourceGarmin": "No Garmin Connect",
+    "toggleDetails": "Pārslēgt miega detaļas",
+    "chartTitle": "Miega tendence",
+    "chartSleepSeries": "Miegs",
+    "chartTargetSeries": "Mērķis",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt ierakstu",
+      "delete": "Dzēst ierakstu"
+    },
+    "score": "Vērtējums",
+    "hrvBalanced": "Līdzsvarots",
+    "hrvUnbalanced": "Nelīdzsvarots",
+    "hrvLow": "Zems",
+    "hrvPoor": "Vājš",
+    "scoreExcellent": "Lielisks",
+    "scoreGood": "Labs",
+    "scoreFair": "Pietiekams",
+    "scorePoor": "Vājš",
+    "detail": {
+      "tabsLabel": "Miega detaļu sadaļas",
+      "tabScore": "Miega vērtējums",
+      "tabDetails": "Miega detaļas",
+      "deep": "Dziļais",
+      "light": "Vieglais",
+      "rem": "REM",
+      "awake": "Nomodā",
+      "score": "Miega vērtējums",
+      "quality": "Kvalitāte",
+      "duration": "Ilgums",
+      "restingHeartRate": "Miera SD",
+      "avgHeartRate": "Vid. SD",
+      "minHeartRate": "Min. SD",
+      "maxHeartRate": "Maks. SD",
+      "skinTempDeviation": "Ādas temp. nov.",
+      "hrv": "HRV statuss",
+      "spo2": "Vid. SpO₂",
+      "lowestSpo2": "Zemākais SpO₂",
+      "highestSpo2": "Augstākais SpO₂",
+      "avgRespiration": "Vid. elpošana",
+      "lowestRespiration": "Zemākā elpošana",
+      "highestRespiration": "Augstākā elpošana",
+      "avgSleepStress": "Vid. miega stress",
+      "awakeCount": "Pamošanās reizes",
+      "summary": "Kopsavilkums",
+      "breakdown": "Sadalījums",
+      "overview": "Pārskats",
+      "heartRate": "Sirdsdarbība",
+      "bloodOxygen": "Asins skābeklis",
+      "respiration": "Elpošana",
+      "avg": "Vid.",
+      "min": "Min.",
+      "max": "Maks.",
+      "noData": "Nav reģistrētu datu."
+    },
+    "hypnogram": {
+      "title": "Miega stadijas",
+      "deep": "Dziļais",
+      "light": "Vieglais",
+      "rem": "REM",
+      "awake": "Nomodā",
+      "noData": "Nav pieejama stadiju laika līnija."
+    },
+    "form": {
+      "addTitle": "Reģistrēt miegu",
+      "editTitle": "Rediģēt miega ierakstu",
+      "description": "Reģistrējiet sava miega ilgumu un pēc izvēles stadiju sadalījumu un rādītājus.",
+      "date": "Datums",
+      "dateRequired": "Lūdzu, izvēlieties datumu.",
+      "totalSleep": "Kopējais miegs",
+      "totalSleepRequired": "Lūdzu, ievadiet, cik ilgi gulējāt.",
+      "hours": "Stundas",
+      "minutes": "Minūtes",
+      "stageBreakdown": "Stadiju sadalījums (neobligāti)",
+      "deep": "Dziļais miegs",
+      "light": "Vieglais miegs",
+      "rem": "REM miegs",
+      "awake": "Nomodā",
+      "metrics": "Rādītāji (neobligāti)",
+      "sleepScore": "Miega vērtējums (0–100)",
+      "restingHeartRate": "Miera sirdsdarbība (bpm)",
+      "skinTempDeviation": "Ādas temp. novirze (°C)",
+      "spo2": "Vid. SpO₂ (%)",
+      "sleepTimes": "Miega laiki (neobligāti)",
+      "startTime": "Miega sākums",
+      "endTime": "Miega beigas",
+      "endBeforeStart": "Miega beigām jābūt pēc sākuma laika.",
+      "awakeCount": "Pamošanās reizes",
+      "heartRate": "Sirdsdarbība (neobligāti)",
+      "avgHeartRate": "Vid. sirdsdarbība (bpm)",
+      "minHeartRate": "Min. sirdsdarbība (bpm)",
+      "maxHeartRate": "Maks. sirdsdarbība (bpm)",
+      "bloodOxygen": "Asins skābeklis (neobligāti)",
+      "lowestSpo2": "Zemākais SpO₂ (%)",
+      "highestSpo2": "Augstākais SpO₂ (%)",
+      "avgSleepStress": "Vid. miega stress (0–100)",
+      "sleepStages": "Miega stadijas (neobligāti)",
+      "noStages": "Vēl nav pievienotu stadiju.",
+      "addStage": "Pievienot stadiju",
+      "removeStage": "Noņemt stadiju",
+      "stageLabel": "Stadija {index}",
+      "stageType": "Stadija",
+      "stageDeep": "Dziļais",
+      "stageLight": "Vieglais",
+      "stageRem": "REM",
+      "stageAwake": "Nomodā",
+      "stageStart": "Sākums",
+      "stageEnd": "Beigas",
+      "stageDuration": "Ilgums",
+      "create": "Reģistrēt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Miegs reģistrēts.",
+      "updateSuccess": "Miega ieraksts atjaunināts.",
+      "saveError": "Neizdevās saglabāt jūsu miega ierakstu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt miega mērķi",
+      "description": "Izvēlieties nakts miega mērķi vai notīriet laukus, lai to noņemtu.",
+      "hours": "Stundas",
+      "minutes": "Minūtes",
+      "hint": "Atstājiet tukšu, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Miega mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu miega mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav miega ierakstu",
+      "description": "Reģistrējiet nakts miegu, lai sāktu izsekot savu atpūtu laika gaitā."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu miega vēsturi",
+      "description": "Ielādējot jūsu miega ierakstus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst miega ierakstu",
+      "body": "Šis miega ieraksts tiks neatgriezeniski dzēsts. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Miega ieraksts dzēsts.",
+      "error": "Neizdevās dzēst miega ierakstu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "water": {
+    "title": "Ūdens patēriņš",
+    "subtitle": "Izsekojiet savu ikdienas ūdens patēriņu laika gaitā",
+    "logButton": "Reģistrēt ūdeni",
+    "targetButton": "Iestatīt mērķi",
+    "sourceGarmin": "No Garmin Connect",
+    "chartTitle": "Ūdens patēriņa tendence",
+    "chartWaterSeries": "Ūdens",
+    "chartTargetSeries": "Mērķis",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt ierakstu",
+      "delete": "Dzēst ierakstu"
+    },
+    "form": {
+      "addTitle": "Reģistrēt ūdeni",
+      "editTitle": "Rediģēt ūdens ierakstu",
+      "description": "Reģistrējiet savu dienas ūdens patēriņu.",
+      "date": "Datums",
+      "dateRequired": "Lūdzu, izvēlieties datumu.",
+      "amount": "Daudzums",
+      "amountRequired": "Lūdzu, ievadiet daudzumu.",
+      "amountInvalid": "Ievadiet daudzumu, kas lielāks par nulli.",
+      "create": "Reģistrēt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Ūdens reģistrēts.",
+      "updateSuccess": "Ūdens ieraksts atjaunināts.",
+      "saveError": "Neizdevās saglabāt jūsu ūdens ierakstu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt ūdens mērķi",
+      "description": "Izvēlieties ikdienas ūdens mērķi vai notīriet lauku, lai to noņemtu.",
+      "amount": "Ikdienas mērķis",
+      "hint": "Atstājiet tukšu, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Ūdens mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu ūdens mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav ūdens ierakstu",
+      "description": "Reģistrējiet savu ūdens patēriņu, lai sāktu izsekot savu hidratāciju laika gaitā."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu ūdens vēsturi",
+      "description": "Ielādējot jūsu ūdens ierakstus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst ūdens ierakstu",
+      "body": "Šis ūdens ieraksts tiks neatgriezeniski dzēsts. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Ūdens ieraksts dzēsts.",
+      "error": "Neizdevās dzēst ūdens ierakstu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "poop": {
+    "title": "Vēdera izeja",
+    "subtitle": "Izsekojiet savu vēdera izeju laika gaitā",
+    "logButton": "Reģistrēt ierakstu",
+    "targetButton": "Iestatīt mērķi",
+    "chartTitle": "Ikdienas biežums",
+    "chartCountSeries": "Vēdera izeja",
+    "chartTargetSeries": "Mērķis",
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt ierakstu",
+      "delete": "Dzēst ierakstu"
+    },
+    "list": {
+      "bristolBadge": "Bristole {type}",
+      "noDetails": "Vēdera izeja"
+    },
+    "form": {
+      "addTitle": "Reģistrēt vēdera izeju",
+      "editTitle": "Rediģēt vēdera izeju",
+      "description": "Reģistrējiet savas vēdera izejas laiku un detaļas.",
+      "dateTime": "Datums un laiks",
+      "dateTimeRequired": "Lūdzu, izvēlieties datumu un laiku.",
+      "bristolType": "Bristoles izkārnījumu tips",
+      "color": "Krāsa",
+      "notes": "Piezīmes",
+      "none": "Nav",
+      "colors": {
+        "brown": "Brūns",
+        "dark_brown": "Tumši brūns",
+        "light_brown": "Gaiši brūns",
+        "yellow": "Dzeltens",
+        "green": "Zaļš",
+        "black": "Melns",
+        "red": "Sarkans",
+        "white": "Balts"
+      },
+      "create": "Reģistrēt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Vēdera izeja reģistrēta.",
+      "updateSuccess": "Vēdera izeja atjaunināta.",
+      "saveError": "Neizdevās saglabāt jūsu ierakstu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt vēdera izejas mērķi",
+      "description": "Izvēlieties ikdienas vēdera izejas mērķi vai notīriet lauku, lai to noņemtu.",
+      "count": "Mērķis dienā",
+      "hint": "Atstājiet tukšu, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Vēdera izejas mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav ierakstu",
+      "description": "Reģistrējiet vēdera izeju, lai sāktu izsekot laika gaitā."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu vēsturi",
+      "description": "Ielādējot jūsu ierakstus, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst ierakstu",
+      "body": "Šis ieraksts tiks neatgriezeniski dzēsts. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Ieraksts dzēsts.",
+      "error": "Neizdevās dzēst ierakstu. Lūdzu, mēģiniet vēlreiz."
+    }
+  },
+  "fasting": {
+    "title": "Badošanās",
+    "subtitle": "Sāciet badošanos, izsekojiet savu progresu un pārskatiet savu vēsturi",
+    "startButton": "Sākt badošanos",
+    "targetButton": "Iestatīt mērķi",
+    "sourceGarmin": "No Garmin Connect",
+    "active": {
+      "title": "Notiek badošanās",
+      "started": "Sākta",
+      "target": "Mērķis",
+      "complete": "Pabeigt",
+      "break": "Pārtraukt badošanos",
+      "cancel": "Atcelt",
+      "completeHint": "Badošanos varat pabeigt, tiklīdz sasniedzat savu mērķi."
+    },
+    "stats": {
+      "totalFasts": "Kopā badošanās",
+      "currentStreak": "Pašreizējā sērija",
+      "longestStreak": "Garākā sērija",
+      "avgDuration": "Vid. ilgums",
+      "totalTime": "Kopējais badošanās laiks",
+      "completionRate": "Pabeigšanas rādītājs",
+      "days": "dienas"
+    },
+    "types": {
+      "16:8": "16:8 (16h badošanās, 8h ēšana)",
+      "18:6": "18:6 (18h badošanās, 6h ēšana)",
+      "20:4": "20:4 (20h badošanās, 4h ēšana)",
+      "OMAD": "OMAD (viena ēdienreize dienā)",
+      "24h": "24 stundu badošanās",
+      "36h": "36 stundu badošanās",
+      "48h": "48 stundu badošanās",
+      "72h": "72 stundu badošanās",
+      "custom": "Pielāgots"
+    },
+    "status": {
+      "in_progress": "Notiek",
+      "completed": "Pabeigts",
+      "broken": "Pārtraukts",
+      "cancelled": "Atcelts"
+    },
+    "interval": {
+      "label": "Laika diapazons",
+      "last_7_days": "Pēdējās 7 dienas",
+      "last_30_days": "Pēdējās 30 dienas",
+      "last_90_days": "Pēdējās 90 dienas",
+      "last_year": "Pēdējais gads",
+      "all_time": "Visu laiku"
+    },
+    "actions": {
+      "edit": "Rediģēt badošanos",
+      "delete": "Dzēst badošanos"
+    },
+    "list": {
+      "notesLabel": "Piezīmes"
+    },
+    "form": {
+      "addTitle": "Sākt badošanos",
+      "editTitle": "Rediģēt badošanās sesiju",
+      "description": "Izvēlieties badošanās protokolu un kad tā sākās.",
+      "type": "Badošanās protokols",
+      "customDuration": "Pielāgots ilgums",
+      "customDurationHint": "Badošanās ilgums stundās (1–72).",
+      "hours": "stundas",
+      "startTime": "Sākuma laiks",
+      "startTimeRequired": "Lūdzu, izvēlieties sākuma laiku.",
+      "endTime": "Beigu laiks",
+      "status": "Statuss",
+      "notes": "Piezīmes",
+      "create": "Sākt",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Badošanās sākta.",
+      "updateSuccess": "Badošanās sesija atjaunināta.",
+      "saveError": "Neizdevās saglabāt jūsu badošanās sesiju. Lūdzu, mēģiniet vēlreiz."
+    },
+    "target": {
+      "title": "Iestatīt badošanās mērķi",
+      "description": "Izvēlieties mērķa badošanās ilgumu vai notīriet abus laukus, lai to noņemtu.",
+      "hours": "Stundas",
+      "minutes": "Minūtes",
+      "hint": "Atstājiet abus tukšus, lai noņemtu savu mērķi.",
+      "save": "Saglabāt",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "saveSuccess": "Badošanās mērķis atjaunināts.",
+      "saveError": "Neizdevās atjaunināt jūsu badošanās mērķi. Lūdzu, mēģiniet vēlreiz."
+    },
+    "complete": {
+      "success": "Badošanās beigta.",
+      "error": "Neizdevās beigt jūsu badošanos. Lūdzu, mēģiniet vēlreiz."
+    },
+    "empty": {
+      "title": "Vēl nav badošanās",
+      "description": "Sāciet badošanos, lai sāktu izsekot savu badošanās vēsturi."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt jūsu badošanās vēsturi",
+      "description": "Ielādējot jūsu badošanās sesijas, kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "delete": {
+      "title": "Dzēst badošanās sesiju",
+      "body": "Šī badošanās sesija tiks neatgriezeniski dzēsta. Šo darbību nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Badošanās sesija dzēsta.",
+      "error": "Neizdevās dzēst badošanās sesiju. Lūdzu, mēģiniet vēlreiz."
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Uživatel nenalezen",
+    "description": "Tento profil neexistuje nebo pro vás není viditelný."
+  },
+  "error": {
+    "title": "Nepodařilo se načíst profil",
+    "description": "Při načítání tohoto profilu se něco pokazilo.",
+    "retry": "Zkusit znovu"
+  },
+  "editProfile": "Upravit profil",
+  "activities": {
+    "weekNav": "Procházet aktivity po týdnech",
+    "thisWeek": "Tento týden",
+    "oneYearAgo": "Před rokem"
+  },
+  "stats": {
+    "thisMonth": "Aktivity tento měsíc",
+    "following": "Sledovaní",
+    "followers": "Sledující"
+  },
+  "tabs": {
+    "activities": "Aktivity",
+    "following": "Sledovaní",
+    "followers": "Sledující"
+  },
+  "activitiesError": {
+    "title": "Nepodařilo se načíst aktivity",
+    "description": "Při načítání aktivit se něco pokazilo.",
+    "retry": "Zkusit znovu"
+  },
+  "listError": {
+    "title": "Nepodařilo se načíst seznam",
+    "description": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "retry": "Zkusit znovu"
+  },
+  "follow": {
+    "follow": "Sledovat",
+    "requested": "Požádáno",
+    "following": "Sledujete",
+    "withdraw": "Zrušit žádost",
+    "unfollow": "Přestat sledovat",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "followError": "Nepodařilo se odeslat žádost o sledování.",
+    "unfollowError": "Nepodařilo se aktualizovat žádost o sledování.",
+    "confirmCancelTitle": "Zrušit žádost",
+    "confirmCancelBody": "Zrušit svou žádost o sledování uživatele {name}?",
+    "confirmUnfollowTitle": "Přestat sledovat {name}",
+    "confirmUnfollowBody": "Přestat sledovat uživatele {name}? Můžete jej znovu sledovat později."
+  },
+  "list": {
+    "accept": "Přijmout",
+    "decline": "Odmítnout",
+    "remove": "Odebrat",
+    "unfollow": "Přestat sledovat",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "accepted": "Přijato",
+    "pending": "Čeká se",
+    "acceptError": "Nepodařilo se přijmout žádost.",
+    "removeError": "Nepodařilo se aktualizovat tohoto sledujícího.",
+    "unfollowError": "Nepodařilo se přestat sledovat tohoto uživatele.",
+    "confirmUnfollowTitle": "Přestat sledovat {name}",
+    "confirmUnfollowBody": "Přestat sledovat uživatele {name}? Můžete jej znovu sledovat později.",
+    "confirmDeclineTitle": "Odmítnout žádost",
+    "confirmDeclineBody": "Odmítnout žádost o sledování od uživatele {name}?",
+    "confirmRemoveTitle": "Odebrat sledujícího",
+    "confirmRemoveBody": "Odebrat uživatele {name} ze svých sledujících?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Zatím žádné aktivity",
+      "ownDescription": "Vaše aktivity se zde zobrazí, jakmile je přidáte nebo importujete.",
+      "otherTitle": "Žádné aktivity k zobrazení"
+    },
+    "following": {
+      "ownTitle": "Zatím nikoho nesledujete.",
+      "otherTitle": "Zatím nikoho nesleduje."
+    },
+    "followers": {
+      "ownTitle": "Zatím nemáte žádné sledující.",
+      "otherTitle": "Zatím žádní sledující."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Suche",
+  "subtitle": "Finde Benutzer, Aktivitäten und Ausrüstung in Endurain.",
+  "placeholder": "Suchen…",
+  "clear": "Suche zurücksetzen",
+  "scopes": {
+    "users": "Benutzer",
+    "activities": "Aktivitäten",
+    "gears": "Ausrüstung"
+  },
+  "filters": {
+    "all": "Alle Typen",
+    "activityType": "Nach Aktivitätstyp filtern",
+    "gearType": "Nach Ausrüstungstyp filtern"
+  },
+  "activityCategories": {
+    "running": "Laufen",
+    "cycling": "Radfahren",
+    "swimming": "Schwimmen",
+    "walking": "Gehen & Wandern",
+    "racquet": "Schlägersportarten",
+    "rowing": "Rudern & Paddeln",
+    "winterSports": "Wintersport",
+    "waterSports": "Wassersport",
+    "skating": "Skaten"
+  },
+  "results": {
+    "inactive": "Inaktiv"
+  },
+  "idle": {
+    "title": "Endurain durchsuchen",
+    "description": "Wähle, wonach du suchen möchtest, und fange an zu tippen, um Treffer zu sehen."
+  },
+  "empty": {
+    "title": "Keine Treffer gefunden",
+    "description": "Nichts entspricht \"{term}\". Versuche eine andere Suche."
+  },
+  "error": {
+    "title": "Suche fehlgeschlagen",
+    "description": "Deine Suche konnte nicht ausgeführt werden. Überprüfe deine Verbindung und versuche es erneut.",
+    "retry": "Erneut versuchen"
+  }
+}

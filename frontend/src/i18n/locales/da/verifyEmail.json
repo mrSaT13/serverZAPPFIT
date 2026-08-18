@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Bekræfter din e-mail",
+  "verifyingBody": "Vent et øjeblik, mens vi bekræfter din adresse.",
+  "successTitle": "E-mail bekræftet",
+  "successBody": "Din e-mailadresse er blevet bekræftet.",
+  "adminApprovalBody": "Din konto afventer nu administratorgodkendelse.",
+  "continueButton": "Fortsæt til login",
+  "invalidTitle": "Bekræftelse mislykkedes",
+  "missingTokenBody": "Dette bekræftelseslink mangler sit token.",
+  "errorInvalidToken": "Dette bekræftelseslink er ugyldigt eller udløbet.",
+  "errorNotFound": "Vi kunne ikke finde en konto til dette link.",
+  "errorGeneral": "Vi kunne ikke bekræfte din e-mail. Prøv venligst igen.",
+  "retry": "Prøv igen",
+  "backToLogin": "Tilbage til login"
+}

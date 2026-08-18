@@ -1,0 +1,51 @@
+{
+  "title": "Bildirimler",
+  "subtitle": "Son etkinlikler, istekler ve uyarılar",
+  "navLabel": "Bildirimler",
+  "unread": "Okunmamış",
+  "markRead": "Okundu olarak işaretle",
+  "markAllRead": "Tümünü okundu olarak işaretle",
+  "seeAll": "Tümünü gör",
+  "loadMore": "Daha fazla yükle",
+  "loading": "Yükleniyor…",
+  "badge": "{count} okunmamış bildirim",
+  "empty": {
+    "title": "Her şeyi gördünüz",
+    "description": "Etkinlikleriniz, takipçileriniz ve entegrasyonlarınızla ilgili güncellemeler burada görünecek."
+  },
+  "error": {
+    "title": "Bildirimler yüklenemedi",
+    "description": "Bildirimleriniz yüklenirken bir şeyler ters gitti.",
+    "retry": "Tekrar dene"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Yeni etkinlik",
+      "body": "Hesabınıza yeni bir etkinlik eklendi."
+    },
+    "duplicateActivity": {
+      "title": "Olası yinelenen etkinlik",
+      "body": "Aynı başlangıç saatine sahip bir etkinlik zaten mevcut olabilir."
+    },
+    "newFollowerRequest": {
+      "title": "Yeni takip isteği",
+      "body": "{name} ({'@'}{username}) sizi takip etmek istiyor."
+    },
+    "followerRequestAccepted": {
+      "title": "Takip isteği kabul edildi",
+      "body": "{name} ({'@'}{username}) takip isteğinizi kabul etti."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect ilgi bekliyor",
+      "body": "Garmin Connect oturumunuzun süresi doldu. Eşitlemeyi sürdürmek için yeniden bağlanın."
+    },
+    "adminSignUpApproval": {
+      "title": "Yeni kayıt onay bekliyor",
+      "body": "{name} ({'@'}{username}) hesap onayını bekliyor."
+    },
+    "unknown": {
+      "title": "Bildirim",
+      "body": "Yeni bir bildiriminiz var."
+    }
+  }
+}

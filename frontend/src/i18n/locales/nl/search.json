@@ -1,0 +1,43 @@
+{
+  "title": "Zoeken",
+  "subtitle": "Zoek gebruikers, activiteiten en uitrusting in Endurain.",
+  "placeholder": "Zoeken…",
+  "clear": "Zoekterm wissen",
+  "scopes": {
+    "users": "Gebruikers",
+    "activities": "Activiteiten",
+    "gears": "Uitrusting"
+  },
+  "filters": {
+    "all": "Alle types",
+    "activityType": "Filteren op activiteitstype",
+    "gearType": "Filteren op uitrustingstype"
+  },
+  "activityCategories": {
+    "running": "Hardlopen",
+    "cycling": "Fietsen",
+    "swimming": "Zwemmen",
+    "walking": "Wandelen en trekken",
+    "racquet": "Racketsport",
+    "rowing": "Roeien en peddelen",
+    "winterSports": "Wintersport",
+    "waterSports": "Watersport",
+    "skating": "Schaatsen"
+  },
+  "results": {
+    "inactive": "Inactief"
+  },
+  "idle": {
+    "title": "Zoek in Endurain",
+    "description": "Kies wat je wilt zoeken en begin dan te typen om resultaten te zien."
+  },
+  "empty": {
+    "title": "Geen resultaten gevonden",
+    "description": "Niets komt overeen met \"{term}\". Probeer een andere zoekopdracht."
+  },
+  "error": {
+    "title": "Zoeken mislukt",
+    "description": "Je zoekopdracht kon niet worden uitgevoerd. Controleer je verbinding en probeer het opnieuw.",
+    "retry": "Opnieuw proberen"
+  }
+}

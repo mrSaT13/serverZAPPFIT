@@ -1,0 +1,49 @@
+{
+  "title": "Resumo",
+  "subtitle": "Revisa os teus totais e tendencias de adestramento ao longo do tempo.",
+  "viewType": {
+    "label": "Período do resumo",
+    "week": "Semana",
+    "month": "Mes",
+    "year": "Ano",
+    "lifetime": "Total histórico"
+  },
+  "filters": {
+    "type": "Tipo de actividade",
+    "allTypes": "Todos os tipos"
+  },
+  "period": {
+    "previous": "Período anterior",
+    "next": "Período seguinte",
+    "picker": "Seleccionar período",
+    "allTime": "Todo o tempo"
+  },
+  "metrics": {
+    "distance": "Distancia",
+    "duration": "Duración",
+    "elevation": "Desnivel",
+    "calories": "Calorías",
+    "activities": "Actividades"
+  },
+  "breakdown": {
+    "title": "Desglose",
+    "period": "Período",
+    "weekNumber": "Semana {number}"
+  },
+  "typeBreakdown": {
+    "title": "Por tipo de actividade",
+    "type": "Tipo"
+  },
+  "activities": {
+    "title": "Actividades neste período"
+  },
+  "empty": {
+    "title": "Sen actividade neste período",
+    "description": "Ningunha actividade coincide co período e tipo seleccionados."
+  },
+  "error": {
+    "title": "Non se puido cargar o resumo",
+    "description": "Produciuse un erro ao cargar as túas estatísticas. Comproba a túa conexión e téntao de novo.",
+    "retry": "Tentar de novo"
+  }
+}

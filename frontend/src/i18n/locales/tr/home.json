@@ -1,0 +1,73 @@
+{
+  "addActivity": "Etkinlik ekle",
+  "upload": {
+    "uploading": "Yükleniyor…",
+    "success": "Etkinlik başarıyla yüklendi",
+    "error": "Etkinlik dosyası yüklenemedi"
+  },
+  "refresh": {
+    "label": "Yenile",
+    "refreshing": "Yenileniyor…",
+    "success": "Yenileme başlatıldı",
+    "error": "Etkinlikler yenilenemedi"
+  },
+  "feed": {
+    "scopeLabel": "Akış kapsamı",
+    "myActivities": "Etkinliklerim",
+    "following": "Takip edilenler",
+    "loadMore": "Daha fazla yükle",
+    "loading": "Yükleniyor…",
+    "error": {
+      "title": "Etkinlikler yüklenemedi",
+      "description": "Akış yüklenirken bir şeyler ters gitti.",
+      "retry": "Tekrar dene"
+    },
+    "empty": {
+      "mine": {
+        "title": "Henüz etkinlik yok",
+        "description": "Başlamak için bir etkinlik ekleyin veya bir entegrasyon bağlayın."
+      },
+      "following": {
+        "title": "Henüz burada bir şey yok",
+        "description": "Takip ettiğiniz kişilerin etkinlikleri burada görünecek."
+      }
+    }
+  },
+  "stats": {
+    "title": "İstatistikler",
+    "metricLabel": "İstatistik metriği",
+    "thisWeek": "Bu hafta",
+    "thisMonth": "Bu ay",
+    "empty": "Bu dönemde etkinlik yok",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Mesafe",
+      "time": "Süre",
+      "calories": "Kalori"
+    }
+  },
+  "sports": {
+    "run": "Koşu",
+    "bike": "Bisiklet",
+    "swim": "Yüzme",
+    "walk": "Yürüyüş",
+    "hike": "Doğa yürüyüşü",
+    "rowing": "Kürek",
+    "snow_ski": "Kayak",
+    "snowboard": "Snowboard",
+    "windsurf": "Rüzgar sörfü",
+    "stand_up_paddleboarding": "Ayakta kürek sörfü",
+    "surfing": "Sörf",
+    "kayaking": "Kano",
+    "sailing": "Yelken",
+    "snowshoeing": "Kar ayakkabısı yürüyüşü",
+    "inline_skating": "Tekerlekli paten"
+  },
+  "goals": {
+    "title": "Hedefler",
+    "empty": {
+      "title": "Hedef belirlenmedi",
+      "description": "İlerlemenizi burada takip etmek için ayarlarda hedefler belirleyin."
+    }
+  }
+}

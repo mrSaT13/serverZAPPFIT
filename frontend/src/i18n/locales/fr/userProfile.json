@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Utilisateur introuvable",
+    "description": "Ce profil n'existe pas ou n'est pas visible pour vous."
+  },
+  "error": {
+    "title": "Impossible de charger le profil",
+    "description": "Une erreur s'est produite lors du chargement de ce profil.",
+    "retry": "Réessayer"
+  },
+  "editProfile": "Modifier le profil",
+  "activities": {
+    "weekNav": "Parcourir les activités par semaine",
+    "thisWeek": "Cette semaine",
+    "oneYearAgo": "Il y a un an"
+  },
+  "stats": {
+    "thisMonth": "Activités ce mois-ci",
+    "following": "Abonnements",
+    "followers": "Abonnés"
+  },
+  "tabs": {
+    "activities": "Activités",
+    "following": "Abonnements",
+    "followers": "Abonnés"
+  },
+  "activitiesError": {
+    "title": "Impossible de charger les activités",
+    "description": "Une erreur s'est produite lors du chargement des activités.",
+    "retry": "Réessayer"
+  },
+  "listError": {
+    "title": "Impossible de charger la liste",
+    "description": "Une erreur s'est produite. Veuillez réessayer.",
+    "retry": "Réessayer"
+  },
+  "follow": {
+    "follow": "Suivre",
+    "requested": "Demandé",
+    "following": "Abonné(e)",
+    "withdraw": "Retirer la demande",
+    "unfollow": "Se désabonner",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "followError": "Impossible d'envoyer la demande d'abonnement.",
+    "unfollowError": "Impossible de mettre à jour la demande d'abonnement.",
+    "confirmCancelTitle": "Retirer la demande",
+    "confirmCancelBody": "Retirer votre demande d'abonnement à {name} ?",
+    "confirmUnfollowTitle": "Se désabonner de {name}",
+    "confirmUnfollowBody": "Arrêter de suivre {name} ? Vous pourrez vous réabonner plus tard."
+  },
+  "list": {
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "remove": "Supprimer",
+    "unfollow": "Se désabonner",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "accepted": "Accepté",
+    "pending": "En attente",
+    "acceptError": "Impossible d'accepter la demande.",
+    "removeError": "Impossible de mettre à jour cet abonné.",
+    "unfollowError": "Impossible de se désabonner de cet utilisateur.",
+    "confirmUnfollowTitle": "Se désabonner de {name}",
+    "confirmUnfollowBody": "Arrêter de suivre {name} ? Vous pourrez vous réabonner plus tard.",
+    "confirmDeclineTitle": "Refuser la demande",
+    "confirmDeclineBody": "Refuser la demande d'abonnement de {name} ?",
+    "confirmRemoveTitle": "Supprimer l'abonné",
+    "confirmRemoveBody": "Supprimer {name} de vos abonnés ?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Aucune activité pour l'instant",
+      "ownDescription": "Vos activités apparaîtront ici une fois que vous les aurez ajoutées ou importées.",
+      "otherTitle": "Aucune activité à afficher"
+    },
+    "following": {
+      "ownTitle": "Vous ne suivez personne pour l'instant.",
+      "otherTitle": "Ne suit personne pour l'instant."
+    },
+    "followers": {
+      "ownTitle": "Vous n'avez pas encore d'abonnés.",
+      "otherTitle": "Aucun abonné pour l'instant."
+    }
+  }
+}

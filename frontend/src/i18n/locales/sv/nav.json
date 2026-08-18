@@ -1,0 +1,22 @@
+{
+  "home": "Hem",
+  "search": "Sök",
+  "activities": "Aktiviteter",
+  "activitiesList": "Lista",
+  "summary": "Sammanfattning",
+  "gear": "Utrustning",
+  "health": "Hälsa",
+  "alerts": "Aviseringar",
+  "settings": "Inställningar",
+  "profile": "Profil",
+  "login": "Logga in",
+  "logout": "Logga ut",
+  "userMenu": "Användarmeny",
+  "menu": "Meny",
+  "primary": "Primär navigering",
+  "account": "Konto",
+  "preferences": "Inställningar",
+  "updateAvailable": "Uppdatering tillgänglig",
+  "updateAvailableTitle": "Version {version} är tillgänglig",
+  "updateViewRelease": "Visa versionsanteckningar"
+}

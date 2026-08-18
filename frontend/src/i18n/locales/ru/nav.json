@@ -1,0 +1,22 @@
+{
+  "home": "Главная",
+  "search": "Поиск",
+  "activities": "Активности",
+  "activitiesList": "Список",
+  "summary": "Итоги",
+  "gear": "Экипировка",
+  "health": "Здоровье",
+  "alerts": "Оповещения",
+  "settings": "Настройки",
+  "profile": "Профиль",
+  "login": "Вход",
+  "logout": "Выход",
+  "userMenu": "Меню пользователя",
+  "menu": "Меню",
+  "primary": "Основная навигация",
+  "account": "Аккаунт",
+  "preferences": "Предпочтения",
+  "updateAvailable": "Доступно обновление",
+  "updateAvailableTitle": "Доступна версия {version}",
+  "updateViewRelease": "Смотреть примечания к релизу"
+}

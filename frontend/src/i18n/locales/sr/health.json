@@ -1,0 +1,648 @@
+{
+  "title": "Zdravlje",
+  "subtitle": "Pogledajte sve svoje zdravstvene podatke na jednom mestu",
+  "nav": {
+    "label": "Zdravstveni odeljci",
+    "soon": "Uskoro",
+    "dashboard": "Kontrolna tabla",
+    "sleep": "San",
+    "rhr": "Puls u mirovanju",
+    "steps": "Koraci",
+    "weight": "Težina",
+    "fasting": "Post",
+    "water": "Unos vode",
+    "poop": "Pražnjenje creva"
+  },
+  "dashboard": {
+    "title": "Kontrolna tabla",
+    "subtitle": "Vaše dnevno blagostanje na prvi pogled",
+    "sleep": "San",
+    "restingHeartRate": "Puls u mirovanju",
+    "avgSkinTemperatureDeviation": "Odst. temp. kože",
+    "weight": "Težina",
+    "bmi": "BMI",
+    "steps": "Koraci",
+    "fasting": "Post",
+    "water": "Unos vode",
+    "poop": "Pražnjenje creva",
+    "noSleepTarget": "Nema cilja za san",
+    "noWeightTarget": "Nema cilja za težinu",
+    "noStepsTarget": "Nema cilja za korake",
+    "noFastingTarget": "Nema cilja za post",
+    "noWaterTarget": "Nema cilja za vodu",
+    "noPoopTarget": "Nema cilja za pražnjenje creva",
+    "stepsTargetLabel": "koraka",
+    "poopTargetLabel": "/ dan",
+    "noWeightData": "Nema podataka o težini",
+    "bmiUnderweight": "Pothranjenost",
+    "bmiNormalWeight": "Normalna težina",
+    "bmiOverweight": "Prekomerna težina",
+    "bmiObesityClass1": "Gojaznost (1. stepen)",
+    "bmiObesityClass2": "Gojaznost (2. stepen)",
+    "bmiObesityClass3": "Ekstremna gojaznost (3. stepen)",
+    "hrvBalanced": "Uravnoteženo",
+    "hrvUnbalanced": "Neuravnoteženo",
+    "hrvLow": "Nisko",
+    "hrvPoor": "Loše",
+    "labelNoData": "Nema podataka",
+    "errorTitle": "Nije moguće učitati vaše zdravstvene podatke",
+    "errorDescription": "Nešto je pošlo naopako prilikom učitavanja dnevne zdravstvene statistike. Pokušajte ponovo.",
+    "retry": "Pokušaj ponovo"
+  },
+  "weight": {
+    "title": "Težina",
+    "subtitle": "Pratite svoju težinu i telesni sastav tokom vremena",
+    "logButton": "Zabeleži težinu",
+    "targetButton": "Postavi cilj",
+    "sourceGarmin": "Iz Garmin Connect",
+    "toggleDetails": "Uključi/isključi detalje telesnog sastava",
+    "chartTitle": "Trend težine",
+    "chartWeightSeries": "Težina",
+    "chartTargetSeries": "Cilj",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni unos",
+      "delete": "Obriši unos"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Telesne masti",
+      "bodyWater": "Telesna voda",
+      "boneMass": "Masa kostiju",
+      "muscleMass": "Mišićna masa"
+    },
+    "form": {
+      "addTitle": "Zabeleži težinu",
+      "editTitle": "Izmeni unos težine",
+      "description": "Zabeležite svoju težinu i, opciono, svoj telesni sastav.",
+      "date": "Datum",
+      "dateRequired": "Izaberite datum.",
+      "weight": "Težina",
+      "weightRequired": "Unesite svoju težinu.",
+      "weightInvalid": "Unesite težinu veću od nule.",
+      "bodyComposition": "Telesni sastav (opciono)",
+      "bmi": "BMI",
+      "bodyFat": "Telesne masti (%)",
+      "bodyWater": "Telesna voda (%)",
+      "boneMass": "Masa kostiju",
+      "muscleMass": "Mišićna masa",
+      "create": "Zabeleži",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "Težina je zabeležena.",
+      "updateSuccess": "Unos težine je ažuriran.",
+      "saveError": "Nije moguće sačuvati unos težine. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj težine",
+      "description": "Izaberite ciljnu težinu ili obrišite polje da biste je uklonili.",
+      "weight": "Ciljna težina",
+      "hint": "Ostavite prazno da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj težine je ažuriran.",
+      "saveError": "Nije moguće ažurirati cilj težine. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema unosa težine",
+      "description": "Zabeležite svoju težinu da biste počeli da pratite napredak tokom vremena."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju težine",
+      "description": "Nešto je pošlo naopako prilikom učitavanja unosa težine. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši unos težine",
+      "body": "Ovaj unos težine biće trajno obrisan. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Unos težine je obrisan.",
+      "error": "Nije moguće obrisati unos težine. Pokušajte ponovo."
+    }
+  },
+  "steps": {
+    "title": "Koraci",
+    "subtitle": "Pratite svoj dnevni broj koraka tokom vremena",
+    "logButton": "Zabeleži korake",
+    "targetButton": "Postavi cilj",
+    "sourceGarmin": "Iz Garmin Connect",
+    "chartTitle": "Trend koraka",
+    "chartStepsSeries": "Koraci",
+    "chartTargetSeries": "Cilj",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni unos",
+      "delete": "Obriši unos"
+    },
+    "form": {
+      "addTitle": "Zabeleži korake",
+      "editTitle": "Izmeni unos koraka",
+      "description": "Zabeležite svoj broj koraka za dan.",
+      "date": "Datum",
+      "dateRequired": "Izaberite datum.",
+      "steps": "Koraci",
+      "stepsRequired": "Unesite svoj broj koraka.",
+      "stepsInvalid": "Unesite broj koraka veći od nule.",
+      "create": "Zabeleži",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "Koraci su zabeleženi.",
+      "updateSuccess": "Unos koraka je ažuriran.",
+      "saveError": "Nije moguće sačuvati unos koraka. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj koraka",
+      "description": "Izaberite dnevni cilj koraka ili obrišite polje da biste ga uklonili.",
+      "steps": "Ciljni dnevni koraci",
+      "hint": "Ostavite prazno da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj koraka je ažuriran.",
+      "saveError": "Nije moguće ažurirati cilj koraka. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema unosa koraka",
+      "description": "Zabeležite svoje korake da biste počeli da pratite svoju aktivnost tokom vremena."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju koraka",
+      "description": "Nešto je pošlo naopako prilikom učitavanja unosa koraka. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši unos koraka",
+      "body": "Ovaj unos koraka biće trajno obrisan. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Unos koraka je obrisan.",
+      "error": "Nije moguće obrisati unos koraka. Pokušajte ponovo."
+    }
+  },
+  "rhr": {
+    "title": "Puls u mirovanju",
+    "subtitle": "Pratite svoj puls u mirovanju tokom vremena",
+    "sourceGarmin": "Iz Garmin Connect",
+    "chartTitle": "Trend pulsa u mirovanju",
+    "chartSeries": "Puls u mirovanju",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "empty": {
+      "title": "Još nema podataka o pulsu u mirovanju",
+      "description": "Puls u mirovanju se beleži uz vaš san. Sinhronizujte uređaj koji ga prati da biste ovde videli svoj trend."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju pulsa u mirovanju",
+      "description": "Nešto je pošlo naopako prilikom učitavanja podataka o pulsu u mirovanju. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    }
+  },
+  "sleep": {
+    "title": "San",
+    "subtitle": "Pratite trajanje i kvalitet sna tokom vremena",
+    "logButton": "Zabeleži san",
+    "targetButton": "Postavi cilj",
+    "sourceGarmin": "Iz Garmin Connect",
+    "toggleDetails": "Uključi/isključi detalje sna",
+    "chartTitle": "Trend sna",
+    "chartSleepSeries": "San",
+    "chartTargetSeries": "Cilj",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni unos",
+      "delete": "Obriši unos"
+    },
+    "score": "Rezultat",
+    "hrvBalanced": "Uravnoteženo",
+    "hrvUnbalanced": "Neuravnoteženo",
+    "hrvLow": "Nisko",
+    "hrvPoor": "Loše",
+    "scoreExcellent": "Odlično",
+    "scoreGood": "Dobro",
+    "scoreFair": "Solidno",
+    "scorePoor": "Loše",
+    "detail": {
+      "tabsLabel": "Odeljci detalja sna",
+      "tabScore": "Rezultat sna",
+      "tabDetails": "Detalji sna",
+      "deep": "Dubok",
+      "light": "Lagan",
+      "rem": "REM",
+      "awake": "Budan",
+      "score": "Rezultat sna",
+      "quality": "Kvalitet",
+      "duration": "Trajanje",
+      "restingHeartRate": "Puls u mirovanju",
+      "avgHeartRate": "Prosečan puls",
+      "minHeartRate": "Min puls",
+      "maxHeartRate": "Maks puls",
+      "skinTempDeviation": "Odst. temp. kože",
+      "hrv": "HRV status",
+      "spo2": "Prosečan SpO₂",
+      "lowestSpo2": "Najniži SpO₂",
+      "highestSpo2": "Najviši SpO₂",
+      "avgRespiration": "Prosečno disanje",
+      "lowestRespiration": "Najniže disanje",
+      "highestRespiration": "Najviše disanje",
+      "avgSleepStress": "Prosečan stres tokom sna",
+      "awakeCount": "Buđenja",
+      "summary": "Sažetak",
+      "breakdown": "Raščlanjivanje",
+      "overview": "Pregled",
+      "heartRate": "Puls",
+      "bloodOxygen": "Kiseonik u krvi",
+      "respiration": "Disanje",
+      "avg": "Prosek",
+      "min": "Min",
+      "max": "Maks",
+      "noData": "Nema zabeleženih podataka."
+    },
+    "hypnogram": {
+      "title": "Faze sna",
+      "deep": "Dubok",
+      "light": "Lagan",
+      "rem": "REM",
+      "awake": "Budan",
+      "noData": "Nije dostupna vremenska linija faza."
+    },
+    "form": {
+      "addTitle": "Zabeleži san",
+      "editTitle": "Izmeni unos sna",
+      "description": "Zabeležite trajanje sna i, opciono, raščlanjivanje faza i metrike.",
+      "date": "Datum",
+      "dateRequired": "Izaberite datum.",
+      "totalSleep": "Ukupan san",
+      "totalSleepRequired": "Unesite koliko dugo ste spavali.",
+      "hours": "Sati",
+      "minutes": "Minuti",
+      "stageBreakdown": "Raščlanjivanje faza (opciono)",
+      "deep": "Dubok san",
+      "light": "Lagan san",
+      "rem": "REM san",
+      "awake": "Budan",
+      "metrics": "Metrike (opciono)",
+      "sleepScore": "Rezultat sna (0–100)",
+      "restingHeartRate": "Puls u mirovanju (bpm)",
+      "skinTempDeviation": "Odst. temp. kože (°C)",
+      "spo2": "Prosečan SpO₂ (%)",
+      "sleepTimes": "Vreme sna (opciono)",
+      "startTime": "Početak sna",
+      "endTime": "Kraj sna",
+      "endBeforeStart": "Kraj sna mora biti posle vremena početka.",
+      "awakeCount": "Buđenja",
+      "heartRate": "Puls (opciono)",
+      "avgHeartRate": "Prosečan puls (bpm)",
+      "minHeartRate": "Min puls (bpm)",
+      "maxHeartRate": "Maks puls (bpm)",
+      "bloodOxygen": "Kiseonik u krvi (opciono)",
+      "lowestSpo2": "Najniži SpO₂ (%)",
+      "highestSpo2": "Najviši SpO₂ (%)",
+      "avgSleepStress": "Prosečan stres tokom sna (0–100)",
+      "sleepStages": "Faze sna (opciono)",
+      "noStages": "Još nisu dodate faze.",
+      "addStage": "Dodaj fazu",
+      "removeStage": "Ukloni fazu",
+      "stageLabel": "Faza {index}",
+      "stageType": "Faza",
+      "stageDeep": "Dubok",
+      "stageLight": "Lagan",
+      "stageRem": "REM",
+      "stageAwake": "Budan",
+      "stageStart": "Početak",
+      "stageEnd": "Kraj",
+      "stageDuration": "Trajanje",
+      "create": "Zabeleži",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "San je zabeležen.",
+      "updateSuccess": "Unos sna je ažuriran.",
+      "saveError": "Nije moguće sačuvati unos sna. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj sna",
+      "description": "Izaberite noćni cilj sna ili obrišite polja da biste ga uklonili.",
+      "hours": "Sati",
+      "minutes": "Minuti",
+      "hint": "Ostavite prazno da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj sna je ažuriran.",
+      "saveError": "Nije moguće ažurirati cilj sna. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema unosa sna",
+      "description": "Zabeležite noć sna da biste počeli da pratite svoj odmor tokom vremena."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju sna",
+      "description": "Nešto je pošlo naopako prilikom učitavanja unosa sna. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši unos sna",
+      "body": "Ovaj unos sna biće trajno obrisan. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Unos sna je obrisan.",
+      "error": "Nije moguće obrisati unos sna. Pokušajte ponovo."
+    }
+  },
+  "water": {
+    "title": "Unos vode",
+    "subtitle": "Pratite svoj dnevni unos vode tokom vremena",
+    "logButton": "Zabeleži vodu",
+    "targetButton": "Postavi cilj",
+    "sourceGarmin": "Iz Garmin Connect",
+    "chartTitle": "Trend unosa vode",
+    "chartWaterSeries": "Voda",
+    "chartTargetSeries": "Cilj",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni unos",
+      "delete": "Obriši unos"
+    },
+    "form": {
+      "addTitle": "Zabeleži vodu",
+      "editTitle": "Izmeni unos vode",
+      "description": "Zabeležite svoj unos vode za dan.",
+      "date": "Datum",
+      "dateRequired": "Izaberite datum.",
+      "amount": "Količina",
+      "amountRequired": "Unesite količinu.",
+      "amountInvalid": "Unesite količinu veću od nule.",
+      "create": "Zabeleži",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "Voda je zabeležena.",
+      "updateSuccess": "Unos vode je ažuriran.",
+      "saveError": "Nije moguće sačuvati unos vode. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj vode",
+      "description": "Izaberite dnevni cilj vode ili obrišite polje da biste ga uklonili.",
+      "amount": "Dnevni cilj",
+      "hint": "Ostavite prazno da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj vode je ažuriran.",
+      "saveError": "Nije moguće ažurirati cilj vode. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema unosa vode",
+      "description": "Zabeležite svoj unos vode da biste počeli da pratite hidrataciju tokom vremena."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju vode",
+      "description": "Nešto je pošlo naopako prilikom učitavanja unosa vode. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši unos vode",
+      "body": "Ovaj unos vode biće trajno obrisan. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Unos vode je obrisan.",
+      "error": "Nije moguće obrisati unos vode. Pokušajte ponovo."
+    }
+  },
+  "poop": {
+    "title": "Pražnjenje creva",
+    "subtitle": "Pratite svoja pražnjenja creva tokom vremena",
+    "logButton": "Zabeleži unos",
+    "targetButton": "Postavi cilj",
+    "chartTitle": "Dnevna učestalost",
+    "chartCountSeries": "Pražnjenja creva",
+    "chartTargetSeries": "Cilj",
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni unos",
+      "delete": "Obriši unos"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Pražnjenje creva"
+    },
+    "form": {
+      "addTitle": "Zabeleži pražnjenje creva",
+      "editTitle": "Izmeni pražnjenje creva",
+      "description": "Zabeležite vreme i detalje svog pražnjenja creva.",
+      "dateTime": "Datum i vreme",
+      "dateTimeRequired": "Izaberite datum i vreme.",
+      "bristolType": "Bristol tip stolice",
+      "color": "Boja",
+      "notes": "Beleške",
+      "none": "Nijedna",
+      "colors": {
+        "brown": "Braon",
+        "dark_brown": "Tamnobraon",
+        "light_brown": "Svetlobraon",
+        "yellow": "Žuta",
+        "green": "Zelena",
+        "black": "Crna",
+        "red": "Crvena",
+        "white": "Bela"
+      },
+      "create": "Zabeleži",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "Pražnjenje creva je zabeleženo.",
+      "updateSuccess": "Pražnjenje creva je ažurirano.",
+      "saveError": "Nije moguće sačuvati vaš unos. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj pražnjenja creva",
+      "description": "Izaberite dnevni cilj pražnjenja creva ili obrišite polje da biste ga uklonili.",
+      "count": "Cilj po danu",
+      "hint": "Ostavite prazno da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj pražnjenja creva je ažuriran.",
+      "saveError": "Nije moguće ažurirati vaš cilj. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema unosa",
+      "description": "Zabeležite pražnjenje creva da biste počeli da pratite tokom vremena."
+    },
+    "error": {
+      "title": "Nije moguće učitati vašu istoriju",
+      "description": "Nešto je pošlo naopako prilikom učitavanja vaših unosa. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši unos",
+      "body": "Ovaj unos biće trajno obrisan. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Unos je obrisan.",
+      "error": "Nije moguće obrisati unos. Pokušajte ponovo."
+    }
+  },
+  "fasting": {
+    "title": "Post",
+    "subtitle": "Započnite post, pratite svoj napredak i pregledajte svoju istoriju",
+    "startButton": "Započni post",
+    "targetButton": "Postavi cilj",
+    "sourceGarmin": "Iz Garmin Connect",
+    "active": {
+      "title": "Post u toku",
+      "started": "Započet",
+      "target": "Cilj",
+      "complete": "Završi",
+      "break": "Prekini post",
+      "cancel": "Otkaži",
+      "completeHint": "Možete završiti post kada dostignete svoj cilj."
+    },
+    "stats": {
+      "totalFasts": "Ukupno postova",
+      "currentStreak": "Trenutni niz",
+      "longestStreak": "Najduži niz",
+      "avgDuration": "Pros. trajanje",
+      "totalTime": "Ukupno vreme posta",
+      "completionRate": "Stopa završetka",
+      "days": "dana"
+    },
+    "types": {
+      "16:8": "16:8 (16h post, 8h jelo)",
+      "18:6": "18:6 (18h post, 6h jelo)",
+      "20:4": "20:4 (20h post, 4h jelo)",
+      "OMAD": "OMAD (jedan obrok dnevno)",
+      "24h": "24-časovni post",
+      "36h": "36-časovni post",
+      "48h": "48-časovni post",
+      "72h": "72-časovni post",
+      "custom": "Prilagođeno"
+    },
+    "status": {
+      "in_progress": "U toku",
+      "completed": "Završeno",
+      "broken": "Prekinuto",
+      "cancelled": "Otkazano"
+    },
+    "interval": {
+      "label": "Vremenski opseg",
+      "last_7_days": "Poslednjih 7 dana",
+      "last_30_days": "Poslednjih 30 dana",
+      "last_90_days": "Poslednjih 90 dana",
+      "last_year": "Poslednja godina",
+      "all_time": "Sve vreme"
+    },
+    "actions": {
+      "edit": "Izmeni post",
+      "delete": "Obriši post"
+    },
+    "list": {
+      "notesLabel": "Beleške"
+    },
+    "form": {
+      "addTitle": "Započni post",
+      "editTitle": "Izmeni sesiju posta",
+      "description": "Izaberite protokol posta i kada je započet.",
+      "type": "Protokol posta",
+      "customDuration": "Prilagođeno trajanje",
+      "customDurationHint": "Dužina posta, u satima (1–72).",
+      "hours": "sati",
+      "startTime": "Vreme početka",
+      "startTimeRequired": "Izaberite vreme početka.",
+      "endTime": "Vreme završetka",
+      "status": "Status",
+      "notes": "Beleške",
+      "create": "Započni",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "createSuccess": "Post je započet.",
+      "updateSuccess": "Sesija posta je ažurirana.",
+      "saveError": "Nije moguće sačuvati sesiju posta. Pokušajte ponovo."
+    },
+    "target": {
+      "title": "Postavi cilj posta",
+      "description": "Izaberite ciljno trajanje posta ili obrišite oba polja da biste ga uklonili.",
+      "hours": "Sati",
+      "minutes": "Minuti",
+      "hint": "Ostavite oba polja prazna da biste uklonili cilj.",
+      "save": "Sačuvaj",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "saveSuccess": "Cilj posta je ažuriran.",
+      "saveError": "Nije moguće ažurirati cilj posta. Pokušajte ponovo."
+    },
+    "complete": {
+      "success": "Post je završen.",
+      "error": "Nije moguće završiti vaš post. Pokušajte ponovo."
+    },
+    "empty": {
+      "title": "Još nema postova",
+      "description": "Započnite post da biste počeli da pratite svoju istoriju posta."
+    },
+    "error": {
+      "title": "Nije moguće učitati istoriju posta",
+      "description": "Nešto je pošlo naopako prilikom učitavanja vaših sesija posta. Pokušajte ponovo.",
+      "retry": "Pokušaj ponovo"
+    },
+    "delete": {
+      "title": "Obriši sesiju posta",
+      "body": "Ova sesija posta biće trajno obrisana. Ova radnja se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži",
+      "close": "Zatvori",
+      "success": "Sesija posta je obrisana.",
+      "error": "Nije moguće obrisati sesiju posta. Pokušajte ponovo."
+    }
+  }
+}

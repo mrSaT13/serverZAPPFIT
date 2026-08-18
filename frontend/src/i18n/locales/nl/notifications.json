@@ -1,0 +1,51 @@
+{
+  "title": "Meldingen",
+  "subtitle": "Recente activiteit, verzoeken en meldingen",
+  "navLabel": "Meldingen",
+  "unread": "Ongelezen",
+  "markRead": "Als gelezen markeren",
+  "markAllRead": "Alles als gelezen markeren",
+  "seeAll": "Alles bekijken",
+  "loadMore": "Meer laden",
+  "loading": "Laden…",
+  "badge": "{count} ongelezen meldingen",
+  "empty": {
+    "title": "Je bent helemaal bijgewerkt",
+    "description": "Updates over je activiteiten, volgers en integraties verschijnen hier."
+  },
+  "error": {
+    "title": "Meldingen konden niet worden geladen",
+    "description": "Er is iets misgegaan bij het laden van je meldingen.",
+    "retry": "Opnieuw proberen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nieuwe activiteit",
+      "body": "Er is een nieuwe activiteit toegevoegd aan je account."
+    },
+    "duplicateActivity": {
+      "title": "Mogelijke dubbele activiteit",
+      "body": "Er bestaat mogelijk al een activiteit met dezelfde starttijd."
+    },
+    "newFollowerRequest": {
+      "title": "Nieuw volgverzoek",
+      "body": "{name} ({'@'}{username}) wil je volgen."
+    },
+    "followerRequestAccepted": {
+      "title": "Volgverzoek geaccepteerd",
+      "body": "{name} ({'@'}{username}) heeft je volgverzoek geaccepteerd."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect vereist aandacht",
+      "body": "Je Garmin Connect-sessie is verlopen. Koppel opnieuw om te blijven synchroniseren."
+    },
+    "adminSignUpApproval": {
+      "title": "Nieuwe registratie vereist goedkeuring",
+      "body": "{name} ({'@'}{username}) wacht op accountgoedkeuring."
+    },
+    "unknown": {
+      "title": "Melding",
+      "body": "Je hebt een nieuwe melding."
+    }
+  }
+}

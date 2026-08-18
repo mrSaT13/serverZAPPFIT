@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Saúdos cordiais,",
+  "common.team": "O equipo de Endurain",
+  "common.system": "O sistema de Endurain",
+  "common.visit": "Visita Endurain en:",
+  "common.source_code": "Código fonte en:",
+  "common.copy_link": "Se o botón de arriba non funciona, podes copiar e pegar a seguinte ligazón no teu navegador:",
+
+  "password_reset.subject": "Endurain - Restablecemento do contrasinal",
+  "password_reset.heading": "Solicitude de restablecemento do contrasinal",
+  "password_reset.greeting": "Ola {name},",
+  "password_reset.intro": "Solicitaches restablecer o contrasinal da túa conta de Endurain. Fai clic no botón de abaixo para restablecer o teu contrasinal:",
+  "password_reset.cta": "Restablecer o contrasinal",
+  "password_reset.security_label": "Aviso de seguranza:",
+  "password_reset.security_notice": "Esta ligazón caducará en 1 hora por motivos de seguranza.",
+  "password_reset.ignore": "Se non solicitaches este restablecemento de contrasinal, ignora este correo. O teu contrasinal permanecerá sen cambios.",
+
+  "signup_confirmation.subject": "Endurain - Confirma a túa conta",
+  "signup_confirmation.heading": "Confirma a túa conta",
+  "signup_confirmation.greeting": "Ola {name},",
+  "signup_confirmation.intro": "Grazas por rexistrarte en Endurain! Confirma a túa conta facendo clic no botón de abaixo:",
+  "signup_confirmation.cta": "Confirmar a conta",
+  "signup_confirmation.security_label": "Aviso de seguranza:",
+  "signup_confirmation.security_notice": "Esta ligazón de confirmación caducará en 24 horas.",
+  "signup_confirmation.ignore": "Se non creaches unha conta de Endurain, ignora este correo.",
+
+  "admin_signup.subject": "Endurain - Novo rexistro de usuario pendente de aprobación",
+  "admin_signup.heading": "Un novo rexistro require aprobación",
+  "admin_signup.greeting": "Ola {name},",
+  "admin_signup.intro": "Un novo usuario rexistrouse e está agardando aprobación:",
+  "admin_signup.user_label": "Usuario:",
+  "admin_signup.review": "Inicia sesión no panel de administración de Endurain para revisar e aprobar esta solicitude.",
+  "admin_signup.cta": "Ir ao panel de administración",
+
+  "signup_approved.subject": "Endurain - A túa conta foi aprobada",
+  "signup_approved.heading": "A túa conta xa está activa",
+  "signup_approved.greeting": "Ola {name},",
+  "signup_approved.intro": "Boas novas! A túa conta foi aprobada e xa está activa.",
+  "signup_approved.username_label": "Nome de usuario:",
+  "signup_approved.login_intro": "Xa podes iniciar sesión e comezar a usar Endurain:",
+  "signup_approved.cta": "Iniciar sesión en Endurain"
+}

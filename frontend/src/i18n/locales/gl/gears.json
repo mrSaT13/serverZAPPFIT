@@ -1,0 +1,152 @@
+{
+  "title": "Equipamento",
+  "subtitle": "Bicicletas, zapatillas e equipamento co que rexistras actividades",
+  "buttonAddGear": "Engadir equipamento",
+  "searchPlaceholder": "Buscar por alcume",
+  "clearSearch": "Limpar busca",
+  "showInactive": "Mostrar inactivo",
+  "inactive": "Inactivo",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtros",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicicleta",
+    "shoes": "Zapatillas",
+    "wetsuit": "Traxe de neopreno",
+    "racquet": "Raqueta",
+    "skis": "Esquís",
+    "snowboard": "Snowboard",
+    "windsurf": "Táboa de windsurf",
+    "waterSportsBoard": "Táboa de deportes acuáticos",
+    "unknown": "Equipamento"
+  },
+  "actions": {
+    "edit": "Editar equipamento",
+    "delete": "Eliminar equipamento"
+  },
+  "form": {
+    "title": "Estatísticas",
+    "addTitle": "Engadir equipamento",
+    "editTitle": "Editar equipamento",
+    "description": "Rexistra o equipamento que usas nas túas actividades.",
+    "nickname": "Alcume",
+    "nicknameRequired": "O alcume é obrigatorio",
+    "nicknameTooLong": "O alcume debe ter 250 caracteres ou menos",
+    "nicknameTaken": "Xa tes equipamento con ese alcume",
+    "gearType": "Tipo",
+    "brand": "Marca",
+    "brandTooLong": "A marca debe ter 250 caracteres ou menos",
+    "model": "Modelo",
+    "modelTooLong": "O modelo debe ter 250 caracteres ou menos",
+    "active": "Activo",
+    "createdAt": "Creado o",
+    "createdAtRequired": "É obrigatoria unha data de creación",
+    "initialDistance": "Distancia inicial",
+    "purchaseValue": "Valor de compra",
+    "totalCost": "Custo total",
+    "create": "Engadir equipamento",
+    "save": "Gardar cambios",
+    "cancel": "Cancelar",
+    "close": "Pechar",
+    "createSuccess": "Equipamento engadido",
+    "updateSuccess": "Equipamento actualizado",
+    "saveError": "Non se puido gardar o equipamento. Por favor, téntao de novo."
+  },
+  "delete": {
+    "title": "Eliminar equipamento",
+    "body": "Tes a certeza de que queres eliminar \"{nickname}\"? Esta acción non se pode desfacer.",
+    "confirm": "Eliminar",
+    "cancel": "Cancelar",
+    "close": "Pechar",
+    "success": "Equipamento eliminado",
+    "error": "Non se puido eliminar o equipamento. Por favor, téntao de novo."
+  },
+  "error": {
+    "title": "Non se puido cargar o equipamento",
+    "description": "Produciuse un erro ao cargar o teu equipamento.",
+    "retry": "Tentar de novo"
+  },
+  "empty": {
+    "title": "Aínda non hai equipamento",
+    "description": "Engade as bicicletas, zapatillas e equipamento que usas para comezar a rexistrar o seu uso.",
+    "searchTitle": "Ningún equipamento coincide coa túa busca",
+    "searchDescription": "Proba cun alcume diferente.",
+    "activeTitle": "Non hai equipamento activo",
+    "activeDescription": "Engade equipamento ou activa \"Mostrar inactivo\" para ver o equipamento inactivo."
+  },
+  "detail": {
+    "back": "Volver ao equipamento",
+    "notFoundTitle": "Equipamento non atopado",
+    "notFoundDescription": "Este equipamento pode ter sido eliminado ou non che pertence.",
+    "totalDistance": "Distancia",
+    "totalTime": "Tempo",
+    "componentsCost": "Compoñentes"
+  },
+  "components": {
+    "title": "Compoñentes",
+    "add": "Engadir compoñente",
+    "empty": "Aínda non hai compoñentes. Engade as pezas das que queres rexistrar o desgaste.",
+    "unsupported": "Este tipo de equipamento non rexistra compoñentes.",
+    "noneActive": "Todos os compoñentes están inactivos. Activa \"Mostrar inactivo\" para velos.",
+    "inactive": "Inactivo",
+    "unitHours": "h",
+    "purchasedOn": "Comprado o {date}",
+    "wearLabel": "Desgaste de {name}",
+    "actions": {
+      "edit": "Editar compoñente",
+      "delete": "Eliminar compoñente"
+    },
+    "form": {
+      "addTitle": "Engadir compoñente",
+      "editTitle": "Editar compoñente",
+      "description": "Rexistra as pezas que substitúes para controlar o seu desgaste.",
+      "type": "Tipo",
+      "typePlaceholder": "Selecciona un tipo",
+      "typeRequired": "É obrigatorio un tipo",
+      "brand": "Marca",
+      "brandRequired": "A marca é obrigatoria",
+      "brandTooLong": "A marca debe ter 250 caracteres ou menos",
+      "model": "Modelo",
+      "modelRequired": "O modelo é obrigatorio",
+      "modelTooLong": "O modelo debe ter 250 caracteres ou menos",
+      "purchaseDate": "Comprado o",
+      "purchaseDateRequired": "É obrigatoria unha data de compra",
+      "retiredDate": "Retirado o",
+      "expectedDistance": "Distancia esperada",
+      "expectedTime": "Tempo esperado",
+      "purchaseValue": "Valor de compra",
+      "active": "Activo",
+      "retiredBeforePurchase": "A data de retirada debe ser posterior á data de compra.",
+      "create": "Engadir compoñente",
+      "save": "Gardar cambios",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Compoñente engadido",
+      "updateSuccess": "Compoñente actualizado",
+      "saveError": "Non se puido gardar o compoñente. Por favor, téntao de novo."
+    },
+    "delete": {
+      "title": "Eliminar compoñente",
+      "body": "Tes a certeza de que queres eliminar \"{name}\"? Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Compoñente eliminado",
+      "error": "Non se puido eliminar o compoñente. Por favor, téntao de novo."
+    },
+    "error": {
+      "title": "Non se puideron cargar os compoñentes",
+      "description": "Produciuse un erro ao cargar os compoñentes deste equipamento."
+    }
+  },
+  "activities": {
+    "title": "Actividades",
+    "empty": "Aínda non hai actividades rexistradas con este equipamento.",
+    "error": {
+      "title": "Non se puideron cargar as actividades",
+      "description": "Produciuse un erro ao cargar as actividades deste equipamento."
+    }
+  }
+}

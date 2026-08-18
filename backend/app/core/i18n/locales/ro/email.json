@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Cu stimă,",
+  "common.team": "Echipa Endurain",
+  "common.system": "Sistemul Endurain",
+  "common.visit": "Vizitează Endurain la:",
+  "common.source_code": "Codul sursă la:",
+  "common.copy_link": "Dacă butonul de mai sus nu funcționează, poți copia și lipi următorul link în browserul tău:",
+
+  "password_reset.subject": "Endurain - Resetare parolă",
+  "password_reset.heading": "Cerere de resetare a parolei",
+  "password_reset.greeting": "Bună, {name},",
+  "password_reset.intro": "Ai solicitat resetarea parolei pentru contul tău Endurain. Apasă butonul de mai jos pentru a-ți reseta parola:",
+  "password_reset.cta": "Resetează parola",
+  "password_reset.security_label": "Notificare de securitate:",
+  "password_reset.security_notice": "Acest link va expira în 1 oră din motive de securitate.",
+  "password_reset.ignore": "Dacă nu ai solicitat această resetare a parolei, te rugăm să ignori acest e-mail. Parola ta va rămâne neschimbată.",
+
+  "signup_confirmation.subject": "Endurain - Confirmă-ți contul",
+  "signup_confirmation.heading": "Confirmă-ți contul",
+  "signup_confirmation.greeting": "Bună, {name},",
+  "signup_confirmation.intro": "Îți mulțumim că te-ai înscris pe Endurain! Te rugăm să-ți confirmi contul apăsând butonul de mai jos:",
+  "signup_confirmation.cta": "Confirmă contul",
+  "signup_confirmation.security_label": "Notificare de securitate:",
+  "signup_confirmation.security_notice": "Acest link de confirmare va expira în 24 de ore.",
+  "signup_confirmation.ignore": "Dacă nu ai creat un cont Endurain, te rugăm să ignori acest e-mail.",
+
+  "admin_signup.subject": "Endurain - Înscriere nouă de utilizator în așteptarea aprobării",
+  "admin_signup.heading": "O înscriere nouă necesită aprobare",
+  "admin_signup.greeting": "Salut, {name},",
+  "admin_signup.intro": "Un utilizator nou s-a înscris și așteaptă aprobarea:",
+  "admin_signup.user_label": "Utilizator:",
+  "admin_signup.review": "Te rugăm să te autentifici în panoul de administrare Endurain pentru a examina și aproba această cerere.",
+  "admin_signup.cta": "Mergi la panoul de administrare",
+
+  "signup_approved.subject": "Endurain - Contul tău a fost aprobat",
+  "signup_approved.heading": "Contul tău este acum activ",
+  "signup_approved.greeting": "Salut, {name},",
+  "signup_approved.intro": "Vești bune! Contul tău a fost aprobat și este acum activ.",
+  "signup_approved.username_label": "Nume de utilizator:",
+  "signup_approved.login_intro": "Acum te poți autentifica și poți începe să folosești Endurain:",
+  "signup_approved.cta": "Autentifică-te în Endurain"
+}

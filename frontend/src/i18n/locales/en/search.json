@@ -1,0 +1,43 @@
+{
+  "title": "Search",
+  "subtitle": "Find users, activities, and gear across Endurain.",
+  "placeholder": "Search…",
+  "clear": "Clear search",
+  "scopes": {
+    "users": "Users",
+    "activities": "Activities",
+    "gears": "Gear"
+  },
+  "filters": {
+    "all": "All types",
+    "activityType": "Filter by activity type",
+    "gearType": "Filter by gear type"
+  },
+  "activityCategories": {
+    "running": "Running",
+    "cycling": "Cycling",
+    "swimming": "Swimming",
+    "walking": "Walking & hiking",
+    "racquet": "Racquet sports",
+    "rowing": "Rowing & paddling",
+    "winterSports": "Winter sports",
+    "waterSports": "Water sports",
+    "skating": "Skating"
+  },
+  "results": {
+    "inactive": "Inactive"
+  },
+  "idle": {
+    "title": "Search Endurain",
+    "description": "Pick what to look for, then start typing to see matches."
+  },
+  "empty": {
+    "title": "No matches found",
+    "description": "Nothing matches “{term}”. Try a different search."
+  },
+  "error": {
+    "title": "Search failed",
+    "description": "We couldn’t run your search. Check your connection and try again.",
+    "retry": "Try again"
+  }
+}

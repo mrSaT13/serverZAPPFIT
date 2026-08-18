@@ -1,0 +1,648 @@
+{
+  "title": "Gezondheid",
+  "subtitle": "Bekijk al je gezondheidsgegevens op één plek",
+  "nav": {
+    "label": "Gezondheidsonderdelen",
+    "soon": "Binnenkort",
+    "dashboard": "Dashboard",
+    "sleep": "Slaap",
+    "rhr": "Rusthartslag",
+    "steps": "Stappen",
+    "weight": "Gewicht",
+    "fasting": "Vasten",
+    "water": "Waterinname",
+    "poop": "Stoelgang"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Je dagelijks welzijn in één oogopslag",
+    "sleep": "Slaap",
+    "restingHeartRate": "Rusthartslag",
+    "avgSkinTemperatureDeviation": "Huidtemp. afwijking",
+    "weight": "Gewicht",
+    "bmi": "BMI",
+    "steps": "Stappen",
+    "fasting": "Vasten",
+    "water": "Waterinname",
+    "poop": "Stoelgang",
+    "noSleepTarget": "Geen slaaptarget",
+    "noWeightTarget": "Geen gewichtstarget",
+    "noStepsTarget": "Geen stappentarget",
+    "noFastingTarget": "Geen vastentarget",
+    "noWaterTarget": "Geen waterinname-target",
+    "noPoopTarget": "Geen stoelgangtarget",
+    "stepsTargetLabel": "stappen",
+    "poopTargetLabel": "/ dag",
+    "noWeightData": "Geen gewichtsgegevens",
+    "bmiUnderweight": "Ondergewicht",
+    "bmiNormalWeight": "Normaal gewicht",
+    "bmiOverweight": "Overgewicht",
+    "bmiObesityClass1": "Obesitas (klasse 1)",
+    "bmiObesityClass2": "Obesitas (klasse 2)",
+    "bmiObesityClass3": "Ernstige obesitas (klasse 3)",
+    "hrvBalanced": "Gebalanceerd",
+    "hrvUnbalanced": "Ongebalanceerd",
+    "hrvLow": "Laag",
+    "hrvPoor": "Slecht",
+    "labelNoData": "Geen gegevens",
+    "errorTitle": "Gezondheidsgegevens konden niet worden geladen",
+    "errorDescription": "Er is iets misgegaan bij het laden van je dagelijkse gezondheidsstatistieken. Probeer het opnieuw.",
+    "retry": "Opnieuw proberen"
+  },
+  "weight": {
+    "title": "Gewicht",
+    "subtitle": "Volg je gewicht en lichaamssamenstelling over tijd",
+    "logButton": "Gewicht registreren",
+    "targetButton": "Target instellen",
+    "sourceGarmin": "Van Garmin Connect",
+    "toggleDetails": "Lichaamssamenstelling tonen/verbergen",
+    "chartTitle": "Gewichtstrend",
+    "chartWeightSeries": "Gewicht",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vermelding bewerken",
+      "delete": "Vermelding verwijderen"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Lichaamsvet",
+      "bodyWater": "Lichaamswater",
+      "boneMass": "Botmassa",
+      "muscleMass": "Spiermassa"
+    },
+    "form": {
+      "addTitle": "Gewicht registreren",
+      "editTitle": "Gewichtsvermelding bewerken",
+      "description": "Registreer je gewicht en optioneel je lichaamssamenstelling.",
+      "date": "Datum",
+      "dateRequired": "Kies een datum.",
+      "weight": "Gewicht",
+      "weightRequired": "Voer je gewicht in.",
+      "weightInvalid": "Voer een gewicht groter dan nul in.",
+      "bodyComposition": "Lichaamssamenstelling (optioneel)",
+      "bmi": "BMI",
+      "bodyFat": "Lichaamsvet (%)",
+      "bodyWater": "Lichaamswater (%)",
+      "boneMass": "Botmassa",
+      "muscleMass": "Spiermassa",
+      "create": "Registreren",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Gewicht geregistreerd.",
+      "updateSuccess": "Gewichtsvermelding bijgewerkt.",
+      "saveError": "Gewichtsvermelding kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Gewichtstarget instellen",
+      "description": "Kies een doelgewicht of maak het veld leeg om het te verwijderen.",
+      "weight": "Doelgewicht",
+      "hint": "Laat leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Gewichtstarget bijgewerkt.",
+      "saveError": "Gewichtstarget kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen gewichtsvermeldingen",
+      "description": "Registreer je gewicht om je voortgang over tijd bij te houden."
+    },
+    "error": {
+      "title": "Gewichtsgeschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je gewichtsvermeldingen. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Gewichtsvermelding verwijderen",
+      "body": "Deze gewichtsvermelding wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Gewichtsvermelding verwijderd.",
+      "error": "Gewichtsvermelding kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  },
+  "steps": {
+    "title": "Stappen",
+    "subtitle": "Volg je dagelijkse stappentelling over tijd",
+    "logButton": "Stappen registreren",
+    "targetButton": "Target instellen",
+    "sourceGarmin": "Van Garmin Connect",
+    "chartTitle": "Stappentrend",
+    "chartStepsSeries": "Stappen",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vermelding bewerken",
+      "delete": "Vermelding verwijderen"
+    },
+    "form": {
+      "addTitle": "Stappen registreren",
+      "editTitle": "Stappenvermelding bewerken",
+      "description": "Registreer je stappentelling voor de dag.",
+      "date": "Datum",
+      "dateRequired": "Kies een datum.",
+      "steps": "Stappen",
+      "stepsRequired": "Voer je stappentelling in.",
+      "stepsInvalid": "Voer een stappentelling groter dan nul in.",
+      "create": "Registreren",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Stappen geregistreerd.",
+      "updateSuccess": "Stappenvermelding bijgewerkt.",
+      "saveError": "Stappenvermelding kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Stappentarget instellen",
+      "description": "Kies een dagelijks stappendoel of maak het veld leeg om het te verwijderen.",
+      "steps": "Dagelijks stappendoel",
+      "hint": "Laat leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Stappentarget bijgewerkt.",
+      "saveError": "Stappentarget kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen stappenvermelding",
+      "description": "Registreer je stappen om je activiteit over tijd bij te houden."
+    },
+    "error": {
+      "title": "Stappengeschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je stappenvermelding. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Stappenvermelding verwijderen",
+      "body": "Deze stappenvermelding wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Stappenvermelding verwijderd.",
+      "error": "Stappenvermelding kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  },
+  "rhr": {
+    "title": "Rusthartslag",
+    "subtitle": "Volg je rusthartslag over tijd",
+    "sourceGarmin": "Van Garmin Connect",
+    "chartTitle": "Rusthartslag-trend",
+    "chartSeries": "Rusthartslag",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "empty": {
+      "title": "Nog geen rusthartslag-gegevens",
+      "description": "Rusthartslag wordt samen met je slaap geregistreerd. Synchroniseer een apparaat dat dit bijhoudt om je trend hier te zien."
+    },
+    "error": {
+      "title": "Rusthartslag-geschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je rusthartslag-gegevens. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    }
+  },
+  "sleep": {
+    "title": "Slaap",
+    "subtitle": "Volg je slaapduur en -kwaliteit over tijd",
+    "logButton": "Slaap registreren",
+    "targetButton": "Target instellen",
+    "sourceGarmin": "Van Garmin Connect",
+    "toggleDetails": "Slaapdetails tonen/verbergen",
+    "chartTitle": "Slaaptrend",
+    "chartSleepSeries": "Slaap",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vermelding bewerken",
+      "delete": "Vermelding verwijderen"
+    },
+    "score": "Score",
+    "hrvBalanced": "Gebalanceerd",
+    "hrvUnbalanced": "Ongebalanceerd",
+    "hrvLow": "Laag",
+    "hrvPoor": "Slecht",
+    "scoreExcellent": "Uitstekend",
+    "scoreGood": "Goed",
+    "scoreFair": "Redelijk",
+    "scorePoor": "Slecht",
+    "detail": {
+      "tabsLabel": "Slaapdetailonderdelen",
+      "tabScore": "Slaapscore",
+      "tabDetails": "Slaapdetails",
+      "deep": "Diep",
+      "light": "Licht",
+      "rem": "REM",
+      "awake": "Wakker",
+      "score": "Slaapscore",
+      "quality": "Kwaliteit",
+      "duration": "Duur",
+      "restingHeartRate": "Rusthartslag",
+      "avgHeartRate": "Gem. hartslag",
+      "minHeartRate": "Min. hartslag",
+      "maxHeartRate": "Max. hartslag",
+      "skinTempDeviation": "Huidtemp. afwijking",
+      "hrv": "HRV-status",
+      "spo2": "Gem. SpO₂",
+      "lowestSpo2": "Laagste SpO₂",
+      "highestSpo2": "Hoogste SpO₂",
+      "avgRespiration": "Gem. ademhaling",
+      "lowestRespiration": "Laagste ademhaling",
+      "highestRespiration": "Hoogste ademhaling",
+      "avgSleepStress": "Gem. slaapstress",
+      "awakeCount": "Ontwakingen",
+      "summary": "Samenvatting",
+      "breakdown": "Uitsplitsing",
+      "overview": "Overzicht",
+      "heartRate": "Hartslag",
+      "bloodOxygen": "Bloedzuurstof",
+      "respiration": "Ademhaling",
+      "avg": "Gem.",
+      "min": "Min.",
+      "max": "Max.",
+      "noData": "Geen gegevens geregistreerd."
+    },
+    "hypnogram": {
+      "title": "Slaapfasen",
+      "deep": "Diep",
+      "light": "Licht",
+      "rem": "REM",
+      "awake": "Wakker",
+      "noData": "Geen fasentijdlijn beschikbaar."
+    },
+    "form": {
+      "addTitle": "Slaap registreren",
+      "editTitle": "Slaapvermelding bewerken",
+      "description": "Registreer je slaapduur en optioneel de faseindeling en statistieken.",
+      "date": "Datum",
+      "dateRequired": "Kies een datum.",
+      "totalSleep": "Totale slaap",
+      "totalSleepRequired": "Voer in hoe lang je hebt geslapen.",
+      "hours": "Uren",
+      "minutes": "Minuten",
+      "stageBreakdown": "Faseindeling (optioneel)",
+      "deep": "Diepe slaap",
+      "light": "Lichte slaap",
+      "rem": "REM-slaap",
+      "awake": "Wakker",
+      "metrics": "Statistieken (optioneel)",
+      "sleepScore": "Slaapscore (0–100)",
+      "restingHeartRate": "Rusthartslag (bpm)",
+      "skinTempDeviation": "Huidtemp. afwijking (°C)",
+      "spo2": "Gem. SpO₂ (%)",
+      "sleepTimes": "Slaaptijden (optioneel)",
+      "startTime": "Inslaaptijd",
+      "endTime": "Ontwaaktijd",
+      "endBeforeStart": "Ontwaaktijd moet na de inslaaptijd liggen.",
+      "awakeCount": "Ontwakingen",
+      "heartRate": "Hartslag (optioneel)",
+      "avgHeartRate": "Gem. hartslag (bpm)",
+      "minHeartRate": "Min. hartslag (bpm)",
+      "maxHeartRate": "Max. hartslag (bpm)",
+      "bloodOxygen": "Bloedzuurstof (optioneel)",
+      "lowestSpo2": "Laagste SpO₂ (%)",
+      "highestSpo2": "Hoogste SpO₂ (%)",
+      "avgSleepStress": "Gem. slaapstress (0–100)",
+      "sleepStages": "Slaapfasen (optioneel)",
+      "noStages": "Nog geen fasen toegevoegd.",
+      "addStage": "Fase toevoegen",
+      "removeStage": "Fase verwijderen",
+      "stageLabel": "Fase {index}",
+      "stageType": "Fase",
+      "stageDeep": "Diep",
+      "stageLight": "Licht",
+      "stageRem": "REM",
+      "stageAwake": "Wakker",
+      "stageStart": "Begin",
+      "stageEnd": "Einde",
+      "stageDuration": "Duur",
+      "create": "Registreren",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Slaap geregistreerd.",
+      "updateSuccess": "Slaapvermelding bijgewerkt.",
+      "saveError": "Slaapvermelding kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Slaaptarget instellen",
+      "description": "Kies een nachtelijk slaaptarget of maak de velden leeg om het te verwijderen.",
+      "hours": "Uren",
+      "minutes": "Minuten",
+      "hint": "Laat leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Slaaptarget bijgewerkt.",
+      "saveError": "Slaaptarget kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen slaapvermeldingen",
+      "description": "Registreer een nacht slaap om je rust over tijd bij te houden."
+    },
+    "error": {
+      "title": "Slaapgeschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je slaapvermeldingen. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Slaapvermelding verwijderen",
+      "body": "Deze slaapvermelding wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Slaapvermelding verwijderd.",
+      "error": "Slaapvermelding kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  },
+  "water": {
+    "title": "Waterinname",
+    "subtitle": "Volg je dagelijkse waterinname over tijd",
+    "logButton": "Water registreren",
+    "targetButton": "Target instellen",
+    "sourceGarmin": "Van Garmin Connect",
+    "chartTitle": "Waterinname-trend",
+    "chartWaterSeries": "Water",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vermelding bewerken",
+      "delete": "Vermelding verwijderen"
+    },
+    "form": {
+      "addTitle": "Water registreren",
+      "editTitle": "Watervermelding bewerken",
+      "description": "Registreer je waterinname voor de dag.",
+      "date": "Datum",
+      "dateRequired": "Kies een datum.",
+      "amount": "Hoeveelheid",
+      "amountRequired": "Voer een hoeveelheid in.",
+      "amountInvalid": "Voer een hoeveelheid groter dan nul in.",
+      "create": "Registreren",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Water geregistreerd.",
+      "updateSuccess": "Watervermelding bijgewerkt.",
+      "saveError": "Watervermelding kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Waterinname-target instellen",
+      "description": "Kies een dagelijks waterdoel of maak het veld leeg om het te verwijderen.",
+      "amount": "Dagelijks target",
+      "hint": "Laat leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Waterinname-target bijgewerkt.",
+      "saveError": "Waterinname-target kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen watervermeldingen",
+      "description": "Registreer je waterinname om je hydratatie over tijd bij te houden."
+    },
+    "error": {
+      "title": "Waterinname-geschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je watervermeldingen. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Watervermelding verwijderen",
+      "body": "Deze watervermelding wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Watervermelding verwijderd.",
+      "error": "Watervermelding kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  },
+  "poop": {
+    "title": "Stoelgang",
+    "subtitle": "Volg je stoelgang over tijd",
+    "logButton": "Vermelding registreren",
+    "targetButton": "Target instellen",
+    "chartTitle": "Dagelijkse frequentie",
+    "chartCountSeries": "Stoelgang",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vermelding bewerken",
+      "delete": "Vermelding verwijderen"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Stoelgang"
+    },
+    "form": {
+      "addTitle": "Stoelgang registreren",
+      "editTitle": "Stoelgang bewerken",
+      "description": "Registreer de tijd en details van je stoelgang.",
+      "dateTime": "Datum en tijd",
+      "dateTimeRequired": "Kies een datum en tijd.",
+      "bristolType": "Bristol stoelgangstype",
+      "color": "Kleur",
+      "notes": "Notities",
+      "none": "Geen",
+      "colors": {
+        "brown": "Bruin",
+        "dark_brown": "Donkerbruin",
+        "light_brown": "Lichtbruin",
+        "yellow": "Geel",
+        "green": "Groen",
+        "black": "Zwart",
+        "red": "Rood",
+        "white": "Wit"
+      },
+      "create": "Registreren",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Stoelgang geregistreerd.",
+      "updateSuccess": "Stoelgang bijgewerkt.",
+      "saveError": "Vermelding kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Stoelgangtarget instellen",
+      "description": "Kies een dagelijks stoelgangdoel of maak het veld leeg om het te verwijderen.",
+      "count": "Target per dag",
+      "hint": "Laat leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Stoelgangtarget bijgewerkt.",
+      "saveError": "Target kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen vermeldingen",
+      "description": "Registreer een stoelgang om over tijd bij te houden."
+    },
+    "error": {
+      "title": "Stoelganggeschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je vermeldingen. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Vermelding verwijderen",
+      "body": "Deze vermelding wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Vermelding verwijderd.",
+      "error": "Vermelding kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  },
+  "fasting": {
+    "title": "Vasten",
+    "subtitle": "Start een vasten, volg je voortgang en bekijk je geschiedenis",
+    "startButton": "Vasten starten",
+    "targetButton": "Target instellen",
+    "sourceGarmin": "Van Garmin Connect",
+    "active": {
+      "title": "Vasten bezig",
+      "started": "Gestart",
+      "target": "Target",
+      "complete": "Afronden",
+      "break": "Vasten verbreken",
+      "cancel": "Annuleren",
+      "completeHint": "Je kunt het vasten afronden zodra je je target hebt bereikt."
+    },
+    "stats": {
+      "totalFasts": "Totaal vastens",
+      "currentStreak": "Huidige reeks",
+      "longestStreak": "Langste reeks",
+      "avgDuration": "Gem. duur",
+      "totalTime": "Totale vastentijd",
+      "completionRate": "Voltooiingspercentage",
+      "days": "dagen"
+    },
+    "types": {
+      "16:8": "16:8 (16u vasten, 8u eten)",
+      "18:6": "18:6 (18u vasten, 6u eten)",
+      "20:4": "20:4 (20u vasten, 4u eten)",
+      "OMAD": "OMAD (één maaltijd per dag)",
+      "24h": "24-uur vasten",
+      "36h": "36-uur vasten",
+      "48h": "48-uur vasten",
+      "72h": "72-uur vasten",
+      "custom": "Aangepast"
+    },
+    "status": {
+      "in_progress": "Bezig",
+      "completed": "Voltooid",
+      "broken": "Verbroken",
+      "cancelled": "Geannuleerd"
+    },
+    "interval": {
+      "label": "Tijdsperiode",
+      "last_7_days": "Afgelopen 7 dagen",
+      "last_30_days": "Afgelopen 30 dagen",
+      "last_90_days": "Afgelopen 90 dagen",
+      "last_year": "Afgelopen jaar",
+      "all_time": "Altijd"
+    },
+    "actions": {
+      "edit": "Vasten bewerken",
+      "delete": "Vasten verwijderen"
+    },
+    "list": {
+      "notesLabel": "Notities"
+    },
+    "form": {
+      "addTitle": "Vasten starten",
+      "editTitle": "Vastensessie bewerken",
+      "description": "Kies een vastenprotocol en wanneer het is gestart.",
+      "type": "Vastenprotocol",
+      "customDuration": "Aangepaste duur",
+      "customDurationHint": "Duur van het vasten in uren (1–72).",
+      "hours": "uur",
+      "startTime": "Starttijd",
+      "startTimeRequired": "Kies een starttijd.",
+      "endTime": "Eindtijd",
+      "status": "Status",
+      "notes": "Notities",
+      "create": "Starten",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Vasten gestart.",
+      "updateSuccess": "Vastensessie bijgewerkt.",
+      "saveError": "Vastensessie kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "target": {
+      "title": "Vastentarget instellen",
+      "description": "Kies een doelduur voor het vasten of maak beide velden leeg om het te verwijderen.",
+      "hours": "Uren",
+      "minutes": "Minuten",
+      "hint": "Laat beide leeg om je target te verwijderen.",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "saveSuccess": "Vastentarget bijgewerkt.",
+      "saveError": "Vastentarget kon niet worden bijgewerkt. Probeer het opnieuw."
+    },
+    "complete": {
+      "success": "Vasten beëindigd.",
+      "error": "Vasten kon niet worden beëindigd. Probeer het opnieuw."
+    },
+    "empty": {
+      "title": "Nog geen vastens",
+      "description": "Start een vasten om je vastengeschiedenis bij te houden."
+    },
+    "error": {
+      "title": "Vastengeschiedenis kon niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van je vastensessies. Probeer het opnieuw.",
+      "retry": "Opnieuw proberen"
+    },
+    "delete": {
+      "title": "Vastensessie verwijderen",
+      "body": "Deze vastensessie wordt definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Vastensessie verwijderd.",
+      "error": "Vastensessie kon niet worden verwijderd. Probeer het opnieuw."
+    }
+  }
+}

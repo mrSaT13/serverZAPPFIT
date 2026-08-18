@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Weryfikowanie Twojego e-maila",
+  "verifyingBody": "Poczekaj chwilę, potwierdzamy Twój adres.",
+  "successTitle": "E-mail zweryfikowany",
+  "successBody": "Twój adres e-mail został potwierdzony.",
+  "adminApprovalBody": "Twoje konto oczekuje teraz na zatwierdzenie przez administratora.",
+  "continueButton": "Przejdź do logowania",
+  "invalidTitle": "Weryfikacja nie powiodła się",
+  "missingTokenBody": "W tym linku weryfikacyjnym brakuje tokenu.",
+  "errorInvalidToken": "Ten link weryfikacyjny jest nieprawidłowy lub wygasł.",
+  "errorNotFound": "Nie udało się znaleźć konta dla tego linku.",
+  "errorGeneral": "Nie udało się zweryfikować Twojego e-maila. Spróbuj ponownie.",
+  "retry": "Spróbuj ponownie",
+  "backToLogin": "Powrót do logowania"
+}

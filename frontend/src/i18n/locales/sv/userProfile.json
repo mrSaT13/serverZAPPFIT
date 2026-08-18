@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Användare hittades inte",
+    "description": "Den här profilen finns inte eller är inte synlig för dig."
+  },
+  "error": {
+    "title": "Kunde inte ladda profil",
+    "description": "Något gick fel när den här profilen laddades.",
+    "retry": "Försök igen"
+  },
+  "editProfile": "Redigera profil",
+  "activities": {
+    "weekNav": "Bläddra bland aktiviteter per vecka",
+    "thisWeek": "Den här veckan",
+    "oneYearAgo": "För ett år sedan"
+  },
+  "stats": {
+    "thisMonth": "Aktiviteter den här månaden",
+    "following": "Följer",
+    "followers": "Följare"
+  },
+  "tabs": {
+    "activities": "Aktiviteter",
+    "following": "Följer",
+    "followers": "Följare"
+  },
+  "activitiesError": {
+    "title": "Kunde inte ladda aktiviteter",
+    "description": "Något gick fel när aktiviteterna laddades.",
+    "retry": "Försök igen"
+  },
+  "listError": {
+    "title": "Kunde inte ladda listan",
+    "description": "Något gick fel. Försök igen.",
+    "retry": "Försök igen"
+  },
+  "follow": {
+    "follow": "Följ",
+    "requested": "Förfrågad",
+    "following": "Följer",
+    "withdraw": "Dra tillbaka förfrågan",
+    "unfollow": "Sluta följa",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "followError": "Kunde inte skicka följarförfrågan.",
+    "unfollowError": "Kunde inte uppdatera följarförfrågan.",
+    "confirmCancelTitle": "Dra tillbaka förfrågan",
+    "confirmCancelBody": "Dra tillbaka din följarförfrågan till {name}?",
+    "confirmUnfollowTitle": "Sluta följa {name}",
+    "confirmUnfollowBody": "Sluta följa {name}? Du kan följa dem igen senare."
+  },
+  "list": {
+    "accept": "Acceptera",
+    "decline": "Neka",
+    "remove": "Ta bort",
+    "unfollow": "Sluta följa",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "accepted": "Accepterad",
+    "pending": "Väntande",
+    "acceptError": "Kunde inte acceptera förfrågan.",
+    "removeError": "Kunde inte uppdatera den här följaren.",
+    "unfollowError": "Kunde inte sluta följa den här användaren.",
+    "confirmUnfollowTitle": "Sluta följa {name}",
+    "confirmUnfollowBody": "Sluta följa {name}? Du kan följa dem igen senare.",
+    "confirmDeclineTitle": "Neka förfrågan",
+    "confirmDeclineBody": "Neka följarförfrågan från {name}?",
+    "confirmRemoveTitle": "Ta bort följare",
+    "confirmRemoveBody": "Ta bort {name} från dina följare?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Inga aktiviteter än",
+      "ownDescription": "Dina aktiviteter visas här när du lägger till eller importerar dem.",
+      "otherTitle": "Inga aktiviteter att visa"
+    },
+    "following": {
+      "ownTitle": "Du följer ingen ännu.",
+      "otherTitle": "Följer ingen ännu."
+    },
+    "followers": {
+      "ownTitle": "Du har inga följare ännu.",
+      "otherTitle": "Inga följare ännu."
+    }
+  }
+}

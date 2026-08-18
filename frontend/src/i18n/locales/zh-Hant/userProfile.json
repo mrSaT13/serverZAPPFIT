@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "找不到使用者",
+    "description": "此個人資料不存在或對您不可見。"
+  },
+  "error": {
+    "title": "無法載入個人資料",
+    "description": "載入此個人資料時發生問題。",
+    "retry": "重試"
+  },
+  "editProfile": "編輯個人資料",
+  "activities": {
+    "weekNav": "依週瀏覽活動",
+    "thisWeek": "本週",
+    "oneYearAgo": "一年前"
+  },
+  "stats": {
+    "thisMonth": "本月活動",
+    "following": "追蹤中",
+    "followers": "追蹤者"
+  },
+  "tabs": {
+    "activities": "活動",
+    "following": "追蹤中",
+    "followers": "追蹤者"
+  },
+  "activitiesError": {
+    "title": "無法載入活動",
+    "description": "載入活動時發生問題。",
+    "retry": "重試"
+  },
+  "listError": {
+    "title": "無法載入列表",
+    "description": "發生問題，請再試一次。",
+    "retry": "重試"
+  },
+  "follow": {
+    "follow": "追蹤",
+    "requested": "已請求",
+    "following": "追蹤中",
+    "withdraw": "撤回請求",
+    "unfollow": "取消追蹤",
+    "cancel": "取消",
+    "close": "關閉",
+    "followError": "無法傳送追蹤請求。",
+    "unfollowError": "無法更新追蹤請求。",
+    "confirmCancelTitle": "撤回請求",
+    "confirmCancelBody": "撤回您對 {name} 的追蹤請求？",
+    "confirmUnfollowTitle": "取消追蹤 {name}",
+    "confirmUnfollowBody": "停止追蹤 {name}？您之後可以再次追蹤對方。"
+  },
+  "list": {
+    "accept": "接受",
+    "decline": "拒絕",
+    "remove": "移除",
+    "unfollow": "取消追蹤",
+    "cancel": "取消",
+    "close": "關閉",
+    "accepted": "已接受",
+    "pending": "待處理",
+    "acceptError": "無法接受請求。",
+    "removeError": "無法更新此追蹤者。",
+    "unfollowError": "無法取消追蹤此使用者。",
+    "confirmUnfollowTitle": "取消追蹤 {name}",
+    "confirmUnfollowBody": "停止追蹤 {name}？您之後可以再次追蹤對方。",
+    "confirmDeclineTitle": "拒絕請求",
+    "confirmDeclineBody": "拒絕來自 {name} 的追蹤請求？",
+    "confirmRemoveTitle": "移除追蹤者",
+    "confirmRemoveBody": "將 {name} 從您的追蹤者中移除？"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "尚無活動",
+      "ownDescription": "您新增或匯入活動後，將顯示在這裡。",
+      "otherTitle": "目前沒有活動"
+    },
+    "following": {
+      "ownTitle": "您尚未追蹤任何人。",
+      "otherTitle": "尚未追蹤任何人。"
+    },
+    "followers": {
+      "ownTitle": "您目前沒有追蹤者。",
+      "otherTitle": "尚無追蹤者。"
+    }
+  }
+}

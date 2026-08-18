@@ -1,0 +1,8 @@
+{
+  "repository": "程式碼儲存庫",
+  "documentation": "說明文件",
+  "mastodon": "Endurain 的 Mastodon 帳號",
+  "discord": "Endurain 的 Discord 伺服器",
+  "compatibleStrava": "與 Strava 相容",
+  "worksGarmin": "支援 Garmin Connect"
+}

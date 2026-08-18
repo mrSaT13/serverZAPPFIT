@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logosu",
+  "title": "Tasarım sistemi temeli yayında",
+  "subtitle": "Tailwind v4, shadcn-vue, katı TypeScript ve Endurain token paleti birbirine bağlandı",
+  "primaryAction": "Birincil eylem",
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "message": "Aradığınız sayfa mevcut değil veya taşınmış",
+    "action": "Ana sayfaya git"
+  },
+  "error": {
+    "title": "Bir şeyler ters gitti",
+    "message": "Bu bölüm yüklenemedi. Tekrar deneyebilirsiniz.",
+    "retry": "Tekrar dene",
+    "toast": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  },
+  "configError": {
+    "title": "Yapılandırma hatası",
+    "message": "Uygulama Endurain arka ucuna ulaşamadı. Bu genellikle eksik veya yanlış yapılandırılmış bir ENDURAIN_HOST ortam değişkeninden ya da arka ucun çalışmamasından kaynaklanır.",
+    "notSet": "(ayarlanmadı)",
+    "help": "ENDURAIN_HOST değerinin Endurain örneğinizin erişilebilir olduğu URL'yi (örneğin https://endurain.example.com) işaret ettiğini ve arka ucun çalıştığını doğrulayın, ardından sayfayı yeniden yükleyin.",
+    "reload": "Yeniden yükle"
+  },
+  "dismiss": "Kapat",
+  "language": "Dil",
+  "theme": {
+    "toLight": "Açık mod",
+    "toDark": "Koyu mod"
+  },
+  "pagination": {
+    "label": "Sayfalama",
+    "previous": "Önceki sayfa",
+    "next": "Sonraki sayfa",
+    "goToPage": "{page}. sayfaya git"
+  },
+  "markdownEditor": {
+    "preview": "Önizleme",
+    "edit": "Düzenle",
+    "supported": "Markdown destekleniyor",
+    "empty": "Önizlenecek bir şey yok"
+  }
+}

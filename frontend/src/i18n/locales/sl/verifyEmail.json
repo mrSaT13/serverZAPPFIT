@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Preverjanje tvoje e-pošte",
+  "verifyingBody": "Malo potrpežljivosti, medtem ko potrjujemo tvoj naslov.",
+  "successTitle": "E-pošta potrjena",
+  "successBody": "Tvoj e-poštni naslov je bil potrjen.",
+  "adminApprovalBody": "Tvoj račun zdaj čaka na odobritev skrbnika.",
+  "continueButton": "Nadaljuj na prijavo",
+  "invalidTitle": "Preverjanje ni uspelo",
+  "missingTokenBody": "Tej potrditveni povezavi manjka žeton.",
+  "errorInvalidToken": "Ta potrditvena povezava je neveljavna ali je potekla.",
+  "errorNotFound": "Nismo mogli najti računa za to povezavo.",
+  "errorGeneral": "Tvoje e-pošte ni bilo mogoče preveriti. Prosim, poskusi znova.",
+  "retry": "Poskusi znova",
+  "backToLogin": "Nazaj na prijavo"
+}

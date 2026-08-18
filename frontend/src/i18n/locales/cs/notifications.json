@@ -1,0 +1,51 @@
+{
+  "title": "Oznámení",
+  "subtitle": "Nedávná aktivita, žádosti a upozornění",
+  "navLabel": "Oznámení",
+  "unread": "Nepřečtené",
+  "markRead": "Označit jako přečtené",
+  "markAllRead": "Označit vše jako přečtené",
+  "seeAll": "Zobrazit vše",
+  "loadMore": "Načíst další",
+  "loading": "Načítání…",
+  "badge": "{count} nepřečtených oznámení",
+  "empty": {
+    "title": "Máte vše přečtené",
+    "description": "Aktualizace o vašich aktivitách, sledujících a integracích se zobrazí zde."
+  },
+  "error": {
+    "title": "Nepodařilo se načíst oznámení",
+    "description": "Při načítání vašich oznámení se něco pokazilo.",
+    "retry": "Zkusit znovu"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nová aktivita",
+      "body": "Do vašeho účtu byla přidána nová aktivita."
+    },
+    "duplicateActivity": {
+      "title": "Možná duplicitní aktivita",
+      "body": "Aktivita se stejným časem startu již možná existuje."
+    },
+    "newFollowerRequest": {
+      "title": "Nová žádost o sledování",
+      "body": "{name} ({'@'}{username}) vás chce sledovat."
+    },
+    "followerRequestAccepted": {
+      "title": "Žádost o sledování přijata",
+      "body": "{name} ({'@'}{username}) přijal(a) vaši žádost o sledování."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect vyžaduje pozornost",
+      "body": "Vaše relace Garmin Connect vypršela. Znovu ji připojte, aby synchronizace pokračovala."
+    },
+    "adminSignUpApproval": {
+      "title": "Nová registrace vyžaduje schválení",
+      "body": "{name} ({'@'}{username}) čeká na schválení účtu."
+    },
+    "unknown": {
+      "title": "Oznámení",
+      "body": "Máte nové oznámení."
+    }
+  }
+}

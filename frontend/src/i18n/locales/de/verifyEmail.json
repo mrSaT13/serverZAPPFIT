@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "E-Mail wird verifiziert",
+  "verifyingBody": "Einen Moment, während wir deine Adresse bestätigen.",
+  "successTitle": "E-Mail verifiziert",
+  "successBody": "Deine E-Mail-Adresse wurde bestätigt.",
+  "adminApprovalBody": "Dein Konto wartet jetzt auf Administratorgenehmigung.",
+  "continueButton": "Weiter zur Anmeldung",
+  "invalidTitle": "Verifizierung fehlgeschlagen",
+  "missingTokenBody": "Diesem Bestätigungslink fehlt sein Token.",
+  "errorInvalidToken": "Dieser Bestätigungslink ist ungültig oder abgelaufen.",
+  "errorNotFound": "Für diesen Link konnte kein Konto gefunden werden.",
+  "errorGeneral": "Deine E-Mail konnte nicht verifiziert werden. Bitte versuche es erneut.",
+  "retry": "Erneut versuchen",
+  "backToLogin": "Zurück zur Anmeldung"
+}

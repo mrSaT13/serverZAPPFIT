@@ -1,0 +1,43 @@
+{
+  "title": "Iskanje",
+  "subtitle": "Poišči uporabnike, aktivnosti in opremo v Endurainu.",
+  "placeholder": "Išči…",
+  "clear": "Počisti iskanje",
+  "scopes": {
+    "users": "Uporabniki",
+    "activities": "Aktivnosti",
+    "gears": "Oprema"
+  },
+  "filters": {
+    "all": "Vse vrste",
+    "activityType": "Filtriraj po vrsti aktivnosti",
+    "gearType": "Filtriraj po vrsti opreme"
+  },
+  "activityCategories": {
+    "running": "Tek",
+    "cycling": "Kolesarjenje",
+    "swimming": "Plavanje",
+    "walking": "Hoja in pohodi",
+    "racquet": "Reketni športi",
+    "rowing": "Veslanje in kajakaštvo",
+    "winterSports": "Zimski športi",
+    "waterSports": "Vodni športi",
+    "skating": "Drsanje"
+  },
+  "results": {
+    "inactive": "Neaktivno"
+  },
+  "idle": {
+    "title": "Išči v Endurainu",
+    "description": "Izberi, kaj iščeš, nato začni tipkati, da vidiš zadetke."
+  },
+  "empty": {
+    "title": "Ni zadetkov",
+    "description": "Nič ne ustreza “{term}”. Poskusi z drugačnim iskanjem."
+  },
+  "error": {
+    "title": "Iskanje ni uspelo",
+    "description": "Iskanja nismo mogli izvesti. Preveri svojo povezavo in poskusi znova.",
+    "retry": "Poskusi znova"
+  }
+}

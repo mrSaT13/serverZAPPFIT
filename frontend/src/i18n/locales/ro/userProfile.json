@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Utilizatorul nu a fost găsit",
+    "description": "Acest profil nu există sau nu îți este vizibil."
+  },
+  "error": {
+    "title": "Nu am putut încărca profilul",
+    "description": "Ceva nu a mers bine la încărcarea acestui profil.",
+    "retry": "Încearcă din nou"
+  },
+  "editProfile": "Editează profilul",
+  "activities": {
+    "weekNav": "Navighează prin activități pe săptămâni",
+    "thisWeek": "Săptămâna aceasta",
+    "oneYearAgo": "Acum un an"
+  },
+  "stats": {
+    "thisMonth": "Activități luna aceasta",
+    "following": "Urmăriți",
+    "followers": "Urmăritori"
+  },
+  "tabs": {
+    "activities": "Activități",
+    "following": "Urmăriți",
+    "followers": "Urmăritori"
+  },
+  "activitiesError": {
+    "title": "Nu am putut încărca activitățile",
+    "description": "Ceva nu a mers bine la încărcarea activităților.",
+    "retry": "Încearcă din nou"
+  },
+  "listError": {
+    "title": "Nu am putut încărca lista",
+    "description": "Ceva nu a mers bine. Te rugăm să încerci din nou.",
+    "retry": "Încearcă din nou"
+  },
+  "follow": {
+    "follow": "Urmărește",
+    "requested": "Solicitat",
+    "following": "Urmărești",
+    "withdraw": "Retrage cererea",
+    "unfollow": "Nu mai urmări",
+    "cancel": "Anulează",
+    "close": "Închide",
+    "followError": "Nu am putut trimite cererea de urmărire.",
+    "unfollowError": "Nu am putut actualiza cererea de urmărire.",
+    "confirmCancelTitle": "Retrage cererea",
+    "confirmCancelBody": "Retragi cererea de urmărire către {name}?",
+    "confirmUnfollowTitle": "Nu mai urmări pe {name}",
+    "confirmUnfollowBody": "Nu mai urmărești pe {name}? Îl poți urmări din nou mai târziu."
+  },
+  "list": {
+    "accept": "Acceptă",
+    "decline": "Refuză",
+    "remove": "Elimină",
+    "unfollow": "Nu mai urmări",
+    "cancel": "Anulează",
+    "close": "Închide",
+    "accepted": "Acceptat",
+    "pending": "În așteptare",
+    "acceptError": "Nu am putut accepta cererea.",
+    "removeError": "Nu am putut actualiza acest urmăritor.",
+    "unfollowError": "Nu am putut anula urmărirea acestui utilizator.",
+    "confirmUnfollowTitle": "Nu mai urmări pe {name}",
+    "confirmUnfollowBody": "Nu mai urmărești pe {name}? Îl poți urmări din nou mai târziu.",
+    "confirmDeclineTitle": "Refuză cererea",
+    "confirmDeclineBody": "Refuzi cererea de urmărire de la {name}?",
+    "confirmRemoveTitle": "Elimină urmăritorul",
+    "confirmRemoveBody": "Elimini pe {name} dintre urmăritorii tăi?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Încă nicio activitate",
+      "ownDescription": "Activitățile tale vor apărea aici după ce le adaugi sau le imporți.",
+      "otherTitle": "Nicio activitate de afișat"
+    },
+    "following": {
+      "ownTitle": "Încă nu urmărești pe nimeni.",
+      "otherTitle": "Încă nu urmărește pe nimeni."
+    },
+    "followers": {
+      "ownTitle": "Încă nu ai niciun urmăritor.",
+      "otherTitle": "Încă niciun urmăritor."
+    }
+  }
+}

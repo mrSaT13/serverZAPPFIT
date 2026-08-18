@@ -1,0 +1,22 @@
+{
+  "home": "Startpagina",
+  "search": "Zoeken",
+  "activities": "Activiteiten",
+  "activitiesList": "Lijst",
+  "summary": "Samenvatting",
+  "gear": "Uitrusting",
+  "health": "Gezondheid",
+  "alerts": "Meldingen",
+  "settings": "Instellingen",
+  "profile": "Profiel",
+  "login": "Inloggen",
+  "logout": "Uitloggen",
+  "userMenu": "Gebruikersmenu",
+  "menu": "Menu",
+  "primary": "Primaire navigatie",
+  "account": "Account",
+  "preferences": "Voorkeuren",
+  "updateAvailable": "Update beschikbaar",
+  "updateAvailableTitle": "Versie {version} is beschikbaar",
+  "updateViewRelease": "Release-opmerkingen bekijken"
+}

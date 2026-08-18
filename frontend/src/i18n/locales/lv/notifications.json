@@ -1,0 +1,51 @@
+{
+  "title": "Paziņojumi",
+  "subtitle": "Nesenās aktivitātes, pieprasījumi un brīdinājumi",
+  "navLabel": "Paziņojumi",
+  "unread": "Nelasīts",
+  "markRead": "Atzīmēt kā lasītu",
+  "markAllRead": "Atzīmēt visus kā lasītus",
+  "seeAll": "Skatīt visus",
+  "loadMore": "Ielādēt vairāk",
+  "loading": "Notiek ielāde…",
+  "badge": "{count} nelasīti paziņojumi",
+  "empty": {
+    "title": "Viss ir izskatīts",
+    "description": "Šeit parādīsies atjauninājumi par jūsu aktivitātēm, sekotājiem un integrācijām."
+  },
+  "error": {
+    "title": "Neizdevās ielādēt paziņojumus",
+    "description": "Ielādējot paziņojumus, kaut kas nogāja greizi.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Jauna aktivitāte",
+      "body": "Jūsu kontam tika pievienota jauna aktivitāte."
+    },
+    "duplicateActivity": {
+      "title": "Iespējama dublēta aktivitāte",
+      "body": "Aktivitāte ar tādu pašu sākuma laiku, iespējams, jau eksistē."
+    },
+    "newFollowerRequest": {
+      "title": "Jauns sekošanas pieprasījums",
+      "body": "{name} ({'@'}{username}) vēlas jums sekot."
+    },
+    "followerRequestAccepted": {
+      "title": "Sekošanas pieprasījums pieņemts",
+      "body": "{name} ({'@'}{username}) pieņēma jūsu sekošanas pieprasījumu."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect nepieciešama uzmanība",
+      "body": "Jūsu Garmin Connect sesijai beidzies derīgums. Atjaunojiet savienojumu, lai turpinātu sinhronizāciju."
+    },
+    "adminSignUpApproval": {
+      "title": "Jaunai reģistrācijai nepieciešams apstiprinājums",
+      "body": "{name} ({'@'}{username}) gaida konta apstiprinājumu."
+    },
+    "unknown": {
+      "title": "Paziņojums",
+      "body": "Jums ir jauns paziņojums."
+    }
+  }
+}

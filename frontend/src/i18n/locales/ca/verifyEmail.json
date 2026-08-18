@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Verificant el teu correu",
+  "verifyingBody": "Espera mentre confirmem la teva adreça.",
+  "successTitle": "Correu verificat",
+  "successBody": "La teva adreça de correu ha estat confirmada.",
+  "adminApprovalBody": "El teu compte ara està esperant l'aprovació de l'administrador.",
+  "continueButton": "Continua a l'inici de sessió",
+  "invalidTitle": "La verificació ha fallat",
+  "missingTokenBody": "A aquest enllaç de verificació li falta el token.",
+  "errorInvalidToken": "Aquest enllaç de verificació no és vàlid o ha caducat.",
+  "errorNotFound": "No hem trobat cap compte per a aquest enllaç.",
+  "errorGeneral": "No hem pogut verificar el teu correu. Torna-ho a intentar.",
+  "retry": "Torna-ho a intentar",
+  "backToLogin": "Torna a l'inici de sessió"
+}

@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Med venlig hilsen,",
+  "common.team": "Endurain-teamet",
+  "common.system": "Endurain-systemet",
+  "common.visit": "Besøg Endurain på:",
+  "common.source_code": "Kildekode på:",
+  "common.copy_link": "Hvis knappen ovenfor ikke virker, kan du kopiere og indsætte følgende link i din browser:",
+
+  "password_reset.subject": "Endurain - Nulstilling af adgangskode",
+  "password_reset.heading": "Anmodning om nulstilling af adgangskode",
+  "password_reset.greeting": "Hej {name},",
+  "password_reset.intro": "Du har anmodet om at nulstille adgangskoden til din Endurain-konto. Klik på knappen nedenfor for at nulstille din adgangskode:",
+  "password_reset.cta": "Nulstil adgangskode",
+  "password_reset.security_label": "Sikkerhedsmeddelelse:",
+  "password_reset.security_notice": "Dette link udløber om 1 time af sikkerhedsmæssige årsager.",
+  "password_reset.ignore": "Hvis du ikke har anmodet om denne nulstilling af adgangskode, kan du ignorere denne e-mail. Din adgangskode forbliver uændret.",
+
+  "signup_confirmation.subject": "Endurain - Bekræft din konto",
+  "signup_confirmation.heading": "Bekræft din konto",
+  "signup_confirmation.greeting": "Hej {name},",
+  "signup_confirmation.intro": "Tak fordi du tilmeldte dig Endurain! Bekræft venligst din konto ved at klikke på knappen nedenfor:",
+  "signup_confirmation.cta": "Bekræft konto",
+  "signup_confirmation.security_label": "Sikkerhedsmeddelelse:",
+  "signup_confirmation.security_notice": "Dette bekræftelseslink udløber om 24 timer.",
+  "signup_confirmation.ignore": "Hvis du ikke har oprettet en Endurain-konto, kan du ignorere denne e-mail.",
+
+  "admin_signup.subject": "Endurain - Ny brugertilmelding afventer godkendelse",
+  "admin_signup.heading": "Ny tilmelding kræver godkendelse",
+  "admin_signup.greeting": "Hej {name},",
+  "admin_signup.intro": "En ny bruger har tilmeldt sig og afventer godkendelse:",
+  "admin_signup.user_label": "Bruger:",
+  "admin_signup.review": "Log venligst ind i Endurain-administrationspanelet for at gennemgå og godkende denne anmodning.",
+  "admin_signup.cta": "Gå til administrationspanel",
+
+  "signup_approved.subject": "Endurain - Din konto er blevet godkendt",
+  "signup_approved.heading": "Din konto er nu aktiv",
+  "signup_approved.greeting": "Hej {name},",
+  "signup_approved.intro": "Godt nyt! Din konto er blevet godkendt og er nu aktiv.",
+  "signup_approved.username_label": "Brugernavn:",
+  "signup_approved.login_intro": "Du kan nu logge ind og begynde at bruge Endurain:",
+  "signup_approved.cta": "Log ind på Endurain"
+}

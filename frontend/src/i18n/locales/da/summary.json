@@ -1,0 +1,49 @@
+{
+  "title": "Oversigt",
+  "subtitle": "Gennemgå dine træningstotaler og tendenser over tid.",
+  "viewType": {
+    "label": "Oversigtsperiode",
+    "week": "Uge",
+    "month": "Måned",
+    "year": "År",
+    "lifetime": "Hele perioden"
+  },
+  "filters": {
+    "type": "Aktivitetstype",
+    "allTypes": "Alle typer"
+  },
+  "period": {
+    "previous": "Forrige periode",
+    "next": "Næste periode",
+    "picker": "Vælg periode",
+    "allTime": "Hele perioden"
+  },
+  "metrics": {
+    "distance": "Distance",
+    "duration": "Varighed",
+    "elevation": "Højdemeter",
+    "calories": "Kalorier",
+    "activities": "Aktiviteter"
+  },
+  "breakdown": {
+    "title": "Fordeling",
+    "period": "Periode",
+    "weekNumber": "Uge {number}"
+  },
+  "typeBreakdown": {
+    "title": "Efter aktivitetstype",
+    "type": "Type"
+  },
+  "activities": {
+    "title": "Aktiviteter i denne periode"
+  },
+  "empty": {
+    "title": "Ingen aktivitet i denne periode",
+    "description": "Ingen aktiviteter matcher den valgte periode og type."
+  },
+  "error": {
+    "title": "Kunne ikke indlæse oversigt",
+    "description": "Noget gik galt under indlæsningen af din statistik. Tjek din forbindelse, og prøv igen.",
+    "retry": "Prøv igen"
+  }
+}

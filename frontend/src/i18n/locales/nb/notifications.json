@@ -1,0 +1,51 @@
+{
+  "title": "Varsler",
+  "subtitle": "Nylig aktivitet, forespørsler og varsler",
+  "navLabel": "Varsler",
+  "unread": "Ulest",
+  "markRead": "Merk som lest",
+  "markAllRead": "Merk alle som lest",
+  "seeAll": "Se alle",
+  "loadMore": "Last inn mer",
+  "loading": "Laster…",
+  "badge": "{count} uleste varsler",
+  "empty": {
+    "title": "Du er à jour",
+    "description": "Oppdateringer om aktivitetene, følgerne og integrasjonene dine vises her."
+  },
+  "error": {
+    "title": "Kunne ikke laste varsler",
+    "description": "Noe gikk galt under lasting av varslene dine.",
+    "retry": "Prøv igjen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Ny aktivitet",
+      "body": "En ny aktivitet ble lagt til på kontoen din."
+    },
+    "duplicateActivity": {
+      "title": "Mulig duplikataktivitet",
+      "body": "En aktivitet med samme starttidspunkt finnes kanskje allerede."
+    },
+    "newFollowerRequest": {
+      "title": "Ny følgerforespørsel",
+      "body": "{name} ({'@'}{username}) vil følge deg."
+    },
+    "followerRequestAccepted": {
+      "title": "Følgerforespørsel godtatt",
+      "body": "{name} ({'@'}{username}) godtok følgerforespørselen din."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect trenger oppmerksomhet",
+      "body": "Garmin Connect-økten din utløp. Koble til på nytt for å fortsette synkroniseringen."
+    },
+    "adminSignUpApproval": {
+      "title": "Ny registrering trenger godkjenning",
+      "body": "{name} ({'@'}{username}) venter på godkjenning av konto."
+    },
+    "unknown": {
+      "title": "Varsel",
+      "body": "Du har et nytt varsel."
+    }
+  }
+}

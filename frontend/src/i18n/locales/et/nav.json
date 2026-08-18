@@ -1,0 +1,22 @@
+{
+  "home": "Avaleht",
+  "search": "Otsing",
+  "activities": "Tegevused",
+  "activitiesList": "Loend",
+  "summary": "Kokkuvõte",
+  "gear": "Varustus",
+  "health": "Tervis",
+  "alerts": "Teavitused",
+  "settings": "Seaded",
+  "profile": "Profiil",
+  "login": "Logi sisse",
+  "logout": "Logi välja",
+  "userMenu": "Kasutajamenüü",
+  "menu": "Menüü",
+  "primary": "Põhinavigatsioon",
+  "account": "Konto",
+  "preferences": "Eelistused",
+  "updateAvailable": "Saadaval on uuendus",
+  "updateAvailableTitle": "Saadaval on versioon {version}",
+  "updateViewRelease": "Vaata versiooni märkmeid"
+}

@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Met vriendelijke groet,",
+  "common.team": "Het Endurain-team",
+  "common.system": "Het Endurain-systeem",
+  "common.visit": "Bezoek Endurain op:",
+  "common.source_code": "Broncode op:",
+  "common.copy_link": "Als de bovenstaande knop niet werkt, kunt u de volgende link kopiëren en in uw browser plakken:",
+
+  "password_reset.subject": "Endurain - Wachtwoord opnieuw instellen",
+  "password_reset.heading": "Verzoek om wachtwoord opnieuw in te stellen",
+  "password_reset.greeting": "Hallo {name},",
+  "password_reset.intro": "U hebt verzocht om het wachtwoord van uw Endurain-account opnieuw in te stellen. Klik op de onderstaande knop om uw wachtwoord opnieuw in te stellen:",
+  "password_reset.cta": "Wachtwoord opnieuw instellen",
+  "password_reset.security_label": "Beveiligingsmelding:",
+  "password_reset.security_notice": "Deze link verloopt om veiligheidsredenen over 1 uur.",
+  "password_reset.ignore": "Als u dit verzoek niet hebt gedaan, kunt u deze e-mail negeren. Uw wachtwoord blijft ongewijzigd.",
+
+  "signup_confirmation.subject": "Endurain - Bevestig uw account",
+  "signup_confirmation.heading": "Bevestig uw account",
+  "signup_confirmation.greeting": "Hallo {name},",
+  "signup_confirmation.intro": "Bedankt voor uw registratie bij Endurain! Bevestig uw account door op de onderstaande knop te klikken:",
+  "signup_confirmation.cta": "Account bevestigen",
+  "signup_confirmation.security_label": "Beveiligingsmelding:",
+  "signup_confirmation.security_notice": "Deze bevestigingslink verloopt over 24 uur.",
+  "signup_confirmation.ignore": "Als u geen Endurain-account hebt aangemaakt, kunt u deze e-mail negeren.",
+
+  "admin_signup.subject": "Endurain - Nieuwe gebruikersregistratie wacht op goedkeuring",
+  "admin_signup.heading": "Nieuwe registratie vereist goedkeuring",
+  "admin_signup.greeting": "Hallo {name},",
+  "admin_signup.intro": "Een nieuwe gebruiker heeft zich geregistreerd en wacht op goedkeuring:",
+  "admin_signup.user_label": "Gebruiker:",
+  "admin_signup.review": "Log in op het Endurain-beheerpaneel om dit verzoek te bekijken en goed te keuren.",
+  "admin_signup.cta": "Naar beheerpaneel",
+
+  "signup_approved.subject": "Endurain - Uw account is goedgekeurd",
+  "signup_approved.heading": "Uw account is nu actief",
+  "signup_approved.greeting": "Hallo {name},",
+  "signup_approved.intro": "Goed nieuws! Uw account is goedgekeurd en is nu actief.",
+  "signup_approved.username_label": "Gebruikersnaam:",
+  "signup_approved.login_intro": "U kunt nu inloggen en Endurain gaan gebruiken:",
+  "signup_approved.cta": "Inloggen bij Endurain"
+}

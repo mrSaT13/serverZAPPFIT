@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Nie znaleziono użytkownika",
+    "description": "Ten profil nie istnieje lub nie jest dla Ciebie widoczny."
+  },
+  "error": {
+    "title": "Nie udało się wczytać profilu",
+    "description": "Coś poszło nie tak podczas wczytywania tego profilu.",
+    "retry": "Spróbuj ponownie"
+  },
+  "editProfile": "Edytuj profil",
+  "activities": {
+    "weekNav": "Przeglądaj aktywności według tygodnia",
+    "thisWeek": "Ten tydzień",
+    "oneYearAgo": "Rok temu"
+  },
+  "stats": {
+    "thisMonth": "Aktywności w tym miesiącu",
+    "following": "Obserwowani",
+    "followers": "Obserwujący"
+  },
+  "tabs": {
+    "activities": "Aktywności",
+    "following": "Obserwowani",
+    "followers": "Obserwujący"
+  },
+  "activitiesError": {
+    "title": "Nie udało się wczytać aktywności",
+    "description": "Coś poszło nie tak podczas wczytywania aktywności.",
+    "retry": "Spróbuj ponownie"
+  },
+  "listError": {
+    "title": "Nie udało się wczytać listy",
+    "description": "Coś poszło nie tak. Spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  },
+  "follow": {
+    "follow": "Obserwuj",
+    "requested": "Wysłano prośbę",
+    "following": "Obserwujesz",
+    "withdraw": "Wycofaj prośbę",
+    "unfollow": "Przestań obserwować",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "followError": "Nie udało się wysłać prośby o obserwowanie.",
+    "unfollowError": "Nie udało się zaktualizować prośby o obserwowanie.",
+    "confirmCancelTitle": "Wycofaj prośbę",
+    "confirmCancelBody": "Wycofać prośbę o obserwowanie do {name}?",
+    "confirmUnfollowTitle": "Przestań obserwować {name}",
+    "confirmUnfollowBody": "Przestać obserwować {name}? Możesz ponownie zacząć obserwować później."
+  },
+  "list": {
+    "accept": "Akceptuj",
+    "decline": "Odrzuć",
+    "remove": "Usuń",
+    "unfollow": "Przestań obserwować",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "accepted": "Zaakceptowano",
+    "pending": "Oczekuje",
+    "acceptError": "Nie udało się zaakceptować prośby.",
+    "removeError": "Nie udało się zaktualizować tego obserwującego.",
+    "unfollowError": "Nie udało się przestać obserwować tego użytkownika.",
+    "confirmUnfollowTitle": "Przestań obserwować {name}",
+    "confirmUnfollowBody": "Przestać obserwować {name}? Możesz ponownie zacząć obserwować później.",
+    "confirmDeclineTitle": "Odrzuć prośbę",
+    "confirmDeclineBody": "Odrzucić prośbę o obserwowanie od {name}?",
+    "confirmRemoveTitle": "Usuń obserwującego",
+    "confirmRemoveBody": "Usunąć {name} z grona obserwujących?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Brak aktywności",
+      "ownDescription": "Twoje aktywności pojawią się tutaj po ich dodaniu lub zaimportowaniu.",
+      "otherTitle": "Brak aktywności do wyświetlenia"
+    },
+    "following": {
+      "ownTitle": "Nie obserwujesz jeszcze nikogo.",
+      "otherTitle": "Jeszcze nikogo nie obserwuje."
+    },
+    "followers": {
+      "ownTitle": "Nie masz jeszcze żadnych obserwujących.",
+      "otherTitle": "Brak obserwujących."
+    }
+  }
+}

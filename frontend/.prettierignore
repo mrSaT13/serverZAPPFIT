@@ -1,0 +1,6 @@
+# Generated API client — kept byte-identical to the generator output so the
+# CI drift check is deterministic. Do not format.
+src/types/api.generated.ts
+
+# Intermediate OpenAPI spec (regenerated from the backend).
+openapi.json

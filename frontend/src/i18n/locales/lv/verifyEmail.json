@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Notiek jūsu e-pasta verifikācija",
+  "verifyingBody": "Uzgaidiet, kamēr apstiprinām jūsu adresi.",
+  "successTitle": "E-pasts verificēts",
+  "successBody": "Jūsu e-pasta adrese ir apstiprināta.",
+  "adminApprovalBody": "Jūsu konts tagad gaida administratora apstiprinājumu.",
+  "continueButton": "Turpināt uz pieteikšanos",
+  "invalidTitle": "Verifikācija neizdevās",
+  "missingTokenBody": "Šai verifikācijas saitei trūkst marķiera.",
+  "errorInvalidToken": "Šī verifikācijas saite ir nederīga vai tai beidzies derīgums.",
+  "errorNotFound": "Mēs nevarējām atrast kontu šai saitei.",
+  "errorGeneral": "Mēs nevarējām verificēt jūsu e-pastu. Lūdzu, mēģiniet vēlreiz.",
+  "retry": "Mēģināt vēlreiz",
+  "backToLogin": "Atpakaļ uz pieteikšanos"
+}

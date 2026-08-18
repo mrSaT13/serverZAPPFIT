@@ -1,0 +1,648 @@
+{
+  "title": "Saúde",
+  "subtitle": "Ve todos os teus datos de saúde nun só lugar",
+  "nav": {
+    "label": "Seccións de saúde",
+    "soon": "Proximamente",
+    "dashboard": "Panel",
+    "sleep": "Sono",
+    "rhr": "FC en repouso",
+    "steps": "Pasos",
+    "weight": "Peso",
+    "fasting": "Xaxún",
+    "water": "Inxestión de auga",
+    "poop": "Deposicións"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "O teu benestar diario dunha ollada",
+    "sleep": "Sono",
+    "restingHeartRate": "FC en repouso",
+    "avgSkinTemperatureDeviation": "Desv. temp. pel",
+    "weight": "Peso",
+    "bmi": "BMI",
+    "steps": "Pasos",
+    "fasting": "Xaxún",
+    "water": "Inxestión de auga",
+    "poop": "Deposicións",
+    "noSleepTarget": "Sen obxectivo de sono",
+    "noWeightTarget": "Sen obxectivo de peso",
+    "noStepsTarget": "Sen obxectivo de pasos",
+    "noFastingTarget": "Sen obxectivo de xaxún",
+    "noWaterTarget": "Sen obxectivo de auga",
+    "noPoopTarget": "Sen obxectivo de deposicións",
+    "stepsTargetLabel": "pasos",
+    "poopTargetLabel": "/ día",
+    "noWeightData": "Sen datos de peso",
+    "bmiUnderweight": "Baixo peso",
+    "bmiNormalWeight": "Peso normal",
+    "bmiOverweight": "Sobrepeso",
+    "bmiObesityClass1": "Obesidade (Clase 1)",
+    "bmiObesityClass2": "Obesidade (Clase 2)",
+    "bmiObesityClass3": "Obesidade extrema (Clase 3)",
+    "hrvBalanced": "Equilibrado",
+    "hrvUnbalanced": "Desequilibrado",
+    "hrvLow": "Baixo",
+    "hrvPoor": "Deficiente",
+    "labelNoData": "Sen datos",
+    "errorTitle": "Non se puideron cargar os teus datos de saúde",
+    "errorDescription": "Produciuse un erro ao cargar as túas estatísticas de saúde diaria. Por favor, téntao de novo.",
+    "retry": "Tentar de novo"
+  },
+  "weight": {
+    "title": "Peso",
+    "subtitle": "Rexistra o teu peso e composición corporal ao longo do tempo",
+    "logButton": "Rexistrar peso",
+    "targetButton": "Establecer obxectivo",
+    "sourceGarmin": "De Garmin Connect",
+    "toggleDetails": "Alternar detalles de composición corporal",
+    "chartTitle": "Tendencia do peso",
+    "chartWeightSeries": "Peso",
+    "chartTargetSeries": "Obxectivo",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar entrada",
+      "delete": "Eliminar entrada"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Graxa corporal",
+      "bodyWater": "Auga corporal",
+      "boneMass": "Masa ósea",
+      "muscleMass": "Masa muscular"
+    },
+    "form": {
+      "addTitle": "Rexistrar peso",
+      "editTitle": "Editar entrada de peso",
+      "description": "Rexistra o teu peso e, opcionalmente, a túa composición corporal.",
+      "date": "Data",
+      "dateRequired": "Por favor, escolle unha data.",
+      "weight": "Peso",
+      "weightRequired": "Por favor, introduce o teu peso.",
+      "weightInvalid": "Introduce un peso maior que cero.",
+      "bodyComposition": "Composición corporal (opcional)",
+      "bmi": "BMI",
+      "bodyFat": "Graxa corporal (%)",
+      "bodyWater": "Auga corporal (%)",
+      "boneMass": "Masa ósea",
+      "muscleMass": "Masa muscular",
+      "create": "Rexistrar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Peso rexistrado.",
+      "updateSuccess": "Entrada de peso actualizada.",
+      "saveError": "Non se puido gardar a entrada de peso. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de peso",
+      "description": "Escolle un peso obxectivo ou deixa o campo baleiro para eliminalo.",
+      "weight": "Peso obxectivo",
+      "hint": "Deixa baleiro para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de peso actualizado.",
+      "saveError": "Non se puido actualizar o obxectivo de peso. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai entradas de peso",
+      "description": "Rexistra o teu peso para comezar a rexistrar o teu progreso ao longo do tempo."
+    },
+    "error": {
+      "title": "Non se puido cargar o historial de peso",
+      "description": "Produciuse un erro ao cargar as entradas de peso. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar entrada de peso",
+      "body": "Esta entrada de peso eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Entrada de peso eliminada.",
+      "error": "Non se puido eliminar a entrada de peso. Por favor, téntao de novo."
+    }
+  },
+  "steps": {
+    "title": "Pasos",
+    "subtitle": "Rexistra o teu reconto diario de pasos ao longo do tempo",
+    "logButton": "Rexistrar pasos",
+    "targetButton": "Establecer obxectivo",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendencia de pasos",
+    "chartStepsSeries": "Pasos",
+    "chartTargetSeries": "Obxectivo",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar entrada",
+      "delete": "Eliminar entrada"
+    },
+    "form": {
+      "addTitle": "Rexistrar pasos",
+      "editTitle": "Editar entrada de pasos",
+      "description": "Rexistra o teu reconto de pasos do día.",
+      "date": "Data",
+      "dateRequired": "Por favor, escolle unha data.",
+      "steps": "Pasos",
+      "stepsRequired": "Por favor, introduce o teu reconto de pasos.",
+      "stepsInvalid": "Introduce un reconto de pasos maior que cero.",
+      "create": "Rexistrar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Pasos rexistrados.",
+      "updateSuccess": "Entrada de pasos actualizada.",
+      "saveError": "Non se puido gardar a entrada de pasos. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de pasos",
+      "description": "Escolle un obxectivo diario de pasos ou deixa o campo baleiro para eliminalo.",
+      "steps": "Pasos diarios obxectivo",
+      "hint": "Deixa baleiro para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de pasos actualizado.",
+      "saveError": "Non se puido actualizar o obxectivo de pasos. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai entradas de pasos",
+      "description": "Rexistra os teus pasos para comezar a rexistrar a túa actividade ao longo do tempo."
+    },
+    "error": {
+      "title": "Non se puido cargar o historial de pasos",
+      "description": "Produciuse un erro ao cargar as entradas de pasos. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar entrada de pasos",
+      "body": "Esta entrada de pasos eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Entrada de pasos eliminada.",
+      "error": "Non se puido eliminar a entrada de pasos. Por favor, téntao de novo."
+    }
+  },
+  "rhr": {
+    "title": "Frecuencia cardíaca en repouso",
+    "subtitle": "Rexistra a túa frecuencia cardíaca en repouso ao longo do tempo",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendencia da FC en repouso",
+    "chartSeries": "FC en repouso",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "empty": {
+      "title": "Aínda non hai datos de FC en repouso",
+      "description": "A frecuencia cardíaca en repouso rexístrase xunto co sono. Sincroniza un dispositivo que a rexistre para ver a túa tendencia aquí."
+    },
+    "error": {
+      "title": "Non se puido cargar o historial de FC en repouso",
+      "description": "Produciuse un erro ao cargar os datos de FC en repouso. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    }
+  },
+  "sleep": {
+    "title": "Sono",
+    "subtitle": "Rexistra a duración e calidade do teu sono ao longo do tempo",
+    "logButton": "Rexistrar sono",
+    "targetButton": "Establecer obxectivo",
+    "sourceGarmin": "De Garmin Connect",
+    "toggleDetails": "Alternar detalles do sono",
+    "chartTitle": "Tendencia do sono",
+    "chartSleepSeries": "Sono",
+    "chartTargetSeries": "Obxectivo",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar entrada",
+      "delete": "Eliminar entrada"
+    },
+    "score": "Puntuación",
+    "hrvBalanced": "Equilibrado",
+    "hrvUnbalanced": "Desequilibrado",
+    "hrvLow": "Baixo",
+    "hrvPoor": "Deficiente",
+    "scoreExcellent": "Excelente",
+    "scoreGood": "Bo",
+    "scoreFair": "Regular",
+    "scorePoor": "Deficiente",
+    "detail": {
+      "tabsLabel": "Seccións de detalle do sono",
+      "tabScore": "Puntuación do sono",
+      "tabDetails": "Detalles do sono",
+      "deep": "Profundo",
+      "light": "Lixeiro",
+      "rem": "REM",
+      "awake": "Esperto",
+      "score": "Puntuación do sono",
+      "quality": "Calidade",
+      "duration": "Duración",
+      "restingHeartRate": "FC en repouso",
+      "avgHeartRate": "FC media",
+      "minHeartRate": "FC mínima",
+      "maxHeartRate": "FC máxima",
+      "skinTempDeviation": "Desv. temp. pel",
+      "hrv": "Estado HRV",
+      "spo2": "SpO₂ media",
+      "lowestSpo2": "SpO₂ mínima",
+      "highestSpo2": "SpO₂ máxima",
+      "avgRespiration": "Respiración media",
+      "lowestRespiration": "Respiración mínima",
+      "highestRespiration": "Respiración máxima",
+      "avgSleepStress": "Estrés do sono medio",
+      "awakeCount": "Espertas",
+      "summary": "Resumo",
+      "breakdown": "Desglose",
+      "overview": "Vista xeral",
+      "heartRate": "Frecuencia cardíaca",
+      "bloodOxygen": "Osíxeno no sangue",
+      "respiration": "Respiración",
+      "avg": "Media",
+      "min": "Mín",
+      "max": "Máx",
+      "noData": "Non hai datos rexistrados."
+    },
+    "hypnogram": {
+      "title": "Fases do sono",
+      "deep": "Profundo",
+      "light": "Lixeiro",
+      "rem": "REM",
+      "awake": "Esperto",
+      "noData": "Non hai cronoloxía de fases dispoñible."
+    },
+    "form": {
+      "addTitle": "Rexistrar sono",
+      "editTitle": "Editar entrada de sono",
+      "description": "Rexistra a duración do teu sono e, opcionalmente, o desglose de fases e métricas.",
+      "date": "Data",
+      "dateRequired": "Por favor, escolle unha data.",
+      "totalSleep": "Sono total",
+      "totalSleepRequired": "Por favor, introduce canto tempo durmiste.",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "stageBreakdown": "Desglose de fases (opcional)",
+      "deep": "Sono profundo",
+      "light": "Sono lixeiro",
+      "rem": "Sono REM",
+      "awake": "Esperto",
+      "metrics": "Métricas (opcional)",
+      "sleepScore": "Puntuación do sono (0–100)",
+      "restingHeartRate": "FC en repouso (ppm)",
+      "skinTempDeviation": "Desviación temp. pel (°C)",
+      "spo2": "SpO₂ media (%)",
+      "sleepTimes": "Horarios de sono (opcional)",
+      "startTime": "Inicio do sono",
+      "endTime": "Fin do sono",
+      "endBeforeStart": "O fin do sono debe ser posterior á hora de inicio.",
+      "awakeCount": "Espertas",
+      "heartRate": "Frecuencia cardíaca (opcional)",
+      "avgHeartRate": "FC media (ppm)",
+      "minHeartRate": "FC mínima (ppm)",
+      "maxHeartRate": "FC máxima (ppm)",
+      "bloodOxygen": "Osíxeno no sangue (opcional)",
+      "lowestSpo2": "SpO₂ mínima (%)",
+      "highestSpo2": "SpO₂ máxima (%)",
+      "avgSleepStress": "Estrés do sono medio (0–100)",
+      "sleepStages": "Fases do sono (opcional)",
+      "noStages": "Aínda non se engadiron fases.",
+      "addStage": "Engadir fase",
+      "removeStage": "Eliminar fase",
+      "stageLabel": "Fase {index}",
+      "stageType": "Fase",
+      "stageDeep": "Profundo",
+      "stageLight": "Lixeiro",
+      "stageRem": "REM",
+      "stageAwake": "Esperto",
+      "stageStart": "Inicio",
+      "stageEnd": "Fin",
+      "stageDuration": "Duración",
+      "create": "Rexistrar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Sono rexistrado.",
+      "updateSuccess": "Entrada de sono actualizada.",
+      "saveError": "Non se puido gardar a entrada de sono. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de sono",
+      "description": "Escolle un obxectivo de sono nocturno ou deixa os campos baleiros para eliminalo.",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "hint": "Deixa baleiro para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de sono actualizado.",
+      "saveError": "Non se puido actualizar o obxectivo de sono. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai entradas de sono",
+      "description": "Rexistra unha noite de sono para comezar a rexistrar o teu descanso ao longo do tempo."
+    },
+    "error": {
+      "title": "Non se puido cargar o historial de sono",
+      "description": "Produciuse un erro ao cargar as entradas de sono. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar entrada de sono",
+      "body": "Esta entrada de sono eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Entrada de sono eliminada.",
+      "error": "Non se puido eliminar a entrada de sono. Por favor, téntao de novo."
+    }
+  },
+  "water": {
+    "title": "Inxestión de auga",
+    "subtitle": "Rexistra a túa inxestión diaria de auga ao longo do tempo",
+    "logButton": "Rexistrar auga",
+    "targetButton": "Establecer obxectivo",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendencia de inxestión de auga",
+    "chartWaterSeries": "Auga",
+    "chartTargetSeries": "Obxectivo",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar entrada",
+      "delete": "Eliminar entrada"
+    },
+    "form": {
+      "addTitle": "Rexistrar auga",
+      "editTitle": "Editar entrada de auga",
+      "description": "Rexistra a túa inxestión de auga do día.",
+      "date": "Data",
+      "dateRequired": "Por favor, escolle unha data.",
+      "amount": "Cantidade",
+      "amountRequired": "Por favor, introduce unha cantidade.",
+      "amountInvalid": "Introduce unha cantidade maior que cero.",
+      "create": "Rexistrar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Auga rexistrada.",
+      "updateSuccess": "Entrada de auga actualizada.",
+      "saveError": "Non se puido gardar a entrada de auga. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de auga",
+      "description": "Escolle un obxectivo diario de auga ou deixa o campo baleiro para eliminalo.",
+      "amount": "Obxectivo diario",
+      "hint": "Deixa baleiro para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de auga actualizado.",
+      "saveError": "Non se puido actualizar o obxectivo de auga. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai entradas de auga",
+      "description": "Rexistra a túa inxestión de auga para comezar a rexistrar a túa hidratación ao longo do tempo."
+    },
+    "error": {
+      "title": "Non se puido cargar o historial de auga",
+      "description": "Produciuse un erro ao cargar as entradas de auga. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar entrada de auga",
+      "body": "Esta entrada de auga eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Entrada de auga eliminada.",
+      "error": "Non se puido eliminar a entrada de auga. Por favor, téntao de novo."
+    }
+  },
+  "poop": {
+    "title": "Deposicións",
+    "subtitle": "Rexistra as túas deposicións ao longo do tempo",
+    "logButton": "Rexistrar entrada",
+    "targetButton": "Establecer obxectivo",
+    "chartTitle": "Frecuencia diaria",
+    "chartCountSeries": "Deposicións",
+    "chartTargetSeries": "Obxectivo",
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar entrada",
+      "delete": "Eliminar entrada"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Deposición"
+    },
+    "form": {
+      "addTitle": "Rexistrar deposición",
+      "editTitle": "Editar deposición",
+      "description": "Rexistra a hora e os detalles da túa deposición.",
+      "dateTime": "Data e hora",
+      "dateTimeRequired": "Por favor, escolle unha data e hora.",
+      "bristolType": "Tipo de escala Bristol",
+      "color": "Cor",
+      "notes": "Notas",
+      "none": "Ningún",
+      "colors": {
+        "brown": "Marrón",
+        "dark_brown": "Marrón escuro",
+        "light_brown": "Marrón claro",
+        "yellow": "Amarelo",
+        "green": "Verde",
+        "black": "Negro",
+        "red": "Vermello",
+        "white": "Branco"
+      },
+      "create": "Rexistrar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Deposición rexistrada.",
+      "updateSuccess": "Deposición actualizada.",
+      "saveError": "Non se puido gardar a entrada. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de deposicións",
+      "description": "Escolle un obxectivo diario de deposicións ou deixa o campo baleiro para eliminalo.",
+      "count": "Obxectivo por día",
+      "hint": "Deixa baleiro para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de deposicións actualizado.",
+      "saveError": "Non se puido actualizar o teu obxectivo. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai entradas",
+      "description": "Rexistra unha deposición para comezar a rexistrar ao longo do tempo."
+    },
+    "error": {
+      "title": "Non se puido cargar o teu historial",
+      "description": "Produciuse un erro ao cargar as túas entradas. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar entrada",
+      "body": "Esta entrada eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Entrada eliminada.",
+      "error": "Non se puido eliminar a entrada. Por favor, téntao de novo."
+    }
+  },
+  "fasting": {
+    "title": "Xaxún",
+    "subtitle": "Inicia un xaxún, rexistra o teu progreso e revisa o teu historial",
+    "startButton": "Iniciar xaxún",
+    "targetButton": "Establecer obxectivo",
+    "sourceGarmin": "De Garmin Connect",
+    "active": {
+      "title": "Xaxún en progreso",
+      "started": "Iniciado",
+      "target": "Obxectivo",
+      "complete": "Completar",
+      "break": "Romper o xaxún",
+      "cancel": "Cancelar",
+      "completeHint": "Podes completar o xaxún unha vez que alcances o teu obxectivo."
+    },
+    "stats": {
+      "totalFasts": "Total de xaxúns",
+      "currentStreak": "Racha actual",
+      "longestStreak": "Racha máis longa",
+      "avgDuration": "Duración media",
+      "totalTime": "Tempo total en xaxún",
+      "completionRate": "Taxa de completación",
+      "days": "días"
+    },
+    "types": {
+      "16:8": "16:8 (16h xaxún, 8h comida)",
+      "18:6": "18:6 (18h xaxún, 6h comida)",
+      "20:4": "20:4 (20h xaxún, 4h comida)",
+      "OMAD": "OMAD (unha comida ao día)",
+      "24h": "Xaxún de 24 horas",
+      "36h": "Xaxún de 36 horas",
+      "48h": "Xaxún de 48 horas",
+      "72h": "Xaxún de 72 horas",
+      "custom": "Personalizado"
+    },
+    "status": {
+      "in_progress": "En progreso",
+      "completed": "Completado",
+      "broken": "Roto",
+      "cancelled": "Cancelado"
+    },
+    "interval": {
+      "label": "Intervalo de tempo",
+      "last_7_days": "Últimos 7 días",
+      "last_30_days": "Últimos 30 días",
+      "last_90_days": "Últimos 90 días",
+      "last_year": "Último ano",
+      "all_time": "Todo o tempo"
+    },
+    "actions": {
+      "edit": "Editar xaxún",
+      "delete": "Eliminar xaxún"
+    },
+    "list": {
+      "notesLabel": "Notas"
+    },
+    "form": {
+      "addTitle": "Iniciar xaxún",
+      "editTitle": "Editar sesión de xaxún",
+      "description": "Escolle un protocolo de xaxún e cando comezou.",
+      "type": "Protocolo de xaxún",
+      "customDuration": "Duración personalizada",
+      "customDurationHint": "Duración do xaxún, en horas (1–72).",
+      "hours": "horas",
+      "startTime": "Hora de inicio",
+      "startTimeRequired": "Por favor, escolle unha hora de inicio.",
+      "endTime": "Hora de fin",
+      "status": "Estado",
+      "notes": "Notas",
+      "create": "Iniciar",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "createSuccess": "Xaxún iniciado.",
+      "updateSuccess": "Sesión de xaxún actualizada.",
+      "saveError": "Non se puido gardar a túa sesión de xaxún. Por favor, téntao de novo."
+    },
+    "target": {
+      "title": "Establecer obxectivo de xaxún",
+      "description": "Escolle unha duración de xaxún obxectivo ou deixa os dous campos baleiros para eliminalo.",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "hint": "Deixa ambos baleiros para eliminar o teu obxectivo.",
+      "save": "Gardar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "saveSuccess": "Obxectivo de xaxún actualizado.",
+      "saveError": "Non se puido actualizar o obxectivo de xaxún. Por favor, téntao de novo."
+    },
+    "complete": {
+      "success": "Xaxún rematado.",
+      "error": "Non se puido rematar o teu xaxún. Por favor, téntao de novo."
+    },
+    "empty": {
+      "title": "Aínda non hai xaxúns",
+      "description": "Inicia un xaxún para comezar a rexistrar o teu historial de xaxúns."
+    },
+    "error": {
+      "title": "Non se puido cargar o teu historial de xaxúns",
+      "description": "Produciuse un erro ao cargar as túas sesións de xaxún. Por favor, téntao de novo.",
+      "retry": "Tentar de novo"
+    },
+    "delete": {
+      "title": "Eliminar sesión de xaxún",
+      "body": "Esta sesión de xaxún eliminarse permanentemente. Esta acción non se pode desfacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Pechar",
+      "success": "Sesión de xaxún eliminada.",
+      "error": "Non se puido eliminar a sesión de xaxún. Por favor, téntao de novo."
+    }
+  }
+}

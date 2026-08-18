@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Korisnik nije pronađen",
+    "description": "Ovaj profil ne postoji ili vam nije vidljiv."
+  },
+  "error": {
+    "title": "Profil se nije mogao učitati",
+    "description": "Nešto je pošlo po zlu prilikom učitavanja ovog profila.",
+    "retry": "Pokušaj ponovno"
+  },
+  "editProfile": "Uredi profil",
+  "activities": {
+    "weekNav": "Pregledaj aktivnosti po tjednu",
+    "thisWeek": "Ovaj tjedan",
+    "oneYearAgo": "Prije godinu dana"
+  },
+  "stats": {
+    "thisMonth": "Aktivnosti ovaj mjesec",
+    "following": "Pratim",
+    "followers": "Pratitelji"
+  },
+  "tabs": {
+    "activities": "Aktivnosti",
+    "following": "Pratim",
+    "followers": "Pratitelji"
+  },
+  "activitiesError": {
+    "title": "Aktivnosti se nisu mogle učitati",
+    "description": "Nešto je pošlo po zlu prilikom učitavanja aktivnosti.",
+    "retry": "Pokušaj ponovno"
+  },
+  "listError": {
+    "title": "Popis se nije mogao učitati",
+    "description": "Nešto je pošlo po zlu. Pokušajte ponovno.",
+    "retry": "Pokušaj ponovno"
+  },
+  "follow": {
+    "follow": "Prati",
+    "requested": "Zatraženo",
+    "following": "Pratim",
+    "withdraw": "Povuci zahtjev",
+    "unfollow": "Prestani pratiti",
+    "cancel": "Odustani",
+    "close": "Zatvori",
+    "followError": "Nije moguće poslati zahtjev za praćenje.",
+    "unfollowError": "Nije moguće ažurirati zahtjev za praćenje.",
+    "confirmCancelTitle": "Povuci zahtjev",
+    "confirmCancelBody": "Povući svoj zahtjev za praćenje korisnika {name}?",
+    "confirmUnfollowTitle": "Prestani pratiti korisnika {name}",
+    "confirmUnfollowBody": "Prestati pratiti korisnika {name}? Možete ga ponovno pratiti kasnije."
+  },
+  "list": {
+    "accept": "Prihvati",
+    "decline": "Odbij",
+    "remove": "Ukloni",
+    "unfollow": "Prestani pratiti",
+    "cancel": "Odustani",
+    "close": "Zatvori",
+    "accepted": "Prihvaćeno",
+    "pending": "Na čekanju",
+    "acceptError": "Nije moguće prihvatiti zahtjev.",
+    "removeError": "Nije moguće ažurirati ovog pratitelja.",
+    "unfollowError": "Nije moguće prestati pratiti ovog korisnika.",
+    "confirmUnfollowTitle": "Prestani pratiti korisnika {name}",
+    "confirmUnfollowBody": "Prestati pratiti korisnika {name}? Možete ga ponovno pratiti kasnije.",
+    "confirmDeclineTitle": "Odbij zahtjev",
+    "confirmDeclineBody": "Odbiti zahtjev za praćenje od korisnika {name}?",
+    "confirmRemoveTitle": "Ukloni pratitelja",
+    "confirmRemoveBody": "Ukloniti korisnika {name} iz svojih pratitelja?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Još nema aktivnosti",
+      "ownDescription": "Vaše aktivnosti pojavit će se ovdje nakon što ih dodate ili uvezete.",
+      "otherTitle": "Nema aktivnosti za prikaz"
+    },
+    "following": {
+      "ownTitle": "Još nikoga ne pratite.",
+      "otherTitle": "Još nikoga ne prati."
+    },
+    "followers": {
+      "ownTitle": "Još nemate pratitelja.",
+      "otherTitle": "Još nema pratitelja."
+    }
+  }
+}

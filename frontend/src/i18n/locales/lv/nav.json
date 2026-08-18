@@ -1,0 +1,22 @@
+{
+  "home": "Sākums",
+  "search": "Meklēt",
+  "activities": "Aktivitātes",
+  "activitiesList": "Saraksts",
+  "summary": "Kopsavilkums",
+  "gear": "Inventārs",
+  "health": "Veselība",
+  "alerts": "Brīdinājumi",
+  "settings": "Iestatījumi",
+  "profile": "Profils",
+  "login": "Pieteikties",
+  "logout": "Iziet",
+  "userMenu": "Lietotāja izvēlne",
+  "menu": "Izvēlne",
+  "primary": "Galvenā navigācija",
+  "account": "Konts",
+  "preferences": "Preferences",
+  "updateAvailable": "Pieejams atjauninājums",
+  "updateAvailableTitle": "Pieejama versija {version}",
+  "updateViewRelease": "Skatīt laidiena piezīmes"
+}

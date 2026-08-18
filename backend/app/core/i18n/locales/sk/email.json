@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "S pozdravom,",
+  "common.team": "Tím Endurain",
+  "common.system": "Systém Endurain",
+  "common.visit": "Navštívte Endurain na:",
+  "common.source_code": "Zdrojový kód na:",
+  "common.copy_link": "Ak tlačidlo vyššie nefunguje, môžete skopírovať a vložiť nasledujúci odkaz do prehliadača:",
+
+  "password_reset.subject": "Endurain - Obnovenie hesla",
+  "password_reset.heading": "Žiadosť o obnovenie hesla",
+  "password_reset.greeting": "Ahoj {name},",
+  "password_reset.intro": "Požiadali ste o obnovenie hesla k vášmu účtu Endurain. Kliknutím na tlačidlo nižšie obnovte svoje heslo:",
+  "password_reset.cta": "Obnoviť heslo",
+  "password_reset.security_label": "Bezpečnostné upozornenie:",
+  "password_reset.security_notice": "Z bezpečnostných dôvodov tento odkaz vyprší o 1 hodinu.",
+  "password_reset.ignore": "Ak ste o obnovenie hesla nepožiadali, ignorujte tento e-mail. Vaše heslo zostane nezmenené.",
+
+  "signup_confirmation.subject": "Endurain - Potvrďte svoj účet",
+  "signup_confirmation.heading": "Potvrďte svoj účet",
+  "signup_confirmation.greeting": "Ahoj {name},",
+  "signup_confirmation.intro": "Ďakujeme, že ste sa zaregistrovali do Endurain! Potvrďte svoj účet kliknutím na tlačidlo nižšie:",
+  "signup_confirmation.cta": "Potvrdiť účet",
+  "signup_confirmation.security_label": "Bezpečnostné upozornenie:",
+  "signup_confirmation.security_notice": "Tento potvrdzovací odkaz vyprší o 24 hodín.",
+  "signup_confirmation.ignore": "Ak ste si nevytvorili účet Endurain, ignorujte tento e-mail.",
+
+  "admin_signup.subject": "Endurain - Nová registrácia používateľa čaká na schválenie",
+  "admin_signup.heading": "Nová registrácia vyžaduje schválenie",
+  "admin_signup.greeting": "Dobrý deň {name},",
+  "admin_signup.intro": "Nový používateľ sa zaregistroval a čaká na schválenie:",
+  "admin_signup.user_label": "Používateľ:",
+  "admin_signup.review": "Prihláste sa do administračného panela Endurain, aby ste skontrolovali a schválili túto žiadosť.",
+  "admin_signup.cta": "Prejsť do administračného panela",
+
+  "signup_approved.subject": "Endurain - Váš účet bol schválený",
+  "signup_approved.heading": "Váš účet je teraz aktívny",
+  "signup_approved.greeting": "Dobrý deň {name},",
+  "signup_approved.intro": "Dobrá správa! Váš účet bol schválený a je teraz aktívny.",
+  "signup_approved.username_label": "Používateľské meno:",
+  "signup_approved.login_intro": "Teraz sa môžete prihlásiť a začať používať Endurain:",
+  "signup_approved.cta": "Prihlásiť sa do Endurain"
+}

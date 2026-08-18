@@ -1,0 +1,22 @@
+{
+  "home": "首页",
+  "search": "搜索",
+  "activities": "活动",
+  "activitiesList": "列表",
+  "summary": "摘要",
+  "gear": "装备",
+  "health": "健康",
+  "alerts": "通知",
+  "settings": "设置",
+  "profile": "个人资料",
+  "login": "登录",
+  "logout": "退出登录",
+  "userMenu": "用户菜单",
+  "menu": "菜单",
+  "primary": "主导航",
+  "account": "账户",
+  "preferences": "偏好设置",
+  "updateAvailable": "有可用更新",
+  "updateAvailableTitle": "版本 {version} 现已推出",
+  "updateViewRelease": "查看发行说明"
+}

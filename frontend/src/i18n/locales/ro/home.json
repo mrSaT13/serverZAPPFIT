@@ -1,0 +1,73 @@
+{
+  "addActivity": "Adaugă activitate",
+  "upload": {
+    "uploading": "Se încarcă…",
+    "success": "Activitatea a fost încărcată cu succes",
+    "error": "Nu am putut încărca fișierul activității"
+  },
+  "refresh": {
+    "label": "Reîmprospătează",
+    "refreshing": "Se reîmprospătează…",
+    "success": "Reîmprospătarea a început",
+    "error": "Nu am putut reîmprospăta activitățile"
+  },
+  "feed": {
+    "scopeLabel": "Domeniul fluxului",
+    "myActivities": "Activitățile mele",
+    "following": "Urmăriți",
+    "loadMore": "Încarcă mai multe",
+    "loading": "Se încarcă…",
+    "error": {
+      "title": "Nu am putut încărca activitățile",
+      "description": "Ceva nu a mers bine la încărcarea fluxului.",
+      "retry": "Încearcă din nou"
+    },
+    "empty": {
+      "mine": {
+        "title": "Încă nicio activitate",
+        "description": "Adaugă o activitate sau conectează o integrare pentru a începe."
+      },
+      "following": {
+        "title": "Încă nimic aici",
+        "description": "Activitățile persoanelor pe care le urmărești vor apărea aici."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistici",
+    "metricLabel": "Indicator statistic",
+    "thisWeek": "Săptămâna aceasta",
+    "thisMonth": "Luna aceasta",
+    "empty": "Nicio activitate în această perioadă",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distanță",
+      "time": "Timp",
+      "calories": "Calorii"
+    }
+  },
+  "sports": {
+    "run": "Alergare",
+    "bike": "Ciclism",
+    "swim": "Înot",
+    "walk": "Mers",
+    "hike": "Drumeție",
+    "rowing": "Canotaj",
+    "snow_ski": "Schi",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surf",
+    "kayaking": "Caiac",
+    "sailing": "Navigație cu vele",
+    "snowshoeing": "Mers cu rachete de zăpadă",
+    "inline_skating": "Role"
+  },
+  "goals": {
+    "title": "Obiective",
+    "empty": {
+      "title": "Niciun obiectiv setat",
+      "description": "Setează obiective în setări pentru a-ți urmări progresul aici."
+    }
+  }
+}

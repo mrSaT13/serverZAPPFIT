@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Z poważaniem,",
+  "common.team": "Zespół Endurain",
+  "common.system": "System Endurain",
+  "common.visit": "Odwiedź Endurain pod adresem:",
+  "common.source_code": "Kod źródłowy pod adresem:",
+  "common.copy_link": "Jeśli powyższy przycisk nie działa, możesz skopiować i wkleić poniższy link do swojej przeglądarki:",
+
+  "password_reset.subject": "Endurain - Resetowanie hasła",
+  "password_reset.heading": "Prośba o resetowanie hasła",
+  "password_reset.greeting": "Cześć {name},",
+  "password_reset.intro": "Poprosiłeś(-aś) o zresetowanie hasła do swojego konta Endurain. Kliknij poniższy przycisk, aby zresetować hasło:",
+  "password_reset.cta": "Resetuj hasło",
+  "password_reset.security_label": "Informacja o bezpieczeństwie:",
+  "password_reset.security_notice": "Ze względów bezpieczeństwa ten link wygaśnie po 1 godzinie.",
+  "password_reset.ignore": "Jeśli nie prosiłeś(-aś) o zresetowanie hasła, zignoruj tę wiadomość. Twoje hasło pozostanie niezmienione.",
+
+  "signup_confirmation.subject": "Endurain - Potwierdź swoje konto",
+  "signup_confirmation.heading": "Potwierdź swoje konto",
+  "signup_confirmation.greeting": "Cześć {name},",
+  "signup_confirmation.intro": "Dziękujemy za rejestrację w Endurain! Potwierdź swoje konto, klikając poniższy przycisk:",
+  "signup_confirmation.cta": "Potwierdź konto",
+  "signup_confirmation.security_label": "Informacja o bezpieczeństwie:",
+  "signup_confirmation.security_notice": "Ten link potwierdzający wygaśnie po 24 godzinach.",
+  "signup_confirmation.ignore": "Jeśli nie zakładałeś(-aś) konta Endurain, zignoruj tę wiadomość.",
+
+  "admin_signup.subject": "Endurain - Nowa rejestracja użytkownika oczekuje na zatwierdzenie",
+  "admin_signup.heading": "Nowa rejestracja wymaga zatwierdzenia",
+  "admin_signup.greeting": "Witaj {name},",
+  "admin_signup.intro": "Nowy użytkownik zarejestrował się i oczekuje na zatwierdzenie:",
+  "admin_signup.user_label": "Użytkownik:",
+  "admin_signup.review": "Zaloguj się do panelu administracyjnego Endurain, aby przejrzeć i zatwierdzić tę prośbę.",
+  "admin_signup.cta": "Przejdź do panelu administracyjnego",
+
+  "signup_approved.subject": "Endurain - Twoje konto zostało zatwierdzone",
+  "signup_approved.heading": "Twoje konto jest już aktywne",
+  "signup_approved.greeting": "Witaj {name},",
+  "signup_approved.intro": "Dobra wiadomość! Twoje konto zostało zatwierdzone i jest już aktywne.",
+  "signup_approved.username_label": "Nazwa użytkownika:",
+  "signup_approved.login_intro": "Możesz teraz zalogować się i zacząć korzystać z Endurain:",
+  "signup_approved.cta": "Zaloguj się do Endurain"
+}

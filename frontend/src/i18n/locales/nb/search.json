@@ -1,0 +1,43 @@
+{
+  "title": "Søk",
+  "subtitle": "Finn brukere, aktiviteter og utstyr på tvers av Endurain.",
+  "placeholder": "Søk…",
+  "clear": "Tøm søk",
+  "scopes": {
+    "users": "Brukere",
+    "activities": "Aktiviteter",
+    "gears": "Utstyr"
+  },
+  "filters": {
+    "all": "Alle typer",
+    "activityType": "Filtrer etter aktivitetstype",
+    "gearType": "Filtrer etter utstyrstype"
+  },
+  "activityCategories": {
+    "running": "Løping",
+    "cycling": "Sykling",
+    "swimming": "Svømming",
+    "walking": "Gåing og fotturer",
+    "racquet": "Racketsport",
+    "rowing": "Roing og padling",
+    "winterSports": "Vintersport",
+    "waterSports": "Vannsport",
+    "skating": "Skøyting"
+  },
+  "results": {
+    "inactive": "Inaktiv"
+  },
+  "idle": {
+    "title": "Søk i Endurain",
+    "description": "Velg hva du vil lete etter, og begynn deretter å skrive for å se treff."
+  },
+  "empty": {
+    "title": "Ingen treff funnet",
+    "description": "Ingenting samsvarer med «{term}». Prøv et annet søk."
+  },
+  "error": {
+    "title": "Søket mislyktes",
+    "description": "Vi kunne ikke kjøre søket ditt. Sjekk tilkoblingen din og prøv igjen.",
+    "retry": "Prøv igjen"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Résumé",
+  "subtitle": "Consultez vos totaux d'entraînement et tendances dans le temps.",
+  "viewType": {
+    "label": "Période du résumé",
+    "week": "Semaine",
+    "month": "Mois",
+    "year": "Année",
+    "lifetime": "Tout le temps"
+  },
+  "filters": {
+    "type": "Type d'activité",
+    "allTypes": "Tous les types"
+  },
+  "period": {
+    "previous": "Période précédente",
+    "next": "Période suivante",
+    "picker": "Sélectionner une période",
+    "allTime": "Tout le temps"
+  },
+  "metrics": {
+    "distance": "Distance",
+    "duration": "Durée",
+    "elevation": "Dénivelé",
+    "calories": "Calories",
+    "activities": "Activités"
+  },
+  "breakdown": {
+    "title": "Répartition",
+    "period": "Période",
+    "weekNumber": "Semaine {number}"
+  },
+  "typeBreakdown": {
+    "title": "Par type d'activité",
+    "type": "Type"
+  },
+  "activities": {
+    "title": "Activités sur cette période"
+  },
+  "empty": {
+    "title": "Aucune activité sur cette période",
+    "description": "Aucune activité ne correspond à la période et au type sélectionnés."
+  },
+  "error": {
+    "title": "Impossible de charger le résumé",
+    "description": "Une erreur s'est produite lors du chargement de vos statistiques. Vérifiez votre connexion et réessayez.",
+    "retry": "Réessayer"
+  }
+}

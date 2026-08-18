@@ -1,0 +1,73 @@
+{
+  "addActivity": "新增活動",
+  "upload": {
+    "uploading": "上傳中…",
+    "success": "活動已成功上傳",
+    "error": "無法上傳活動檔案"
+  },
+  "refresh": {
+    "label": "重新整理",
+    "refreshing": "重新整理中…",
+    "success": "已開始重新整理",
+    "error": "無法重新整理活動"
+  },
+  "feed": {
+    "scopeLabel": "動態範圍",
+    "myActivities": "我的活動",
+    "following": "追蹤中",
+    "loadMore": "載入更多",
+    "loading": "載入中…",
+    "error": {
+      "title": "無法載入活動",
+      "description": "載入動態時發生問題。",
+      "retry": "重試"
+    },
+    "empty": {
+      "mine": {
+        "title": "尚無活動",
+        "description": "新增活動或連結整合服務以開始使用。"
+      },
+      "following": {
+        "title": "這裡還沒有內容",
+        "description": "您追蹤的人的活動將顯示在這裡。"
+      }
+    }
+  },
+  "stats": {
+    "title": "統計",
+    "metricLabel": "統計指標",
+    "thisWeek": "本週",
+    "thisMonth": "本月",
+    "empty": "此時段無活動",
+    "caloriesUnit": "大卡",
+    "metric": {
+      "distance": "距離",
+      "time": "時間",
+      "calories": "卡路里"
+    }
+  },
+  "sports": {
+    "run": "跑步",
+    "bike": "騎自行車",
+    "swim": "游泳",
+    "walk": "健走",
+    "hike": "健行",
+    "rowing": "劃船",
+    "snow_ski": "滑雪",
+    "snowboard": "單板滑雪",
+    "windsurf": "風帆衝浪",
+    "stand_up_paddleboarding": "立式划槳",
+    "surfing": "衝浪",
+    "kayaking": "独木舟",
+    "sailing": "帆船",
+    "snowshoeing": "雪鸋健行",
+    "inline_skating": "直排輪滑冰"
+  },
+  "goals": {
+    "title": "目標",
+    "empty": {
+      "title": "尚未設定目標",
+      "description": "在設定中設定目標，以在此追蹤您的進度。"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Logo Endurain",
+  "title": "Fundația sistemului de design este activă",
+  "subtitle": "Tailwind v4, shadcn-vue, TypeScript strict și paleta de tokenuri Endurain sunt configurate",
+  "primaryAction": "Acțiune principală",
+  "notFound": {
+    "title": "Pagina nu a fost găsită",
+    "message": "Pagina pe care o cauți nu există sau a fost mutată",
+    "action": "Mergi la pagina principală"
+  },
+  "error": {
+    "title": "Ceva nu a mers bine",
+    "message": "Această secțiune nu s-a putut încărca. Poți încerca din nou.",
+    "retry": "Încearcă din nou",
+    "toast": "Ceva nu a mers bine. Te rugăm să încerci din nou."
+  },
+  "configError": {
+    "title": "Eroare de configurare",
+    "message": "Aplicația nu a putut contacta backendul Endurain. Acest lucru este cauzat de obicei de o variabilă de mediu ENDURAIN_HOST lipsă sau configurată greșit, ori de backendul care nu rulează.",
+    "notSet": "(nesetat)",
+    "help": "Verifică dacă ENDURAIN_HOST indică URL-ul la care instanța ta Endurain este accesibilă (de exemplu https://endurain.example.com) și dacă backendul rulează, apoi reîncarcă pagina.",
+    "reload": "Reîncarcă"
+  },
+  "dismiss": "Închide",
+  "language": "Limbă",
+  "theme": {
+    "toLight": "Mod luminos",
+    "toDark": "Mod întunecat"
+  },
+  "pagination": {
+    "label": "Paginare",
+    "previous": "Pagina anterioară",
+    "next": "Pagina următoare",
+    "goToPage": "Mergi la pagina {page}"
+  },
+  "markdownEditor": {
+    "preview": "Previzualizare",
+    "edit": "Editează",
+    "supported": "Markdown acceptat",
+    "empty": "Nimic de previzualizat"
+  }
+}

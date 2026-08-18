@@ -1,0 +1,648 @@
+{
+  "title": "Tervis",
+  "subtitle": "Vaata kõiki oma terviseandmeid ühes kohas",
+  "nav": {
+    "label": "Tervise jaotised",
+    "soon": "Varsti",
+    "dashboard": "Töölaud",
+    "sleep": "Uni",
+    "rhr": "Puhkeoleku pulss",
+    "steps": "Sammud",
+    "weight": "Kaal",
+    "fasting": "Paastumine",
+    "water": "Veetarbimine",
+    "poop": "Soolekäigud"
+  },
+  "dashboard": {
+    "title": "Töölaud",
+    "subtitle": "Sinu igapäevane heaolu ühe pilguga",
+    "sleep": "Uni",
+    "restingHeartRate": "Puhke-pulss",
+    "avgSkinTemperatureDeviation": "Nahatemp. hälve",
+    "weight": "Kaal",
+    "bmi": "BMI",
+    "steps": "Sammud",
+    "fasting": "Paastumine",
+    "water": "Veetarbimine",
+    "poop": "Soolekäigud",
+    "noSleepTarget": "Une eesmärk puudub",
+    "noWeightTarget": "Kaalu eesmärk puudub",
+    "noStepsTarget": "Sammude eesmärk puudub",
+    "noFastingTarget": "Paastumise eesmärk puudub",
+    "noWaterTarget": "Vee eesmärk puudub",
+    "noPoopTarget": "Soolekäigu eesmärk puudub",
+    "stepsTargetLabel": "sammu",
+    "poopTargetLabel": "/ päevas",
+    "noWeightData": "Kaaluandmed puuduvad",
+    "bmiUnderweight": "Alakaal",
+    "bmiNormalWeight": "Normaalkaal",
+    "bmiOverweight": "Ülekaal",
+    "bmiObesityClass1": "Rasvumine (I aste)",
+    "bmiObesityClass2": "Rasvumine (II aste)",
+    "bmiObesityClass3": "Tugev rasvumine (III aste)",
+    "hrvBalanced": "Tasakaalus",
+    "hrvUnbalanced": "Tasakaalust väljas",
+    "hrvLow": "Madal",
+    "hrvPoor": "Kehv",
+    "labelNoData": "Andmed puuduvad",
+    "errorTitle": "Sinu terviseandmeid ei õnnestunud laadida",
+    "errorDescription": "Sinu igapäevase tervisestatistika laadimisel läks midagi valesti. Palun proovi uuesti.",
+    "retry": "Proovi uuesti"
+  },
+  "weight": {
+    "title": "Kaal",
+    "subtitle": "Jälgi oma kaalu ja keha koostist aja jooksul",
+    "logButton": "Logi kaal",
+    "targetButton": "Sea eesmärk",
+    "sourceGarmin": "Garmin Connectist",
+    "toggleDetails": "Lülita keha koostise üksikasjad",
+    "chartTitle": "Kaalu trend",
+    "chartWeightSeries": "Kaal",
+    "chartTargetSeries": "Eesmärk",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda kirjet",
+      "delete": "Kustuta kirje"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Keharasv",
+      "bodyWater": "Kehavesi",
+      "boneMass": "Luumass",
+      "muscleMass": "Lihasmass"
+    },
+    "form": {
+      "addTitle": "Logi kaal",
+      "editTitle": "Muuda kaalukirjet",
+      "description": "Salvesta oma kaal ja soovi korral keha koostis.",
+      "date": "Kuupäev",
+      "dateRequired": "Palun vali kuupäev.",
+      "weight": "Kaal",
+      "weightRequired": "Palun sisesta oma kaal.",
+      "weightInvalid": "Sisesta kaal, mis on suurem kui null.",
+      "bodyComposition": "Keha koostis (valikuline)",
+      "bmi": "BMI",
+      "bodyFat": "Keharasv (%)",
+      "bodyWater": "Kehavesi (%)",
+      "boneMass": "Luumass",
+      "muscleMass": "Lihasmass",
+      "create": "Logi",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Kaal logitud.",
+      "updateSuccess": "Kaalukirje uuendatud.",
+      "saveError": "Sinu kaalukirjet ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea kaalu eesmärk",
+      "description": "Vali sihtkaal või tühjenda väli, et see eemaldada.",
+      "weight": "Sihtkaal",
+      "hint": "Jäta tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Kaalu eesmärk uuendatud.",
+      "saveError": "Sinu kaalu eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi kaalukirjet",
+      "description": "Logi oma kaal, et hakata aja jooksul oma edenemist jälgima."
+    },
+    "error": {
+      "title": "Sinu kaaluajalugu ei õnnestunud laadida",
+      "description": "Sinu kaalukirjete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta kaalukirje",
+      "body": "See kaalukirje kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Kaalukirje kustutatud.",
+      "error": "Kaalukirjet ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  },
+  "steps": {
+    "title": "Sammud",
+    "subtitle": "Jälgi oma igapäevast sammude arvu aja jooksul",
+    "logButton": "Logi sammud",
+    "targetButton": "Sea eesmärk",
+    "sourceGarmin": "Garmin Connectist",
+    "chartTitle": "Sammude trend",
+    "chartStepsSeries": "Sammud",
+    "chartTargetSeries": "Eesmärk",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda kirjet",
+      "delete": "Kustuta kirje"
+    },
+    "form": {
+      "addTitle": "Logi sammud",
+      "editTitle": "Muuda sammude kirjet",
+      "description": "Salvesta oma sammude arv selle päeva kohta.",
+      "date": "Kuupäev",
+      "dateRequired": "Palun vali kuupäev.",
+      "steps": "Sammud",
+      "stepsRequired": "Palun sisesta oma sammude arv.",
+      "stepsInvalid": "Sisesta sammude arv, mis on suurem kui null.",
+      "create": "Logi",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Sammud logitud.",
+      "updateSuccess": "Sammude kirje uuendatud.",
+      "saveError": "Sinu sammude kirjet ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea sammude eesmärk",
+      "description": "Vali igapäevane sammude eesmärk või tühjenda väli, et see eemaldada.",
+      "steps": "Igapäevane sammude eesmärk",
+      "hint": "Jäta tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Sammude eesmärk uuendatud.",
+      "saveError": "Sinu sammude eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi sammude kirjet",
+      "description": "Logi oma sammud, et hakata aja jooksul oma aktiivsust jälgima."
+    },
+    "error": {
+      "title": "Sinu sammude ajalugu ei õnnestunud laadida",
+      "description": "Sinu sammude kirjete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta sammude kirje",
+      "body": "See sammude kirje kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Sammude kirje kustutatud.",
+      "error": "Sammude kirjet ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  },
+  "rhr": {
+    "title": "Puhkeoleku pulss",
+    "subtitle": "Jälgi oma puhkeoleku pulssi aja jooksul",
+    "sourceGarmin": "Garmin Connectist",
+    "chartTitle": "Puhkeoleku pulsi trend",
+    "chartSeries": "Puhkeoleku pulss",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "empty": {
+      "title": "Puhkeoleku pulsi andmeid pole veel",
+      "description": "Puhkeoleku pulss salvestatakse koos sinu unega. Sünkrooni seade, mis seda jälgib, et oma trendi siin näha."
+    },
+    "error": {
+      "title": "Sinu puhkeoleku pulsi ajalugu ei õnnestunud laadida",
+      "description": "Sinu puhkeoleku pulsi andmete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    }
+  },
+  "sleep": {
+    "title": "Uni",
+    "subtitle": "Jälgi oma une kestust ja kvaliteeti aja jooksul",
+    "logButton": "Logi uni",
+    "targetButton": "Sea eesmärk",
+    "sourceGarmin": "Garmin Connectist",
+    "toggleDetails": "Lülita une üksikasjad",
+    "chartTitle": "Une trend",
+    "chartSleepSeries": "Uni",
+    "chartTargetSeries": "Eesmärk",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda kirjet",
+      "delete": "Kustuta kirje"
+    },
+    "score": "Skoor",
+    "hrvBalanced": "Tasakaalus",
+    "hrvUnbalanced": "Tasakaalust väljas",
+    "hrvLow": "Madal",
+    "hrvPoor": "Kehv",
+    "scoreExcellent": "Suurepärane",
+    "scoreGood": "Hea",
+    "scoreFair": "Rahuldav",
+    "scorePoor": "Kehv",
+    "detail": {
+      "tabsLabel": "Une üksikasjade jaotised",
+      "tabScore": "Une skoor",
+      "tabDetails": "Une üksikasjad",
+      "deep": "Sügav",
+      "light": "Kerge",
+      "rem": "REM",
+      "awake": "Ärkvel",
+      "score": "Une skoor",
+      "quality": "Kvaliteet",
+      "duration": "Kestus",
+      "restingHeartRate": "Puhke-pulss",
+      "avgHeartRate": "Keskmine pulss",
+      "minHeartRate": "Min pulss",
+      "maxHeartRate": "Max pulss",
+      "skinTempDeviation": "Nahatemp. hälve",
+      "hrv": "HRV olek",
+      "spo2": "Keskmine SpO₂",
+      "lowestSpo2": "Madalaim SpO₂",
+      "highestSpo2": "Kõrgeim SpO₂",
+      "avgRespiration": "Keskmine hingamissagedus",
+      "lowestRespiration": "Madalaim hingamissagedus",
+      "highestRespiration": "Kõrgeim hingamissagedus",
+      "avgSleepStress": "Keskmine unestress",
+      "awakeCount": "Ärkamised",
+      "summary": "Kokkuvõte",
+      "breakdown": "Jaotus",
+      "overview": "Ülevaade",
+      "heartRate": "Pulss",
+      "bloodOxygen": "Vere hapnikusisaldus",
+      "respiration": "Hingamine",
+      "avg": "Keskmine",
+      "min": "Min",
+      "max": "Max",
+      "noData": "Andmeid pole salvestatud."
+    },
+    "hypnogram": {
+      "title": "Unefaasid",
+      "deep": "Sügav",
+      "light": "Kerge",
+      "rem": "REM",
+      "awake": "Ärkvel",
+      "noData": "Faaside ajateljge pole saadaval."
+    },
+    "form": {
+      "addTitle": "Logi uni",
+      "editTitle": "Muuda unekirjet",
+      "description": "Salvesta oma une kestus ja soovi korral faaside jaotus ja näitajad.",
+      "date": "Kuupäev",
+      "dateRequired": "Palun vali kuupäev.",
+      "totalSleep": "Une kogukestus",
+      "totalSleepRequired": "Palun sisesta, kui kaua sa magasid.",
+      "hours": "Tunnid",
+      "minutes": "Minutid",
+      "stageBreakdown": "Faaside jaotus (valikuline)",
+      "deep": "Sügav uni",
+      "light": "Kerge uni",
+      "rem": "REM-uni",
+      "awake": "Ärkvel",
+      "metrics": "Näitajad (valikuline)",
+      "sleepScore": "Une skoor (0–100)",
+      "restingHeartRate": "Puhkeoleku pulss (bpm)",
+      "skinTempDeviation": "Nahatemp. hälve (°C)",
+      "spo2": "Keskmine SpO₂ (%)",
+      "sleepTimes": "Uneajad (valikuline)",
+      "startTime": "Une algus",
+      "endTime": "Une lõpp",
+      "endBeforeStart": "Une lõpp peab olema pärast algusaega.",
+      "awakeCount": "Ärkamised",
+      "heartRate": "Pulss (valikuline)",
+      "avgHeartRate": "Keskmine pulss (bpm)",
+      "minHeartRate": "Min pulss (bpm)",
+      "maxHeartRate": "Max pulss (bpm)",
+      "bloodOxygen": "Vere hapnikusisaldus (valikuline)",
+      "lowestSpo2": "Madalaim SpO₂ (%)",
+      "highestSpo2": "Kõrgeim SpO₂ (%)",
+      "avgSleepStress": "Keskmine unestress (0–100)",
+      "sleepStages": "Unefaasid (valikuline)",
+      "noStages": "Faase pole veel lisatud.",
+      "addStage": "Lisa faas",
+      "removeStage": "Eemalda faas",
+      "stageLabel": "Faas {index}",
+      "stageType": "Faas",
+      "stageDeep": "Sügav",
+      "stageLight": "Kerge",
+      "stageRem": "REM",
+      "stageAwake": "Ärkvel",
+      "stageStart": "Algus",
+      "stageEnd": "Lõpp",
+      "stageDuration": "Kestus",
+      "create": "Logi",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Uni logitud.",
+      "updateSuccess": "Unekirje uuendatud.",
+      "saveError": "Sinu unekirjet ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea une eesmärk",
+      "description": "Vali igaöine une eesmärk või tühjenda väljad, et see eemaldada.",
+      "hours": "Tunnid",
+      "minutes": "Minutid",
+      "hint": "Jäta tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Une eesmärk uuendatud.",
+      "saveError": "Sinu une eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi unekirjet",
+      "description": "Logi öine uni, et hakata aja jooksul oma puhkust jälgima."
+    },
+    "error": {
+      "title": "Sinu uneajalugu ei õnnestunud laadida",
+      "description": "Sinu unekirjete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta unekirje",
+      "body": "See unekirje kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Unekirje kustutatud.",
+      "error": "Unekirjet ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  },
+  "water": {
+    "title": "Veetarbimine",
+    "subtitle": "Jälgi oma igapäevast veetarbimist aja jooksul",
+    "logButton": "Logi vesi",
+    "targetButton": "Sea eesmärk",
+    "sourceGarmin": "Garmin Connectist",
+    "chartTitle": "Veetarbimise trend",
+    "chartWaterSeries": "Vesi",
+    "chartTargetSeries": "Eesmärk",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda kirjet",
+      "delete": "Kustuta kirje"
+    },
+    "form": {
+      "addTitle": "Logi vesi",
+      "editTitle": "Muuda veekirjet",
+      "description": "Salvesta oma veetarbimine selle päeva kohta.",
+      "date": "Kuupäev",
+      "dateRequired": "Palun vali kuupäev.",
+      "amount": "Kogus",
+      "amountRequired": "Palun sisesta kogus.",
+      "amountInvalid": "Sisesta kogus, mis on suurem kui null.",
+      "create": "Logi",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Vesi logitud.",
+      "updateSuccess": "Veekirje uuendatud.",
+      "saveError": "Sinu veekirjet ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea vee eesmärk",
+      "description": "Vali igapäevane vee eesmärk või tühjenda väli, et see eemaldada.",
+      "amount": "Igapäevane eesmärk",
+      "hint": "Jäta tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Vee eesmärk uuendatud.",
+      "saveError": "Sinu vee eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi veekirjet",
+      "description": "Logi oma veetarbimine, et hakata aja jooksul oma hüdratatsiooni jälgima."
+    },
+    "error": {
+      "title": "Sinu vee ajalugu ei õnnestunud laadida",
+      "description": "Sinu veekirjete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta veekirje",
+      "body": "See veekirje kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Veekirje kustutatud.",
+      "error": "Veekirjet ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  },
+  "poop": {
+    "title": "Soolekäigud",
+    "subtitle": "Jälgi oma soolekäike aja jooksul",
+    "logButton": "Logi kirje",
+    "targetButton": "Sea eesmärk",
+    "chartTitle": "Igapäevane sagedus",
+    "chartCountSeries": "Soolekäigud",
+    "chartTargetSeries": "Eesmärk",
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda kirjet",
+      "delete": "Kustuta kirje"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Soolekäik"
+    },
+    "form": {
+      "addTitle": "Logi soolekäik",
+      "editTitle": "Muuda soolekäiku",
+      "description": "Salvesta oma soolekäigu aeg ja üksikasjad.",
+      "dateTime": "Kuupäev ja kellaaeg",
+      "dateTimeRequired": "Palun vali kuupäev ja kellaaeg.",
+      "bristolType": "Bristoli väljaheite tüüp",
+      "color": "Värv",
+      "notes": "Märkmed",
+      "none": "Puudub",
+      "colors": {
+        "brown": "Pruun",
+        "dark_brown": "Tumepruun",
+        "light_brown": "Helepruun",
+        "yellow": "Kollane",
+        "green": "Roheline",
+        "black": "Must",
+        "red": "Punane",
+        "white": "Valge"
+      },
+      "create": "Logi",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Soolekäik logitud.",
+      "updateSuccess": "Soolekäik uuendatud.",
+      "saveError": "Sinu kirjet ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea soolekäigu eesmärk",
+      "description": "Vali igapäevane soolekäigu eesmärk või tühjenda väli, et see eemaldada.",
+      "count": "Eesmärk päevas",
+      "hint": "Jäta tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Soolekäigu eesmärk uuendatud.",
+      "saveError": "Sinu eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi kirjet",
+      "description": "Logi soolekäik, et hakata seda aja jooksul jälgima."
+    },
+    "error": {
+      "title": "Sinu ajalugu ei õnnestunud laadida",
+      "description": "Sinu kirjete laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta kirje",
+      "body": "See kirje kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Kirje kustutatud.",
+      "error": "Kirjet ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  },
+  "fasting": {
+    "title": "Paastumine",
+    "subtitle": "Alusta paastu, jälgi oma edenemist ja vaata oma ajalugu",
+    "startButton": "Alusta paastu",
+    "targetButton": "Sea eesmärk",
+    "sourceGarmin": "Garmin Connectist",
+    "active": {
+      "title": "Paast käib",
+      "started": "Alustatud",
+      "target": "Eesmärk",
+      "complete": "Lõpetatud",
+      "break": "Lõpeta paast",
+      "cancel": "Tühista",
+      "completeHint": "Saad paastu lõpetada, kui oled jõudnud oma eesmärgini."
+    },
+    "stats": {
+      "totalFasts": "Paaste kokku",
+      "currentStreak": "Praegune seeria",
+      "longestStreak": "Pikim seeria",
+      "avgDuration": "Keskmine kestus",
+      "totalTime": "Paastumise koguaeg",
+      "completionRate": "Lõpetamise määr",
+      "days": "päeva"
+    },
+    "types": {
+      "16:8": "16:8 (16 h paast, 8 h söömine)",
+      "18:6": "18:6 (18 h paast, 6 h söömine)",
+      "20:4": "20:4 (20 h paast, 4 h söömine)",
+      "OMAD": "OMAD (üks toidukord päevas)",
+      "24h": "24-tunnine paast",
+      "36h": "36-tunnine paast",
+      "48h": "48-tunnine paast",
+      "72h": "72-tunnine paast",
+      "custom": "Kohandatud"
+    },
+    "status": {
+      "in_progress": "Käib",
+      "completed": "Lõpetatud",
+      "broken": "Katkestatud",
+      "cancelled": "Tühistatud"
+    },
+    "interval": {
+      "label": "Ajavahemik",
+      "last_7_days": "Viimased 7 päeva",
+      "last_30_days": "Viimased 30 päeva",
+      "last_90_days": "Viimased 90 päeva",
+      "last_year": "Viimane aasta",
+      "all_time": "Kogu aeg"
+    },
+    "actions": {
+      "edit": "Muuda paastu",
+      "delete": "Kustuta paast"
+    },
+    "list": {
+      "notesLabel": "Märkmed"
+    },
+    "form": {
+      "addTitle": "Alusta paastu",
+      "editTitle": "Muuda paastuseanssi",
+      "description": "Vali paastuprotokoll ja millal see algas.",
+      "type": "Paastuprotokoll",
+      "customDuration": "Kohandatud kestus",
+      "customDurationHint": "Paastu pikkus tundides (1–72).",
+      "hours": "tundi",
+      "startTime": "Algusaeg",
+      "startTimeRequired": "Palun vali algusaeg.",
+      "endTime": "Lõpuaeg",
+      "status": "Olek",
+      "notes": "Märkmed",
+      "create": "Alusta",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Paast alustatud.",
+      "updateSuccess": "Paastuseanss uuendatud.",
+      "saveError": "Sinu paastuseanssi ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "target": {
+      "title": "Sea paastumise eesmärk",
+      "description": "Vali paastumise sihtkestus või tühjenda mõlemad väljad, et see eemaldada.",
+      "hours": "Tunnid",
+      "minutes": "Minutid",
+      "hint": "Jäta mõlemad tühjaks, et eesmärk eemaldada.",
+      "save": "Salvesta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "saveSuccess": "Paastumise eesmärk uuendatud.",
+      "saveError": "Sinu paastumise eesmärki ei õnnestunud uuendada. Palun proovi uuesti."
+    },
+    "complete": {
+      "success": "Paast lõpetatud.",
+      "error": "Sinu paastu ei õnnestunud lõpetada. Palun proovi uuesti."
+    },
+    "empty": {
+      "title": "Veel pole ühtegi paastu",
+      "description": "Alusta paastu, et hakata oma paastumise ajalugu jälgima."
+    },
+    "error": {
+      "title": "Sinu paastumise ajalugu ei õnnestunud laadida",
+      "description": "Sinu paastuseansside laadimisel läks midagi valesti. Palun proovi uuesti.",
+      "retry": "Proovi uuesti"
+    },
+    "delete": {
+      "title": "Kustuta paastuseanss",
+      "body": "See paastuseanss kustutatakse jäädavalt. Seda toimingut ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Paastuseanss kustutatud.",
+      "error": "Paastuseanssi ei õnnestunud kustutada. Palun proovi uuesti."
+    }
+  }
+}

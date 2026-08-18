@@ -1,0 +1,120 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { ImageUp, Trash2 } from '@lucide/vue'
+
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { ConfirmDialog } from '@/components/ui/confirm-dialog'
+import { useToasts } from '@/composables/useToasts'
+import {
+  useDeleteLoginPhotoMutation,
+  useUploadLoginPhotoMutation,
+} from '@/features/serverSettings/composables/useServerSettings'
+
+defineProps<{
+  /** Whether a custom login photo is currently configured. */
+  loginPhotoSet: boolean
+}>()
+
+const { t } = useI18n()
+const toasts = useToasts()
+const uploadMutation = useUploadLoginPhotoMutation()
+const deleteMutation = useDeleteLoginPhotoMutation()
+
+const fileInput = ref<HTMLInputElement | null>(null)
+const isDeleteOpen = ref(false)
+
+/** Opens the native file picker. */
+function pickFile(): void {
+  fileInput.value?.click()
+}
+
+/**
+ * Validates the chosen file is a PNG (the backend only accepts PNG for the
+ * login image) and uploads it. The input is always reset so re-selecting the
+ * same file fires `change` again.
+ *
+ * @param event - The file input change event.
+ */
+function onFileChange(event: Event): void {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+  input.value = ''
+  if (!file) {
+    return
+  }
+  if (file.type !== 'image/png' && !file.name.toLowerCase().endsWith('.png')) {
+    toasts.error(t('settings.server.photo.invalidType'))
+    return
+  }
+  uploadMutation.mutate(file, {
+    onSuccess: () => toasts.success(t('settings.server.photo.uploadSuccess')),
+    onError: () => toasts.error(t('settings.server.photo.uploadError')),
+  })
+}
+
+/** Removes the custom login photo after confirmation. */
+function confirmDelete(): void {
+  deleteMutation.mutate(undefined, {
+    onSuccess: () => {
+      isDeleteOpen.value = false
+      toasts.success(t('settings.server.photo.deleteSuccess'))
+    },
+    onError: () => toasts.error(t('settings.server.photo.deleteError')),
+  })
+}
+</script>
+
+<template>
+  <Card class="flex flex-col gap-3">
+    <div class="flex flex-col gap-1">
+      <h2 class="text-card-heading">{{ t('settings.server.photo.title') }}</h2>
+      <p class="text-body">{{ t('settings.server.photo.description') }}</p>
+    </div>
+
+    <input
+      ref="fileInput"
+      type="file"
+      accept=".png,image/png"
+      class="sr-only"
+      @change="onFileChange"
+    />
+
+    <div class="flex flex-col gap-3 sm:flex-row">
+      <Button
+        type="button"
+        variant="outline"
+        class="w-full sm:w-auto"
+        :disabled="uploadMutation.isPending.value"
+        @click="pickFile"
+      >
+        <ImageUp class="size-4" aria-hidden="true" />
+        {{ loginPhotoSet ? t('settings.server.photo.replace') : t('settings.server.photo.add') }}
+      </Button>
+
+      <Button
+        v-if="loginPhotoSet"
+        type="button"
+        variant="outlineDestructive"
+        class="w-full sm:w-auto"
+        :disabled="deleteMutation.isPending.value"
+        @click="isDeleteOpen = true"
+      >
+        <Trash2 class="size-4" aria-hidden="true" />
+        {{ t('settings.server.photo.delete') }}
+      </Button>
+    </div>
+
+    <ConfirmDialog
+      v-model:open="isDeleteOpen"
+      :title="t('settings.server.photo.deleteTitle')"
+      :description="t('settings.server.photo.deleteConfirm')"
+      :confirm-label="t('settings.server.photo.delete')"
+      :cancel-label="t('settings.server.photo.cancel')"
+      :close-label="t('settings.server.photo.close')"
+      :pending="deleteMutation.isPending.value"
+      @confirm="confirmDelete"
+    />
+  </Card>
+</template>

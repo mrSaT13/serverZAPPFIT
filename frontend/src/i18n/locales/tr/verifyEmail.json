@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "E-postanız doğrulanıyor",
+  "verifyingBody": "Adresinizi doğrularken lütfen bekleyin.",
+  "successTitle": "E-posta doğrulandı",
+  "successBody": "E-posta adresiniz onaylandı.",
+  "adminApprovalBody": "Hesabınız artık yönetici onayını bekliyor.",
+  "continueButton": "Girişe devam et",
+  "invalidTitle": "Doğrulama başarısız",
+  "missingTokenBody": "Bu doğrulama bağlantısında belirteç eksik.",
+  "errorInvalidToken": "Bu doğrulama bağlantısı geçersiz veya süresi dolmuş.",
+  "errorNotFound": "Bu bağlantıya ait bir hesap bulamadık.",
+  "errorGeneral": "E-postanızı doğrulayamadık. Lütfen tekrar deneyin.",
+  "retry": "Tekrar dene",
+  "backToLogin": "Girişe geri dön"
+}

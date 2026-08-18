@@ -1,0 +1,22 @@
+{
+  "home": "Головна",
+  "search": "Пошук",
+  "activities": "Активності",
+  "activitiesList": "Список",
+  "summary": "Підсумок",
+  "gear": "Спорядження",
+  "health": "Здоров'я",
+  "alerts": "Сповіщення",
+  "settings": "Налаштування",
+  "profile": "Профіль",
+  "login": "Вхід",
+  "logout": "Вихід",
+  "userMenu": "Меню користувача",
+  "menu": "Меню",
+  "primary": "Основна навігація",
+  "account": "Обліковий запис",
+  "preferences": "Параметри",
+  "updateAvailable": "Доступне оновлення",
+  "updateAvailableTitle": "Доступна версія {version}",
+  "updateViewRelease": "Переглянути примітки до випуску"
+}

@@ -1,0 +1,8 @@
+{
+  "repository": "Αποθετήριο",
+  "documentation": "Τεκμηρίωση",
+  "mastodon": "Λογαριασμός Mastodon του Endurain",
+  "discord": "Διακομιστής Discord του Endurain",
+  "compatibleStrava": "Συμβατό με το Strava",
+  "worksGarmin": "Λειτουργεί με το Garmin Connect"
+}

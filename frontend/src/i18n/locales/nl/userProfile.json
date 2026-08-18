@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Gebruiker niet gevonden",
+    "description": "Dit profiel bestaat niet of is niet zichtbaar voor jou."
+  },
+  "error": {
+    "title": "Profiel kon niet worden geladen",
+    "description": "Er is iets misgegaan bij het laden van dit profiel.",
+    "retry": "Opnieuw proberen"
+  },
+  "editProfile": "Profiel bewerken",
+  "activities": {
+    "weekNav": "Door activiteiten per week bladeren",
+    "thisWeek": "Deze week",
+    "oneYearAgo": "Een jaar geleden"
+  },
+  "stats": {
+    "thisMonth": "Activiteiten deze maand",
+    "following": "Volgend",
+    "followers": "Volgers"
+  },
+  "tabs": {
+    "activities": "Activiteiten",
+    "following": "Volgend",
+    "followers": "Volgers"
+  },
+  "activitiesError": {
+    "title": "Activiteiten konden niet worden geladen",
+    "description": "Er is iets misgegaan bij het laden van activiteiten.",
+    "retry": "Opnieuw proberen"
+  },
+  "listError": {
+    "title": "De lijst kon niet worden geladen",
+    "description": "Er is iets misgegaan. Probeer het opnieuw.",
+    "retry": "Opnieuw proberen"
+  },
+  "follow": {
+    "follow": "Volgen",
+    "requested": "Aangevraagd",
+    "following": "Volgend",
+    "withdraw": "Verzoek intrekken",
+    "unfollow": "Ontvolgen",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "followError": "Volgverzoek kon niet worden verzonden.",
+    "unfollowError": "Volgverzoek kon niet worden bijgewerkt.",
+    "confirmCancelTitle": "Verzoek intrekken",
+    "confirmCancelBody": "Jouw volgverzoek aan {name} intrekken?",
+    "confirmUnfollowTitle": "{name} ontvolgen",
+    "confirmUnfollowBody": "{name} niet meer volgen? Je kunt ze later opnieuw volgen."
+  },
+  "list": {
+    "accept": "Accepteren",
+    "decline": "Weigeren",
+    "remove": "Verwijderen",
+    "unfollow": "Ontvolgen",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "accepted": "Geaccepteerd",
+    "pending": "In behandeling",
+    "acceptError": "Het verzoek kon niet worden geaccepteerd.",
+    "removeError": "Deze volger kon niet worden bijgewerkt.",
+    "unfollowError": "Deze gebruiker kon niet worden ontvolgd.",
+    "confirmUnfollowTitle": "{name} ontvolgen",
+    "confirmUnfollowBody": "{name} niet meer volgen? Je kunt ze later opnieuw volgen.",
+    "confirmDeclineTitle": "Verzoek weigeren",
+    "confirmDeclineBody": "Het volgverzoek van {name} weigeren?",
+    "confirmRemoveTitle": "Volger verwijderen",
+    "confirmRemoveBody": "{name} uit je volgers verwijderen?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Nog geen activiteiten",
+      "ownDescription": "Je activiteiten verschijnen hier zodra je ze toevoegt of importeert.",
+      "otherTitle": "Geen activiteiten om te tonen"
+    },
+    "following": {
+      "ownTitle": "Je volgt nog niemand.",
+      "otherTitle": "Volgt nog niemand."
+    },
+    "followers": {
+      "ownTitle": "Je hebt nog geen volgers.",
+      "otherTitle": "Nog geen volgers."
+    }
+  }
+}

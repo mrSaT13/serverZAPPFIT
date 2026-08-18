@@ -1,0 +1,648 @@
+{
+  "title": "Helbred",
+  "subtitle": "Se alle dine helbredsdata ét sted",
+  "nav": {
+    "label": "Helbredssektioner",
+    "soon": "Snart",
+    "dashboard": "Oversigt",
+    "sleep": "Søvn",
+    "rhr": "Hvilepuls",
+    "steps": "Skridt",
+    "weight": "Vægt",
+    "fasting": "Faste",
+    "water": "Vandindtag",
+    "poop": "Afføring"
+  },
+  "dashboard": {
+    "title": "Oversigt",
+    "subtitle": "Dit daglige velbefindende i et overblik",
+    "sleep": "Søvn",
+    "restingHeartRate": "Hvilepuls",
+    "avgSkinTemperatureDeviation": "Hudtemp.-afv.",
+    "weight": "Vægt",
+    "bmi": "BMI",
+    "steps": "Skridt",
+    "fasting": "Faste",
+    "water": "Vandindtag",
+    "poop": "Afføring",
+    "noSleepTarget": "Intet søvnmål",
+    "noWeightTarget": "Intet vægtmål",
+    "noStepsTarget": "Intet skridtmål",
+    "noFastingTarget": "Intet fastemål",
+    "noWaterTarget": "Intet vandmål",
+    "noPoopTarget": "Intet afføringsmål",
+    "stepsTargetLabel": "skridt",
+    "poopTargetLabel": "/ dag",
+    "noWeightData": "Ingen vægtdata",
+    "bmiUnderweight": "Undervægtig",
+    "bmiNormalWeight": "Normalvægtig",
+    "bmiOverweight": "Overvægtig",
+    "bmiObesityClass1": "Fedme (klasse 1)",
+    "bmiObesityClass2": "Fedme (klasse 2)",
+    "bmiObesityClass3": "Svær fedme (klasse 3)",
+    "hrvBalanced": "Balanceret",
+    "hrvUnbalanced": "Ubalanceret",
+    "hrvLow": "Lav",
+    "hrvPoor": "Dårlig",
+    "labelNoData": "Ingen data",
+    "errorTitle": "Kunne ikke indlæse dine helbredsdata",
+    "errorDescription": "Noget gik galt under indlæsningen af din daglige helbredsstatistik. Prøv venligst igen.",
+    "retry": "Prøv igen"
+  },
+  "weight": {
+    "title": "Vægt",
+    "subtitle": "Følg din vægt og kropssammensætning over tid",
+    "logButton": "Registrér vægt",
+    "targetButton": "Sæt mål",
+    "sourceGarmin": "Fra Garmin Connect",
+    "toggleDetails": "Slå detaljer om kropssammensætning til/fra",
+    "chartTitle": "Vægttendens",
+    "chartWeightSeries": "Vægt",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér post",
+      "delete": "Slet post"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Kropsfedt",
+      "bodyWater": "Kropsvand",
+      "boneMass": "Knoglemasse",
+      "muscleMass": "Muskelmasse"
+    },
+    "form": {
+      "addTitle": "Registrér vægt",
+      "editTitle": "Redigér vægtpost",
+      "description": "Registrér din vægt og eventuelt din kropssammensætning.",
+      "date": "Dato",
+      "dateRequired": "Vælg venligst en dato.",
+      "weight": "Vægt",
+      "weightRequired": "Indtast venligst din vægt.",
+      "weightInvalid": "Indtast en vægt større end nul.",
+      "bodyComposition": "Kropssammensætning (valgfrit)",
+      "bmi": "BMI",
+      "bodyFat": "Kropsfedt (%)",
+      "bodyWater": "Kropsvand (%)",
+      "boneMass": "Knoglemasse",
+      "muscleMass": "Muskelmasse",
+      "create": "Registrér",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Vægt registreret.",
+      "updateSuccess": "Vægtpost opdateret.",
+      "saveError": "Kunne ikke gemme din vægtpost. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt vægtmål",
+      "description": "Vælg en målvægt, eller ryd feltet for at fjerne det.",
+      "weight": "Målvægt",
+      "hint": "Lad feltet stå tomt for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Vægtmål opdateret.",
+      "saveError": "Kunne ikke opdatere dit vægtmål. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen vægtposter endnu",
+      "description": "Registrér din vægt for at begynde at følge dine fremskridt over tid."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din vægthistorik",
+      "description": "Noget gik galt under indlæsningen af dine vægtposter. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet vægtpost",
+      "body": "Denne vægtpost slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Vægtpost slettet.",
+      "error": "Kunne ikke slette vægtposten. Prøv venligst igen."
+    }
+  },
+  "steps": {
+    "title": "Skridt",
+    "subtitle": "Følg dit daglige antal skridt over tid",
+    "logButton": "Registrér skridt",
+    "targetButton": "Sæt mål",
+    "sourceGarmin": "Fra Garmin Connect",
+    "chartTitle": "Skridttendens",
+    "chartStepsSeries": "Skridt",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér post",
+      "delete": "Slet post"
+    },
+    "form": {
+      "addTitle": "Registrér skridt",
+      "editTitle": "Redigér skridtpost",
+      "description": "Registrér dit antal skridt for dagen.",
+      "date": "Dato",
+      "dateRequired": "Vælg venligst en dato.",
+      "steps": "Skridt",
+      "stepsRequired": "Indtast venligst dit antal skridt.",
+      "stepsInvalid": "Indtast et antal skridt større end nul.",
+      "create": "Registrér",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Skridt registreret.",
+      "updateSuccess": "Skridtpost opdateret.",
+      "saveError": "Kunne ikke gemme din skridtpost. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt skridtmål",
+      "description": "Vælg et dagligt skridtmål, eller ryd feltet for at fjerne det.",
+      "steps": "Dagligt skridtmål",
+      "hint": "Lad feltet stå tomt for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Skridtmål opdateret.",
+      "saveError": "Kunne ikke opdatere dit skridtmål. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen skridtposter endnu",
+      "description": "Registrér dine skridt for at begynde at følge din aktivitet over tid."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din skridthistorik",
+      "description": "Noget gik galt under indlæsningen af dine skridtposter. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet skridtpost",
+      "body": "Denne skridtpost slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Skridtpost slettet.",
+      "error": "Kunne ikke slette skridtposten. Prøv venligst igen."
+    }
+  },
+  "rhr": {
+    "title": "Hvilepuls",
+    "subtitle": "Følg din hvilepuls over tid",
+    "sourceGarmin": "Fra Garmin Connect",
+    "chartTitle": "Hvilepulstendens",
+    "chartSeries": "Hvilepuls",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "empty": {
+      "title": "Ingen hvilepulsdata endnu",
+      "description": "Hvilepuls registreres sammen med din søvn. Synkronisér en enhed, der registrerer den, for at se din tendens her."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din hvilepulshistorik",
+      "description": "Noget gik galt under indlæsningen af dine hvilepulsdata. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    }
+  },
+  "sleep": {
+    "title": "Søvn",
+    "subtitle": "Følg din søvnvarighed og -kvalitet over tid",
+    "logButton": "Registrér søvn",
+    "targetButton": "Sæt mål",
+    "sourceGarmin": "Fra Garmin Connect",
+    "toggleDetails": "Slå søvndetaljer til/fra",
+    "chartTitle": "Søvntendens",
+    "chartSleepSeries": "Søvn",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér post",
+      "delete": "Slet post"
+    },
+    "score": "Score",
+    "hrvBalanced": "Balanceret",
+    "hrvUnbalanced": "Ubalanceret",
+    "hrvLow": "Lav",
+    "hrvPoor": "Dårlig",
+    "scoreExcellent": "Fremragende",
+    "scoreGood": "God",
+    "scoreFair": "Middel",
+    "scorePoor": "Dårlig",
+    "detail": {
+      "tabsLabel": "Søvndetaljesektioner",
+      "tabScore": "Søvnscore",
+      "tabDetails": "Søvndetaljer",
+      "deep": "Dyb",
+      "light": "Let",
+      "rem": "REM",
+      "awake": "Vågen",
+      "score": "Søvnscore",
+      "quality": "Kvalitet",
+      "duration": "Varighed",
+      "restingHeartRate": "Hvilepuls",
+      "avgHeartRate": "Gns. puls",
+      "minHeartRate": "Min. puls",
+      "maxHeartRate": "Maks. puls",
+      "skinTempDeviation": "Hudtemp.-afv.",
+      "hrv": "HRV-status",
+      "spo2": "Gns. SpO₂",
+      "lowestSpo2": "Laveste SpO₂",
+      "highestSpo2": "Højeste SpO₂",
+      "avgRespiration": "Gns. respiration",
+      "lowestRespiration": "Laveste respiration",
+      "highestRespiration": "Højeste respiration",
+      "avgSleepStress": "Gns. søvnstress",
+      "awakeCount": "Opvågninger",
+      "summary": "Resumé",
+      "breakdown": "Fordeling",
+      "overview": "Overblik",
+      "heartRate": "Puls",
+      "bloodOxygen": "Blodets iltindhold",
+      "respiration": "Respiration",
+      "avg": "Gns.",
+      "min": "Min.",
+      "max": "Maks.",
+      "noData": "Ingen data registreret."
+    },
+    "hypnogram": {
+      "title": "Søvnstadier",
+      "deep": "Dyb",
+      "light": "Let",
+      "rem": "REM",
+      "awake": "Vågen",
+      "noData": "Ingen tidslinje for stadier tilgængelig."
+    },
+    "form": {
+      "addTitle": "Registrér søvn",
+      "editTitle": "Redigér søvnpost",
+      "description": "Registrér din søvnvarighed og eventuelt fordelingen på stadier og målinger.",
+      "date": "Dato",
+      "dateRequired": "Vælg venligst en dato.",
+      "totalSleep": "Samlet søvn",
+      "totalSleepRequired": "Indtast venligst, hvor længe du sov.",
+      "hours": "Timer",
+      "minutes": "Minutter",
+      "stageBreakdown": "Fordeling på stadier (valgfrit)",
+      "deep": "Dyb søvn",
+      "light": "Let søvn",
+      "rem": "REM-søvn",
+      "awake": "Vågen",
+      "metrics": "Målinger (valgfrit)",
+      "sleepScore": "Søvnscore (0–100)",
+      "restingHeartRate": "Hvilepuls (bpm)",
+      "skinTempDeviation": "Hudtemp.-afvigelse (°C)",
+      "spo2": "Gns. SpO₂ (%)",
+      "sleepTimes": "Søvntidspunkter (valgfrit)",
+      "startTime": "Søvnstart",
+      "endTime": "Søvnslut",
+      "endBeforeStart": "Søvnslut skal være efter starttidspunktet.",
+      "awakeCount": "Opvågninger",
+      "heartRate": "Puls (valgfrit)",
+      "avgHeartRate": "Gns. puls (bpm)",
+      "minHeartRate": "Min. puls (bpm)",
+      "maxHeartRate": "Maks. puls (bpm)",
+      "bloodOxygen": "Blodets iltindhold (valgfrit)",
+      "lowestSpo2": "Laveste SpO₂ (%)",
+      "highestSpo2": "Højeste SpO₂ (%)",
+      "avgSleepStress": "Gns. søvnstress (0–100)",
+      "sleepStages": "Søvnstadier (valgfrit)",
+      "noStages": "Ingen stadier tilføjet endnu.",
+      "addStage": "Tilføj stadie",
+      "removeStage": "Fjern stadie",
+      "stageLabel": "Stadie {index}",
+      "stageType": "Stadie",
+      "stageDeep": "Dyb",
+      "stageLight": "Let",
+      "stageRem": "REM",
+      "stageAwake": "Vågen",
+      "stageStart": "Start",
+      "stageEnd": "Slut",
+      "stageDuration": "Varighed",
+      "create": "Registrér",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Søvn registreret.",
+      "updateSuccess": "Søvnpost opdateret.",
+      "saveError": "Kunne ikke gemme din søvnpost. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt søvnmål",
+      "description": "Vælg et natligt søvnmål, eller ryd felterne for at fjerne det.",
+      "hours": "Timer",
+      "minutes": "Minutter",
+      "hint": "Lad felterne stå tomme for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Søvnmål opdateret.",
+      "saveError": "Kunne ikke opdatere dit søvnmål. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen søvnposter endnu",
+      "description": "Registrér en nats søvn for at begynde at følge din hvile over tid."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din søvnhistorik",
+      "description": "Noget gik galt under indlæsningen af dine søvnposter. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet søvnpost",
+      "body": "Denne søvnpost slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Søvnpost slettet.",
+      "error": "Kunne ikke slette søvnposten. Prøv venligst igen."
+    }
+  },
+  "water": {
+    "title": "Vandindtag",
+    "subtitle": "Følg dit daglige vandindtag over tid",
+    "logButton": "Registrér vand",
+    "targetButton": "Sæt mål",
+    "sourceGarmin": "Fra Garmin Connect",
+    "chartTitle": "Vandindtagstendens",
+    "chartWaterSeries": "Vand",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér post",
+      "delete": "Slet post"
+    },
+    "form": {
+      "addTitle": "Registrér vand",
+      "editTitle": "Redigér vandpost",
+      "description": "Registrér dit vandindtag for dagen.",
+      "date": "Dato",
+      "dateRequired": "Vælg venligst en dato.",
+      "amount": "Mængde",
+      "amountRequired": "Indtast venligst en mængde.",
+      "amountInvalid": "Indtast en mængde større end nul.",
+      "create": "Registrér",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Vand registreret.",
+      "updateSuccess": "Vandpost opdateret.",
+      "saveError": "Kunne ikke gemme din vandpost. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt vandmål",
+      "description": "Vælg et dagligt vandmål, eller ryd feltet for at fjerne det.",
+      "amount": "Dagligt mål",
+      "hint": "Lad feltet stå tomt for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Vandmål opdateret.",
+      "saveError": "Kunne ikke opdatere dit vandmål. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen vandposter endnu",
+      "description": "Registrér dit vandindtag for at begynde at følge din væskebalance over tid."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din vandhistorik",
+      "description": "Noget gik galt under indlæsningen af dine vandposter. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet vandpost",
+      "body": "Denne vandpost slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Vandpost slettet.",
+      "error": "Kunne ikke slette vandposten. Prøv venligst igen."
+    }
+  },
+  "poop": {
+    "title": "Afføring",
+    "subtitle": "Følg din afføring over tid",
+    "logButton": "Registrér post",
+    "targetButton": "Sæt mål",
+    "chartTitle": "Daglig hyppighed",
+    "chartCountSeries": "Afføring",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér post",
+      "delete": "Slet post"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Afføring"
+    },
+    "form": {
+      "addTitle": "Registrér afføring",
+      "editTitle": "Redigér afføring",
+      "description": "Registrér tidspunkt og detaljer for din afføring.",
+      "dateTime": "Dato og tid",
+      "dateTimeRequired": "Vælg venligst en dato og tid.",
+      "bristolType": "Bristol-afføringstype",
+      "color": "Farve",
+      "notes": "Noter",
+      "none": "Ingen",
+      "colors": {
+        "brown": "Brun",
+        "dark_brown": "Mørkebrun",
+        "light_brown": "Lysebrun",
+        "yellow": "Gul",
+        "green": "Grøn",
+        "black": "Sort",
+        "red": "Rød",
+        "white": "Hvid"
+      },
+      "create": "Registrér",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Afføring registreret.",
+      "updateSuccess": "Afføring opdateret.",
+      "saveError": "Kunne ikke gemme din post. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt afføringsmål",
+      "description": "Vælg et dagligt afføringsmål, eller ryd feltet for at fjerne det.",
+      "count": "Mål pr. dag",
+      "hint": "Lad feltet stå tomt for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Afføringsmål opdateret.",
+      "saveError": "Kunne ikke opdatere dit mål. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen poster endnu",
+      "description": "Registrér en afføring for at begynde at følge den over tid."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din historik",
+      "description": "Noget gik galt under indlæsningen af dine poster. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet post",
+      "body": "Denne post slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Post slettet.",
+      "error": "Kunne ikke slette posten. Prøv venligst igen."
+    }
+  },
+  "fasting": {
+    "title": "Faste",
+    "subtitle": "Start en faste, følg dine fremskridt, og gennemgå din historik",
+    "startButton": "Start faste",
+    "targetButton": "Sæt mål",
+    "sourceGarmin": "Fra Garmin Connect",
+    "active": {
+      "title": "Faste i gang",
+      "started": "Startet",
+      "target": "Mål",
+      "complete": "Fuldfør",
+      "break": "Bryd fasten",
+      "cancel": "Annullér",
+      "completeHint": "Du kan fuldføre fasten, når du når dit mål."
+    },
+    "stats": {
+      "totalFasts": "Faster i alt",
+      "currentStreak": "Nuværende stime",
+      "longestStreak": "Længste stime",
+      "avgDuration": "Gns. varighed",
+      "totalTime": "Samlet fastetid",
+      "completionRate": "Fuldførelsesrate",
+      "days": "dage"
+    },
+    "types": {
+      "16:8": "16:8 (16t faste, 8t spisning)",
+      "18:6": "18:6 (18t faste, 6t spisning)",
+      "20:4": "20:4 (20t faste, 4t spisning)",
+      "OMAD": "OMAD (ét måltid om dagen)",
+      "24h": "24-timers faste",
+      "36h": "36-timers faste",
+      "48h": "48-timers faste",
+      "72h": "72-timers faste",
+      "custom": "Tilpasset"
+    },
+    "status": {
+      "in_progress": "I gang",
+      "completed": "Fuldført",
+      "broken": "Brudt",
+      "cancelled": "Annulleret"
+    },
+    "interval": {
+      "label": "Tidsinterval",
+      "last_7_days": "Sidste 7 dage",
+      "last_30_days": "Sidste 30 dage",
+      "last_90_days": "Sidste 90 dage",
+      "last_year": "Sidste år",
+      "all_time": "Hele perioden"
+    },
+    "actions": {
+      "edit": "Redigér faste",
+      "delete": "Slet faste"
+    },
+    "list": {
+      "notesLabel": "Noter"
+    },
+    "form": {
+      "addTitle": "Start faste",
+      "editTitle": "Redigér fastesession",
+      "description": "Vælg en fasteprotokol og hvornår den startede.",
+      "type": "Fasteprotokol",
+      "customDuration": "Tilpasset varighed",
+      "customDurationHint": "Fastens længde i timer (1–72).",
+      "hours": "timer",
+      "startTime": "Starttidspunkt",
+      "startTimeRequired": "Vælg venligst et starttidspunkt.",
+      "endTime": "Sluttidspunkt",
+      "status": "Status",
+      "notes": "Noter",
+      "create": "Start",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Faste startet.",
+      "updateSuccess": "Fastesession opdateret.",
+      "saveError": "Kunne ikke gemme din fastesession. Prøv venligst igen."
+    },
+    "target": {
+      "title": "Sæt fastemål",
+      "description": "Vælg en målfastevarighed, eller ryd begge felter for at fjerne den.",
+      "hours": "Timer",
+      "minutes": "Minutter",
+      "hint": "Lad begge felter stå tomme for at fjerne dit mål.",
+      "save": "Gem",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "saveSuccess": "Fastemål opdateret.",
+      "saveError": "Kunne ikke opdatere dit fastemål. Prøv venligst igen."
+    },
+    "complete": {
+      "success": "Faste afsluttet.",
+      "error": "Kunne ikke afslutte din faste. Prøv venligst igen."
+    },
+    "empty": {
+      "title": "Ingen faster endnu",
+      "description": "Start en faste for at begynde at følge din fastehistorik."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse din fastehistorik",
+      "description": "Noget gik galt under indlæsningen af dine fastesessioner. Prøv venligst igen.",
+      "retry": "Prøv igen"
+    },
+    "delete": {
+      "title": "Slet fastesession",
+      "body": "Denne fastesession slettes permanent. Denne handling kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Fastesession slettet.",
+      "error": "Kunne ikke slette fastesessionen. Prøv venligst igen."
+    }
+  }
+}

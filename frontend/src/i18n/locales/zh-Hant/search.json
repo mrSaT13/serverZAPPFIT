@@ -1,0 +1,43 @@
+{
+  "title": "搜尋",
+  "subtitle": "在 Endurain 中尋找使用者、活動和裝備。",
+  "placeholder": "搜尋…",
+  "clear": "清除搜尋",
+  "scopes": {
+    "users": "使用者",
+    "activities": "活動",
+    "gears": "裝備"
+  },
+  "filters": {
+    "all": "所有類型",
+    "activityType": "依活動類型篩選",
+    "gearType": "依裝備類型篩選"
+  },
+  "activityCategories": {
+    "running": "跑步",
+    "cycling": "騎自行車",
+    "swimming": "游泳",
+    "walking": "健走與健行",
+    "racquet": "球拍運動",
+    "rowing": "划船與划槳",
+    "winterSports": "冬季運動",
+    "waterSports": "水上運動",
+    "skating": "溜冰"
+  },
+  "results": {
+    "inactive": "未啟用"
+  },
+  "idle": {
+    "title": "搜尋 Endurain",
+    "description": "選擇要搜尋的內容，然後開始輸入以查看符合的結果。"
+  },
+  "empty": {
+    "title": "找不到符合的結果",
+    "description": "沒有符合「{term}」的結果，請嘗試其他搜尋字詞。"
+  },
+  "error": {
+    "title": "搜尋失敗",
+    "description": "無法執行您的搜尋，請檢查連線後再試一次。",
+    "retry": "重試"
+  }
+}

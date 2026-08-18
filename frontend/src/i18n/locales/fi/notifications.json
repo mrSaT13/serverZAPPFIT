@@ -1,0 +1,51 @@
+{
+  "title": "Ilmoitukset",
+  "subtitle": "Viimeaikainen toiminta, pyynnöt ja ilmoitukset",
+  "navLabel": "Ilmoitukset",
+  "unread": "Lukematon",
+  "markRead": "Merkitse luetuksi",
+  "markAllRead": "Merkitse kaikki luetuiksi",
+  "seeAll": "Näytä kaikki",
+  "loadMore": "Lataa lisää",
+  "loading": "Ladataan…",
+  "badge": "{count} lukematonta ilmoitusta",
+  "empty": {
+    "title": "Olet ajan tasalla",
+    "description": "Päivitykset aktiviteeteistasi, seuraajistasi ja integraatioistasi näkyvät täällä."
+  },
+  "error": {
+    "title": "Ilmoituksia ei voitu ladata",
+    "description": "Ilmoitustesi lataamisessa tapahtui virhe.",
+    "retry": "Yritä uudelleen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Uusi aktiviteetti",
+      "body": "Tilillesi lisättiin uusi aktiviteetti."
+    },
+    "duplicateActivity": {
+      "title": "Mahdollinen päällekkäinen aktiviteetti",
+      "body": "Samalla aloitusajalla oleva aktiviteetti saattaa jo olla olemassa."
+    },
+    "newFollowerRequest": {
+      "title": "Uusi seurauspyyntö",
+      "body": "{name} ({'@'}{username}) haluaa seurata sinua."
+    },
+    "followerRequestAccepted": {
+      "title": "Seurauspyyntö hyväksytty",
+      "body": "{name} ({'@'}{username}) hyväksyi seurauspyyntösi."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect vaatii huomiota",
+      "body": "Garmin Connect -istuntosi vanheni. Yhdistä se uudelleen jatkaaksesi synkronointia."
+    },
+    "adminSignUpApproval": {
+      "title": "Uusi rekisteröityminen vaatii hyväksynnän",
+      "body": "{name} ({'@'}{username}) odottaa tilin hyväksyntää."
+    },
+    "unknown": {
+      "title": "Ilmoitus",
+      "body": "Sinulla on uusi ilmoitus."
+    }
+  }
+}

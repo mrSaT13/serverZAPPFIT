@@ -1,0 +1,73 @@
+{
+  "addActivity": "Přidat aktivitu",
+  "upload": {
+    "uploading": "Nahrávání…",
+    "success": "Aktivita úspěšně nahrána",
+    "error": "Soubor aktivity se nepodařilo nahrát"
+  },
+  "refresh": {
+    "label": "Obnovit",
+    "refreshing": "Obnovování…",
+    "success": "Obnovování zahájeno",
+    "error": "Aktivity se nepodařilo obnovit"
+  },
+  "feed": {
+    "scopeLabel": "Rozsah kanálu",
+    "myActivities": "Moje aktivity",
+    "following": "Sledovaní",
+    "loadMore": "Načíst další",
+    "loading": "Načítání…",
+    "error": {
+      "title": "Nepodařilo se načíst aktivity",
+      "description": "Při načítání kanálu se něco pokazilo.",
+      "retry": "Zkusit znovu"
+    },
+    "empty": {
+      "mine": {
+        "title": "Zatím žádné aktivity",
+        "description": "Přidejte aktivitu nebo připojte integraci, abyste mohli začít."
+      },
+      "following": {
+        "title": "Zatím tu nic není",
+        "description": "Aktivity lidí, které sledujete, se zobrazí zde."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistiky",
+    "metricLabel": "Metrika statistik",
+    "thisWeek": "Tento týden",
+    "thisMonth": "Tento měsíc",
+    "empty": "V tomto období žádná aktivita",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Vzdálenost",
+      "time": "Čas",
+      "calories": "Kalorie"
+    }
+  },
+  "sports": {
+    "run": "Běh",
+    "bike": "Cyklistika",
+    "swim": "Plavání",
+    "walk": "Chůze",
+    "hike": "Turistika",
+    "rowing": "Veslování",
+    "snow_ski": "Lyžování",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surfing",
+    "kayaking": "Kajakování",
+    "sailing": "Jachting",
+    "snowshoeing": "Sněžnice",
+    "inline_skating": "In-line bruslení"
+  },
+  "goals": {
+    "title": "Cíle",
+    "empty": {
+      "title": "Žádné cíle nenastaveny",
+      "description": "Nastavte cíle v nastavení, abyste zde sledovali svůj pokrok."
+    }
+  }
+}

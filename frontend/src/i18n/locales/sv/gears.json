@@ -1,0 +1,152 @@
+{
+  "title": "Utrustning",
+  "subtitle": "Cyklar, skor och utrustning du använder för dina aktiviteter",
+  "buttonAddGear": "Lägg till utrustning",
+  "searchPlaceholder": "Sök på smeknamn",
+  "clearSearch": "Rensa sökning",
+  "showInactive": "Visa inaktiv",
+  "inactive": "Inaktiv",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filter",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Cykel",
+    "shoes": "Skor",
+    "wetsuit": "Våtdräkt",
+    "racquet": "Racket",
+    "skis": "Skidor",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfbräda",
+    "waterSportsBoard": "Vattensportbräda",
+    "unknown": "Utrustning"
+  },
+  "actions": {
+    "edit": "Redigera utrustning",
+    "delete": "Ta bort utrustning"
+  },
+  "form": {
+    "title": "Statistik",
+    "addTitle": "Lägg till utrustning",
+    "editTitle": "Redigera utrustning",
+    "description": "Spåra utrustningen du använder för dina aktiviteter.",
+    "nickname": "Smeknamn",
+    "nicknameRequired": "Smeknamn krävs",
+    "nicknameTooLong": "Smeknamnet får vara högst 250 tecken",
+    "nicknameTaken": "Du har redan utrustning med det smeknamnet",
+    "gearType": "Typ",
+    "brand": "Märke",
+    "brandTooLong": "Märket får vara högst 250 tecken",
+    "model": "Modell",
+    "modelTooLong": "Modellen får vara högst 250 tecken",
+    "active": "Aktiv",
+    "createdAt": "Skapad",
+    "createdAtRequired": "Ett skapandedatum krävs",
+    "initialDistance": "Initial distans",
+    "purchaseValue": "Inköpspris",
+    "totalCost": "Total kostnad",
+    "create": "Lägg till utrustning",
+    "save": "Spara ändringar",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "createSuccess": "Utrustning tillagd",
+    "updateSuccess": "Utrustning uppdaterad",
+    "saveError": "Kunde inte spara utrustningen. Försök igen."
+  },
+  "delete": {
+    "title": "Ta bort utrustning",
+    "body": "Är du säker på att du vill ta bort \"{nickname}\"? Det kan inte ångras.",
+    "confirm": "Ta bort",
+    "cancel": "Avbryt",
+    "close": "Stäng",
+    "success": "Utrustning borttagen",
+    "error": "Kunde inte ta bort utrustningen. Försök igen."
+  },
+  "error": {
+    "title": "Kunde inte ladda utrustning",
+    "description": "Något gick fel när din utrustning laddades.",
+    "retry": "Försök igen"
+  },
+  "empty": {
+    "title": "Ingen utrustning än",
+    "description": "Lägg till cyklar, skor och utrustning du använder för att börja spåra deras användning.",
+    "searchTitle": "Ingen utrustning matchar din sökning",
+    "searchDescription": "Prova ett annat smeknamn.",
+    "activeTitle": "Ingen aktiv utrustning",
+    "activeDescription": "Lägg till utrustning eller aktivera \"Visa inaktiv\" för att se inaktiv utrustning."
+  },
+  "detail": {
+    "back": "Tillbaka till utrustning",
+    "notFoundTitle": "Utrustning hittades inte",
+    "notFoundDescription": "Den här utrustningen kan ha tagits bort eller tillhör inte dig.",
+    "totalDistance": "Distans",
+    "totalTime": "Tid",
+    "componentsCost": "Komponentkostnad"
+  },
+  "components": {
+    "title": "Komponenter",
+    "add": "Lägg till komponent",
+    "empty": "Inga komponenter än. Lägg till de delar du vill spåra slitage på.",
+    "unsupported": "Den här utrustningstypen spårar inte komponenter.",
+    "noneActive": "Alla komponenter är inaktiva. Aktivera \"Visa inaktiv\" för att se dem.",
+    "inactive": "Inaktiv",
+    "unitHours": "h",
+    "purchasedOn": "Köpt {date}",
+    "wearLabel": "{name} slitage",
+    "actions": {
+      "edit": "Redigera komponent",
+      "delete": "Ta bort komponent"
+    },
+    "form": {
+      "addTitle": "Lägg till komponent",
+      "editTitle": "Redigera komponent",
+      "description": "Spåra de delar du byter för att övervaka deras slitage.",
+      "type": "Typ",
+      "typePlaceholder": "Välj en typ",
+      "typeRequired": "En typ krävs",
+      "brand": "Märke",
+      "brandRequired": "Märke krävs",
+      "brandTooLong": "Märket får vara högst 250 tecken",
+      "model": "Modell",
+      "modelRequired": "Modell krävs",
+      "modelTooLong": "Modellen får vara högst 250 tecken",
+      "purchaseDate": "Köpdatum",
+      "purchaseDateRequired": "Ett köpdatum krävs",
+      "retiredDate": "Pensionerat datum",
+      "expectedDistance": "Förväntad distans",
+      "expectedTime": "Förväntad tid",
+      "purchaseValue": "Inköpspris",
+      "active": "Aktiv",
+      "retiredBeforePurchase": "Pensionerat datum måste vara efter köpdatumet.",
+      "create": "Lägg till komponent",
+      "save": "Spara ändringar",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Komponent tillagd",
+      "updateSuccess": "Komponent uppdaterad",
+      "saveError": "Kunde inte spara komponenten. Försök igen."
+    },
+    "delete": {
+      "title": "Ta bort komponent",
+      "body": "Är du säker på att du vill ta bort \"{name}\"? Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Komponent borttagen",
+      "error": "Kunde inte ta bort komponenten. Försök igen."
+    },
+    "error": {
+      "title": "Kunde inte ladda komponenter",
+      "description": "Något gick fel när den här utrustningens komponenter laddades."
+    }
+  },
+  "activities": {
+    "title": "Aktiviteter",
+    "empty": "Inga aktiviteter registrerade med den här utrustningen än.",
+    "error": {
+      "title": "Kunde inte ladda aktiviteter",
+      "description": "Något gick fel när den här utrustningens aktiviteter laddades."
+    }
+  }
+}

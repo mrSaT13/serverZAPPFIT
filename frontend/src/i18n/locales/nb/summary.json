@@ -1,0 +1,49 @@
+{
+  "title": "Sammendrag",
+  "subtitle": "Gå gjennom treningssummene og trendene dine over tid.",
+  "viewType": {
+    "label": "Sammendragsperiode",
+    "week": "Uke",
+    "month": "Måned",
+    "year": "År",
+    "lifetime": "Hele perioden"
+  },
+  "filters": {
+    "type": "Aktivitetstype",
+    "allTypes": "Alle typer"
+  },
+  "period": {
+    "previous": "Forrige periode",
+    "next": "Neste periode",
+    "picker": "Velg periode",
+    "allTime": "Hele tiden"
+  },
+  "metrics": {
+    "distance": "Distanse",
+    "duration": "Varighet",
+    "elevation": "Stigning",
+    "calories": "Kalorier",
+    "activities": "Aktiviteter"
+  },
+  "breakdown": {
+    "title": "Oppdeling",
+    "period": "Periode",
+    "weekNumber": "Uke {number}"
+  },
+  "typeBreakdown": {
+    "title": "Etter aktivitetstype",
+    "type": "Type"
+  },
+  "activities": {
+    "title": "Aktiviteter i denne perioden"
+  },
+  "empty": {
+    "title": "Ingen aktivitet i denne perioden",
+    "description": "Ingen aktiviteter samsvarer med valgt periode og type."
+  },
+  "error": {
+    "title": "Kunne ikke laste sammendrag",
+    "description": "Noe gikk galt under lasting av statistikken din. Sjekk tilkoblingen din og prøv igjen.",
+    "retry": "Prøv igjen"
+  }
+}

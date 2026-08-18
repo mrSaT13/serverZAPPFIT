@@ -1,0 +1,73 @@
+{
+  "addActivity": "Lägg till aktivitet",
+  "upload": {
+    "uploading": "Laddar upp…",
+    "success": "Aktivitet uppladdad",
+    "error": "Kunde inte ladda upp aktivitetsfilen"
+  },
+  "refresh": {
+    "label": "Uppdatera",
+    "refreshing": "Uppdaterar…",
+    "success": "Uppdatering startad",
+    "error": "Kunde inte uppdatera aktiviteter"
+  },
+  "feed": {
+    "scopeLabel": "Flödesomfång",
+    "myActivities": "Mina aktiviteter",
+    "following": "Följer",
+    "loadMore": "Ladda fler",
+    "loading": "Laddar…",
+    "error": {
+      "title": "Kunde inte ladda aktiviteter",
+      "description": "Något gick fel när flödet laddades.",
+      "retry": "Försök igen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Inga aktiviteter än",
+        "description": "Lägg till en aktivitet eller anslut en integration för att komma igång."
+      },
+      "following": {
+        "title": "Inget här än",
+        "description": "Aktiviteter från personer du följer visas här."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistik",
+    "metricLabel": "Statistikmått",
+    "thisWeek": "Den här veckan",
+    "thisMonth": "Den här månaden",
+    "empty": "Ingen aktivitet under den här perioden",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distans",
+      "time": "Tid",
+      "calories": "Kalorier"
+    }
+  },
+  "sports": {
+    "run": "Löpning",
+    "bike": "Cykling",
+    "swim": "Simning",
+    "walk": "Promenad",
+    "hike": "Vandring",
+    "rowing": "Rodd",
+    "snow_ski": "Skidåkning",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Stand-up paddling",
+    "surfing": "Surfing",
+    "kayaking": "Kajakpaddling",
+    "sailing": "Segling",
+    "snowshoeing": "Snöskovandring",
+    "inline_skating": "Rullskridskoåkning"
+  },
+  "goals": {
+    "title": "Mål",
+    "empty": {
+      "title": "Inga mål satta",
+      "description": "Sätt mål i inställningarna för att spåra dina framsteg här."
+    }
+  }
+}

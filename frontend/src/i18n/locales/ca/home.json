@@ -1,0 +1,73 @@
+{
+  "addActivity": "Afegeix activitat",
+  "upload": {
+    "uploading": "Pujant…",
+    "success": "Activitat pujada correctament",
+    "error": "No s'ha pogut pujar el fitxer d'activitat"
+  },
+  "refresh": {
+    "label": "Actualitza",
+    "refreshing": "Actualitzant…",
+    "success": "Actualització iniciada",
+    "error": "No s'han pogut actualitzar les activitats"
+  },
+  "feed": {
+    "scopeLabel": "Àmbit del fil",
+    "myActivities": "Les meves activitats",
+    "following": "Seguint",
+    "loadMore": "Carrega més",
+    "loading": "Carregant…",
+    "error": {
+      "title": "No s'han pogut carregar les activitats",
+      "description": "S'ha produït un error en carregar el fil.",
+      "retry": "Torna-ho a intentar"
+    },
+    "empty": {
+      "mine": {
+        "title": "Encara no hi ha activitats",
+        "description": "Afegeix una activitat o connecta una integració per començar."
+      },
+      "following": {
+        "title": "Res aquí de moment",
+        "description": "Les activitats de les persones que segueixes apareixeran aquí."
+      }
+    }
+  },
+  "stats": {
+    "title": "Estadístiques",
+    "metricLabel": "Mètrica",
+    "thisWeek": "Aquesta setmana",
+    "thisMonth": "Aquest mes",
+    "empty": "Sense activitat en aquest període",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distància",
+      "time": "Temps",
+      "calories": "Calories"
+    }
+  },
+  "sports": {
+    "run": "Córrer",
+    "bike": "Ciclisme",
+    "swim": "Natació",
+    "walk": "Caminar",
+    "hike": "Senderisme",
+    "rowing": "Rem",
+    "snow_ski": "Esquí",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddleboard",
+    "surfing": "Surf",
+    "kayaking": "Caiac",
+    "sailing": "Vela",
+    "snowshoeing": "Raquetes de neu",
+    "inline_skating": "Patinatge en línia"
+  },
+  "goals": {
+    "title": "Objectius",
+    "empty": {
+      "title": "Sense objectius definits",
+      "description": "Defineix objectius a la configuració per fer-ne el seguiment aquí."
+    }
+  }
+}

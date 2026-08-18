@@ -1,0 +1,22 @@
+{
+  "home": "Pradžia",
+  "search": "Paieška",
+  "activities": "Veiklos",
+  "activitiesList": "Sąrašas",
+  "summary": "Suvestinė",
+  "gear": "Įranga",
+  "health": "Sveikata",
+  "alerts": "Įspėjimai",
+  "settings": "Nustatymai",
+  "profile": "Profilis",
+  "login": "Prisijungti",
+  "logout": "Atsijungti",
+  "userMenu": "Naudotojo meniu",
+  "menu": "Meniu",
+  "primary": "Pagrindinė navigacija",
+  "account": "Paskyra",
+  "preferences": "Nuostatos",
+  "updateAvailable": "Yra atnaujinimas",
+  "updateAvailableTitle": "Prieinama versija {version}",
+  "updateViewRelease": "Peržiūrėti leidimo pastabas"
+}

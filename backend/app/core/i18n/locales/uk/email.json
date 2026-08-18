@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "З повагою,",
+  "common.team": "Команда Endurain",
+  "common.system": "Система Endurain",
+  "common.visit": "Відвідайте Endurain за адресою:",
+  "common.source_code": "Вихідний код за адресою:",
+  "common.copy_link": "Якщо кнопка вище не працює, ви можете скопіювати та вставити наступне посилання у свій браузер:",
+
+  "password_reset.subject": "Endurain - Скидання пароля",
+  "password_reset.heading": "Запит на скидання пароля",
+  "password_reset.greeting": "Привіт, {name},",
+  "password_reset.intro": "Ви запитали скидання пароля для свого облікового запису Endurain. Натисніть кнопку нижче, щоб скинути пароль:",
+  "password_reset.cta": "Скинути пароль",
+  "password_reset.security_label": "Повідомлення про безпеку:",
+  "password_reset.security_notice": "Це посилання з міркувань безпеки закінчиться через 1 годину.",
+  "password_reset.ignore": "Якщо ви не запитували скидання пароля, просто зігноруйте цей лист. Ваш пароль залишиться незмінним.",
+
+  "signup_confirmation.subject": "Endurain - Підтвердіть свій обліковий запис",
+  "signup_confirmation.heading": "Підтвердіть свій обліковий запис",
+  "signup_confirmation.greeting": "Привіт, {name},",
+  "signup_confirmation.intro": "Дякуємо за реєстрацію в Endurain! Будь ласка, підтвердіть свій обліковий запис, натиснувши кнопку нижче:",
+  "signup_confirmation.cta": "Підтвердити обліковий запис",
+  "signup_confirmation.security_label": "Повідомлення про безпеку:",
+  "signup_confirmation.security_notice": "Це посилання для підтвердження закінчиться через 24 години.",
+  "signup_confirmation.ignore": "Якщо ви не створювали обліковий запис Endurain, просто зігноруйте цей лист.",
+
+  "admin_signup.subject": "Endurain - Нова реєстрація користувача очікує на схвалення",
+  "admin_signup.heading": "Нова реєстрація потребує схвалення",
+  "admin_signup.greeting": "Вітаємо, {name},",
+  "admin_signup.intro": "Новий користувач зареєструвався та очікує на схвалення:",
+  "admin_signup.user_label": "Користувач:",
+  "admin_signup.review": "Будь ласка, увійдіть до адмін-панелі Endurain, щоб розглянути та схвалити цей запит.",
+  "admin_signup.cta": "Перейти до адмін-панелі",
+
+  "signup_approved.subject": "Endurain - Ваш обліковий запис схвалено",
+  "signup_approved.heading": "Ваш обліковий запис тепер активний",
+  "signup_approved.greeting": "Вітаємо, {name},",
+  "signup_approved.intro": "Гарні новини! Ваш обліковий запис схвалено, і тепер він активний.",
+  "signup_approved.username_label": "Ім'я користувача:",
+  "signup_approved.login_intro": "Тепер ви можете увійти та почати користуватися Endurain:",
+  "signup_approved.cta": "Увійти до Endurain"
+}

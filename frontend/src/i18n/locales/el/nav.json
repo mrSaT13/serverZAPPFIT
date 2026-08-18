@@ -1,0 +1,22 @@
+{
+  "home": "Αρχική",
+  "search": "Αναζήτηση",
+  "activities": "Δραστηριότητες",
+  "activitiesList": "Λίστα",
+  "summary": "Σύνοψη",
+  "gear": "Εξοπλισμός",
+  "health": "Υγεία",
+  "alerts": "Ειδοποιήσεις",
+  "settings": "Ρυθμίσεις",
+  "profile": "Προφίλ",
+  "login": "Σύνδεση",
+  "logout": "Αποσύνδεση",
+  "userMenu": "Μενού χρήστη",
+  "menu": "Μενού",
+  "primary": "Κύρια πλοήγηση",
+  "account": "Λογαριασμός",
+  "preferences": "Προτιμήσεις",
+  "updateAvailable": "Διαθέσιμη ενημέρωση",
+  "updateAvailableTitle": "Η έκδοση {version} είναι διαθέσιμη",
+  "updateViewRelease": "Προβολή σημειώσεων έκδοσης"
+}

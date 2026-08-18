@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Naudotojas nerastas",
+    "description": "Šio profilio nėra arba jis jums nematomas."
+  },
+  "error": {
+    "title": "Nepavyko įkelti profilio",
+    "description": "Įkeliant šį profilį kažkas nepavyko.",
+    "retry": "Bandyti dar kartą"
+  },
+  "editProfile": "Redaguoti profilį",
+  "activities": {
+    "weekNav": "Naršyti veiklas pagal savaitę",
+    "thisWeek": "Šią savaitę",
+    "oneYearAgo": "Prieš metus"
+  },
+  "stats": {
+    "thisMonth": "Veiklos šį mėnesį",
+    "following": "Sekami",
+    "followers": "Sekėjai"
+  },
+  "tabs": {
+    "activities": "Veiklos",
+    "following": "Sekami",
+    "followers": "Sekėjai"
+  },
+  "activitiesError": {
+    "title": "Nepavyko įkelti veiklų",
+    "description": "Įkeliant veiklas kažkas nepavyko.",
+    "retry": "Bandyti dar kartą"
+  },
+  "listError": {
+    "title": "Nepavyko įkelti sąrašo",
+    "description": "Kažkas nepavyko. Bandykite dar kartą.",
+    "retry": "Bandyti dar kartą"
+  },
+  "follow": {
+    "follow": "Sekti",
+    "requested": "Paprašyta",
+    "following": "Sekama",
+    "withdraw": "Atšaukti užklausą",
+    "unfollow": "Nustoti sekti",
+    "cancel": "Atšaukti",
+    "close": "Uždaryti",
+    "followError": "Nepavyko išsiųsti sekimo užklausos.",
+    "unfollowError": "Nepavyko atnaujinti sekimo užklausos.",
+    "confirmCancelTitle": "Atšaukti užklausą",
+    "confirmCancelBody": "Atšaukti savo sekimo užklausą naudotojui {name}?",
+    "confirmUnfollowTitle": "Nustoti sekti {name}",
+    "confirmUnfollowBody": "Nustoti sekti {name}? Vėliau galėsite vėl pradėti sekti."
+  },
+  "list": {
+    "accept": "Priimti",
+    "decline": "Atmesti",
+    "remove": "Pašalinti",
+    "unfollow": "Nustoti sekti",
+    "cancel": "Atšaukti",
+    "close": "Uždaryti",
+    "accepted": "Priimta",
+    "pending": "Laukiama",
+    "acceptError": "Nepavyko priimti užklausos.",
+    "removeError": "Nepavyko atnaujinti šio sekėjo.",
+    "unfollowError": "Nepavyko nustoti sekti šio naudotojo.",
+    "confirmUnfollowTitle": "Nustoti sekti {name}",
+    "confirmUnfollowBody": "Nustoti sekti {name}? Vėliau galėsite vėl pradėti sekti.",
+    "confirmDeclineTitle": "Atmesti užklausą",
+    "confirmDeclineBody": "Atmesti sekimo užklausą iš {name}?",
+    "confirmRemoveTitle": "Pašalinti sekėją",
+    "confirmRemoveBody": "Pašalinti {name} iš savo sekėjų?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Veiklų dar nėra",
+      "ownDescription": "Jūsų veiklos bus rodomos čia, kai jas pridėsite ar importuosite.",
+      "otherTitle": "Nėra rodytinų veiklų"
+    },
+    "following": {
+      "ownTitle": "Jūs dar nieko nesekate.",
+      "otherTitle": "Kol kas nieko neseka."
+    },
+    "followers": {
+      "ownTitle": "Jūs dar neturite sekėjų.",
+      "otherTitle": "Sekėjų dar nėra."
+    }
+  }
+}

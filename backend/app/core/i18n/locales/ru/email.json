@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "С уважением,",
+  "common.team": "Команда ZAPFIT",
+  "common.system": "Система ZAPFIT",
+  "common.visit": "Посетите ZAPFIT:",
+  "common.source_code": "Исходный код:",
+  "common.copy_link": "Если кнопка выше не работает, скопируйте ссылку в браузер:",
+
+  "password_reset.subject": "ZAPFIT — Сброс пароля",
+  "password_reset.heading": "Запрос на сброс пароля",
+  "password_reset.greeting": "Привет, {name},",
+  "password_reset.intro": "Вы запросили сброс пароля для вашего аккаунта ZAPFIT. Нажмите кнопку ниже, чтобы сбросить пароль:",
+  "password_reset.cta": "Сбросить пароль",
+  "password_reset.security_label": "Уведомление безопасности:",
+  "password_reset.security_notice": "Эта ссылка истечёт через 1 час по соображениям безопасности.",
+  "password_reset.ignore": "Если вы не запрашивали сброс пароля, проигнорируйте это письмо. Ваш пароль останется без изменений.",
+
+  "signup_confirmation.subject": "ZAPFIT — Подтвердите аккаунт",
+  "signup_confirmation.heading": "Подтвердите аккаунт",
+  "signup_confirmation.greeting": "Привет, {name},",
+  "signup_confirmation.intro": "Спасибо за регистрацию в ZAPFIT! Пожалуйста, подтвердите аккаунт, нажав кнопку ниже:",
+  "signup_confirmation.cta": "Подтвердить аккаунт",
+  "signup_confirmation.security_label": "Уведомление безопасности:",
+  "signup_confirmation.security_notice": "Эта ссылка подтверждения истечёт через 24 часа.",
+  "signup_confirmation.ignore": "Если вы не создавали аккаунт в ZAPFIT, проигнорируйте это письмо.",
+
+  "admin_signup.subject": "ZAPFIT — Новая регистрация ожидает одобрения",
+  "admin_signup.heading": "Новая регистрация требует одобрения",
+  "admin_signup.greeting": "Здравствуйте, {name},",
+  "admin_signup.intro": "Новый пользователь зарегистрировался и ожидает одобрения:",
+  "admin_signup.user_label": "Пользователь:",
+  "admin_signup.review": "Пожалуйста, войдите в панель администратора ZAPFIT для рассмотрения и одобрения.",
+  "admin_signup.cta": "Перейти к панели администратора",
+
+  "signup_approved.subject": "ZAPFIT — Ваш аккаунт одобрен",
+  "signup_approved.heading": "Ваш аккаунт активен",
+  "signup_approved.greeting": "Здравствуйте, {name},",
+  "signup_approved.intro": "Отличные новости! Ваш аккаунт одобрен и теперь активен.",
+  "signup_approved.username_label": "Имя пользователя:",
+  "signup_approved.login_intro": "Теперь вы можете войти и начать использовать ZAPFIT:",
+  "signup_approved.cta": "Войти в ZAPFIT"
+}

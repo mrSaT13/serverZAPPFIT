@@ -1,0 +1,43 @@
+{
+  "title": "Keresés",
+  "subtitle": "Felhasználók, tevékenységek és felszerelések keresése az Endurainben.",
+  "placeholder": "Keresés…",
+  "clear": "Keresés törlése",
+  "scopes": {
+    "users": "Felhasználók",
+    "activities": "Tevékenységek",
+    "gears": "Felszerelés"
+  },
+  "filters": {
+    "all": "Minden típus",
+    "activityType": "Szűrés tevékenységtípus szerint",
+    "gearType": "Szűrés felszereléstípus szerint"
+  },
+  "activityCategories": {
+    "running": "Futás",
+    "cycling": "Kerékpározás",
+    "swimming": "Úszás",
+    "walking": "Gyaloglás és túrázás",
+    "racquet": "Ütős sportok",
+    "rowing": "Evezés és kajakozás",
+    "winterSports": "Téli sportok",
+    "waterSports": "Vízi sportok",
+    "skating": "Görkorcsolyázás"
+  },
+  "results": {
+    "inactive": "Inaktív"
+  },
+  "idle": {
+    "title": "Keresés az Endurainben",
+    "description": "Válaszd ki, mit keresel, majd kezdj el gépelni a találatokhoz."
+  },
+  "empty": {
+    "title": "Nincs találat",
+    "description": "A(z) „{term}” kifejezésre nincs találat. Próbálj másik keresést."
+  },
+  "error": {
+    "title": "A keresés sikertelen",
+    "description": "Nem tudtuk lefuttatni a keresést. Ellenőrizd a kapcsolatot, és próbáld újra.",
+    "retry": "Próbáld újra"
+  }
+}

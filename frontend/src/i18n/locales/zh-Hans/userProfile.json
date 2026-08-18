@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "用户未找到",
+    "description": "此个人资料不存在或对您不可见。"
+  },
+  "error": {
+    "title": "无法加载个人资料",
+    "description": "加载此个人资料时出现问题。",
+    "retry": "重试"
+  },
+  "editProfile": "编辑个人资料",
+  "activities": {
+    "weekNav": "按周浏览活动",
+    "thisWeek": "本周",
+    "oneYearAgo": "一年前"
+  },
+  "stats": {
+    "thisMonth": "本月活动",
+    "following": "关注中",
+    "followers": "粉丝"
+  },
+  "tabs": {
+    "activities": "活动",
+    "following": "关注中",
+    "followers": "粉丝"
+  },
+  "activitiesError": {
+    "title": "无法加载活动",
+    "description": "加载活动时出现问题。",
+    "retry": "重试"
+  },
+  "listError": {
+    "title": "无法加载列表",
+    "description": "出现问题，请重试。",
+    "retry": "重试"
+  },
+  "follow": {
+    "follow": "关注",
+    "requested": "已请求",
+    "following": "关注中",
+    "withdraw": "撤回请求",
+    "unfollow": "取消关注",
+    "cancel": "取消",
+    "close": "关闭",
+    "followError": "无法发送关注请求。",
+    "unfollowError": "无法更新关注请求。",
+    "confirmCancelTitle": "撤回请求",
+    "confirmCancelBody": "撤回对 {name} 的关注请求？",
+    "confirmUnfollowTitle": "取消关注 {name}",
+    "confirmUnfollowBody": "停止关注 {name}？您可以稍后重新关注。"
+  },
+  "list": {
+    "accept": "接受",
+    "decline": "拒绝",
+    "remove": "移除",
+    "unfollow": "取消关注",
+    "cancel": "取消",
+    "close": "关闭",
+    "accepted": "已接受",
+    "pending": "待处理",
+    "acceptError": "无法接受请求。",
+    "removeError": "无法更新此粉丝。",
+    "unfollowError": "无法取消关注此用户。",
+    "confirmUnfollowTitle": "取消关注 {name}",
+    "confirmUnfollowBody": "停止关注 {name}？您可以稍后重新关注。",
+    "confirmDeclineTitle": "拒绝请求",
+    "confirmDeclineBody": "拒绝来自 {name} 的关注请求？",
+    "confirmRemoveTitle": "移除粉丝",
+    "confirmRemoveBody": "将 {name} 从您的粉丝中移除？"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "暂无活动",
+      "ownDescription": "您的活动将在您添加或导入后显示在这里。",
+      "otherTitle": "暂无活动显示"
+    },
+    "following": {
+      "ownTitle": "您还没有关注任何人。",
+      "otherTitle": "还没有关注任何人。"
+    },
+    "followers": {
+      "ownTitle": "您还没有任何粉丝。",
+      "otherTitle": "暂无粉丝。"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "Otsing",
+  "subtitle": "Leia kasutajaid, tegevusi ja varustust kogu Endurainist.",
+  "placeholder": "Otsi…",
+  "clear": "Tühjenda otsing",
+  "scopes": {
+    "users": "Kasutajad",
+    "activities": "Tegevused",
+    "gears": "Varustus"
+  },
+  "filters": {
+    "all": "Kõik tüübid",
+    "activityType": "Filtreeri tegevuse tüübi järgi",
+    "gearType": "Filtreeri varustuse tüübi järgi"
+  },
+  "activityCategories": {
+    "running": "Jooksmine",
+    "cycling": "Rattasõit",
+    "swimming": "Ujumine",
+    "walking": "Kõndimine ja matkamine",
+    "racquet": "Reketispordialad",
+    "rowing": "Sõudmine ja aerutamine",
+    "winterSports": "Talispordialad",
+    "waterSports": "Veespordialad",
+    "skating": "Uisutamine"
+  },
+  "results": {
+    "inactive": "Mitteaktiivne"
+  },
+  "idle": {
+    "title": "Otsi Endurainist",
+    "description": "Vali, mida otsida, seejärel hakka tippima, et näha vasteid."
+  },
+  "empty": {
+    "title": "Vasteid ei leitud",
+    "description": "Otsingule „{term}“ ei vasta midagi. Proovi teistsugust otsingut."
+  },
+  "error": {
+    "title": "Otsing ebaõnnestus",
+    "description": "Sinu otsingut ei õnnestunud käivitada. Kontrolli ühendust ja proovi uuesti.",
+    "retry": "Proovi uuesti"
+  }
+}

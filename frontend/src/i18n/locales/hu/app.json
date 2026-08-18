@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logó",
+  "title": "A dizájnrendszer alapja elérhető",
+  "subtitle": "A Tailwind v4, a shadcn-vue, a szigorú TypeScript és az Endurain tokenpaletta be van kötve",
+  "primaryAction": "Elsődleges művelet",
+  "notFound": {
+    "title": "Az oldal nem található",
+    "message": "A keresett oldal nem létezik vagy áthelyezték",
+    "action": "Ugrás a kezdőlapra"
+  },
+  "error": {
+    "title": "Valami hiba történt",
+    "message": "Ezt a szakaszt nem sikerült betölteni. Próbáld újra.",
+    "retry": "Próbáld újra",
+    "toast": "Valami hiba történt. Kérjük, próbáld újra."
+  },
+  "configError": {
+    "title": "Konfigurációs hiba",
+    "message": "Az alkalmazás nem érte el az Endurain háttérrendszert. Ezt általában a hiányzó vagy hibásan beállított ENDURAIN_HOST környezeti változó okozza, vagy az, hogy a háttérrendszer nem fut.",
+    "notSet": "(nincs beállítva)",
+    "help": "Ellenőrizd, hogy az ENDURAIN_HOST arra az URL-re mutat-e, ahol az Endurain példányod elérhető (például https://endurain.example.com), és hogy a háttérrendszer fut-e, majd töltsd újra az oldalt.",
+    "reload": "Újratöltés"
+  },
+  "dismiss": "Bezárás",
+  "language": "Nyelv",
+  "theme": {
+    "toLight": "Világos mód",
+    "toDark": "Sötét mód"
+  },
+  "pagination": {
+    "label": "Lapozás",
+    "previous": "Előző oldal",
+    "next": "Következő oldal",
+    "goToPage": "Ugrás a(z) {page}. oldalra"
+  },
+  "markdownEditor": {
+    "preview": "Előnézet",
+    "edit": "Szerkesztés",
+    "supported": "Markdown támogatott",
+    "empty": "Nincs mit megjeleníteni"
+  }
+}

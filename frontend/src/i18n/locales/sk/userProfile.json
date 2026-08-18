@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Používateľ sa nenašiel",
+    "description": "Tento profil neexistuje alebo nie je pre vás viditeľný."
+  },
+  "error": {
+    "title": "Profil sa nepodarilo načítať",
+    "description": "Pri načítavaní tohto profilu sa niečo pokazilo.",
+    "retry": "Skúsiť znova"
+  },
+  "editProfile": "Upraviť profil",
+  "activities": {
+    "weekNav": "Prechádzať aktivity podľa týždňa",
+    "thisWeek": "Tento týždeň",
+    "oneYearAgo": "Pred rokom"
+  },
+  "stats": {
+    "thisMonth": "Aktivity tento mesiac",
+    "following": "Sledované",
+    "followers": "Sledovatelia"
+  },
+  "tabs": {
+    "activities": "Aktivity",
+    "following": "Sledované",
+    "followers": "Sledovatelia"
+  },
+  "activitiesError": {
+    "title": "Aktivity sa nepodarilo načítať",
+    "description": "Pri načítavaní aktivít sa niečo pokazilo.",
+    "retry": "Skúsiť znova"
+  },
+  "listError": {
+    "title": "Zoznam sa nepodarilo načítať",
+    "description": "Niečo sa pokazilo. Skúste to znova.",
+    "retry": "Skúsiť znova"
+  },
+  "follow": {
+    "follow": "Sledovať",
+    "requested": "Požiadané",
+    "following": "Sledované",
+    "withdraw": "Stiahnuť žiadosť",
+    "unfollow": "Prestať sledovať",
+    "cancel": "Zrušiť",
+    "close": "Zavrieť",
+    "followError": "Žiadosť o sledovanie sa nepodarilo odoslať.",
+    "unfollowError": "Žiadosť o sledovanie sa nepodarilo aktualizovať.",
+    "confirmCancelTitle": "Stiahnuť žiadosť",
+    "confirmCancelBody": "Stiahnuť žiadosť o sledovanie používateľa {name}?",
+    "confirmUnfollowTitle": "Prestať sledovať {name}",
+    "confirmUnfollowBody": "Prestať sledovať {name}? Môžete ich znova sledovať neskôr."
+  },
+  "list": {
+    "accept": "Prijať",
+    "decline": "Odmietnuť",
+    "remove": "Odstrániť",
+    "unfollow": "Prestať sledovať",
+    "cancel": "Zrušiť",
+    "close": "Zavrieť",
+    "accepted": "Prijaté",
+    "pending": "Čaká",
+    "acceptError": "Žiadosť sa nepodarilo prijať.",
+    "removeError": "Tohto sledovateľa sa nepodarilo aktualizovať.",
+    "unfollowError": "Tohto používateľa sa nepodarilo prestať sledovať.",
+    "confirmUnfollowTitle": "Prestať sledovať {name}",
+    "confirmUnfollowBody": "Prestať sledovať {name}? Môžete ich znova sledovať neskôr.",
+    "confirmDeclineTitle": "Odmietnuť žiadosť",
+    "confirmDeclineBody": "Odmietnuť žiadosť o sledovanie od {name}?",
+    "confirmRemoveTitle": "Odstrániť sledovateľa",
+    "confirmRemoveBody": "Odstrániť {name} z vašich sledovateľov?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Zatiaľ žiadne aktivity",
+      "ownDescription": "Vaše aktivity sa tu zobrazia po ich pridaní alebo importovaní.",
+      "otherTitle": "Žiadne aktivity na zobrazenie"
+    },
+    "following": {
+      "ownTitle": "Zatiaľ nikoho nesledujete.",
+      "otherTitle": "Zatiaľ nikoho nesleduje."
+    },
+    "followers": {
+      "ownTitle": "Zatiaľ nemáte žiadnych sledovateľov.",
+      "otherTitle": "Zatiaľ žiadni sledovatelia."
+    }
+  }
+}

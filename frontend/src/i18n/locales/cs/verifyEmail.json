@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Ověřování vašeho e-mailu",
+  "verifyingBody": "Vydržte, zatímco potvrzujeme vaši adresu.",
+  "successTitle": "E-mail ověřen",
+  "successBody": "Vaše e-mailová adresa byla potvrzena.",
+  "adminApprovalBody": "Váš účet nyní čeká na schválení administrátorem.",
+  "continueButton": "Pokračovat na přihlášení",
+  "invalidTitle": "Ověření selhalo",
+  "missingTokenBody": "Tomuto ověřovacímu odkazu chybí token.",
+  "errorInvalidToken": "Tento ověřovací odkaz je neplatný nebo vypršel.",
+  "errorNotFound": "Pro tento odkaz se nepodařilo najít účet.",
+  "errorGeneral": "Váš e-mail se nepodařilo ověřit. Zkuste to prosím znovu.",
+  "retry": "Zkusit znovu",
+  "backToLogin": "Zpět na přihlášení"
+}

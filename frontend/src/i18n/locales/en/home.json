@@ -1,0 +1,73 @@
+{
+  "addActivity": "Add activity",
+  "upload": {
+    "uploading": "Uploading…",
+    "success": "Activity uploaded successfully",
+    "error": "Could not upload the activity file"
+  },
+  "refresh": {
+    "label": "Refresh",
+    "refreshing": "Refreshing…",
+    "success": "Refresh started",
+    "error": "Could not refresh activities"
+  },
+  "feed": {
+    "scopeLabel": "Feed scope",
+    "myActivities": "My activities",
+    "following": "Following",
+    "loadMore": "Load more",
+    "loading": "Loading…",
+    "error": {
+      "title": "Couldn't load activities",
+      "description": "Something went wrong while loading the feed.",
+      "retry": "Try again"
+    },
+    "empty": {
+      "mine": {
+        "title": "No activities yet",
+        "description": "Add an activity or connect an integration to get started."
+      },
+      "following": {
+        "title": "Nothing here yet",
+        "description": "Activities from people you follow will appear here."
+      }
+    }
+  },
+  "stats": {
+    "title": "Stats",
+    "metricLabel": "Stat metric",
+    "thisWeek": "This week",
+    "thisMonth": "This month",
+    "empty": "No activity in this period",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distance",
+      "time": "Time",
+      "calories": "Calories"
+    }
+  },
+  "sports": {
+    "run": "Running",
+    "bike": "Cycling",
+    "swim": "Swimming",
+    "walk": "Walking",
+    "hike": "Hiking",
+    "rowing": "Rowing",
+    "snow_ski": "Skiing",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surfing",
+    "kayaking": "Kayaking",
+    "sailing": "Sailing",
+    "snowshoeing": "Snowshoeing",
+    "inline_skating": "Inline skating"
+  },
+  "goals": {
+    "title": "Goals",
+    "empty": {
+      "title": "No goals set",
+      "description": "Set goals in settings to track your progress here."
+    }
+  }
+}

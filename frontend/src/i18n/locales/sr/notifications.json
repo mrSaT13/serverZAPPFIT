@@ -1,0 +1,51 @@
+{
+  "title": "Obaveštenja",
+  "subtitle": "Nedavne aktivnosti, zahtevi i upozorenja",
+  "navLabel": "Obaveštenja",
+  "unread": "Nepročitano",
+  "markRead": "Označi kao pročitano",
+  "markAllRead": "Označi sve kao pročitano",
+  "seeAll": "Prikaži sve",
+  "loadMore": "Učitaj još",
+  "loading": "Učitavanje…",
+  "badge": "{count} nepročitanih obaveštenja",
+  "empty": {
+    "title": "Sve ste pregledali",
+    "description": "Ažuriranja o vašim aktivnostima, pratiocima i integracijama pojaviće se ovde."
+  },
+  "error": {
+    "title": "Nije moguće učitati obaveštenja",
+    "description": "Nešto je pošlo naopako prilikom učitavanja vaših obaveštenja.",
+    "retry": "Pokušaj ponovo"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nova aktivnost",
+      "body": "Nova aktivnost je dodata na vaš nalog."
+    },
+    "duplicateActivity": {
+      "title": "Moguća duplirana aktivnost",
+      "body": "Aktivnost sa istim vremenom početka možda već postoji."
+    },
+    "newFollowerRequest": {
+      "title": "Novi zahtev za praćenje",
+      "body": "{name} ({'@'}{username}) želi da vas prati."
+    },
+    "followerRequestAccepted": {
+      "title": "Zahtev za praćenje prihvaćen",
+      "body": "{name} ({'@'}{username}) je prihvatio/la vaš zahtev za praćenje."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect zahteva pažnju",
+      "body": "Vaša Garmin Connect sesija je istekla. Ponovo je povežite da biste nastavili sinhronizaciju."
+    },
+    "adminSignUpApproval": {
+      "title": "Nova registracija zahteva odobrenje",
+      "body": "{name} ({'@'}{username}) čeka odobrenje naloga."
+    },
+    "unknown": {
+      "title": "Obaveštenje",
+      "body": "Imate novo obaveštenje."
+    }
+  }
+}

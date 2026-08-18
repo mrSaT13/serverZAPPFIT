@@ -1,0 +1,49 @@
+{
+  "title": "Sammanfattning",
+  "subtitle": "Granska dina träningsresultat och trender över tid.",
+  "viewType": {
+    "label": "Sammanfattningsperiod",
+    "week": "Vecka",
+    "month": "Månad",
+    "year": "År",
+    "lifetime": "Livstid"
+  },
+  "filters": {
+    "type": "Aktivitetstyp",
+    "allTypes": "Alla typer"
+  },
+  "period": {
+    "previous": "Föregående period",
+    "next": "Nästa period",
+    "picker": "Välj period",
+    "allTime": "Hela tiden"
+  },
+  "metrics": {
+    "distance": "Distans",
+    "duration": "Varaktighet",
+    "elevation": "Höjdmeter",
+    "calories": "Kalorier",
+    "activities": "Aktiviteter"
+  },
+  "breakdown": {
+    "title": "Uppdelning",
+    "period": "Period",
+    "weekNumber": "Vecka {number}"
+  },
+  "typeBreakdown": {
+    "title": "Per aktivitetstyp",
+    "type": "Typ"
+  },
+  "activities": {
+    "title": "Aktiviteter under den här perioden"
+  },
+  "empty": {
+    "title": "Ingen aktivitet under den här perioden",
+    "description": "Inga aktiviteter matchar den valda perioden och typen."
+  },
+  "error": {
+    "title": "Kunde inte ladda sammanfattning",
+    "description": "Något gick fel när din statistik laddades. Kontrollera din anslutning och försök igen.",
+    "retry": "Försök igen"
+  }
+}

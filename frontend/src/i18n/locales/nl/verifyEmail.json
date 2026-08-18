@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "E-mailadres verifiëren",
+  "verifyingBody": "Even geduld, we bevestigen je adres.",
+  "successTitle": "E-mailadres geverifieerd",
+  "successBody": "Je e-mailadres is bevestigd.",
+  "adminApprovalBody": "Je account wacht nu op goedkeuring door de beheerder.",
+  "continueButton": "Doorgaan naar inloggen",
+  "invalidTitle": "Verificatie mislukt",
+  "missingTokenBody": "Er ontbreekt een token in deze verificatielink.",
+  "errorInvalidToken": "Deze verificatielink is ongeldig of verlopen.",
+  "errorNotFound": "We konden geen account vinden voor deze link.",
+  "errorGeneral": "We konden je e-mailadres niet verifiëren. Probeer het opnieuw.",
+  "retry": "Opnieuw proberen",
+  "backToLogin": "Terug naar inloggen"
+}

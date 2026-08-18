@@ -1,0 +1,43 @@
+{
+  "title": "Meklēt",
+  "subtitle": "Atrodiet lietotājus, aktivitātes un inventāru visā Endurain.",
+  "placeholder": "Meklēt…",
+  "clear": "Notīrīt meklēšanu",
+  "scopes": {
+    "users": "Lietotāji",
+    "activities": "Aktivitātes",
+    "gears": "Inventārs"
+  },
+  "filters": {
+    "all": "Visi veidi",
+    "activityType": "Filtrēt pēc aktivitātes veida",
+    "gearType": "Filtrēt pēc inventāra veida"
+  },
+  "activityCategories": {
+    "running": "Skriešana",
+    "cycling": "Riteņbraukšana",
+    "swimming": "Peldēšana",
+    "walking": "Pastaigas un pārgājieni",
+    "racquet": "Raķešu sports",
+    "rowing": "Airēšana un irkļošana",
+    "winterSports": "Ziemas sports",
+    "waterSports": "Ūdens sports",
+    "skating": "Slīdošana"
+  },
+  "results": {
+    "inactive": "Neaktīvs"
+  },
+  "idle": {
+    "title": "Meklēt Endurain",
+    "description": "Izvēlieties, ko meklēt, pēc tam sāciet rakstīt, lai redzētu atbilstības."
+  },
+  "empty": {
+    "title": "Nav atrastu atbilstību",
+    "description": "Nekas neatbilst “{term}”. Mēģiniet citu meklējumu."
+  },
+  "error": {
+    "title": "Meklēšana neizdevās",
+    "description": "Mēs nevarējām veikt jūsu meklēšanu. Pārbaudiet savienojumu un mēģiniet vēlreiz.",
+    "retry": "Mēģināt vēlreiz"
+  }
+}

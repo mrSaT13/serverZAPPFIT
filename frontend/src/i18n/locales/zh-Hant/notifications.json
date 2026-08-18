@@ -1,0 +1,51 @@
+{
+  "title": "通知",
+  "subtitle": "近期活動、請求與提醒",
+  "navLabel": "通知",
+  "unread": "未讀",
+  "markRead": "標記為已讀",
+  "markAllRead": "全部標記為已讀",
+  "seeAll": "查看全部",
+  "loadMore": "載入更多",
+  "loading": "載入中…",
+  "badge": "{count} 則未讀通知",
+  "empty": {
+    "title": "您已全部讀完",
+    "description": "關於您的活動、追蹤者和整合服務的更新將顯示在這裡。"
+  },
+  "error": {
+    "title": "無法載入通知",
+    "description": "載入通知時發生問題。",
+    "retry": "重試"
+  },
+  "types": {
+    "newActivity": {
+      "title": "新活動",
+      "body": "您的帳號中已新增一筆活動。"
+    },
+    "duplicateActivity": {
+      "title": "可能重複的活動",
+      "body": "已存在一筆具有相同開始時間的活動。"
+    },
+    "newFollowerRequest": {
+      "title": "新的追蹤請求",
+      "body": "{name} ({'@'}{username}) 想要追蹤您。"
+    },
+    "followerRequestAccepted": {
+      "title": "追蹤請求已接受",
+      "body": "{name} ({'@'}{username}) 已接受您的追蹤請求。"
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect 需要重新連線",
+      "body": "您的 Garmin Connect 工作階段已過期，請重新連線以繼續同步。"
+    },
+    "adminSignUpApproval": {
+      "title": "新註冊待核准",
+      "body": "{name} ({'@'}{username}) 正在等待帳號核准。"
+    },
+    "unknown": {
+      "title": "通知",
+      "body": "您有一則新通知。"
+    }
+  }
+}

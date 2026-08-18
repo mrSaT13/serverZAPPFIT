@@ -1,0 +1,152 @@
+{
+  "title": "Ausrüstung",
+  "subtitle": "Fahrräder, Schuhe und Equipment, mit dem du Aktivitäten trackst",
+  "buttonAddGear": "Ausrüstung hinzufügen",
+  "searchPlaceholder": "Nach Spitzname suchen",
+  "clearSearch": "Suche zurücksetzen",
+  "showInactive": "Inaktive anzeigen",
+  "inactive": "Inaktiv",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filter",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Fahrrad",
+    "shoes": "Schuhe",
+    "wetsuit": "Neoprenanzug",
+    "racquet": "Schläger",
+    "skis": "Ski",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfboard",
+    "waterSportsBoard": "Wassersportbrett",
+    "unknown": "Ausrüstung"
+  },
+  "actions": {
+    "edit": "Ausrüstung bearbeiten",
+    "delete": "Ausrüstung löschen"
+  },
+  "form": {
+    "title": "Statistiken",
+    "addTitle": "Ausrüstung hinzufügen",
+    "editTitle": "Ausrüstung bearbeiten",
+    "description": "Verfolge die Ausrüstung, die du für deine Aktivitäten verwendest.",
+    "nickname": "Spitzname",
+    "nicknameRequired": "Spitzname ist erforderlich",
+    "nicknameTooLong": "Spitzname darf maximal 250 Zeichen lang sein",
+    "nicknameTaken": "Du hast bereits Ausrüstung mit diesem Spitznamen",
+    "gearType": "Typ",
+    "brand": "Marke",
+    "brandTooLong": "Marke darf maximal 250 Zeichen lang sein",
+    "model": "Modell",
+    "modelTooLong": "Modell darf maximal 250 Zeichen lang sein",
+    "active": "Aktiv",
+    "createdAt": "Erstellt am",
+    "createdAtRequired": "Ein Erstellungsdatum ist erforderlich",
+    "initialDistance": "Anfangsdistanz",
+    "purchaseValue": "Kaufwert",
+    "totalCost": "Gesamtkosten",
+    "create": "Ausrüstung hinzufügen",
+    "save": "Änderungen speichern",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "createSuccess": "Ausrüstung hinzugefügt",
+    "updateSuccess": "Ausrüstung aktualisiert",
+    "saveError": "Ausrüstung konnte nicht gespeichert werden. Bitte versuche es erneut."
+  },
+  "delete": {
+    "title": "Ausrüstung löschen",
+    "body": "Bist du sicher, dass du \"{nickname}\" löschen möchtest? Dies kann nicht rückgängig gemacht werden.",
+    "confirm": "Löschen",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "success": "Ausrüstung gelöscht",
+    "error": "Ausrüstung konnte nicht gelöscht werden. Bitte versuche es erneut."
+  },
+  "error": {
+    "title": "Ausrüstung konnte nicht geladen werden",
+    "description": "Beim Laden deiner Ausrüstung ist etwas schiefgelaufen.",
+    "retry": "Erneut versuchen"
+  },
+  "empty": {
+    "title": "Noch keine Ausrüstung",
+    "description": "Füge Fahrräder, Schuhe und Equipment hinzu, um deren Nutzung zu tracken.",
+    "searchTitle": "Keine Ausrüstung entspricht deiner Suche",
+    "searchDescription": "Versuche einen anderen Spitznamen.",
+    "activeTitle": "Keine aktive Ausrüstung",
+    "activeDescription": "Füge Ausrüstung hinzu oder aktiviere \"Inaktive anzeigen\", um inaktive Ausrüstung zu sehen."
+  },
+  "detail": {
+    "back": "Zurück zur Ausrüstung",
+    "notFoundTitle": "Ausrüstung nicht gefunden",
+    "notFoundDescription": "Diese Ausrüstung wurde möglicherweise gelöscht oder gehört nicht dir.",
+    "totalDistance": "Distanz",
+    "totalTime": "Zeit",
+    "componentsCost": "Komponenten"
+  },
+  "components": {
+    "title": "Komponenten",
+    "add": "Komponente hinzufügen",
+    "empty": "Noch keine Komponenten. Füge Teile hinzu, bei denen du den Verschleiß verfolgen möchtest.",
+    "unsupported": "Dieser Ausrüstungstyp unterstützt keine Komponenten.",
+    "noneActive": "Alle Komponenten sind inaktiv. Aktiviere \"Inaktive anzeigen\", um sie zu sehen.",
+    "inactive": "Inaktiv",
+    "unitHours": "h",
+    "purchasedOn": "Gekauft am {date}",
+    "wearLabel": "Verschleiß {name}",
+    "actions": {
+      "edit": "Komponente bearbeiten",
+      "delete": "Komponente löschen"
+    },
+    "form": {
+      "addTitle": "Komponente hinzufügen",
+      "editTitle": "Komponente bearbeiten",
+      "description": "Verfolge die ausgetauschten Teile, um den Verschleiß zu überwachen.",
+      "type": "Typ",
+      "typePlaceholder": "Typ auswählen",
+      "typeRequired": "Ein Typ ist erforderlich",
+      "brand": "Marke",
+      "brandRequired": "Marke ist erforderlich",
+      "brandTooLong": "Marke darf maximal 250 Zeichen lang sein",
+      "model": "Modell",
+      "modelRequired": "Modell ist erforderlich",
+      "modelTooLong": "Modell darf maximal 250 Zeichen lang sein",
+      "purchaseDate": "Kaufdatum",
+      "purchaseDateRequired": "Ein Kaufdatum ist erforderlich",
+      "retiredDate": "Aussonderungsdatum",
+      "expectedDistance": "Erwartete Distanz",
+      "expectedTime": "Erwartete Zeit",
+      "purchaseValue": "Kaufwert",
+      "active": "Aktiv",
+      "retiredBeforePurchase": "Das Aussonderungsdatum muss nach dem Kaufdatum liegen.",
+      "create": "Komponente hinzufügen",
+      "save": "Änderungen speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Komponente hinzugefügt",
+      "updateSuccess": "Komponente aktualisiert",
+      "saveError": "Komponente konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "delete": {
+      "title": "Komponente löschen",
+      "body": "Bist du sicher, dass du \"{name}\" löschen möchtest? Dies kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Komponente gelöscht",
+      "error": "Komponente konnte nicht gelöscht werden. Bitte versuche es erneut."
+    },
+    "error": {
+      "title": "Komponenten konnten nicht geladen werden",
+      "description": "Beim Laden der Komponenten dieser Ausrüstung ist etwas schiefgelaufen."
+    }
+  },
+  "activities": {
+    "title": "Aktivitäten",
+    "empty": "Noch keine Aktivitäten mit dieser Ausrüstung aufgezeichnet.",
+    "error": {
+      "title": "Aktivitäten konnten nicht geladen werden",
+      "description": "Beim Laden der Aktivitäten dieser Ausrüstung ist etwas schiefgelaufen."
+    }
+  }
+}

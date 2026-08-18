@@ -1,0 +1,22 @@
+{
+  "home": "Etusivu",
+  "search": "Haku",
+  "activities": "Aktiviteetit",
+  "activitiesList": "Lista",
+  "summary": "Yhteenveto",
+  "gear": "Varusteet",
+  "health": "Terveys",
+  "alerts": "Ilmoitukset",
+  "settings": "Asetukset",
+  "profile": "Profiili",
+  "login": "Kirjaudu sisään",
+  "logout": "Kirjaudu ulos",
+  "userMenu": "Käyttäjävalikko",
+  "menu": "Valikko",
+  "primary": "Päänavigointi",
+  "account": "Tili",
+  "preferences": "Asetukset",
+  "updateAvailable": "Päivitys saatavilla",
+  "updateAvailableTitle": "Versio {version} on saatavilla",
+  "updateViewRelease": "Näytä julkaisutiedot"
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Povzetek",
+  "subtitle": "Preglej skupne vrednosti in trende treninga skozi čas.",
+  "viewType": {
+    "label": "Obdobje povzetka",
+    "week": "Teden",
+    "month": "Mesec",
+    "year": "Leto",
+    "lifetime": "Vse skupaj"
+  },
+  "filters": {
+    "type": "Vrsta aktivnosti",
+    "allTypes": "Vse vrste"
+  },
+  "period": {
+    "previous": "Prejšnje obdobje",
+    "next": "Naslednje obdobje",
+    "picker": "Izberi obdobje",
+    "allTime": "Vse skupaj"
+  },
+  "metrics": {
+    "distance": "Razdalja",
+    "duration": "Trajanje",
+    "elevation": "Višinska razlika",
+    "calories": "Kalorije",
+    "activities": "Aktivnosti"
+  },
+  "breakdown": {
+    "title": "Razčlenitev",
+    "period": "Obdobje",
+    "weekNumber": "Teden {number}"
+  },
+  "typeBreakdown": {
+    "title": "Po vrsti aktivnosti",
+    "type": "Vrsta"
+  },
+  "activities": {
+    "title": "Aktivnosti v tem obdobju"
+  },
+  "empty": {
+    "title": "Ni aktivnosti v tem obdobju",
+    "description": "Nobena aktivnost ne ustreza izbranemu obdobju in vrsti."
+  },
+  "error": {
+    "title": "Povzetka ni bilo mogoče naložiti",
+    "description": "Med nalaganjem tvojih statistik je prišlo do napake. Preveri svojo povezavo in poskusi znova.",
+    "retry": "Poskusi znova"
+  }
+}

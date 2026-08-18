@@ -1,0 +1,49 @@
+{
+  "title": "Yhteenveto",
+  "subtitle": "Tarkastele harjoittelusi kokonaismääriä ja kehitystä ajan myötä.",
+  "viewType": {
+    "label": "Yhteenvedon jakso",
+    "week": "Viikko",
+    "month": "Kuukausi",
+    "year": "Vuosi",
+    "lifetime": "Kaikki aika"
+  },
+  "filters": {
+    "type": "Aktiviteettityyppi",
+    "allTypes": "Kaikki tyypit"
+  },
+  "period": {
+    "previous": "Edellinen jakso",
+    "next": "Seuraava jakso",
+    "picker": "Valitse jakso",
+    "allTime": "Kaikki aika"
+  },
+  "metrics": {
+    "distance": "Matka",
+    "duration": "Kesto",
+    "elevation": "Nousu",
+    "calories": "Kalorit",
+    "activities": "Aktiviteetit"
+  },
+  "breakdown": {
+    "title": "Erittely",
+    "period": "Jakso",
+    "weekNumber": "Viikko {number}"
+  },
+  "typeBreakdown": {
+    "title": "Aktiviteettityypeittäin",
+    "type": "Tyyppi"
+  },
+  "activities": {
+    "title": "Tämän jakson aktiviteetit"
+  },
+  "empty": {
+    "title": "Ei aktiviteetteja tällä jaksolla",
+    "description": "Mikään aktiviteetti ei vastaa valittua jaksoa ja tyyppiä."
+  },
+  "error": {
+    "title": "Yhteenvetoa ei voitu ladata",
+    "description": "Tilastojesi lataamisessa tapahtui virhe. Tarkista yhteytesi ja yritä uudelleen.",
+    "retry": "Yritä uudelleen"
+  }
+}

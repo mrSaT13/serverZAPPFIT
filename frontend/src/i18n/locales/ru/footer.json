@@ -1,0 +1,8 @@
+{
+  "repository": "Репозиторий",
+  "documentation": "Документация",
+  "mastodon": "Аккаунт ZAPFIT в Mastodon",
+  "discord": "Сервер ZAPFIT в Discord",
+  "compatibleStrava": "Совместимо со Strava",
+  "worksGarmin": "Работает с Garmin Connect"
+}

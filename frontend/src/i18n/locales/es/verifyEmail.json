@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Verificando tu correo",
+  "verifyingBody": "Un momento mientras confirmamos tu dirección.",
+  "successTitle": "Correo verificado",
+  "successBody": "Tu dirección de correo ha sido confirmada.",
+  "adminApprovalBody": "Tu cuenta está ahora esperando la aprobación del administrador.",
+  "continueButton": "Continuar para iniciar sesión",
+  "invalidTitle": "Verificación fallida",
+  "missingTokenBody": "A este enlace de verificación le falta el token.",
+  "errorInvalidToken": "Este enlace de verificación no es válido o ha caducado.",
+  "errorNotFound": "No pudimos encontrar una cuenta para este enlace.",
+  "errorGeneral": "No pudimos verificar tu correo. Inténtalo de nuevo.",
+  "retry": "Intentar de nuevo",
+  "backToLogin": "Volver a iniciar sesión"
+}

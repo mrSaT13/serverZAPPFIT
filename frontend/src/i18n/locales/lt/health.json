@@ -1,0 +1,648 @@
+{
+  "title": "Sveikata",
+  "subtitle": "Matykite visus savo sveikatos duomenis vienoje vietoje",
+  "nav": {
+    "label": "Sveikatos skiltys",
+    "soon": "Netrukus",
+    "dashboard": "Skydelis",
+    "sleep": "Miegas",
+    "rhr": "Ramybės pulsas",
+    "steps": "Žingsniai",
+    "weight": "Svoris",
+    "fasting": "Badavimas",
+    "water": "Vandens suvartojimas",
+    "poop": "Tuštinimasis"
+  },
+  "dashboard": {
+    "title": "Skydelis",
+    "subtitle": "Jūsų kasdienė savijauta vienu žvilgsniu",
+    "sleep": "Miegas",
+    "restingHeartRate": "Ramybės pulsas",
+    "avgSkinTemperatureDeviation": "Odos temp. nuokr.",
+    "weight": "Svoris",
+    "bmi": "BMI",
+    "steps": "Žingsniai",
+    "fasting": "Badavimas",
+    "water": "Vandens suvartojimas",
+    "poop": "Tuštinimasis",
+    "noSleepTarget": "Nėra miego tikslo",
+    "noWeightTarget": "Nėra svorio tikslo",
+    "noStepsTarget": "Nėra žingsnių tikslo",
+    "noFastingTarget": "Nėra badavimo tikslo",
+    "noWaterTarget": "Nėra vandens tikslo",
+    "noPoopTarget": "Nėra tuštinimosi tikslo",
+    "stepsTargetLabel": "žingsnių",
+    "poopTargetLabel": "/ diena",
+    "noWeightData": "Nėra svorio duomenų",
+    "bmiUnderweight": "Per mažas svoris",
+    "bmiNormalWeight": "Normalus svoris",
+    "bmiOverweight": "Antsvoris",
+    "bmiObesityClass1": "Nutukimas (1 klasė)",
+    "bmiObesityClass2": "Nutukimas (2 klasė)",
+    "bmiObesityClass3": "Itin didelis nutukimas (3 klasė)",
+    "hrvBalanced": "Subalansuotas",
+    "hrvUnbalanced": "Nesubalansuotas",
+    "hrvLow": "Žemas",
+    "hrvPoor": "Prastas",
+    "labelNoData": "Nėra duomenų",
+    "errorTitle": "Nepavyko įkelti jūsų sveikatos duomenų",
+    "errorDescription": "Įkeliant jūsų kasdienę sveikatos statistiką kažkas nepavyko. Bandykite dar kartą.",
+    "retry": "Bandyti dar kartą"
+  },
+  "weight": {
+    "title": "Svoris",
+    "subtitle": "Stebėkite savo svorį ir kūno sudėtį laikui bėgant",
+    "logButton": "Įrašyti svorį",
+    "targetButton": "Nustatyti tikslą",
+    "sourceGarmin": "Iš Garmin Connect",
+    "toggleDetails": "Perjungti kūno sudėties detales",
+    "chartTitle": "Svorio tendencija",
+    "chartWeightSeries": "Svoris",
+    "chartTargetSeries": "Tikslas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti įrašą",
+      "delete": "Ištrinti įrašą"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Kūno riebalai",
+      "bodyWater": "Kūno vanduo",
+      "boneMass": "Kaulų masė",
+      "muscleMass": "Raumenų masė"
+    },
+    "form": {
+      "addTitle": "Įrašyti svorį",
+      "editTitle": "Redaguoti svorio įrašą",
+      "description": "Užfiksuokite savo svorį ir, jei norite, kūno sudėtį.",
+      "date": "Data",
+      "dateRequired": "Pasirinkite datą.",
+      "weight": "Svoris",
+      "weightRequired": "Įveskite savo svorį.",
+      "weightInvalid": "Įveskite už nulį didesnį svorį.",
+      "bodyComposition": "Kūno sudėtis (nebūtina)",
+      "bmi": "BMI",
+      "bodyFat": "Kūno riebalai (%)",
+      "bodyWater": "Kūno vanduo (%)",
+      "boneMass": "Kaulų masė",
+      "muscleMass": "Raumenų masė",
+      "create": "Įrašyti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Svoris įrašytas.",
+      "updateSuccess": "Svorio įrašas atnaujintas.",
+      "saveError": "Nepavyko išsaugoti svorio įrašo. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti svorio tikslą",
+      "description": "Pasirinkite tikslinį svorį arba išvalykite lauką, kad jį pašalintumėte.",
+      "weight": "Tikslinis svoris",
+      "hint": "Palikite tuščią, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Svorio tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti svorio tikslo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Svorio įrašų dar nėra",
+      "description": "Įrašykite savo svorį, kad pradėtumėte stebėti pažangą laikui bėgant."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų svorio istorijos",
+      "description": "Įkeliant jūsų svorio įrašus kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti svorio įrašą",
+      "body": "Šis svorio įrašas bus visam laikui ištrintas. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Svorio įrašas ištrintas.",
+      "error": "Nepavyko ištrinti svorio įrašo. Bandykite dar kartą."
+    }
+  },
+  "steps": {
+    "title": "Žingsniai",
+    "subtitle": "Stebėkite savo kasdienį žingsnių skaičių laikui bėgant",
+    "logButton": "Įrašyti žingsnius",
+    "targetButton": "Nustatyti tikslą",
+    "sourceGarmin": "Iš Garmin Connect",
+    "chartTitle": "Žingsnių tendencija",
+    "chartStepsSeries": "Žingsniai",
+    "chartTargetSeries": "Tikslas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti įrašą",
+      "delete": "Ištrinti įrašą"
+    },
+    "form": {
+      "addTitle": "Įrašyti žingsnius",
+      "editTitle": "Redaguoti žingsnių įrašą",
+      "description": "Užfiksuokite dienos žingsnių skaičių.",
+      "date": "Data",
+      "dateRequired": "Pasirinkite datą.",
+      "steps": "Žingsniai",
+      "stepsRequired": "Įveskite savo žingsnių skaičių.",
+      "stepsInvalid": "Įveskite už nulį didesnį žingsnių skaičių.",
+      "create": "Įrašyti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Žingsniai įrašyti.",
+      "updateSuccess": "Žingsnių įrašas atnaujintas.",
+      "saveError": "Nepavyko išsaugoti žingsnių įrašo. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti žingsnių tikslą",
+      "description": "Pasirinkite kasdienį žingsnių tikslą arba išvalykite lauką, kad jį pašalintumėte.",
+      "steps": "Tikslinis kasdienis žingsnių skaičius",
+      "hint": "Palikite tuščią, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Žingsnių tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti žingsnių tikslo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Žingsnių įrašų dar nėra",
+      "description": "Įrašykite savo žingsnius, kad pradėtumėte stebėti savo aktyvumą laikui bėgant."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų žingsnių istorijos",
+      "description": "Įkeliant jūsų žingsnių įrašus kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti žingsnių įrašą",
+      "body": "Šis žingsnių įrašas bus visam laikui ištrintas. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Žingsnių įrašas ištrintas.",
+      "error": "Nepavyko ištrinti žingsnių įrašo. Bandykite dar kartą."
+    }
+  },
+  "rhr": {
+    "title": "Ramybės pulsas",
+    "subtitle": "Stebėkite savo ramybės pulsą laikui bėgant",
+    "sourceGarmin": "Iš Garmin Connect",
+    "chartTitle": "Ramybės pulso tendencija",
+    "chartSeries": "Ramybės pulsas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "empty": {
+      "title": "Ramybės pulso duomenų dar nėra",
+      "description": "Ramybės pulsas užfiksuojamas kartu su jūsų miegu. Sinchronizuokite jį stebintį įrenginį, kad pamatytumėte savo tendenciją čia."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų ramybės pulso istorijos",
+      "description": "Įkeliant jūsų ramybės pulso duomenis kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    }
+  },
+  "sleep": {
+    "title": "Miegas",
+    "subtitle": "Stebėkite savo miego trukmę ir kokybę laikui bėgant",
+    "logButton": "Įrašyti miegą",
+    "targetButton": "Nustatyti tikslą",
+    "sourceGarmin": "Iš Garmin Connect",
+    "toggleDetails": "Perjungti miego detales",
+    "chartTitle": "Miego tendencija",
+    "chartSleepSeries": "Miegas",
+    "chartTargetSeries": "Tikslas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti įrašą",
+      "delete": "Ištrinti įrašą"
+    },
+    "score": "Įvertis",
+    "hrvBalanced": "Subalansuotas",
+    "hrvUnbalanced": "Nesubalansuotas",
+    "hrvLow": "Žemas",
+    "hrvPoor": "Prastas",
+    "scoreExcellent": "Puikus",
+    "scoreGood": "Geras",
+    "scoreFair": "Patenkinamas",
+    "scorePoor": "Prastas",
+    "detail": {
+      "tabsLabel": "Miego detalių skiltys",
+      "tabScore": "Miego įvertis",
+      "tabDetails": "Miego detalės",
+      "deep": "Gilus",
+      "light": "Lengvas",
+      "rem": "REM",
+      "awake": "Budrumas",
+      "score": "Miego įvertis",
+      "quality": "Kokybė",
+      "duration": "Trukmė",
+      "restingHeartRate": "Ramybės pulsas",
+      "avgHeartRate": "Vid. pulsas",
+      "minHeartRate": "Min. pulsas",
+      "maxHeartRate": "Maks. pulsas",
+      "skinTempDeviation": "Odos temp. nuokr.",
+      "hrv": "HRV būsena",
+      "spo2": "Vid. SpO₂",
+      "lowestSpo2": "Žemiausias SpO₂",
+      "highestSpo2": "Aukščiausias SpO₂",
+      "avgRespiration": "Vid. kvėpavimas",
+      "lowestRespiration": "Lėčiausias kvėpavimas",
+      "highestRespiration": "Greičiausias kvėpavimas",
+      "avgSleepStress": "Vid. miego stresas",
+      "awakeCount": "Prabudimai",
+      "summary": "Suvestinė",
+      "breakdown": "Išskaidymas",
+      "overview": "Apžvalga",
+      "heartRate": "Pulsas",
+      "bloodOxygen": "Kraujo deguonis",
+      "respiration": "Kvėpavimas",
+      "avg": "Vid.",
+      "min": "Min.",
+      "max": "Maks.",
+      "noData": "Duomenų neužfiksuota."
+    },
+    "hypnogram": {
+      "title": "Miego fazės",
+      "deep": "Gilus",
+      "light": "Lengvas",
+      "rem": "REM",
+      "awake": "Budrumas",
+      "noData": "Fazių laiko juostos nėra."
+    },
+    "form": {
+      "addTitle": "Įrašyti miegą",
+      "editTitle": "Redaguoti miego įrašą",
+      "description": "Užfiksuokite savo miego trukmę ir, jei norite, fazių išskaidymą bei rodiklius.",
+      "date": "Data",
+      "dateRequired": "Pasirinkite datą.",
+      "totalSleep": "Bendras miegas",
+      "totalSleepRequired": "Įveskite, kiek miegojote.",
+      "hours": "Valandos",
+      "minutes": "Minutės",
+      "stageBreakdown": "Fazių išskaidymas (nebūtina)",
+      "deep": "Gilus miegas",
+      "light": "Lengvas miegas",
+      "rem": "REM miegas",
+      "awake": "Budrumas",
+      "metrics": "Rodikliai (nebūtina)",
+      "sleepScore": "Miego įvertis (0–100)",
+      "restingHeartRate": "Ramybės pulsas (bpm)",
+      "skinTempDeviation": "Odos temp. nuokrypis (°C)",
+      "spo2": "Vid. SpO₂ (%)",
+      "sleepTimes": "Miego laikas (nebūtina)",
+      "startTime": "Miego pradžia",
+      "endTime": "Miego pabaiga",
+      "endBeforeStart": "Miego pabaiga turi būti vėlesnė už pradžios laiką.",
+      "awakeCount": "Prabudimai",
+      "heartRate": "Pulsas (nebūtina)",
+      "avgHeartRate": "Vid. pulsas (bpm)",
+      "minHeartRate": "Min. pulsas (bpm)",
+      "maxHeartRate": "Maks. pulsas (bpm)",
+      "bloodOxygen": "Kraujo deguonis (nebūtina)",
+      "lowestSpo2": "Žemiausias SpO₂ (%)",
+      "highestSpo2": "Aukščiausias SpO₂ (%)",
+      "avgSleepStress": "Vid. miego stresas (0–100)",
+      "sleepStages": "Miego fazės (nebūtina)",
+      "noStages": "Fazių dar nepridėta.",
+      "addStage": "Pridėti fazę",
+      "removeStage": "Pašalinti fazę",
+      "stageLabel": "Fazė {index}",
+      "stageType": "Fazė",
+      "stageDeep": "Gilus",
+      "stageLight": "Lengvas",
+      "stageRem": "REM",
+      "stageAwake": "Budrumas",
+      "stageStart": "Pradžia",
+      "stageEnd": "Pabaiga",
+      "stageDuration": "Trukmė",
+      "create": "Įrašyti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Miegas įrašytas.",
+      "updateSuccess": "Miego įrašas atnaujintas.",
+      "saveError": "Nepavyko išsaugoti miego įrašo. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti miego tikslą",
+      "description": "Pasirinkite nakties miego tikslą arba išvalykite laukus, kad jį pašalintumėte.",
+      "hours": "Valandos",
+      "minutes": "Minutės",
+      "hint": "Palikite tuščią, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Miego tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti miego tikslo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Miego įrašų dar nėra",
+      "description": "Įrašykite nakties miegą, kad pradėtumėte stebėti savo poilsį laikui bėgant."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų miego istorijos",
+      "description": "Įkeliant jūsų miego įrašus kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti miego įrašą",
+      "body": "Šis miego įrašas bus visam laikui ištrintas. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Miego įrašas ištrintas.",
+      "error": "Nepavyko ištrinti miego įrašo. Bandykite dar kartą."
+    }
+  },
+  "water": {
+    "title": "Vandens suvartojimas",
+    "subtitle": "Stebėkite savo kasdienį vandens suvartojimą laikui bėgant",
+    "logButton": "Įrašyti vandenį",
+    "targetButton": "Nustatyti tikslą",
+    "sourceGarmin": "Iš Garmin Connect",
+    "chartTitle": "Vandens suvartojimo tendencija",
+    "chartWaterSeries": "Vanduo",
+    "chartTargetSeries": "Tikslas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti įrašą",
+      "delete": "Ištrinti įrašą"
+    },
+    "form": {
+      "addTitle": "Įrašyti vandenį",
+      "editTitle": "Redaguoti vandens įrašą",
+      "description": "Užfiksuokite dienos vandens suvartojimą.",
+      "date": "Data",
+      "dateRequired": "Pasirinkite datą.",
+      "amount": "Kiekis",
+      "amountRequired": "Įveskite kiekį.",
+      "amountInvalid": "Įveskite už nulį didesnį kiekį.",
+      "create": "Įrašyti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Vanduo įrašytas.",
+      "updateSuccess": "Vandens įrašas atnaujintas.",
+      "saveError": "Nepavyko išsaugoti vandens įrašo. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti vandens tikslą",
+      "description": "Pasirinkite kasdienį vandens tikslą arba išvalykite lauką, kad jį pašalintumėte.",
+      "amount": "Kasdienis tikslas",
+      "hint": "Palikite tuščią, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Vandens tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti vandens tikslo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Vandens įrašų dar nėra",
+      "description": "Įrašykite savo vandens suvartojimą, kad pradėtumėte stebėti hidrataciją laikui bėgant."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų vandens istorijos",
+      "description": "Įkeliant jūsų vandens įrašus kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti vandens įrašą",
+      "body": "Šis vandens įrašas bus visam laikui ištrintas. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Vandens įrašas ištrintas.",
+      "error": "Nepavyko ištrinti vandens įrašo. Bandykite dar kartą."
+    }
+  },
+  "poop": {
+    "title": "Tuštinimasis",
+    "subtitle": "Stebėkite savo tuštinimąsi laikui bėgant",
+    "logButton": "Įrašyti įrašą",
+    "targetButton": "Nustatyti tikslą",
+    "chartTitle": "Kasdienis dažnis",
+    "chartCountSeries": "Tuštinimasis",
+    "chartTargetSeries": "Tikslas",
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti įrašą",
+      "delete": "Ištrinti įrašą"
+    },
+    "list": {
+      "bristolBadge": "Bristolio {type}",
+      "noDetails": "Tuštinimasis"
+    },
+    "form": {
+      "addTitle": "Įrašyti tuštinimąsi",
+      "editTitle": "Redaguoti tuštinimąsi",
+      "description": "Užfiksuokite tuštinimosi laiką ir detales.",
+      "dateTime": "Data ir laikas",
+      "dateTimeRequired": "Pasirinkite datą ir laiką.",
+      "bristolType": "Bristolio išmatų tipas",
+      "color": "Spalva",
+      "notes": "Pastabos",
+      "none": "Nėra",
+      "colors": {
+        "brown": "Ruda",
+        "dark_brown": "Tamsiai ruda",
+        "light_brown": "Šviesiai ruda",
+        "yellow": "Geltona",
+        "green": "Žalia",
+        "black": "Juoda",
+        "red": "Raudona",
+        "white": "Balta"
+      },
+      "create": "Įrašyti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Tuštinimasis įrašytas.",
+      "updateSuccess": "Tuštinimasis atnaujintas.",
+      "saveError": "Nepavyko išsaugoti jūsų įrašo. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti tuštinimosi tikslą",
+      "description": "Pasirinkite kasdienį tuštinimosi tikslą arba išvalykite lauką, kad jį pašalintumėte.",
+      "count": "Tikslas per dieną",
+      "hint": "Palikite tuščią, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Tuštinimosi tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti jūsų tikslo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Įrašų dar nėra",
+      "description": "Įrašykite tuštinimąsi, kad pradėtumėte stebėti laikui bėgant."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų istorijos",
+      "description": "Įkeliant jūsų įrašus kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti įrašą",
+      "body": "Šis įrašas bus visam laikui ištrintas. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Įrašas ištrintas.",
+      "error": "Nepavyko ištrinti įrašo. Bandykite dar kartą."
+    }
+  },
+  "fasting": {
+    "title": "Badavimas",
+    "subtitle": "Pradėkite badavimą, stebėkite savo pažangą ir peržiūrėkite istoriją",
+    "startButton": "Pradėti badavimą",
+    "targetButton": "Nustatyti tikslą",
+    "sourceGarmin": "Iš Garmin Connect",
+    "active": {
+      "title": "Vyksta badavimas",
+      "started": "Pradėta",
+      "target": "Tikslas",
+      "complete": "Užbaigti",
+      "break": "Nutraukti badavimą",
+      "cancel": "Atšaukti",
+      "completeHint": "Badavimą galite užbaigti pasiekę savo tikslą."
+    },
+    "stats": {
+      "totalFasts": "Iš viso badavimų",
+      "currentStreak": "Dabartinė serija",
+      "longestStreak": "Ilgiausia serija",
+      "avgDuration": "Vid. trukmė",
+      "totalTime": "Bendras badavimo laikas",
+      "completionRate": "Užbaigimo rodiklis",
+      "days": "dienų"
+    },
+    "types": {
+      "16:8": "16:8 (16 val. badavimas, 8 val. valgymas)",
+      "18:6": "18:6 (18 val. badavimas, 6 val. valgymas)",
+      "20:4": "20:4 (20 val. badavimas, 4 val. valgymas)",
+      "OMAD": "OMAD (vienas valgis per dieną)",
+      "24h": "24 valandų badavimas",
+      "36h": "36 valandų badavimas",
+      "48h": "48 valandų badavimas",
+      "72h": "72 valandų badavimas",
+      "custom": "Pasirinktinis"
+    },
+    "status": {
+      "in_progress": "Vyksta",
+      "completed": "Užbaigta",
+      "broken": "Nutraukta",
+      "cancelled": "Atšaukta"
+    },
+    "interval": {
+      "label": "Laiko intervalas",
+      "last_7_days": "Paskutinės 7 dienos",
+      "last_30_days": "Paskutinės 30 dienų",
+      "last_90_days": "Paskutinės 90 dienų",
+      "last_year": "Paskutiniai metai",
+      "all_time": "Visas laikas"
+    },
+    "actions": {
+      "edit": "Redaguoti badavimą",
+      "delete": "Ištrinti badavimą"
+    },
+    "list": {
+      "notesLabel": "Pastabos"
+    },
+    "form": {
+      "addTitle": "Pradėti badavimą",
+      "editTitle": "Redaguoti badavimo sesiją",
+      "description": "Pasirinkite badavimo protokolą ir kada jis prasidėjo.",
+      "type": "Badavimo protokolas",
+      "customDuration": "Pasirinktinė trukmė",
+      "customDurationHint": "Badavimo trukmė valandomis (1–72).",
+      "hours": "valandos",
+      "startTime": "Pradžios laikas",
+      "startTimeRequired": "Pasirinkite pradžios laiką.",
+      "endTime": "Pabaigos laikas",
+      "status": "Būsena",
+      "notes": "Pastabos",
+      "create": "Pradėti",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Badavimas pradėtas.",
+      "updateSuccess": "Badavimo sesija atnaujinta.",
+      "saveError": "Nepavyko išsaugoti jūsų badavimo sesijos. Bandykite dar kartą."
+    },
+    "target": {
+      "title": "Nustatyti badavimo tikslą",
+      "description": "Pasirinkite tikslinę badavimo trukmę arba išvalykite abu laukus, kad jį pašalintumėte.",
+      "hours": "Valandos",
+      "minutes": "Minutės",
+      "hint": "Palikite abu tuščius, kad pašalintumėte tikslą.",
+      "save": "Išsaugoti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "saveSuccess": "Badavimo tikslas atnaujintas.",
+      "saveError": "Nepavyko atnaujinti jūsų badavimo tikslo. Bandykite dar kartą."
+    },
+    "complete": {
+      "success": "Badavimas baigtas.",
+      "error": "Nepavyko užbaigti jūsų badavimo. Bandykite dar kartą."
+    },
+    "empty": {
+      "title": "Badavimų dar nėra",
+      "description": "Pradėkite badavimą, kad pradėtumėte stebėti savo badavimo istoriją."
+    },
+    "error": {
+      "title": "Nepavyko įkelti jūsų badavimo istorijos",
+      "description": "Įkeliant jūsų badavimo sesijas kažkas nepavyko. Bandykite dar kartą.",
+      "retry": "Bandyti dar kartą"
+    },
+    "delete": {
+      "title": "Ištrinti badavimo sesiją",
+      "body": "Ši badavimo sesija bus visam laikui ištrinta. Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Badavimo sesija ištrinta.",
+      "error": "Nepavyko ištrinti badavimo sesijos. Bandykite dar kartą."
+    }
+  }
+}

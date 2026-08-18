@@ -1,0 +1,73 @@
+{
+  "addActivity": "Pievienot aktivitāti",
+  "upload": {
+    "uploading": "Notiek augšupielāde…",
+    "success": "Aktivitāte veiksmīgi augšupielādēta",
+    "error": "Neizdevās augšupielādēt aktivitātes failu"
+  },
+  "refresh": {
+    "label": "Atsvaidzināt",
+    "refreshing": "Notiek atsvaidzināšana…",
+    "success": "Atsvaidzināšana sākta",
+    "error": "Neizdevās atsvaidzināt aktivitātes"
+  },
+  "feed": {
+    "scopeLabel": "Plūsmas tvērums",
+    "myActivities": "Manas aktivitātes",
+    "following": "Sekoju",
+    "loadMore": "Ielādēt vairāk",
+    "loading": "Notiek ielāde…",
+    "error": {
+      "title": "Neizdevās ielādēt aktivitātes",
+      "description": "Ielādējot plūsmu, kaut kas nogāja greizi.",
+      "retry": "Mēģināt vēlreiz"
+    },
+    "empty": {
+      "mine": {
+        "title": "Vēl nav aktivitāšu",
+        "description": "Pievienojiet aktivitāti vai savienojiet integrāciju, lai sāktu."
+      },
+      "following": {
+        "title": "Šeit vēl nekā nav",
+        "description": "Šeit parādīsies to cilvēku aktivitātes, kuriem sekojat."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistika",
+    "metricLabel": "Statistikas rādītājs",
+    "thisWeek": "Šonedēļ",
+    "thisMonth": "Šomēnes",
+    "empty": "Šajā periodā nav aktivitāšu",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distance",
+      "time": "Laiks",
+      "calories": "Kalorijas"
+    }
+  },
+  "sports": {
+    "run": "Skriešana",
+    "bike": "Riteņbraukšana",
+    "swim": "Peldēšana",
+    "walk": "Pastaiga",
+    "hike": "Pārgājiens",
+    "rowing": "Airēšana",
+    "snow_ski": "Slēpošana",
+    "snowboard": "Snovbords",
+    "windsurf": "Vindsērfings",
+    "stand_up_paddleboarding": "SUP airēšana",
+    "surfing": "Sērfošana",
+    "kayaking": "Kajakošana",
+    "sailing": "Burāšana",
+    "snowshoeing": "Pastaiga ar sniega kurpēm",
+    "inline_skating": "Skrituļslīdošana"
+  },
+  "goals": {
+    "title": "Mērķi",
+    "empty": {
+      "title": "Nav iestatītu mērķu",
+      "description": "Iestatiet mērķus iestatījumos, lai šeit sekotu savam progresam."
+    }
+  }
+}

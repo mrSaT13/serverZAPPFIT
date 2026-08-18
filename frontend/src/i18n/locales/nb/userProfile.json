@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Brukeren ble ikke funnet",
+    "description": "Denne profilen finnes ikke eller er ikke synlig for deg."
+  },
+  "error": {
+    "title": "Kunne ikke laste profil",
+    "description": "Noe gikk galt under lasting av denne profilen.",
+    "retry": "Prøv igjen"
+  },
+  "editProfile": "Rediger profil",
+  "activities": {
+    "weekNav": "Bla gjennom aktiviteter etter uke",
+    "thisWeek": "Denne uken",
+    "oneYearAgo": "Ett år siden"
+  },
+  "stats": {
+    "thisMonth": "Aktiviteter denne måneden",
+    "following": "Følger",
+    "followers": "Følgere"
+  },
+  "tabs": {
+    "activities": "Aktiviteter",
+    "following": "Følger",
+    "followers": "Følgere"
+  },
+  "activitiesError": {
+    "title": "Kunne ikke laste aktiviteter",
+    "description": "Noe gikk galt under lasting av aktiviteter.",
+    "retry": "Prøv igjen"
+  },
+  "listError": {
+    "title": "Kunne ikke laste listen",
+    "description": "Noe gikk galt. Vennligst prøv igjen.",
+    "retry": "Prøv igjen"
+  },
+  "follow": {
+    "follow": "Følg",
+    "requested": "Forespurt",
+    "following": "Følger",
+    "withdraw": "Trekk tilbake forespørsel",
+    "unfollow": "Slutt å følge",
+    "cancel": "Avbryt",
+    "close": "Lukk",
+    "followError": "Kunne ikke sende følgerforespørselen.",
+    "unfollowError": "Kunne ikke oppdatere følgerforespørselen.",
+    "confirmCancelTitle": "Trekk tilbake forespørsel",
+    "confirmCancelBody": "Trekke tilbake følgerforespørselen din til {name}?",
+    "confirmUnfollowTitle": "Slutt å følge {name}",
+    "confirmUnfollowBody": "Slutte å følge {name}? Du kan følge dem igjen senere."
+  },
+  "list": {
+    "accept": "Godta",
+    "decline": "Avslå",
+    "remove": "Fjern",
+    "unfollow": "Slutt å følge",
+    "cancel": "Avbryt",
+    "close": "Lukk",
+    "accepted": "Godtatt",
+    "pending": "Venter",
+    "acceptError": "Kunne ikke godta forespørselen.",
+    "removeError": "Kunne ikke oppdatere denne følgeren.",
+    "unfollowError": "Kunne ikke slutte å følge denne brukeren.",
+    "confirmUnfollowTitle": "Slutt å følge {name}",
+    "confirmUnfollowBody": "Slutte å følge {name}? Du kan følge dem igjen senere.",
+    "confirmDeclineTitle": "Avslå forespørsel",
+    "confirmDeclineBody": "Avslå følgerforespørselen fra {name}?",
+    "confirmRemoveTitle": "Fjern følger",
+    "confirmRemoveBody": "Fjerne {name} fra følgerne dine?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Ingen aktiviteter ennå",
+      "ownDescription": "Aktivitetene dine vises her når du legger til eller importerer dem.",
+      "otherTitle": "Ingen aktiviteter å vise"
+    },
+    "following": {
+      "ownTitle": "Du følger ingen ennå.",
+      "otherTitle": "Følger ingen ennå."
+    },
+    "followers": {
+      "ownTitle": "Du har ingen følgere ennå.",
+      "otherTitle": "Ingen følgere ennå."
+    }
+  }
+}

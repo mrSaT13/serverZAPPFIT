@@ -1,0 +1,22 @@
+{
+  "home": "Hjem",
+  "search": "Søk",
+  "activities": "Aktiviteter",
+  "activitiesList": "Liste",
+  "summary": "Sammendrag",
+  "gear": "Utstyr",
+  "health": "Helse",
+  "alerts": "Varsler",
+  "settings": "Innstillinger",
+  "profile": "Profil",
+  "login": "Logg inn",
+  "logout": "Logg ut",
+  "userMenu": "Brukermeny",
+  "menu": "Meny",
+  "primary": "Hovednavigasjon",
+  "account": "Konto",
+  "preferences": "Innstillinger",
+  "updateAvailable": "Oppdatering tilgjengelig",
+  "updateAvailableTitle": "Versjon {version} er tilgjengelig",
+  "updateViewRelease": "Vis utgivelsesnotater"
+}

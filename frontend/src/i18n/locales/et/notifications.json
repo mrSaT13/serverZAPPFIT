@@ -1,0 +1,51 @@
+{
+  "title": "Teavitused",
+  "subtitle": "Hiljutine tegevus, taotlused ja teated",
+  "navLabel": "Teavitused",
+  "unread": "Lugemata",
+  "markRead": "Märgi loetuks",
+  "markAllRead": "Märgi kõik loetuks",
+  "seeAll": "Vaata kõiki",
+  "loadMore": "Laadi veel",
+  "loading": "Laadimine…",
+  "badge": "{count} lugemata teavitust",
+  "empty": {
+    "title": "Oled kõigega kursis",
+    "description": "Uuendused sinu tegevuste, jälgijate ja integratsioonide kohta ilmuvad siia."
+  },
+  "error": {
+    "title": "Teavitusi ei õnnestunud laadida",
+    "description": "Sinu teavituste laadimisel läks midagi valesti.",
+    "retry": "Proovi uuesti"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Uus tegevus",
+      "body": "Sinu kontole lisati uus tegevus."
+    },
+    "duplicateActivity": {
+      "title": "Võimalik dubleeriv tegevus",
+      "body": "Sama alustamisajaga tegevus võib juba olemas olla."
+    },
+    "newFollowerRequest": {
+      "title": "Uus jälgimistaotlus",
+      "body": "{name} ({'@'}{username}) soovib sind jälgida."
+    },
+    "followerRequestAccepted": {
+      "title": "Jälgimistaotlus heaks kiidetud",
+      "body": "{name} ({'@'}{username}) kiitis sinu jälgimistaotluse heaks."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect vajab tähelepanu",
+      "body": "Sinu Garmin Connecti seanss aegus. Ühenda see uuesti, et sünkroonimine jätkuks."
+    },
+    "adminSignUpApproval": {
+      "title": "Uus registreerumine vajab heakskiitu",
+      "body": "{name} ({'@'}{username}) ootab konto heakskiitu."
+    },
+    "unknown": {
+      "title": "Teavitus",
+      "body": "Sul on uus teavitus."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Logotipo de Endurain",
+  "title": "A base do sistema de deseño está activa",
+  "subtitle": "Tailwind v4, shadcn-vue, TypeScript estrito e a paleta de tokens de Endurain están configurados",
+  "primaryAction": "Acción principal",
+  "notFound": {
+    "title": "Páxina non atopada",
+    "message": "A páxina que buscas non existe ou foi movida",
+    "action": "Ir ao inicio"
+  },
+  "error": {
+    "title": "Algo foi mal",
+    "message": "Esta sección non se puido cargar. Podes tentar de novo.",
+    "retry": "Tentar de novo",
+    "toast": "Algo foi mal. Por favor, téntao de novo."
+  },
+  "configError": {
+    "title": "Erro de configuración",
+    "message": "A aplicación non puido conectar co backend de Endurain. Isto adoita deberse a unha variable de contorno ENDURAIN_HOST ausente ou mal configurada, ou a que o backend non se está a executar.",
+    "notSet": "(sen definir)",
+    "help": "Comproba que ENDURAIN_HOST apunta ao URL onde a túa instancia de Endurain é accesible (por exemplo https://endurain.example.com) e que o backend se está a executar; despois, volve cargar a páxina.",
+    "reload": "Recargar"
+  },
+  "dismiss": "Descartar",
+  "language": "Idioma",
+  "theme": {
+    "toLight": "Modo claro",
+    "toDark": "Modo escuro"
+  },
+  "pagination": {
+    "label": "Paxinación",
+    "previous": "Páxina anterior",
+    "next": "Páxina seguinte",
+    "goToPage": "Ir á páxina {page}"
+  },
+  "markdownEditor": {
+    "preview": "Vista previa",
+    "edit": "Editar",
+    "supported": "Compatible con Markdown",
+    "empty": "Nada que previsualizar"
+  }
+}

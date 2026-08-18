@@ -1,0 +1,43 @@
+{
+  "title": "Szukaj",
+  "subtitle": "Znajdź użytkowników, aktywności i sprzęt w całym Endurain.",
+  "placeholder": "Szukaj…",
+  "clear": "Wyczyść wyszukiwanie",
+  "scopes": {
+    "users": "Użytkownicy",
+    "activities": "Aktywności",
+    "gears": "Sprzęt"
+  },
+  "filters": {
+    "all": "Wszystkie typy",
+    "activityType": "Filtruj według typu aktywności",
+    "gearType": "Filtruj według typu sprzętu"
+  },
+  "activityCategories": {
+    "running": "Bieganie",
+    "cycling": "Kolarstwo",
+    "swimming": "Pływanie",
+    "walking": "Chodzenie i wędrówki",
+    "racquet": "Sporty rakietowe",
+    "rowing": "Wioślarstwo i kajakarstwo",
+    "winterSports": "Sporty zimowe",
+    "waterSports": "Sporty wodne",
+    "skating": "Łyżwy i rolki"
+  },
+  "results": {
+    "inactive": "Nieaktywny"
+  },
+  "idle": {
+    "title": "Przeszukaj Endurain",
+    "description": "Wybierz, czego szukać, a następnie zacznij pisać, aby zobaczyć dopasowania."
+  },
+  "empty": {
+    "title": "Nie znaleziono dopasowań",
+    "description": "Nic nie pasuje do „{term}”. Spróbuj innego wyszukiwania."
+  },
+  "error": {
+    "title": "Wyszukiwanie nie powiodło się",
+    "description": "Nie udało się wykonać wyszukiwania. Sprawdź połączenie i spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  }
+}

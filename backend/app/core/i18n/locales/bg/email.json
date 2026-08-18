@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "С най-добри пожелания,",
+  "common.team": "Екипът на Endurain",
+  "common.system": "Системата на Endurain",
+  "common.visit": "Посетете Endurain на:",
+  "common.source_code": "Изходен код на:",
+  "common.copy_link": "Ако бутонът по-горе не работи, можете да копирате и поставите следната връзка в браузъра си:",
+
+  "password_reset.subject": "Endurain - Нулиране на паролата",
+  "password_reset.heading": "Заявка за нулиране на паролата",
+  "password_reset.greeting": "Здравейте, {name},",
+  "password_reset.intro": "Заявихте нулиране на паролата за вашия акаунт в Endurain. Натиснете бутона по-долу, за да нулирате паролата си:",
+  "password_reset.cta": "Нулирай паролата",
+  "password_reset.security_label": "Известие за сигурност:",
+  "password_reset.security_notice": "Тази връзка ще изтече след 1 час от съображения за сигурност.",
+  "password_reset.ignore": "Ако не сте заявявали това нулиране на паролата, моля, игнорирайте този имейл. Паролата ви ще остане непроменена.",
+
+  "signup_confirmation.subject": "Endurain - Потвърдете акаунта си",
+  "signup_confirmation.heading": "Потвърдете акаунта си",
+  "signup_confirmation.greeting": "Здравейте, {name},",
+  "signup_confirmation.intro": "Благодарим ви, че се регистрирахте в Endurain! Моля, потвърдете акаунта си, като натиснете бутона по-долу:",
+  "signup_confirmation.cta": "Потвърди акаунта",
+  "signup_confirmation.security_label": "Известие за сигурност:",
+  "signup_confirmation.security_notice": "Тази връзка за потвърждение ще изтече след 24 часа.",
+  "signup_confirmation.ignore": "Ако не сте създавали акаунт в Endurain, моля, игнорирайте този имейл.",
+
+  "admin_signup.subject": "Endurain - Нова регистрация изчаква одобрение",
+  "admin_signup.heading": "Нова регистрация изисква одобрение",
+  "admin_signup.greeting": "Здравейте, {name},",
+  "admin_signup.intro": "Нов потребител се регистрира и изчаква одобрение:",
+  "admin_signup.user_label": "Потребител:",
+  "admin_signup.review": "Моля, влезте в административния панел на Endurain, за да прегледате и одобрите тази заявка.",
+  "admin_signup.cta": "Към административния панел",
+
+  "signup_approved.subject": "Endurain - Вашият акаунт беше одобрен",
+  "signup_approved.heading": "Вашият акаунт вече е активен",
+  "signup_approved.greeting": "Здравейте, {name},",
+  "signup_approved.intro": "Добра новина! Вашият акаунт беше одобрен и вече е активен.",
+  "signup_approved.username_label": "Потребителско име:",
+  "signup_approved.login_intro": "Вече можете да влезете и да започнете да използвате Endurain:",
+  "signup_approved.cta": "Влез в Endurain"
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Notifikationer",
+  "subtitle": "Seneste aktivitet, anmodninger og notifikationer",
+  "navLabel": "Notifikationer",
+  "unread": "Ulæst",
+  "markRead": "Markér som læst",
+  "markAllRead": "Markér alle som læst",
+  "seeAll": "Se alle",
+  "loadMore": "Indlæs mere",
+  "loading": "Indlæser…",
+  "badge": "{count} ulæste notifikationer",
+  "empty": {
+    "title": "Du er ajour",
+    "description": "Opdateringer om dine aktiviteter, følgere og integrationer vises her."
+  },
+  "error": {
+    "title": "Kunne ikke indlæse notifikationer",
+    "description": "Noget gik galt under indlæsningen af dine notifikationer.",
+    "retry": "Prøv igen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Ny aktivitet",
+      "body": "En ny aktivitet blev tilføjet til din konto."
+    },
+    "duplicateActivity": {
+      "title": "Mulig dubletaktivitet",
+      "body": "En aktivitet med samme starttidspunkt findes muligvis allerede."
+    },
+    "newFollowerRequest": {
+      "title": "Ny følgeanmodning",
+      "body": "{name} ({'@'}{username}) vil gerne følge dig."
+    },
+    "followerRequestAccepted": {
+      "title": "Følgeanmodning accepteret",
+      "body": "{name} ({'@'}{username}) accepterede din følgeanmodning."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect kræver handling",
+      "body": "Din Garmin Connect-session er udløbet. Forbind igen for at fortsætte synkroniseringen."
+    },
+    "adminSignUpApproval": {
+      "title": "Ny tilmelding kræver godkendelse",
+      "body": "{name} ({'@'}{username}) afventer kontogodkendelse."
+    },
+    "unknown": {
+      "title": "Notifikation",
+      "body": "Du har en ny notifikation."
+    }
+  }
+}

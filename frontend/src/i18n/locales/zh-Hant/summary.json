@@ -1,0 +1,49 @@
+{
+  "title": "摘要",
+  "subtitle": "查看您的訓練總計與長期趨勢。",
+  "viewType": {
+    "label": "摘要週期",
+    "week": "週",
+    "month": "月",
+    "year": "年",
+    "lifetime": "全部時間"
+  },
+  "filters": {
+    "type": "活動類型",
+    "allTypes": "所有類型"
+  },
+  "period": {
+    "previous": "上一週期",
+    "next": "下一週期",
+    "picker": "選擇週期",
+    "allTime": "所有時間"
+  },
+  "metrics": {
+    "distance": "距離",
+    "duration": "時長",
+    "elevation": "爬升高度",
+    "calories": "卡路里",
+    "activities": "活動次數"
+  },
+  "breakdown": {
+    "title": "詳細分析",
+    "period": "週期",
+    "weekNumber": "第 {number} 週"
+  },
+  "typeBreakdown": {
+    "title": "依活動類型",
+    "type": "類型"
+  },
+  "activities": {
+    "title": "此週期的活動"
+  },
+  "empty": {
+    "title": "此週期無活動",
+    "description": "沒有符合所選週期和類型的活動。"
+  },
+  "error": {
+    "title": "無法載入摘要",
+    "description": "載入您的統計資料時發生問題，請檢查連線後再試一次。",
+    "retry": "重試"
+  }
+}

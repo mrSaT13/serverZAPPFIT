@@ -1,0 +1,152 @@
+{
+  "title": "Vybavenie",
+  "subtitle": "Bicykle, topánky a výbava, s ktorou sledujete aktivity",
+  "buttonAddGear": "Pridať vybavenie",
+  "searchPlaceholder": "Hľadať podľa prezývky",
+  "clearSearch": "Vymazať hľadanie",
+  "showInactive": "Zobraziť neaktívne",
+  "inactive": "Neaktívne",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtre",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicykel",
+    "shoes": "Topánky",
+    "wetsuit": "Neoprén",
+    "racquet": "Raketa",
+    "skis": "Lyže",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfingová doska",
+    "waterSportsBoard": "Doska na vodné športy",
+    "unknown": "Vybavenie"
+  },
+  "actions": {
+    "edit": "Upraviť vybavenie",
+    "delete": "Odstrániť vybavenie"
+  },
+  "form": {
+    "title": "Štatistiky",
+    "addTitle": "Pridať vybavenie",
+    "editTitle": "Upraviť vybavenie",
+    "description": "Sledujte výbavu, ktorú používate pri svojich aktivitách.",
+    "nickname": "Prezývka",
+    "nicknameRequired": "Prezývka je povinná",
+    "nicknameTooLong": "Prezývka musí mať najviac 250 znakov",
+    "nicknameTaken": "Už máte vybavenie s touto prezývkou",
+    "gearType": "Typ",
+    "brand": "Značka",
+    "brandTooLong": "Značka musí mať najviac 250 znakov",
+    "model": "Model",
+    "modelTooLong": "Model musí mať najviac 250 znakov",
+    "active": "Aktívne",
+    "createdAt": "Vytvorené",
+    "createdAtRequired": "Dátum vytvorenia je povinný",
+    "initialDistance": "Počiatočná vzdialenosť",
+    "purchaseValue": "Nákupná hodnota",
+    "totalCost": "Celkové náklady",
+    "create": "Pridať vybavenie",
+    "save": "Uložiť zmeny",
+    "cancel": "Zrušiť",
+    "close": "Zavrieť",
+    "createSuccess": "Vybavenie pridané",
+    "updateSuccess": "Vybavenie aktualizované",
+    "saveError": "Vybavenie sa nepodarilo uložiť. Skúste to znova."
+  },
+  "delete": {
+    "title": "Odstrániť vybavenie",
+    "body": "Naozaj chcete odstrániť „{nickname}“? Túto akciu nie je možné vrátiť späť.",
+    "confirm": "Odstrániť",
+    "cancel": "Zrušiť",
+    "close": "Zavrieť",
+    "success": "Vybavenie odstránené",
+    "error": "Vybavenie sa nepodarilo odstrániť. Skúste to znova."
+  },
+  "error": {
+    "title": "Vybavenie sa nepodarilo načítať",
+    "description": "Pri načítavaní vášho vybavenia sa niečo pokazilo.",
+    "retry": "Skúsiť znova"
+  },
+  "empty": {
+    "title": "Zatiaľ žiadne vybavenie",
+    "description": "Pridajte bicykle, topánky a výbavu, ktorú používate, a začnite sledovať ich používanie.",
+    "searchTitle": "Žiadne vybavenie nezodpovedá vášmu hľadaniu",
+    "searchDescription": "Skúste inú prezývku.",
+    "activeTitle": "Žiadne aktívne vybavenie",
+    "activeDescription": "Pridajte vybavenie alebo zapnite „Zobraziť neaktívne“ na zobrazenie neaktívneho vybavenia."
+  },
+  "detail": {
+    "back": "Späť na vybavenie",
+    "notFoundTitle": "Vybavenie sa nenašlo",
+    "notFoundDescription": "Toto vybavenie mohlo byť odstránené alebo vám nepatrí.",
+    "totalDistance": "Vzdialenosť",
+    "totalTime": "Čas",
+    "componentsCost": "Komponenty"
+  },
+  "components": {
+    "title": "Komponenty",
+    "add": "Pridať komponent",
+    "empty": "Zatiaľ žiadne komponenty. Pridajte časti, ktorých opotrebovanie chcete sledovať.",
+    "unsupported": "Tento typ vybavenia nesleduje komponenty.",
+    "noneActive": "Všetky komponenty sú neaktívne. Zapnite „Zobraziť neaktívne“ na ich zobrazenie.",
+    "inactive": "Neaktívne",
+    "unitHours": "h",
+    "purchasedOn": "Zakúpené {date}",
+    "wearLabel": "Opotrebovanie {name}",
+    "actions": {
+      "edit": "Upraviť komponent",
+      "delete": "Odstrániť komponent"
+    },
+    "form": {
+      "addTitle": "Pridať komponent",
+      "editTitle": "Upraviť komponent",
+      "description": "Sledujte časti, ktoré vymieňate, aby ste monitorovali ich opotrebovanie.",
+      "type": "Typ",
+      "typePlaceholder": "Vyberte typ",
+      "typeRequired": "Typ je povinný",
+      "brand": "Značka",
+      "brandRequired": "Značka je povinná",
+      "brandTooLong": "Značka musí mať najviac 250 znakov",
+      "model": "Model",
+      "modelRequired": "Model je povinný",
+      "modelTooLong": "Model musí mať najviac 250 znakov",
+      "purchaseDate": "Dátum zakúpenia",
+      "purchaseDateRequired": "Dátum zakúpenia je povinný",
+      "retiredDate": "Dátum vyradenia",
+      "expectedDistance": "Očakávaná vzdialenosť",
+      "expectedTime": "Očakávaný čas",
+      "purchaseValue": "Nákupná hodnota",
+      "active": "Aktívne",
+      "retiredBeforePurchase": "Dátum vyradenia musí byť po dátume zakúpenia.",
+      "create": "Pridať komponent",
+      "save": "Uložiť zmeny",
+      "cancel": "Zrušiť",
+      "close": "Zavrieť",
+      "createSuccess": "Komponent pridaný",
+      "updateSuccess": "Komponent aktualizovaný",
+      "saveError": "Komponent sa nepodarilo uložiť. Skúste to znova."
+    },
+    "delete": {
+      "title": "Odstrániť komponent",
+      "body": "Naozaj chcete odstrániť „{name}“? Túto akciu nie je možné vrátiť späť.",
+      "confirm": "Odstrániť",
+      "cancel": "Zrušiť",
+      "close": "Zavrieť",
+      "success": "Komponent odstránený",
+      "error": "Komponent sa nepodarilo odstrániť. Skúste to znova."
+    },
+    "error": {
+      "title": "Komponenty sa nepodarilo načítať",
+      "description": "Pri načítavaní komponentov tohto vybavenia sa niečo pokazilo."
+    }
+  },
+  "activities": {
+    "title": "Aktivity",
+    "empty": "S týmto vybavením zatiaľ neboli zaznamenané žiadne aktivity.",
+    "error": {
+      "title": "Aktivity sa nepodarilo načítať",
+      "description": "Pri načítavaní aktivít tohto vybavenia sa niečo pokazilo."
+    }
+  }
+}

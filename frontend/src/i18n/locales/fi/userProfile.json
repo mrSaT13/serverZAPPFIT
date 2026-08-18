@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Käyttäjää ei löytynyt",
+    "description": "Tätä profiilia ei ole olemassa tai se ei ole näkyvissä sinulle."
+  },
+  "error": {
+    "title": "Profiilia ei voitu ladata",
+    "description": "Tämän profiilin lataamisessa tapahtui virhe.",
+    "retry": "Yritä uudelleen"
+  },
+  "editProfile": "Muokkaa profiilia",
+  "activities": {
+    "weekNav": "Selaa aktiviteetteja viikoittain",
+    "thisWeek": "Tämä viikko",
+    "oneYearAgo": "Vuosi sitten"
+  },
+  "stats": {
+    "thisMonth": "Aktiviteetit tässä kuussa",
+    "following": "Seuratut",
+    "followers": "Seuraajat"
+  },
+  "tabs": {
+    "activities": "Aktiviteetit",
+    "following": "Seuratut",
+    "followers": "Seuraajat"
+  },
+  "activitiesError": {
+    "title": "Aktiviteetteja ei voitu ladata",
+    "description": "Aktiviteettien lataamisessa tapahtui virhe.",
+    "retry": "Yritä uudelleen"
+  },
+  "listError": {
+    "title": "Listaa ei voitu ladata",
+    "description": "Jokin meni pieleen. Yritä uudelleen.",
+    "retry": "Yritä uudelleen"
+  },
+  "follow": {
+    "follow": "Seuraa",
+    "requested": "Pyydetty",
+    "following": "Seuraat",
+    "withdraw": "Peruuta pyyntö",
+    "unfollow": "Lopeta seuraaminen",
+    "cancel": "Peruuta",
+    "close": "Sulje",
+    "followError": "Seurauspyyntöä ei voitu lähettää.",
+    "unfollowError": "Seurauspyyntöä ei voitu päivittää.",
+    "confirmCancelTitle": "Peruuta pyyntö",
+    "confirmCancelBody": "Peruutetaanko seurauspyyntösi käyttäjälle {name}?",
+    "confirmUnfollowTitle": "Lopeta käyttäjän {name} seuraaminen",
+    "confirmUnfollowBody": "Lopetetaanko käyttäjän {name} seuraaminen? Voit seurata heitä uudelleen myöhemmin."
+  },
+  "list": {
+    "accept": "Hyväksy",
+    "decline": "Hylkää",
+    "remove": "Poista",
+    "unfollow": "Lopeta seuraaminen",
+    "cancel": "Peruuta",
+    "close": "Sulje",
+    "accepted": "Hyväksytty",
+    "pending": "Odottaa",
+    "acceptError": "Pyyntöä ei voitu hyväksyä.",
+    "removeError": "Tätä seuraajaa ei voitu päivittää.",
+    "unfollowError": "Tämän käyttäjän seuraamista ei voitu lopettaa.",
+    "confirmUnfollowTitle": "Lopeta käyttäjän {name} seuraaminen",
+    "confirmUnfollowBody": "Lopetetaanko käyttäjän {name} seuraaminen? Voit seurata heitä uudelleen myöhemmin.",
+    "confirmDeclineTitle": "Hylkää pyyntö",
+    "confirmDeclineBody": "Hylätäänkö käyttäjän {name} seurauspyyntö?",
+    "confirmRemoveTitle": "Poista seuraaja",
+    "confirmRemoveBody": "Poistetaanko {name} seuraajistasi?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Ei vielä aktiviteetteja",
+      "ownDescription": "Aktiviteettisi näkyvät täällä, kun lisäät tai tuot ne.",
+      "otherTitle": "Ei näytettäviä aktiviteetteja"
+    },
+    "following": {
+      "ownTitle": "Et seuraa vielä ketään.",
+      "otherTitle": "Ei seuraa vielä ketään."
+    },
+    "followers": {
+      "ownTitle": "Sinulla ei ole vielä yhtään seuraajaa.",
+      "otherTitle": "Ei vielä seuraajia."
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Kullanıcı bulunamadı",
+    "description": "Bu profil mevcut değil veya size görünür değil."
+  },
+  "error": {
+    "title": "Profil yüklenemedi",
+    "description": "Bu profil yüklenirken bir şeyler ters gitti.",
+    "retry": "Tekrar dene"
+  },
+  "editProfile": "Profili düzenle",
+  "activities": {
+    "weekNav": "Etkinliklere haftaya göre göz at",
+    "thisWeek": "Bu hafta",
+    "oneYearAgo": "Bir yıl önce"
+  },
+  "stats": {
+    "thisMonth": "Bu ayki etkinlikler",
+    "following": "Takip edilenler",
+    "followers": "Takipçiler"
+  },
+  "tabs": {
+    "activities": "Etkinlikler",
+    "following": "Takip edilenler",
+    "followers": "Takipçiler"
+  },
+  "activitiesError": {
+    "title": "Etkinlikler yüklenemedi",
+    "description": "Etkinlikler yüklenirken bir şeyler ters gitti.",
+    "retry": "Tekrar dene"
+  },
+  "listError": {
+    "title": "Liste yüklenemedi",
+    "description": "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "retry": "Tekrar dene"
+  },
+  "follow": {
+    "follow": "Takip et",
+    "requested": "İstendi",
+    "following": "Takip ediliyor",
+    "withdraw": "İsteği geri çek",
+    "unfollow": "Takibi bırak",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "followError": "Takip isteği gönderilemedi.",
+    "unfollowError": "Takip isteği güncellenemedi.",
+    "confirmCancelTitle": "İsteği geri çek",
+    "confirmCancelBody": "{name} kişisine gönderdiğiniz takip isteği geri çekilsin mi?",
+    "confirmUnfollowTitle": "{name} kişisinin takibini bırak",
+    "confirmUnfollowBody": "{name} kişisini takip etmeyi bırakacaksınız. Daha sonra tekrar takip edebilirsiniz."
+  },
+  "list": {
+    "accept": "Kabul et",
+    "decline": "Reddet",
+    "remove": "Kaldır",
+    "unfollow": "Takibi bırak",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "accepted": "Kabul edildi",
+    "pending": "Beklemede",
+    "acceptError": "İstek kabul edilemedi.",
+    "removeError": "Bu takipçi güncellenemedi.",
+    "unfollowError": "Bu kullanıcının takibi bırakılamadı.",
+    "confirmUnfollowTitle": "{name} kişisinin takibini bırak",
+    "confirmUnfollowBody": "{name} kişisini takip etmeyi bırakacaksınız. Daha sonra tekrar takip edebilirsiniz.",
+    "confirmDeclineTitle": "İsteği reddet",
+    "confirmDeclineBody": "{name} kişisinin takip isteği reddedilsin mi?",
+    "confirmRemoveTitle": "Takipçiyi kaldır",
+    "confirmRemoveBody": "{name} takipçilerinizden kaldırılsın mı?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Henüz etkinlik yok",
+      "ownDescription": "Etkinlikleriniz, ekledikten veya içe aktardıktan sonra burada görünecek.",
+      "otherTitle": "Gösterilecek etkinlik yok"
+    },
+    "following": {
+      "ownTitle": "Henüz kimseyi takip etmiyorsunuz.",
+      "otherTitle": "Henüz kimseyi takip etmiyor."
+    },
+    "followers": {
+      "ownTitle": "Henüz hiç takipçiniz yok.",
+      "otherTitle": "Henüz takipçi yok."
+    }
+  }
+}

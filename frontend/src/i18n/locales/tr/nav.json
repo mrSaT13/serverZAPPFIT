@@ -1,0 +1,22 @@
+{
+  "home": "Ana sayfa",
+  "search": "Ara",
+  "activities": "Etkinlikler",
+  "activitiesList": "Liste",
+  "summary": "Özet",
+  "gear": "Ekipman",
+  "health": "Sağlık",
+  "alerts": "Uyarılar",
+  "settings": "Ayarlar",
+  "profile": "Profil",
+  "login": "Giriş",
+  "logout": "Çıkış",
+  "userMenu": "Kullanıcı menüsü",
+  "menu": "Menü",
+  "primary": "Birincil gezinme",
+  "account": "Hesap",
+  "preferences": "Tercihler",
+  "updateAvailable": "Güncelleme mevcut",
+  "updateAvailableTitle": "{version} sürümü mevcut",
+  "updateViewRelease": "Sürüm notlarını görüntüle"
+}

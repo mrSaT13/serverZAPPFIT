@@ -1,0 +1,8 @@
+{
+  "repository": "Repository",
+  "documentation": "Documentazione",
+  "mastodon": "Account Mastodon di Endurain",
+  "discord": "Server Discord di Endurain",
+  "compatibleStrava": "Compatibile con Strava",
+  "worksGarmin": "Funziona con Garmin Connect"
+}

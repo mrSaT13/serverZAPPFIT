@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logotyp",
+  "title": "Designsystemets grund är live",
+  "subtitle": "Tailwind v4, shadcn-vue, strikt TypeScript och Endurains tokenpalett är inkopplade",
+  "primaryAction": "Primär åtgärd",
+  "notFound": {
+    "title": "Sidan hittades inte",
+    "message": "Sidan du söker finns inte eller har flyttats",
+    "action": "Gå till startsidan"
+  },
+  "error": {
+    "title": "Något gick fel",
+    "message": "Det här avsnittet kunde inte laddas. Du kan försöka igen.",
+    "retry": "Försök igen",
+    "toast": "Något gick fel. Försök igen."
+  },
+  "configError": {
+    "title": "Konfigurationsfel",
+    "message": "Appen kunde inte nå Endurain-backend. Detta beror oftast på en saknad eller felkonfigurerad miljövariabel ENDURAIN_HOST, eller på att backend inte körs.",
+    "notSet": "(inte angivet)",
+    "help": "Kontrollera att ENDURAIN_HOST pekar på den URL där din Endurain-instans är nåbar (till exempel https://endurain.example.com) och att backend körs, och ladda sedan om sidan.",
+    "reload": "Ladda om"
+  },
+  "dismiss": "Stäng",
+  "language": "Språk",
+  "theme": {
+    "toLight": "Ljust läge",
+    "toDark": "Mörkt läge"
+  },
+  "pagination": {
+    "label": "Sidnavigering",
+    "previous": "Föregående sida",
+    "next": "Nästa sida",
+    "goToPage": "Gå till sida {page}"
+  },
+  "markdownEditor": {
+    "preview": "Förhandsgranskning",
+    "edit": "Redigera",
+    "supported": "Markdown stöds",
+    "empty": "Inget att förhandsgranska"
+  }
+}

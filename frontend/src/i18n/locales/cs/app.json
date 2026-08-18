@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Logo Endurain",
+  "title": "Základ návrhového systému je v provozu",
+  "subtitle": "Tailwind v4, shadcn-vue, striktní TypeScript a paleta tokenů Endurain jsou propojeny",
+  "primaryAction": "Hlavní akce",
+  "notFound": {
+    "title": "Stránka nenalezena",
+    "message": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta",
+    "action": "Přejít na domovskou stránku"
+  },
+  "error": {
+    "title": "Něco se pokazilo",
+    "message": "Tuto sekci se nepodařilo načíst. Můžete to zkusit znovu.",
+    "retry": "Zkusit znovu",
+    "toast": "Něco se pokazilo. Zkuste to prosím znovu."
+  },
+  "configError": {
+    "title": "Chyba konfigurace",
+    "message": "Aplikace se nemohla připojit k backendu Endurain. To je obvykle způsobeno chybějící nebo špatně nastavenou proměnnou prostředí ENDURAIN_HOST nebo tím, že backend neběží.",
+    "notSet": "(nenastaveno)",
+    "help": "Zkontrolujte, že ENDURAIN_HOST odkazuje na URL, kde je vaše instance Endurain dostupná (například https://endurain.example.com), a že backend běží, poté stránku znovu načtěte.",
+    "reload": "Znovu načíst"
+  },
+  "dismiss": "Zavřít",
+  "language": "Jazyk",
+  "theme": {
+    "toLight": "Světlý režim",
+    "toDark": "Tmavý režim"
+  },
+  "pagination": {
+    "label": "Stránkování",
+    "previous": "Předchozí stránka",
+    "next": "Další stránka",
+    "goToPage": "Přejít na stránku {page}"
+  },
+  "markdownEditor": {
+    "preview": "Náhled",
+    "edit": "Upravit",
+    "supported": "Podporován Markdown",
+    "empty": "Není co zobrazit v náhledu"
+  }
+}

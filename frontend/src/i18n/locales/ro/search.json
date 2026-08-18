@@ -1,0 +1,43 @@
+{
+  "title": "Căutare",
+  "subtitle": "Găsește utilizatori, activități și echipament în Endurain.",
+  "placeholder": "Caută…",
+  "clear": "Șterge căutarea",
+  "scopes": {
+    "users": "Utilizatori",
+    "activities": "Activități",
+    "gears": "Echipament"
+  },
+  "filters": {
+    "all": "Toate tipurile",
+    "activityType": "Filtrează după tipul activității",
+    "gearType": "Filtrează după tipul echipamentului"
+  },
+  "activityCategories": {
+    "running": "Alergare",
+    "cycling": "Ciclism",
+    "swimming": "Înot",
+    "walking": "Mers și drumeție",
+    "racquet": "Sporturi cu rachetă",
+    "rowing": "Canotaj și caiac-canoe",
+    "winterSports": "Sporturi de iarnă",
+    "waterSports": "Sporturi nautice",
+    "skating": "Patinaj"
+  },
+  "results": {
+    "inactive": "Inactiv"
+  },
+  "idle": {
+    "title": "Caută în Endurain",
+    "description": "Alege ce să cauți, apoi începe să scrii pentru a vedea rezultatele."
+  },
+  "empty": {
+    "title": "Nicio potrivire găsită",
+    "description": "Nimic nu se potrivește cu „{term}”. Încearcă o altă căutare."
+  },
+  "error": {
+    "title": "Căutarea a eșuat",
+    "description": "Nu am putut rula căutarea ta. Verifică-ți conexiunea și încearcă din nou.",
+    "retry": "Încearcă din nou"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "home": "Domů",
+  "search": "Hledat",
+  "activities": "Aktivity",
+  "activitiesList": "Seznam",
+  "summary": "Souhrn",
+  "gear": "Vybavení",
+  "health": "Zdraví",
+  "alerts": "Upozornění",
+  "settings": "Nastavení",
+  "profile": "Profil",
+  "login": "Přihlášení",
+  "logout": "Odhlásit se",
+  "userMenu": "Uživatelská nabídka",
+  "menu": "Nabídka",
+  "primary": "Hlavní navigace",
+  "account": "Účet",
+  "preferences": "Předvolby",
+  "updateAvailable": "Dostupná aktualizace",
+  "updateAvailableTitle": "Je dostupná verze {version}",
+  "updateViewRelease": "Zobrazit poznámky k vydání"
+}

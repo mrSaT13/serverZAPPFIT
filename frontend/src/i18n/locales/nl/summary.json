@@ -1,0 +1,49 @@
+{
+  "title": "Samenvatting",
+  "subtitle": "Bekijk je trainingstotalen en trends over tijd.",
+  "viewType": {
+    "label": "Samenvattingsperiode",
+    "week": "Week",
+    "month": "Maand",
+    "year": "Jaar",
+    "lifetime": "Totaal"
+  },
+  "filters": {
+    "type": "Activiteitstype",
+    "allTypes": "Alle types"
+  },
+  "period": {
+    "previous": "Vorige periode",
+    "next": "Volgende periode",
+    "picker": "Periode selecteren",
+    "allTime": "Altijd"
+  },
+  "metrics": {
+    "distance": "Afstand",
+    "duration": "Duur",
+    "elevation": "Hoogte",
+    "calories": "Calorieën",
+    "activities": "Activiteiten"
+  },
+  "breakdown": {
+    "title": "Uitsplitsing",
+    "period": "Periode",
+    "weekNumber": "Week {number}"
+  },
+  "typeBreakdown": {
+    "title": "Per activiteitstype",
+    "type": "Type"
+  },
+  "activities": {
+    "title": "Activiteiten in deze periode"
+  },
+  "empty": {
+    "title": "Geen activiteit in deze periode",
+    "description": "Geen activiteiten komen overeen met de geselecteerde periode en het type."
+  },
+  "error": {
+    "title": "Samenvatting kon niet worden geladen",
+    "description": "Er is iets misgegaan bij het laden van je statistieken. Controleer je verbinding en probeer het opnieuw.",
+    "retry": "Opnieuw proberen"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Utente non trovato",
+    "description": "Questo profilo non esiste o non è visibile per te."
+  },
+  "error": {
+    "title": "Impossibile caricare il profilo",
+    "description": "Si è verificato un errore durante il caricamento del profilo.",
+    "retry": "Riprova"
+  },
+  "editProfile": "Modifica profilo",
+  "activities": {
+    "weekNav": "Sfoglia le attività per settimana",
+    "thisWeek": "Questa settimana",
+    "oneYearAgo": "Un anno fa"
+  },
+  "stats": {
+    "thisMonth": "Attività questo mese",
+    "following": "Seguiti",
+    "followers": "Follower"
+  },
+  "tabs": {
+    "activities": "Attività",
+    "following": "Seguiti",
+    "followers": "Follower"
+  },
+  "activitiesError": {
+    "title": "Impossibile caricare le attività",
+    "description": "Si è verificato un errore durante il caricamento delle attività.",
+    "retry": "Riprova"
+  },
+  "listError": {
+    "title": "Impossibile caricare l'elenco",
+    "description": "Si è verificato un errore. Riprova.",
+    "retry": "Riprova"
+  },
+  "follow": {
+    "follow": "Segui",
+    "requested": "Richiesto",
+    "following": "Stai seguendo",
+    "withdraw": "Ritira richiesta",
+    "unfollow": "Smetti di seguire",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "followError": "Impossibile inviare la richiesta di follow.",
+    "unfollowError": "Impossibile aggiornare la richiesta di follow.",
+    "confirmCancelTitle": "Ritira richiesta",
+    "confirmCancelBody": "Ritirare la richiesta di follow a {name}?",
+    "confirmUnfollowTitle": "Smetti di seguire {name}",
+    "confirmUnfollowBody": "Smettere di seguire {name}? Potrai seguirlo di nuovo in seguito."
+  },
+  "list": {
+    "accept": "Accetta",
+    "decline": "Rifiuta",
+    "remove": "Rimuovi",
+    "unfollow": "Smetti di seguire",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "accepted": "Accettata",
+    "pending": "In attesa",
+    "acceptError": "Impossibile accettare la richiesta.",
+    "removeError": "Impossibile aggiornare questo follower.",
+    "unfollowError": "Impossibile smettere di seguire questo utente.",
+    "confirmUnfollowTitle": "Smetti di seguire {name}",
+    "confirmUnfollowBody": "Smettere di seguire {name}? Potrai seguirlo di nuovo in seguito.",
+    "confirmDeclineTitle": "Rifiuta richiesta",
+    "confirmDeclineBody": "Rifiutare la richiesta di follow da {name}?",
+    "confirmRemoveTitle": "Rimuovi follower",
+    "confirmRemoveBody": "Rimuovere {name} dai tuoi follower?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Ancora nessuna attività",
+      "ownDescription": "Le tue attività appariranno qui una volta aggiunte o importate.",
+      "otherTitle": "Nessuna attività da mostrare"
+    },
+    "following": {
+      "ownTitle": "Non stai ancora seguendo nessuno.",
+      "otherTitle": "Non sta ancora seguendo nessuno."
+    },
+    "followers": {
+      "ownTitle": "Non hai ancora nessun follower.",
+      "otherTitle": "Ancora nessun follower."
+    }
+  }
+}

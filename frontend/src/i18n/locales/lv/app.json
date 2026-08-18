@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logotips",
+  "title": "Dizaina sistēmas pamats ir aktīvs",
+  "subtitle": "Tailwind v4, shadcn-vue, stingrs TypeScript un Endurain marķieru palete ir savienoti",
+  "primaryAction": "Primārā darbība",
+  "notFound": {
+    "title": "Lapa nav atrasta",
+    "message": "Meklētā lapa neeksistē vai ir pārvietota",
+    "action": "Doties uz sākumu"
+  },
+  "error": {
+    "title": "Kaut kas nogāja greizi",
+    "message": "Šo sadaļu neizdevās ielādēt. Varat mēģināt vēlreiz.",
+    "retry": "Mēģināt vēlreiz",
+    "toast": "Kaut kas nogāja greizi. Lūdzu, mēģiniet vēlreiz."
+  },
+  "configError": {
+    "title": "Konfigurācijas kļūda",
+    "message": "Lietotne nevarēja sasniegt Endurain aizmugursistēmu. To parasti izraisa trūkstošs vai nepareizi konfigurēts ENDURAIN_HOST vides mainīgais vai tas, ka aizmugursistēma nedarbojas.",
+    "notSet": "(nav iestatīts)",
+    "help": "Pārbaudiet, vai ENDURAIN_HOST norāda uz URL, kurā ir sasniedzama jūsu Endurain instance (piemēram, https://endurain.example.com) un vai aizmugursistēma darbojas, pēc tam pārlādējiet lapu.",
+    "reload": "Pārlādēt"
+  },
+  "dismiss": "Aizvērt",
+  "language": "Valoda",
+  "theme": {
+    "toLight": "Gaišais režīms",
+    "toDark": "Tumšais režīms"
+  },
+  "pagination": {
+    "label": "Lapošana",
+    "previous": "Iepriekšējā lapa",
+    "next": "Nākamā lapa",
+    "goToPage": "Doties uz lapu {page}"
+  },
+  "markdownEditor": {
+    "preview": "Priekšskatījums",
+    "edit": "Rediģēt",
+    "supported": "Markdown tiek atbalstīts",
+    "empty": "Nav ko priekšskatīt"
+  }
+}

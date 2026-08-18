@@ -1,0 +1,648 @@
+{
+  "title": "Terveys",
+  "subtitle": "Näe kaikki terveystietosi yhdessä paikassa",
+  "nav": {
+    "label": "Terveysosiot",
+    "soon": "Pian",
+    "dashboard": "Kojelauta",
+    "sleep": "Uni",
+    "rhr": "Leposyke",
+    "steps": "Askeleet",
+    "weight": "Paino",
+    "fasting": "Paasto",
+    "water": "Vedenjuonti",
+    "poop": "Suolentoiminta"
+  },
+  "dashboard": {
+    "title": "Kojelauta",
+    "subtitle": "Päivittäinen hyvinvointisi yhdellä silmäyksellä",
+    "sleep": "Uni",
+    "restingHeartRate": "Leposyke",
+    "avgSkinTemperatureDeviation": "Ihon lämpöpoikk.",
+    "weight": "Paino",
+    "bmi": "BMI",
+    "steps": "Askeleet",
+    "fasting": "Paasto",
+    "water": "Vedenjuonti",
+    "poop": "Suolentoiminta",
+    "noSleepTarget": "Ei unitavoitetta",
+    "noWeightTarget": "Ei painotavoitetta",
+    "noStepsTarget": "Ei askeltavoitetta",
+    "noFastingTarget": "Ei paastotavoitetta",
+    "noWaterTarget": "Ei vesitavoitetta",
+    "noPoopTarget": "Ei suolentoimintatavoitetta",
+    "stepsTargetLabel": "askelta",
+    "poopTargetLabel": "/ päivä",
+    "noWeightData": "Ei painotietoja",
+    "bmiUnderweight": "Alipaino",
+    "bmiNormalWeight": "Normaalipaino",
+    "bmiOverweight": "Ylipaino",
+    "bmiObesityClass1": "Lihavuus (luokka 1)",
+    "bmiObesityClass2": "Lihavuus (luokka 2)",
+    "bmiObesityClass3": "Sairaalloinen lihavuus (luokka 3)",
+    "hrvBalanced": "Tasapainossa",
+    "hrvUnbalanced": "Epätasapainossa",
+    "hrvLow": "Matala",
+    "hrvPoor": "Heikko",
+    "labelNoData": "Ei tietoja",
+    "errorTitle": "Terveystietojasi ei voitu ladata",
+    "errorDescription": "Päivittäisten terveystilastojesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+    "retry": "Yritä uudelleen"
+  },
+  "weight": {
+    "title": "Paino",
+    "subtitle": "Seuraa painoasi ja kehonkoostumustasi ajan myötä",
+    "logButton": "Kirjaa paino",
+    "targetButton": "Aseta tavoite",
+    "sourceGarmin": "Garmin Connectista",
+    "toggleDetails": "Näytä/piilota kehonkoostumustiedot",
+    "chartTitle": "Painon kehitys",
+    "chartWeightSeries": "Paino",
+    "chartTargetSeries": "Tavoite",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa merkintää",
+      "delete": "Poista merkintä"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Kehon rasva",
+      "bodyWater": "Kehon vesi",
+      "boneMass": "Luumassa",
+      "muscleMass": "Lihasmassa"
+    },
+    "form": {
+      "addTitle": "Kirjaa paino",
+      "editTitle": "Muokkaa painomerkintää",
+      "description": "Kirjaa painosi ja halutessasi kehonkoostumuksesi.",
+      "date": "Päivämäärä",
+      "dateRequired": "Valitse päivämäärä.",
+      "weight": "Paino",
+      "weightRequired": "Anna painosi.",
+      "weightInvalid": "Anna paino, joka on suurempi kuin nolla.",
+      "bodyComposition": "Kehonkoostumus (valinnainen)",
+      "bmi": "BMI",
+      "bodyFat": "Kehon rasva (%)",
+      "bodyWater": "Kehon vesi (%)",
+      "boneMass": "Luumassa",
+      "muscleMass": "Lihasmassa",
+      "create": "Kirjaa",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Paino kirjattu.",
+      "updateSuccess": "Painomerkintä päivitetty.",
+      "saveError": "Painomerkintääsi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta painotavoite",
+      "description": "Valitse tavoitepaino tai tyhjennä kenttä poistaaksesi sen.",
+      "weight": "Tavoitepaino",
+      "hint": "Jätä tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Painotavoite päivitetty.",
+      "saveError": "Painotavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä painomerkintöjä",
+      "description": "Kirjaa painosi aloittaaksesi edistymisesi seuraamisen ajan myötä."
+    },
+    "error": {
+      "title": "Painohistoriaasi ei voitu ladata",
+      "description": "Painomerkintöjesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista painomerkintä",
+      "body": "Tämä painomerkintä poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Painomerkintä poistettu.",
+      "error": "Painomerkintää ei voitu poistaa. Yritä uudelleen."
+    }
+  },
+  "steps": {
+    "title": "Askeleet",
+    "subtitle": "Seuraa päivittäistä askelmäärääsi ajan myötä",
+    "logButton": "Kirjaa askeleet",
+    "targetButton": "Aseta tavoite",
+    "sourceGarmin": "Garmin Connectista",
+    "chartTitle": "Askelten kehitys",
+    "chartStepsSeries": "Askeleet",
+    "chartTargetSeries": "Tavoite",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa merkintää",
+      "delete": "Poista merkintä"
+    },
+    "form": {
+      "addTitle": "Kirjaa askeleet",
+      "editTitle": "Muokkaa askelmerkintää",
+      "description": "Kirjaa päivän askelmääräsi.",
+      "date": "Päivämäärä",
+      "dateRequired": "Valitse päivämäärä.",
+      "steps": "Askeleet",
+      "stepsRequired": "Anna askelmääräsi.",
+      "stepsInvalid": "Anna askelmäärä, joka on suurempi kuin nolla.",
+      "create": "Kirjaa",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Askeleet kirjattu.",
+      "updateSuccess": "Askelmerkintä päivitetty.",
+      "saveError": "Askelmerkintääsi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta askeltavoite",
+      "description": "Valitse päivittäinen askeltavoite tai tyhjennä kenttä poistaaksesi sen.",
+      "steps": "Päivittäinen askeltavoite",
+      "hint": "Jätä tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Askeltavoite päivitetty.",
+      "saveError": "Askeltavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä askelmerkintöjä",
+      "description": "Kirjaa askeleesi aloittaaksesi aktiivisuutesi seuraamisen ajan myötä."
+    },
+    "error": {
+      "title": "Askelhistoriaasi ei voitu ladata",
+      "description": "Askelmerkintöjesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista askelmerkintä",
+      "body": "Tämä askelmerkintä poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Askelmerkintä poistettu.",
+      "error": "Askelmerkintää ei voitu poistaa. Yritä uudelleen."
+    }
+  },
+  "rhr": {
+    "title": "Leposyke",
+    "subtitle": "Seuraa leposykettäsi ajan myötä",
+    "sourceGarmin": "Garmin Connectista",
+    "chartTitle": "Leposykkeen kehitys",
+    "chartSeries": "Leposyke",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "empty": {
+      "title": "Ei vielä leposyketietoja",
+      "description": "Leposyke tallennetaan unesi yhteydessä. Synkronoi sitä seuraava laite nähdäksesi kehityksesi täällä."
+    },
+    "error": {
+      "title": "Leposykehistoriaasi ei voitu ladata",
+      "description": "Leposyketietojesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    }
+  },
+  "sleep": {
+    "title": "Uni",
+    "subtitle": "Seuraa unesi kestoa ja laatua ajan myötä",
+    "logButton": "Kirjaa uni",
+    "targetButton": "Aseta tavoite",
+    "sourceGarmin": "Garmin Connectista",
+    "toggleDetails": "Näytä/piilota unen tiedot",
+    "chartTitle": "Unen kehitys",
+    "chartSleepSeries": "Uni",
+    "chartTargetSeries": "Tavoite",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa merkintää",
+      "delete": "Poista merkintä"
+    },
+    "score": "Pisteet",
+    "hrvBalanced": "Tasapainossa",
+    "hrvUnbalanced": "Epätasapainossa",
+    "hrvLow": "Matala",
+    "hrvPoor": "Heikko",
+    "scoreExcellent": "Erinomainen",
+    "scoreGood": "Hyvä",
+    "scoreFair": "Kohtalainen",
+    "scorePoor": "Heikko",
+    "detail": {
+      "tabsLabel": "Unen tieto-osiot",
+      "tabScore": "Unipisteet",
+      "tabDetails": "Unen tiedot",
+      "deep": "Syvä",
+      "light": "Kevyt",
+      "rem": "REM",
+      "awake": "Hereillä",
+      "score": "Unipisteet",
+      "quality": "Laatu",
+      "duration": "Kesto",
+      "restingHeartRate": "Leposyke",
+      "avgHeartRate": "Keskisyke",
+      "minHeartRate": "Minimisyke",
+      "maxHeartRate": "Maksimisyke",
+      "skinTempDeviation": "Ihon lämpöpoikk.",
+      "hrv": "HRV-tila",
+      "spo2": "Keskim. SpO₂",
+      "lowestSpo2": "Alin SpO₂",
+      "highestSpo2": "Ylin SpO₂",
+      "avgRespiration": "Keskim. hengitys",
+      "lowestRespiration": "Alin hengitys",
+      "highestRespiration": "Ylin hengitys",
+      "avgSleepStress": "Keskim. unistressi",
+      "awakeCount": "Heräämiset",
+      "summary": "Yhteenveto",
+      "breakdown": "Erittely",
+      "overview": "Yleiskatsaus",
+      "heartRate": "Syke",
+      "bloodOxygen": "Veren happi",
+      "respiration": "Hengitys",
+      "avg": "Keskim.",
+      "min": "Min",
+      "max": "Maks",
+      "noData": "Ei tallennettuja tietoja."
+    },
+    "hypnogram": {
+      "title": "Univaiheet",
+      "deep": "Syvä",
+      "light": "Kevyt",
+      "rem": "REM",
+      "awake": "Hereillä",
+      "noData": "Vaiheiden aikajanaa ei ole saatavilla."
+    },
+    "form": {
+      "addTitle": "Kirjaa uni",
+      "editTitle": "Muokkaa unimerkintää",
+      "description": "Kirjaa unesi kesto ja halutessasi vaihe-erittely ja mittarit.",
+      "date": "Päivämäärä",
+      "dateRequired": "Valitse päivämäärä.",
+      "totalSleep": "Kokonaisuni",
+      "totalSleepRequired": "Anna kuinka kauan nukuit.",
+      "hours": "Tunnit",
+      "minutes": "Minuutit",
+      "stageBreakdown": "Vaihe-erittely (valinnainen)",
+      "deep": "Syvä uni",
+      "light": "Kevyt uni",
+      "rem": "REM-uni",
+      "awake": "Hereillä",
+      "metrics": "Mittarit (valinnainen)",
+      "sleepScore": "Unipisteet (0–100)",
+      "restingHeartRate": "Leposyke (bpm)",
+      "skinTempDeviation": "Ihon lämpöpoikkeama (°C)",
+      "spo2": "Keskim. SpO₂ (%)",
+      "sleepTimes": "Uniajat (valinnainen)",
+      "startTime": "Unen alku",
+      "endTime": "Unen loppu",
+      "endBeforeStart": "Unen lopun on oltava aloitusajan jälkeen.",
+      "awakeCount": "Heräämiset",
+      "heartRate": "Syke (valinnainen)",
+      "avgHeartRate": "Keskisyke (bpm)",
+      "minHeartRate": "Minimisyke (bpm)",
+      "maxHeartRate": "Maksimisyke (bpm)",
+      "bloodOxygen": "Veren happi (valinnainen)",
+      "lowestSpo2": "Alin SpO₂ (%)",
+      "highestSpo2": "Ylin SpO₂ (%)",
+      "avgSleepStress": "Keskim. unistressi (0–100)",
+      "sleepStages": "Univaiheet (valinnainen)",
+      "noStages": "Ei vielä lisättyjä vaiheita.",
+      "addStage": "Lisää vaihe",
+      "removeStage": "Poista vaihe",
+      "stageLabel": "Vaihe {index}",
+      "stageType": "Vaihe",
+      "stageDeep": "Syvä",
+      "stageLight": "Kevyt",
+      "stageRem": "REM",
+      "stageAwake": "Hereillä",
+      "stageStart": "Alku",
+      "stageEnd": "Loppu",
+      "stageDuration": "Kesto",
+      "create": "Kirjaa",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Uni kirjattu.",
+      "updateSuccess": "Unimerkintä päivitetty.",
+      "saveError": "Unimerkintääsi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta unitavoite",
+      "description": "Valitse öinen unitavoite tai tyhjennä kentät poistaaksesi sen.",
+      "hours": "Tunnit",
+      "minutes": "Minuutit",
+      "hint": "Jätä tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Unitavoite päivitetty.",
+      "saveError": "Unitavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä unimerkintöjä",
+      "description": "Kirjaa yön uni aloittaaksesi levon seuraamisen ajan myötä."
+    },
+    "error": {
+      "title": "Unihistoriaasi ei voitu ladata",
+      "description": "Unimerkintöjesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista unimerkintä",
+      "body": "Tämä unimerkintä poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Unimerkintä poistettu.",
+      "error": "Unimerkintää ei voitu poistaa. Yritä uudelleen."
+    }
+  },
+  "water": {
+    "title": "Vedenjuonti",
+    "subtitle": "Seuraa päivittäistä vedenjuontiasi ajan myötä",
+    "logButton": "Kirjaa vesi",
+    "targetButton": "Aseta tavoite",
+    "sourceGarmin": "Garmin Connectista",
+    "chartTitle": "Vedenjuonnin kehitys",
+    "chartWaterSeries": "Vesi",
+    "chartTargetSeries": "Tavoite",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa merkintää",
+      "delete": "Poista merkintä"
+    },
+    "form": {
+      "addTitle": "Kirjaa vesi",
+      "editTitle": "Muokkaa vesimerkintää",
+      "description": "Kirjaa päivän vedenjuontisi.",
+      "date": "Päivämäärä",
+      "dateRequired": "Valitse päivämäärä.",
+      "amount": "Määrä",
+      "amountRequired": "Anna määrä.",
+      "amountInvalid": "Anna määrä, joka on suurempi kuin nolla.",
+      "create": "Kirjaa",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Vesi kirjattu.",
+      "updateSuccess": "Vesimerkintä päivitetty.",
+      "saveError": "Vesimerkintääsi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta vesitavoite",
+      "description": "Valitse päivittäinen vesitavoite tai tyhjennä kenttä poistaaksesi sen.",
+      "amount": "Päivittäinen tavoite",
+      "hint": "Jätä tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Vesitavoite päivitetty.",
+      "saveError": "Vesitavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä vesimerkintöjä",
+      "description": "Kirjaa vedenjuontisi aloittaaksesi nesteytyksesi seuraamisen ajan myötä."
+    },
+    "error": {
+      "title": "Vesihistoriaasi ei voitu ladata",
+      "description": "Vesimerkintöjesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista vesimerkintä",
+      "body": "Tämä vesimerkintä poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Vesimerkintä poistettu.",
+      "error": "Vesimerkintää ei voitu poistaa. Yritä uudelleen."
+    }
+  },
+  "poop": {
+    "title": "Suolentoiminta",
+    "subtitle": "Seuraa suolentoimintaasi ajan myötä",
+    "logButton": "Kirjaa merkintä",
+    "targetButton": "Aseta tavoite",
+    "chartTitle": "Päivittäinen tiheys",
+    "chartCountSeries": "Suolentoiminnat",
+    "chartTargetSeries": "Tavoite",
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa merkintää",
+      "delete": "Poista merkintä"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Suolentoiminta"
+    },
+    "form": {
+      "addTitle": "Kirjaa suolentoiminta",
+      "editTitle": "Muokkaa suolentoimintaa",
+      "description": "Kirjaa suolentoimintasi aika ja tiedot.",
+      "dateTime": "Päivämäärä ja aika",
+      "dateTimeRequired": "Valitse päivämäärä ja aika.",
+      "bristolType": "Bristolin ulostetyyppi",
+      "color": "Väri",
+      "notes": "Muistiinpanot",
+      "none": "Ei mitään",
+      "colors": {
+        "brown": "Ruskea",
+        "dark_brown": "Tummanruskea",
+        "light_brown": "Vaaleanruskea",
+        "yellow": "Keltainen",
+        "green": "Vihreä",
+        "black": "Musta",
+        "red": "Punainen",
+        "white": "Valkoinen"
+      },
+      "create": "Kirjaa",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Suolentoiminta kirjattu.",
+      "updateSuccess": "Suolentoiminta päivitetty.",
+      "saveError": "Merkintääsi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta suolentoimintatavoite",
+      "description": "Valitse päivittäinen suolentoimintatavoite tai tyhjennä kenttä poistaaksesi sen.",
+      "count": "Tavoite päivässä",
+      "hint": "Jätä tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Suolentoimintatavoite päivitetty.",
+      "saveError": "Tavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä merkintöjä",
+      "description": "Kirjaa suolentoiminta aloittaaksesi seurannan ajan myötä."
+    },
+    "error": {
+      "title": "Historiaasi ei voitu ladata",
+      "description": "Merkintöjesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista merkintä",
+      "body": "Tämä merkintä poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Merkintä poistettu.",
+      "error": "Merkintää ei voitu poistaa. Yritä uudelleen."
+    }
+  },
+  "fasting": {
+    "title": "Paasto",
+    "subtitle": "Aloita paasto, seuraa edistymistäsi ja tarkastele historiaasi",
+    "startButton": "Aloita paasto",
+    "targetButton": "Aseta tavoite",
+    "sourceGarmin": "Garmin Connectista",
+    "active": {
+      "title": "Paasto käynnissä",
+      "started": "Aloitettu",
+      "target": "Tavoite",
+      "complete": "Valmis",
+      "break": "Lopeta paasto",
+      "cancel": "Peruuta",
+      "completeHint": "Voit lopettaa paaston, kun saavutat tavoitteesi."
+    },
+    "stats": {
+      "totalFasts": "Paastoja yhteensä",
+      "currentStreak": "Nykyinen putki",
+      "longestStreak": "Pisin putki",
+      "avgDuration": "Keskim. kesto",
+      "totalTime": "Kokonaispaastoaika",
+      "completionRate": "Loppuunsaattamisaste",
+      "days": "päivää"
+    },
+    "types": {
+      "16:8": "16:8 (16 h paasto, 8 h syöminen)",
+      "18:6": "18:6 (18 h paasto, 6 h syöminen)",
+      "20:4": "20:4 (20 h paasto, 4 h syöminen)",
+      "OMAD": "OMAD (yksi ateria päivässä)",
+      "24h": "24 tunnin paasto",
+      "36h": "36 tunnin paasto",
+      "48h": "48 tunnin paasto",
+      "72h": "72 tunnin paasto",
+      "custom": "Mukautettu"
+    },
+    "status": {
+      "in_progress": "Käynnissä",
+      "completed": "Valmis",
+      "broken": "Keskeytetty",
+      "cancelled": "Peruutettu"
+    },
+    "interval": {
+      "label": "Aikaväli",
+      "last_7_days": "Viimeiset 7 päivää",
+      "last_30_days": "Viimeiset 30 päivää",
+      "last_90_days": "Viimeiset 90 päivää",
+      "last_year": "Viimeinen vuosi",
+      "all_time": "Kaikki aika"
+    },
+    "actions": {
+      "edit": "Muokkaa paastoa",
+      "delete": "Poista paasto"
+    },
+    "list": {
+      "notesLabel": "Muistiinpanot"
+    },
+    "form": {
+      "addTitle": "Aloita paasto",
+      "editTitle": "Muokkaa paastojaksoa",
+      "description": "Valitse paastoprotokolla ja sen aloitusaika.",
+      "type": "Paastoprotokolla",
+      "customDuration": "Mukautettu kesto",
+      "customDurationHint": "Paaston pituus tunteina (1–72).",
+      "hours": "tuntia",
+      "startTime": "Aloitusaika",
+      "startTimeRequired": "Valitse aloitusaika.",
+      "endTime": "Lopetusaika",
+      "status": "Tila",
+      "notes": "Muistiinpanot",
+      "create": "Aloita",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Paasto aloitettu.",
+      "updateSuccess": "Paastojakso päivitetty.",
+      "saveError": "Paastojaksoasi ei voitu tallentaa. Yritä uudelleen."
+    },
+    "target": {
+      "title": "Aseta paastotavoite",
+      "description": "Valitse tavoitepaaston kesto tai tyhjennä molemmat kentät poistaaksesi sen.",
+      "hours": "Tunnit",
+      "minutes": "Minuutit",
+      "hint": "Jätä molemmat tyhjäksi poistaaksesi tavoitteesi.",
+      "save": "Tallenna",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "saveSuccess": "Paastotavoite päivitetty.",
+      "saveError": "Paastotavoitettasi ei voitu päivittää. Yritä uudelleen."
+    },
+    "complete": {
+      "success": "Paasto päättyi.",
+      "error": "Paastoasi ei voitu päättää. Yritä uudelleen."
+    },
+    "empty": {
+      "title": "Ei vielä paastoja",
+      "description": "Aloita paasto aloittaaksesi paastohistoriasi seuraamisen."
+    },
+    "error": {
+      "title": "Paastohistoriaasi ei voitu ladata",
+      "description": "Paastojaksojesi lataamisessa tapahtui virhe. Yritä uudelleen.",
+      "retry": "Yritä uudelleen"
+    },
+    "delete": {
+      "title": "Poista paastojakso",
+      "body": "Tämä paastojakso poistetaan pysyvästi. Tätä toimintoa ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Paastojakso poistettu.",
+      "error": "Paastojaksoa ei voitu poistaa. Yritä uudelleen."
+    }
+  }
+}

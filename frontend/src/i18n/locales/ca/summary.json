@@ -1,0 +1,49 @@
+{
+  "title": "Resum",
+  "subtitle": "Revisa els totals i tendències del teu entrenament al llarg del temps.",
+  "viewType": {
+    "label": "Període del resum",
+    "week": "Setmana",
+    "month": "Mes",
+    "year": "Any",
+    "lifetime": "Sempre"
+  },
+  "filters": {
+    "type": "Tipus d'activitat",
+    "allTypes": "Tots els tipus"
+  },
+  "period": {
+    "previous": "Període anterior",
+    "next": "Període següent",
+    "picker": "Selecciona el període",
+    "allTime": "Sempre"
+  },
+  "metrics": {
+    "distance": "Distància",
+    "duration": "Durada",
+    "elevation": "Elevació",
+    "calories": "Calories",
+    "activities": "Activitats"
+  },
+  "breakdown": {
+    "title": "Desglossament",
+    "period": "Període",
+    "weekNumber": "Setmana {number}"
+  },
+  "typeBreakdown": {
+    "title": "Per tipus d'activitat",
+    "type": "Tipus"
+  },
+  "activities": {
+    "title": "Activitats en aquest període"
+  },
+  "empty": {
+    "title": "Sense activitat en aquest període",
+    "description": "Cap activitat coincideix amb el període i tipus seleccionats."
+  },
+  "error": {
+    "title": "No s'ha pogut carregar el resum",
+    "description": "S'ha produït un error en carregar les teves estadístiques. Comprova la connexió i torna-ho a intentar.",
+    "retry": "Torna-ho a intentar"
+  }
+}

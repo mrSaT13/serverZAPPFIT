@@ -1,0 +1,152 @@
+{
+  "title": "Felszerelés",
+  "subtitle": "Kerékpárok, cipők és eszközök, amelyekkel tevékenységeket rögzítesz",
+  "buttonAddGear": "Felszerelés hozzáadása",
+  "searchPlaceholder": "Keresés becenév szerint",
+  "clearSearch": "Keresés törlése",
+  "showInactive": "Inaktívak megjelenítése",
+  "inactive": "Inaktív",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Szűrők",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Kerékpár",
+    "shoes": "Cipő",
+    "wetsuit": "Búvárruha",
+    "racquet": "Ütő",
+    "skis": "Síléc",
+    "snowboard": "Snowboard",
+    "windsurf": "Szörfdeszka",
+    "waterSportsBoard": "Vízisportdeszka",
+    "unknown": "Felszerelés"
+  },
+  "actions": {
+    "edit": "Felszerelés szerkesztése",
+    "delete": "Felszerelés törlése"
+  },
+  "form": {
+    "title": "Statisztikák",
+    "addTitle": "Felszerelés hozzáadása",
+    "editTitle": "Felszerelés szerkesztése",
+    "description": "Kövesd nyomon a tevékenységeidhez használt eszközöket.",
+    "nickname": "Becenév",
+    "nicknameRequired": "A becenév megadása kötelező",
+    "nicknameTooLong": "A becenév legfeljebb 250 karakter lehet",
+    "nicknameTaken": "Már van ilyen becenevű felszerelésed",
+    "gearType": "Típus",
+    "brand": "Márka",
+    "brandTooLong": "A márka legfeljebb 250 karakter lehet",
+    "model": "Modell",
+    "modelTooLong": "A modell legfeljebb 250 karakter lehet",
+    "active": "Aktív",
+    "createdAt": "Létrehozva",
+    "createdAtRequired": "A létrehozási dátum megadása kötelező",
+    "initialDistance": "Kezdeti távolság",
+    "purchaseValue": "Vásárlási érték",
+    "totalCost": "Teljes költség",
+    "create": "Felszerelés hozzáadása",
+    "save": "Módosítások mentése",
+    "cancel": "Mégse",
+    "close": "Bezárás",
+    "createSuccess": "Felszerelés hozzáadva",
+    "updateSuccess": "Felszerelés frissítve",
+    "saveError": "Nem sikerült menteni a felszerelést. Kérjük, próbáld újra."
+  },
+  "delete": {
+    "title": "Felszerelés törlése",
+    "body": "Biztosan törölni szeretnéd a(z) „{nickname}” felszerelést? Ezt nem lehet visszavonni.",
+    "confirm": "Törlés",
+    "cancel": "Mégse",
+    "close": "Bezárás",
+    "success": "Felszerelés törölve",
+    "error": "Nem sikerült törölni a felszerelést. Kérjük, próbáld újra."
+  },
+  "error": {
+    "title": "Nem sikerült betölteni a felszerelést",
+    "description": "Valami hiba történt a felszerelésed betöltése közben.",
+    "retry": "Próbáld újra"
+  },
+  "empty": {
+    "title": "Még nincs felszerelés",
+    "description": "Add hozzá a használt kerékpárokat, cipőket és eszközöket, hogy nyomon követhesd a használatukat.",
+    "searchTitle": "Nincs a keresésnek megfelelő felszerelés",
+    "searchDescription": "Próbálj másik becenevet.",
+    "activeTitle": "Nincs aktív felszerelés",
+    "activeDescription": "Adj hozzá felszerelést, vagy kapcsold be az „Inaktívak megjelenítése” lehetőséget az inaktív felszerelések megtekintéséhez."
+  },
+  "detail": {
+    "back": "Vissza a felszereléshez",
+    "notFoundTitle": "A felszerelés nem található",
+    "notFoundDescription": "Lehet, hogy ezt a felszerelést törölték, vagy nem hozzád tartozik.",
+    "totalDistance": "Táv",
+    "totalTime": "Idő",
+    "componentsCost": "Alkatrészek"
+  },
+  "components": {
+    "title": "Alkatrészek",
+    "add": "Alkatrész hozzáadása",
+    "empty": "Még nincsenek alkatrészek. Add hozzá azokat az alkatrészeket, amelyek kopását nyomon szeretnéd követni.",
+    "unsupported": "Ennél a felszereléstípusnál nem követhetők nyomon az alkatrészek.",
+    "noneActive": "Minden alkatrész inaktív. Kapcsold be az „Inaktívak megjelenítése” lehetőséget a megtekintésükhöz.",
+    "inactive": "Inaktív",
+    "unitHours": "ó",
+    "purchasedOn": "Vásárolva: {date}",
+    "wearLabel": "{name} kopás",
+    "actions": {
+      "edit": "Alkatrész szerkesztése",
+      "delete": "Alkatrész törlése"
+    },
+    "form": {
+      "addTitle": "Alkatrész hozzáadása",
+      "editTitle": "Alkatrész szerkesztése",
+      "description": "Kövesd nyomon a cserélt alkatrészeket a kopásuk figyeléséhez.",
+      "type": "Típus",
+      "typePlaceholder": "Válassz típust",
+      "typeRequired": "A típus megadása kötelező",
+      "brand": "Márka",
+      "brandRequired": "A márka megadása kötelező",
+      "brandTooLong": "A márka legfeljebb 250 karakter lehet",
+      "model": "Modell",
+      "modelRequired": "A modell megadása kötelező",
+      "modelTooLong": "A modell legfeljebb 250 karakter lehet",
+      "purchaseDate": "Vásárlás dátuma",
+      "purchaseDateRequired": "A vásárlási dátum megadása kötelező",
+      "retiredDate": "Leselejtezés dátuma",
+      "expectedDistance": "Várható távolság",
+      "expectedTime": "Várható idő",
+      "purchaseValue": "Vásárlási érték",
+      "active": "Aktív",
+      "retiredBeforePurchase": "A leselejtezés dátumának a vásárlás dátuma utáninak kell lennie.",
+      "create": "Alkatrész hozzáadása",
+      "save": "Módosítások mentése",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Alkatrész hozzáadva",
+      "updateSuccess": "Alkatrész frissítve",
+      "saveError": "Nem sikerült menteni az alkatrészt. Kérjük, próbáld újra."
+    },
+    "delete": {
+      "title": "Alkatrész törlése",
+      "body": "Biztosan törölni szeretnéd a(z) „{name}” alkatrészt? Ezt nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Alkatrész törölve",
+      "error": "Nem sikerült törölni az alkatrészt. Kérjük, próbáld újra."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni az alkatrészeket",
+      "description": "Valami hiba történt ennek a felszerelésnek az alkatrészei betöltése közben."
+    }
+  },
+  "activities": {
+    "title": "Tevékenységek",
+    "empty": "Még nincs ezzel a felszereléssel rögzített tevékenység.",
+    "error": {
+      "title": "Nem sikerült betölteni a tevékenységeket",
+      "description": "Valami hiba történt ennek a felszerelésnek a tevékenységei betöltése közben."
+    }
+  }
+}

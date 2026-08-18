@@ -1,0 +1,152 @@
+{
+  "title": "Equipament",
+  "subtitle": "Bicicletes, sabatilles i equipament amb el qual registres activitats",
+  "buttonAddGear": "Afegeix equipament",
+  "searchPlaceholder": "Cerca per sobrenom",
+  "clearSearch": "Esborra la cerca",
+  "showInactive": "Mostra els inactius",
+  "inactive": "Inactiu",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtres",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicicleta",
+    "shoes": "Sabatilles",
+    "wetsuit": "Vestit de neoprè",
+    "racquet": "Raqueta",
+    "skis": "Esquís",
+    "snowboard": "Snowboard",
+    "windsurf": "Taula de windsurf",
+    "waterSportsBoard": "Taula d'esports aquàtics",
+    "unknown": "Equipament"
+  },
+  "actions": {
+    "edit": "Edita l'equipament",
+    "delete": "Elimina l'equipament"
+  },
+  "form": {
+    "title": "Estadístiques",
+    "addTitle": "Afegeix equipament",
+    "editTitle": "Edita l'equipament",
+    "description": "Fes un seguiment de l'equipament que fas servir per a les teves activitats.",
+    "nickname": "Sobrenom",
+    "nicknameRequired": "El sobrenom és obligatori",
+    "nicknameTooLong": "El sobrenom ha de tenir 250 caràcters o menys",
+    "nicknameTaken": "Ja tens equipament amb aquest sobrenom",
+    "gearType": "Tipus",
+    "brand": "Marca",
+    "brandTooLong": "La marca ha de tenir 250 caràcters o menys",
+    "model": "Model",
+    "modelTooLong": "El model ha de tenir 250 caràcters o menys",
+    "active": "Actiu",
+    "createdAt": "Creat el",
+    "createdAtRequired": "Cal una data de creació",
+    "initialDistance": "Distància inicial",
+    "purchaseValue": "Valor de compra",
+    "totalCost": "Cost total",
+    "create": "Afegeix equipament",
+    "save": "Desa els canvis",
+    "cancel": "Cancel·la",
+    "close": "Tanca",
+    "createSuccess": "Equipament afegit",
+    "updateSuccess": "Equipament actualitzat",
+    "saveError": "No s'ha pogut desar l'equipament. Torna-ho a intentar."
+  },
+  "delete": {
+    "title": "Elimina l'equipament",
+    "body": "Segur que vols eliminar \"{nickname}\"? Aquesta acció no es pot desfer.",
+    "confirm": "Elimina",
+    "cancel": "Cancel·la",
+    "close": "Tanca",
+    "success": "Equipament eliminat",
+    "error": "No s'ha pogut eliminar l'equipament. Torna-ho a intentar."
+  },
+  "error": {
+    "title": "No s'ha pogut carregar l'equipament",
+    "description": "S'ha produït un error en carregar el teu equipament.",
+    "retry": "Torna-ho a intentar"
+  },
+  "empty": {
+    "title": "Encara no hi ha equipament",
+    "description": "Afegeix les bicicletes, sabatilles i equipament que fas servir per començar a fer-ne el seguiment.",
+    "searchTitle": "Cap equipament coincideix amb la cerca",
+    "searchDescription": "Prova un sobrenom diferent.",
+    "activeTitle": "Sense equipament actiu",
+    "activeDescription": "Afegeix equipament, o activa \"Mostra els inactius\" per veure l'equipament inactiu."
+  },
+  "detail": {
+    "back": "Torna a l'equipament",
+    "notFoundTitle": "Equipament no trobat",
+    "notFoundDescription": "Aquest equipament pot haver estat eliminat o no et pertany.",
+    "totalDistance": "Distància",
+    "totalTime": "Temps",
+    "componentsCost": "Components"
+  },
+  "components": {
+    "title": "Components",
+    "add": "Afegeix component",
+    "empty": "Encara no hi ha components. Afegeix les peces de les quals vols fer el seguiment del desgast.",
+    "unsupported": "Aquest tipus d'equipament no fa el seguiment de components.",
+    "noneActive": "Tots els components estan inactius. Activa \"Mostra els inactius\" per veure'ls.",
+    "inactive": "Inactiu",
+    "unitHours": "h",
+    "purchasedOn": "Comprat el {date}",
+    "wearLabel": "Desgast de {name}",
+    "actions": {
+      "edit": "Edita el component",
+      "delete": "Elimina el component"
+    },
+    "form": {
+      "addTitle": "Afegeix component",
+      "editTitle": "Edita el component",
+      "description": "Fes un seguiment de les peces que canvies per controlar-ne el desgast.",
+      "type": "Tipus",
+      "typePlaceholder": "Selecciona un tipus",
+      "typeRequired": "Cal un tipus",
+      "brand": "Marca",
+      "brandRequired": "La marca és obligatòria",
+      "brandTooLong": "La marca ha de tenir 250 caràcters o menys",
+      "model": "Model",
+      "modelRequired": "El model és obligatori",
+      "modelTooLong": "El model ha de tenir 250 caràcters o menys",
+      "purchaseDate": "Data de compra",
+      "purchaseDateRequired": "Cal una data de compra",
+      "retiredDate": "Data de retirada",
+      "expectedDistance": "Distància esperada",
+      "expectedTime": "Temps esperat",
+      "purchaseValue": "Valor de compra",
+      "active": "Actiu",
+      "retiredBeforePurchase": "La data de retirada ha de ser posterior a la de compra.",
+      "create": "Afegeix component",
+      "save": "Desa els canvis",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Component afegit",
+      "updateSuccess": "Component actualitzat",
+      "saveError": "No s'ha pogut desar el component. Torna-ho a intentar."
+    },
+    "delete": {
+      "title": "Elimina el component",
+      "body": "Segur que vols eliminar \"{name}\"? Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Component eliminat",
+      "error": "No s'ha pogut eliminar el component. Torna-ho a intentar."
+    },
+    "error": {
+      "title": "No s'han pogut carregar els components",
+      "description": "S'ha produït un error en carregar els components d'aquest equipament."
+    }
+  },
+  "activities": {
+    "title": "Activitats",
+    "empty": "Encara no s'han registrat activitats amb aquest equipament.",
+    "error": {
+      "title": "No s'han pogut carregar les activitats",
+      "description": "S'ha produït un error en carregar les activitats d'aquest equipament."
+    }
+  }
+}

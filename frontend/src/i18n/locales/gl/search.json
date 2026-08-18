@@ -1,0 +1,43 @@
+{
+  "title": "Buscar",
+  "subtitle": "Atopa usuarios, actividades e equipamento en Endurain.",
+  "placeholder": "Buscar…",
+  "clear": "Limpar busca",
+  "scopes": {
+    "users": "Usuarios",
+    "activities": "Actividades",
+    "gears": "Equipamento"
+  },
+  "filters": {
+    "all": "Todos os tipos",
+    "activityType": "Filtrar por tipo de actividade",
+    "gearType": "Filtrar por tipo de equipamento"
+  },
+  "activityCategories": {
+    "running": "Carreira",
+    "cycling": "Ciclismo",
+    "swimming": "Natación",
+    "walking": "Camiñada e sendeirismo",
+    "racquet": "Deportes de raqueta",
+    "rowing": "Remo e piragüismo",
+    "winterSports": "Deportes de inverno",
+    "waterSports": "Deportes acuáticos",
+    "skating": "Patinaxe"
+  },
+  "results": {
+    "inactive": "Inactivo"
+  },
+  "idle": {
+    "title": "Buscar en Endurain",
+    "description": "Escolle o que queres buscar e comeza a escribir para ver resultados."
+  },
+  "empty": {
+    "title": "Sen resultados",
+    "description": "Nada coincide con \"{term}\". Proba cunha busca diferente."
+  },
+  "error": {
+    "title": "A busca fallou",
+    "description": "Non puidemos executar a túa busca. Comproba a túa conexión e téntao de novo.",
+    "retry": "Tentar de novo"
+  }
+}

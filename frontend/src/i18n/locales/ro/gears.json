@@ -1,0 +1,152 @@
+{
+  "title": "Echipament",
+  "subtitle": "Biciclete, încălțăminte și echipamentul cu care îți urmărești activitățile",
+  "buttonAddGear": "Adaugă echipament",
+  "searchPlaceholder": "Caută după poreclă",
+  "clearSearch": "Șterge căutarea",
+  "showInactive": "Arată inactive",
+  "inactive": "Inactiv",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtre",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicicletă",
+    "shoes": "Încălțăminte",
+    "wetsuit": "Costum de neopren",
+    "racquet": "Rachetă",
+    "skis": "Schiuri",
+    "snowboard": "Snowboard",
+    "windsurf": "Placă de windsurf",
+    "waterSportsBoard": "Placă pentru sporturi nautice",
+    "unknown": "Echipament"
+  },
+  "actions": {
+    "edit": "Editează echipamentul",
+    "delete": "Șterge echipamentul"
+  },
+  "form": {
+    "title": "Statistici",
+    "addTitle": "Adaugă echipament",
+    "editTitle": "Editează echipamentul",
+    "description": "Urmărește echipamentul pe care îl folosești pentru activitățile tale.",
+    "nickname": "Poreclă",
+    "nicknameRequired": "Porecla este obligatorie",
+    "nicknameTooLong": "Porecla trebuie să aibă cel mult 250 de caractere",
+    "nicknameTaken": "Ai deja un echipament cu acea poreclă",
+    "gearType": "Tip",
+    "brand": "Marcă",
+    "brandTooLong": "Marca trebuie să aibă cel mult 250 de caractere",
+    "model": "Model",
+    "modelTooLong": "Modelul trebuie să aibă cel mult 250 de caractere",
+    "active": "Activ",
+    "createdAt": "Creat la",
+    "createdAtRequired": "Este necesară o dată de creare",
+    "initialDistance": "Distanță inițială",
+    "purchaseValue": "Valoare de achiziție",
+    "totalCost": "Cost total",
+    "create": "Adaugă echipament",
+    "save": "Salvează modificările",
+    "cancel": "Anulează",
+    "close": "Închide",
+    "createSuccess": "Echipament adăugat",
+    "updateSuccess": "Echipament actualizat",
+    "saveError": "Nu am putut salva echipamentul. Te rugăm să încerci din nou."
+  },
+  "delete": {
+    "title": "Șterge echipamentul",
+    "body": "Sigur dorești să ștergi „{nickname}”? Acțiunea nu poate fi anulată.",
+    "confirm": "Șterge",
+    "cancel": "Anulează",
+    "close": "Închide",
+    "success": "Echipament șters",
+    "error": "Nu am putut șterge echipamentul. Te rugăm să încerci din nou."
+  },
+  "error": {
+    "title": "Nu am putut încărca echipamentul",
+    "description": "Ceva nu a mers bine la încărcarea echipamentului tău.",
+    "retry": "Încearcă din nou"
+  },
+  "empty": {
+    "title": "Încă niciun echipament",
+    "description": "Adaugă bicicletele, încălțămintea și echipamentul pe care îl folosești pentru a începe să urmărești utilizarea lor.",
+    "searchTitle": "Niciun echipament nu corespunde căutării tale",
+    "searchDescription": "Încearcă o altă poreclă.",
+    "activeTitle": "Niciun echipament activ",
+    "activeDescription": "Adaugă echipament sau activează „Arată inactive” pentru a vedea echipamentul inactiv."
+  },
+  "detail": {
+    "back": "Înapoi la echipament",
+    "notFoundTitle": "Echipamentul nu a fost găsit",
+    "notFoundDescription": "Acest echipament poate să fi fost șters sau nu îți aparține.",
+    "totalDistance": "Distanță",
+    "totalTime": "Timp",
+    "componentsCost": "Componente"
+  },
+  "components": {
+    "title": "Componente",
+    "add": "Adaugă componentă",
+    "empty": "Încă nicio componentă. Adaugă piesele a căror uzură vrei să o urmărești.",
+    "unsupported": "Acest tip de echipament nu urmărește componente.",
+    "noneActive": "Toate componentele sunt inactive. Activează „Arată inactive” pentru a le vedea.",
+    "inactive": "Inactiv",
+    "unitHours": "h",
+    "purchasedOn": "Achiziționat la {date}",
+    "wearLabel": "Uzură {name}",
+    "actions": {
+      "edit": "Editează componenta",
+      "delete": "Șterge componenta"
+    },
+    "form": {
+      "addTitle": "Adaugă componentă",
+      "editTitle": "Editează componenta",
+      "description": "Urmărește piesele pe care le înlocuiești pentru a le monitoriza uzura.",
+      "type": "Tip",
+      "typePlaceholder": "Selectează un tip",
+      "typeRequired": "Este necesar un tip",
+      "brand": "Marcă",
+      "brandRequired": "Marca este obligatorie",
+      "brandTooLong": "Marca trebuie să aibă cel mult 250 de caractere",
+      "model": "Model",
+      "modelRequired": "Modelul este obligatoriu",
+      "modelTooLong": "Modelul trebuie să aibă cel mult 250 de caractere",
+      "purchaseDate": "Achiziționat la",
+      "purchaseDateRequired": "Este necesară o dată de achiziție",
+      "retiredDate": "Scos din uz la",
+      "expectedDistance": "Distanță estimată",
+      "expectedTime": "Timp estimat",
+      "purchaseValue": "Valoare de achiziție",
+      "active": "Activ",
+      "retiredBeforePurchase": "Data scoaterii din uz trebuie să fie ulterioară datei de achiziție.",
+      "create": "Adaugă componentă",
+      "save": "Salvează modificările",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Componentă adăugată",
+      "updateSuccess": "Componentă actualizată",
+      "saveError": "Nu am putut salva componenta. Te rugăm să încerci din nou."
+    },
+    "delete": {
+      "title": "Șterge componenta",
+      "body": "Sigur dorești să ștergi „{name}”? Acțiunea nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Componentă ștearsă",
+      "error": "Nu am putut șterge componenta. Te rugăm să încerci din nou."
+    },
+    "error": {
+      "title": "Nu am putut încărca componentele",
+      "description": "Ceva nu a mers bine la încărcarea componentelor acestui echipament."
+    }
+  },
+  "activities": {
+    "title": "Activități",
+    "empty": "Încă nicio activitate înregistrată cu acest echipament.",
+    "error": {
+      "title": "Nu am putut încărca activitățile",
+      "description": "Ceva nu a mers bine la încărcarea activităților acestui echipament."
+    }
+  }
+}

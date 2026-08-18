@@ -1,0 +1,73 @@
+{
+  "addActivity": "Tilføj aktivitet",
+  "upload": {
+    "uploading": "Uploader…",
+    "success": "Aktivitet uploadet",
+    "error": "Kunne ikke uploade aktivitetsfilen"
+  },
+  "refresh": {
+    "label": "Opdatér",
+    "refreshing": "Opdaterer…",
+    "success": "Opdatering startet",
+    "error": "Kunne ikke opdatere aktiviteter"
+  },
+  "feed": {
+    "scopeLabel": "Feed-omfang",
+    "myActivities": "Mine aktiviteter",
+    "following": "Følger",
+    "loadMore": "Indlæs mere",
+    "loading": "Indlæser…",
+    "error": {
+      "title": "Kunne ikke indlæse aktiviteter",
+      "description": "Noget gik galt under indlæsningen af feedet.",
+      "retry": "Prøv igen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Ingen aktiviteter endnu",
+        "description": "Tilføj en aktivitet eller forbind en integration for at komme i gang."
+      },
+      "following": {
+        "title": "Intet her endnu",
+        "description": "Aktiviteter fra folk, du følger, vises her."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistik",
+    "metricLabel": "Statistikmål",
+    "thisWeek": "Denne uge",
+    "thisMonth": "Denne måned",
+    "empty": "Ingen aktivitet i denne periode",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distance",
+      "time": "Tid",
+      "calories": "Kalorier"
+    }
+  },
+  "sports": {
+    "run": "Løb",
+    "bike": "Cykling",
+    "swim": "Svømning",
+    "walk": "Gåtur",
+    "hike": "Vandring",
+    "rowing": "Roning",
+    "snow_ski": "Skiløb",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surfing",
+    "kayaking": "Kajakroning",
+    "sailing": "Sejlads",
+    "snowshoeing": "Snesko-vandring",
+    "inline_skating": "Rulleskøjteløb"
+  },
+  "goals": {
+    "title": "Mål",
+    "empty": {
+      "title": "Ingen mål sat",
+      "description": "Sæt mål i indstillingerne for at følge dine fremskridt her."
+    }
+  }
+}

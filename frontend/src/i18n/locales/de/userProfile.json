@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Benutzer nicht gefunden",
+    "description": "Dieses Profil existiert nicht oder ist für dich nicht sichtbar."
+  },
+  "error": {
+    "title": "Profil konnte nicht geladen werden",
+    "description": "Beim Laden dieses Profils ist etwas schiefgelaufen.",
+    "retry": "Erneut versuchen"
+  },
+  "editProfile": "Profil bearbeiten",
+  "activities": {
+    "weekNav": "Aktivitäten nach Woche durchsuchen",
+    "thisWeek": "Diese Woche",
+    "oneYearAgo": "Vor einem Jahr"
+  },
+  "stats": {
+    "thisMonth": "Aktivitäten diesen Monat",
+    "following": "Gefolgt",
+    "followers": "Follower"
+  },
+  "tabs": {
+    "activities": "Aktivitäten",
+    "following": "Gefolgt",
+    "followers": "Follower"
+  },
+  "activitiesError": {
+    "title": "Aktivitäten konnten nicht geladen werden",
+    "description": "Beim Laden der Aktivitäten ist etwas schiefgelaufen.",
+    "retry": "Erneut versuchen"
+  },
+  "listError": {
+    "title": "Liste konnte nicht geladen werden",
+    "description": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "retry": "Erneut versuchen"
+  },
+  "follow": {
+    "follow": "Folgen",
+    "requested": "Angefragt",
+    "following": "Gefolgt",
+    "withdraw": "Anfrage zurückziehen",
+    "unfollow": "Entfolgen",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "followError": "Follower-Anfrage konnte nicht gesendet werden.",
+    "unfollowError": "Follower-Anfrage konnte nicht aktualisiert werden.",
+    "confirmCancelTitle": "Anfrage zurückziehen",
+    "confirmCancelBody": "Deine Follower-Anfrage an {name} zurückziehen?",
+    "confirmUnfollowTitle": "{name} entfolgen",
+    "confirmUnfollowBody": "{name} nicht mehr folgen? Du kannst ihm/ihr später wieder folgen."
+  },
+  "list": {
+    "accept": "Annehmen",
+    "decline": "Ablehnen",
+    "remove": "Entfernen",
+    "unfollow": "Entfolgen",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "accepted": "Angenommen",
+    "pending": "Ausstehend",
+    "acceptError": "Anfrage konnte nicht angenommen werden.",
+    "removeError": "Dieser Follower konnte nicht aktualisiert werden.",
+    "unfollowError": "Diesem Benutzer konnte nicht entfolgt werden.",
+    "confirmUnfollowTitle": "{name} entfolgen",
+    "confirmUnfollowBody": "{name} nicht mehr folgen? Du kannst ihm/ihr später wieder folgen.",
+    "confirmDeclineTitle": "Anfrage ablehnen",
+    "confirmDeclineBody": "Die Follower-Anfrage von {name} ablehnen?",
+    "confirmRemoveTitle": "Follower entfernen",
+    "confirmRemoveBody": "{name} aus deinen Followern entfernen?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Noch keine Aktivitäten",
+      "ownDescription": "Deine Aktivitäten werden hier angezeigt, sobald du sie hinzufügst oder importierst.",
+      "otherTitle": "Keine Aktivitäten zu zeigen"
+    },
+    "following": {
+      "ownTitle": "Du folgst noch niemandem.",
+      "otherTitle": "Folgt noch niemandem."
+    },
+    "followers": {
+      "ownTitle": "Du hast noch keine Follower.",
+      "otherTitle": "Noch keine Follower."
+    }
+  }
+}

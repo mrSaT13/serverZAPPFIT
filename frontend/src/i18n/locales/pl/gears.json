@@ -1,0 +1,152 @@
+{
+  "title": "Sprzęt",
+  "subtitle": "Rowery, buty i wyposażenie, którym rejestrujesz aktywności",
+  "buttonAddGear": "Dodaj sprzęt",
+  "searchPlaceholder": "Szukaj według nazwy",
+  "clearSearch": "Wyczyść wyszukiwanie",
+  "showInactive": "Pokaż nieaktywne",
+  "inactive": "Nieaktywny",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtry",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Rower",
+    "shoes": "Buty",
+    "wetsuit": "Pianka",
+    "racquet": "Rakieta",
+    "skis": "Narty",
+    "snowboard": "Snowboard",
+    "windsurf": "Deska do windsurfingu",
+    "waterSportsBoard": "Deska do sportów wodnych",
+    "unknown": "Sprzęt"
+  },
+  "actions": {
+    "edit": "Edytuj sprzęt",
+    "delete": "Usuń sprzęt"
+  },
+  "form": {
+    "title": "Statystyki",
+    "addTitle": "Dodaj sprzęt",
+    "editTitle": "Edytuj sprzęt",
+    "description": "Śledź wyposażenie, którego używasz do swoich aktywności.",
+    "nickname": "Nazwa",
+    "nicknameRequired": "Nazwa jest wymagana",
+    "nicknameTooLong": "Nazwa może mieć maksymalnie 250 znaków",
+    "nicknameTaken": "Masz już sprzęt o tej nazwie",
+    "gearType": "Typ",
+    "brand": "Marka",
+    "brandTooLong": "Marka może mieć maksymalnie 250 znaków",
+    "model": "Model",
+    "modelTooLong": "Model może mieć maksymalnie 250 znaków",
+    "active": "Aktywny",
+    "createdAt": "Data utworzenia",
+    "createdAtRequired": "Data utworzenia jest wymagana",
+    "initialDistance": "Dystans początkowy",
+    "purchaseValue": "Wartość zakupu",
+    "totalCost": "Koszt całkowity",
+    "create": "Dodaj sprzęt",
+    "save": "Zapisz zmiany",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "createSuccess": "Dodano sprzęt",
+    "updateSuccess": "Zaktualizowano sprzęt",
+    "saveError": "Nie udało się zapisać sprzętu. Spróbuj ponownie."
+  },
+  "delete": {
+    "title": "Usuń sprzęt",
+    "body": "Czy na pewno chcesz usunąć \"{nickname}\"? Tej operacji nie można cofnąć.",
+    "confirm": "Usuń",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "success": "Usunięto sprzęt",
+    "error": "Nie udało się usunąć sprzętu. Spróbuj ponownie."
+  },
+  "error": {
+    "title": "Nie udało się wczytać sprzętu",
+    "description": "Coś poszło nie tak podczas wczytywania sprzętu.",
+    "retry": "Spróbuj ponownie"
+  },
+  "empty": {
+    "title": "Brak sprzętu",
+    "description": "Dodaj rowery, buty i wyposażenie, którego używasz, aby zacząć śledzić ich zużycie.",
+    "searchTitle": "Żaden sprzęt nie pasuje do wyszukiwania",
+    "searchDescription": "Spróbuj innej nazwy.",
+    "activeTitle": "Brak aktywnego sprzętu",
+    "activeDescription": "Dodaj sprzęt lub włącz „Pokaż nieaktywne”, aby zobaczyć nieaktywny sprzęt."
+  },
+  "detail": {
+    "back": "Powrót do sprzętu",
+    "notFoundTitle": "Nie znaleziono sprzętu",
+    "notFoundDescription": "Ten sprzęt mógł zostać usunięty lub nie należy do Ciebie.",
+    "totalDistance": "Dystans",
+    "totalTime": "Czas",
+    "componentsCost": "Komponenty"
+  },
+  "components": {
+    "title": "Komponenty",
+    "add": "Dodaj komponent",
+    "empty": "Brak komponentów. Dodaj części, których zużycie chcesz śledzić.",
+    "unsupported": "Ten typ sprzętu nie śledzi komponentów.",
+    "noneActive": "Wszystkie komponenty są nieaktywne. Włącz „Pokaż nieaktywne”, aby je zobaczyć.",
+    "inactive": "Nieaktywny",
+    "unitHours": "h",
+    "purchasedOn": "Zakupiono {date}",
+    "wearLabel": "Zużycie: {name}",
+    "actions": {
+      "edit": "Edytuj komponent",
+      "delete": "Usuń komponent"
+    },
+    "form": {
+      "addTitle": "Dodaj komponent",
+      "editTitle": "Edytuj komponent",
+      "description": "Śledź wymieniane części, aby monitorować ich zużycie.",
+      "type": "Typ",
+      "typePlaceholder": "Wybierz typ",
+      "typeRequired": "Typ jest wymagany",
+      "brand": "Marka",
+      "brandRequired": "Marka jest wymagana",
+      "brandTooLong": "Marka może mieć maksymalnie 250 znaków",
+      "model": "Model",
+      "modelRequired": "Model jest wymagany",
+      "modelTooLong": "Model może mieć maksymalnie 250 znaków",
+      "purchaseDate": "Data zakupu",
+      "purchaseDateRequired": "Data zakupu jest wymagana",
+      "retiredDate": "Data wycofania",
+      "expectedDistance": "Oczekiwany dystans",
+      "expectedTime": "Oczekiwany czas",
+      "purchaseValue": "Wartość zakupu",
+      "active": "Aktywny",
+      "retiredBeforePurchase": "Data wycofania musi być późniejsza niż data zakupu.",
+      "create": "Dodaj komponent",
+      "save": "Zapisz zmiany",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Dodano komponent",
+      "updateSuccess": "Zaktualizowano komponent",
+      "saveError": "Nie udało się zapisać komponentu. Spróbuj ponownie."
+    },
+    "delete": {
+      "title": "Usuń komponent",
+      "body": "Czy na pewno chcesz usunąć \"{name}\"? Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto komponent",
+      "error": "Nie udało się usunąć komponentu. Spróbuj ponownie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać komponentów",
+      "description": "Coś poszło nie tak podczas wczytywania komponentów tego sprzętu."
+    }
+  },
+  "activities": {
+    "title": "Aktywności",
+    "empty": "Nie zarejestrowano jeszcze żadnych aktywności z tym sprzętem.",
+    "error": {
+      "title": "Nie udało się wczytać aktywności",
+      "description": "Coś poszło nie tak podczas wczytywania aktywności tego sprzętu."
+    }
+  }
+}

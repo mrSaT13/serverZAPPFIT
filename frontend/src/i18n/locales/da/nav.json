@@ -1,0 +1,22 @@
+{
+  "home": "Forside",
+  "search": "Søg",
+  "activities": "Aktiviteter",
+  "activitiesList": "Liste",
+  "summary": "Oversigt",
+  "gear": "Udstyr",
+  "health": "Helbred",
+  "alerts": "Notifikationer",
+  "settings": "Indstillinger",
+  "profile": "Profil",
+  "login": "Log ind",
+  "logout": "Log ud",
+  "userMenu": "Brugermenu",
+  "menu": "Menu",
+  "primary": "Primær navigation",
+  "account": "Konto",
+  "preferences": "Præferencer",
+  "updateAvailable": "Opdatering tilgængelig",
+  "updateAvailableTitle": "Version {version} er tilgængelig",
+  "updateViewRelease": "Se udgivelsesnoter"
+}

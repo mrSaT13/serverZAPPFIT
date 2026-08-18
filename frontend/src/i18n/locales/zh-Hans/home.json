@@ -1,0 +1,73 @@
+{
+  "addActivity": "添加活动",
+  "upload": {
+    "uploading": "上传中…",
+    "success": "活动上传成功",
+    "error": "无法上传活动文件"
+  },
+  "refresh": {
+    "label": "刷新",
+    "refreshing": "刷新中…",
+    "success": "刷新已开始",
+    "error": "无法刷新活动"
+  },
+  "feed": {
+    "scopeLabel": "动态范围",
+    "myActivities": "我的活动",
+    "following": "关注",
+    "loadMore": "加载更多",
+    "loading": "加载中…",
+    "error": {
+      "title": "无法加载活动",
+      "description": "加载动态时出现问题。",
+      "retry": "重试"
+    },
+    "empty": {
+      "mine": {
+        "title": "暂无活动",
+        "description": "添加活动或连接集成以开始使用。"
+      },
+      "following": {
+        "title": "暂无内容",
+        "description": "您关注的人的活动将显示在这里。"
+      }
+    }
+  },
+  "stats": {
+    "title": "统计",
+    "metricLabel": "统计指标",
+    "thisWeek": "本周",
+    "thisMonth": "本月",
+    "empty": "本期间无活动",
+    "caloriesUnit": "千卡",
+    "metric": {
+      "distance": "距离",
+      "time": "时间",
+      "calories": "卡路里"
+    }
+  },
+  "sports": {
+    "run": "跑步",
+    "bike": "骑行",
+    "swim": "游泳",
+    "walk": "步行",
+    "hike": "徒步",
+    "rowing": "划船",
+    "snow_ski": "滑雪",
+    "snowboard": "单板滑雪",
+    "windsurf": "帆板运动",
+    "stand_up_paddleboarding": "站立式划桨",
+    "surfing": "冲浪",
+    "kayaking": "皮划艇",
+    "sailing": "帆船",
+    "snowshoeing": "雪鞋行走",
+    "inline_skating": "直排轮滑"
+  },
+  "goals": {
+    "title": "目标",
+    "empty": {
+      "title": "未设置目标",
+      "description": "在设置中设定目标以在此处追踪您的进度。"
+    }
+  }
+}

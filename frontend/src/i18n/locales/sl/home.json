@@ -1,0 +1,73 @@
+{
+  "addActivity": "Dodaj aktivnost",
+  "upload": {
+    "uploading": "Nalaganje…",
+    "success": "Aktivnost je bila uspešno naložena",
+    "error": "Datoteke aktivnosti ni bilo mogoče naložiti"
+  },
+  "refresh": {
+    "label": "Osveži",
+    "refreshing": "Osveževanje…",
+    "success": "Osveževanje je bilo začeto",
+    "error": "Aktivnosti ni bilo mogoče osvežiti"
+  },
+  "feed": {
+    "scopeLabel": "Obseg vira",
+    "myActivities": "Moje aktivnosti",
+    "following": "Sledim",
+    "loadMore": "Naloži več",
+    "loading": "Nalaganje…",
+    "error": {
+      "title": "Aktivnosti ni bilo mogoče naložiti",
+      "description": "Med nalaganjem vira je prišlo do napake.",
+      "retry": "Poskusi znova"
+    },
+    "empty": {
+      "mine": {
+        "title": "Še ni aktivnosti",
+        "description": "Dodaj aktivnost ali poveži integracijo, da začneš."
+      },
+      "following": {
+        "title": "Tukaj ni ničesar",
+        "description": "Tukaj se bodo prikazale aktivnosti ljudi, ki jim slediš."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistike",
+    "metricLabel": "Merilo statistike",
+    "thisWeek": "Ta teden",
+    "thisMonth": "Ta mesec",
+    "empty": "Ni aktivnosti v tem obdobju",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Razdalja",
+      "time": "Čas",
+      "calories": "Kalorije"
+    }
+  },
+  "sports": {
+    "run": "Tek",
+    "bike": "Kolesarjenje",
+    "swim": "Plavanje",
+    "walk": "Hoja",
+    "hike": "Pohod",
+    "rowing": "Veslanje",
+    "snow_ski": "Smučanje",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Veslanje stoje",
+    "surfing": "Surfanje",
+    "kayaking": "Kajakaštvo",
+    "sailing": "Jadranje",
+    "snowshoeing": "Pohod s krpljami",
+    "inline_skating": "Rolkanje"
+  },
+  "goals": {
+    "title": "Cilji",
+    "empty": {
+      "title": "Ni postavljenih ciljev",
+      "description": "V nastavitvah nastavi cilje, da tukaj slediš napredku."
+    }
+  }
+}

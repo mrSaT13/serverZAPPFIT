@@ -1,0 +1,51 @@
+{
+  "title": "Pranešimai",
+  "subtitle": "Naujausia veikla, užklausos ir įspėjimai",
+  "navLabel": "Pranešimai",
+  "unread": "Neperskaityti",
+  "markRead": "Žymėti kaip perskaitytą",
+  "markAllRead": "Žymėti visus kaip perskaitytus",
+  "seeAll": "Žiūrėti visus",
+  "loadMore": "Įkelti daugiau",
+  "loading": "Įkeliama…",
+  "badge": "{count} neperskaitytų pranešimų",
+  "empty": {
+    "title": "Viskas perskaityta",
+    "description": "Naujienos apie jūsų veiklas, sekėjus ir integracijas bus rodomos čia."
+  },
+  "error": {
+    "title": "Nepavyko įkelti pranešimų",
+    "description": "Įkeliant jūsų pranešimus kažkas nepavyko.",
+    "retry": "Bandyti dar kartą"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nauja veikla",
+      "body": "Į jūsų paskyrą pridėta nauja veikla."
+    },
+    "duplicateActivity": {
+      "title": "Galima veiklos dublikatas",
+      "body": "Veikla su tokiu pačiu pradžios laiku jau gali egzistuoti."
+    },
+    "newFollowerRequest": {
+      "title": "Nauja sekimo užklausa",
+      "body": "{name} ({'@'}{username}) nori jus sekti."
+    },
+    "followerRequestAccepted": {
+      "title": "Sekimo užklausa priimta",
+      "body": "{name} ({'@'}{username}) priėmė jūsų sekimo užklausą."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect reikia dėmesio",
+      "body": "Jūsų Garmin Connect sesija baigėsi. Prijunkite iš naujo, kad sinchronizavimas tęstųsi."
+    },
+    "adminSignUpApproval": {
+      "title": "Nauja registracija laukia patvirtinimo",
+      "body": "{name} ({'@'}{username}) laukia paskyros patvirtinimo."
+    },
+    "unknown": {
+      "title": "Pranešimas",
+      "body": "Turite naują pranešimą."
+    }
+  }
+}

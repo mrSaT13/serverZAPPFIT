@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logo",
+  "title": "Osnova dizajn sistema je uživo",
+  "subtitle": "Tailwind v4, shadcn-vue, strogi TypeScript i Endurain paleta tokena su povezani",
+  "primaryAction": "Primarna radnja",
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "message": "Stranica koju tražite ne postoji ili je premeštena",
+    "action": "Idi na početnu"
+  },
+  "error": {
+    "title": "Nešto je pošlo naopako",
+    "message": "Ovaj odeljak nije uspeo da se učita. Možete pokušati ponovo.",
+    "retry": "Pokušaj ponovo",
+    "toast": "Nešto je pošlo naopako. Pokušajte ponovo."
+  },
+  "configError": {
+    "title": "Greška u konfiguraciji",
+    "message": "Aplikacija nije mogla da dosegne Endurain backend. To je obično uzrokovano nedostajućom ili pogrešno podešenom ENDURAIN_HOST promenljivom okruženja, ili time što backend nije pokrenut.",
+    "notSet": "(nije podešeno)",
+    "help": "Proverite da ENDURAIN_HOST upućuje na URL na kome je vaša Endurain instanca dostupna (na primer https://endurain.example.com) i da je backend pokrenut, zatim ponovo učitajte stranicu.",
+    "reload": "Ponovo učitaj"
+  },
+  "dismiss": "Odbaci",
+  "language": "Jezik",
+  "theme": {
+    "toLight": "Svetli režim",
+    "toDark": "Tamni režim"
+  },
+  "pagination": {
+    "label": "Paginacija",
+    "previous": "Prethodna stranica",
+    "next": "Sledeća stranica",
+    "goToPage": "Idi na stranicu {page}"
+  },
+  "markdownEditor": {
+    "preview": "Pregled",
+    "edit": "Izmeni",
+    "supported": "Markdown podržan",
+    "empty": "Nema ničega za pregled"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Notifications",
+  "subtitle": "Activité récente, demandes et alertes",
+  "navLabel": "Notifications",
+  "unread": "Non lues",
+  "markRead": "Marquer comme lue",
+  "markAllRead": "Tout marquer comme lu",
+  "seeAll": "Tout voir",
+  "loadMore": "Charger plus",
+  "loading": "Chargement…",
+  "badge": "{count} notifications non lues",
+  "empty": {
+    "title": "Vous êtes à jour",
+    "description": "Les mises à jour concernant vos activités, abonnés et intégrations apparaîtront ici."
+  },
+  "error": {
+    "title": "Impossible de charger les notifications",
+    "description": "Une erreur s'est produite lors du chargement de vos notifications.",
+    "retry": "Réessayer"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nouvelle activité",
+      "body": "Une nouvelle activité a été ajoutée à votre compte."
+    },
+    "duplicateActivity": {
+      "title": "Activité possiblement en double",
+      "body": "Une activité avec la même heure de départ existe peut-être déjà."
+    },
+    "newFollowerRequest": {
+      "title": "Nouvelle demande d'abonnement",
+      "body": "{name} ({'@'}{username}) souhaite vous suivre."
+    },
+    "followerRequestAccepted": {
+      "title": "Demande d'abonnement acceptée",
+      "body": "{name} ({'@'}{username}) a accepté votre demande d'abonnement."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect nécessite votre attention",
+      "body": "Votre session Garmin Connect a expiré. Reconnectez-la pour continuer la synchronisation."
+    },
+    "adminSignUpApproval": {
+      "title": "Nouvelle inscription en attente d'approbation",
+      "body": "{name} ({'@'}{username}) attend l'approbation de son compte."
+    },
+    "unknown": {
+      "title": "Notification",
+      "body": "Vous avez une nouvelle notification."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logotipas",
+  "title": "Dizaino sistemos pagrindas veikia",
+  "subtitle": "Tailwind v4, shadcn-vue, griežtas TypeScript ir Endurain spalvų paletė yra sujungti",
+  "primaryAction": "Pagrindinis veiksmas",
+  "notFound": {
+    "title": "Puslapis nerastas",
+    "message": "Ieškomo puslapio nėra arba jis buvo perkeltas",
+    "action": "Eiti į pradžią"
+  },
+  "error": {
+    "title": "Kažkas nepavyko",
+    "message": "Šios skilties nepavyko įkelti. Galite bandyti dar kartą.",
+    "retry": "Bandyti dar kartą",
+    "toast": "Kažkas nepavyko. Bandykite dar kartą."
+  },
+  "configError": {
+    "title": "Konfigūracijos klaida",
+    "message": "Programai nepavyko pasiekti Endurain serverio. Tai paprastai įvyksta dėl trūkstamo ar netinkamai sukonfigūruoto ENDURAIN_HOST aplinkos kintamojo arba dėl neveikiančio serverio.",
+    "notSet": "(nenustatyta)",
+    "help": "Patikrinkite, ar ENDURAIN_HOST nurodo URL, kuriuo pasiekiama jūsų Endurain instancija (pavyzdžiui https://endurain.example.com) ir ar serveris veikia, tada iš naujo įkelkite puslapį.",
+    "reload": "Įkelti iš naujo"
+  },
+  "dismiss": "Atmesti",
+  "language": "Kalba",
+  "theme": {
+    "toLight": "Šviesusis režimas",
+    "toDark": "Tamsusis režimas"
+  },
+  "pagination": {
+    "label": "Puslapiavimas",
+    "previous": "Ankstesnis puslapis",
+    "next": "Kitas puslapis",
+    "goToPage": "Eiti į puslapį {page}"
+  },
+  "markdownEditor": {
+    "preview": "Peržiūra",
+    "edit": "Redaguoti",
+    "supported": "Palaikomas Markdown",
+    "empty": "Nėra ką peržiūrėti"
+  }
+}

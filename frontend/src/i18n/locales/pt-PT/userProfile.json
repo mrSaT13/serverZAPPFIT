@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Utilizador não encontrado",
+    "description": "Este perfil não existe ou não está visível para ti."
+  },
+  "error": {
+    "title": "Não foi possível carregar o perfil",
+    "description": "Ocorreu um erro ao carregar este perfil.",
+    "retry": "Tentar novamente"
+  },
+  "editProfile": "Editar perfil",
+  "activities": {
+    "weekNav": "Navegar pelas atividades por semana",
+    "thisWeek": "Esta semana",
+    "oneYearAgo": "Há um ano"
+  },
+  "stats": {
+    "thisMonth": "Atividades este mês",
+    "following": "A seguir",
+    "followers": "Seguidores"
+  },
+  "tabs": {
+    "activities": "Atividades",
+    "following": "A seguir",
+    "followers": "Seguidores"
+  },
+  "activitiesError": {
+    "title": "Não foi possível carregar as atividades",
+    "description": "Ocorreu um erro ao carregar as atividades.",
+    "retry": "Tentar novamente"
+  },
+  "listError": {
+    "title": "Não foi possível carregar a lista",
+    "description": "Ocorreu um erro. Tenta novamente.",
+    "retry": "Tentar novamente"
+  },
+  "follow": {
+    "follow": "Seguir",
+    "requested": "Pedido enviado",
+    "following": "A seguir",
+    "withdraw": "Cancelar pedido",
+    "unfollow": "Deixar de seguir",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "followError": "Não foi possível enviar o pedido de seguidor.",
+    "unfollowError": "Não foi possível atualizar o pedido de seguidor.",
+    "confirmCancelTitle": "Cancelar pedido",
+    "confirmCancelBody": "Cancelar o teu pedido de seguidor a {name}?",
+    "confirmUnfollowTitle": "Deixar de seguir {name}",
+    "confirmUnfollowBody": "Deixar de seguir {name}? Podes segui-lo(a) novamente mais tarde."
+  },
+  "list": {
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "remove": "Remover",
+    "unfollow": "Deixar de seguir",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "accepted": "Aceite",
+    "pending": "Pendente",
+    "acceptError": "Não foi possível aceitar o pedido.",
+    "removeError": "Não foi possível atualizar este seguidor.",
+    "unfollowError": "Não foi possível deixar de seguir este utilizador.",
+    "confirmUnfollowTitle": "Deixar de seguir {name}",
+    "confirmUnfollowBody": "Deixar de seguir {name}? Podes segui-lo(a) novamente mais tarde.",
+    "confirmDeclineTitle": "Recusar pedido",
+    "confirmDeclineBody": "Recusar o pedido de seguidor de {name}?",
+    "confirmRemoveTitle": "Remover seguidor",
+    "confirmRemoveBody": "Remover {name} dos teus seguidores?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Ainda sem atividades",
+      "ownDescription": "As tuas atividades aparecerão aqui quando as adicionares ou importares.",
+      "otherTitle": "Sem atividades para mostrar"
+    },
+    "following": {
+      "ownTitle": "Ainda não estás a seguir ninguém.",
+      "otherTitle": "Ainda não está a seguir ninguém."
+    },
+    "followers": {
+      "ownTitle": "Ainda não tens seguidores.",
+      "otherTitle": "Ainda sem seguidores."
+    }
+  }
+}

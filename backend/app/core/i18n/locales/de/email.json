@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Mit freundlichen Grüßen,",
+  "common.team": "Das Endurain-Team",
+  "common.system": "Das Endurain-System",
+  "common.visit": "Besuchen Sie Endurain unter:",
+  "common.source_code": "Quellcode unter:",
+  "common.copy_link": "Falls die Schaltfläche oben nicht funktioniert, können Sie den folgenden Link kopieren und in Ihren Browser einfügen:",
+
+  "password_reset.subject": "Endurain - Passwort zurücksetzen",
+  "password_reset.heading": "Anfrage zum Zurücksetzen des Passworts",
+  "password_reset.greeting": "Hallo {name},",
+  "password_reset.intro": "Sie haben angefordert, das Passwort für Ihr Endurain-Konto zurückzusetzen. Klicken Sie auf die Schaltfläche unten, um Ihr Passwort zurückzusetzen:",
+  "password_reset.cta": "Passwort zurücksetzen",
+  "password_reset.security_label": "Sicherheitshinweis:",
+  "password_reset.security_notice": "Dieser Link läuft aus Sicherheitsgründen in 1 Stunde ab.",
+  "password_reset.ignore": "Wenn Sie diese Passwortzurücksetzung nicht angefordert haben, ignorieren Sie diese E-Mail. Ihr Passwort bleibt unverändert.",
+
+  "signup_confirmation.subject": "Endurain - Bestätigen Sie Ihr Konto",
+  "signup_confirmation.heading": "Bestätigen Sie Ihr Konto",
+  "signup_confirmation.greeting": "Hallo {name},",
+  "signup_confirmation.intro": "Vielen Dank für Ihre Registrierung bei Endurain! Bitte bestätigen Sie Ihr Konto, indem Sie auf die Schaltfläche unten klicken:",
+  "signup_confirmation.cta": "Konto bestätigen",
+  "signup_confirmation.security_label": "Sicherheitshinweis:",
+  "signup_confirmation.security_notice": "Dieser Bestätigungslink läuft in 24 Stunden ab.",
+  "signup_confirmation.ignore": "Wenn Sie kein Endurain-Konto erstellt haben, ignorieren Sie diese E-Mail.",
+
+  "admin_signup.subject": "Endurain - Neue Benutzerregistrierung wartet auf Genehmigung",
+  "admin_signup.heading": "Neue Registrierung erfordert Genehmigung",
+  "admin_signup.greeting": "Hallo {name},",
+  "admin_signup.intro": "Ein neuer Benutzer hat sich registriert und wartet auf Genehmigung:",
+  "admin_signup.user_label": "Benutzer:",
+  "admin_signup.review": "Bitte melden Sie sich im Endurain-Adminbereich an, um diese Anfrage zu prüfen und zu genehmigen.",
+  "admin_signup.cta": "Zum Adminbereich",
+
+  "signup_approved.subject": "Endurain - Ihr Konto wurde genehmigt",
+  "signup_approved.heading": "Ihr Konto ist jetzt aktiv",
+  "signup_approved.greeting": "Hallo {name},",
+  "signup_approved.intro": "Gute Nachrichten! Ihr Konto wurde genehmigt und ist jetzt aktiv.",
+  "signup_approved.username_label": "Benutzername:",
+  "signup_approved.login_intro": "Sie können sich jetzt anmelden und Endurain nutzen:",
+  "signup_approved.cta": "Bei Endurain anmelden"
+}

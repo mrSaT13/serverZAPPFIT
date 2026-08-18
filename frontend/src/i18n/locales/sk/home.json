@@ -1,0 +1,73 @@
+{
+  "addActivity": "Pridať aktivitu",
+  "upload": {
+    "uploading": "Nahrávanie…",
+    "success": "Aktivita bola úspešne nahraná",
+    "error": "Súbor aktivity sa nepodarilo nahrať"
+  },
+  "refresh": {
+    "label": "Obnoviť",
+    "refreshing": "Obnovovanie…",
+    "success": "Obnovenie sa spustilo",
+    "error": "Aktivity sa nepodarilo obnoviť"
+  },
+  "feed": {
+    "scopeLabel": "Rozsah kanála",
+    "myActivities": "Moje aktivity",
+    "following": "Sledované",
+    "loadMore": "Načítať viac",
+    "loading": "Načítavanie…",
+    "error": {
+      "title": "Aktivity sa nepodarilo načítať",
+      "description": "Pri načítavaní kanála sa niečo pokazilo.",
+      "retry": "Skúsiť znova"
+    },
+    "empty": {
+      "mine": {
+        "title": "Zatiaľ žiadne aktivity",
+        "description": "Začnite pridaním aktivity alebo pripojením integrácie."
+      },
+      "following": {
+        "title": "Zatiaľ tu nič nie je",
+        "description": "Aktivity ľudí, ktorých sledujete, sa zobrazia tu."
+      }
+    }
+  },
+  "stats": {
+    "title": "Štatistiky",
+    "metricLabel": "Metrika štatistiky",
+    "thisWeek": "Tento týždeň",
+    "thisMonth": "Tento mesiac",
+    "empty": "V tomto období žiadna aktivita",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Vzdialenosť",
+      "time": "Čas",
+      "calories": "Kalórie"
+    }
+  },
+  "sports": {
+    "run": "Beh",
+    "bike": "Cyklistika",
+    "swim": "Plávanie",
+    "walk": "Chôdza",
+    "hike": "Turistika",
+    "rowing": "Veslovanie",
+    "snow_ski": "Lyžovanie",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surfovanie",
+    "kayaking": "Kajakárstvo",
+    "sailing": "Plachtenie",
+    "snowshoeing": "Chôdza na snežniciach",
+    "inline_skating": "Inline korčuľovanie"
+  },
+  "goals": {
+    "title": "Ciele",
+    "empty": {
+      "title": "Žiadne nastavené ciele",
+      "description": "Nastavte ciele v nastaveniach a sledujte tu svoj pokrok."
+    }
+  }
+}

@@ -1,0 +1,52 @@
+name: Lint Frontend
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - frontend/**
+      - .forgejo/workflows/lint-frontend.yml
+  pull_request:
+    paths:
+      - frontend/**
+      - .forgejo/workflows/lint-frontend.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ forgejo.workflow }}-${{ forgejo.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  frontend:
+    name: Frontend (format + lint + type-check + test)
+    runs-on: local-runner
+    steps:
+      - name: Checkout code
+        uses: https://data.forgejo.org/actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Check formatting (Prettier)
+        working-directory: frontend
+        run: npm run format:check
+
+      - name: Check linting (oxlint + ESLint)
+        working-directory: frontend
+        run: npm run lint:check
+
+      - name: Type check (vue-tsc)
+        working-directory: frontend
+        run: npm run type-check
+
+      - name: Unit tests with coverage gate
+        working-directory: frontend
+        run: npm run test:coverage

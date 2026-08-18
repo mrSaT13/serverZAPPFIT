@@ -1,0 +1,73 @@
+{
+  "addActivity": "Dodaj aktivnost",
+  "upload": {
+    "uploading": "Otpremanje…",
+    "success": "Aktivnost je uspešno otpremljena",
+    "error": "Nije moguće otpremiti datoteku aktivnosti"
+  },
+  "refresh": {
+    "label": "Osveži",
+    "refreshing": "Osvežavanje…",
+    "success": "Osvežavanje je započeto",
+    "error": "Nije moguće osvežiti aktivnosti"
+  },
+  "feed": {
+    "scopeLabel": "Opseg prikaza",
+    "myActivities": "Moje aktivnosti",
+    "following": "Pratim",
+    "loadMore": "Učitaj još",
+    "loading": "Učitavanje…",
+    "error": {
+      "title": "Učitavanje aktivnosti nije uspelo",
+      "description": "Nešto je pošlo naopako prilikom učitavanja prikaza.",
+      "retry": "Pokušaj ponovo"
+    },
+    "empty": {
+      "mine": {
+        "title": "Još nema aktivnosti",
+        "description": "Dodajte aktivnost ili povežite integraciju da biste počeli."
+      },
+      "following": {
+        "title": "Ovde još nema ničega",
+        "description": "Aktivnosti ljudi koje pratite pojaviće se ovde."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistika",
+    "metricLabel": "Statistička metrika",
+    "thisWeek": "Ove nedelje",
+    "thisMonth": "Ovog meseca",
+    "empty": "Nema aktivnosti u ovom periodu",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Udaljenost",
+      "time": "Vreme",
+      "calories": "Kalorije"
+    }
+  },
+  "sports": {
+    "run": "Trčanje",
+    "bike": "Biciklizam",
+    "swim": "Plivanje",
+    "walk": "Hodanje",
+    "hike": "Planinarenje",
+    "rowing": "Veslanje",
+    "snow_ski": "Skijanje",
+    "snowboard": "Snoubording",
+    "windsurf": "Vindsurfing",
+    "stand_up_paddleboarding": "Veslanje na dasci",
+    "surfing": "Surfovanje",
+    "kayaking": "Kajak",
+    "sailing": "Jedrenje",
+    "snowshoeing": "Hodanje na krpljama",
+    "inline_skating": "Rolanje"
+  },
+  "goals": {
+    "title": "Ciljevi",
+    "empty": {
+      "title": "Nema postavljenih ciljeva",
+      "description": "Postavite ciljeve u podešavanjima da biste ovde pratili napredak."
+    }
+  }
+}

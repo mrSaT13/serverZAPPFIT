@@ -1,0 +1,152 @@
+{
+  "title": "Vybavení",
+  "subtitle": "Kola, boty a vybavení, se kterým zaznamenáváte aktivity",
+  "buttonAddGear": "Přidat vybavení",
+  "searchPlaceholder": "Hledat podle přezdívky",
+  "clearSearch": "Vymazat hledání",
+  "showInactive": "Zobrazit neaktivní",
+  "inactive": "Neaktivní",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtry",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Kolo",
+    "shoes": "Boty",
+    "wetsuit": "Neopren",
+    "racquet": "Raketa",
+    "skis": "Lyže",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfingové prkno",
+    "waterSportsBoard": "Prkno pro vodní sporty",
+    "unknown": "Vybavení"
+  },
+  "actions": {
+    "edit": "Upravit vybavení",
+    "delete": "Smazat vybavení"
+  },
+  "form": {
+    "title": "Statistiky",
+    "addTitle": "Přidat vybavení",
+    "editTitle": "Upravit vybavení",
+    "description": "Sledujte vybavení, které používáte pro své aktivity.",
+    "nickname": "Přezdívka",
+    "nicknameRequired": "Přezdívka je povinná",
+    "nicknameTooLong": "Přezdívka musí mít nejvýše 250 znaků",
+    "nicknameTaken": "Vybavení s touto přezdívkou již máte",
+    "gearType": "Typ",
+    "brand": "Značka",
+    "brandTooLong": "Značka musí mít nejvýše 250 znaků",
+    "model": "Model",
+    "modelTooLong": "Model musí mít nejvýše 250 znaků",
+    "active": "Aktivní",
+    "createdAt": "Vytvořeno",
+    "createdAtRequired": "Datum vytvoření je povinné",
+    "initialDistance": "Počáteční vzdálenost",
+    "purchaseValue": "Pořizovací hodnota",
+    "totalCost": "Celkové náklady",
+    "create": "Přidat vybavení",
+    "save": "Uložit změny",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "createSuccess": "Vybavení přidáno",
+    "updateSuccess": "Vybavení aktualizováno",
+    "saveError": "Nepodařilo se uložit vybavení. Zkuste to prosím znovu."
+  },
+  "delete": {
+    "title": "Smazat vybavení",
+    "body": "Opravdu chcete smazat „{nickname}“? Tuto akci nelze vrátit zpět.",
+    "confirm": "Smazat",
+    "cancel": "Zrušit",
+    "close": "Zavřít",
+    "success": "Vybavení smazáno",
+    "error": "Nepodařilo se smazat vybavení. Zkuste to prosím znovu."
+  },
+  "error": {
+    "title": "Nepodařilo se načíst vybavení",
+    "description": "Při načítání vašeho vybavení se něco pokazilo.",
+    "retry": "Zkusit znovu"
+  },
+  "empty": {
+    "title": "Zatím žádné vybavení",
+    "description": "Přidejte kola, boty a vybavení, které používáte, a začněte sledovat jejich opotřebení.",
+    "searchTitle": "Vašemu hledání neodpovídá žádné vybavení",
+    "searchDescription": "Zkuste jinou přezdívku.",
+    "activeTitle": "Žádné aktivní vybavení",
+    "activeDescription": "Přidejte vybavení nebo zapněte „Zobrazit neaktivní“, abyste viděli neaktivní vybavení."
+  },
+  "detail": {
+    "back": "Zpět na vybavení",
+    "notFoundTitle": "Vybavení nenalezeno",
+    "notFoundDescription": "Toto vybavení mohlo být smazáno nebo vám nepatří.",
+    "totalDistance": "Vzdálenost",
+    "totalTime": "Čas",
+    "componentsCost": "Komponenty"
+  },
+  "components": {
+    "title": "Komponenty",
+    "add": "Přidat komponentu",
+    "empty": "Zatím žádné komponenty. Přidejte díly, jejichž opotřebení chcete sledovat.",
+    "unsupported": "Tento typ vybavení nesleduje komponenty.",
+    "noneActive": "Všechny komponenty jsou neaktivní. Zapněte „Zobrazit neaktivní“, abyste je viděli.",
+    "inactive": "Neaktivní",
+    "unitHours": "h",
+    "purchasedOn": "Zakoupeno {date}",
+    "wearLabel": "Opotřebení {name}",
+    "actions": {
+      "edit": "Upravit komponentu",
+      "delete": "Smazat komponentu"
+    },
+    "form": {
+      "addTitle": "Přidat komponentu",
+      "editTitle": "Upravit komponentu",
+      "description": "Sledujte díly, které vyměňujete, a monitorujte jejich opotřebení.",
+      "type": "Typ",
+      "typePlaceholder": "Vyberte typ",
+      "typeRequired": "Typ je povinný",
+      "brand": "Značka",
+      "brandRequired": "Značka je povinná",
+      "brandTooLong": "Značka musí mít nejvýše 250 znaků",
+      "model": "Model",
+      "modelRequired": "Model je povinný",
+      "modelTooLong": "Model musí mít nejvýše 250 znaků",
+      "purchaseDate": "Datum zakoupení",
+      "purchaseDateRequired": "Datum zakoupení je povinné",
+      "retiredDate": "Datum vyřazení",
+      "expectedDistance": "Očekávaná vzdálenost",
+      "expectedTime": "Očekávaný čas",
+      "purchaseValue": "Pořizovací hodnota",
+      "active": "Aktivní",
+      "retiredBeforePurchase": "Datum vyřazení musí být po datu zakoupení.",
+      "create": "Přidat komponentu",
+      "save": "Uložit změny",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Komponenta přidána",
+      "updateSuccess": "Komponenta aktualizována",
+      "saveError": "Nepodařilo se uložit komponentu. Zkuste to prosím znovu."
+    },
+    "delete": {
+      "title": "Smazat komponentu",
+      "body": "Opravdu chcete smazat „{name}“? Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Komponenta smazána",
+      "error": "Nepodařilo se smazat komponentu. Zkuste to prosím znovu."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst komponenty",
+      "description": "Při načítání komponent tohoto vybavení se něco pokazilo."
+    }
+  },
+  "activities": {
+    "title": "Aktivity",
+    "empty": "S tímto vybavením zatím nebyly zaznamenány žádné aktivity.",
+    "error": {
+      "title": "Nepodařilo se načíst aktivity",
+      "description": "Při načítání aktivit tohoto vybavení se něco pokazilo."
+    }
+  }
+}

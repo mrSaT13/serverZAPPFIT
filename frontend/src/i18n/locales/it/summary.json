@@ -1,0 +1,49 @@
+{
+  "title": "Riepilogo",
+  "subtitle": "Esamina i tuoi totali di allenamento e i trend nel tempo.",
+  "viewType": {
+    "label": "Periodo di riepilogo",
+    "week": "Settimana",
+    "month": "Mese",
+    "year": "Anno",
+    "lifetime": "Da sempre"
+  },
+  "filters": {
+    "type": "Tipo di attività",
+    "allTypes": "Tutti i tipi"
+  },
+  "period": {
+    "previous": "Periodo precedente",
+    "next": "Periodo successivo",
+    "picker": "Seleziona periodo",
+    "allTime": "Da sempre"
+  },
+  "metrics": {
+    "distance": "Distanza",
+    "duration": "Durata",
+    "elevation": "Dislivello",
+    "calories": "Calorie",
+    "activities": "Attività"
+  },
+  "breakdown": {
+    "title": "Dettaglio",
+    "period": "Periodo",
+    "weekNumber": "Settimana {number}"
+  },
+  "typeBreakdown": {
+    "title": "Per tipo di attività",
+    "type": "Tipo"
+  },
+  "activities": {
+    "title": "Attività in questo periodo"
+  },
+  "empty": {
+    "title": "Nessuna attività in questo periodo",
+    "description": "Nessuna attività corrisponde al periodo e al tipo selezionati."
+  },
+  "error": {
+    "title": "Impossibile caricare il riepilogo",
+    "description": "Si è verificato un errore durante il caricamento delle statistiche. Controlla la connessione e riprova.",
+    "retry": "Riprova"
+  }
+}

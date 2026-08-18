@@ -1,0 +1,73 @@
+{
+  "addActivity": "Adicionar atividade",
+  "upload": {
+    "uploading": "A carregar…",
+    "success": "Atividade carregada com sucesso",
+    "error": "Não foi possível carregar o ficheiro de atividade"
+  },
+  "refresh": {
+    "label": "Atualizar",
+    "refreshing": "A atualizar…",
+    "success": "Atualização iniciada",
+    "error": "Não foi possível atualizar as atividades"
+  },
+  "feed": {
+    "scopeLabel": "Âmbito do feed",
+    "myActivities": "As minhas atividades",
+    "following": "A seguir",
+    "loadMore": "Carregar mais",
+    "loading": "A carregar…",
+    "error": {
+      "title": "Não foi possível carregar as atividades",
+      "description": "Ocorreu um erro ao carregar o feed.",
+      "retry": "Tentar novamente"
+    },
+    "empty": {
+      "mine": {
+        "title": "Ainda sem atividades",
+        "description": "Adiciona uma atividade ou liga uma integração para começar."
+      },
+      "following": {
+        "title": "Ainda nada aqui",
+        "description": "As atividades das pessoas que segues aparecerão aqui."
+      }
+    }
+  },
+  "stats": {
+    "title": "Estatísticas",
+    "metricLabel": "Métrica das estatísticas",
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mês",
+    "empty": "Sem atividade neste período",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distância",
+      "time": "Tempo",
+      "calories": "Calorias"
+    }
+  },
+  "sports": {
+    "run": "Corrida",
+    "bike": "Ciclismo",
+    "swim": "Natação",
+    "walk": "Caminhada",
+    "hike": "Montanhismo",
+    "rowing": "Remo",
+    "snow_ski": "Esqui",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddleboard",
+    "surfing": "Surf",
+    "kayaking": "Canoagem",
+    "sailing": "Vela",
+    "snowshoeing": "Raquetes de neve",
+    "inline_skating": "Patinagem em linha"
+  },
+  "goals": {
+    "title": "Objetivos",
+    "empty": {
+      "title": "Sem objetivos definidos",
+      "description": "Define objetivos nas definições para acompanhar o teu progresso aqui."
+    }
+  }
+}

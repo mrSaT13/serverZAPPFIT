@@ -1,0 +1,244 @@
+<script setup lang="ts">
+import { computed, ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { Plus, Scale, Target } from '@lucide/vue'
+
+import type { WeightEntry, WeightInterval } from '@/features/health/types'
+
+import HealthWeightChart from '@/features/health/components/HealthWeightChart.vue'
+import HealthWeightFormDialog from '@/features/health/components/HealthWeightFormDialog.vue'
+import HealthWeightListItem from '@/features/health/components/HealthWeightListItem.vue'
+import HealthWeightTargetDialog from '@/features/health/components/HealthWeightTargetDialog.vue'
+import { Button } from '@/components/ui/button'
+import { ConfirmDialog } from '@/components/ui/confirm-dialog'
+import { EmptyState } from '@/components/ui/empty-state'
+import { ListPanel } from '@/components/ui/list-panel'
+import { Select } from '@/components/ui/select'
+import { Skeleton } from '@/components/ui/skeleton'
+import { useChartProvider } from '@/composables/useChartProvider'
+import { useListPagination } from '@/composables/useListPagination'
+import { useToasts } from '@/composables/useToasts'
+import { useCurrentUser } from '@/features/auth/composables/useCurrentUser'
+import { useRecordsPerPage } from '@/features/config/composables/useRecordsPerPage'
+import {
+  useDeleteWeightEntryMutation,
+  useHealthTargetsQuery,
+  useWeightEntriesQuery,
+} from '@/features/health/composables/useHealth'
+
+const { t } = useI18n()
+const toasts = useToasts()
+const { data: currentUser } = useCurrentUser()
+const chart = useChartProvider()
+
+const units = computed(() => currentUser.value?.units ?? 'metric')
+
+/** Selectable time windows for the weight history, in display order. */
+const INTERVAL_OPTIONS: WeightInterval[] = [
+  'last_7_days',
+  'last_30_days',
+  'last_90_days',
+  'last_year',
+  'all_time',
+]
+
+const interval = ref<WeightInterval>('last_7_days')
+const page = ref(1)
+
+// Page size follows the server's enforced `num_records_per_page` setting.
+const { recordsPerPage } = useRecordsPerPage()
+
+const targetsQuery = useHealthTargetsQuery()
+const targets = computed(() => targetsQuery.data.value ?? null)
+const targetKg = computed(() => targets.value?.weightKg ?? null)
+
+const listQuery = useWeightEntriesQuery(page, recordsPerPage, interval)
+
+/** Weight entries on the current page (newest first). */
+const entries = computed(() => listQuery.data.value?.records ?? [])
+/** Server-reported total across all pages. */
+const totalCount = computed(() => listQuery.data.value?.total ?? 0)
+
+// Numbered pagination: derives the page count and clamps the page when the
+// total shrinks (e.g. after deleting the last entry on the final page).
+const { totalPages, reset: resetPage } = useListPagination(page, totalCount, recordsPerPage)
+
+const isPending = computed(() => listQuery.isPending.value)
+const isError = computed(() => listQuery.isError.value)
+const isEmpty = computed(() => !isPending.value && !isError.value && entries.value.length === 0)
+
+/** The chart is shown only when a provider is bundled and there is data to plot. */
+const showChart = computed(
+  () =>
+    chart.isAvailable &&
+    !isPending.value &&
+    !isError.value &&
+    entries.value.some((entry) => entry.weightKg !== null),
+)
+
+// Changing the interval changes the result set, so restart at the first page.
+watch(interval, resetPage)
+
+// Add/edit dialog state. `editingEntry` null means "add".
+const isFormOpen = ref(false)
+const editingEntry = ref<WeightEntry | null>(null)
+
+function openAdd(): void {
+  editingEntry.value = null
+  isFormOpen.value = true
+}
+
+function openEdit(entry: WeightEntry): void {
+  editingEntry.value = entry
+  isFormOpen.value = true
+}
+
+// Target dialog state.
+const isTargetOpen = ref(false)
+
+function openTarget(): void {
+  isTargetOpen.value = true
+}
+
+function onDialogSuccess(message: string): void {
+  toasts.success(message)
+}
+
+function onDialogError(message: string): void {
+  toasts.error(message)
+}
+
+// Delete dialog state.
+const isDeleteOpen = ref(false)
+const entryToDelete = ref<WeightEntry | null>(null)
+const deleteMutation = useDeleteWeightEntryMutation()
+
+function openDelete(entry: WeightEntry): void {
+  entryToDelete.value = entry
+  isDeleteOpen.value = true
+}
+
+function confirmDelete(): void {
+  const entry = entryToDelete.value
+  if (!entry) {
+    return
+  }
+  deleteMutation.mutate(entry.id, {
+    onSuccess: () => {
+      isDeleteOpen.value = false
+      toasts.success(t('health.weight.delete.success'))
+    },
+    onError: () => {
+      toasts.error(t('health.weight.delete.error'))
+    },
+  })
+}
+</script>
+
+<template>
+  <section class="flex flex-col gap-3">
+    <header class="flex flex-col gap-1">
+      <h1 class="text-page-title">{{ t('health.weight.title') }}</h1>
+      <p class="text-body">{{ t('health.weight.subtitle') }}</p>
+    </header>
+
+    <!-- Action bar: log / set-target buttons on the left, interval filter on the right. -->
+    <div class="flex flex-wrap items-center gap-2">
+      <Button @click="openAdd">
+        <Plus class="size-4" aria-hidden="true" />
+        {{ t('health.weight.logButton') }}
+      </Button>
+      <Button variant="outline" :disabled="!targets" @click="openTarget">
+        <Target class="size-4" aria-hidden="true" />
+        {{ t('health.weight.targetButton') }}
+      </Button>
+      <div class="ms-auto w-full sm:w-36">
+        <Select v-model="interval" :aria-label="t('health.weight.interval.label')">
+          <option v-for="option in INTERVAL_OPTIONS" :key="option" :value="option">
+            {{ t(`health.weight.interval.${option}`) }}
+          </option>
+        </Select>
+      </div>
+    </div>
+
+    <HealthWeightChart v-if="showChart" :entries="entries" :target-kg="targetKg" :units="units" />
+
+    <ListPanel
+      v-model:page="page"
+      :is-loading="isPending"
+      :is-error="isError"
+      :is-empty="isEmpty"
+      :show-header="false"
+      :error-title="t('health.weight.error.title')"
+      :error-description="t('health.weight.error.description')"
+      :retry-label="t('health.weight.error.retry')"
+      paginated
+      :total-pages="totalPages"
+      @retry="listQuery.refetch()"
+    >
+      <template #loading>
+        <div class="divide-y divide-border" aria-busy="true">
+          <div v-for="n in 6" :key="n" class="px-4 py-3">
+            <Skeleton class="h-4 w-1/4" />
+            <Skeleton class="mt-2 h-3 w-1/3" />
+          </div>
+        </div>
+      </template>
+
+      <template #empty>
+        <EmptyState
+          :title="t('health.weight.empty.title')"
+          :description="t('health.weight.empty.description')"
+          variant="first-time"
+        >
+          <template #icon>
+            <Scale class="size-8" aria-hidden="true" />
+          </template>
+          <template #action>
+            <Button @click="openAdd">
+              <Plus class="size-4" aria-hidden="true" />
+              {{ t('health.weight.logButton') }}
+            </Button>
+          </template>
+        </EmptyState>
+      </template>
+
+      <ul class="divide-y divide-border">
+        <li v-for="entry in entries" :key="entry.id">
+          <HealthWeightListItem
+            :entry="entry"
+            :units="units"
+            @edit="openEdit"
+            @delete="openDelete"
+          />
+        </li>
+      </ul>
+    </ListPanel>
+
+    <HealthWeightFormDialog
+      v-model:open="isFormOpen"
+      :entry="editingEntry"
+      :units="units"
+      @success="onDialogSuccess"
+      @error="onDialogError"
+    />
+    <HealthWeightTargetDialog
+      v-if="targets"
+      v-model:open="isTargetOpen"
+      :targets="targets"
+      :units="units"
+      @success="onDialogSuccess"
+      @error="onDialogError"
+    />
+    <ConfirmDialog
+      v-model:open="isDeleteOpen"
+      :title="t('health.weight.delete.title')"
+      :description="t('health.weight.delete.body')"
+      :confirm-label="t('health.weight.delete.confirm')"
+      :cancel-label="t('health.weight.delete.cancel')"
+      :close-label="t('health.weight.delete.close')"
+      :pending="deleteMutation.isPending.value"
+      @confirm="confirmDelete"
+    />
+  </section>
+</template>

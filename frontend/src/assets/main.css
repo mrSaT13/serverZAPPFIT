@@ -1,0 +1,229 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Dark mode is driven by the `dark` class on <html> (see useTheme composable). */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Endurain design tokens — single source of truth for visual design.
+ * See devdocs/UX_INCREMENTAL_MIGRATION_PLAN.md § 12.4.
+ */
+@theme {
+  /* Brand — Teal */
+  --color-brand-light: #e1f5ee;
+  --color-brand: #1d9e75;
+  --color-brand-mid: #0f6e56;
+  --color-brand-dark: #085041;
+  --color-brand-dark-foreground: #5dcaa5;
+  --color-brand-dark-surface: #04342c;
+
+  /* Semantic accents */
+  --color-effort: #ef9f27;
+  --color-hr: #e24b4a;
+  --color-info: #378add;
+  --color-goal: #639922;
+
+  /* Neutrals — warm gray */
+  --color-surface: #f1efe8;
+  --color-surface-card: #ffffff;
+  --color-ink: #2c2c2a;
+
+  /* Activity badges — conventional sport colours: running red, cycling green, swimming blue */
+  --color-activity-running-bg: #fbe9e8;
+  --color-activity-running-text: #b42318;
+  --color-activity-cycling-bg: #e9f4dc;
+  --color-activity-cycling-text: #466e15;
+  --color-activity-swimming-bg: #e6f1fb;
+  --color-activity-swimming-text: #185fa5;
+  --color-activity-hiking-bg: #faeeda;
+  --color-activity-hiking-text: #854f0b;
+  --color-activity-other-bg: #f1efe8;
+  --color-activity-other-text: #5f5e5a;
+
+  /* Typography */
+  --font-sans: 'Inter Variable', system-ui, sans-serif;
+
+  /* Radii */
+  --radius-card: 12px;
+  --radius-badge: 20px;
+  --radius-input: 8px;
+}
+
+/*
+ * Safe-area insets for notched devices and home indicators. Applied to the
+ * sticky header (top) and the mobile bottom navigation (bottom) so content
+ * never sits under the OS chrome.
+ */
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/*
+ * Top offset that clears the sticky navbar (safe-area inset + the h-14 header)
+ * plus a small gap, so floating toasts sit just below it when chrome is shown.
+ */
+@utility top-safe-nav {
+  top: calc(env(safe-area-inset-top) + 3.5rem + 0.75rem);
+}
+
+/*
+ * Semantic typography scale — single source of truth for the recurring text
+ * roles across screens. See devdocs/UX_INCREMENTAL_MIGRATION_PLAN.md § 12.
+ * Colors resolve through the theme tokens, so every role stays dark-aware
+ * without per-usage `dark:` variants.
+ */
+@utility text-page-title {
+  @apply text-[26px] font-medium text-foreground;
+}
+
+@utility text-card-heading {
+  @apply text-[22px] font-medium text-foreground;
+}
+
+@utility text-section-heading {
+  @apply text-[18px] font-medium text-foreground;
+}
+
+@utility text-item-title {
+  @apply text-[15px] font-medium text-foreground;
+}
+
+@utility text-body {
+  @apply text-[14px] text-muted-foreground;
+}
+
+@utility text-caption {
+  @apply text-[11px] font-medium uppercase tracking-wide text-muted-foreground;
+}
+
+@utility text-hint {
+  @apply text-[12px] text-muted-foreground;
+}
+
+@utility text-field-error {
+  @apply text-[12px] text-destructive;
+}
+
+/*
+ * Size-only scale completions. Unlike the role utilities above, these set the
+ * font size only, so they compose with any weight/color — use them for text
+ * roles that recur across multiple colors (hero numbers, labels, small chrome).
+ */
+@utility text-display {
+  @apply text-[44px];
+}
+
+@utility text-metric {
+  @apply text-[22px];
+}
+
+@utility text-meta {
+  @apply text-[13px];
+}
+
+@utility text-micro {
+  @apply text-[11px];
+}
+
+/*
+ * shadcn-vue semantic layer, wired to the Endurain palette so primitives
+ * added under src/components/ui/ render with the brand colors out of the box.
+ */
+:root {
+  --radius: 0.5rem;
+
+  --background: #f1efe8;
+  --foreground: #2c2c2a;
+  --card: #ffffff;
+  --card-foreground: #2c2c2a;
+  --popover: #ffffff;
+  --popover-foreground: #2c2c2a;
+  --primary: #1d9e75;
+  --primary-foreground: #ffffff;
+  --secondary: #e1f5ee;
+  --secondary-foreground: #0f6e56;
+  --muted: #f1efe8;
+  --muted-foreground: #888780;
+  --accent: #e1f5ee;
+  --accent-foreground: #0f6e56;
+  --destructive: #e24b4a;
+  --destructive-foreground: #ffffff;
+  --warning: #d97706;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.15);
+  --ring: #1d9e75;
+}
+
+.dark {
+  --background: #18181b;
+  --foreground: #f4f4f5;
+  --card: #27272a;
+  --card-foreground: #f4f4f5;
+  --popover: #27272a;
+  --popover-foreground: #f4f4f5;
+  --primary: #5dcaa5;
+  --primary-foreground: #04342c;
+  --secondary: #04342c;
+  --secondary-foreground: #5dcaa5;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #04342c;
+  --accent-foreground: #5dcaa5;
+  --destructive: #e24b4a;
+  --destructive-foreground: #ffffff;
+  --warning: #fbbf24;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #5dcaa5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /*
+   * Hide the native (browser-tinted, unthemeable) search clear button so the
+   * token-styled clear control rendered in markup is the only one shown.
+   */
+  input[type='search']::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Sinu e-posti kinnitamine",
+  "verifyingBody": "Palun oota, kuni me sinu aadressi kinnitame.",
+  "successTitle": "E-post kinnitatud",
+  "successBody": "Sinu e-posti aadress on kinnitatud.",
+  "adminApprovalBody": "Sinu konto ootab nüüd administraatori heakskiitu.",
+  "continueButton": "Jätka sisselogimisega",
+  "invalidTitle": "Kinnitamine ebaõnnestus",
+  "missingTokenBody": "Sellel kinnituslingil puudub luba.",
+  "errorInvalidToken": "See kinnituslink on kehtetu või aegunud.",
+  "errorNotFound": "Me ei leidnud sellele lingile vastavat kontot.",
+  "errorGeneral": "Sinu e-posti ei õnnestunud kinnitada. Palun proovi uuesti.",
+  "retry": "Proovi uuesti",
+  "backToLogin": "Tagasi sisselogimisse"
+}

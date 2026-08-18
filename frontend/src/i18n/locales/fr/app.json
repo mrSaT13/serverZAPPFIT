@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Logo Endurain",
+  "title": "Le système de design est en ligne",
+  "subtitle": "Tailwind v4, shadcn-vue, TypeScript strict et la palette de tokens Endurain sont en place",
+  "primaryAction": "Action principale",
+  "notFound": {
+    "title": "Page introuvable",
+    "message": "La page que vous recherchez n'existe pas ou a été déplacée",
+    "action": "Retour à l'accueil"
+  },
+  "error": {
+    "title": "Une erreur s'est produite",
+    "message": "Cette section n'a pas pu se charger. Vous pouvez réessayer.",
+    "retry": "Réessayer",
+    "toast": "Une erreur s'est produite. Veuillez réessayer."
+  },
+  "configError": {
+    "title": "Erreur de configuration",
+    "message": "L'application n'a pas pu joindre le backend Endurain. Cela est généralement dû à une variable d'environnement ENDURAIN_HOST manquante ou mal configurée, ou au fait que le backend n'est pas en cours d'exécution.",
+    "notSet": "(non défini)",
+    "help": "Vérifiez que ENDURAIN_HOST pointe vers l'URL où votre instance Endurain est accessible (par exemple https://endurain.example.com) et que le backend est en cours d'exécution, puis rechargez la page.",
+    "reload": "Recharger"
+  },
+  "dismiss": "Fermer",
+  "language": "Langue",
+  "theme": {
+    "toLight": "Mode clair",
+    "toDark": "Mode sombre"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "previous": "Page précédente",
+    "next": "Page suivante",
+    "goToPage": "Aller à la page {page}"
+  },
+  "markdownEditor": {
+    "preview": "Aperçu",
+    "edit": "Modifier",
+    "supported": "Markdown pris en charge",
+    "empty": "Rien à afficher"
+  }
+}

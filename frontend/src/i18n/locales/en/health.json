@@ -1,0 +1,648 @@
+{
+  "title": "Health",
+  "subtitle": "See all your health data in one place",
+  "nav": {
+    "label": "Health sections",
+    "soon": "Soon",
+    "dashboard": "Dashboard",
+    "sleep": "Sleep",
+    "rhr": "Resting heart rate",
+    "steps": "Steps",
+    "weight": "Weight",
+    "fasting": "Fasting",
+    "water": "Water intake",
+    "poop": "Bowel movements"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Your daily wellbeing at a glance",
+    "sleep": "Sleep",
+    "restingHeartRate": "Resting HR",
+    "avgSkinTemperatureDeviation": "Skin temp. dev.",
+    "weight": "Weight",
+    "bmi": "BMI",
+    "steps": "Steps",
+    "fasting": "Fasting",
+    "water": "Water intake",
+    "poop": "Bowel movements",
+    "noSleepTarget": "No sleep target",
+    "noWeightTarget": "No weight target",
+    "noStepsTarget": "No steps target",
+    "noFastingTarget": "No fasting target",
+    "noWaterTarget": "No water target",
+    "noPoopTarget": "No bowel movement target",
+    "stepsTargetLabel": "steps",
+    "poopTargetLabel": "/ day",
+    "noWeightData": "No weight data",
+    "bmiUnderweight": "Underweight",
+    "bmiNormalWeight": "Normal weight",
+    "bmiOverweight": "Overweight",
+    "bmiObesityClass1": "Obesity (Class 1)",
+    "bmiObesityClass2": "Obesity (Class 2)",
+    "bmiObesityClass3": "Extreme obesity (Class 3)",
+    "hrvBalanced": "Balanced",
+    "hrvUnbalanced": "Unbalanced",
+    "hrvLow": "Low",
+    "hrvPoor": "Poor",
+    "labelNoData": "No data",
+    "errorTitle": "Couldn't load your health data",
+    "errorDescription": "Something went wrong loading your daily health stats. Please try again.",
+    "retry": "Try again"
+  },
+  "weight": {
+    "title": "Weight",
+    "subtitle": "Track your weight and body composition over time",
+    "logButton": "Log weight",
+    "targetButton": "Set target",
+    "sourceGarmin": "From Garmin Connect",
+    "toggleDetails": "Toggle body composition details",
+    "chartTitle": "Weight trend",
+    "chartWeightSeries": "Weight",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit entry",
+      "delete": "Delete entry"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Body fat",
+      "bodyWater": "Body water",
+      "boneMass": "Bone mass",
+      "muscleMass": "Muscle mass"
+    },
+    "form": {
+      "addTitle": "Log weight",
+      "editTitle": "Edit weight entry",
+      "description": "Record your weight and, optionally, your body composition.",
+      "date": "Date",
+      "dateRequired": "Please choose a date.",
+      "weight": "Weight",
+      "weightRequired": "Please enter your weight.",
+      "weightInvalid": "Enter a weight greater than zero.",
+      "bodyComposition": "Body composition (optional)",
+      "bmi": "BMI",
+      "bodyFat": "Body fat (%)",
+      "bodyWater": "Body water (%)",
+      "boneMass": "Bone mass",
+      "muscleMass": "Muscle mass",
+      "create": "Log",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Weight logged.",
+      "updateSuccess": "Weight entry updated.",
+      "saveError": "Couldn't save your weight entry. Please try again."
+    },
+    "target": {
+      "title": "Set weight target",
+      "description": "Choose a goal weight, or clear the field to remove it.",
+      "weight": "Target weight",
+      "hint": "Leave empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Weight target updated.",
+      "saveError": "Couldn't update your weight target. Please try again."
+    },
+    "empty": {
+      "title": "No weight entries yet",
+      "description": "Log your weight to start tracking your progress over time."
+    },
+    "error": {
+      "title": "Couldn't load your weight history",
+      "description": "Something went wrong loading your weight entries. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete weight entry",
+      "body": "This weight entry will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Weight entry deleted.",
+      "error": "Couldn't delete the weight entry. Please try again."
+    }
+  },
+  "steps": {
+    "title": "Steps",
+    "subtitle": "Track your daily step count over time",
+    "logButton": "Log steps",
+    "targetButton": "Set target",
+    "sourceGarmin": "From Garmin Connect",
+    "chartTitle": "Steps trend",
+    "chartStepsSeries": "Steps",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit entry",
+      "delete": "Delete entry"
+    },
+    "form": {
+      "addTitle": "Log steps",
+      "editTitle": "Edit steps entry",
+      "description": "Record your step count for the day.",
+      "date": "Date",
+      "dateRequired": "Please choose a date.",
+      "steps": "Steps",
+      "stepsRequired": "Please enter your step count.",
+      "stepsInvalid": "Enter a step count greater than zero.",
+      "create": "Log",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Steps logged.",
+      "updateSuccess": "Steps entry updated.",
+      "saveError": "Couldn't save your steps entry. Please try again."
+    },
+    "target": {
+      "title": "Set steps target",
+      "description": "Choose a daily steps goal, or clear the field to remove it.",
+      "steps": "Target daily steps",
+      "hint": "Leave empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Steps target updated.",
+      "saveError": "Couldn't update your steps target. Please try again."
+    },
+    "empty": {
+      "title": "No steps entries yet",
+      "description": "Log your steps to start tracking your activity over time."
+    },
+    "error": {
+      "title": "Couldn't load your steps history",
+      "description": "Something went wrong loading your steps entries. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete steps entry",
+      "body": "This steps entry will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Steps entry deleted.",
+      "error": "Couldn't delete the steps entry. Please try again."
+    }
+  },
+  "rhr": {
+    "title": "Resting heart rate",
+    "subtitle": "Track your resting heart rate over time",
+    "sourceGarmin": "From Garmin Connect",
+    "chartTitle": "Resting heart rate trend",
+    "chartSeries": "Resting heart rate",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "empty": {
+      "title": "No resting heart rate data yet",
+      "description": "Resting heart rate is recorded alongside your sleep. Sync a device that tracks it to see your trend here."
+    },
+    "error": {
+      "title": "Couldn't load your resting heart rate history",
+      "description": "Something went wrong loading your resting heart rate data. Please try again.",
+      "retry": "Try again"
+    }
+  },
+  "sleep": {
+    "title": "Sleep",
+    "subtitle": "Track your sleep duration and quality over time",
+    "logButton": "Log sleep",
+    "targetButton": "Set target",
+    "sourceGarmin": "From Garmin Connect",
+    "toggleDetails": "Toggle sleep details",
+    "chartTitle": "Sleep trend",
+    "chartSleepSeries": "Sleep",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit entry",
+      "delete": "Delete entry"
+    },
+    "score": "Score",
+    "hrvBalanced": "Balanced",
+    "hrvUnbalanced": "Unbalanced",
+    "hrvLow": "Low",
+    "hrvPoor": "Poor",
+    "scoreExcellent": "Excellent",
+    "scoreGood": "Good",
+    "scoreFair": "Fair",
+    "scorePoor": "Poor",
+    "detail": {
+      "tabsLabel": "Sleep detail sections",
+      "tabScore": "Sleep score",
+      "tabDetails": "Sleep details",
+      "deep": "Deep",
+      "light": "Light",
+      "rem": "REM",
+      "awake": "Awake",
+      "score": "Sleep score",
+      "quality": "Quality",
+      "duration": "Duration",
+      "restingHeartRate": "Resting HR",
+      "avgHeartRate": "Avg HR",
+      "minHeartRate": "Min HR",
+      "maxHeartRate": "Max HR",
+      "skinTempDeviation": "Skin temp. dev.",
+      "hrv": "HRV status",
+      "spo2": "Avg SpO₂",
+      "lowestSpo2": "Lowest SpO₂",
+      "highestSpo2": "Highest SpO₂",
+      "avgRespiration": "Avg respiration",
+      "lowestRespiration": "Lowest respiration",
+      "highestRespiration": "Highest respiration",
+      "avgSleepStress": "Avg sleep stress",
+      "awakeCount": "Awakenings",
+      "summary": "Summary",
+      "breakdown": "Breakdown",
+      "overview": "Overview",
+      "heartRate": "Heart rate",
+      "bloodOxygen": "Blood oxygen",
+      "respiration": "Respiration",
+      "avg": "Avg",
+      "min": "Min",
+      "max": "Max",
+      "noData": "No data recorded."
+    },
+    "hypnogram": {
+      "title": "Sleep stages",
+      "deep": "Deep",
+      "light": "Light",
+      "rem": "REM",
+      "awake": "Awake",
+      "noData": "No stage timeline available."
+    },
+    "form": {
+      "addTitle": "Log sleep",
+      "editTitle": "Edit sleep entry",
+      "description": "Record your sleep duration and, optionally, the stage breakdown and metrics.",
+      "date": "Date",
+      "dateRequired": "Please choose a date.",
+      "totalSleep": "Total sleep",
+      "totalSleepRequired": "Please enter how long you slept.",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "stageBreakdown": "Stage breakdown (optional)",
+      "deep": "Deep sleep",
+      "light": "Light sleep",
+      "rem": "REM sleep",
+      "awake": "Awake",
+      "metrics": "Metrics (optional)",
+      "sleepScore": "Sleep score (0–100)",
+      "restingHeartRate": "Resting heart rate (bpm)",
+      "skinTempDeviation": "Skin temp. deviation (°C)",
+      "spo2": "Avg SpO₂ (%)",
+      "sleepTimes": "Sleep times (optional)",
+      "startTime": "Sleep start",
+      "endTime": "Sleep end",
+      "endBeforeStart": "Sleep end must be after the start time.",
+      "awakeCount": "Awakenings",
+      "heartRate": "Heart rate (optional)",
+      "avgHeartRate": "Avg heart rate (bpm)",
+      "minHeartRate": "Min heart rate (bpm)",
+      "maxHeartRate": "Max heart rate (bpm)",
+      "bloodOxygen": "Blood oxygen (optional)",
+      "lowestSpo2": "Lowest SpO₂ (%)",
+      "highestSpo2": "Highest SpO₂ (%)",
+      "avgSleepStress": "Avg sleep stress (0–100)",
+      "sleepStages": "Sleep stages (optional)",
+      "noStages": "No stages added yet.",
+      "addStage": "Add stage",
+      "removeStage": "Remove stage",
+      "stageLabel": "Stage {index}",
+      "stageType": "Stage",
+      "stageDeep": "Deep",
+      "stageLight": "Light",
+      "stageRem": "REM",
+      "stageAwake": "Awake",
+      "stageStart": "Start",
+      "stageEnd": "End",
+      "stageDuration": "Duration",
+      "create": "Log",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Sleep logged.",
+      "updateSuccess": "Sleep entry updated.",
+      "saveError": "Couldn't save your sleep entry. Please try again."
+    },
+    "target": {
+      "title": "Set sleep target",
+      "description": "Choose a nightly sleep goal, or clear the fields to remove it.",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "hint": "Leave empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Sleep target updated.",
+      "saveError": "Couldn't update your sleep target. Please try again."
+    },
+    "empty": {
+      "title": "No sleep entries yet",
+      "description": "Log a night's sleep to start tracking your rest over time."
+    },
+    "error": {
+      "title": "Couldn't load your sleep history",
+      "description": "Something went wrong loading your sleep entries. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete sleep entry",
+      "body": "This sleep entry will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Sleep entry deleted.",
+      "error": "Couldn't delete the sleep entry. Please try again."
+    }
+  },
+  "water": {
+    "title": "Water intake",
+    "subtitle": "Track your daily water intake over time",
+    "logButton": "Log water",
+    "targetButton": "Set target",
+    "sourceGarmin": "From Garmin Connect",
+    "chartTitle": "Water intake trend",
+    "chartWaterSeries": "Water",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit entry",
+      "delete": "Delete entry"
+    },
+    "form": {
+      "addTitle": "Log water",
+      "editTitle": "Edit water entry",
+      "description": "Record your water intake for the day.",
+      "date": "Date",
+      "dateRequired": "Please choose a date.",
+      "amount": "Amount",
+      "amountRequired": "Please enter an amount.",
+      "amountInvalid": "Enter an amount greater than zero.",
+      "create": "Log",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Water logged.",
+      "updateSuccess": "Water entry updated.",
+      "saveError": "Couldn't save your water entry. Please try again."
+    },
+    "target": {
+      "title": "Set water target",
+      "description": "Choose a daily water goal, or clear the field to remove it.",
+      "amount": "Daily target",
+      "hint": "Leave empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Water target updated.",
+      "saveError": "Couldn't update your water target. Please try again."
+    },
+    "empty": {
+      "title": "No water entries yet",
+      "description": "Log your water intake to start tracking your hydration over time."
+    },
+    "error": {
+      "title": "Couldn't load your water history",
+      "description": "Something went wrong loading your water entries. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete water entry",
+      "body": "This water entry will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Water entry deleted.",
+      "error": "Couldn't delete the water entry. Please try again."
+    }
+  },
+  "poop": {
+    "title": "Bowel movements",
+    "subtitle": "Track your bowel movements over time",
+    "logButton": "Log entry",
+    "targetButton": "Set target",
+    "chartTitle": "Daily frequency",
+    "chartCountSeries": "Bowel movements",
+    "chartTargetSeries": "Target",
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit entry",
+      "delete": "Delete entry"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Bowel movement"
+    },
+    "form": {
+      "addTitle": "Log bowel movement",
+      "editTitle": "Edit bowel movement",
+      "description": "Record the time and details of your bowel movement.",
+      "dateTime": "Date & time",
+      "dateTimeRequired": "Please choose a date and time.",
+      "bristolType": "Bristol stool type",
+      "color": "Color",
+      "notes": "Notes",
+      "none": "None",
+      "colors": {
+        "brown": "Brown",
+        "dark_brown": "Dark brown",
+        "light_brown": "Light brown",
+        "yellow": "Yellow",
+        "green": "Green",
+        "black": "Black",
+        "red": "Red",
+        "white": "White"
+      },
+      "create": "Log",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Bowel movement logged.",
+      "updateSuccess": "Bowel movement updated.",
+      "saveError": "Couldn't save your entry. Please try again."
+    },
+    "target": {
+      "title": "Set bowel movement target",
+      "description": "Choose a daily bowel movement goal, or clear the field to remove it.",
+      "count": "Target per day",
+      "hint": "Leave empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Bowel movement target updated.",
+      "saveError": "Couldn't update your target. Please try again."
+    },
+    "empty": {
+      "title": "No entries yet",
+      "description": "Log a bowel movement to start tracking over time."
+    },
+    "error": {
+      "title": "Couldn't load your history",
+      "description": "Something went wrong loading your entries. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete entry",
+      "body": "This entry will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Entry deleted.",
+      "error": "Couldn't delete the entry. Please try again."
+    }
+  },
+  "fasting": {
+    "title": "Fasting",
+    "subtitle": "Start a fast, track your progress, and review your history",
+    "startButton": "Start fasting",
+    "targetButton": "Set target",
+    "sourceGarmin": "From Garmin Connect",
+    "active": {
+      "title": "Fast in progress",
+      "started": "Started",
+      "target": "Target",
+      "complete": "Complete",
+      "break": "Break fast",
+      "cancel": "Cancel",
+      "completeHint": "You can complete the fast once you reach your target."
+    },
+    "stats": {
+      "totalFasts": "Total fasts",
+      "currentStreak": "Current streak",
+      "longestStreak": "Longest streak",
+      "avgDuration": "Avg. duration",
+      "totalTime": "Total fasting time",
+      "completionRate": "Completion rate",
+      "days": "days"
+    },
+    "types": {
+      "16:8": "16:8 (16h fast, 8h eat)",
+      "18:6": "18:6 (18h fast, 6h eat)",
+      "20:4": "20:4 (20h fast, 4h eat)",
+      "OMAD": "OMAD (one meal a day)",
+      "24h": "24-hour fast",
+      "36h": "36-hour fast",
+      "48h": "48-hour fast",
+      "72h": "72-hour fast",
+      "custom": "Custom"
+    },
+    "status": {
+      "in_progress": "In progress",
+      "completed": "Completed",
+      "broken": "Broken",
+      "cancelled": "Cancelled"
+    },
+    "interval": {
+      "label": "Time range",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "last_90_days": "Last 90 days",
+      "last_year": "Last year",
+      "all_time": "All time"
+    },
+    "actions": {
+      "edit": "Edit fast",
+      "delete": "Delete fast"
+    },
+    "list": {
+      "notesLabel": "Notes"
+    },
+    "form": {
+      "addTitle": "Start fasting",
+      "editTitle": "Edit fasting session",
+      "description": "Choose a fasting protocol and when it started.",
+      "type": "Fasting protocol",
+      "customDuration": "Custom duration",
+      "customDurationHint": "Length of the fast, in hours (1–72).",
+      "hours": "hours",
+      "startTime": "Start time",
+      "startTimeRequired": "Please choose a start time.",
+      "endTime": "End time",
+      "status": "Status",
+      "notes": "Notes",
+      "create": "Start",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Fast started.",
+      "updateSuccess": "Fasting session updated.",
+      "saveError": "Couldn't save your fasting session. Please try again."
+    },
+    "target": {
+      "title": "Set fasting target",
+      "description": "Choose a target fasting duration, or clear both fields to remove it.",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "hint": "Leave both empty to remove your target.",
+      "save": "Save",
+      "cancel": "Cancel",
+      "close": "Close",
+      "saveSuccess": "Fasting target updated.",
+      "saveError": "Couldn't update your fasting target. Please try again."
+    },
+    "complete": {
+      "success": "Fast ended.",
+      "error": "Couldn't end your fast. Please try again."
+    },
+    "empty": {
+      "title": "No fasts yet",
+      "description": "Start a fast to begin tracking your fasting history."
+    },
+    "error": {
+      "title": "Couldn't load your fasting history",
+      "description": "Something went wrong loading your fasting sessions. Please try again.",
+      "retry": "Try again"
+    },
+    "delete": {
+      "title": "Delete fasting session",
+      "body": "This fasting session will be permanently deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Fasting session deleted.",
+      "error": "Couldn't delete the fasting session. Please try again."
+    }
+  }
+}

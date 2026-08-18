@@ -1,0 +1,648 @@
+{
+  "title": "Sağlık",
+  "subtitle": "Tüm sağlık verilerinizi tek bir yerde görün",
+  "nav": {
+    "label": "Sağlık bölümleri",
+    "soon": "Yakında",
+    "dashboard": "Pano",
+    "sleep": "Uyku",
+    "rhr": "Dinlenme kalp atış hızı",
+    "steps": "Adımlar",
+    "weight": "Kilo",
+    "fasting": "Oruç",
+    "water": "Su tüketimi",
+    "poop": "Bağırsak hareketleri"
+  },
+  "dashboard": {
+    "title": "Pano",
+    "subtitle": "Günlük sağlığınız bir bakışta",
+    "sleep": "Uyku",
+    "restingHeartRate": "Dinlenme KAH",
+    "avgSkinTemperatureDeviation": "Cilt sıc. sapması",
+    "weight": "Kilo",
+    "bmi": "BMI",
+    "steps": "Adımlar",
+    "fasting": "Oruç",
+    "water": "Su tüketimi",
+    "poop": "Bağırsak hareketleri",
+    "noSleepTarget": "Uyku hedefi yok",
+    "noWeightTarget": "Kilo hedefi yok",
+    "noStepsTarget": "Adım hedefi yok",
+    "noFastingTarget": "Oruç hedefi yok",
+    "noWaterTarget": "Su hedefi yok",
+    "noPoopTarget": "Bağırsak hareketi hedefi yok",
+    "stepsTargetLabel": "adım",
+    "poopTargetLabel": "/ gün",
+    "noWeightData": "Kilo verisi yok",
+    "bmiUnderweight": "Zayıf",
+    "bmiNormalWeight": "Normal kilo",
+    "bmiOverweight": "Fazla kilolu",
+    "bmiObesityClass1": "Obezite (Sınıf 1)",
+    "bmiObesityClass2": "Obezite (Sınıf 2)",
+    "bmiObesityClass3": "Aşırı obezite (Sınıf 3)",
+    "hrvBalanced": "Dengeli",
+    "hrvUnbalanced": "Dengesiz",
+    "hrvLow": "Düşük",
+    "hrvPoor": "Zayıf",
+    "labelNoData": "Veri yok",
+    "errorTitle": "Sağlık verileriniz yüklenemedi",
+    "errorDescription": "Günlük sağlık istatistikleriniz yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+    "retry": "Tekrar dene"
+  },
+  "weight": {
+    "title": "Kilo",
+    "subtitle": "Kilonuzu ve vücut kompozisyonunuzu zaman içinde takip edin",
+    "logButton": "Kilo kaydet",
+    "targetButton": "Hedef belirle",
+    "sourceGarmin": "Garmin Connect'ten",
+    "toggleDetails": "Vücut kompozisyonu ayrıntılarını aç/kapat",
+    "chartTitle": "Kilo eğilimi",
+    "chartWeightSeries": "Kilo",
+    "chartTargetSeries": "Hedef",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Kaydı düzenle",
+      "delete": "Kaydı sil"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Vücut yağı",
+      "bodyWater": "Vücut suyu",
+      "boneMass": "Kemik kütlesi",
+      "muscleMass": "Kas kütlesi"
+    },
+    "form": {
+      "addTitle": "Kilo kaydet",
+      "editTitle": "Kilo kaydını düzenle",
+      "description": "Kilonuzu ve isteğe bağlı olarak vücut kompozisyonunuzu kaydedin.",
+      "date": "Tarih",
+      "dateRequired": "Lütfen bir tarih seçin.",
+      "weight": "Kilo",
+      "weightRequired": "Lütfen kilonuzu girin.",
+      "weightInvalid": "Sıfırdan büyük bir kilo girin.",
+      "bodyComposition": "Vücut kompozisyonu (isteğe bağlı)",
+      "bmi": "BMI",
+      "bodyFat": "Vücut yağı (%)",
+      "bodyWater": "Vücut suyu (%)",
+      "boneMass": "Kemik kütlesi",
+      "muscleMass": "Kas kütlesi",
+      "create": "Kaydet",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Kilo kaydedildi.",
+      "updateSuccess": "Kilo kaydı güncellendi.",
+      "saveError": "Kilo kaydınız kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Kilo hedefi belirle",
+      "description": "Bir hedef kilo seçin veya kaldırmak için alanı temizleyin.",
+      "weight": "Hedef kilo",
+      "hint": "Hedefinizi kaldırmak için boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Kilo hedefi güncellendi.",
+      "saveError": "Kilo hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz kilo kaydı yok",
+      "description": "Zaman içindeki ilerlemenizi takip etmeye başlamak için kilonuzu kaydedin."
+    },
+    "error": {
+      "title": "Kilo geçmişiniz yüklenemedi",
+      "description": "Kilo kayıtlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Kilo kaydını sil",
+      "body": "Bu kilo kaydı kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Kilo kaydı silindi.",
+      "error": "Kilo kaydı silinemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "steps": {
+    "title": "Adımlar",
+    "subtitle": "Günlük adım sayınızı zaman içinde takip edin",
+    "logButton": "Adım kaydet",
+    "targetButton": "Hedef belirle",
+    "sourceGarmin": "Garmin Connect'ten",
+    "chartTitle": "Adım eğilimi",
+    "chartStepsSeries": "Adımlar",
+    "chartTargetSeries": "Hedef",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Kaydı düzenle",
+      "delete": "Kaydı sil"
+    },
+    "form": {
+      "addTitle": "Adım kaydet",
+      "editTitle": "Adım kaydını düzenle",
+      "description": "Gün için adım sayınızı kaydedin.",
+      "date": "Tarih",
+      "dateRequired": "Lütfen bir tarih seçin.",
+      "steps": "Adımlar",
+      "stepsRequired": "Lütfen adım sayınızı girin.",
+      "stepsInvalid": "Sıfırdan büyük bir adım sayısı girin.",
+      "create": "Kaydet",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Adımlar kaydedildi.",
+      "updateSuccess": "Adım kaydı güncellendi.",
+      "saveError": "Adım kaydınız kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Adım hedefi belirle",
+      "description": "Günlük bir adım hedefi seçin veya kaldırmak için alanı temizleyin.",
+      "steps": "Günlük hedef adım",
+      "hint": "Hedefinizi kaldırmak için boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Adım hedefi güncellendi.",
+      "saveError": "Adım hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz adım kaydı yok",
+      "description": "Zaman içindeki aktivitenizi takip etmeye başlamak için adımlarınızı kaydedin."
+    },
+    "error": {
+      "title": "Adım geçmişiniz yüklenemedi",
+      "description": "Adım kayıtlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Adım kaydını sil",
+      "body": "Bu adım kaydı kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Adım kaydı silindi.",
+      "error": "Adım kaydı silinemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "rhr": {
+    "title": "Dinlenme kalp atış hızı",
+    "subtitle": "Dinlenme kalp atış hızınızı zaman içinde takip edin",
+    "sourceGarmin": "Garmin Connect'ten",
+    "chartTitle": "Dinlenme kalp atış hızı eğilimi",
+    "chartSeries": "Dinlenme kalp atış hızı",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "empty": {
+      "title": "Henüz dinlenme kalp atış hızı verisi yok",
+      "description": "Dinlenme kalp atış hızı, uykunuzla birlikte kaydedilir. Eğiliminizi burada görmek için bunu takip eden bir cihazı eşitleyin."
+    },
+    "error": {
+      "title": "Dinlenme kalp atış hızı geçmişiniz yüklenemedi",
+      "description": "Dinlenme kalp atış hızı verileriniz yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    }
+  },
+  "sleep": {
+    "title": "Uyku",
+    "subtitle": "Uyku sürenizi ve kalitenizi zaman içinde takip edin",
+    "logButton": "Uyku kaydet",
+    "targetButton": "Hedef belirle",
+    "sourceGarmin": "Garmin Connect'ten",
+    "toggleDetails": "Uyku ayrıntılarını aç/kapat",
+    "chartTitle": "Uyku eğilimi",
+    "chartSleepSeries": "Uyku",
+    "chartTargetSeries": "Hedef",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Kaydı düzenle",
+      "delete": "Kaydı sil"
+    },
+    "score": "Puan",
+    "hrvBalanced": "Dengeli",
+    "hrvUnbalanced": "Dengesiz",
+    "hrvLow": "Düşük",
+    "hrvPoor": "Zayıf",
+    "scoreExcellent": "Mükemmel",
+    "scoreGood": "İyi",
+    "scoreFair": "Orta",
+    "scorePoor": "Zayıf",
+    "detail": {
+      "tabsLabel": "Uyku ayrıntı bölümleri",
+      "tabScore": "Uyku puanı",
+      "tabDetails": "Uyku ayrıntıları",
+      "deep": "Derin",
+      "light": "Hafif",
+      "rem": "REM",
+      "awake": "Uyanık",
+      "score": "Uyku puanı",
+      "quality": "Kalite",
+      "duration": "Süre",
+      "restingHeartRate": "Dinlenme KAH",
+      "avgHeartRate": "Ort. KAH",
+      "minHeartRate": "Min. KAH",
+      "maxHeartRate": "Maks. KAH",
+      "skinTempDeviation": "Cilt sıc. sapması",
+      "hrv": "HRV durumu",
+      "spo2": "Ort. SpO₂",
+      "lowestSpo2": "En düşük SpO₂",
+      "highestSpo2": "En yüksek SpO₂",
+      "avgRespiration": "Ort. solunum",
+      "lowestRespiration": "En düşük solunum",
+      "highestRespiration": "En yüksek solunum",
+      "avgSleepStress": "Ort. uyku stresi",
+      "awakeCount": "Uyanmalar",
+      "summary": "Özet",
+      "breakdown": "Dağılım",
+      "overview": "Genel bakış",
+      "heartRate": "Kalp atış hızı",
+      "bloodOxygen": "Kan oksijeni",
+      "respiration": "Solunum",
+      "avg": "Ort.",
+      "min": "Min.",
+      "max": "Maks.",
+      "noData": "Kayıtlı veri yok."
+    },
+    "hypnogram": {
+      "title": "Uyku evreleri",
+      "deep": "Derin",
+      "light": "Hafif",
+      "rem": "REM",
+      "awake": "Uyanık",
+      "noData": "Evre zaman çizelgesi mevcut değil."
+    },
+    "form": {
+      "addTitle": "Uyku kaydet",
+      "editTitle": "Uyku kaydını düzenle",
+      "description": "Uyku sürenizi ve isteğe bağlı olarak evre dağılımını ve metrikleri kaydedin.",
+      "date": "Tarih",
+      "dateRequired": "Lütfen bir tarih seçin.",
+      "totalSleep": "Toplam uyku",
+      "totalSleepRequired": "Lütfen ne kadar uyuduğunuzu girin.",
+      "hours": "Saat",
+      "minutes": "Dakika",
+      "stageBreakdown": "Evre dağılımı (isteğe bağlı)",
+      "deep": "Derin uyku",
+      "light": "Hafif uyku",
+      "rem": "REM uykusu",
+      "awake": "Uyanık",
+      "metrics": "Metrikler (isteğe bağlı)",
+      "sleepScore": "Uyku puanı (0–100)",
+      "restingHeartRate": "Dinlenme kalp atış hızı (bpm)",
+      "skinTempDeviation": "Cilt sıc. sapması (°C)",
+      "spo2": "Ort. SpO₂ (%)",
+      "sleepTimes": "Uyku saatleri (isteğe bağlı)",
+      "startTime": "Uyku başlangıcı",
+      "endTime": "Uyku bitişi",
+      "endBeforeStart": "Uyku bitişi, başlangıç saatinden sonra olmalıdır.",
+      "awakeCount": "Uyanmalar",
+      "heartRate": "Kalp atış hızı (isteğe bağlı)",
+      "avgHeartRate": "Ort. kalp atış hızı (bpm)",
+      "minHeartRate": "Min. kalp atış hızı (bpm)",
+      "maxHeartRate": "Maks. kalp atış hızı (bpm)",
+      "bloodOxygen": "Kan oksijeni (isteğe bağlı)",
+      "lowestSpo2": "En düşük SpO₂ (%)",
+      "highestSpo2": "En yüksek SpO₂ (%)",
+      "avgSleepStress": "Ort. uyku stresi (0–100)",
+      "sleepStages": "Uyku evreleri (isteğe bağlı)",
+      "noStages": "Henüz evre eklenmedi.",
+      "addStage": "Evre ekle",
+      "removeStage": "Evreyi kaldır",
+      "stageLabel": "Evre {index}",
+      "stageType": "Evre",
+      "stageDeep": "Derin",
+      "stageLight": "Hafif",
+      "stageRem": "REM",
+      "stageAwake": "Uyanık",
+      "stageStart": "Başlangıç",
+      "stageEnd": "Bitiş",
+      "stageDuration": "Süre",
+      "create": "Kaydet",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Uyku kaydedildi.",
+      "updateSuccess": "Uyku kaydı güncellendi.",
+      "saveError": "Uyku kaydınız kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Uyku hedefi belirle",
+      "description": "Gecelik bir uyku hedefi seçin veya kaldırmak için alanları temizleyin.",
+      "hours": "Saat",
+      "minutes": "Dakika",
+      "hint": "Hedefinizi kaldırmak için boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Uyku hedefi güncellendi.",
+      "saveError": "Uyku hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz uyku kaydı yok",
+      "description": "Dinlenmenizi zaman içinde takip etmeye başlamak için bir gecelik uykuyu kaydedin."
+    },
+    "error": {
+      "title": "Uyku geçmişiniz yüklenemedi",
+      "description": "Uyku kayıtlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Uyku kaydını sil",
+      "body": "Bu uyku kaydı kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Uyku kaydı silindi.",
+      "error": "Uyku kaydı silinemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "water": {
+    "title": "Su tüketimi",
+    "subtitle": "Günlük su tüketiminizi zaman içinde takip edin",
+    "logButton": "Su kaydet",
+    "targetButton": "Hedef belirle",
+    "sourceGarmin": "Garmin Connect'ten",
+    "chartTitle": "Su tüketimi eğilimi",
+    "chartWaterSeries": "Su",
+    "chartTargetSeries": "Hedef",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Kaydı düzenle",
+      "delete": "Kaydı sil"
+    },
+    "form": {
+      "addTitle": "Su kaydet",
+      "editTitle": "Su kaydını düzenle",
+      "description": "Gün için su tüketiminizi kaydedin.",
+      "date": "Tarih",
+      "dateRequired": "Lütfen bir tarih seçin.",
+      "amount": "Miktar",
+      "amountRequired": "Lütfen bir miktar girin.",
+      "amountInvalid": "Sıfırdan büyük bir miktar girin.",
+      "create": "Kaydet",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Su kaydedildi.",
+      "updateSuccess": "Su kaydı güncellendi.",
+      "saveError": "Su kaydınız kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Su hedefi belirle",
+      "description": "Günlük bir su hedefi seçin veya kaldırmak için alanı temizleyin.",
+      "amount": "Günlük hedef",
+      "hint": "Hedefinizi kaldırmak için boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Su hedefi güncellendi.",
+      "saveError": "Su hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz su kaydı yok",
+      "description": "Sıvı alımınızı zaman içinde takip etmeye başlamak için su tüketiminizi kaydedin."
+    },
+    "error": {
+      "title": "Su geçmişiniz yüklenemedi",
+      "description": "Su kayıtlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Su kaydını sil",
+      "body": "Bu su kaydı kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Su kaydı silindi.",
+      "error": "Su kaydı silinemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "poop": {
+    "title": "Bağırsak hareketleri",
+    "subtitle": "Bağırsak hareketlerinizi zaman içinde takip edin",
+    "logButton": "Kayıt ekle",
+    "targetButton": "Hedef belirle",
+    "chartTitle": "Günlük sıklık",
+    "chartCountSeries": "Bağırsak hareketleri",
+    "chartTargetSeries": "Hedef",
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Kaydı düzenle",
+      "delete": "Kaydı sil"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Bağırsak hareketi"
+    },
+    "form": {
+      "addTitle": "Bağırsak hareketi kaydet",
+      "editTitle": "Bağırsak hareketini düzenle",
+      "description": "Bağırsak hareketinizin zamanını ve ayrıntılarını kaydedin.",
+      "dateTime": "Tarih ve saat",
+      "dateTimeRequired": "Lütfen bir tarih ve saat seçin.",
+      "bristolType": "Bristol dışkı türü",
+      "color": "Renk",
+      "notes": "Notlar",
+      "none": "Yok",
+      "colors": {
+        "brown": "Kahverengi",
+        "dark_brown": "Koyu kahverengi",
+        "light_brown": "Açık kahverengi",
+        "yellow": "Sarı",
+        "green": "Yeşil",
+        "black": "Siyah",
+        "red": "Kırmızı",
+        "white": "Beyaz"
+      },
+      "create": "Kaydet",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Bağırsak hareketi kaydedildi.",
+      "updateSuccess": "Bağırsak hareketi güncellendi.",
+      "saveError": "Kaydınız kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Bağırsak hareketi hedefi belirle",
+      "description": "Günlük bir bağırsak hareketi hedefi seçin veya kaldırmak için alanı temizleyin.",
+      "count": "Gün başına hedef",
+      "hint": "Hedefinizi kaldırmak için boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Bağırsak hareketi hedefi güncellendi.",
+      "saveError": "Hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz kayıt yok",
+      "description": "Zaman içinde takip etmeye başlamak için bir bağırsak hareketi kaydedin."
+    },
+    "error": {
+      "title": "Geçmişiniz yüklenemedi",
+      "description": "Kayıtlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Kaydı sil",
+      "body": "Bu kayıt kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Kayıt silindi.",
+      "error": "Kayıt silinemedi. Lütfen tekrar deneyin."
+    }
+  },
+  "fasting": {
+    "title": "Oruç",
+    "subtitle": "Bir oruç başlatın, ilerlemenizi takip edin ve geçmişinizi inceleyin",
+    "startButton": "Oruca başla",
+    "targetButton": "Hedef belirle",
+    "sourceGarmin": "Garmin Connect'ten",
+    "active": {
+      "title": "Oruç devam ediyor",
+      "started": "Başladı",
+      "target": "Hedef",
+      "complete": "Tamamla",
+      "break": "Orucu boz",
+      "cancel": "İptal",
+      "completeHint": "Hedefinize ulaştığınızda orucu tamamlayabilirsiniz."
+    },
+    "stats": {
+      "totalFasts": "Toplam oruç",
+      "currentStreak": "Mevcut seri",
+      "longestStreak": "En uzun seri",
+      "avgDuration": "Ort. süre",
+      "totalTime": "Toplam oruç süresi",
+      "completionRate": "Tamamlama oranı",
+      "days": "gün"
+    },
+    "types": {
+      "16:8": "16:8 (16s oruç, 8s yeme)",
+      "18:6": "18:6 (18s oruç, 6s yeme)",
+      "20:4": "20:4 (20s oruç, 4s yeme)",
+      "OMAD": "OMAD (günde tek öğün)",
+      "24h": "24 saatlik oruç",
+      "36h": "36 saatlik oruç",
+      "48h": "48 saatlik oruç",
+      "72h": "72 saatlik oruç",
+      "custom": "Özel"
+    },
+    "status": {
+      "in_progress": "Devam ediyor",
+      "completed": "Tamamlandı",
+      "broken": "Bozuldu",
+      "cancelled": "İptal edildi"
+    },
+    "interval": {
+      "label": "Zaman aralığı",
+      "last_7_days": "Son 7 gün",
+      "last_30_days": "Son 30 gün",
+      "last_90_days": "Son 90 gün",
+      "last_year": "Son bir yıl",
+      "all_time": "Tüm zamanlar"
+    },
+    "actions": {
+      "edit": "Orucu düzenle",
+      "delete": "Orucu sil"
+    },
+    "list": {
+      "notesLabel": "Notlar"
+    },
+    "form": {
+      "addTitle": "Oruca başla",
+      "editTitle": "Oruç oturumunu düzenle",
+      "description": "Bir oruç protokolü ve ne zaman başladığını seçin.",
+      "type": "Oruç protokolü",
+      "customDuration": "Özel süre",
+      "customDurationHint": "Orucun saat cinsinden uzunluğu (1–72).",
+      "hours": "saat",
+      "startTime": "Başlangıç saati",
+      "startTimeRequired": "Lütfen bir başlangıç saati seçin.",
+      "endTime": "Bitiş saati",
+      "status": "Durum",
+      "notes": "Notlar",
+      "create": "Başla",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Oruç başladı.",
+      "updateSuccess": "Oruç oturumu güncellendi.",
+      "saveError": "Oruç oturumunuz kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "target": {
+      "title": "Oruç hedefi belirle",
+      "description": "Bir hedef oruç süresi seçin veya kaldırmak için her iki alanı da temizleyin.",
+      "hours": "Saat",
+      "minutes": "Dakika",
+      "hint": "Hedefinizi kaldırmak için her ikisini de boş bırakın.",
+      "save": "Kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "saveSuccess": "Oruç hedefi güncellendi.",
+      "saveError": "Oruç hedefiniz güncellenemedi. Lütfen tekrar deneyin."
+    },
+    "complete": {
+      "success": "Oruç sona erdi.",
+      "error": "Orucunuz sonlandırılamadı. Lütfen tekrar deneyin."
+    },
+    "empty": {
+      "title": "Henüz oruç yok",
+      "description": "Oruç geçmişinizi takip etmeye başlamak için bir oruç başlatın."
+    },
+    "error": {
+      "title": "Oruç geçmişiniz yüklenemedi",
+      "description": "Oruç oturumlarınız yüklenirken bir şeyler ters gitti. Lütfen tekrar deneyin.",
+      "retry": "Tekrar dene"
+    },
+    "delete": {
+      "title": "Oruç oturumunu sil",
+      "body": "Bu oruç oturumu kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Oruç oturumu silindi.",
+      "error": "Oruç oturumu silinemedi. Lütfen tekrar deneyin."
+    }
+  }
+}

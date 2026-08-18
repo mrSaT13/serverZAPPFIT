@@ -1,0 +1,49 @@
+{
+  "title": "Kopsavilkums",
+  "subtitle": "Pārskatiet savus treniņu kopapjomus un tendences laika gaitā.",
+  "viewType": {
+    "label": "Kopsavilkuma periods",
+    "week": "Nedēļa",
+    "month": "Mēnesis",
+    "year": "Gads",
+    "lifetime": "Visu laiku"
+  },
+  "filters": {
+    "type": "Aktivitātes veids",
+    "allTypes": "Visi veidi"
+  },
+  "period": {
+    "previous": "Iepriekšējais periods",
+    "next": "Nākamais periods",
+    "picker": "Atlasīt periodu",
+    "allTime": "Visu laiku"
+  },
+  "metrics": {
+    "distance": "Distance",
+    "duration": "Ilgums",
+    "elevation": "Augstuma ieguvums",
+    "calories": "Kalorijas",
+    "activities": "Aktivitātes"
+  },
+  "breakdown": {
+    "title": "Sadalījums",
+    "period": "Periods",
+    "weekNumber": "{number}. nedēļa"
+  },
+  "typeBreakdown": {
+    "title": "Pēc aktivitātes veida",
+    "type": "Veids"
+  },
+  "activities": {
+    "title": "Aktivitātes šajā periodā"
+  },
+  "empty": {
+    "title": "Šajā periodā nav aktivitāšu",
+    "description": "Neviena aktivitāte neatbilst atlasītajam periodam un veidam."
+  },
+  "error": {
+    "title": "Neizdevās ielādēt kopsavilkumu",
+    "description": "Ielādējot jūsu statistiku, kaut kas nogāja greizi. Pārbaudiet savienojumu un mēģiniet vēlreiz.",
+    "retry": "Mēģināt vēlreiz"
+  }
+}

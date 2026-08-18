@@ -1,0 +1,648 @@
+{
+  "title": "Zdraví",
+  "subtitle": "Mějte všechna svá zdravotní data na jednom místě",
+  "nav": {
+    "label": "Sekce zdraví",
+    "soon": "Brzy",
+    "dashboard": "Přehled",
+    "sleep": "Spánek",
+    "rhr": "Klidová tepová frekvence",
+    "steps": "Kroky",
+    "weight": "Hmotnost",
+    "fasting": "Půst",
+    "water": "Příjem vody",
+    "poop": "Stolice"
+  },
+  "dashboard": {
+    "title": "Přehled",
+    "subtitle": "Vaše každodenní pohoda na první pohled",
+    "sleep": "Spánek",
+    "restingHeartRate": "Klidová TF",
+    "avgSkinTemperatureDeviation": "Odchylka tepl. kůže",
+    "weight": "Hmotnost",
+    "bmi": "BMI",
+    "steps": "Kroky",
+    "fasting": "Půst",
+    "water": "Příjem vody",
+    "poop": "Stolice",
+    "noSleepTarget": "Žádný cíl spánku",
+    "noWeightTarget": "Žádný cíl hmotnosti",
+    "noStepsTarget": "Žádný cíl kroků",
+    "noFastingTarget": "Žádný cíl půstu",
+    "noWaterTarget": "Žádný cíl vody",
+    "noPoopTarget": "Žádný cíl stolice",
+    "stepsTargetLabel": "kroků",
+    "poopTargetLabel": "/ den",
+    "noWeightData": "Žádná data o hmotnosti",
+    "bmiUnderweight": "Podváha",
+    "bmiNormalWeight": "Normální hmotnost",
+    "bmiOverweight": "Nadváha",
+    "bmiObesityClass1": "Obezita (1. stupeň)",
+    "bmiObesityClass2": "Obezita (2. stupeň)",
+    "bmiObesityClass3": "Extrémní obezita (3. stupeň)",
+    "hrvBalanced": "Vyvážená",
+    "hrvUnbalanced": "Nevyvážená",
+    "hrvLow": "Nízká",
+    "hrvPoor": "Špatná",
+    "labelNoData": "Žádná data",
+    "errorTitle": "Nepodařilo se načíst vaše zdravotní data",
+    "errorDescription": "Při načítání vašich denních zdravotních statistik se něco pokazilo. Zkuste to prosím znovu.",
+    "retry": "Zkusit znovu"
+  },
+  "weight": {
+    "title": "Hmotnost",
+    "subtitle": "Sledujte svou hmotnost a složení těla v čase",
+    "logButton": "Zaznamenat hmotnost",
+    "targetButton": "Nastavit cíl",
+    "sourceGarmin": "Z Garmin Connect",
+    "toggleDetails": "Přepnout podrobnosti o složení těla",
+    "chartTitle": "Trend hmotnosti",
+    "chartWeightSeries": "Hmotnost",
+    "chartTargetSeries": "Cíl",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit záznam",
+      "delete": "Smazat záznam"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Tělesný tuk",
+      "bodyWater": "Tělesná voda",
+      "boneMass": "Hmotnost kostí",
+      "muscleMass": "Svalová hmota"
+    },
+    "form": {
+      "addTitle": "Zaznamenat hmotnost",
+      "editTitle": "Upravit záznam hmotnosti",
+      "description": "Zaznamenejte svou hmotnost a volitelně i složení těla.",
+      "date": "Datum",
+      "dateRequired": "Vyberte prosím datum.",
+      "weight": "Hmotnost",
+      "weightRequired": "Zadejte prosím svou hmotnost.",
+      "weightInvalid": "Zadejte hmotnost větší než nula.",
+      "bodyComposition": "Složení těla (volitelné)",
+      "bmi": "BMI",
+      "bodyFat": "Tělesný tuk (%)",
+      "bodyWater": "Tělesná voda (%)",
+      "boneMass": "Hmotnost kostí",
+      "muscleMass": "Svalová hmota",
+      "create": "Zaznamenat",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Hmotnost zaznamenána.",
+      "updateSuccess": "Záznam hmotnosti aktualizován.",
+      "saveError": "Nepodařilo se uložit záznam hmotnosti. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl hmotnosti",
+      "description": "Zvolte cílovou hmotnost nebo vymažte pole pro její odstranění.",
+      "weight": "Cílová hmotnost",
+      "hint": "Ponechte prázdné pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl hmotnosti aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat cíl hmotnosti. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné záznamy hmotnosti",
+      "description": "Zaznamenejte svou hmotnost a začněte sledovat svůj pokrok v čase."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vaší hmotnosti",
+      "description": "Při načítání vašich záznamů hmotnosti se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat záznam hmotnosti",
+      "body": "Tento záznam hmotnosti bude trvale smazán. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Záznam hmotnosti smazán.",
+      "error": "Nepodařilo se smazat záznam hmotnosti. Zkuste to prosím znovu."
+    }
+  },
+  "steps": {
+    "title": "Kroky",
+    "subtitle": "Sledujte svůj denní počet kroků v čase",
+    "logButton": "Zaznamenat kroky",
+    "targetButton": "Nastavit cíl",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend kroků",
+    "chartStepsSeries": "Kroky",
+    "chartTargetSeries": "Cíl",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit záznam",
+      "delete": "Smazat záznam"
+    },
+    "form": {
+      "addTitle": "Zaznamenat kroky",
+      "editTitle": "Upravit záznam kroků",
+      "description": "Zaznamenejte svůj počet kroků za den.",
+      "date": "Datum",
+      "dateRequired": "Vyberte prosím datum.",
+      "steps": "Kroky",
+      "stepsRequired": "Zadejte prosím svůj počet kroků.",
+      "stepsInvalid": "Zadejte počet kroků větší než nula.",
+      "create": "Zaznamenat",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Kroky zaznamenány.",
+      "updateSuccess": "Záznam kroků aktualizován.",
+      "saveError": "Nepodařilo se uložit záznam kroků. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl kroků",
+      "description": "Zvolte denní cíl kroků nebo vymažte pole pro jeho odstranění.",
+      "steps": "Cílový denní počet kroků",
+      "hint": "Ponechte prázdné pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl kroků aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat cíl kroků. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné záznamy kroků",
+      "description": "Zaznamenejte své kroky a začněte sledovat svou aktivitu v čase."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vašich kroků",
+      "description": "Při načítání vašich záznamů kroků se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat záznam kroků",
+      "body": "Tento záznam kroků bude trvale smazán. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Záznam kroků smazán.",
+      "error": "Nepodařilo se smazat záznam kroků. Zkuste to prosím znovu."
+    }
+  },
+  "rhr": {
+    "title": "Klidová tepová frekvence",
+    "subtitle": "Sledujte svou klidovou tepovou frekvenci v čase",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend klidové tepové frekvence",
+    "chartSeries": "Klidová tepová frekvence",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "empty": {
+      "title": "Zatím žádná data o klidové tepové frekvenci",
+      "description": "Klidová tepová frekvence se zaznamenává spolu s vaším spánkem. Synchronizujte zařízení, které ji sleduje, abyste zde viděli svůj trend."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vaší klidové tepové frekvence",
+      "description": "Při načítání dat o vaší klidové tepové frekvenci se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    }
+  },
+  "sleep": {
+    "title": "Spánek",
+    "subtitle": "Sledujte délku a kvalitu svého spánku v čase",
+    "logButton": "Zaznamenat spánek",
+    "targetButton": "Nastavit cíl",
+    "sourceGarmin": "Z Garmin Connect",
+    "toggleDetails": "Přepnout podrobnosti o spánku",
+    "chartTitle": "Trend spánku",
+    "chartSleepSeries": "Spánek",
+    "chartTargetSeries": "Cíl",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit záznam",
+      "delete": "Smazat záznam"
+    },
+    "score": "Skóre",
+    "hrvBalanced": "Vyvážená",
+    "hrvUnbalanced": "Nevyvážená",
+    "hrvLow": "Nízká",
+    "hrvPoor": "Špatná",
+    "scoreExcellent": "Vynikající",
+    "scoreGood": "Dobrá",
+    "scoreFair": "Uspokojivá",
+    "scorePoor": "Špatná",
+    "detail": {
+      "tabsLabel": "Sekce podrobností o spánku",
+      "tabScore": "Skóre spánku",
+      "tabDetails": "Podrobnosti o spánku",
+      "deep": "Hluboký",
+      "light": "Lehký",
+      "rem": "REM",
+      "awake": "Bdění",
+      "score": "Skóre spánku",
+      "quality": "Kvalita",
+      "duration": "Doba trvání",
+      "restingHeartRate": "Klidová TF",
+      "avgHeartRate": "Průměrná TF",
+      "minHeartRate": "Min. TF",
+      "maxHeartRate": "Max. TF",
+      "skinTempDeviation": "Odchylka tepl. kůže",
+      "hrv": "Stav HRV",
+      "spo2": "Průměrné SpO₂",
+      "lowestSpo2": "Nejnižší SpO₂",
+      "highestSpo2": "Nejvyšší SpO₂",
+      "avgRespiration": "Průměrné dýchání",
+      "lowestRespiration": "Nejnižší dýchání",
+      "highestRespiration": "Nejvyšší dýchání",
+      "avgSleepStress": "Průměrný spánkový stres",
+      "awakeCount": "Probuzení",
+      "summary": "Souhrn",
+      "breakdown": "Rozpis",
+      "overview": "Přehled",
+      "heartRate": "Tepová frekvence",
+      "bloodOxygen": "Okysličení krve",
+      "respiration": "Dýchání",
+      "avg": "Průměr",
+      "min": "Min.",
+      "max": "Max.",
+      "noData": "Žádná zaznamenaná data."
+    },
+    "hypnogram": {
+      "title": "Fáze spánku",
+      "deep": "Hluboký",
+      "light": "Lehký",
+      "rem": "REM",
+      "awake": "Bdění",
+      "noData": "Časová osa fází není k dispozici."
+    },
+    "form": {
+      "addTitle": "Zaznamenat spánek",
+      "editTitle": "Upravit záznam spánku",
+      "description": "Zaznamenejte délku svého spánku a volitelně rozpis fází a metriky.",
+      "date": "Datum",
+      "dateRequired": "Vyberte prosím datum.",
+      "totalSleep": "Celkový spánek",
+      "totalSleepRequired": "Zadejte prosím, jak dlouho jste spali.",
+      "hours": "Hodiny",
+      "minutes": "Minuty",
+      "stageBreakdown": "Rozpis fází (volitelné)",
+      "deep": "Hluboký spánek",
+      "light": "Lehký spánek",
+      "rem": "REM spánek",
+      "awake": "Bdění",
+      "metrics": "Metriky (volitelné)",
+      "sleepScore": "Skóre spánku (0–100)",
+      "restingHeartRate": "Klidová tepová frekvence (bpm)",
+      "skinTempDeviation": "Odchylka teploty kůže (°C)",
+      "spo2": "Průměrné SpO₂ (%)",
+      "sleepTimes": "Časy spánku (volitelné)",
+      "startTime": "Začátek spánku",
+      "endTime": "Konec spánku",
+      "endBeforeStart": "Konec spánku musí být po čase začátku.",
+      "awakeCount": "Probuzení",
+      "heartRate": "Tepová frekvence (volitelné)",
+      "avgHeartRate": "Průměrná tepová frekvence (bpm)",
+      "minHeartRate": "Min. tepová frekvence (bpm)",
+      "maxHeartRate": "Max. tepová frekvence (bpm)",
+      "bloodOxygen": "Okysličení krve (volitelné)",
+      "lowestSpo2": "Nejnižší SpO₂ (%)",
+      "highestSpo2": "Nejvyšší SpO₂ (%)",
+      "avgSleepStress": "Průměrný spánkový stres (0–100)",
+      "sleepStages": "Fáze spánku (volitelné)",
+      "noStages": "Zatím nebyly přidány žádné fáze.",
+      "addStage": "Přidat fázi",
+      "removeStage": "Odebrat fázi",
+      "stageLabel": "Fáze {index}",
+      "stageType": "Fáze",
+      "stageDeep": "Hluboký",
+      "stageLight": "Lehký",
+      "stageRem": "REM",
+      "stageAwake": "Bdění",
+      "stageStart": "Začátek",
+      "stageEnd": "Konec",
+      "stageDuration": "Doba trvání",
+      "create": "Zaznamenat",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Spánek zaznamenán.",
+      "updateSuccess": "Záznam spánku aktualizován.",
+      "saveError": "Nepodařilo se uložit záznam spánku. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl spánku",
+      "description": "Zvolte cíl nočního spánku nebo vymažte pole pro jeho odstranění.",
+      "hours": "Hodiny",
+      "minutes": "Minuty",
+      "hint": "Ponechte prázdné pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl spánku aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat cíl spánku. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné záznamy spánku",
+      "description": "Zaznamenejte noční spánek a začněte sledovat svůj odpočinek v čase."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vašeho spánku",
+      "description": "Při načítání vašich záznamů spánku se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat záznam spánku",
+      "body": "Tento záznam spánku bude trvale smazán. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Záznam spánku smazán.",
+      "error": "Nepodařilo se smazat záznam spánku. Zkuste to prosím znovu."
+    }
+  },
+  "water": {
+    "title": "Příjem vody",
+    "subtitle": "Sledujte svůj denní příjem vody v čase",
+    "logButton": "Zaznamenat vodu",
+    "targetButton": "Nastavit cíl",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend příjmu vody",
+    "chartWaterSeries": "Voda",
+    "chartTargetSeries": "Cíl",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit záznam",
+      "delete": "Smazat záznam"
+    },
+    "form": {
+      "addTitle": "Zaznamenat vodu",
+      "editTitle": "Upravit záznam vody",
+      "description": "Zaznamenejte svůj příjem vody za den.",
+      "date": "Datum",
+      "dateRequired": "Vyberte prosím datum.",
+      "amount": "Množství",
+      "amountRequired": "Zadejte prosím množství.",
+      "amountInvalid": "Zadejte množství větší než nula.",
+      "create": "Zaznamenat",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Voda zaznamenána.",
+      "updateSuccess": "Záznam vody aktualizován.",
+      "saveError": "Nepodařilo se uložit záznam vody. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl vody",
+      "description": "Zvolte denní cíl příjmu vody nebo vymažte pole pro jeho odstranění.",
+      "amount": "Denní cíl",
+      "hint": "Ponechte prázdné pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl vody aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat cíl vody. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné záznamy vody",
+      "description": "Zaznamenejte svůj příjem vody a začněte sledovat svou hydrataci v čase."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vašeho příjmu vody",
+      "description": "Při načítání vašich záznamů vody se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat záznam vody",
+      "body": "Tento záznam vody bude trvale smazán. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Záznam vody smazán.",
+      "error": "Nepodařilo se smazat záznam vody. Zkuste to prosím znovu."
+    }
+  },
+  "poop": {
+    "title": "Stolice",
+    "subtitle": "Sledujte svou stolici v čase",
+    "logButton": "Zaznamenat záznam",
+    "targetButton": "Nastavit cíl",
+    "chartTitle": "Denní četnost",
+    "chartCountSeries": "Stolice",
+    "chartTargetSeries": "Cíl",
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit záznam",
+      "delete": "Smazat záznam"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Stolice"
+    },
+    "form": {
+      "addTitle": "Zaznamenat stolici",
+      "editTitle": "Upravit stolici",
+      "description": "Zaznamenejte čas a podrobnosti své stolice.",
+      "dateTime": "Datum a čas",
+      "dateTimeRequired": "Vyberte prosím datum a čas.",
+      "bristolType": "Bristolský typ stolice",
+      "color": "Barva",
+      "notes": "Poznámky",
+      "none": "Žádná",
+      "colors": {
+        "brown": "Hnědá",
+        "dark_brown": "Tmavě hnědá",
+        "light_brown": "Světle hnědá",
+        "yellow": "Žlutá",
+        "green": "Zelená",
+        "black": "Černá",
+        "red": "Červená",
+        "white": "Bílá"
+      },
+      "create": "Zaznamenat",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Stolice zaznamenána.",
+      "updateSuccess": "Stolice aktualizována.",
+      "saveError": "Nepodařilo se uložit váš záznam. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl stolice",
+      "description": "Zvolte denní cíl stolice nebo vymažte pole pro jeho odstranění.",
+      "count": "Cíl za den",
+      "hint": "Ponechte prázdné pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl stolice aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat váš cíl. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné záznamy",
+      "description": "Zaznamenejte stolici a začněte sledovat v čase."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst vaši historii",
+      "description": "Při načítání vašich záznamů se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat záznam",
+      "body": "Tento záznam bude trvale smazán. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Záznam smazán.",
+      "error": "Nepodařilo se smazat záznam. Zkuste to prosím znovu."
+    }
+  },
+  "fasting": {
+    "title": "Půst",
+    "subtitle": "Začněte půst, sledujte svůj pokrok a prohlížejte svou historii",
+    "startButton": "Začít půst",
+    "targetButton": "Nastavit cíl",
+    "sourceGarmin": "Z Garmin Connect",
+    "active": {
+      "title": "Probíhá půst",
+      "started": "Začátek",
+      "target": "Cíl",
+      "complete": "Dokončit",
+      "break": "Přerušit půst",
+      "cancel": "Zrušit",
+      "completeHint": "Půst můžete dokončit, jakmile dosáhnete svého cíle."
+    },
+    "stats": {
+      "totalFasts": "Celkem půstů",
+      "currentStreak": "Aktuální série",
+      "longestStreak": "Nejdelší série",
+      "avgDuration": "Prům. délka",
+      "totalTime": "Celkový čas půstu",
+      "completionRate": "Míra dokončení",
+      "days": "dnů"
+    },
+    "types": {
+      "16:8": "16:8 (16 h půst, 8 h jídlo)",
+      "18:6": "18:6 (18 h půst, 6 h jídlo)",
+      "20:4": "20:4 (20 h půst, 4 h jídlo)",
+      "OMAD": "OMAD (jedno jídlo denně)",
+      "24h": "24hodinový půst",
+      "36h": "36hodinový půst",
+      "48h": "48hodinový půst",
+      "72h": "72hodinový půst",
+      "custom": "Vlastní"
+    },
+    "status": {
+      "in_progress": "Probíhá",
+      "completed": "Dokončeno",
+      "broken": "Přerušeno",
+      "cancelled": "Zrušeno"
+    },
+    "interval": {
+      "label": "Časové období",
+      "last_7_days": "Posledních 7 dní",
+      "last_30_days": "Posledních 30 dní",
+      "last_90_days": "Posledních 90 dní",
+      "last_year": "Poslední rok",
+      "all_time": "Celá doba"
+    },
+    "actions": {
+      "edit": "Upravit půst",
+      "delete": "Smazat půst"
+    },
+    "list": {
+      "notesLabel": "Poznámky"
+    },
+    "form": {
+      "addTitle": "Začít půst",
+      "editTitle": "Upravit relaci půstu",
+      "description": "Zvolte protokol půstu a kdy začal.",
+      "type": "Protokol půstu",
+      "customDuration": "Vlastní délka",
+      "customDurationHint": "Délka půstu v hodinách (1–72).",
+      "hours": "hodin",
+      "startTime": "Čas začátku",
+      "startTimeRequired": "Vyberte prosím čas začátku.",
+      "endTime": "Čas konce",
+      "status": "Stav",
+      "notes": "Poznámky",
+      "create": "Začít",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "createSuccess": "Půst zahájen.",
+      "updateSuccess": "Relace půstu aktualizována.",
+      "saveError": "Nepodařilo se uložit relaci půstu. Zkuste to prosím znovu."
+    },
+    "target": {
+      "title": "Nastavit cíl půstu",
+      "description": "Zvolte cílovou délku půstu nebo vymažte obě pole pro jeho odstranění.",
+      "hours": "Hodiny",
+      "minutes": "Minuty",
+      "hint": "Ponechte obě pole prázdná pro odstranění cíle.",
+      "save": "Uložit",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "saveSuccess": "Cíl půstu aktualizován.",
+      "saveError": "Nepodařilo se aktualizovat cíl půstu. Zkuste to prosím znovu."
+    },
+    "complete": {
+      "success": "Půst ukončen.",
+      "error": "Nepodařilo se ukončit váš půst. Zkuste to prosím znovu."
+    },
+    "empty": {
+      "title": "Zatím žádné půsty",
+      "description": "Začněte půst, abyste mohli sledovat svou historii půstů."
+    },
+    "error": {
+      "title": "Nepodařilo se načíst historii vašich půstů",
+      "description": "Při načítání vašich relací půstu se něco pokazilo. Zkuste to prosím znovu.",
+      "retry": "Zkusit znovu"
+    },
+    "delete": {
+      "title": "Smazat relaci půstu",
+      "body": "Tato relace půstu bude trvale smazána. Tuto akci nelze vrátit zpět.",
+      "confirm": "Smazat",
+      "cancel": "Zrušit",
+      "close": "Zavřít",
+      "success": "Relace půstu smazána.",
+      "error": "Nepodařilo se smazat relaci půstu. Zkuste to prosím znovu."
+    }
+  }
+}

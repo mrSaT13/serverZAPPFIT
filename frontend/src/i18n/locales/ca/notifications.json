@@ -1,0 +1,51 @@
+{
+  "title": "Notificacions",
+  "subtitle": "Activitat recent, sol·licituds i alertes",
+  "navLabel": "Notificacions",
+  "unread": "No llegides",
+  "markRead": "Marca com a llegida",
+  "markAllRead": "Marca totes com a llegides",
+  "seeAll": "Veure totes",
+  "loadMore": "Carrega més",
+  "loading": "Carregant…",
+  "badge": "{count} notificacions no llegides",
+  "empty": {
+    "title": "Estàs al dia",
+    "description": "Les actualitzacions sobre les teves activitats, seguidors i integracions apareixeran aquí."
+  },
+  "error": {
+    "title": "No s'han pogut carregar les notificacions",
+    "description": "S'ha produït un error en carregar les teves notificacions.",
+    "retry": "Torna-ho a intentar"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nova activitat",
+      "body": "S'ha afegit una nova activitat al teu compte."
+    },
+    "duplicateActivity": {
+      "title": "Possible activitat duplicada",
+      "body": "És possible que ja existeixi una activitat amb la mateixa hora d'inici."
+    },
+    "newFollowerRequest": {
+      "title": "Nova sol·licitud de seguidor",
+      "body": "{name} ({'@'}{username}) vol seguir-te."
+    },
+    "followerRequestAccepted": {
+      "title": "Sol·licitud de seguidor acceptada",
+      "body": "{name} ({'@'}{username}) ha acceptat la teva sol·licitud de seguidor."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect necessita atenció",
+      "body": "La teva sessió de Garmin Connect ha caducat. Reconnecta-la per continuar sincronitzant."
+    },
+    "adminSignUpApproval": {
+      "title": "Nou registre necessita aprovació",
+      "body": "{name} ({'@'}{username}) està esperant l'aprovació del compte."
+    },
+    "unknown": {
+      "title": "Notificació",
+      "body": "Tens una nova notificació."
+    }
+  }
+}

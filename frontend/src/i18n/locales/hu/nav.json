@@ -1,0 +1,22 @@
+{
+  "home": "Kezdőlap",
+  "search": "Keresés",
+  "activities": "Tevékenységek",
+  "activitiesList": "Lista",
+  "summary": "Összegzés",
+  "gear": "Felszerelés",
+  "health": "Egészség",
+  "alerts": "Értesítések",
+  "settings": "Beállítások",
+  "profile": "Profil",
+  "login": "Bejelentkezés",
+  "logout": "Kijelentkezés",
+  "userMenu": "Felhasználói menü",
+  "menu": "Menü",
+  "primary": "Elsődleges navigáció",
+  "account": "Fiók",
+  "preferences": "Beállítások",
+  "updateAvailable": "Frissítés érhető el",
+  "updateAvailableTitle": "A(z) {version} verzió elérhető",
+  "updateViewRelease": "Kiadási jegyzék megtekintése"
+}

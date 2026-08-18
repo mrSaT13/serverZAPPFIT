@@ -1,0 +1,73 @@
+{
+  "addActivity": "Lisää aktiviteetti",
+  "upload": {
+    "uploading": "Ladataan…",
+    "success": "Aktiviteetti ladattiin onnistuneesti",
+    "error": "Aktiviteettitiedostoa ei voitu ladata"
+  },
+  "refresh": {
+    "label": "Päivitä",
+    "refreshing": "Päivitetään…",
+    "success": "Päivitys aloitettu",
+    "error": "Aktiviteetteja ei voitu päivittää"
+  },
+  "feed": {
+    "scopeLabel": "Syötteen laajuus",
+    "myActivities": "Omat aktiviteetit",
+    "following": "Seuratut",
+    "loadMore": "Lataa lisää",
+    "loading": "Ladataan…",
+    "error": {
+      "title": "Aktiviteetteja ei voitu ladata",
+      "description": "Syötteen lataamisessa tapahtui virhe.",
+      "retry": "Yritä uudelleen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Ei vielä aktiviteetteja",
+        "description": "Lisää aktiviteetti tai yhdistä integraatio päästäksesi alkuun."
+      },
+      "following": {
+        "title": "Täällä ei ole vielä mitään",
+        "description": "Seuraamiesi henkilöiden aktiviteetit näkyvät täällä."
+      }
+    }
+  },
+  "stats": {
+    "title": "Tilastot",
+    "metricLabel": "Tilastomittari",
+    "thisWeek": "Tällä viikolla",
+    "thisMonth": "Tässä kuussa",
+    "empty": "Ei aktiviteetteja tällä jaksolla",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Matka",
+      "time": "Aika",
+      "calories": "Kalorit"
+    }
+  },
+  "sports": {
+    "run": "Juoksu",
+    "bike": "Pyöräily",
+    "swim": "Uinti",
+    "walk": "Kävely",
+    "hike": "Vaellus",
+    "rowing": "Soutu",
+    "snow_ski": "Hiihto",
+    "snowboard": "Lumilautailu",
+    "windsurf": "Purjelautailu",
+    "stand_up_paddleboarding": "SUP-lautailu",
+    "surfing": "Surffaus",
+    "kayaking": "Melonta",
+    "sailing": "Purjehdus",
+    "snowshoeing": "Lumikenkäily",
+    "inline_skating": "Rullaluistelu"
+  },
+  "goals": {
+    "title": "Tavoitteet",
+    "empty": {
+      "title": "Ei asetettuja tavoitteita",
+      "description": "Aseta tavoitteet asetuksista seurataksesi edistymistäsi täällä."
+    }
+  }
+}

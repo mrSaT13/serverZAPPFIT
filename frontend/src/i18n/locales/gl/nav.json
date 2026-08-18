@@ -1,0 +1,22 @@
+{
+  "home": "Inicio",
+  "search": "Buscar",
+  "activities": "Actividades",
+  "activitiesList": "Lista",
+  "summary": "Resumo",
+  "gear": "Equipamento",
+  "health": "Saúde",
+  "alerts": "Alertas",
+  "settings": "Configuración",
+  "profile": "Perfil",
+  "login": "Iniciar sesión",
+  "logout": "Pechar sesión",
+  "userMenu": "Menú de usuario",
+  "menu": "Menú",
+  "primary": "Navegación principal",
+  "account": "Conta",
+  "preferences": "Preferencias",
+  "updateAvailable": "Actualización dispoñible",
+  "updateAvailableTitle": "A versión {version} está dispoñible",
+  "updateViewRelease": "Ver notas da versión"
+}

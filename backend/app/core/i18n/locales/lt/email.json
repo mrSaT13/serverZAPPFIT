@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Pagarbiai,",
+  "common.team": "Endurain komanda",
+  "common.system": "Endurain sistema",
+  "common.visit": "Apsilankykite Endurain adresu:",
+  "common.source_code": "Pirminis kodas adresu:",
+  "common.copy_link": "Jei aukščiau esantis mygtukas neveikia, galite nukopijuoti ir įklijuoti šią nuorodą į savo naršyklę:",
+
+  "password_reset.subject": "Endurain - Slaptažodžio atstatymas",
+  "password_reset.heading": "Slaptažodžio atstatymo užklausa",
+  "password_reset.greeting": "Sveiki, {name},",
+  "password_reset.intro": "Paprašėte atstatyti savo Endurain paskyros slaptažodį. Spustelėkite žemiau esantį mygtuką, kad atstatytumėte slaptažodį:",
+  "password_reset.cta": "Atstatyti slaptažodį",
+  "password_reset.security_label": "Saugumo pastaba:",
+  "password_reset.security_notice": "Saugumo sumetimais ši nuoroda nustos galioti po 1 valandos.",
+  "password_reset.ignore": "Jei neprašėte atstatyti slaptažodžio, nepaisykite šio el. laiško. Jūsų slaptažodis liks nepakeistas.",
+
+  "signup_confirmation.subject": "Endurain - Patvirtinkite savo paskyrą",
+  "signup_confirmation.heading": "Patvirtinkite savo paskyrą",
+  "signup_confirmation.greeting": "Sveiki, {name},",
+  "signup_confirmation.intro": "Dėkojame, kad užsiregistravote Endurain! Patvirtinkite savo paskyrą spustelėdami žemiau esantį mygtuką:",
+  "signup_confirmation.cta": "Patvirtinti paskyrą",
+  "signup_confirmation.security_label": "Saugumo pastaba:",
+  "signup_confirmation.security_notice": "Ši patvirtinimo nuoroda nustos galioti po 24 valandų.",
+  "signup_confirmation.ignore": "Jei nesukūrėte Endurain paskyros, nepaisykite šio el. laiško.",
+
+  "admin_signup.subject": "Endurain - Nauja naudotojo registracija laukia patvirtinimo",
+  "admin_signup.heading": "Nauja registracija reikalauja patvirtinimo",
+  "admin_signup.greeting": "Sveiki, {name},",
+  "admin_signup.intro": "Naujas naudotojas užsiregistravo ir laukia patvirtinimo:",
+  "admin_signup.user_label": "Naudotojas:",
+  "admin_signup.review": "Prisijunkite prie Endurain administratoriaus skydelio, kad peržiūrėtumėte ir patvirtintumėte šią užklausą.",
+  "admin_signup.cta": "Eiti į administratoriaus skydelį",
+
+  "signup_approved.subject": "Endurain - Jūsų paskyra patvirtinta",
+  "signup_approved.heading": "Jūsų paskyra dabar aktyvi",
+  "signup_approved.greeting": "Sveiki, {name},",
+  "signup_approved.intro": "Geros naujienos! Jūsų paskyra patvirtinta ir dabar aktyvi.",
+  "signup_approved.username_label": "Naudotojo vardas:",
+  "signup_approved.login_intro": "Dabar galite prisijungti ir pradėti naudotis Endurain:",
+  "signup_approved.cta": "Prisijungti prie Endurain"
+}

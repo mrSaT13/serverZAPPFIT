@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "E-mail-cím ellenőrzése",
+  "verifyingBody": "Egy pillanat, megerősítjük a címedet.",
+  "successTitle": "E-mail-cím megerősítve",
+  "successBody": "Az e-mail-címedet megerősítettük.",
+  "adminApprovalBody": "A fiókod most a rendszergazda jóváhagyására vár.",
+  "continueButton": "Tovább a bejelentkezéshez",
+  "invalidTitle": "Az ellenőrzés sikertelen",
+  "missingTokenBody": "Erről az ellenőrző hivatkozásról hiányzik a token.",
+  "errorInvalidToken": "Ez az ellenőrző hivatkozás érvénytelen vagy lejárt.",
+  "errorNotFound": "Nem találtunk fiókot ehhez a hivatkozáshoz.",
+  "errorGeneral": "Nem sikerült megerősíteni az e-mail-címedet. Kérjük, próbáld újra.",
+  "retry": "Próbáld újra",
+  "backToLogin": "Vissza a bejelentkezéshez"
+}

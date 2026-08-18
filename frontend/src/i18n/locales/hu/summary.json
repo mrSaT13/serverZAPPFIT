@@ -1,0 +1,49 @@
+{
+  "title": "Összegzés",
+  "subtitle": "Tekintsd át az edzéseid összesítéseit és trendjeit az idő múlásával.",
+  "viewType": {
+    "label": "Összegzési időszak",
+    "week": "Hét",
+    "month": "Hónap",
+    "year": "Év",
+    "lifetime": "Teljes időszak"
+  },
+  "filters": {
+    "type": "Tevékenységtípus",
+    "allTypes": "Minden típus"
+  },
+  "period": {
+    "previous": "Előző időszak",
+    "next": "Következő időszak",
+    "picker": "Időszak kiválasztása",
+    "allTime": "Teljes időszak"
+  },
+  "metrics": {
+    "distance": "Táv",
+    "duration": "Időtartam",
+    "elevation": "Szintemelkedés",
+    "calories": "Kalória",
+    "activities": "Tevékenységek"
+  },
+  "breakdown": {
+    "title": "Bontás",
+    "period": "Időszak",
+    "weekNumber": "{number}. hét"
+  },
+  "typeBreakdown": {
+    "title": "Tevékenységtípus szerint",
+    "type": "Típus"
+  },
+  "activities": {
+    "title": "Tevékenységek ebben az időszakban"
+  },
+  "empty": {
+    "title": "Nincs tevékenység ebben az időszakban",
+    "description": "Nincs a kiválasztott időszaknak és típusnak megfelelő tevékenység."
+  },
+  "error": {
+    "title": "Nem sikerült betölteni az összegzést",
+    "description": "Valami hiba történt a statisztikáid betöltése közben. Ellenőrizd a kapcsolatot, és próbáld újra.",
+    "retry": "Próbáld újra"
+  }
+}

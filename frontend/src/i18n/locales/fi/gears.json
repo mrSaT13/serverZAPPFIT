@@ -1,0 +1,152 @@
+{
+  "title": "Varusteet",
+  "subtitle": "Pyörät, kengät ja varusteet, joilla seuraat aktiviteetteja",
+  "buttonAddGear": "Lisää varuste",
+  "searchPlaceholder": "Hae lempinimen mukaan",
+  "clearSearch": "Tyhjennä haku",
+  "showInactive": "Näytä ei-aktiiviset",
+  "inactive": "Ei käytössä",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Suodattimet",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Polkupyörä",
+    "shoes": "Kengät",
+    "wetsuit": "Märkäpuku",
+    "racquet": "Maila",
+    "skis": "Sukset",
+    "snowboard": "Lumilauta",
+    "windsurf": "Purjelauta",
+    "waterSportsBoard": "Vesiurheilulauta",
+    "unknown": "Varuste"
+  },
+  "actions": {
+    "edit": "Muokkaa varustetta",
+    "delete": "Poista varuste"
+  },
+  "form": {
+    "title": "Tilastot",
+    "addTitle": "Lisää varuste",
+    "editTitle": "Muokkaa varustetta",
+    "description": "Seuraa aktiviteetteihisi käyttämiäsi varusteita.",
+    "nickname": "Lempinimi",
+    "nicknameRequired": "Lempinimi on pakollinen",
+    "nicknameTooLong": "Lempinimi saa olla enintään 250 merkkiä",
+    "nicknameTaken": "Sinulla on jo varuste tällä lempinimellä",
+    "gearType": "Tyyppi",
+    "brand": "Merkki",
+    "brandTooLong": "Merkki saa olla enintään 250 merkkiä",
+    "model": "Malli",
+    "modelTooLong": "Malli saa olla enintään 250 merkkiä",
+    "active": "Aktiivinen",
+    "createdAt": "Luotu",
+    "createdAtRequired": "Luontipäivämäärä on pakollinen",
+    "initialDistance": "Alkumatka",
+    "purchaseValue": "Ostohinta",
+    "totalCost": "Kokonaiskustannus",
+    "create": "Lisää varuste",
+    "save": "Tallenna muutokset",
+    "cancel": "Peruuta",
+    "close": "Sulje",
+    "createSuccess": "Varuste lisätty",
+    "updateSuccess": "Varuste päivitetty",
+    "saveError": "Varustetta ei voitu tallentaa. Yritä uudelleen."
+  },
+  "delete": {
+    "title": "Poista varuste",
+    "body": "Haluatko varmasti poistaa varusteen \"{nickname}\"? Tätä ei voi kumota.",
+    "confirm": "Poista",
+    "cancel": "Peruuta",
+    "close": "Sulje",
+    "success": "Varuste poistettu",
+    "error": "Varustetta ei voitu poistaa. Yritä uudelleen."
+  },
+  "error": {
+    "title": "Varusteita ei voitu ladata",
+    "description": "Varusteidesi lataamisessa tapahtui virhe.",
+    "retry": "Yritä uudelleen"
+  },
+  "empty": {
+    "title": "Ei vielä varusteita",
+    "description": "Lisää käyttämäsi pyörät, kengät ja varusteet aloittaaksesi niiden käytön seuraamisen.",
+    "searchTitle": "Mikään varuste ei vastaa hakuasi",
+    "searchDescription": "Kokeile toista lempinimeä.",
+    "activeTitle": "Ei aktiivisia varusteita",
+    "activeDescription": "Lisää varuste tai ota käyttöön \"Näytä ei-aktiiviset\" nähdäksesi ei-aktiiviset varusteet."
+  },
+  "detail": {
+    "back": "Takaisin varusteisiin",
+    "notFoundTitle": "Varustetta ei löytynyt",
+    "notFoundDescription": "Tämä varuste on saatettu poistaa tai se ei kuulu sinulle.",
+    "totalDistance": "Matka",
+    "totalTime": "Aika",
+    "componentsCost": "Komponentit"
+  },
+  "components": {
+    "title": "Komponentit",
+    "add": "Lisää komponentti",
+    "empty": "Ei vielä komponentteja. Lisää osat, joiden kulumista haluat seurata.",
+    "unsupported": "Tämä varustetyyppi ei seuraa komponentteja.",
+    "noneActive": "Kaikki komponentit ovat ei-aktiivisia. Ota käyttöön \"Näytä ei-aktiiviset\" nähdäksesi ne.",
+    "inactive": "Ei käytössä",
+    "unitHours": "h",
+    "purchasedOn": "Ostettu {date}",
+    "wearLabel": "{name} kuluminen",
+    "actions": {
+      "edit": "Muokkaa komponenttia",
+      "delete": "Poista komponentti"
+    },
+    "form": {
+      "addTitle": "Lisää komponentti",
+      "editTitle": "Muokkaa komponenttia",
+      "description": "Seuraa vaihtamiasi osia niiden kulumisen valvomiseksi.",
+      "type": "Tyyppi",
+      "typePlaceholder": "Valitse tyyppi",
+      "typeRequired": "Tyyppi on pakollinen",
+      "brand": "Merkki",
+      "brandRequired": "Merkki on pakollinen",
+      "brandTooLong": "Merkki saa olla enintään 250 merkkiä",
+      "model": "Malli",
+      "modelRequired": "Malli on pakollinen",
+      "modelTooLong": "Malli saa olla enintään 250 merkkiä",
+      "purchaseDate": "Ostettu",
+      "purchaseDateRequired": "Ostopäivämäärä on pakollinen",
+      "retiredDate": "Käytöstä poistettu",
+      "expectedDistance": "Odotettu matka",
+      "expectedTime": "Odotettu aika",
+      "purchaseValue": "Ostohinta",
+      "active": "Aktiivinen",
+      "retiredBeforePurchase": "Käytöstäpoiston päivämäärän on oltava ostopäivämäärän jälkeen.",
+      "create": "Lisää komponentti",
+      "save": "Tallenna muutokset",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "createSuccess": "Komponentti lisätty",
+      "updateSuccess": "Komponentti päivitetty",
+      "saveError": "Komponenttia ei voitu tallentaa. Yritä uudelleen."
+    },
+    "delete": {
+      "title": "Poista komponentti",
+      "body": "Haluatko varmasti poistaa komponentin \"{name}\"? Tätä ei voi kumota.",
+      "confirm": "Poista",
+      "cancel": "Peruuta",
+      "close": "Sulje",
+      "success": "Komponentti poistettu",
+      "error": "Komponenttia ei voitu poistaa. Yritä uudelleen."
+    },
+    "error": {
+      "title": "Komponentteja ei voitu ladata",
+      "description": "Tämän varusteen komponenttien lataamisessa tapahtui virhe."
+    }
+  },
+  "activities": {
+    "title": "Aktiviteetit",
+    "empty": "Tällä varusteella ei ole vielä tallennettuja aktiviteetteja.",
+    "error": {
+      "title": "Aktiviteetteja ei voitu ladata",
+      "description": "Tämän varusteen aktiviteettien lataamisessa tapahtui virhe."
+    }
+  }
+}

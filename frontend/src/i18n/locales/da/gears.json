@@ -1,0 +1,152 @@
+{
+  "title": "Udstyr",
+  "subtitle": "Cykler, sko og udstyr, du registrerer aktiviteter med",
+  "buttonAddGear": "Tilføj udstyr",
+  "searchPlaceholder": "Søg efter kælenavn",
+  "clearSearch": "Ryd søgning",
+  "showInactive": "Vis inaktive",
+  "inactive": "Inaktiv",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtre",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Cykel",
+    "shoes": "Sko",
+    "wetsuit": "Våddragt",
+    "racquet": "Ketsjer",
+    "skis": "Ski",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfbræt",
+    "waterSportsBoard": "Vandsportsbræt",
+    "unknown": "Udstyr"
+  },
+  "actions": {
+    "edit": "Redigér udstyr",
+    "delete": "Slet udstyr"
+  },
+  "form": {
+    "title": "Statistik",
+    "addTitle": "Tilføj udstyr",
+    "editTitle": "Redigér udstyr",
+    "description": "Hold styr på det udstyr, du bruger til dine aktiviteter.",
+    "nickname": "Kælenavn",
+    "nicknameRequired": "Kælenavn er påkrævet",
+    "nicknameTooLong": "Kælenavn må højst være 250 tegn",
+    "nicknameTaken": "Du har allerede udstyr med det kælenavn",
+    "gearType": "Type",
+    "brand": "Mærke",
+    "brandTooLong": "Mærke må højst være 250 tegn",
+    "model": "Model",
+    "modelTooLong": "Model må højst være 250 tegn",
+    "active": "Aktiv",
+    "createdAt": "Oprettet den",
+    "createdAtRequired": "En oprettelsesdato er påkrævet",
+    "initialDistance": "Startdistance",
+    "purchaseValue": "Købsværdi",
+    "totalCost": "Samlet omkostning",
+    "create": "Tilføj udstyr",
+    "save": "Gem ændringer",
+    "cancel": "Annullér",
+    "close": "Luk",
+    "createSuccess": "Udstyr tilføjet",
+    "updateSuccess": "Udstyr opdateret",
+    "saveError": "Kunne ikke gemme udstyret. Prøv venligst igen."
+  },
+  "delete": {
+    "title": "Slet udstyr",
+    "body": "Er du sikker på, at du vil slette \"{nickname}\"? Dette kan ikke fortrydes.",
+    "confirm": "Slet",
+    "cancel": "Annullér",
+    "close": "Luk",
+    "success": "Udstyr slettet",
+    "error": "Kunne ikke slette udstyret. Prøv venligst igen."
+  },
+  "error": {
+    "title": "Kunne ikke indlæse udstyr",
+    "description": "Noget gik galt under indlæsningen af dit udstyr.",
+    "retry": "Prøv igen"
+  },
+  "empty": {
+    "title": "Intet udstyr endnu",
+    "description": "Tilføj de cykler, sko og det udstyr, du bruger, for at begynde at registrere brugen.",
+    "searchTitle": "Intet udstyr matcher din søgning",
+    "searchDescription": "Prøv et andet kælenavn.",
+    "activeTitle": "Intet aktivt udstyr",
+    "activeDescription": "Tilføj udstyr, eller aktivér \"Vis inaktive\" for at se inaktivt udstyr."
+  },
+  "detail": {
+    "back": "Tilbage til udstyr",
+    "notFoundTitle": "Udstyr ikke fundet",
+    "notFoundDescription": "Dette udstyr er muligvis blevet slettet eller tilhører ikke dig.",
+    "totalDistance": "Distance",
+    "totalTime": "Tid",
+    "componentsCost": "Komponenter"
+  },
+  "components": {
+    "title": "Komponenter",
+    "add": "Tilføj komponent",
+    "empty": "Ingen komponenter endnu. Tilføj de dele, du vil registrere slid på.",
+    "unsupported": "Denne udstyrstype registrerer ikke komponenter.",
+    "noneActive": "Alle komponenter er inaktive. Aktivér \"Vis inaktive\" for at se dem.",
+    "inactive": "Inaktiv",
+    "unitHours": "t",
+    "purchasedOn": "Købt {date}",
+    "wearLabel": "{name} slid",
+    "actions": {
+      "edit": "Redigér komponent",
+      "delete": "Slet komponent"
+    },
+    "form": {
+      "addTitle": "Tilføj komponent",
+      "editTitle": "Redigér komponent",
+      "description": "Hold styr på de dele, du udskifter, for at overvåge deres slid.",
+      "type": "Type",
+      "typePlaceholder": "Vælg en type",
+      "typeRequired": "En type er påkrævet",
+      "brand": "Mærke",
+      "brandRequired": "Mærke er påkrævet",
+      "brandTooLong": "Mærke må højst være 250 tegn",
+      "model": "Model",
+      "modelRequired": "Model er påkrævet",
+      "modelTooLong": "Model må højst være 250 tegn",
+      "purchaseDate": "Købt den",
+      "purchaseDateRequired": "En købsdato er påkrævet",
+      "retiredDate": "Pensioneret den",
+      "expectedDistance": "Forventet distance",
+      "expectedTime": "Forventet tid",
+      "purchaseValue": "Købsværdi",
+      "active": "Aktiv",
+      "retiredBeforePurchase": "Pensioneringsdatoen skal være efter købsdatoen.",
+      "create": "Tilføj komponent",
+      "save": "Gem ændringer",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "createSuccess": "Komponent tilføjet",
+      "updateSuccess": "Komponent opdateret",
+      "saveError": "Kunne ikke gemme komponenten. Prøv venligst igen."
+    },
+    "delete": {
+      "title": "Slet komponent",
+      "body": "Er du sikker på, at du vil slette \"{name}\"? Dette kan ikke fortrydes.",
+      "confirm": "Slet",
+      "cancel": "Annullér",
+      "close": "Luk",
+      "success": "Komponent slettet",
+      "error": "Kunne ikke slette komponenten. Prøv venligst igen."
+    },
+    "error": {
+      "title": "Kunne ikke indlæse komponenter",
+      "description": "Noget gik galt under indlæsningen af dette udstyrs komponenter."
+    }
+  },
+  "activities": {
+    "title": "Aktiviteter",
+    "empty": "Ingen aktiviteter registreret med dette udstyr endnu.",
+    "error": {
+      "title": "Kunne ikke indlæse aktiviteter",
+      "description": "Noget gik galt under indlæsningen af dette udstyrs aktiviteter."
+    }
+  }
+}

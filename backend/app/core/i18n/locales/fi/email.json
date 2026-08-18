@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Ystävällisin terveisin,",
+  "common.team": "Endurain-tiimi",
+  "common.system": "Endurain-järjestelmä",
+  "common.visit": "Vieraile Endurainissa osoitteessa:",
+  "common.source_code": "Lähdekoodi osoitteessa:",
+  "common.copy_link": "Jos yllä oleva painike ei toimi, voit kopioida ja liittää seuraavan linkin selaimeesi:",
+
+  "password_reset.subject": "Endurain - Salasanan palautus",
+  "password_reset.heading": "Salasanan palautuspyyntö",
+  "password_reset.greeting": "Hei {name},",
+  "password_reset.intro": "Pyysit salasanasi palauttamista Endurain-tilillesi. Napsauta alla olevaa painiketta palauttaaksesi salasanasi:",
+  "password_reset.cta": "Palauta salasana",
+  "password_reset.security_label": "Tietoturvailmoitus:",
+  "password_reset.security_notice": "Tämä linkki vanhenee tietoturvasyistä 1 tunnin kuluttua.",
+  "password_reset.ignore": "Jos et pyytänyt tätä salasanan palautusta, jätä tämä sähköposti huomiotta. Salasanasi pysyy muuttumattomana.",
+
+  "signup_confirmation.subject": "Endurain - Vahvista tilisi",
+  "signup_confirmation.heading": "Vahvista tilisi",
+  "signup_confirmation.greeting": "Hei {name},",
+  "signup_confirmation.intro": "Kiitos, että rekisteröidyit Endurainiin! Vahvista tilisi napsauttamalla alla olevaa painiketta:",
+  "signup_confirmation.cta": "Vahvista tili",
+  "signup_confirmation.security_label": "Tietoturvailmoitus:",
+  "signup_confirmation.security_notice": "Tämä vahvistuslinkki vanhenee 24 tunnin kuluttua.",
+  "signup_confirmation.ignore": "Jos et luonut Endurain-tiliä, jätä tämä sähköposti huomiotta.",
+
+  "admin_signup.subject": "Endurain - Uusi käyttäjän rekisteröityminen odottaa hyväksyntää",
+  "admin_signup.heading": "Uusi rekisteröityminen vaatii hyväksynnän",
+  "admin_signup.greeting": "Hei {name},",
+  "admin_signup.intro": "Uusi käyttäjä on rekisteröitynyt ja odottaa hyväksyntää:",
+  "admin_signup.user_label": "Käyttäjä:",
+  "admin_signup.review": "Kirjaudu Endurainin ylläpitopaneeliin tarkistaaksesi ja hyväksyäksesi tämän pyynnön.",
+  "admin_signup.cta": "Siirry ylläpitopaneeliin",
+
+  "signup_approved.subject": "Endurain - Tilisi on hyväksytty",
+  "signup_approved.heading": "Tilisi on nyt aktiivinen",
+  "signup_approved.greeting": "Hei {name},",
+  "signup_approved.intro": "Hyviä uutisia! Tilisi on hyväksytty ja on nyt aktiivinen.",
+  "signup_approved.username_label": "Käyttäjätunnus:",
+  "signup_approved.login_intro": "Voit nyt kirjautua sisään ja aloittaa Endurainin käytön:",
+  "signup_approved.cta": "Kirjaudu Endurainiin"
+}

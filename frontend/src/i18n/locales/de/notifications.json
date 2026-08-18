@@ -1,0 +1,51 @@
+{
+  "title": "Benachrichtigungen",
+  "subtitle": "Letzte Aktivitäten, Anfragen und Alarme",
+  "navLabel": "Benachrichtigungen",
+  "unread": "Ungelesen",
+  "markRead": "Als gelesen markieren",
+  "markAllRead": "Alle als gelesen markieren",
+  "seeAll": "Alle anzeigen",
+  "loadMore": "Mehr laden",
+  "loading": "Lädt…",
+  "badge": "{count} ungelesene Benachrichtigungen",
+  "empty": {
+    "title": "Alles auf dem neuesten Stand",
+    "description": "Updates zu deinen Aktivitäten, Followern und Integrationen werden hier angezeigt."
+  },
+  "error": {
+    "title": "Benachrichtigungen konnten nicht geladen werden",
+    "description": "Beim Laden deiner Benachrichtigungen ist etwas schiefgelaufen.",
+    "retry": "Erneut versuchen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Neue Aktivität",
+      "body": "Deinem Konto wurde eine neue Aktivität hinzugefügt."
+    },
+    "duplicateActivity": {
+      "title": "Mögliche doppelte Aktivität",
+      "body": "Eine Aktivität mit derselben Startzeit existiert möglicherweise bereits."
+    },
+    "newFollowerRequest": {
+      "title": "Neue Follower-Anfrage",
+      "body": "{name} ({'@'}{username}) möchte dir folgen."
+    },
+    "followerRequestAccepted": {
+      "title": "Follower-Anfrage angenommen",
+      "body": "{name} ({'@'}{username}) hat deine Follower-Anfrage angenommen."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect benötigt Aufmerksamkeit",
+      "body": "Deine Garmin Connect-Sitzung ist abgelaufen. Verbinde es erneut, um die Synchronisierung fortzusetzen."
+    },
+    "adminSignUpApproval": {
+      "title": "Neue Registrierung benötigt Genehmigung",
+      "body": "{name} ({'@'}{username}) wartet auf Kontogenehmigung."
+    },
+    "unknown": {
+      "title": "Benachrichtigung",
+      "body": "Du hast eine neue Benachrichtigung."
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "此致，",
+  "common.team": "Endurain 团队",
+  "common.system": "Endurain 系统",
+  "common.visit": "访问 Endurain：",
+  "common.source_code": "源代码：",
+  "common.copy_link": "如果上面的按钮无法使用，您可以复制以下链接并粘贴到浏览器中：",
+
+  "password_reset.subject": "Endurain - 重置密码",
+  "password_reset.heading": "重置密码请求",
+  "password_reset.greeting": "您好 {name}，",
+  "password_reset.intro": "您请求重置 Endurain 账户的密码。请点击下面的按钮重置您的密码：",
+  "password_reset.cta": "重置密码",
+  "password_reset.security_label": "安全提示：",
+  "password_reset.security_notice": "出于安全考虑，此链接将在 1 小时后失效。",
+  "password_reset.ignore": "如果您没有请求重置密码，请忽略此邮件。您的密码将保持不变。",
+
+  "signup_confirmation.subject": "Endurain - 确认您的账户",
+  "signup_confirmation.heading": "确认您的账户",
+  "signup_confirmation.greeting": "您好 {name}，",
+  "signup_confirmation.intro": "感谢您注册 Endurain！请点击下面的按钮确认您的账户：",
+  "signup_confirmation.cta": "确认账户",
+  "signup_confirmation.security_label": "安全提示：",
+  "signup_confirmation.security_notice": "此确认链接将在 24 小时后失效。",
+  "signup_confirmation.ignore": "如果您没有创建 Endurain 账户，请忽略此邮件。",
+
+  "admin_signup.subject": "Endurain - 新用户注册待审批",
+  "admin_signup.heading": "新注册需要审批",
+  "admin_signup.greeting": "您好 {name}，",
+  "admin_signup.intro": "有新用户已注册，正在等待审批：",
+  "admin_signup.user_label": "用户：",
+  "admin_signup.review": "请登录 Endurain 管理面板以查看并批准此请求。",
+  "admin_signup.cta": "前往管理面板",
+
+  "signup_approved.subject": "Endurain - 您的账户已获批准",
+  "signup_approved.heading": "您的账户现已激活",
+  "signup_approved.greeting": "您好 {name}，",
+  "signup_approved.intro": "好消息！您的账户已获批准，现已激活。",
+  "signup_approved.username_label": "用户名：",
+  "signup_approved.login_intro": "您现在可以登录并开始使用 Endurain：",
+  "signup_approved.cta": "登录 Endurain"
+}

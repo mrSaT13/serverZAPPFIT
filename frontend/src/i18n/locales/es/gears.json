@@ -1,0 +1,152 @@
+{
+  "title": "Equipamiento",
+  "subtitle": "Bicicletas, zapatillas y equipamiento con el que registras actividades",
+  "buttonAddGear": "Añadir equipamiento",
+  "searchPlaceholder": "Buscar por apodo",
+  "clearSearch": "Borrar búsqueda",
+  "showInactive": "Mostrar inactivos",
+  "inactive": "Inactivo",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtros",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicicleta",
+    "shoes": "Zapatillas",
+    "wetsuit": "Traje de neopreno",
+    "racquet": "Raqueta",
+    "skis": "Esquís",
+    "snowboard": "Snowboard",
+    "windsurf": "Tabla de windsurf",
+    "waterSportsBoard": "Tabla de deportes acuáticos",
+    "unknown": "Equipamiento"
+  },
+  "actions": {
+    "edit": "Editar equipamiento",
+    "delete": "Eliminar equipamiento"
+  },
+  "form": {
+    "title": "Estadísticas",
+    "addTitle": "Añadir equipamiento",
+    "editTitle": "Editar equipamiento",
+    "description": "Controla el equipamiento que usas para tus actividades.",
+    "nickname": "Apodo",
+    "nicknameRequired": "El apodo es obligatorio",
+    "nicknameTooLong": "El apodo debe tener 250 caracteres o menos",
+    "nicknameTaken": "Ya tienes equipamiento con ese apodo",
+    "gearType": "Tipo",
+    "brand": "Marca",
+    "brandTooLong": "La marca debe tener 250 caracteres o menos",
+    "model": "Modelo",
+    "modelTooLong": "El modelo debe tener 250 caracteres o menos",
+    "active": "Activo",
+    "createdAt": "Creado el",
+    "createdAtRequired": "Se requiere una fecha de creación",
+    "initialDistance": "Distancia inicial",
+    "purchaseValue": "Precio de compra",
+    "totalCost": "Coste total",
+    "create": "Añadir equipamiento",
+    "save": "Guardar cambios",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "createSuccess": "Equipamiento añadido",
+    "updateSuccess": "Equipamiento actualizado",
+    "saveError": "No se pudo guardar el equipamiento. Inténtalo de nuevo."
+  },
+  "delete": {
+    "title": "Eliminar equipamiento",
+    "body": "¿Seguro que quieres eliminar \"{nickname}\"? No se puede deshacer.",
+    "confirm": "Eliminar",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "success": "Equipamiento eliminado",
+    "error": "No se pudo eliminar el equipamiento. Inténtalo de nuevo."
+  },
+  "error": {
+    "title": "No se pudo cargar el equipamiento",
+    "description": "Algo salió mal al cargar tu equipamiento.",
+    "retry": "Intentar de nuevo"
+  },
+  "empty": {
+    "title": "Todavía no hay equipamiento",
+    "description": "Añade las bicicletas, zapatillas y equipamiento que uses para empezar a registrar su uso.",
+    "searchTitle": "Ningún equipamiento coincide con tu búsqueda",
+    "searchDescription": "Prueba con un apodo diferente.",
+    "activeTitle": "No hay equipamiento activo",
+    "activeDescription": "Añade equipamiento o activa \"Mostrar inactivos\" para ver el equipamiento inactivo."
+  },
+  "detail": {
+    "back": "Volver al equipamiento",
+    "notFoundTitle": "Equipamiento no encontrado",
+    "notFoundDescription": "Este equipamiento puede haber sido eliminado o no te pertenece.",
+    "totalDistance": "Distancia",
+    "totalTime": "Tiempo",
+    "componentsCost": "Componentes"
+  },
+  "components": {
+    "title": "Componentes",
+    "add": "Añadir componente",
+    "empty": "Todavía no hay componentes. Añade las piezas cuyo desgaste quieras controlar.",
+    "unsupported": "Este tipo de equipamiento no registra componentes.",
+    "noneActive": "Todos los componentes están inactivos. Activa \"Mostrar inactivos\" para verlos.",
+    "inactive": "Inactivo",
+    "unitHours": "h",
+    "purchasedOn": "Comprado el {date}",
+    "wearLabel": "Desgaste de {name}",
+    "actions": {
+      "edit": "Editar componente",
+      "delete": "Eliminar componente"
+    },
+    "form": {
+      "addTitle": "Añadir componente",
+      "editTitle": "Editar componente",
+      "description": "Controla las piezas que reemplazas para monitorizar su desgaste.",
+      "type": "Tipo",
+      "typePlaceholder": "Selecciona un tipo",
+      "typeRequired": "Se requiere un tipo",
+      "brand": "Marca",
+      "brandRequired": "La marca es obligatoria",
+      "brandTooLong": "La marca debe tener 250 caracteres o menos",
+      "model": "Modelo",
+      "modelRequired": "El modelo es obligatorio",
+      "modelTooLong": "El modelo debe tener 250 caracteres o menos",
+      "purchaseDate": "Fecha de compra",
+      "purchaseDateRequired": "Se requiere una fecha de compra",
+      "retiredDate": "Fecha de retiro",
+      "expectedDistance": "Distancia esperada",
+      "expectedTime": "Tiempo esperado",
+      "purchaseValue": "Precio de compra",
+      "active": "Activo",
+      "retiredBeforePurchase": "La fecha de retiro debe ser posterior a la fecha de compra.",
+      "create": "Añadir componente",
+      "save": "Guardar cambios",
+      "cancel": "Cancelar",
+      "close": "Cerrar",
+      "createSuccess": "Componente añadido",
+      "updateSuccess": "Componente actualizado",
+      "saveError": "No se pudo guardar el componente. Inténtalo de nuevo."
+    },
+    "delete": {
+      "title": "Eliminar componente",
+      "body": "¿Seguro que quieres eliminar \"{name}\"? No se puede deshacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar",
+      "close": "Cerrar",
+      "success": "Componente eliminado",
+      "error": "No se pudo eliminar el componente. Inténtalo de nuevo."
+    },
+    "error": {
+      "title": "No se pudieron cargar los componentes",
+      "description": "Algo salió mal al cargar los componentes de este equipamiento."
+    }
+  },
+  "activities": {
+    "title": "Actividades",
+    "empty": "Todavía no hay actividades registradas con este equipamiento.",
+    "error": {
+      "title": "No se pudieron cargar las actividades",
+      "description": "Algo salió mal al cargar las actividades de este equipamiento."
+    }
+  }
+}

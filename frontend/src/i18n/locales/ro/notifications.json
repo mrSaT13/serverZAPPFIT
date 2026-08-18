@@ -1,0 +1,51 @@
+{
+  "title": "Notificări",
+  "subtitle": "Activitate recentă, cereri și alerte",
+  "navLabel": "Notificări",
+  "unread": "Necitite",
+  "markRead": "Marchează ca citit",
+  "markAllRead": "Marchează toate ca citite",
+  "seeAll": "Vezi toate",
+  "loadMore": "Încarcă mai multe",
+  "loading": "Se încarcă…",
+  "badge": "{count} notificări necitite",
+  "empty": {
+    "title": "Ești la zi cu toate",
+    "description": "Actualizările despre activitățile, urmăritorii și integrările tale vor apărea aici."
+  },
+  "error": {
+    "title": "Nu am putut încărca notificările",
+    "description": "Ceva nu a mers bine la încărcarea notificărilor tale.",
+    "retry": "Încearcă din nou"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Activitate nouă",
+      "body": "O activitate nouă a fost adăugată în contul tău."
+    },
+    "duplicateActivity": {
+      "title": "Posibilă activitate duplicată",
+      "body": "Este posibil să existe deja o activitate cu aceeași oră de început."
+    },
+    "newFollowerRequest": {
+      "title": "Cerere nouă de urmărire",
+      "body": "{name} ({'@'}{username}) dorește să te urmărească."
+    },
+    "followerRequestAccepted": {
+      "title": "Cerere de urmărire acceptată",
+      "body": "{name} ({'@'}{username}) ți-a acceptat cererea de urmărire."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect necesită atenție",
+      "body": "Sesiunea ta Garmin Connect a expirat. Reconectează-o pentru a continua sincronizarea."
+    },
+    "adminSignUpApproval": {
+      "title": "O înscriere nouă necesită aprobare",
+      "body": "{name} ({'@'}{username}) așteaptă aprobarea contului."
+    },
+    "unknown": {
+      "title": "Notificare",
+      "body": "Ai o notificare nouă."
+    }
+  }
+}

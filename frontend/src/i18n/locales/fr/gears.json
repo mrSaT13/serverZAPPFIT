@@ -1,0 +1,152 @@
+{
+  "title": "Équipements",
+  "subtitle": "Vélos, chaussures et équipements utilisés pour vos activités",
+  "buttonAddGear": "Ajouter un équipement",
+  "searchPlaceholder": "Rechercher par surnom",
+  "clearSearch": "Effacer la recherche",
+  "showInactive": "Afficher les inactifs",
+  "inactive": "Inactif",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtres",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Vélo",
+    "shoes": "Chaussures",
+    "wetsuit": "Combinaison",
+    "racquet": "Raquette",
+    "skis": "Skis",
+    "snowboard": "Snowboard",
+    "windsurf": "Planche de windsurf",
+    "waterSportsBoard": "Planche de sports nautiques",
+    "unknown": "Équipement"
+  },
+  "actions": {
+    "edit": "Modifier l'équipement",
+    "delete": "Supprimer l'équipement"
+  },
+  "form": {
+    "title": "Statistiques",
+    "addTitle": "Ajouter un équipement",
+    "editTitle": "Modifier l'équipement",
+    "description": "Suivez l'équipement que vous utilisez pour vos activités.",
+    "nickname": "Surnom",
+    "nicknameRequired": "Le surnom est obligatoire",
+    "nicknameTooLong": "Le surnom doit contenir 250 caractères ou moins",
+    "nicknameTaken": "Vous avez déjà un équipement avec ce surnom",
+    "gearType": "Type",
+    "brand": "Marque",
+    "brandTooLong": "La marque doit contenir 250 caractères ou moins",
+    "model": "Modèle",
+    "modelTooLong": "Le modèle doit contenir 250 caractères ou moins",
+    "active": "Actif",
+    "createdAt": "Créé le",
+    "createdAtRequired": "Une date de création est requise",
+    "initialDistance": "Distance initiale",
+    "purchaseValue": "Valeur d'achat",
+    "totalCost": "Coût total",
+    "create": "Ajouter l'équipement",
+    "save": "Enregistrer les modifications",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "createSuccess": "Équipement ajouté",
+    "updateSuccess": "Équipement mis à jour",
+    "saveError": "Impossible d'enregistrer l'équipement. Veuillez réessayer."
+  },
+  "delete": {
+    "title": "Supprimer l'équipement",
+    "body": "Êtes-vous sûr(e) de vouloir supprimer \"{nickname}\" ? Cette action est irréversible.",
+    "confirm": "Supprimer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "success": "Équipement supprimé",
+    "error": "Impossible de supprimer l'équipement. Veuillez réessayer."
+  },
+  "error": {
+    "title": "Impossible de charger les équipements",
+    "description": "Une erreur s'est produite lors du chargement de vos équipements.",
+    "retry": "Réessayer"
+  },
+  "empty": {
+    "title": "Aucun équipement pour l'instant",
+    "description": "Ajoutez les vélos, chaussures et équipements que vous utilisez pour commencer à suivre leur utilisation.",
+    "searchTitle": "Aucun équipement ne correspond à votre recherche",
+    "searchDescription": "Essayez un autre surnom.",
+    "activeTitle": "Aucun équipement actif",
+    "activeDescription": "Ajoutez un équipement ou activez \"Afficher les inactifs\" pour voir les équipements inactifs."
+  },
+  "detail": {
+    "back": "Retour aux équipements",
+    "notFoundTitle": "Équipement introuvable",
+    "notFoundDescription": "Cet équipement a peut-être été supprimé ou ne vous appartient pas.",
+    "totalDistance": "Distance",
+    "totalTime": "Temps",
+    "componentsCost": "Composants"
+  },
+  "components": {
+    "title": "Composants",
+    "add": "Ajouter un composant",
+    "empty": "Aucun composant pour l'instant. Ajoutez les pièces dont vous souhaitez suivre l'usure.",
+    "unsupported": "Ce type d'équipement ne permet pas de suivre les composants.",
+    "noneActive": "Tous les composants sont inactifs. Activez \"Afficher les inactifs\" pour les voir.",
+    "inactive": "Inactif",
+    "unitHours": "h",
+    "purchasedOn": "Acheté le {date}",
+    "wearLabel": "Usure de {name}",
+    "actions": {
+      "edit": "Modifier le composant",
+      "delete": "Supprimer le composant"
+    },
+    "form": {
+      "addTitle": "Ajouter un composant",
+      "editTitle": "Modifier le composant",
+      "description": "Suivez les pièces que vous remplacez pour surveiller leur usure.",
+      "type": "Type",
+      "typePlaceholder": "Sélectionner un type",
+      "typeRequired": "Un type est requis",
+      "brand": "Marque",
+      "brandRequired": "La marque est obligatoire",
+      "brandTooLong": "La marque doit contenir 250 caractères ou moins",
+      "model": "Modèle",
+      "modelRequired": "Le modèle est obligatoire",
+      "modelTooLong": "Le modèle doit contenir 250 caractères ou moins",
+      "purchaseDate": "Date d'achat",
+      "purchaseDateRequired": "Une date d'achat est requise",
+      "retiredDate": "Date de retrait",
+      "expectedDistance": "Distance prévue",
+      "expectedTime": "Temps prévu",
+      "purchaseValue": "Valeur d'achat",
+      "active": "Actif",
+      "retiredBeforePurchase": "La date de retrait doit être postérieure à la date d'achat.",
+      "create": "Ajouter le composant",
+      "save": "Enregistrer les modifications",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "createSuccess": "Composant ajouté",
+      "updateSuccess": "Composant mis à jour",
+      "saveError": "Impossible d'enregistrer le composant. Veuillez réessayer."
+    },
+    "delete": {
+      "title": "Supprimer le composant",
+      "body": "Êtes-vous sûr(e) de vouloir supprimer \"{name}\" ? Cette action est irréversible.",
+      "confirm": "Supprimer",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "success": "Composant supprimé",
+      "error": "Impossible de supprimer le composant. Veuillez réessayer."
+    },
+    "error": {
+      "title": "Impossible de charger les composants",
+      "description": "Une erreur s'est produite lors du chargement des composants de cet équipement."
+    }
+  },
+  "activities": {
+    "title": "Activités",
+    "empty": "Aucune activité enregistrée avec cet équipement pour l'instant.",
+    "error": {
+      "title": "Impossible de charger les activités",
+      "description": "Une erreur s'est produite lors du chargement des activités de cet équipement."
+    }
+  }
+}

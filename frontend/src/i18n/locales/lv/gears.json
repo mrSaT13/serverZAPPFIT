@@ -1,0 +1,152 @@
+{
+  "title": "Inventārs",
+  "subtitle": "Velosipēdi, apavi un aprīkojums, ar ko izsekojat aktivitātes",
+  "buttonAddGear": "Pievienot inventāru",
+  "searchPlaceholder": "Meklēt pēc iesaukas",
+  "clearSearch": "Notīrīt meklēšanu",
+  "showInactive": "Rādīt neaktīvos",
+  "inactive": "Neaktīvs",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtri",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Velosipēds",
+    "shoes": "Apavi",
+    "wetsuit": "Hidrotērps",
+    "racquet": "Rakete",
+    "skis": "Slēpes",
+    "snowboard": "Snovbords",
+    "windsurf": "Vindsērfinga dēlis",
+    "waterSportsBoard": "Ūdenssporta dēlis",
+    "unknown": "Inventārs"
+  },
+  "actions": {
+    "edit": "Rediģēt inventāru",
+    "delete": "Dzēst inventāru"
+  },
+  "form": {
+    "title": "Statistika",
+    "addTitle": "Pievienot inventāru",
+    "editTitle": "Rediģēt inventāru",
+    "description": "Izsekojiet aprīkojumu, ko izmantojat savām aktivitātēm.",
+    "nickname": "Iesauka",
+    "nicknameRequired": "Iesauka ir obligāta",
+    "nicknameTooLong": "Iesaukai jābūt 250 rakstzīmju vai īsākai",
+    "nicknameTaken": "Jums jau ir inventārs ar šādu iesauku",
+    "gearType": "Veids",
+    "brand": "Zīmols",
+    "brandTooLong": "Zīmolam jābūt 250 rakstzīmju vai īsākam",
+    "model": "Modelis",
+    "modelTooLong": "Modelim jābūt 250 rakstzīmju vai īsākam",
+    "active": "Aktīvs",
+    "createdAt": "Izveidots",
+    "createdAtRequired": "Izveides datums ir obligāts",
+    "initialDistance": "Sākotnējā distance",
+    "purchaseValue": "Iegādes vērtība",
+    "totalCost": "Kopējās izmaksas",
+    "create": "Pievienot inventāru",
+    "save": "Saglabāt izmaiņas",
+    "cancel": "Atcelt",
+    "close": "Aizvērt",
+    "createSuccess": "Inventārs pievienots",
+    "updateSuccess": "Inventārs atjaunināts",
+    "saveError": "Neizdevās saglabāt inventāru. Lūdzu, mēģiniet vēlreiz."
+  },
+  "delete": {
+    "title": "Dzēst inventāru",
+    "body": "Vai tiešām vēlaties dzēst \"{nickname}\"? Šo nevar atsaukt.",
+    "confirm": "Dzēst",
+    "cancel": "Atcelt",
+    "close": "Aizvērt",
+    "success": "Inventārs dzēsts",
+    "error": "Neizdevās dzēst inventāru. Lūdzu, mēģiniet vēlreiz."
+  },
+  "error": {
+    "title": "Neizdevās ielādēt inventāru",
+    "description": "Ielādējot jūsu inventāru, kaut kas nogāja greizi.",
+    "retry": "Mēģināt vēlreiz"
+  },
+  "empty": {
+    "title": "Vēl nav inventāra",
+    "description": "Pievienojiet velosipēdus, apavus un aprīkojumu, ko izmantojat, lai sāktu izsekot to lietojumu.",
+    "searchTitle": "Neviens inventārs neatbilst jūsu meklējumam",
+    "searchDescription": "Mēģiniet citu iesauku.",
+    "activeTitle": "Nav aktīva inventāra",
+    "activeDescription": "Pievienojiet inventāru vai iespējojiet \"Rādīt neaktīvos\", lai redzētu neaktīvo inventāru."
+  },
+  "detail": {
+    "back": "Atpakaļ uz inventāru",
+    "notFoundTitle": "Inventārs nav atrasts",
+    "notFoundDescription": "Šis inventārs, iespējams, ir dzēsts vai nepieder jums.",
+    "totalDistance": "Distance",
+    "totalTime": "Laiks",
+    "componentsCost": "Komponenti"
+  },
+  "components": {
+    "title": "Komponenti",
+    "add": "Pievienot komponentu",
+    "empty": "Vēl nav komponentu. Pievienojiet daļas, kuru nodilumu vēlaties izsekot.",
+    "unsupported": "Šis inventāra veids neizseko komponentus.",
+    "noneActive": "Visi komponenti ir neaktīvi. Ieslēdziet \"Rādīt neaktīvos\", lai tos redzētu.",
+    "inactive": "Neaktīvs",
+    "unitHours": "h",
+    "purchasedOn": "Iegādāts {date}",
+    "wearLabel": "{name} nodilums",
+    "actions": {
+      "edit": "Rediģēt komponentu",
+      "delete": "Dzēst komponentu"
+    },
+    "form": {
+      "addTitle": "Pievienot komponentu",
+      "editTitle": "Rediģēt komponentu",
+      "description": "Izsekojiet daļas, kuras nomaināt, lai uzraudzītu to nodilumu.",
+      "type": "Veids",
+      "typePlaceholder": "Atlasiet veidu",
+      "typeRequired": "Veids ir obligāts",
+      "brand": "Zīmols",
+      "brandRequired": "Zīmols ir obligāts",
+      "brandTooLong": "Zīmolam jābūt 250 rakstzīmju vai īsākam",
+      "model": "Modelis",
+      "modelRequired": "Modelis ir obligāts",
+      "modelTooLong": "Modelim jābūt 250 rakstzīmju vai īsākam",
+      "purchaseDate": "Iegādes datums",
+      "purchaseDateRequired": "Iegādes datums ir obligāts",
+      "retiredDate": "Izņemšanas datums",
+      "expectedDistance": "Paredzamā distance",
+      "expectedTime": "Paredzamais laiks",
+      "purchaseValue": "Iegādes vērtība",
+      "active": "Aktīvs",
+      "retiredBeforePurchase": "Izņemšanas datumam jābūt pēc iegādes datuma.",
+      "create": "Pievienot komponentu",
+      "save": "Saglabāt izmaiņas",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "createSuccess": "Komponents pievienots",
+      "updateSuccess": "Komponents atjaunināts",
+      "saveError": "Neizdevās saglabāt komponentu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "delete": {
+      "title": "Dzēst komponentu",
+      "body": "Vai tiešām vēlaties dzēst \"{name}\"? Šo nevar atsaukt.",
+      "confirm": "Dzēst",
+      "cancel": "Atcelt",
+      "close": "Aizvērt",
+      "success": "Komponents dzēsts",
+      "error": "Neizdevās dzēst komponentu. Lūdzu, mēģiniet vēlreiz."
+    },
+    "error": {
+      "title": "Neizdevās ielādēt komponentus",
+      "description": "Ielādējot šī inventāra komponentus, kaut kas nogāja greizi."
+    }
+  },
+  "activities": {
+    "title": "Aktivitātes",
+    "empty": "Ar šo inventāru vēl nav reģistrētu aktivitāšu.",
+    "error": {
+      "title": "Neizdevās ielādēt aktivitātes",
+      "description": "Ielādējot šī inventāra aktivitātes, kaut kas nogāja greizi."
+    }
+  }
+}

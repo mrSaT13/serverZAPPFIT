@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Srdačan pozdrav,",
+  "common.team": "Endurain tim",
+  "common.system": "Endurain sistem",
+  "common.visit": "Posetite Endurain na:",
+  "common.source_code": "Izvorni kod na:",
+  "common.copy_link": "Ako dugme iznad ne radi, možete kopirati i nalepiti sledeći link u svoj pregledač:",
+
+  "password_reset.subject": "Endurain - Resetovanje lozinke",
+  "password_reset.heading": "Zahtev za resetovanje lozinke",
+  "password_reset.greeting": "Zdravo {name},",
+  "password_reset.intro": "Zatražili ste resetovanje lozinke za svoj Endurain nalog. Kliknite na dugme ispod da resetujete lozinku:",
+  "password_reset.cta": "Resetuj lozinku",
+  "password_reset.security_label": "Bezbednosno obaveštenje:",
+  "password_reset.security_notice": "Ovaj link će isteći za 1 sat iz bezbednosnih razloga.",
+  "password_reset.ignore": "Ako niste zatražili ovo resetovanje lozinke, zanemarite ovaj email. Vaša lozinka će ostati nepromenjena.",
+
+  "signup_confirmation.subject": "Endurain - Potvrdite svoj nalog",
+  "signup_confirmation.heading": "Potvrdite svoj nalog",
+  "signup_confirmation.greeting": "Zdravo {name},",
+  "signup_confirmation.intro": "Hvala što ste se registrovali na Endurain! Potvrdite svoj nalog klikom na dugme ispod:",
+  "signup_confirmation.cta": "Potvrdi nalog",
+  "signup_confirmation.security_label": "Bezbednosno obaveštenje:",
+  "signup_confirmation.security_notice": "Ovaj link za potvrdu će isteći za 24 sata.",
+  "signup_confirmation.ignore": "Ako niste napravili Endurain nalog, zanemarite ovaj email.",
+
+  "admin_signup.subject": "Endurain - Nova registracija korisnika čeka odobrenje",
+  "admin_signup.heading": "Nova registracija zahteva odobrenje",
+  "admin_signup.greeting": "Zdravo {name},",
+  "admin_signup.intro": "Novi korisnik se registrovao i čeka odobrenje:",
+  "admin_signup.user_label": "Korisnik:",
+  "admin_signup.review": "Prijavite se na Endurain administratorski panel da pregledate i odobrite ovaj zahtev.",
+  "admin_signup.cta": "Idi na administratorski panel",
+
+  "signup_approved.subject": "Endurain - Vaš nalog je odobren",
+  "signup_approved.heading": "Vaš nalog je sada aktivan",
+  "signup_approved.greeting": "Zdravo {name},",
+  "signup_approved.intro": "Dobre vesti! Vaš nalog je odobren i sada je aktivan.",
+  "signup_approved.username_label": "Korisničko ime:",
+  "signup_approved.login_intro": "Sada se možete prijaviti i početi da koristite Endurain:",
+  "signup_approved.cta": "Prijavi se na Endurain"
+}

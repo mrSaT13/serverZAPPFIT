@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Parimate soovidega,",
+  "common.team": "Enduraini meeskond",
+  "common.system": "Enduraini süsteem",
+  "common.visit": "Külasta Enduraini aadressil:",
+  "common.source_code": "Lähtekood asub:",
+  "common.copy_link": "Kui ülaltoodud nupp ei tööta, võid kopeerida järgmise lingi ja kleepida selle oma brauserisse:",
+
+  "password_reset.subject": "Endurain – Parooli lähtestamine",
+  "password_reset.heading": "Parooli lähtestamise taotlus",
+  "password_reset.greeting": "Tere {name},",
+  "password_reset.intro": "Sa taotlesid oma Enduraini konto parooli lähtestamist. Parooli lähtestamiseks klõpsa allolevat nuppu:",
+  "password_reset.cta": "Lähtesta parool",
+  "password_reset.security_label": "Turvateade:",
+  "password_reset.security_notice": "Turvalisuse huvides aegub see link 1 tunni pärast.",
+  "password_reset.ignore": "Kui sa ei taotlenud selle parooli lähtestamist, eira seda e-kirja. Sinu parool jääb muutmata.",
+
+  "signup_confirmation.subject": "Endurain – Kinnita oma konto",
+  "signup_confirmation.heading": "Kinnita oma konto",
+  "signup_confirmation.greeting": "Tere {name},",
+  "signup_confirmation.intro": "Täname, et registreerusid Endurainis! Palun kinnita oma konto, klõpsates allolevat nuppu:",
+  "signup_confirmation.cta": "Kinnita konto",
+  "signup_confirmation.security_label": "Turvateade:",
+  "signup_confirmation.security_notice": "See kinnituslink aegub 24 tunni pärast.",
+  "signup_confirmation.ignore": "Kui sa ei loonud Enduraini kontot, eira seda e-kirja.",
+
+  "admin_signup.subject": "Endurain – Uue kasutaja registreerumine ootab heakskiitu",
+  "admin_signup.heading": "Uus registreerumine vajab heakskiitu",
+  "admin_signup.greeting": "Tere {name},",
+  "admin_signup.intro": "Uus kasutaja on registreerunud ja ootab heakskiitu:",
+  "admin_signup.user_label": "Kasutaja:",
+  "admin_signup.review": "Selle taotluse läbivaatamiseks ja heakskiitmiseks logi sisse Enduraini administraatori paneeli.",
+  "admin_signup.cta": "Mine administraatori paneeli",
+
+  "signup_approved.subject": "Endurain – Sinu konto on heaks kiidetud",
+  "signup_approved.heading": "Sinu konto on nüüd aktiivne",
+  "signup_approved.greeting": "Tere {name},",
+  "signup_approved.intro": "Häid uudiseid! Sinu konto on heaks kiidetud ja nüüd aktiivne.",
+  "signup_approved.username_label": "Kasutajanimi:",
+  "signup_approved.login_intro": "Nüüd saad sisse logida ja Enduraini kasutama hakata:",
+  "signup_approved.cta": "Logi Enduraini sisse"
+}

@@ -1,0 +1,22 @@
+{
+  "home": "Početna",
+  "search": "Pretraživanje",
+  "activities": "Aktivnosti",
+  "activitiesList": "Popis",
+  "summary": "Sažetak",
+  "gear": "Oprema",
+  "health": "Zdravlje",
+  "alerts": "Obavijesti",
+  "settings": "Postavke",
+  "profile": "Profil",
+  "login": "Prijava",
+  "logout": "Odjava",
+  "userMenu": "Korisnički izbornik",
+  "menu": "Izbornik",
+  "primary": "Glavna navigacija",
+  "account": "Račun",
+  "preferences": "Postavke",
+  "updateAvailable": "Dostupno ažuriranje",
+  "updateAvailableTitle": "Verzija {version} je dostupna",
+  "updateViewRelease": "Pogledaj napomene uz izdanje"
+}

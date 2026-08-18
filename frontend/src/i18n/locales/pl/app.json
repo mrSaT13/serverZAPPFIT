@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Logo Endurain",
+  "title": "Podstawa systemu projektowego jest aktywna",
+  "subtitle": "Tailwind v4, shadcn-vue, ścisły TypeScript i paleta tokenów Endurain są gotowe",
+  "primaryAction": "Akcja główna",
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "message": "Strona, której szukasz, nie istnieje lub została przeniesiona",
+    "action": "Przejdź do strony głównej"
+  },
+  "error": {
+    "title": "Coś poszło nie tak",
+    "message": "Nie udało się wczytać tej sekcji. Możesz spróbować ponownie.",
+    "retry": "Spróbuj ponownie",
+    "toast": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "configError": {
+    "title": "Błąd konfiguracji",
+    "message": "Aplikacja nie mogła połączyć się z zapleczem Endurain. Zwykle jest to spowodowane brakującą lub błędnie skonfigurowaną zmienną środowiskową ENDURAIN_HOST albo niedziałającym zapleczem.",
+    "notSet": "(nie ustawiono)",
+    "help": "Sprawdź, czy ENDURAIN_HOST wskazuje adres URL, pod którym dostępna jest Twoja instancja Endurain (na przykład https://endurain.example.com), oraz czy zaplecze działa, a następnie odśwież stronę.",
+    "reload": "Odśwież"
+  },
+  "dismiss": "Odrzuć",
+  "language": "Język",
+  "theme": {
+    "toLight": "Tryb jasny",
+    "toDark": "Tryb ciemny"
+  },
+  "pagination": {
+    "label": "Paginacja",
+    "previous": "Poprzednia strona",
+    "next": "Następna strona",
+    "goToPage": "Przejdź do strony {page}"
+  },
+  "markdownEditor": {
+    "preview": "Podgląd",
+    "edit": "Edytuj",
+    "supported": "Obsługa Markdown",
+    "empty": "Nie ma nic do podglądu"
+  }
+}

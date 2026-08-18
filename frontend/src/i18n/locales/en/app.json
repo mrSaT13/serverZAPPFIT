@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logo",
+  "title": "Design system foundation is live",
+  "subtitle": "Tailwind v4, shadcn-vue, strict TypeScript and the Endurain token palette are wired up",
+  "primaryAction": "Primary action",
+  "notFound": {
+    "title": "Page not found",
+    "message": "The page you are looking for does not exist or has moved",
+    "action": "Go to home"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "message": "This section failed to load. You can try again.",
+    "retry": "Try again",
+    "toast": "Something went wrong. Please try again."
+  },
+  "configError": {
+    "title": "Configuration error",
+    "message": "The app couldn't reach the Endurain backend. This is usually caused by a missing or misconfigured ENDURAIN_HOST environment variable, or by the backend not running.",
+    "notSet": "(not set)",
+    "help": "Check that ENDURAIN_HOST points to the URL where your Endurain instance is reachable (for example https://endurain.example.com) and that the backend is running, then reload the page.",
+    "reload": "Reload"
+  },
+  "dismiss": "Dismiss",
+  "language": "Language",
+  "theme": {
+    "toLight": "Light mode",
+    "toDark": "Dark mode"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "previous": "Previous page",
+    "next": "Next page",
+    "goToPage": "Go to page {page}"
+  },
+  "markdownEditor": {
+    "preview": "Preview",
+    "edit": "Edit",
+    "supported": "Markdown supported",
+    "empty": "Nothing to preview"
+  }
+}

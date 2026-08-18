@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "此致，",
+  "common.team": "Endurain 團隊",
+  "common.system": "Endurain 系統",
+  "common.visit": "造訪 Endurain：",
+  "common.source_code": "原始碼：",
+  "common.copy_link": "如果上面的按鈕無法使用，您可以複製以下連結並貼到瀏覽器中：",
+
+  "password_reset.subject": "Endurain - 重設密碼",
+  "password_reset.heading": "重設密碼請求",
+  "password_reset.greeting": "您好 {name}，",
+  "password_reset.intro": "您請求重設 Endurain 帳戶的密碼。請點擊下面的按鈕重設您的密碼：",
+  "password_reset.cta": "重設密碼",
+  "password_reset.security_label": "安全提示：",
+  "password_reset.security_notice": "基於安全考量，此連結將在 1 小時後失效。",
+  "password_reset.ignore": "如果您沒有請求重設密碼，請忽略此郵件。您的密碼將保持不變。",
+
+  "signup_confirmation.subject": "Endurain - 確認您的帳戶",
+  "signup_confirmation.heading": "確認您的帳戶",
+  "signup_confirmation.greeting": "您好 {name}，",
+  "signup_confirmation.intro": "感謝您註冊 Endurain！請點擊下面的按鈕確認您的帳戶：",
+  "signup_confirmation.cta": "確認帳戶",
+  "signup_confirmation.security_label": "安全提示：",
+  "signup_confirmation.security_notice": "此確認連結將在 24 小時後失效。",
+  "signup_confirmation.ignore": "如果您沒有建立 Endurain 帳戶，請忽略此郵件。",
+
+  "admin_signup.subject": "Endurain - 新使用者註冊待審核",
+  "admin_signup.heading": "新註冊需要審核",
+  "admin_signup.greeting": "您好 {name}，",
+  "admin_signup.intro": "有新使用者已註冊，正在等待審核：",
+  "admin_signup.user_label": "使用者：",
+  "admin_signup.review": "請登入 Endurain 管理面板以檢視並核准此請求。",
+  "admin_signup.cta": "前往管理面板",
+
+  "signup_approved.subject": "Endurain - 您的帳戶已獲核准",
+  "signup_approved.heading": "您的帳戶現已啟用",
+  "signup_approved.greeting": "您好 {name}，",
+  "signup_approved.intro": "好消息！您的帳戶已獲核准，現已啟用。",
+  "signup_approved.username_label": "使用者名稱：",
+  "signup_approved.login_intro": "您現在可以登入並開始使用 Endurain：",
+  "signup_approved.cta": "登入 Endurain"
+}

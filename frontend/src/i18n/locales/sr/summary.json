@@ -1,0 +1,49 @@
+{
+  "title": "Pregled",
+  "subtitle": "Pregledajte ukupne vrednosti i trendove treninga tokom vremena.",
+  "viewType": {
+    "label": "Period pregleda",
+    "week": "Nedelja",
+    "month": "Mesec",
+    "year": "Godina",
+    "lifetime": "Sve vreme"
+  },
+  "filters": {
+    "type": "Tip aktivnosti",
+    "allTypes": "Svi tipovi"
+  },
+  "period": {
+    "previous": "Prethodni period",
+    "next": "Sledeći period",
+    "picker": "Izaberi period",
+    "allTime": "Sve vreme"
+  },
+  "metrics": {
+    "distance": "Udaljenost",
+    "duration": "Trajanje",
+    "elevation": "Visinska razlika",
+    "calories": "Kalorije",
+    "activities": "Aktivnosti"
+  },
+  "breakdown": {
+    "title": "Raščlanjivanje",
+    "period": "Period",
+    "weekNumber": "Nedelja {number}"
+  },
+  "typeBreakdown": {
+    "title": "Po tipu aktivnosti",
+    "type": "Tip"
+  },
+  "activities": {
+    "title": "Aktivnosti u ovom periodu"
+  },
+  "empty": {
+    "title": "Nema aktivnosti u ovom periodu",
+    "description": "Nijedna aktivnost ne odgovara izabranom periodu i tipu."
+  },
+  "error": {
+    "title": "Pregled nije moguće učitati",
+    "description": "Nešto je pošlo naopako prilikom učitavanja statistike. Proverite vezu i pokušajte ponovo.",
+    "retry": "Pokušaj ponovo"
+  }
+}

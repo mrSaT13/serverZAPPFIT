@@ -1,0 +1,152 @@
+{
+  "title": "Uitrusting",
+  "subtitle": "Fietsen, schoenen en apparatuur waarmee je activiteiten bijhoudt",
+  "buttonAddGear": "Uitrusting toevoegen",
+  "searchPlaceholder": "Zoek op bijnaam",
+  "clearSearch": "Zoekterm wissen",
+  "showInactive": "Inactief tonen",
+  "inactive": "Inactief",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filters",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Fiets",
+    "shoes": "Schoenen",
+    "wetsuit": "Wetsuit",
+    "racquet": "Racket",
+    "skis": "Ski's",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurfplank",
+    "waterSportsBoard": "Watersportplank",
+    "unknown": "Uitrusting"
+  },
+  "actions": {
+    "edit": "Uitrusting bewerken",
+    "delete": "Uitrusting verwijderen"
+  },
+  "form": {
+    "title": "Statistieken",
+    "addTitle": "Uitrusting toevoegen",
+    "editTitle": "Uitrusting bewerken",
+    "description": "Volg de uitrusting die je gebruikt voor je activiteiten.",
+    "nickname": "Bijnaam",
+    "nicknameRequired": "Bijnaam is verplicht",
+    "nicknameTooLong": "Bijnaam mag maximaal 250 tekens zijn",
+    "nicknameTaken": "Je hebt al uitrusting met die bijnaam",
+    "gearType": "Type",
+    "brand": "Merk",
+    "brandTooLong": "Merk mag maximaal 250 tekens zijn",
+    "model": "Model",
+    "modelTooLong": "Model mag maximaal 250 tekens zijn",
+    "active": "Actief",
+    "createdAt": "Aangemaakt op",
+    "createdAtRequired": "Een aanmaakdatum is verplicht",
+    "initialDistance": "Beginafstand",
+    "purchaseValue": "Aankoopwaarde",
+    "totalCost": "Totale kosten",
+    "create": "Uitrusting toevoegen",
+    "save": "Wijzigingen opslaan",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "createSuccess": "Uitrusting toegevoegd",
+    "updateSuccess": "Uitrusting bijgewerkt",
+    "saveError": "Uitrusting kon niet worden opgeslagen. Probeer het opnieuw."
+  },
+  "delete": {
+    "title": "Uitrusting verwijderen",
+    "body": "Weet je zeker dat je \"{nickname}\" wilt verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "confirm": "Verwijderen",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "success": "Uitrusting verwijderd",
+    "error": "Uitrusting kon niet worden verwijderd. Probeer het opnieuw."
+  },
+  "error": {
+    "title": "Uitrusting kon niet worden geladen",
+    "description": "Er is iets misgegaan bij het laden van je uitrusting.",
+    "retry": "Opnieuw proberen"
+  },
+  "empty": {
+    "title": "Nog geen uitrusting",
+    "description": "Voeg de fietsen, schoenen en apparatuur toe die je gebruikt om het gebruik bij te houden.",
+    "searchTitle": "Geen uitrusting komt overeen met je zoekterm",
+    "searchDescription": "Probeer een andere bijnaam.",
+    "activeTitle": "Geen actieve uitrusting",
+    "activeDescription": "Voeg uitrusting toe of schakel \"Inactief tonen\" in om inactieve uitrusting te zien."
+  },
+  "detail": {
+    "back": "Terug naar uitrusting",
+    "notFoundTitle": "Uitrusting niet gevonden",
+    "notFoundDescription": "Deze uitrusting is mogelijk verwijderd of behoort niet toe aan jou.",
+    "totalDistance": "Afstand",
+    "totalTime": "Tijd",
+    "componentsCost": "Onderdelen"
+  },
+  "components": {
+    "title": "Onderdelen",
+    "add": "Onderdeel toevoegen",
+    "empty": "Nog geen onderdelen. Voeg de onderdelen toe waarvan je de slijtage wilt bijhouden.",
+    "unsupported": "Dit type uitrusting houdt geen onderdelen bij.",
+    "noneActive": "Alle onderdelen zijn inactief. Zet \"Inactief tonen\" aan om ze te zien.",
+    "inactive": "Inactief",
+    "unitHours": "u",
+    "purchasedOn": "Gekocht op {date}",
+    "wearLabel": "Slijtage {name}",
+    "actions": {
+      "edit": "Onderdeel bewerken",
+      "delete": "Onderdeel verwijderen"
+    },
+    "form": {
+      "addTitle": "Onderdeel toevoegen",
+      "editTitle": "Onderdeel bewerken",
+      "description": "Volg de onderdelen die je vervangt om de slijtage te bewaken.",
+      "type": "Type",
+      "typePlaceholder": "Selecteer een type",
+      "typeRequired": "Een type is verplicht",
+      "brand": "Merk",
+      "brandRequired": "Merk is verplicht",
+      "brandTooLong": "Merk mag maximaal 250 tekens zijn",
+      "model": "Model",
+      "modelRequired": "Model is verplicht",
+      "modelTooLong": "Model mag maximaal 250 tekens zijn",
+      "purchaseDate": "Gekocht op",
+      "purchaseDateRequired": "Een aankoopdatum is verplicht",
+      "retiredDate": "Buiten gebruik gesteld op",
+      "expectedDistance": "Verwachte afstand",
+      "expectedTime": "Verwachte tijd",
+      "purchaseValue": "Aankoopwaarde",
+      "active": "Actief",
+      "retiredBeforePurchase": "De uitdienstdatum moet na de aankoopdatum liggen.",
+      "create": "Onderdeel toevoegen",
+      "save": "Wijzigingen opslaan",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "createSuccess": "Onderdeel toegevoegd",
+      "updateSuccess": "Onderdeel bijgewerkt",
+      "saveError": "Onderdeel kon niet worden opgeslagen. Probeer het opnieuw."
+    },
+    "delete": {
+      "title": "Onderdeel verwijderen",
+      "body": "Weet je zeker dat je \"{name}\" wilt verwijderen? Dit kan niet ongedaan worden gemaakt.",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleren",
+      "close": "Sluiten",
+      "success": "Onderdeel verwijderd",
+      "error": "Onderdeel kon niet worden verwijderd. Probeer het opnieuw."
+    },
+    "error": {
+      "title": "Onderdelen konden niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van de onderdelen van deze uitrusting."
+    }
+  },
+  "activities": {
+    "title": "Activiteiten",
+    "empty": "Nog geen activiteiten geregistreerd met deze uitrusting.",
+    "error": {
+      "title": "Activiteiten konden niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van de activiteiten van deze uitrusting."
+    }
+  }
+}

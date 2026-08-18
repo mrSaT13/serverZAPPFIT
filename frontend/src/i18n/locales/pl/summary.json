@@ -1,0 +1,49 @@
+{
+  "title": "Podsumowanie",
+  "subtitle": "Przeglądaj swoje sumy i trendy treningowe w czasie.",
+  "viewType": {
+    "label": "Okres podsumowania",
+    "week": "Tydzień",
+    "month": "Miesiąc",
+    "year": "Rok",
+    "lifetime": "Cały czas"
+  },
+  "filters": {
+    "type": "Typ aktywności",
+    "allTypes": "Wszystkie typy"
+  },
+  "period": {
+    "previous": "Poprzedni okres",
+    "next": "Następny okres",
+    "picker": "Wybierz okres",
+    "allTime": "Cały okres"
+  },
+  "metrics": {
+    "distance": "Dystans",
+    "duration": "Czas trwania",
+    "elevation": "Przewyższenie",
+    "calories": "Kalorie",
+    "activities": "Aktywności"
+  },
+  "breakdown": {
+    "title": "Rozbicie",
+    "period": "Okres",
+    "weekNumber": "Tydzień {number}"
+  },
+  "typeBreakdown": {
+    "title": "Według typu aktywności",
+    "type": "Typ"
+  },
+  "activities": {
+    "title": "Aktywności w tym okresie"
+  },
+  "empty": {
+    "title": "Brak aktywności w tym okresie",
+    "description": "Żadne aktywności nie pasują do wybranego okresu i typu."
+  },
+  "error": {
+    "title": "Nie udało się wczytać podsumowania",
+    "description": "Coś poszło nie tak podczas wczytywania statystyk. Sprawdź połączenie i spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  }
+}

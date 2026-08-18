@@ -1,0 +1,22 @@
+{
+  "home": "Strona główna",
+  "search": "Szukaj",
+  "activities": "Aktywności",
+  "activitiesList": "Lista",
+  "summary": "Podsumowanie",
+  "gear": "Sprzęt",
+  "health": "Zdrowie",
+  "alerts": "Powiadomienia",
+  "settings": "Ustawienia",
+  "profile": "Profil",
+  "login": "Zaloguj się",
+  "logout": "Wyloguj się",
+  "userMenu": "Menu użytkownika",
+  "menu": "Menu",
+  "primary": "Nawigacja główna",
+  "account": "Konto",
+  "preferences": "Preferencje",
+  "updateAvailable": "Dostępna aktualizacja",
+  "updateAvailableTitle": "Dostępna jest wersja {version}",
+  "updateViewRelease": "Zobacz informacje o wydaniu"
+}

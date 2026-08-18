@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Provjera vaše e-pošte",
+  "verifyingBody": "Pričekajte dok potvrdimo vašu adresu.",
+  "successTitle": "E-pošta potvrđena",
+  "successBody": "Vaša adresa e-pošte je potvrđena.",
+  "adminApprovalBody": "Vaš račun sada čeka odobrenje administratora.",
+  "continueButton": "Nastavi na prijavu",
+  "invalidTitle": "Potvrda nije uspjela",
+  "missingTokenBody": "Ovom linku za potvrdu nedostaje token.",
+  "errorInvalidToken": "Ovaj link za potvrdu nije valjan ili je istekao.",
+  "errorNotFound": "Nismo mogli pronaći račun za ovaj link.",
+  "errorGeneral": "Nismo mogli potvrditi vašu e-poštu. Pokušajte ponovno.",
+  "retry": "Pokušaj ponovno",
+  "backToLogin": "Natrag na prijavu"
+}

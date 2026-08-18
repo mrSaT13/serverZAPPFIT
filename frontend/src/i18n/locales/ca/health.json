@@ -1,0 +1,648 @@
+{
+  "title": "Salut",
+  "subtitle": "Veu totes les teves dades de salut en un sol lloc",
+  "nav": {
+    "label": "Seccions de salut",
+    "soon": "Aviat",
+    "dashboard": "Tauler",
+    "sleep": "Son",
+    "rhr": "FC en repòs",
+    "steps": "Passos",
+    "weight": "Pes",
+    "fasting": "Dejuni",
+    "water": "Ingesta d'aigua",
+    "poop": "Moviments intestinals"
+  },
+  "dashboard": {
+    "title": "Tauler",
+    "subtitle": "El teu benestar diari d'un cop d'ull",
+    "sleep": "Son",
+    "restingHeartRate": "FC en repòs",
+    "avgSkinTemperatureDeviation": "Desv. temp. pell",
+    "weight": "Pes",
+    "bmi": "BMI",
+    "steps": "Passos",
+    "fasting": "Dejuni",
+    "water": "Ingesta d'aigua",
+    "poop": "Moviments intestinals",
+    "noSleepTarget": "Sense objectiu de son",
+    "noWeightTarget": "Sense objectiu de pes",
+    "noStepsTarget": "Sense objectiu de passos",
+    "noFastingTarget": "Sense objectiu de dejuni",
+    "noWaterTarget": "Sense objectiu d'aigua",
+    "noPoopTarget": "Sense objectiu de moviments intestinals",
+    "stepsTargetLabel": "passos",
+    "poopTargetLabel": "/ dia",
+    "noWeightData": "Sense dades de pes",
+    "bmiUnderweight": "Baix pes",
+    "bmiNormalWeight": "Pes normal",
+    "bmiOverweight": "Sobrepès",
+    "bmiObesityClass1": "Obesitat (Classe 1)",
+    "bmiObesityClass2": "Obesitat (Classe 2)",
+    "bmiObesityClass3": "Obesitat extrema (Classe 3)",
+    "hrvBalanced": "Equilibrat",
+    "hrvUnbalanced": "Desequilibrat",
+    "hrvLow": "Baix",
+    "hrvPoor": "Deficient",
+    "labelNoData": "Sense dades",
+    "errorTitle": "No s'han pogut carregar les teves dades de salut",
+    "errorDescription": "S'ha produït un error en carregar les teves estadístiques de salut diàries. Torna-ho a intentar.",
+    "retry": "Torna-ho a intentar"
+  },
+  "weight": {
+    "title": "Pes",
+    "subtitle": "Fes un seguiment del teu pes i composició corporal al llarg del temps",
+    "logButton": "Registra el pes",
+    "targetButton": "Estableix objectiu",
+    "sourceGarmin": "De Garmin Connect",
+    "toggleDetails": "Mostra/amaga els detalls de composició corporal",
+    "chartTitle": "Tendència del pes",
+    "chartWeightSeries": "Pes",
+    "chartTargetSeries": "Objectiu",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita l'entrada",
+      "delete": "Elimina l'entrada"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Greix corporal",
+      "bodyWater": "Aigua corporal",
+      "boneMass": "Massa òssia",
+      "muscleMass": "Massa muscular"
+    },
+    "form": {
+      "addTitle": "Registra el pes",
+      "editTitle": "Edita l'entrada de pes",
+      "description": "Registra el teu pes i, opcionalment, la teva composició corporal.",
+      "date": "Data",
+      "dateRequired": "Tria una data.",
+      "weight": "Pes",
+      "weightRequired": "Introdueix el teu pes.",
+      "weightInvalid": "Introdueix un pes superior a zero.",
+      "bodyComposition": "Composició corporal (opcional)",
+      "bmi": "BMI",
+      "bodyFat": "Greix corporal (%)",
+      "bodyWater": "Aigua corporal (%)",
+      "boneMass": "Massa òssia",
+      "muscleMass": "Massa muscular",
+      "create": "Registra",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Pes registrat.",
+      "updateSuccess": "Entrada de pes actualitzada.",
+      "saveError": "No s'ha pogut desar l'entrada de pes. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu de pes",
+      "description": "Tria un pes objectiu, o buida el camp per eliminar-lo.",
+      "weight": "Pes objectiu",
+      "hint": "Deixa buit per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu de pes actualitzat.",
+      "saveError": "No s'ha pogut actualitzar l'objectiu de pes. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha entrades de pes",
+      "description": "Registra el teu pes per començar a fer el seguiment del teu progrés al llarg del temps."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial de pes",
+      "description": "S'ha produït un error en carregar les teves entrades de pes. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina l'entrada de pes",
+      "body": "Aquesta entrada de pes s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Entrada de pes eliminada.",
+      "error": "No s'ha pogut eliminar l'entrada de pes. Torna-ho a intentar."
+    }
+  },
+  "steps": {
+    "title": "Passos",
+    "subtitle": "Fes un seguiment del teu recompte diari de passos al llarg del temps",
+    "logButton": "Registra els passos",
+    "targetButton": "Estableix objectiu",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendència de passos",
+    "chartStepsSeries": "Passos",
+    "chartTargetSeries": "Objectiu",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita l'entrada",
+      "delete": "Elimina l'entrada"
+    },
+    "form": {
+      "addTitle": "Registra els passos",
+      "editTitle": "Edita l'entrada de passos",
+      "description": "Registra el teu recompte de passos del dia.",
+      "date": "Data",
+      "dateRequired": "Tria una data.",
+      "steps": "Passos",
+      "stepsRequired": "Introdueix el teu recompte de passos.",
+      "stepsInvalid": "Introdueix un recompte de passos superior a zero.",
+      "create": "Registra",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Passos registrats.",
+      "updateSuccess": "Entrada de passos actualitzada.",
+      "saveError": "No s'ha pogut desar l'entrada de passos. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu de passos",
+      "description": "Tria un objectiu diari de passos, o buida el camp per eliminar-lo.",
+      "steps": "Passos diaris objectiu",
+      "hint": "Deixa buit per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu de passos actualitzat.",
+      "saveError": "No s'ha pogut actualitzar l'objectiu de passos. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha entrades de passos",
+      "description": "Registra els teus passos per començar a fer el seguiment de la teva activitat al llarg del temps."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial de passos",
+      "description": "S'ha produït un error en carregar les teves entrades de passos. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina l'entrada de passos",
+      "body": "Aquesta entrada de passos s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Entrada de passos eliminada.",
+      "error": "No s'ha pogut eliminar l'entrada de passos. Torna-ho a intentar."
+    }
+  },
+  "rhr": {
+    "title": "Freqüència cardíaca en repòs",
+    "subtitle": "Fes un seguiment de la teva freqüència cardíaca en repòs al llarg del temps",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendència de la FC en repòs",
+    "chartSeries": "FC en repòs",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "empty": {
+      "title": "Encara no hi ha dades de FC en repòs",
+      "description": "La FC en repòs es registra juntament amb el son. Sincronitza un dispositiu que la mesuri per veure la teva tendència aquí."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial de FC en repòs",
+      "description": "S'ha produït un error en carregar les teves dades de FC en repòs. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    }
+  },
+  "sleep": {
+    "title": "Son",
+    "subtitle": "Fes un seguiment de la durada i qualitat del teu son al llarg del temps",
+    "logButton": "Registra el son",
+    "targetButton": "Estableix objectiu",
+    "sourceGarmin": "De Garmin Connect",
+    "toggleDetails": "Mostra/amaga els detalls del son",
+    "chartTitle": "Tendència del son",
+    "chartSleepSeries": "Son",
+    "chartTargetSeries": "Objectiu",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita l'entrada",
+      "delete": "Elimina l'entrada"
+    },
+    "score": "Puntuació",
+    "hrvBalanced": "Equilibrat",
+    "hrvUnbalanced": "Desequilibrat",
+    "hrvLow": "Baix",
+    "hrvPoor": "Deficient",
+    "scoreExcellent": "Excel·lent",
+    "scoreGood": "Bo",
+    "scoreFair": "Regular",
+    "scorePoor": "Deficient",
+    "detail": {
+      "tabsLabel": "Seccions de detall del son",
+      "tabScore": "Puntuació del son",
+      "tabDetails": "Detalls del son",
+      "deep": "Profund",
+      "light": "Lleuger",
+      "rem": "REM",
+      "awake": "Despertat",
+      "score": "Puntuació del son",
+      "quality": "Qualitat",
+      "duration": "Durada",
+      "restingHeartRate": "FC en repòs",
+      "avgHeartRate": "FC mitjana",
+      "minHeartRate": "FC mínima",
+      "maxHeartRate": "FC màxima",
+      "skinTempDeviation": "Desv. temp. pell",
+      "hrv": "Estat HRV",
+      "spo2": "SpO₂ mitjana",
+      "lowestSpo2": "SpO₂ mínima",
+      "highestSpo2": "SpO₂ màxima",
+      "avgRespiration": "Respiració mitjana",
+      "lowestRespiration": "Respiració mínima",
+      "highestRespiration": "Respiració màxima",
+      "avgSleepStress": "Estrès de son mitjà",
+      "awakeCount": "Despertes",
+      "summary": "Resum",
+      "breakdown": "Desglossament",
+      "overview": "Visió general",
+      "heartRate": "Freqüència cardíaca",
+      "bloodOxygen": "Oxigen en sang",
+      "respiration": "Respiració",
+      "avg": "Mitj.",
+      "min": "Mín.",
+      "max": "Màx.",
+      "noData": "Sense dades registrades."
+    },
+    "hypnogram": {
+      "title": "Fases del son",
+      "deep": "Profund",
+      "light": "Lleuger",
+      "rem": "REM",
+      "awake": "Despertat",
+      "noData": "Sense cronologia de fases disponible."
+    },
+    "form": {
+      "addTitle": "Registra el son",
+      "editTitle": "Edita l'entrada de son",
+      "description": "Registra la durada del teu son i, opcionalment, el desglossament de fases i les mètriques.",
+      "date": "Data",
+      "dateRequired": "Tria una data.",
+      "totalSleep": "Son total",
+      "totalSleepRequired": "Introdueix quant temps has dormit.",
+      "hours": "Hores",
+      "minutes": "Minuts",
+      "stageBreakdown": "Desglossament de fases (opcional)",
+      "deep": "Son profund",
+      "light": "Son lleuger",
+      "rem": "Son REM",
+      "awake": "Despertat",
+      "metrics": "Mètriques (opcional)",
+      "sleepScore": "Puntuació del son (0–100)",
+      "restingHeartRate": "FC en repòs (bpm)",
+      "skinTempDeviation": "Desviació temp. pell (°C)",
+      "spo2": "SpO₂ mitjana (%)",
+      "sleepTimes": "Horaris de son (opcional)",
+      "startTime": "Inici del son",
+      "endTime": "Fi del son",
+      "endBeforeStart": "La fi del son ha de ser posterior a l'hora d'inici.",
+      "awakeCount": "Despertes",
+      "heartRate": "Freqüència cardíaca (opcional)",
+      "avgHeartRate": "FC mitjana (bpm)",
+      "minHeartRate": "FC mínima (bpm)",
+      "maxHeartRate": "FC màxima (bpm)",
+      "bloodOxygen": "Oxigen en sang (opcional)",
+      "lowestSpo2": "SpO₂ mínima (%)",
+      "highestSpo2": "SpO₂ màxima (%)",
+      "avgSleepStress": "Estrès de son mitjà (0–100)",
+      "sleepStages": "Fases del son (opcional)",
+      "noStages": "Encara no s'han afegit fases.",
+      "addStage": "Afegeix fase",
+      "removeStage": "Elimina la fase",
+      "stageLabel": "Fase {index}",
+      "stageType": "Fase",
+      "stageDeep": "Profund",
+      "stageLight": "Lleuger",
+      "stageRem": "REM",
+      "stageAwake": "Despertat",
+      "stageStart": "Inici",
+      "stageEnd": "Fi",
+      "stageDuration": "Durada",
+      "create": "Registra",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Son registrat.",
+      "updateSuccess": "Entrada de son actualitzada.",
+      "saveError": "No s'ha pogut desar l'entrada de son. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu de son",
+      "description": "Tria un objectiu de son nocturn, o buida els camps per eliminar-lo.",
+      "hours": "Hores",
+      "minutes": "Minuts",
+      "hint": "Deixa buit per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu de son actualitzat.",
+      "saveError": "No s'ha pogut actualitzar l'objectiu de son. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha entrades de son",
+      "description": "Registra una nit de son per començar a fer el seguiment del teu descans al llarg del temps."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial de son",
+      "description": "S'ha produït un error en carregar les teves entrades de son. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina l'entrada de son",
+      "body": "Aquesta entrada de son s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Entrada de son eliminada.",
+      "error": "No s'ha pogut eliminar l'entrada de son. Torna-ho a intentar."
+    }
+  },
+  "water": {
+    "title": "Ingesta d'aigua",
+    "subtitle": "Fes un seguiment de la teva ingesta diària d'aigua al llarg del temps",
+    "logButton": "Registra l'aigua",
+    "targetButton": "Estableix objectiu",
+    "sourceGarmin": "De Garmin Connect",
+    "chartTitle": "Tendència de la ingesta d'aigua",
+    "chartWaterSeries": "Aigua",
+    "chartTargetSeries": "Objectiu",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita l'entrada",
+      "delete": "Elimina l'entrada"
+    },
+    "form": {
+      "addTitle": "Registra l'aigua",
+      "editTitle": "Edita l'entrada d'aigua",
+      "description": "Registra la teva ingesta d'aigua del dia.",
+      "date": "Data",
+      "dateRequired": "Tria una data.",
+      "amount": "Quantitat",
+      "amountRequired": "Introdueix una quantitat.",
+      "amountInvalid": "Introdueix una quantitat superior a zero.",
+      "create": "Registra",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Aigua registrada.",
+      "updateSuccess": "Entrada d'aigua actualitzada.",
+      "saveError": "No s'ha pogut desar l'entrada d'aigua. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu d'aigua",
+      "description": "Tria un objectiu diari d'aigua, o buida el camp per eliminar-lo.",
+      "amount": "Objectiu diari",
+      "hint": "Deixa buit per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu d'aigua actualitzat.",
+      "saveError": "No s'ha pogut actualitzar l'objectiu d'aigua. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha entrades d'aigua",
+      "description": "Registra la teva ingesta d'aigua per començar a fer el seguiment de la teva hidratació al llarg del temps."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial d'aigua",
+      "description": "S'ha produït un error en carregar les teves entrades d'aigua. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina l'entrada d'aigua",
+      "body": "Aquesta entrada d'aigua s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Entrada d'aigua eliminada.",
+      "error": "No s'ha pogut eliminar l'entrada d'aigua. Torna-ho a intentar."
+    }
+  },
+  "poop": {
+    "title": "Moviments intestinals",
+    "subtitle": "Fes un seguiment dels teus moviments intestinals al llarg del temps",
+    "logButton": "Registra una entrada",
+    "targetButton": "Estableix objectiu",
+    "chartTitle": "Freqüència diària",
+    "chartCountSeries": "Moviments intestinals",
+    "chartTargetSeries": "Objectiu",
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita l'entrada",
+      "delete": "Elimina l'entrada"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Moviment intestinal"
+    },
+    "form": {
+      "addTitle": "Registra un moviment intestinal",
+      "editTitle": "Edita el moviment intestinal",
+      "description": "Registra l'hora i els detalls del teu moviment intestinal.",
+      "dateTime": "Data i hora",
+      "dateTimeRequired": "Tria una data i hora.",
+      "bristolType": "Tipus d'escala de Bristol",
+      "color": "Color",
+      "notes": "Notes",
+      "none": "Cap",
+      "colors": {
+        "brown": "Marró",
+        "dark_brown": "Marró fosc",
+        "light_brown": "Marró clar",
+        "yellow": "Groc",
+        "green": "Verd",
+        "black": "Negre",
+        "red": "Vermell",
+        "white": "Blanc"
+      },
+      "create": "Registra",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Moviment intestinal registrat.",
+      "updateSuccess": "Moviment intestinal actualitzat.",
+      "saveError": "No s'ha pogut desar la teva entrada. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu de moviments intestinals",
+      "description": "Tria un objectiu diari de moviments intestinals, o buida el camp per eliminar-lo.",
+      "count": "Objectiu per dia",
+      "hint": "Deixa buit per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu de moviments intestinals actualitzat.",
+      "saveError": "No s'ha pogut actualitzar el teu objectiu. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha entrades",
+      "description": "Registra un moviment intestinal per començar a fer el seguiment al llarg del temps."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial",
+      "description": "S'ha produït un error en carregar les teves entrades. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina l'entrada",
+      "body": "Aquesta entrada s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Entrada eliminada.",
+      "error": "No s'ha pogut eliminar l'entrada. Torna-ho a intentar."
+    }
+  },
+  "fasting": {
+    "title": "Dejuni",
+    "subtitle": "Inicia un dejuni, segueix el teu progrés i revisa el teu historial",
+    "startButton": "Inicia el dejuni",
+    "targetButton": "Estableix objectiu",
+    "sourceGarmin": "De Garmin Connect",
+    "active": {
+      "title": "Dejuni en curs",
+      "started": "Iniciat",
+      "target": "Objectiu",
+      "complete": "Completa",
+      "break": "Trenca el dejuni",
+      "cancel": "Cancel·la",
+      "completeHint": "Pots completar el dejuni un cop arribis al teu objectiu."
+    },
+    "stats": {
+      "totalFasts": "Total de dejunis",
+      "currentStreak": "Ratxa actual",
+      "longestStreak": "Ratxa més llarga",
+      "avgDuration": "Durada mitjana",
+      "totalTime": "Temps total en dejuni",
+      "completionRate": "Taxa de finalització",
+      "days": "dies"
+    },
+    "types": {
+      "16:8": "16:8 (16h dejuni, 8h menjar)",
+      "18:6": "18:6 (18h dejuni, 6h menjar)",
+      "20:4": "20:4 (20h dejuni, 4h menjar)",
+      "OMAD": "OMAD (un àpat al dia)",
+      "24h": "Dejuni de 24 hores",
+      "36h": "Dejuni de 36 hores",
+      "48h": "Dejuni de 48 hores",
+      "72h": "Dejuni de 72 hores",
+      "custom": "Personalitzat"
+    },
+    "status": {
+      "in_progress": "En curs",
+      "completed": "Completat",
+      "broken": "Trencat",
+      "cancelled": "Cancel·lat"
+    },
+    "interval": {
+      "label": "Interval de temps",
+      "last_7_days": "Últims 7 dies",
+      "last_30_days": "Últims 30 dies",
+      "last_90_days": "Últims 90 dies",
+      "last_year": "Últim any",
+      "all_time": "Sempre"
+    },
+    "actions": {
+      "edit": "Edita el dejuni",
+      "delete": "Elimina el dejuni"
+    },
+    "list": {
+      "notesLabel": "Notes"
+    },
+    "form": {
+      "addTitle": "Inicia el dejuni",
+      "editTitle": "Edita la sessió de dejuni",
+      "description": "Tria un protocol de dejuni i quan ha començat.",
+      "type": "Protocol de dejuni",
+      "customDuration": "Durada personalitzada",
+      "customDurationHint": "Durada del dejuni, en hores (1–72).",
+      "hours": "hores",
+      "startTime": "Hora d'inici",
+      "startTimeRequired": "Tria una hora d'inici.",
+      "endTime": "Hora de fi",
+      "status": "Estat",
+      "notes": "Notes",
+      "create": "Inicia",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "createSuccess": "Dejuni iniciat.",
+      "updateSuccess": "Sessió de dejuni actualitzada.",
+      "saveError": "No s'ha pogut desar la teva sessió de dejuni. Torna-ho a intentar."
+    },
+    "target": {
+      "title": "Estableix l'objectiu de dejuni",
+      "description": "Tria una durada objectiu de dejuni, o buida tots dos camps per eliminar-lo.",
+      "hours": "Hores",
+      "minutes": "Minuts",
+      "hint": "Deixa tots dos buits per eliminar el teu objectiu.",
+      "save": "Desa",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "saveSuccess": "Objectiu de dejuni actualitzat.",
+      "saveError": "No s'ha pogut actualitzar el teu objectiu de dejuni. Torna-ho a intentar."
+    },
+    "complete": {
+      "success": "Dejuni finalitzat.",
+      "error": "No s'ha pogut finalitzar el teu dejuni. Torna-ho a intentar."
+    },
+    "empty": {
+      "title": "Encara no hi ha dejunis",
+      "description": "Inicia un dejuni per començar a fer el seguiment del teu historial de dejunis."
+    },
+    "error": {
+      "title": "No s'ha pogut carregar el teu historial de dejunis",
+      "description": "S'ha produït un error en carregar les teves sessions de dejuni. Torna-ho a intentar.",
+      "retry": "Torna-ho a intentar"
+    },
+    "delete": {
+      "title": "Elimina la sessió de dejuni",
+      "body": "Aquesta sessió de dejuni s'eliminarà permanentment. Aquesta acció no es pot desfer.",
+      "confirm": "Elimina",
+      "cancel": "Cancel·la",
+      "close": "Tanca",
+      "success": "Sessió de dejuni eliminada.",
+      "error": "No s'ha pogut eliminar la sessió de dejuni. Torna-ho a intentar."
+    }
+  }
+}

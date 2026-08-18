@@ -1,0 +1,73 @@
+{
+  "addActivity": "Aggiungi attività",
+  "upload": {
+    "uploading": "Caricamento…",
+    "success": "Attività caricata con successo",
+    "error": "Impossibile caricare il file dell'attività"
+  },
+  "refresh": {
+    "label": "Aggiorna",
+    "refreshing": "Aggiornamento…",
+    "success": "Aggiornamento avviato",
+    "error": "Impossibile aggiornare le attività"
+  },
+  "feed": {
+    "scopeLabel": "Ambito del feed",
+    "myActivities": "Le mie attività",
+    "following": "Seguiti",
+    "loadMore": "Carica altro",
+    "loading": "Caricamento…",
+    "error": {
+      "title": "Impossibile caricare le attività",
+      "description": "Si è verificato un errore durante il caricamento del feed.",
+      "retry": "Riprova"
+    },
+    "empty": {
+      "mine": {
+        "title": "Ancora nessuna attività",
+        "description": "Aggiungi un'attività o connetti un'integrazione per iniziare."
+      },
+      "following": {
+        "title": "Ancora nulla qui",
+        "description": "Le attività delle persone che segui appariranno qui."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistiche",
+    "metricLabel": "Metrica statistiche",
+    "thisWeek": "Questa settimana",
+    "thisMonth": "Questo mese",
+    "empty": "Nessuna attività in questo periodo",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distanza",
+      "time": "Tempo",
+      "calories": "Calorie"
+    }
+  },
+  "sports": {
+    "run": "Corsa",
+    "bike": "Ciclismo",
+    "swim": "Nuoto",
+    "walk": "Camminata",
+    "hike": "Escursionismo",
+    "rowing": "Canottaggio",
+    "snow_ski": "Sci",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddle",
+    "surfing": "Surf",
+    "kayaking": "Kayak",
+    "sailing": "Vela",
+    "snowshoeing": "Ciaspolata",
+    "inline_skating": "Pattinaggio in linea"
+  },
+  "goals": {
+    "title": "Obiettivi",
+    "empty": {
+      "title": "Nessun obiettivo impostato",
+      "description": "Imposta degli obiettivi nelle impostazioni per monitorare i tuoi progressi qui."
+    }
+  }
+}

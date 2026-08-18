@@ -1,0 +1,73 @@
+{
+  "addActivity": "Añadir actividad",
+  "upload": {
+    "uploading": "Subiendo\u2026",
+    "success": "Actividad subida correctamente",
+    "error": "No se pudo subir el archivo de actividad"
+  },
+  "refresh": {
+    "label": "Actualizar",
+    "refreshing": "Actualizando\u2026",
+    "success": "Actualización iniciada",
+    "error": "No se pudieron actualizar las actividades"
+  },
+  "feed": {
+    "scopeLabel": "Ámbito del feed",
+    "myActivities": "Mis actividades",
+    "following": "Siguiendo",
+    "loadMore": "Cargar más",
+    "loading": "Cargando\u2026",
+    "error": {
+      "title": "No se pudieron cargar las actividades",
+      "description": "Algo salió mal al cargar el feed.",
+      "retry": "Intentar de nuevo"
+    },
+    "empty": {
+      "mine": {
+        "title": "Todavía no hay actividades",
+        "description": "Añade una actividad o conecta una integración para empezar."
+      },
+      "following": {
+        "title": "Todavía no hay nada aquí",
+        "description": "Las actividades de las personas que sigues aparecerán aquí."
+      }
+    }
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "metricLabel": "Métrica de estadística",
+    "thisWeek": "Esta semana",
+    "thisMonth": "Este mes",
+    "empty": "Sin actividad en este período",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distancia",
+      "time": "Tiempo",
+      "calories": "Calorías"
+    }
+  },
+  "sports": {
+    "run": "Carrera",
+    "bike": "Ciclismo",
+    "swim": "Natación",
+    "walk": "Caminata",
+    "hike": "Senderismo",
+    "rowing": "Remo",
+    "snow_ski": "Esquí",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Paddle surf",
+    "surfing": "Surf",
+    "kayaking": "Kayak",
+    "sailing": "Vela",
+    "snowshoeing": "Raquetas de nieve",
+    "inline_skating": "Patinaje en línea"
+  },
+  "goals": {
+    "title": "Objetivos",
+    "empty": {
+      "title": "Sin objetivos establecidos",
+      "description": "Establece objetivos en los ajustes para hacer seguimiento de tu progreso aquí."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Vérification de votre e-mail",
+  "verifyingBody": "Veuillez patienter pendant que nous confirmons votre adresse.",
+  "successTitle": "E-mail vérifié",
+  "successBody": "Votre adresse e-mail a été confirmée.",
+  "adminApprovalBody": "Votre compte est maintenant en attente d'approbation par un administrateur.",
+  "continueButton": "Continuer vers la connexion",
+  "invalidTitle": "Échec de la vérification",
+  "missingTokenBody": "Ce lien de vérification ne contient pas de jeton.",
+  "errorInvalidToken": "Ce lien de vérification est invalide ou expiré.",
+  "errorNotFound": "Impossible de trouver un compte pour ce lien.",
+  "errorGeneral": "Impossible de vérifier votre e-mail. Veuillez réessayer.",
+  "retry": "Réessayer",
+  "backToLogin": "Retour à la connexion"
+}

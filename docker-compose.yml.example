@@ -1,0 +1,53 @@
+services:
+  endurain:
+    container_name: endurain-app
+    image: codeberg.org/endurain-project/endurain:latest
+    env_file:
+      - .env
+    volumes:
+      # The container runs as a non-root user (default UID 1000).
+      # Ensure the bind mount directories exist on the host (see getting-started docs).
+      # For Linux, run this once before first start:
+      #   sudo chown -R 1000:1000 /var/opt/endurain/backend
+      # If you set LOCAL_PATH in .env, replace /var/opt/endurain with that path.
+      # To run with a custom UID, add `user: "<UID>:<GID>"` and chown to match.
+    #  - ${LOCAL_PATH:-/var/opt/endurain}/backend/app:/app/backend:Z # Configure volume if you want to edit the code locally by cloning the repo
+      - ${LOCAL_PATH:-/var/opt/endurain}/backend/data:/app/backend/data:Z # necessary for activity files, user images and server images persistence on container image updates
+      - ${LOCAL_PATH:-/var/opt/endurain}/backend/logs:/app/backend/logs:Z # log files for the backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+   # postgres logic
+  postgres:
+    image: docker.io/postgres:18@sha256:8ff36f3c66371cba71d20ceedccfc3de9669a68737607888c4ef0af93abe8e39
+    container_name: endurain-postgres
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U endurain"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ${LOCAL_PATH:-/var/opt/endurain}/postgres:/var/lib/postgresql/data:Z
+    restart: unless-stopped
+
+  # redis for rate-limiting and auth security storage
+  redis:
+    image: redis:8-alpine@sha256:09160599abd229764c0fb44cb6be640294e1d360a54b19985ab4843dcf2d90f1
+    container_name: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ${LOCAL_PATH:-/var/opt/endurain}/redis:/data:Z
+    restart: unless-stopped

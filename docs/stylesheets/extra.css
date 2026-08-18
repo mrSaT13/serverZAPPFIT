@@ -1,0 +1,177 @@
+/*
+ * Endurain brand tokens for the docs site (mkdocs-material).
+ * Mirrors docs/developer-guide/brand-and-ux-guidelines.md — keep these two
+ * files in sync. Values are copied from frontend/src/assets/main.css.
+ */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1d9e75;
+  --md-primary-fg-color--light: #5dcaa5;
+  --md-primary-fg-color--dark: #0f6e56;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #0f6e56;
+  --md-accent-fg-color--transparent: rgba(29, 158, 117, 0.1);
+  --md-accent-bg-color: #ffffff;
+  --md-default-bg-color: #f1efe8;
+  --md-default-fg-color: #2c2c2a;
+  --md-default-fg-color--light: #5f5e5a;
+  --md-default-fg-color--lighter: rgba(44, 44, 42, 0.32);
+  --md-default-fg-color--lightest: rgba(44, 44, 42, 0.12);
+  --md-typeset-a-color: #0f6e56;
+  --md-code-bg-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] {
+  /* Dark navbar matches the dark-mode logo colour so the logo blends into the
+     header, the same way the light logo blends into the light header. Header
+     text/icons flip to a dark ink for contrast on the light-teal bar. */
+  --md-primary-fg-color: #5dcaa5;
+  --md-primary-fg-color--light: #5dcaa5;
+  --md-primary-fg-color--dark: #04342c;
+  --md-accent-fg-color: #5dcaa5;
+  --md-accent-fg-color--transparent: rgba(93, 202, 165, 0.12);
+  --md-accent-bg-color: #04342c;
+  --md-default-bg-color: #18181b;
+  --md-default-fg-color: #f4f4f5;
+  --md-default-fg-color--light: #a1a1aa;
+  --md-typeset-a-color: #5dcaa5;
+  --md-code-bg-color: #27272a;
+}
+
+/*
+ * Theme-aware logo. The light-mode logo ships via `theme.logo` in mkdocs.yml
+ * and renders as the <img> src; under the slate (dark) scheme swap it for the
+ * dark-mode logo. The `.md-logo` selector covers the header and mobile drawer
+ * logo injected by the theme; `.index-logo` covers the hero logo embedded
+ * directly in docs/index.md (a separate <img>, not themed automatically).
+ * Relative url() resolves against this file's location, so it stays correct
+ * regardless of the deployment sub-path.
+ */
+[data-md-color-scheme="slate"] .md-logo img,
+[data-md-color-scheme="slate"] img.index-logo {
+  content: url("../assets/brand_logo_dark_theme.png");
+}
+
+/* Flat and calm: hairline borders instead of drop shadows on cards */
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset table:not([class]) {
+  box-shadow: none;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+/* Brand type scale uses only 400/500 weight, never 600/700 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-weight: 500;
+}
+
+/* Newsletter / contact form — styled to match Material admonition pattern */
+.contact-form {
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  background-color: var(--md-code-bg-color);
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 0.8rem 1.2rem 1rem;
+  margin: 2rem 0;
+  font-size: 0.8rem;
+}
+
+.contact-form p {
+  margin: 0 0 0.6rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.15rem;
+}
+
+.contact-form input[type="email"] {
+  display: block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.26));
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.8rem;
+  padding: 0.3rem 0 0.4rem;
+  width: 100%;
+  max-width: 22rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-form input[type="email"]:focus {
+  outline: none;
+  border-bottom-color: var(--md-primary-fg-color);
+  border-bottom-width: 0.1rem;
+}
+
+.contact-form .contact-form__legal {
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+
+/* Secret generator tools for docs pages */
+.secret-tools {
+  border-left: 0.2rem solid var(--md-primary-fg-color);
+  background-color: var(--md-code-bg-color);
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 0.9rem 1.2rem 1rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.secret-tools__intro {
+  margin: 0 0 0.8rem;
+  font-size: 0.75rem;
+}
+
+.secret-tools__item + .secret-tools__item {
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 0.05rem solid var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.12));
+}
+
+.secret-tools__item h4 {
+  margin: 0 0 0.4rem;
+}
+
+.secret-tools__controls {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+}
+
+.secret-tools__output {
+  width: 100%;
+  font-family: var(--md-code-font-family);
+  font-size: 0.7rem;
+  line-height: 1.4;
+  padding: 0.5rem;
+  border-radius: 0.1rem;
+  border: 0.05rem solid var(--md-default-fg-color--lighter, rgba(0, 0, 0, 0.12));
+  background: transparent;
+  color: var(--md-default-fg-color);
+}
+
+.secret-tools__hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+  min-height: 1rem;
+}
+
+@media screen and (min-width: 48em) {
+  .secret-tools__controls {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+}

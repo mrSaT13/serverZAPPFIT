@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Med vennlig hilsen,",
+  "common.team": "Endurain-teamet",
+  "common.system": "Endurain-systemet",
+  "common.visit": "Besøk Endurain på:",
+  "common.source_code": "Kildekode på:",
+  "common.copy_link": "Hvis knappen over ikke fungerer, kan du kopiere og lime inn følgende lenke i nettleseren din:",
+
+  "password_reset.subject": "Endurain - Tilbakestilling av passord",
+  "password_reset.heading": "Forespørsel om tilbakestilling av passord",
+  "password_reset.greeting": "Hei {name},",
+  "password_reset.intro": "Du ba om å tilbakestille passordet for Endurain-kontoen din. Klikk på knappen nedenfor for å tilbakestille passordet ditt:",
+  "password_reset.cta": "Tilbakestill passord",
+  "password_reset.security_label": "Sikkerhetsmelding:",
+  "password_reset.security_notice": "Denne lenken utløper om 1 time av sikkerhetshensyn.",
+  "password_reset.ignore": "Hvis du ikke ba om denne tilbakestillingen av passord, kan du se bort fra denne e-posten. Passordet ditt forblir uendret.",
+
+  "signup_confirmation.subject": "Endurain - Bekreft kontoen din",
+  "signup_confirmation.heading": "Bekreft kontoen din",
+  "signup_confirmation.greeting": "Hei {name},",
+  "signup_confirmation.intro": "Takk for at du registrerte deg på Endurain! Vennligst bekreft kontoen din ved å klikke på knappen nedenfor:",
+  "signup_confirmation.cta": "Bekreft konto",
+  "signup_confirmation.security_label": "Sikkerhetsmelding:",
+  "signup_confirmation.security_notice": "Denne bekreftelseslenken utløper om 24 timer.",
+  "signup_confirmation.ignore": "Hvis du ikke opprettet en Endurain-konto, kan du se bort fra denne e-posten.",
+
+  "admin_signup.subject": "Endurain - Ny brukerregistrering venter på godkjenning",
+  "admin_signup.heading": "Ny registrering krever godkjenning",
+  "admin_signup.greeting": "Hei {name},",
+  "admin_signup.intro": "En ny bruker har registrert seg og venter på godkjenning:",
+  "admin_signup.user_label": "Bruker:",
+  "admin_signup.review": "Vennligst logg inn i Endurain-administrasjonspanelet for å gjennomgå og godkjenne denne forespørselen.",
+  "admin_signup.cta": "Gå til administrasjonspanelet",
+
+  "signup_approved.subject": "Endurain - Kontoen din er godkjent",
+  "signup_approved.heading": "Kontoen din er nå aktiv",
+  "signup_approved.greeting": "Hei {name},",
+  "signup_approved.intro": "Gode nyheter! Kontoen din er godkjent og er nå aktiv.",
+  "signup_approved.username_label": "Brukernavn:",
+  "signup_approved.login_intro": "Du kan nå logge inn og begynne å bruke Endurain:",
+  "signup_approved.cta": "Logg inn på Endurain"
+}

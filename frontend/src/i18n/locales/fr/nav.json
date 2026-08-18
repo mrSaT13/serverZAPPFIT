@@ -1,0 +1,22 @@
+{
+  "home": "Accueil",
+  "search": "Recherche",
+  "activities": "Activités",
+  "activitiesList": "Liste",
+  "summary": "Résumé",
+  "gear": "Équipements",
+  "health": "Santé",
+  "alerts": "Alertes",
+  "settings": "Paramètres",
+  "profile": "Profil",
+  "login": "Connexion",
+  "logout": "Déconnexion",
+  "userMenu": "Menu utilisateur",
+  "menu": "Menu",
+  "primary": "Navigation principale",
+  "account": "Compte",
+  "preferences": "Préférences",
+  "updateAvailable": "Mise à jour disponible",
+  "updateAvailableTitle": "La version {version} est disponible",
+  "updateViewRelease": "Voir les notes de version"
+}

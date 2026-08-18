@@ -1,0 +1,152 @@
+{
+  "title": "Ekipman",
+  "subtitle": "Etkinliklerinizi takip ettiğiniz bisikletler, ayakkabılar ve donanımlar",
+  "buttonAddGear": "Ekipman ekle",
+  "searchPlaceholder": "Takma ada göre ara",
+  "clearSearch": "Aramayı temizle",
+  "showInactive": "Pasif olanları göster",
+  "inactive": "Pasif",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtreler",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bisiklet",
+    "shoes": "Ayakkabı",
+    "wetsuit": "Dalış elbisesi",
+    "racquet": "Raket",
+    "skis": "Kayak",
+    "snowboard": "Snowboard",
+    "windsurf": "Rüzgar sörfü tahtası",
+    "waterSportsBoard": "Su sporları tahtası",
+    "unknown": "Ekipman"
+  },
+  "actions": {
+    "edit": "Ekipmanı düzenle",
+    "delete": "Ekipmanı sil"
+  },
+  "form": {
+    "title": "İstatistikler",
+    "addTitle": "Ekipman ekle",
+    "editTitle": "Ekipmanı düzenle",
+    "description": "Etkinlikleriniz için kullandığınız donanımı takip edin.",
+    "nickname": "Takma ad",
+    "nicknameRequired": "Takma ad zorunludur",
+    "nicknameTooLong": "Takma ad en fazla 250 karakter olmalı",
+    "nicknameTaken": "Bu takma ada sahip bir ekipmanınız zaten var",
+    "gearType": "Tür",
+    "brand": "Marka",
+    "brandTooLong": "Marka en fazla 250 karakter olmalı",
+    "model": "Model",
+    "modelTooLong": "Model en fazla 250 karakter olmalı",
+    "active": "Aktif",
+    "createdAt": "Oluşturulma tarihi",
+    "createdAtRequired": "Bir oluşturulma tarihi zorunludur",
+    "initialDistance": "Başlangıç mesafesi",
+    "purchaseValue": "Satın alma değeri",
+    "totalCost": "Toplam maliyet",
+    "create": "Ekipman ekle",
+    "save": "Değişiklikleri kaydet",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "createSuccess": "Ekipman eklendi",
+    "updateSuccess": "Ekipman güncellendi",
+    "saveError": "Ekipman kaydedilemedi. Lütfen tekrar deneyin."
+  },
+  "delete": {
+    "title": "Ekipmanı sil",
+    "body": "\"{nickname}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+    "confirm": "Sil",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "success": "Ekipman silindi",
+    "error": "Ekipman silinemedi. Lütfen tekrar deneyin."
+  },
+  "error": {
+    "title": "Ekipman yüklenemedi",
+    "description": "Ekipmanınız yüklenirken bir şeyler ters gitti.",
+    "retry": "Tekrar dene"
+  },
+  "empty": {
+    "title": "Henüz ekipman yok",
+    "description": "Kullanımlarını takip etmeye başlamak için kullandığınız bisikletleri, ayakkabıları ve donanımları ekleyin.",
+    "searchTitle": "Aramanızla eşleşen ekipman yok",
+    "searchDescription": "Farklı bir takma ad deneyin.",
+    "activeTitle": "Aktif ekipman yok",
+    "activeDescription": "Ekipman ekleyin veya pasif ekipmanı görmek için \"Pasif olanları göster\" seçeneğini etkinleştirin."
+  },
+  "detail": {
+    "back": "Ekipmana geri dön",
+    "notFoundTitle": "Ekipman bulunamadı",
+    "notFoundDescription": "Bu ekipman silinmiş olabilir veya size ait olmayabilir.",
+    "totalDistance": "Mesafe",
+    "totalTime": "Süre",
+    "componentsCost": "Bileşenler"
+  },
+  "components": {
+    "title": "Bileşenler",
+    "add": "Bileşen ekle",
+    "empty": "Henüz bileşen yok. Aşınmasını takip etmek istediğiniz parçaları ekleyin.",
+    "unsupported": "Bu ekipman türü bileşen takibi yapmaz.",
+    "noneActive": "Tüm bileşenler pasif. Görmek için \"Pasif olanları göster\" seçeneğini açın.",
+    "inactive": "Pasif",
+    "unitHours": "h",
+    "purchasedOn": "{date} tarihinde satın alındı",
+    "wearLabel": "{name} aşınması",
+    "actions": {
+      "edit": "Bileşeni düzenle",
+      "delete": "Bileşeni sil"
+    },
+    "form": {
+      "addTitle": "Bileşen ekle",
+      "editTitle": "Bileşeni düzenle",
+      "description": "Aşınmalarını izlemek için değiştirdiğiniz parçaları takip edin.",
+      "type": "Tür",
+      "typePlaceholder": "Bir tür seçin",
+      "typeRequired": "Bir tür zorunludur",
+      "brand": "Marka",
+      "brandRequired": "Marka zorunludur",
+      "brandTooLong": "Marka en fazla 250 karakter olmalı",
+      "model": "Model",
+      "modelRequired": "Model zorunludur",
+      "modelTooLong": "Model en fazla 250 karakter olmalı",
+      "purchaseDate": "Satın alma tarihi",
+      "purchaseDateRequired": "Bir satın alma tarihi zorunludur",
+      "retiredDate": "Kullanımdan kaldırılma tarihi",
+      "expectedDistance": "Beklenen mesafe",
+      "expectedTime": "Beklenen süre",
+      "purchaseValue": "Satın alma değeri",
+      "active": "Aktif",
+      "retiredBeforePurchase": "Kullanımdan kaldırılma tarihi, satın alma tarihinden sonra olmalıdır.",
+      "create": "Bileşen ekle",
+      "save": "Değişiklikleri kaydet",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "createSuccess": "Bileşen eklendi",
+      "updateSuccess": "Bileşen güncellendi",
+      "saveError": "Bileşen kaydedilemedi. Lütfen tekrar deneyin."
+    },
+    "delete": {
+      "title": "Bileşeni sil",
+      "body": "\"{name}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal",
+      "close": "Kapat",
+      "success": "Bileşen silindi",
+      "error": "Bileşen silinemedi. Lütfen tekrar deneyin."
+    },
+    "error": {
+      "title": "Bileşenler yüklenemedi",
+      "description": "Bu ekipmanın bileşenleri yüklenirken bir şeyler ters gitti."
+    }
+  },
+  "activities": {
+    "title": "Etkinlikler",
+    "empty": "Bu ekipmanla henüz kaydedilmiş etkinlik yok.",
+    "error": {
+      "title": "Etkinlikler yüklenemedi",
+      "description": "Bu ekipmanın etkinlikleri yüklenirken bir şeyler ters gitti."
+    }
+  }
+}

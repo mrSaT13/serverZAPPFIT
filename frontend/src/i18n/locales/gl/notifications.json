@@ -1,0 +1,51 @@
+{
+  "title": "Notificacións",
+  "subtitle": "Actividade recente, solicitudes e alertas",
+  "navLabel": "Notificacións",
+  "unread": "Non lidas",
+  "markRead": "Marcar como lida",
+  "markAllRead": "Marcar todas como lidas",
+  "seeAll": "Ver todas",
+  "loadMore": "Cargar máis",
+  "loading": "Cargando…",
+  "badge": "{count} notificacións non lidas",
+  "empty": {
+    "title": "Estás ao día",
+    "description": "As actualizacións sobre as túas actividades, seguidores e integracións aparecerán aquí."
+  },
+  "error": {
+    "title": "Non se puideron cargar as notificacións",
+    "description": "Produciuse un erro ao cargar as túas notificacións.",
+    "retry": "Tentar de novo"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nova actividade",
+      "body": "Engadiuse unha nova actividade á túa conta."
+    },
+    "duplicateActivity": {
+      "title": "Posible actividade duplicada",
+      "body": "Pode que xa exista unha actividade coa mesma hora de inicio."
+    },
+    "newFollowerRequest": {
+      "title": "Nova solicitude de seguidor",
+      "body": "{name} ({'@'}{username}) quere seguirte."
+    },
+    "followerRequestAccepted": {
+      "title": "Solicitude de seguidor aceptada",
+      "body": "{name} ({'@'}{username}) aceptou a túa solicitude de seguidor."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect precisa atención",
+      "body": "A túa sesión de Garmin Connect expirou. Reconéctaa para continuar sincronizando."
+    },
+    "adminSignUpApproval": {
+      "title": "Novo rexistro pendente de aprobación",
+      "body": "{name} ({'@'}{username}) está agardando a aprobación da conta."
+    },
+    "unknown": {
+      "title": "Notificación",
+      "body": "Tes unha nova notificación."
+    }
+  }
+}

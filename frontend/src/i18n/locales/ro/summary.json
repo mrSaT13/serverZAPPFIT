@@ -1,0 +1,49 @@
+{
+  "title": "Rezumat",
+  "subtitle": "Examinează totalurile și tendințele antrenamentelor tale de-a lungul timpului.",
+  "viewType": {
+    "label": "Perioada rezumatului",
+    "week": "Săptămână",
+    "month": "Lună",
+    "year": "An",
+    "lifetime": "Tot timpul"
+  },
+  "filters": {
+    "type": "Tipul activității",
+    "allTypes": "Toate tipurile"
+  },
+  "period": {
+    "previous": "Perioada anterioară",
+    "next": "Perioada următoare",
+    "picker": "Selectează perioada",
+    "allTime": "Tot timpul"
+  },
+  "metrics": {
+    "distance": "Distanță",
+    "duration": "Durată",
+    "elevation": "Diferență de nivel",
+    "calories": "Calorii",
+    "activities": "Activități"
+  },
+  "breakdown": {
+    "title": "Defalcare",
+    "period": "Perioadă",
+    "weekNumber": "Săptămâna {number}"
+  },
+  "typeBreakdown": {
+    "title": "După tipul activității",
+    "type": "Tip"
+  },
+  "activities": {
+    "title": "Activități în această perioadă"
+  },
+  "empty": {
+    "title": "Nicio activitate în această perioadă",
+    "description": "Nicio activitate nu corespunde perioadei și tipului selectate."
+  },
+  "error": {
+    "title": "Nu am putut încărca rezumatul",
+    "description": "Ceva nu a mers bine la încărcarea statisticilor tale. Verifică-ți conexiunea și încearcă din nou.",
+    "retry": "Încearcă din nou"
+  }
+}

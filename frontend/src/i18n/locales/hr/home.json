@@ -1,0 +1,73 @@
+{
+  "addActivity": "Dodaj aktivnost",
+  "upload": {
+    "uploading": "Učitavanje…",
+    "success": "Aktivnost je uspješno učitana",
+    "error": "Nije moguće učitati datoteku aktivnosti"
+  },
+  "refresh": {
+    "label": "Osvježi",
+    "refreshing": "Osvježavanje…",
+    "success": "Osvježavanje je započeto",
+    "error": "Nije moguće osvježiti aktivnosti"
+  },
+  "feed": {
+    "scopeLabel": "Opseg sadržaja",
+    "myActivities": "Moje aktivnosti",
+    "following": "Pratim",
+    "loadMore": "Učitaj više",
+    "loading": "Učitavanje…",
+    "error": {
+      "title": "Aktivnosti se nisu mogle učitati",
+      "description": "Nešto je pošlo po zlu prilikom učitavanja sadržaja.",
+      "retry": "Pokušaj ponovno"
+    },
+    "empty": {
+      "mine": {
+        "title": "Još nema aktivnosti",
+        "description": "Dodajte aktivnost ili povežite integraciju za početak."
+      },
+      "following": {
+        "title": "Ovdje još nema ničega",
+        "description": "Aktivnosti osoba koje pratite pojavit će se ovdje."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistika",
+    "metricLabel": "Statistička metrika",
+    "thisWeek": "Ovaj tjedan",
+    "thisMonth": "Ovaj mjesec",
+    "empty": "Nema aktivnosti u ovom razdoblju",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Udaljenost",
+      "time": "Vrijeme",
+      "calories": "Kalorije"
+    }
+  },
+  "sports": {
+    "run": "Trčanje",
+    "bike": "Biciklizam",
+    "swim": "Plivanje",
+    "walk": "Hodanje",
+    "hike": "Planinarenje",
+    "rowing": "Veslanje",
+    "snow_ski": "Skijanje",
+    "snowboard": "Snowboarding",
+    "windsurf": "Jedrenje na dasci",
+    "stand_up_paddleboarding": "Veslanje na dasci stojeći",
+    "surfing": "Surfanje",
+    "kayaking": "Kajakarenje",
+    "sailing": "Jedrenje",
+    "snowshoeing": "Hodanje s krpljama",
+    "inline_skating": "Rolanje"
+  },
+  "goals": {
+    "title": "Ciljevi",
+    "empty": {
+      "title": "Nema postavljenih ciljeva",
+      "description": "Postavite ciljeve u postavkama kako biste ovdje pratili svoj napredak."
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "addActivity": "Lisa tegevus",
+  "upload": {
+    "uploading": "Üleslaadimine…",
+    "success": "Tegevus laaditi edukalt üles",
+    "error": "Tegevuse faili ei õnnestunud üles laadida"
+  },
+  "refresh": {
+    "label": "Värskenda",
+    "refreshing": "Värskendamine…",
+    "success": "Värskendamine alustatud",
+    "error": "Tegevusi ei õnnestunud värskendada"
+  },
+  "feed": {
+    "scopeLabel": "Voo ulatus",
+    "myActivities": "Minu tegevused",
+    "following": "Jälgitavad",
+    "loadMore": "Laadi veel",
+    "loading": "Laadimine…",
+    "error": {
+      "title": "Tegevusi ei õnnestunud laadida",
+      "description": "Voo laadimisel läks midagi valesti.",
+      "retry": "Proovi uuesti"
+    },
+    "empty": {
+      "mine": {
+        "title": "Veel pole ühtegi tegevust",
+        "description": "Alustamiseks lisa tegevus või ühenda mõni integratsioon."
+      },
+      "following": {
+        "title": "Siin pole veel midagi",
+        "description": "Sinu jälgitavate inimeste tegevused ilmuvad siia."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistika",
+    "metricLabel": "Statistika näitaja",
+    "thisWeek": "See nädal",
+    "thisMonth": "See kuu",
+    "empty": "Sel perioodil pole tegevust",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Vahemaa",
+      "time": "Aeg",
+      "calories": "Kalorid"
+    }
+  },
+  "sports": {
+    "run": "Jooksmine",
+    "bike": "Rattasõit",
+    "swim": "Ujumine",
+    "walk": "Kõndimine",
+    "hike": "Matkamine",
+    "rowing": "Sõudmine",
+    "snow_ski": "Suusatamine",
+    "snowboard": "Lumelauasõit",
+    "windsurf": "Purjelauasõit",
+    "stand_up_paddleboarding": "SUP-lauasõit",
+    "surfing": "Surfamine",
+    "kayaking": "Süstasõit",
+    "sailing": "Purjetamine",
+    "snowshoeing": "Lumeräätsadega kõndimine",
+    "inline_skating": "Rulluisutamine"
+  },
+  "goals": {
+    "title": "Eesmärgid",
+    "empty": {
+      "title": "Eesmärke pole seatud",
+      "description": "Sea seadetes eesmärgid, et oma edenemist siin jälgida."
+    }
+  }
+}

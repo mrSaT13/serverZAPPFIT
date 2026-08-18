@@ -1,0 +1,51 @@
+{
+  "title": "Notifications",
+  "subtitle": "Recent activity, requests and alerts",
+  "navLabel": "Notifications",
+  "unread": "Unread",
+  "markRead": "Mark as read",
+  "markAllRead": "全部标记为已读",
+  "seeAll": "查看全部",
+  "loadMore": "Load more",
+  "loading": "Loading…",
+  "badge": "{count} unread notifications",
+  "empty": {
+    "title": "You're all caught up",
+    "description": "Updates about your activities, followers and integrations will show up here."
+  },
+  "error": {
+    "title": "Couldn't load notifications",
+    "description": "Something went wrong while loading your notifications.",
+    "retry": "Try again"
+  },
+  "types": {
+    "newActivity": {
+      "title": "New activity",
+      "body": "A new activity was added to your account."
+    },
+    "duplicateActivity": {
+      "title": "Possible duplicate activity",
+      "body": "An activity with the same start time may already exist."
+    },
+    "newFollowerRequest": {
+      "title": "New follower request",
+      "body": "{name} ({'@'}{username}) wants to follow you."
+    },
+    "followerRequestAccepted": {
+      "title": "Follower request accepted",
+      "body": "{name} ({'@'}{username}) accepted your follower request."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect needs attention",
+      "body": "Your Garmin Connect session expired. Reconnect it to keep syncing."
+    },
+    "adminSignUpApproval": {
+      "title": "New sign-up needs approval",
+      "body": "{name} ({'@'}{username}) is waiting for account approval."
+    },
+    "unknown": {
+      "title": "Notification",
+      "body": "You have a new notification."
+    }
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "title": "Egészség",
+  "subtitle": "Lásd az összes egészségügyi adatodat egy helyen",
+  "nav": {
+    "label": "Egészségügyi szakaszok",
+    "soon": "Hamarosan",
+    "dashboard": "Irányítópult",
+    "sleep": "Alvás",
+    "rhr": "Nyugalmi pulzusszám",
+    "steps": "Lépések",
+    "weight": "Testsúly",
+    "fasting": "Böjt",
+    "water": "Folyadékbevitel",
+    "poop": "Székletürítés"
+  },
+  "dashboard": {
+    "title": "Irányítópult",
+    "subtitle": "A napi közérzeted egy pillantásra",
+    "sleep": "Alvás",
+    "restingHeartRate": "Nyugalmi pulzus",
+    "avgSkinTemperatureDeviation": "Bőrhőm.-eltérés",
+    "weight": "Testsúly",
+    "bmi": "BMI",
+    "steps": "Lépések",
+    "fasting": "Böjt",
+    "water": "Folyadékbevitel",
+    "poop": "Székletürítés",
+    "noSleepTarget": "Nincs alváscél",
+    "noWeightTarget": "Nincs testsúlycél",
+    "noStepsTarget": "Nincs lépéscél",
+    "noFastingTarget": "Nincs böjtcél",
+    "noWaterTarget": "Nincs folyadékcél",
+    "noPoopTarget": "Nincs székletürítési cél",
+    "stepsTargetLabel": "lépés",
+    "poopTargetLabel": "/ nap",
+    "noWeightData": "Nincs testsúlyadat",
+    "bmiUnderweight": "Alulsúlyos",
+    "bmiNormalWeight": "Normál testsúly",
+    "bmiOverweight": "Túlsúlyos",
+    "bmiObesityClass1": "Elhízás (1. osztály)",
+    "bmiObesityClass2": "Elhízás (2. osztály)",
+    "bmiObesityClass3": "Súlyos elhízás (3. osztály)",
+    "hrvBalanced": "Kiegyensúlyozott",
+    "hrvUnbalanced": "Kiegyensúlyozatlan",
+    "hrvLow": "Alacsony",
+    "hrvPoor": "Gyenge",
+    "labelNoData": "Nincs adat",
+    "errorTitle": "Nem sikerült betölteni az egészségügyi adataidat",
+    "errorDescription": "Valami hiba történt a napi egészségügyi statisztikáid betöltése közben. Kérjük, próbáld újra.",
+    "retry": "Próbáld újra"
+  },
+  "weight": {
+    "title": "Testsúly",
+    "subtitle": "Kövesd nyomon a testsúlyodat és testösszetételedet az idő múlásával",
+    "logButton": "Testsúly rögzítése",
+    "targetButton": "Cél beállítása",
+    "sourceGarmin": "A Garmin Connectből",
+    "toggleDetails": "Testösszetétel részleteinek ki-/bekapcsolása",
+    "chartTitle": "Testsúly trendje",
+    "chartWeightSeries": "Testsúly",
+    "chartTargetSeries": "Cél",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Bejegyzés szerkesztése",
+      "delete": "Bejegyzés törlése"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Testzsír",
+      "bodyWater": "Testvíz",
+      "boneMass": "Csonttömeg",
+      "muscleMass": "Izomtömeg"
+    },
+    "form": {
+      "addTitle": "Testsúly rögzítése",
+      "editTitle": "Testsúlybejegyzés szerkesztése",
+      "description": "Rögzítsd a testsúlyodat, és opcionálisan a testösszetételedet.",
+      "date": "Dátum",
+      "dateRequired": "Kérjük, válassz dátumot.",
+      "weight": "Testsúly",
+      "weightRequired": "Kérjük, add meg a testsúlyodat.",
+      "weightInvalid": "Adj meg nullánál nagyobb testsúlyt.",
+      "bodyComposition": "Testösszetétel (opcionális)",
+      "bmi": "BMI",
+      "bodyFat": "Testzsír (%)",
+      "bodyWater": "Testvíz (%)",
+      "boneMass": "Csonttömeg",
+      "muscleMass": "Izomtömeg",
+      "create": "Rögzítés",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Testsúly rögzítve.",
+      "updateSuccess": "Testsúlybejegyzés frissítve.",
+      "saveError": "Nem sikerült menteni a testsúlybejegyzést. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Testsúlycél beállítása",
+      "description": "Válassz célsúlyt, vagy töröld a mezőt az eltávolításához.",
+      "weight": "Célsúly",
+      "hint": "Hagyd üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Testsúlycél frissítve.",
+      "saveError": "Nem sikerült frissíteni a testsúlycélodat. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek testsúlybejegyzések",
+      "description": "Rögzítsd a testsúlyodat, hogy nyomon követhesd a fejlődésedet az idő múlásával."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni a testsúlyelőzményeidet",
+      "description": "Valami hiba történt a testsúlybejegyzéseid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Testsúlybejegyzés törlése",
+      "body": "Ez a testsúlybejegyzés véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Testsúlybejegyzés törölve.",
+      "error": "Nem sikerült törölni a testsúlybejegyzést. Kérjük, próbáld újra."
+    }
+  },
+  "steps": {
+    "title": "Lépések",
+    "subtitle": "Kövesd nyomon a napi lépésszámodat az idő múlásával",
+    "logButton": "Lépések rögzítése",
+    "targetButton": "Cél beállítása",
+    "sourceGarmin": "A Garmin Connectből",
+    "chartTitle": "Lépések trendje",
+    "chartStepsSeries": "Lépések",
+    "chartTargetSeries": "Cél",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Bejegyzés szerkesztése",
+      "delete": "Bejegyzés törlése"
+    },
+    "form": {
+      "addTitle": "Lépések rögzítése",
+      "editTitle": "Lépésbejegyzés szerkesztése",
+      "description": "Rögzítsd a napi lépésszámodat.",
+      "date": "Dátum",
+      "dateRequired": "Kérjük, válassz dátumot.",
+      "steps": "Lépések",
+      "stepsRequired": "Kérjük, add meg a lépésszámodat.",
+      "stepsInvalid": "Adj meg nullánál nagyobb lépésszámot.",
+      "create": "Rögzítés",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Lépések rögzítve.",
+      "updateSuccess": "Lépésbejegyzés frissítve.",
+      "saveError": "Nem sikerült menteni a lépésbejegyzést. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Lépéscél beállítása",
+      "description": "Válassz napi lépéscélt, vagy töröld a mezőt az eltávolításához.",
+      "steps": "Napi céllépésszám",
+      "hint": "Hagyd üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Lépéscél frissítve.",
+      "saveError": "Nem sikerült frissíteni a lépéscélodat. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek lépésbejegyzések",
+      "description": "Rögzítsd a lépéseidet, hogy nyomon követhesd a tevékenységedet az idő múlásával."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni a lépéselőzményeidet",
+      "description": "Valami hiba történt a lépésbejegyzéseid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Lépésbejegyzés törlése",
+      "body": "Ez a lépésbejegyzés véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Lépésbejegyzés törölve.",
+      "error": "Nem sikerült törölni a lépésbejegyzést. Kérjük, próbáld újra."
+    }
+  },
+  "rhr": {
+    "title": "Nyugalmi pulzusszám",
+    "subtitle": "Kövesd nyomon a nyugalmi pulzusszámodat az idő múlásával",
+    "sourceGarmin": "A Garmin Connectből",
+    "chartTitle": "Nyugalmi pulzusszám trendje",
+    "chartSeries": "Nyugalmi pulzusszám",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "empty": {
+      "title": "Még nincs nyugalmi pulzusszámadat",
+      "description": "A nyugalmi pulzusszám az alvásoddal együtt kerül rögzítésre. Szinkronizálj egy eszközt, amely nyomon követi, hogy itt lásd a trendedet."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni a nyugalmi pulzusszám előzményeidet",
+      "description": "Valami hiba történt a nyugalmi pulzusszámadataid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    }
+  },
+  "sleep": {
+    "title": "Alvás",
+    "subtitle": "Kövesd nyomon az alvásod időtartamát és minőségét az idő múlásával",
+    "logButton": "Alvás rögzítése",
+    "targetButton": "Cél beállítása",
+    "sourceGarmin": "A Garmin Connectből",
+    "toggleDetails": "Alvás részleteinek ki-/bekapcsolása",
+    "chartTitle": "Alvás trendje",
+    "chartSleepSeries": "Alvás",
+    "chartTargetSeries": "Cél",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Bejegyzés szerkesztése",
+      "delete": "Bejegyzés törlése"
+    },
+    "score": "Pontszám",
+    "hrvBalanced": "Kiegyensúlyozott",
+    "hrvUnbalanced": "Kiegyensúlyozatlan",
+    "hrvLow": "Alacsony",
+    "hrvPoor": "Gyenge",
+    "scoreExcellent": "Kiváló",
+    "scoreGood": "Jó",
+    "scoreFair": "Közepes",
+    "scorePoor": "Gyenge",
+    "detail": {
+      "tabsLabel": "Alvás részleteinek szakaszai",
+      "tabScore": "Alváspontszám",
+      "tabDetails": "Alvás részletei",
+      "deep": "Mély",
+      "light": "Könnyű",
+      "rem": "REM",
+      "awake": "Ébren",
+      "score": "Alváspontszám",
+      "quality": "Minőség",
+      "duration": "Időtartam",
+      "restingHeartRate": "Nyugalmi pulzus",
+      "avgHeartRate": "Átl. pulzus",
+      "minHeartRate": "Min. pulzus",
+      "maxHeartRate": "Max. pulzus",
+      "skinTempDeviation": "Bőrhőm.-eltérés",
+      "hrv": "HRV-állapot",
+      "spo2": "Átl. SpO₂",
+      "lowestSpo2": "Legalacsonyabb SpO₂",
+      "highestSpo2": "Legmagasabb SpO₂",
+      "avgRespiration": "Átl. légzésszám",
+      "lowestRespiration": "Legalacsonyabb légzésszám",
+      "highestRespiration": "Legmagasabb légzésszám",
+      "avgSleepStress": "Átl. alvási stressz",
+      "awakeCount": "Felébredések",
+      "summary": "Összegzés",
+      "breakdown": "Bontás",
+      "overview": "Áttekintés",
+      "heartRate": "Pulzusszám",
+      "bloodOxygen": "Véroxigén",
+      "respiration": "Légzés",
+      "avg": "Átl.",
+      "min": "Min.",
+      "max": "Max.",
+      "noData": "Nincs rögzített adat."
+    },
+    "hypnogram": {
+      "title": "Alvási fázisok",
+      "deep": "Mély",
+      "light": "Könnyű",
+      "rem": "REM",
+      "awake": "Ébren",
+      "noData": "Nincs elérhető fázis-idővonal."
+    },
+    "form": {
+      "addTitle": "Alvás rögzítése",
+      "editTitle": "Alvásbejegyzés szerkesztése",
+      "description": "Rögzítsd az alvásod időtartamát, és opcionálisan a fázisok bontását és a mutatókat.",
+      "date": "Dátum",
+      "dateRequired": "Kérjük, válassz dátumot.",
+      "totalSleep": "Teljes alvás",
+      "totalSleepRequired": "Kérjük, add meg, mennyit aludtál.",
+      "hours": "Óra",
+      "minutes": "Perc",
+      "stageBreakdown": "Fázisok bontása (opcionális)",
+      "deep": "Mélyalvás",
+      "light": "Könnyű alvás",
+      "rem": "REM-alvás",
+      "awake": "Ébren",
+      "metrics": "Mutatók (opcionális)",
+      "sleepScore": "Alváspontszám (0–100)",
+      "restingHeartRate": "Nyugalmi pulzusszám (bpm)",
+      "skinTempDeviation": "Bőrhőm.-eltérés (°C)",
+      "spo2": "Átl. SpO₂ (%)",
+      "sleepTimes": "Alvási időpontok (opcionális)",
+      "startTime": "Alvás kezdete",
+      "endTime": "Alvás vége",
+      "endBeforeStart": "Az alvás végének a kezdési idő utáninak kell lennie.",
+      "awakeCount": "Felébredések",
+      "heartRate": "Pulzusszám (opcionális)",
+      "avgHeartRate": "Átl. pulzusszám (bpm)",
+      "minHeartRate": "Min. pulzusszám (bpm)",
+      "maxHeartRate": "Max. pulzusszám (bpm)",
+      "bloodOxygen": "Véroxigén (opcionális)",
+      "lowestSpo2": "Legalacsonyabb SpO₂ (%)",
+      "highestSpo2": "Legmagasabb SpO₂ (%)",
+      "avgSleepStress": "Átl. alvási stressz (0–100)",
+      "sleepStages": "Alvási fázisok (opcionális)",
+      "noStages": "Még nincsenek hozzáadott fázisok.",
+      "addStage": "Fázis hozzáadása",
+      "removeStage": "Fázis eltávolítása",
+      "stageLabel": "{index}. fázis",
+      "stageType": "Fázis",
+      "stageDeep": "Mély",
+      "stageLight": "Könnyű",
+      "stageRem": "REM",
+      "stageAwake": "Ébren",
+      "stageStart": "Kezdés",
+      "stageEnd": "Vége",
+      "stageDuration": "Időtartam",
+      "create": "Rögzítés",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Alvás rögzítve.",
+      "updateSuccess": "Alvásbejegyzés frissítve.",
+      "saveError": "Nem sikerült menteni az alvásbejegyzést. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Alváscél beállítása",
+      "description": "Válassz éjszakai alváscélt, vagy töröld a mezőket az eltávolításához.",
+      "hours": "Óra",
+      "minutes": "Perc",
+      "hint": "Hagyd üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Alváscél frissítve.",
+      "saveError": "Nem sikerült frissíteni az alváscélodat. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek alvásbejegyzések",
+      "description": "Rögzíts egy éjszakai alvást, hogy nyomon követhesd a pihenésedet az idő múlásával."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni az alváselőzményeidet",
+      "description": "Valami hiba történt az alvásbejegyzéseid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Alvásbejegyzés törlése",
+      "body": "Ez az alvásbejegyzés véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Alvásbejegyzés törölve.",
+      "error": "Nem sikerült törölni az alvásbejegyzést. Kérjük, próbáld újra."
+    }
+  },
+  "water": {
+    "title": "Folyadékbevitel",
+    "subtitle": "Kövesd nyomon a napi folyadékbeviteledet az idő múlásával",
+    "logButton": "Folyadék rögzítése",
+    "targetButton": "Cél beállítása",
+    "sourceGarmin": "A Garmin Connectből",
+    "chartTitle": "Folyadékbevitel trendje",
+    "chartWaterSeries": "Folyadék",
+    "chartTargetSeries": "Cél",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Bejegyzés szerkesztése",
+      "delete": "Bejegyzés törlése"
+    },
+    "form": {
+      "addTitle": "Folyadék rögzítése",
+      "editTitle": "Folyadékbejegyzés szerkesztése",
+      "description": "Rögzítsd a napi folyadékbeviteledet.",
+      "date": "Dátum",
+      "dateRequired": "Kérjük, válassz dátumot.",
+      "amount": "Mennyiség",
+      "amountRequired": "Kérjük, adj meg egy mennyiséget.",
+      "amountInvalid": "Adj meg nullánál nagyobb mennyiséget.",
+      "create": "Rögzítés",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Folyadék rögzítve.",
+      "updateSuccess": "Folyadékbejegyzés frissítve.",
+      "saveError": "Nem sikerült menteni a folyadékbejegyzést. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Folyadékcél beállítása",
+      "description": "Válassz napi folyadékcélt, vagy töröld a mezőt az eltávolításához.",
+      "amount": "Napi cél",
+      "hint": "Hagyd üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Folyadékcél frissítve.",
+      "saveError": "Nem sikerült frissíteni a folyadékcélodat. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek folyadékbejegyzések",
+      "description": "Rögzítsd a folyadékbeviteledet, hogy nyomon követhesd a hidratáltságodat az idő múlásával."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni a folyadékelőzményeidet",
+      "description": "Valami hiba történt a folyadékbejegyzéseid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Folyadékbejegyzés törlése",
+      "body": "Ez a folyadékbejegyzés véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Folyadékbejegyzés törölve.",
+      "error": "Nem sikerült törölni a folyadékbejegyzést. Kérjük, próbáld újra."
+    }
+  },
+  "poop": {
+    "title": "Székletürítés",
+    "subtitle": "Kövesd nyomon a székletürítéseidet az idő múlásával",
+    "logButton": "Bejegyzés rögzítése",
+    "targetButton": "Cél beállítása",
+    "chartTitle": "Napi gyakoriság",
+    "chartCountSeries": "Székletürítés",
+    "chartTargetSeries": "Cél",
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Bejegyzés szerkesztése",
+      "delete": "Bejegyzés törlése"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Székletürítés"
+    },
+    "form": {
+      "addTitle": "Székletürítés rögzítése",
+      "editTitle": "Székletürítés szerkesztése",
+      "description": "Rögzítsd a székletürítésed idejét és részleteit.",
+      "dateTime": "Dátum és idő",
+      "dateTimeRequired": "Kérjük, válassz dátumot és időt.",
+      "bristolType": "Bristol-féle széklettípus",
+      "color": "Szín",
+      "notes": "Jegyzetek",
+      "none": "Nincs",
+      "colors": {
+        "brown": "Barna",
+        "dark_brown": "Sötétbarna",
+        "light_brown": "Világosbarna",
+        "yellow": "Sárga",
+        "green": "Zöld",
+        "black": "Fekete",
+        "red": "Piros",
+        "white": "Fehér"
+      },
+      "create": "Rögzítés",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Székletürítés rögzítve.",
+      "updateSuccess": "Székletürítés frissítve.",
+      "saveError": "Nem sikerült menteni a bejegyzést. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Székletürítési cél beállítása",
+      "description": "Válassz napi székletürítési célt, vagy töröld a mezőt az eltávolításához.",
+      "count": "Napi cél",
+      "hint": "Hagyd üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Székletürítési cél frissítve.",
+      "saveError": "Nem sikerült frissíteni a célodat. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek bejegyzések",
+      "description": "Rögzíts egy székletürítést, hogy elkezdhesd a nyomon követést az idő múlásával."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni az előzményeidet",
+      "description": "Valami hiba történt a bejegyzéseid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Bejegyzés törlése",
+      "body": "Ez a bejegyzés véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Bejegyzés törölve.",
+      "error": "Nem sikerült törölni a bejegyzést. Kérjük, próbáld újra."
+    }
+  },
+  "fasting": {
+    "title": "Böjt",
+    "subtitle": "Indíts böjtöt, kövesd nyomon a haladásodat, és tekintsd át az előzményeidet",
+    "startButton": "Böjt indítása",
+    "targetButton": "Cél beállítása",
+    "sourceGarmin": "A Garmin Connectből",
+    "active": {
+      "title": "Folyamatban lévő böjt",
+      "started": "Elkezdődött",
+      "target": "Cél",
+      "complete": "Befejezés",
+      "break": "Böjt megszakítása",
+      "cancel": "Mégse",
+      "completeHint": "A böjtöt befejezheted, amint eléred a célodat."
+    },
+    "stats": {
+      "totalFasts": "Összes böjt",
+      "currentStreak": "Jelenlegi sorozat",
+      "longestStreak": "Leghosszabb sorozat",
+      "avgDuration": "Átl. időtartam",
+      "totalTime": "Teljes böjtidő",
+      "completionRate": "Befejezési arány",
+      "days": "nap"
+    },
+    "types": {
+      "16:8": "16:8 (16 ó böjt, 8 ó étkezés)",
+      "18:6": "18:6 (18 ó böjt, 6 ó étkezés)",
+      "20:4": "20:4 (20 ó böjt, 4 ó étkezés)",
+      "OMAD": "OMAD (napi egy étkezés)",
+      "24h": "24 órás böjt",
+      "36h": "36 órás böjt",
+      "48h": "48 órás böjt",
+      "72h": "72 órás böjt",
+      "custom": "Egyéni"
+    },
+    "status": {
+      "in_progress": "Folyamatban",
+      "completed": "Befejezve",
+      "broken": "Megszakítva",
+      "cancelled": "Megszakítva"
+    },
+    "interval": {
+      "label": "Időtartomány",
+      "last_7_days": "Utolsó 7 nap",
+      "last_30_days": "Utolsó 30 nap",
+      "last_90_days": "Utolsó 90 nap",
+      "last_year": "Utolsó év",
+      "all_time": "Teljes időszak"
+    },
+    "actions": {
+      "edit": "Böjt szerkesztése",
+      "delete": "Böjt törlése"
+    },
+    "list": {
+      "notesLabel": "Jegyzetek"
+    },
+    "form": {
+      "addTitle": "Böjt indítása",
+      "editTitle": "Böjtidőszak szerkesztése",
+      "description": "Válassz böjtprotokollt és kezdési időpontot.",
+      "type": "Böjtprotokoll",
+      "customDuration": "Egyéni időtartam",
+      "customDurationHint": "A böjt hossza órában (1–72).",
+      "hours": "óra",
+      "startTime": "Kezdési idő",
+      "startTimeRequired": "Kérjük, válassz kezdési időt.",
+      "endTime": "Befejezési idő",
+      "status": "Állapot",
+      "notes": "Jegyzetek",
+      "create": "Indítás",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "createSuccess": "Böjt elindítva.",
+      "updateSuccess": "Böjtidőszak frissítve.",
+      "saveError": "Nem sikerült menteni a böjtidőszakot. Kérjük, próbáld újra."
+    },
+    "target": {
+      "title": "Böjtcél beállítása",
+      "description": "Válassz célböjtidőtartamot, vagy töröld mindkét mezőt az eltávolításához.",
+      "hours": "Óra",
+      "minutes": "Perc",
+      "hint": "Hagyd mindkettőt üresen a cél eltávolításához.",
+      "save": "Mentés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "saveSuccess": "Böjtcél frissítve.",
+      "saveError": "Nem sikerült frissíteni a böjtcélodat. Kérjük, próbáld újra."
+    },
+    "complete": {
+      "success": "Böjt befejezve.",
+      "error": "Nem sikerült befejezni a böjtöt. Kérjük, próbáld újra."
+    },
+    "empty": {
+      "title": "Még nincsenek böjtök",
+      "description": "Indíts egy böjtöt, hogy elkezdhesd a böjtelőzményeid nyomon követését."
+    },
+    "error": {
+      "title": "Nem sikerült betölteni a böjtelőzményeidet",
+      "description": "Valami hiba történt a böjtidőszakaid betöltése közben. Kérjük, próbáld újra.",
+      "retry": "Próbáld újra"
+    },
+    "delete": {
+      "title": "Böjtidőszak törlése",
+      "body": "Ez a böjtidőszak véglegesen törlődik. Ezt a műveletet nem lehet visszavonni.",
+      "confirm": "Törlés",
+      "cancel": "Mégse",
+      "close": "Bezárás",
+      "success": "Böjtidőszak törölve.",
+      "error": "Nem sikerült törölni a böjtidőszakot. Kérjük, próbáld újra."
+    }
+  }
+}

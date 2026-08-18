@@ -1,0 +1,73 @@
+{
+  "addActivity": "Activiteit toevoegen",
+  "upload": {
+    "uploading": "Uploaden…",
+    "success": "Activiteit succesvol geüpload",
+    "error": "Het activiteitsbestand kon niet worden geüpload"
+  },
+  "refresh": {
+    "label": "Vernieuwen",
+    "refreshing": "Vernieuwen…",
+    "success": "Vernieuwen gestart",
+    "error": "Activiteiten konden niet worden vernieuwd"
+  },
+  "feed": {
+    "scopeLabel": "Feed-bereik",
+    "myActivities": "Mijn activiteiten",
+    "following": "Gevolgde gebruikers",
+    "loadMore": "Meer laden",
+    "loading": "Laden…",
+    "error": {
+      "title": "Activiteiten konden niet worden geladen",
+      "description": "Er is iets misgegaan bij het laden van de feed.",
+      "retry": "Opnieuw proberen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Nog geen activiteiten",
+        "description": "Voeg een activiteit toe of verbind een integratie om te beginnen."
+      },
+      "following": {
+        "title": "Hier is nog niets",
+        "description": "Activiteiten van mensen die je volgt verschijnen hier."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistieken",
+    "metricLabel": "Statistiekmeting",
+    "thisWeek": "Deze week",
+    "thisMonth": "Deze maand",
+    "empty": "Geen activiteit in deze periode",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Afstand",
+      "time": "Tijd",
+      "calories": "Calorieën"
+    }
+  },
+  "sports": {
+    "run": "Hardlopen",
+    "bike": "Fietsen",
+    "swim": "Zwemmen",
+    "walk": "Wandelen",
+    "hike": "Trekken",
+    "rowing": "Roeien",
+    "snow_ski": "Skiën",
+    "snowboard": "Snowboarden",
+    "windsurf": "Windsurfen",
+    "stand_up_paddleboarding": "Paddleboarden",
+    "surfing": "Surfen",
+    "kayaking": "Kajakken",
+    "sailing": "Zeilen",
+    "snowshoeing": "Sneeuwschoenwandelen",
+    "inline_skating": "Inline skaten"
+  },
+  "goals": {
+    "title": "Doelen",
+    "empty": {
+      "title": "Geen doelen ingesteld",
+      "description": "Stel doelen in via instellingen om hier je voortgang bij te houden."
+    }
+  }
+}

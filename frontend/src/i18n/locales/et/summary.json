@@ -1,0 +1,49 @@
+{
+  "title": "Kokkuvõte",
+  "subtitle": "Vaata oma treeningu kogusummasid ja suundumusi ajas.",
+  "viewType": {
+    "label": "Kokkuvõtte periood",
+    "week": "Nädal",
+    "month": "Kuu",
+    "year": "Aasta",
+    "lifetime": "Kogu aeg"
+  },
+  "filters": {
+    "type": "Tegevuse tüüp",
+    "allTypes": "Kõik tüübid"
+  },
+  "period": {
+    "previous": "Eelmine periood",
+    "next": "Järgmine periood",
+    "picker": "Vali periood",
+    "allTime": "Kogu aeg"
+  },
+  "metrics": {
+    "distance": "Vahemaa",
+    "duration": "Kestus",
+    "elevation": "Tõus",
+    "calories": "Kalorid",
+    "activities": "Tegevused"
+  },
+  "breakdown": {
+    "title": "Jaotus",
+    "period": "Periood",
+    "weekNumber": "Nädal {number}"
+  },
+  "typeBreakdown": {
+    "title": "Tegevuse tüübi järgi",
+    "type": "Tüüp"
+  },
+  "activities": {
+    "title": "Selle perioodi tegevused"
+  },
+  "empty": {
+    "title": "Sel perioodil pole tegevust",
+    "description": "Ükski tegevus ei vasta valitud perioodile ja tüübile."
+  },
+  "error": {
+    "title": "Kokkuvõtet ei õnnestunud laadida",
+    "description": "Sinu statistika laadimisel läks midagi valesti. Kontrolli ühendust ja proovi uuesti.",
+    "retry": "Proovi uuesti"
+  }
+}

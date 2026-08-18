@@ -1,0 +1,73 @@
+{
+  "addActivity": "Legg til aktivitet",
+  "upload": {
+    "uploading": "Laster opp…",
+    "success": "Aktiviteten ble lastet opp",
+    "error": "Kunne ikke laste opp aktivitetsfilen"
+  },
+  "refresh": {
+    "label": "Oppdater",
+    "refreshing": "Oppdaterer…",
+    "success": "Oppdatering startet",
+    "error": "Kunne ikke oppdatere aktiviteter"
+  },
+  "feed": {
+    "scopeLabel": "Strømomfang",
+    "myActivities": "Mine aktiviteter",
+    "following": "Følger",
+    "loadMore": "Last inn mer",
+    "loading": "Laster…",
+    "error": {
+      "title": "Kunne ikke laste aktiviteter",
+      "description": "Noe gikk galt under lasting av strømmen.",
+      "retry": "Prøv igjen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Ingen aktiviteter ennå",
+        "description": "Legg til en aktivitet eller koble til en integrasjon for å komme i gang."
+      },
+      "following": {
+        "title": "Ingenting her ennå",
+        "description": "Aktiviteter fra personer du følger vises her."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistikk",
+    "metricLabel": "Statistikkmål",
+    "thisWeek": "Denne uken",
+    "thisMonth": "Denne måneden",
+    "empty": "Ingen aktivitet i denne perioden",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distanse",
+      "time": "Tid",
+      "calories": "Kalorier"
+    }
+  },
+  "sports": {
+    "run": "Løping",
+    "bike": "Sykling",
+    "swim": "Svømming",
+    "walk": "Gåing",
+    "hike": "Fottur",
+    "rowing": "Roing",
+    "snow_ski": "Ski",
+    "snowboard": "Snowboard",
+    "windsurf": "Brettseiling",
+    "stand_up_paddleboarding": "SUP-padling",
+    "surfing": "Surfing",
+    "kayaking": "Kajakkpadling",
+    "sailing": "Seiling",
+    "snowshoeing": "Truging",
+    "inline_skating": "Rulleskøyter"
+  },
+  "goals": {
+    "title": "Mål",
+    "empty": {
+      "title": "Ingen mål satt",
+      "description": "Sett mål i innstillingene for å følge fremgangen din her."
+    }
+  }
+}

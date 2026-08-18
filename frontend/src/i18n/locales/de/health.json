@@ -1,0 +1,648 @@
+{
+  "title": "Gesundheit",
+  "subtitle": "Sieh alle deine Gesundheitsdaten auf einen Blick",
+  "nav": {
+    "label": "Gesundheitsbereiche",
+    "soon": "Bald",
+    "dashboard": "Dashboard",
+    "sleep": "Schlaf",
+    "rhr": "Ruheherzfrequenz",
+    "steps": "Schritte",
+    "weight": "Gewicht",
+    "fasting": "Fasten",
+    "water": "Wasseraufnahme",
+    "poop": "Stuhlgang"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Dein tägliches Wohlbefinden auf einen Blick",
+    "sleep": "Schlaf",
+    "restingHeartRate": "Ruhe-HF",
+    "avgSkinTemperatureDeviation": "Hauttemp.-Abw.",
+    "weight": "Gewicht",
+    "bmi": "BMI",
+    "steps": "Schritte",
+    "fasting": "Fasten",
+    "water": "Wasseraufnahme",
+    "poop": "Stuhlgang",
+    "noSleepTarget": "Kein Schlafziel",
+    "noWeightTarget": "Kein Gewichtsziel",
+    "noStepsTarget": "Kein Schrittziel",
+    "noFastingTarget": "Kein Fastenziel",
+    "noWaterTarget": "Kein Wasserziel",
+    "noPoopTarget": "Kein Stuhlgangziel",
+    "stepsTargetLabel": "Schritte",
+    "poopTargetLabel": "/ Tag",
+    "noWeightData": "Keine Gewichtsdaten",
+    "bmiUnderweight": "Untergewicht",
+    "bmiNormalWeight": "Normalgewicht",
+    "bmiOverweight": "Übergewicht",
+    "bmiObesityClass1": "Adipositas (Klasse 1)",
+    "bmiObesityClass2": "Adipositas (Klasse 2)",
+    "bmiObesityClass3": "Extreme Adipositas (Klasse 3)",
+    "hrvBalanced": "Ausgeglichen",
+    "hrvUnbalanced": "Unausgeglichen",
+    "hrvLow": "Niedrig",
+    "hrvPoor": "Schlecht",
+    "labelNoData": "Keine Daten",
+    "errorTitle": "Deine Gesundheitsdaten konnten nicht geladen werden",
+    "errorDescription": "Beim Laden deiner täglichen Gesundheitsstatistiken ist etwas schiefgelaufen. Bitte versuche es erneut.",
+    "retry": "Erneut versuchen"
+  },
+  "weight": {
+    "title": "Gewicht",
+    "subtitle": "Verfolge dein Gewicht und deine Körperzusammensetzung im Zeitverlauf",
+    "logButton": "Gewicht eintragen",
+    "targetButton": "Ziel setzen",
+    "sourceGarmin": "Von Garmin Connect",
+    "toggleDetails": "Details zur Körperzusammensetzung ein-/ausblenden",
+    "chartTitle": "Gewichtstrend",
+    "chartWeightSeries": "Gewicht",
+    "chartTargetSeries": "Ziel",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Eintrag bearbeiten",
+      "delete": "Eintrag löschen"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Körperfett",
+      "bodyWater": "Körperwasser",
+      "boneMass": "Knochenmasse",
+      "muscleMass": "Muskelmasse"
+    },
+    "form": {
+      "addTitle": "Gewicht eintragen",
+      "editTitle": "Gewichtseintrag bearbeiten",
+      "description": "Erfasse dein Gewicht und optional deine Körperzusammensetzung.",
+      "date": "Datum",
+      "dateRequired": "Bitte wähle ein Datum.",
+      "weight": "Gewicht",
+      "weightRequired": "Bitte gib dein Gewicht ein.",
+      "weightInvalid": "Gib ein Gewicht größer als null ein.",
+      "bodyComposition": "Körperzusammensetzung (optional)",
+      "bmi": "BMI",
+      "bodyFat": "Körperfett (%)",
+      "bodyWater": "Körperwasser (%)",
+      "boneMass": "Knochenmasse",
+      "muscleMass": "Muskelmasse",
+      "create": "Eintragen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Gewicht eingetragen.",
+      "updateSuccess": "Gewichtseintrag aktualisiert.",
+      "saveError": "Dein Gewichtseintrag konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Gewichtsziel setzen",
+      "description": "Wähle ein Zielgewicht oder leere das Feld, um es zu entfernen.",
+      "weight": "Zielgewicht",
+      "hint": "Leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Gewichtsziel aktualisiert.",
+      "saveError": "Dein Gewichtsziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Gewichtseinträge",
+      "description": "Trage dein Gewicht ein, um deinen Fortschritt im Zeitverlauf zu verfolgen."
+    },
+    "error": {
+      "title": "Deine Gewichtshistorie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Gewichtseinträge ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Gewichtseintrag löschen",
+      "body": "Dieser Gewichtseintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Gewichtseintrag gelöscht.",
+      "error": "Der Gewichtseintrag konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  },
+  "steps": {
+    "title": "Schritte",
+    "subtitle": "Verfolge deine tägliche Schrittzahl im Zeitverlauf",
+    "logButton": "Schritte eintragen",
+    "targetButton": "Ziel setzen",
+    "sourceGarmin": "Von Garmin Connect",
+    "chartTitle": "Schritttrend",
+    "chartStepsSeries": "Schritte",
+    "chartTargetSeries": "Ziel",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Eintrag bearbeiten",
+      "delete": "Eintrag löschen"
+    },
+    "form": {
+      "addTitle": "Schritte eintragen",
+      "editTitle": "Schritteintrag bearbeiten",
+      "description": "Erfasse deine Schrittzahl für den Tag.",
+      "date": "Datum",
+      "dateRequired": "Bitte wähle ein Datum.",
+      "steps": "Schritte",
+      "stepsRequired": "Bitte gib deine Schrittzahl ein.",
+      "stepsInvalid": "Gib eine Schrittzahl größer als null ein.",
+      "create": "Eintragen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Schritte eingetragen.",
+      "updateSuccess": "Schritteintrag aktualisiert.",
+      "saveError": "Dein Schritteintrag konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Schrittziel setzen",
+      "description": "Wähle ein tägliches Schrittziel oder leere das Feld, um es zu entfernen.",
+      "steps": "Tägliches Schrittziel",
+      "hint": "Leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Schrittziel aktualisiert.",
+      "saveError": "Dein Schrittziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Schritteinträge",
+      "description": "Trage deine Schritte ein, um deine Aktivität im Zeitverlauf zu verfolgen."
+    },
+    "error": {
+      "title": "Deine Schritthistorie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Schritteinträge ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Schritteintrag löschen",
+      "body": "Dieser Schritteintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Schritteintrag gelöscht.",
+      "error": "Der Schritteintrag konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  },
+  "rhr": {
+    "title": "Ruheherzfrequenz",
+    "subtitle": "Verfolge deine Ruheherzfrequenz im Zeitverlauf",
+    "sourceGarmin": "Von Garmin Connect",
+    "chartTitle": "Ruheherzfrequenz-Trend",
+    "chartSeries": "Ruheherzfrequenz",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "empty": {
+      "title": "Noch keine Ruheherzfrequenzdaten",
+      "description": "Die Ruheherzfrequenz wird zusammen mit deinem Schlaf aufgezeichnet. Synchronisiere ein Gerät, das sie verfolgt, um deinen Trend hier zu sehen."
+    },
+    "error": {
+      "title": "Deine Ruheherzfrequenz-Historie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Ruheherzfrequenzdaten ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    }
+  },
+  "sleep": {
+    "title": "Schlaf",
+    "subtitle": "Verfolge Schlafdauer und -qualität im Zeitverlauf",
+    "logButton": "Schlaf eintragen",
+    "targetButton": "Ziel setzen",
+    "sourceGarmin": "Von Garmin Connect",
+    "toggleDetails": "Schlafdetails ein-/ausblenden",
+    "chartTitle": "Schlaftrend",
+    "chartSleepSeries": "Schlaf",
+    "chartTargetSeries": "Ziel",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Eintrag bearbeiten",
+      "delete": "Eintrag löschen"
+    },
+    "score": "Punkte",
+    "hrvBalanced": "Ausgeglichen",
+    "hrvUnbalanced": "Unausgeglichen",
+    "hrvLow": "Niedrig",
+    "hrvPoor": "Schlecht",
+    "scoreExcellent": "Ausgezeichnet",
+    "scoreGood": "Gut",
+    "scoreFair": "Befriedigend",
+    "scorePoor": "Schlecht",
+    "detail": {
+      "tabsLabel": "Schlafdetail-Bereiche",
+      "tabScore": "Schlafwert",
+      "tabDetails": "Schlafdetails",
+      "deep": "Tief",
+      "light": "Leicht",
+      "rem": "REM",
+      "awake": "Wach",
+      "score": "Schlafwert",
+      "quality": "Qualität",
+      "duration": "Dauer",
+      "restingHeartRate": "Ruhe-HF",
+      "avgHeartRate": "Ø HF",
+      "minHeartRate": "Min. HF",
+      "maxHeartRate": "Max. HF",
+      "skinTempDeviation": "Hauttemp.-Abw.",
+      "hrv": "HRV-Status",
+      "spo2": "Ø SpO₂",
+      "lowestSpo2": "Niedrigster SpO₂",
+      "highestSpo2": "Höchster SpO₂",
+      "avgRespiration": "Ø Atemfrequenz",
+      "lowestRespiration": "Niedrigste Atemfrequenz",
+      "highestRespiration": "Höchste Atemfrequenz",
+      "avgSleepStress": "Ø Schlafstress",
+      "awakeCount": "Aufwachvorgänge",
+      "summary": "Zusammenfassung",
+      "breakdown": "Aufschlüsselung",
+      "overview": "Übersicht",
+      "heartRate": "Herzfrequenz",
+      "bloodOxygen": "Blutsauerstoff",
+      "respiration": "Atemfrequenz",
+      "avg": "Ø",
+      "min": "Min.",
+      "max": "Max.",
+      "noData": "Keine Daten aufgezeichnet."
+    },
+    "hypnogram": {
+      "title": "Schlafphasen",
+      "deep": "Tief",
+      "light": "Leicht",
+      "rem": "REM",
+      "awake": "Wach",
+      "noData": "Keine Phasenzeitlinie verfügbar."
+    },
+    "form": {
+      "addTitle": "Schlaf eintragen",
+      "editTitle": "Schlafeintrag bearbeiten",
+      "description": "Erfasse deine Schlafdauer und optional die Phasenaufschlüsselung und Kennzahlen.",
+      "date": "Datum",
+      "dateRequired": "Bitte wähle ein Datum.",
+      "totalSleep": "Gesamtschlaf",
+      "totalSleepRequired": "Bitte gib an, wie lange du geschlafen hast.",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "stageBreakdown": "Phasenaufschlüsselung (optional)",
+      "deep": "Tiefschlaf",
+      "light": "Leichtschlaf",
+      "rem": "REM-Schlaf",
+      "awake": "Wach",
+      "metrics": "Kennzahlen (optional)",
+      "sleepScore": "Schlafwert (0–100)",
+      "restingHeartRate": "Ruheherzfrequenz (bpm)",
+      "skinTempDeviation": "Hauttemp.-Abweichung (°C)",
+      "spo2": "Ø SpO₂ (%)",
+      "sleepTimes": "Schlafzeiten (optional)",
+      "startTime": "Schlafbeginn",
+      "endTime": "Schlafende",
+      "endBeforeStart": "Das Schlafende muss nach dem Schlafbeginn liegen.",
+      "awakeCount": "Aufwachvorgänge",
+      "heartRate": "Herzfrequenz (optional)",
+      "avgHeartRate": "Ø Herzfrequenz (bpm)",
+      "minHeartRate": "Min. Herzfrequenz (bpm)",
+      "maxHeartRate": "Max. Herzfrequenz (bpm)",
+      "bloodOxygen": "Blutsauerstoff (optional)",
+      "lowestSpo2": "Niedrigster SpO₂ (%)",
+      "highestSpo2": "Höchster SpO₂ (%)",
+      "avgSleepStress": "Ø Schlafstress (0–100)",
+      "sleepStages": "Schlafphasen (optional)",
+      "noStages": "Noch keine Phasen hinzugefügt.",
+      "addStage": "Phase hinzufügen",
+      "removeStage": "Phase entfernen",
+      "stageLabel": "Phase {index}",
+      "stageType": "Phase",
+      "stageDeep": "Tief",
+      "stageLight": "Leicht",
+      "stageRem": "REM",
+      "stageAwake": "Wach",
+      "stageStart": "Beginn",
+      "stageEnd": "Ende",
+      "stageDuration": "Dauer",
+      "create": "Eintragen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Schlaf eingetragen.",
+      "updateSuccess": "Schlafeintrag aktualisiert.",
+      "saveError": "Dein Schlafeintrag konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Schlafziel setzen",
+      "description": "Wähle ein nächtliches Schlafziel oder leere die Felder, um es zu entfernen.",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "hint": "Leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Schlafziel aktualisiert.",
+      "saveError": "Dein Schlafziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Schlafeinträge",
+      "description": "Trage eine Nacht Schlaf ein, um deine Erholung im Zeitverlauf zu verfolgen."
+    },
+    "error": {
+      "title": "Deine Schlafhistorie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Schlafeinträge ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Schlafeintrag löschen",
+      "body": "Dieser Schlafeintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Schlafeintrag gelöscht.",
+      "error": "Der Schlafeintrag konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  },
+  "water": {
+    "title": "Wasseraufnahme",
+    "subtitle": "Verfolge deine tägliche Wasseraufnahme im Zeitverlauf",
+    "logButton": "Wasser eintragen",
+    "targetButton": "Ziel setzen",
+    "sourceGarmin": "Von Garmin Connect",
+    "chartTitle": "Wasseraufnahme-Trend",
+    "chartWaterSeries": "Wasser",
+    "chartTargetSeries": "Ziel",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Eintrag bearbeiten",
+      "delete": "Eintrag löschen"
+    },
+    "form": {
+      "addTitle": "Wasser eintragen",
+      "editTitle": "Wassereintrag bearbeiten",
+      "description": "Erfasse deine Wasseraufnahme für den Tag.",
+      "date": "Datum",
+      "dateRequired": "Bitte wähle ein Datum.",
+      "amount": "Menge",
+      "amountRequired": "Bitte gib eine Menge ein.",
+      "amountInvalid": "Gib eine Menge größer als null ein.",
+      "create": "Eintragen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Wasser eingetragen.",
+      "updateSuccess": "Wassereintrag aktualisiert.",
+      "saveError": "Dein Wassereintrag konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Wasserziel setzen",
+      "description": "Wähle ein tägliches Wasserziel oder leere das Feld, um es zu entfernen.",
+      "amount": "Tägliches Ziel",
+      "hint": "Leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Wasserziel aktualisiert.",
+      "saveError": "Dein Wasserziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Wassereinträge",
+      "description": "Trage deine Wasseraufnahme ein, um deine Hydration im Zeitverlauf zu verfolgen."
+    },
+    "error": {
+      "title": "Deine Wasserhistorie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Wassereinträge ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Wassereintrag löschen",
+      "body": "Dieser Wassereintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Wassereintrag gelöscht.",
+      "error": "Der Wassereintrag konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  },
+  "poop": {
+    "title": "Stuhlgang",
+    "subtitle": "Verfolge deinen Stuhlgang im Zeitverlauf",
+    "logButton": "Eintrag hinzufügen",
+    "targetButton": "Ziel setzen",
+    "chartTitle": "Tägliche Häufigkeit",
+    "chartCountSeries": "Stuhlgang",
+    "chartTargetSeries": "Ziel",
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Eintrag bearbeiten",
+      "delete": "Eintrag löschen"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Stuhlgang"
+    },
+    "form": {
+      "addTitle": "Stuhlgang eintragen",
+      "editTitle": "Stuhlgang bearbeiten",
+      "description": "Erfasse Zeit und Details deines Stuhlgangs.",
+      "dateTime": "Datum & Uhrzeit",
+      "dateTimeRequired": "Bitte wähle Datum und Uhrzeit.",
+      "bristolType": "Bristol-Stuhltyp",
+      "color": "Farbe",
+      "notes": "Notizen",
+      "none": "Keine",
+      "colors": {
+        "brown": "Braun",
+        "dark_brown": "Dunkelbraun",
+        "light_brown": "Hellbraun",
+        "yellow": "Gelb",
+        "green": "Grün",
+        "black": "Schwarz",
+        "red": "Rot",
+        "white": "Weiß"
+      },
+      "create": "Eintragen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Stuhlgang eingetragen.",
+      "updateSuccess": "Stuhlgang aktualisiert.",
+      "saveError": "Dein Eintrag konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Stuhlgangziel setzen",
+      "description": "Wähle ein tägliches Stuhlgangziel oder leere das Feld, um es zu entfernen.",
+      "count": "Ziel pro Tag",
+      "hint": "Leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Stuhlgangziel aktualisiert.",
+      "saveError": "Dein Ziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Einträge",
+      "description": "Trage einen Stuhlgang ein, um im Zeitverlauf zu tracken."
+    },
+    "error": {
+      "title": "Deine Historie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Einträge ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Eintrag löschen",
+      "body": "Dieser Eintrag wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Eintrag gelöscht.",
+      "error": "Der Eintrag konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  },
+  "fasting": {
+    "title": "Fasten",
+    "subtitle": "Starte ein Fasten, verfolge deinen Fortschritt und überprüfe deine Geschichte",
+    "startButton": "Fasten starten",
+    "targetButton": "Ziel setzen",
+    "sourceGarmin": "Von Garmin Connect",
+    "active": {
+      "title": "Fasten läuft",
+      "started": "Gestartet",
+      "target": "Ziel",
+      "complete": "Abschließen",
+      "break": "Fasten beenden",
+      "cancel": "Abbrechen",
+      "completeHint": "Du kannst das Fasten abschließen, sobald du dein Ziel erreicht hast."
+    },
+    "stats": {
+      "totalFasts": "Gesamte Fasten",
+      "currentStreak": "Aktuelle Serie",
+      "longestStreak": "Längste Serie",
+      "avgDuration": "Ø Dauer",
+      "totalTime": "Gesamte Fastenzeit",
+      "completionRate": "Abschlussrate",
+      "days": "Tage"
+    },
+    "types": {
+      "16:8": "16:8 (16h Fasten, 8h Essen)",
+      "18:6": "18:6 (18h Fasten, 6h Essen)",
+      "20:4": "20:4 (20h Fasten, 4h Essen)",
+      "OMAD": "OMAD (eine Mahlzeit pro Tag)",
+      "24h": "24-Stunden-Fasten",
+      "36h": "36-Stunden-Fasten",
+      "48h": "48-Stunden-Fasten",
+      "72h": "72-Stunden-Fasten",
+      "custom": "Benutzerdefiniert"
+    },
+    "status": {
+      "in_progress": "Läuft",
+      "completed": "Abgeschlossen",
+      "broken": "Unterbrochen",
+      "cancelled": "Abgebrochen"
+    },
+    "interval": {
+      "label": "Zeitraum",
+      "last_7_days": "Letzte 7 Tage",
+      "last_30_days": "Letzte 30 Tage",
+      "last_90_days": "Letzte 90 Tage",
+      "last_year": "Letztes Jahr",
+      "all_time": "Gesamte Zeit"
+    },
+    "actions": {
+      "edit": "Fasten bearbeiten",
+      "delete": "Fasten löschen"
+    },
+    "list": {
+      "notesLabel": "Notizen"
+    },
+    "form": {
+      "addTitle": "Fasten starten",
+      "editTitle": "Fastensitzung bearbeiten",
+      "description": "Wähle ein Fastenprotokoll und den Startzeitpunkt.",
+      "type": "Fastenprotokoll",
+      "customDuration": "Benutzerdefinierte Dauer",
+      "customDurationHint": "Länge des Fastens in Stunden (1–72).",
+      "hours": "Stunden",
+      "startTime": "Startzeit",
+      "startTimeRequired": "Bitte wähle eine Startzeit.",
+      "endTime": "Endzeit",
+      "status": "Status",
+      "notes": "Notizen",
+      "create": "Starten",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "createSuccess": "Fasten gestartet.",
+      "updateSuccess": "Fastensitzung aktualisiert.",
+      "saveError": "Deine Fastensitzung konnte nicht gespeichert werden. Bitte versuche es erneut."
+    },
+    "target": {
+      "title": "Fastenziel setzen",
+      "description": "Wähle eine Ziel-Fastendauer oder leere beide Felder, um es zu entfernen.",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "hint": "Beide Felder leer lassen, um dein Ziel zu entfernen.",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "saveSuccess": "Fastenziel aktualisiert.",
+      "saveError": "Dein Fastenziel konnte nicht aktualisiert werden. Bitte versuche es erneut."
+    },
+    "complete": {
+      "success": "Fasten beendet.",
+      "error": "Dein Fasten konnte nicht beendet werden. Bitte versuche es erneut."
+    },
+    "empty": {
+      "title": "Noch keine Fasten",
+      "description": "Starte ein Fasten, um deine Fastenhistorie zu beginnen."
+    },
+    "error": {
+      "title": "Deine Fastenhistorie konnte nicht geladen werden",
+      "description": "Beim Laden deiner Fastensitzungen ist etwas schiefgelaufen. Bitte versuche es erneut.",
+      "retry": "Erneut versuchen"
+    },
+    "delete": {
+      "title": "Fastensitzung löschen",
+      "body": "Diese Fastensitzung wird dauerhaft gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "success": "Fastensitzung gelöscht.",
+      "error": "Die Fastensitzung konnte nicht gelöscht werden. Bitte versuche es erneut."
+    }
+  }
+}

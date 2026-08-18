@@ -1,0 +1,648 @@
+{
+  "title": "Hälsa",
+  "subtitle": "Se all din hälsodata på ett ställe",
+  "nav": {
+    "label": "Hälsosektioner",
+    "soon": "Snart",
+    "dashboard": "Instrumentpanel",
+    "sleep": "Sömn",
+    "rhr": "Vilopuls",
+    "steps": "Steg",
+    "weight": "Vikt",
+    "fasting": "Fasta",
+    "water": "Vattenintag",
+    "poop": "Tarmrörelser"
+  },
+  "dashboard": {
+    "title": "Instrumentpanel",
+    "subtitle": "Ditt dagliga välmående på ett ögonkast",
+    "sleep": "Sömn",
+    "restingHeartRate": "Vilopuls",
+    "avgSkinTemperatureDeviation": "Hudtemp. avvikelse",
+    "weight": "Vikt",
+    "bmi": "BMI",
+    "steps": "Steg",
+    "fasting": "Fasta",
+    "water": "Vattenintag",
+    "poop": "Tarmrörelser",
+    "noSleepTarget": "Inget sömnmål",
+    "noWeightTarget": "Inget viktmål",
+    "noStepsTarget": "Inget stegmål",
+    "noFastingTarget": "Inget fastemål",
+    "noWaterTarget": "Inget vattenmål",
+    "noPoopTarget": "Inget tarmrörelsemål",
+    "stepsTargetLabel": "steg",
+    "poopTargetLabel": "/ dag",
+    "noWeightData": "Ingen viktdata",
+    "bmiUnderweight": "Undervikt",
+    "bmiNormalWeight": "Normalvikt",
+    "bmiOverweight": "Övervikt",
+    "bmiObesityClass1": "Fetma (klass 1)",
+    "bmiObesityClass2": "Fetma (klass 2)",
+    "bmiObesityClass3": "Extrem fetma (klass 3)",
+    "hrvBalanced": "Balanserad",
+    "hrvUnbalanced": "Obalanserad",
+    "hrvLow": "Låg",
+    "hrvPoor": "Dålig",
+    "labelNoData": "Ingen data",
+    "errorTitle": "Kunde inte ladda din hälsodata",
+    "errorDescription": "Något gick fel när din dagliga hälsostatistik laddades. Försök igen.",
+    "retry": "Försök igen"
+  },
+  "weight": {
+    "title": "Vikt",
+    "subtitle": "Spåra din vikt och kroppssammansättning över tid",
+    "logButton": "Logga vikt",
+    "targetButton": "Ange mål",
+    "sourceGarmin": "Från Garmin Connect",
+    "toggleDetails": "Visa/dölj kroppssammansättning",
+    "chartTitle": "Viktutveckling",
+    "chartWeightSeries": "Vikt",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera post",
+      "delete": "Ta bort post"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Kroppsfett",
+      "bodyWater": "Kroppsvätska",
+      "boneMass": "Benmassa",
+      "muscleMass": "Muskelmassa"
+    },
+    "form": {
+      "addTitle": "Logga vikt",
+      "editTitle": "Redigera viktpost",
+      "description": "Registrera din vikt och eventuellt din kroppssammansättning.",
+      "date": "Datum",
+      "dateRequired": "Välj ett datum.",
+      "weight": "Vikt",
+      "weightRequired": "Ange din vikt.",
+      "weightInvalid": "Ange en vikt större än noll.",
+      "bodyComposition": "Kroppssammansättning (valfritt)",
+      "bmi": "BMI",
+      "bodyFat": "Kroppsfett (%)",
+      "bodyWater": "Kroppsvätska (%)",
+      "boneMass": "Benmassa",
+      "muscleMass": "Muskelmassa",
+      "create": "Logga",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Vikt loggad.",
+      "updateSuccess": "Viktpost uppdaterad.",
+      "saveError": "Kunde inte spara din viktpost. Försök igen."
+    },
+    "target": {
+      "title": "Ange viktmål",
+      "description": "Välj en målvikt eller rensa fältet för att ta bort den.",
+      "weight": "Målvikt",
+      "hint": "Lämna tomt för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Viktmål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt viktmål. Försök igen."
+    },
+    "empty": {
+      "title": "Inga viktposter än",
+      "description": "Logga din vikt för att börja spåra dina framsteg över tid."
+    },
+    "error": {
+      "title": "Kunde inte ladda din vikthistorik",
+      "description": "Något gick fel när dina viktposter laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort viktpost",
+      "body": "Den här viktposten raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Viktpost borttagen.",
+      "error": "Kunde inte ta bort viktposten. Försök igen."
+    }
+  },
+  "steps": {
+    "title": "Steg",
+    "subtitle": "Spåra ditt dagliga stegantal över tid",
+    "logButton": "Logga steg",
+    "targetButton": "Ange mål",
+    "sourceGarmin": "Från Garmin Connect",
+    "chartTitle": "Stegutveckling",
+    "chartStepsSeries": "Steg",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera post",
+      "delete": "Ta bort post"
+    },
+    "form": {
+      "addTitle": "Logga steg",
+      "editTitle": "Redigera stegpost",
+      "description": "Registrera ditt stegantal för dagen.",
+      "date": "Datum",
+      "dateRequired": "Välj ett datum.",
+      "steps": "Steg",
+      "stepsRequired": "Ange ditt stegantal.",
+      "stepsInvalid": "Ange ett stegantal större än noll.",
+      "create": "Logga",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Steg loggade.",
+      "updateSuccess": "Stegpost uppdaterad.",
+      "saveError": "Kunde inte spara din stegpost. Försök igen."
+    },
+    "target": {
+      "title": "Ange stegmål",
+      "description": "Välj ett dagligt stegmål eller rensa fältet för att ta bort det.",
+      "steps": "Dagligt stegmål",
+      "hint": "Lämna tomt för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Stegmål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt stegmål. Försök igen."
+    },
+    "empty": {
+      "title": "Inga stegposter än",
+      "description": "Logga dina steg för att börja spåra din aktivitet över tid."
+    },
+    "error": {
+      "title": "Kunde inte ladda din steghistorik",
+      "description": "Något gick fel när dina stegposter laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort stegpost",
+      "body": "Den här stegposten raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Stegpost borttagen.",
+      "error": "Kunde inte ta bort stegposten. Försök igen."
+    }
+  },
+  "rhr": {
+    "title": "Vilopuls",
+    "subtitle": "Spåra din vilopuls över tid",
+    "sourceGarmin": "Från Garmin Connect",
+    "chartTitle": "Vilopulsutveckling",
+    "chartSeries": "Vilopuls",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "empty": {
+      "title": "Ingen vilopulsdata än",
+      "description": "Vilopuls registreras tillsammans med din sömn. Synka en enhet som spårar den för att se din trend här."
+    },
+    "error": {
+      "title": "Kunde inte ladda din vilopulshistorik",
+      "description": "Något gick fel när din vilopulsdata laddades. Försök igen.",
+      "retry": "Försök igen"
+    }
+  },
+  "sleep": {
+    "title": "Sömn",
+    "subtitle": "Spåra sömnlängd och sömnkvalitet över tid",
+    "logButton": "Logga sömn",
+    "targetButton": "Ange mål",
+    "sourceGarmin": "Från Garmin Connect",
+    "toggleDetails": "Visa/dölj sömndetaljer",
+    "chartTitle": "Sömnutveckling",
+    "chartSleepSeries": "Sömn",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera post",
+      "delete": "Ta bort post"
+    },
+    "score": "Poäng",
+    "hrvBalanced": "Balanserad",
+    "hrvUnbalanced": "Obalanserad",
+    "hrvLow": "Låg",
+    "hrvPoor": "Dålig",
+    "scoreExcellent": "Utmärkt",
+    "scoreGood": "Bra",
+    "scoreFair": "Godkänd",
+    "scorePoor": "Dålig",
+    "detail": {
+      "tabsLabel": "Sömndetaljsektioner",
+      "tabScore": "Sömnpoäng",
+      "tabDetails": "Sömndetaljer",
+      "deep": "Djup",
+      "light": "Lätt",
+      "rem": "REM",
+      "awake": "Vaken",
+      "score": "Sömnpoäng",
+      "quality": "Kvalitet",
+      "duration": "Varaktighet",
+      "restingHeartRate": "Vilopuls",
+      "avgHeartRate": "Genomsnittlig puls",
+      "minHeartRate": "Lägsta puls",
+      "maxHeartRate": "Högsta puls",
+      "skinTempDeviation": "Hudtemp. avvikelse",
+      "hrv": "HRV-status",
+      "spo2": "Genomsnittlig SpO₂",
+      "lowestSpo2": "Lägsta SpO₂",
+      "highestSpo2": "Högsta SpO₂",
+      "avgRespiration": "Genomsnittlig andning",
+      "lowestRespiration": "Lägsta andning",
+      "highestRespiration": "Högsta andning",
+      "avgSleepStress": "Genomsnittlig sömnstress",
+      "awakeCount": "Uppvaknanden",
+      "summary": "Sammanfattning",
+      "breakdown": "Uppdelning",
+      "overview": "Översikt",
+      "heartRate": "Hjärtfrekvens",
+      "bloodOxygen": "Blodsyre",
+      "respiration": "Andning",
+      "avg": "Genomsn.",
+      "min": "Min",
+      "max": "Max",
+      "noData": "Ingen data registrerad."
+    },
+    "hypnogram": {
+      "title": "Sömnfaser",
+      "deep": "Djup",
+      "light": "Lätt",
+      "rem": "REM",
+      "awake": "Vaken",
+      "noData": "Ingen faslinje tillgänglig."
+    },
+    "form": {
+      "addTitle": "Logga sömn",
+      "editTitle": "Redigera sömnpost",
+      "description": "Registrera sömnlängd och eventuellt fasuppdelning och mätvärden.",
+      "date": "Datum",
+      "dateRequired": "Välj ett datum.",
+      "totalSleep": "Total sömn",
+      "totalSleepRequired": "Ange hur länge du sov.",
+      "hours": "Timmar",
+      "minutes": "Minuter",
+      "stageBreakdown": "Fasuppdelning (valfritt)",
+      "deep": "Djup sömn",
+      "light": "Lätt sömn",
+      "rem": "REM-sömn",
+      "awake": "Vaken",
+      "metrics": "Mätvärden (valfritt)",
+      "sleepScore": "Sömnpoäng (0–100)",
+      "restingHeartRate": "Vilopuls (slag/min)",
+      "skinTempDeviation": "Hudtemp. avvikelse (°C)",
+      "spo2": "Genomsnittlig SpO₂ (%)",
+      "sleepTimes": "Sömntider (valfritt)",
+      "startTime": "Sömn börjar",
+      "endTime": "Sömn slutar",
+      "endBeforeStart": "Sömnslut måste vara efter starttid.",
+      "awakeCount": "Uppvaknanden",
+      "heartRate": "Hjärtfrekvens (valfritt)",
+      "avgHeartRate": "Genomsnittlig puls (slag/min)",
+      "minHeartRate": "Lägsta puls (slag/min)",
+      "maxHeartRate": "Högsta puls (slag/min)",
+      "bloodOxygen": "Blodsyre (valfritt)",
+      "lowestSpo2": "Lägsta SpO₂ (%)",
+      "highestSpo2": "Högsta SpO₂ (%)",
+      "avgSleepStress": "Genomsnittlig sömnstress (0–100)",
+      "sleepStages": "Sömnfaser (valfritt)",
+      "noStages": "Inga faser tillagda ännu.",
+      "addStage": "Lägg till fas",
+      "removeStage": "Ta bort fas",
+      "stageLabel": "Fas {index}",
+      "stageType": "Fas",
+      "stageDeep": "Djup",
+      "stageLight": "Lätt",
+      "stageRem": "REM",
+      "stageAwake": "Vaken",
+      "stageStart": "Start",
+      "stageEnd": "Slut",
+      "stageDuration": "Varaktighet",
+      "create": "Logga",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Sömn loggad.",
+      "updateSuccess": "Sömnpost uppdaterad.",
+      "saveError": "Kunde inte spara din sömnpost. Försök igen."
+    },
+    "target": {
+      "title": "Ange sömnmål",
+      "description": "Välj ett nattligt sömnmål eller rensa fälten för att ta bort det.",
+      "hours": "Timmar",
+      "minutes": "Minuter",
+      "hint": "Lämna tomt för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Sömnmål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt sömnmål. Försök igen."
+    },
+    "empty": {
+      "title": "Inga sömnposter än",
+      "description": "Logga en natts sömn för att börja spåra din vila över tid."
+    },
+    "error": {
+      "title": "Kunde inte ladda din sömnhistorik",
+      "description": "Något gick fel när dina sömnposter laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort sömnpost",
+      "body": "Den här sömnposten raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Sömnpost borttagen.",
+      "error": "Kunde inte ta bort sömnposten. Försök igen."
+    }
+  },
+  "water": {
+    "title": "Vattenintag",
+    "subtitle": "Spåra ditt dagliga vattenintag över tid",
+    "logButton": "Logga vatten",
+    "targetButton": "Ange mål",
+    "sourceGarmin": "Från Garmin Connect",
+    "chartTitle": "Vattenintagutveckling",
+    "chartWaterSeries": "Vatten",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera post",
+      "delete": "Ta bort post"
+    },
+    "form": {
+      "addTitle": "Logga vatten",
+      "editTitle": "Redigera vattenpost",
+      "description": "Registrera ditt vattenintag för dagen.",
+      "date": "Datum",
+      "dateRequired": "Välj ett datum.",
+      "amount": "Mängd",
+      "amountRequired": "Ange en mängd.",
+      "amountInvalid": "Ange en mängd större än noll.",
+      "create": "Logga",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Vatten loggat.",
+      "updateSuccess": "Vattenpost uppdaterad.",
+      "saveError": "Kunde inte spara din vattenpost. Försök igen."
+    },
+    "target": {
+      "title": "Ange vattenmål",
+      "description": "Välj ett dagligt vattenmål eller rensa fältet för att ta bort det.",
+      "amount": "Dagligt mål",
+      "hint": "Lämna tomt för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Vattenmål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt vattenmål. Försök igen."
+    },
+    "empty": {
+      "title": "Inga vattenposter än",
+      "description": "Logga ditt vattenintag för att börja spåra din hydrering över tid."
+    },
+    "error": {
+      "title": "Kunde inte ladda din vattenhistorik",
+      "description": "Något gick fel när dina vattenposter laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort vattenpost",
+      "body": "Den här vattenposten raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Vattenpost borttagen.",
+      "error": "Kunde inte ta bort vattenposten. Försök igen."
+    }
+  },
+  "poop": {
+    "title": "Tarmrörelser",
+    "subtitle": "Spåra dina tarmrörelser över tid",
+    "logButton": "Logga post",
+    "targetButton": "Ange mål",
+    "chartTitle": "Daglig frekvens",
+    "chartCountSeries": "Tarmrörelser",
+    "chartTargetSeries": "Mål",
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera post",
+      "delete": "Ta bort post"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Tarmrörelse"
+    },
+    "form": {
+      "addTitle": "Logga tarmrörelse",
+      "editTitle": "Redigera tarmrörelse",
+      "description": "Registrera tidpunkt och detaljer för din tarmrörelse.",
+      "dateTime": "Datum och tid",
+      "dateTimeRequired": "Välj ett datum och en tid.",
+      "bristolType": "Bristol avföringstyp",
+      "color": "Färg",
+      "notes": "Anteckningar",
+      "none": "Ingen",
+      "colors": {
+        "brown": "Brun",
+        "dark_brown": "Mörkbrun",
+        "light_brown": "Ljusbrun",
+        "yellow": "Gul",
+        "green": "Grön",
+        "black": "Svart",
+        "red": "Röd",
+        "white": "Vit"
+      },
+      "create": "Logga",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Tarmrörelse loggad.",
+      "updateSuccess": "Tarmrörelse uppdaterad.",
+      "saveError": "Kunde inte spara din post. Försök igen."
+    },
+    "target": {
+      "title": "Ange tarmrörelsemål",
+      "description": "Välj ett dagligt tarmrörelsemål eller rensa fältet för att ta bort det.",
+      "count": "Mål per dag",
+      "hint": "Lämna tomt för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Tarmrörelsemål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt mål. Försök igen."
+    },
+    "empty": {
+      "title": "Inga poster än",
+      "description": "Logga en tarmrörelse för att börja spåra över tid."
+    },
+    "error": {
+      "title": "Kunde inte ladda din historik",
+      "description": "Något gick fel när dina poster laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort post",
+      "body": "Den här posten raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Post borttagen.",
+      "error": "Kunde inte ta bort posten. Försök igen."
+    }
+  },
+  "fasting": {
+    "title": "Fasta",
+    "subtitle": "Starta en fasta, spåra dina framsteg och granska din historik",
+    "startButton": "Starta fasta",
+    "targetButton": "Ange mål",
+    "sourceGarmin": "Från Garmin Connect",
+    "active": {
+      "title": "Pågående fasta",
+      "started": "Startad",
+      "target": "Mål",
+      "complete": "Slutför",
+      "break": "Avsluta fasta",
+      "cancel": "Avbryt",
+      "completeHint": "Du kan slutföra fastan när du nått ditt mål."
+    },
+    "stats": {
+      "totalFasts": "Totala fastor",
+      "currentStreak": "Nuvarande svit",
+      "longestStreak": "Längsta svit",
+      "avgDuration": "Genomsnittlig varaktighet",
+      "totalTime": "Total fastetid",
+      "completionRate": "Genomförandegrad",
+      "days": "dagar"
+    },
+    "types": {
+      "16:8": "16:8 (16h fasta, 8h ätfönster)",
+      "18:6": "18:6 (18h fasta, 6h ätfönster)",
+      "20:4": "20:4 (20h fasta, 4h ätfönster)",
+      "OMAD": "OMAD (en måltid per dag)",
+      "24h": "24-timmars fasta",
+      "36h": "36-timmars fasta",
+      "48h": "48-timmars fasta",
+      "72h": "72-timmars fasta",
+      "custom": "Anpassad"
+    },
+    "status": {
+      "in_progress": "Pågår",
+      "completed": "Slutförd",
+      "broken": "Avbruten",
+      "cancelled": "Avbokad"
+    },
+    "interval": {
+      "label": "Tidsperiod",
+      "last_7_days": "Senaste 7 dagarna",
+      "last_30_days": "Senaste 30 dagarna",
+      "last_90_days": "Senaste 90 dagarna",
+      "last_year": "Senaste året",
+      "all_time": "Hela tiden"
+    },
+    "actions": {
+      "edit": "Redigera fasta",
+      "delete": "Ta bort fasta"
+    },
+    "list": {
+      "notesLabel": "Anteckningar"
+    },
+    "form": {
+      "addTitle": "Starta fasta",
+      "editTitle": "Redigera fastsession",
+      "description": "Välj ett fasteprotokoll och när det startade.",
+      "type": "Fasteprotokoll",
+      "customDuration": "Anpassad varaktighet",
+      "customDurationHint": "Fastans längd i timmar (1–72).",
+      "hours": "timmar",
+      "startTime": "Starttid",
+      "startTimeRequired": "Välj en starttid.",
+      "endTime": "Sluttid",
+      "status": "Status",
+      "notes": "Anteckningar",
+      "create": "Starta",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "createSuccess": "Fasta startad.",
+      "updateSuccess": "Fastsession uppdaterad.",
+      "saveError": "Kunde inte spara din fastsession. Försök igen."
+    },
+    "target": {
+      "title": "Ange fastemål",
+      "description": "Välj en målfastelängd eller rensa båda fälten för att ta bort den.",
+      "hours": "Timmar",
+      "minutes": "Minuter",
+      "hint": "Lämna båda tomma för att ta bort ditt mål.",
+      "save": "Spara",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "saveSuccess": "Fastemål uppdaterat.",
+      "saveError": "Kunde inte uppdatera ditt fastemål. Försök igen."
+    },
+    "complete": {
+      "success": "Fasta avslutad.",
+      "error": "Kunde inte avsluta din fasta. Försök igen."
+    },
+    "empty": {
+      "title": "Inga fastor än",
+      "description": "Starta en fasta för att börja spåra din fastehistorik."
+    },
+    "error": {
+      "title": "Kunde inte ladda din fastehistorik",
+      "description": "Något gick fel när dina fastsessioner laddades. Försök igen.",
+      "retry": "Försök igen"
+    },
+    "delete": {
+      "title": "Ta bort fastsession",
+      "body": "Den här fastsessionen raderas permanent. Det kan inte ångras.",
+      "confirm": "Ta bort",
+      "cancel": "Avbryt",
+      "close": "Stäng",
+      "success": "Fastsession borttagen.",
+      "error": "Kunde inte ta bort fastsessionen. Försök igen."
+    }
+  }
+}

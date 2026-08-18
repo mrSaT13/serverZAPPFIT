@@ -1,0 +1,43 @@
+{
+  "title": "Ara",
+  "subtitle": "Endurain genelinde kullanıcı, etkinlik ve ekipman bulun.",
+  "placeholder": "Ara…",
+  "clear": "Aramayı temizle",
+  "scopes": {
+    "users": "Kullanıcılar",
+    "activities": "Etkinlikler",
+    "gears": "Ekipman"
+  },
+  "filters": {
+    "all": "Tüm türler",
+    "activityType": "Etkinlik türüne göre filtrele",
+    "gearType": "Ekipman türüne göre filtrele"
+  },
+  "activityCategories": {
+    "running": "Koşu",
+    "cycling": "Bisiklet",
+    "swimming": "Yüzme",
+    "walking": "Yürüyüş ve doğa yürüyüşü",
+    "racquet": "Raket sporları",
+    "rowing": "Kürek ve kano",
+    "winterSports": "Kış sporları",
+    "waterSports": "Su sporları",
+    "skating": "Paten"
+  },
+  "results": {
+    "inactive": "Pasif"
+  },
+  "idle": {
+    "title": "Endurain'de ara",
+    "description": "Ne arayacağınızı seçin, ardından eşleşmeleri görmek için yazmaya başlayın."
+  },
+  "empty": {
+    "title": "Eşleşme bulunamadı",
+    "description": "“{term}” ile eşleşen bir şey yok. Farklı bir arama deneyin."
+  },
+  "error": {
+    "title": "Arama başarısız oldu",
+    "description": "Aramanızı çalıştıramadık. Bağlantınızı kontrol edip tekrar deneyin.",
+    "retry": "Tekrar dene"
+  }
+}

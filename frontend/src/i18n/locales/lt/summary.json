@@ -1,0 +1,49 @@
+{
+  "title": "Suvestinė",
+  "subtitle": "Peržiūrėkite savo treniruočių sumas ir tendencijas laikui bėgant.",
+  "viewType": {
+    "label": "Suvestinės laikotarpis",
+    "week": "Savaitė",
+    "month": "Mėnuo",
+    "year": "Metai",
+    "lifetime": "Visą laiką"
+  },
+  "filters": {
+    "type": "Veiklos tipas",
+    "allTypes": "Visi tipai"
+  },
+  "period": {
+    "previous": "Ankstesnis laikotarpis",
+    "next": "Kitas laikotarpis",
+    "picker": "Pasirinkti laikotarpį",
+    "allTime": "Visas laikas"
+  },
+  "metrics": {
+    "distance": "Atstumas",
+    "duration": "Trukmė",
+    "elevation": "Aukščio pokytis",
+    "calories": "Kalorijos",
+    "activities": "Veiklos"
+  },
+  "breakdown": {
+    "title": "Išskaidymas",
+    "period": "Laikotarpis",
+    "weekNumber": "Savaitė {number}"
+  },
+  "typeBreakdown": {
+    "title": "Pagal veiklos tipą",
+    "type": "Tipas"
+  },
+  "activities": {
+    "title": "Šio laikotarpio veiklos"
+  },
+  "empty": {
+    "title": "Šiuo laikotarpiu veiklų nėra",
+    "description": "Jokios veiklos neatitinka pasirinkto laikotarpio ir tipo."
+  },
+  "error": {
+    "title": "Nepavyko įkelti suvestinės",
+    "description": "Įkeliant jūsų statistiką kažkas nepavyko. Patikrinkite ryšį ir bandykite dar kartą.",
+    "retry": "Bandyti dar kartą"
+  }
+}

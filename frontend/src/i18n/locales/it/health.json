@@ -1,0 +1,648 @@
+{
+  "title": "Salute",
+  "subtitle": "Visualizza tutti i tuoi dati sulla salute in un unico posto",
+  "nav": {
+    "label": "Sezioni salute",
+    "soon": "Presto",
+    "dashboard": "Dashboard",
+    "sleep": "Sonno",
+    "rhr": "Frequenza cardiaca a riposo",
+    "steps": "Passi",
+    "weight": "Peso",
+    "fasting": "Digiuno",
+    "water": "Idratazione",
+    "poop": "Movimenti intestinali"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Il tuo benessere quotidiano a colpo d'occhio",
+    "sleep": "Sonno",
+    "restingHeartRate": "FC a riposo",
+    "avgSkinTemperatureDeviation": "Dev. temp. cutanea",
+    "weight": "Peso",
+    "bmi": "BMI",
+    "steps": "Passi",
+    "fasting": "Digiuno",
+    "water": "Idratazione",
+    "poop": "Movimenti intestinali",
+    "noSleepTarget": "Nessun obiettivo sonno",
+    "noWeightTarget": "Nessun obiettivo peso",
+    "noStepsTarget": "Nessun obiettivo passi",
+    "noFastingTarget": "Nessun obiettivo digiuno",
+    "noWaterTarget": "Nessun obiettivo idratazione",
+    "noPoopTarget": "Nessun obiettivo movimenti intestinali",
+    "stepsTargetLabel": "passi",
+    "poopTargetLabel": "/ giorno",
+    "noWeightData": "Nessun dato sul peso",
+    "bmiUnderweight": "Sottopeso",
+    "bmiNormalWeight": "Peso normale",
+    "bmiOverweight": "Sovrappeso",
+    "bmiObesityClass1": "Obesità (Classe 1)",
+    "bmiObesityClass2": "Obesità (Classe 2)",
+    "bmiObesityClass3": "Obesità grave (Classe 3)",
+    "hrvBalanced": "Equilibrato",
+    "hrvUnbalanced": "Non equilibrato",
+    "hrvLow": "Basso",
+    "hrvPoor": "Scarso",
+    "labelNoData": "Nessun dato",
+    "errorTitle": "Impossibile caricare i dati sulla salute",
+    "errorDescription": "Si è verificato un errore durante il caricamento delle statistiche di salute quotidiane. Riprova.",
+    "retry": "Riprova"
+  },
+  "weight": {
+    "title": "Peso",
+    "subtitle": "Monitora il tuo peso e la composizione corporea nel tempo",
+    "logButton": "Registra peso",
+    "targetButton": "Imposta obiettivo",
+    "sourceGarmin": "Da Garmin Connect",
+    "toggleDetails": "Mostra/nascondi dettagli composizione corporea",
+    "chartTitle": "Andamento del peso",
+    "chartWeightSeries": "Peso",
+    "chartTargetSeries": "Obiettivo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica voce",
+      "delete": "Elimina voce"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Grasso corporeo",
+      "bodyWater": "Acqua corporea",
+      "boneMass": "Massa ossea",
+      "muscleMass": "Massa muscolare"
+    },
+    "form": {
+      "addTitle": "Registra peso",
+      "editTitle": "Modifica voce peso",
+      "description": "Registra il tuo peso e, opzionalmente, la composizione corporea.",
+      "date": "Data",
+      "dateRequired": "Scegli una data.",
+      "weight": "Peso",
+      "weightRequired": "Inserisci il tuo peso.",
+      "weightInvalid": "Inserisci un peso maggiore di zero.",
+      "bodyComposition": "Composizione corporea (opzionale)",
+      "bmi": "BMI",
+      "bodyFat": "Grasso corporeo (%)",
+      "bodyWater": "Acqua corporea (%)",
+      "boneMass": "Massa ossea",
+      "muscleMass": "Massa muscolare",
+      "create": "Registra",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Peso registrato.",
+      "updateSuccess": "Voce peso aggiornata.",
+      "saveError": "Impossibile salvare la voce peso. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo peso",
+      "description": "Scegli un peso obiettivo, oppure lascia il campo vuoto per rimuoverlo.",
+      "weight": "Peso obiettivo",
+      "hint": "Lascia vuoto per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo peso aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo peso. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessuna voce peso",
+      "description": "Registra il tuo peso per iniziare a monitorare i progressi nel tempo."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia del peso",
+      "description": "Si è verificato un errore durante il caricamento delle voci peso. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina voce peso",
+      "body": "Questa voce peso verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Voce peso eliminata.",
+      "error": "Impossibile eliminare la voce peso. Riprova."
+    }
+  },
+  "steps": {
+    "title": "Passi",
+    "subtitle": "Monitora il conteggio giornaliero dei passi nel tempo",
+    "logButton": "Registra passi",
+    "targetButton": "Imposta obiettivo",
+    "sourceGarmin": "Da Garmin Connect",
+    "chartTitle": "Andamento dei passi",
+    "chartStepsSeries": "Passi",
+    "chartTargetSeries": "Obiettivo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica voce",
+      "delete": "Elimina voce"
+    },
+    "form": {
+      "addTitle": "Registra passi",
+      "editTitle": "Modifica voce passi",
+      "description": "Registra il conteggio dei passi per la giornata.",
+      "date": "Data",
+      "dateRequired": "Scegli una data.",
+      "steps": "Passi",
+      "stepsRequired": "Inserisci il conteggio dei passi.",
+      "stepsInvalid": "Inserisci un conteggio maggiore di zero.",
+      "create": "Registra",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Passi registrati.",
+      "updateSuccess": "Voce passi aggiornata.",
+      "saveError": "Impossibile salvare la voce passi. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo passi",
+      "description": "Scegli un obiettivo giornaliero di passi, oppure lascia il campo vuoto per rimuoverlo.",
+      "steps": "Passi giornalieri obiettivo",
+      "hint": "Lascia vuoto per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo passi aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo passi. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessuna voce passi",
+      "description": "Registra i tuoi passi per iniziare a monitorare la tua attività nel tempo."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia dei passi",
+      "description": "Si è verificato un errore durante il caricamento delle voci passi. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina voce passi",
+      "body": "Questa voce passi verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Voce passi eliminata.",
+      "error": "Impossibile eliminare la voce passi. Riprova."
+    }
+  },
+  "rhr": {
+    "title": "Frequenza cardiaca a riposo",
+    "subtitle": "Monitora la tua frequenza cardiaca a riposo nel tempo",
+    "sourceGarmin": "Da Garmin Connect",
+    "chartTitle": "Andamento della FC a riposo",
+    "chartSeries": "Frequenza cardiaca a riposo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "empty": {
+      "title": "Ancora nessun dato sulla FC a riposo",
+      "description": "La frequenza cardiaca a riposo viene registrata insieme al sonno. Sincronizza un dispositivo che la monitora per vedere il tuo andamento qui."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia della FC a riposo",
+      "description": "Si è verificato un errore durante il caricamento dei dati sulla FC a riposo. Riprova.",
+      "retry": "Riprova"
+    }
+  },
+  "sleep": {
+    "title": "Sonno",
+    "subtitle": "Monitora la durata e la qualità del sonno nel tempo",
+    "logButton": "Registra sonno",
+    "targetButton": "Imposta obiettivo",
+    "sourceGarmin": "Da Garmin Connect",
+    "toggleDetails": "Mostra/nascondi dettagli sonno",
+    "chartTitle": "Andamento del sonno",
+    "chartSleepSeries": "Sonno",
+    "chartTargetSeries": "Obiettivo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica voce",
+      "delete": "Elimina voce"
+    },
+    "score": "Punteggio",
+    "hrvBalanced": "Equilibrato",
+    "hrvUnbalanced": "Non equilibrato",
+    "hrvLow": "Basso",
+    "hrvPoor": "Scarso",
+    "scoreExcellent": "Eccellente",
+    "scoreGood": "Buono",
+    "scoreFair": "Sufficiente",
+    "scorePoor": "Scarso",
+    "detail": {
+      "tabsLabel": "Sezioni dettaglio sonno",
+      "tabScore": "Punteggio sonno",
+      "tabDetails": "Dettagli sonno",
+      "deep": "Profondo",
+      "light": "Leggero",
+      "rem": "REM",
+      "awake": "Sveglio",
+      "score": "Punteggio sonno",
+      "quality": "Qualità",
+      "duration": "Durata",
+      "restingHeartRate": "FC a riposo",
+      "avgHeartRate": "FC media",
+      "minHeartRate": "FC minima",
+      "maxHeartRate": "FC massima",
+      "skinTempDeviation": "Dev. temp. cutanea",
+      "hrv": "Stato HRV",
+      "spo2": "SpO₂ media",
+      "lowestSpo2": "SpO₂ minima",
+      "highestSpo2": "SpO₂ massima",
+      "avgRespiration": "Respirazione media",
+      "lowestRespiration": "Respirazione minima",
+      "highestRespiration": "Respirazione massima",
+      "avgSleepStress": "Stress medio nel sonno",
+      "awakeCount": "Risvegli",
+      "summary": "Riepilogo",
+      "breakdown": "Dettaglio",
+      "overview": "Panoramica",
+      "heartRate": "Frequenza cardiaca",
+      "bloodOxygen": "Ossigeno nel sangue",
+      "respiration": "Respirazione",
+      "avg": "Media",
+      "min": "Min",
+      "max": "Max",
+      "noData": "Nessun dato registrato."
+    },
+    "hypnogram": {
+      "title": "Fasi del sonno",
+      "deep": "Profondo",
+      "light": "Leggero",
+      "rem": "REM",
+      "awake": "Sveglio",
+      "noData": "Nessuna cronologia delle fasi disponibile."
+    },
+    "form": {
+      "addTitle": "Registra sonno",
+      "editTitle": "Modifica voce sonno",
+      "description": "Registra la durata del sonno e, opzionalmente, il dettaglio delle fasi e le metriche.",
+      "date": "Data",
+      "dateRequired": "Scegli una data.",
+      "totalSleep": "Sonno totale",
+      "totalSleepRequired": "Inserisci quanto hai dormito.",
+      "hours": "Ore",
+      "minutes": "Minuti",
+      "stageBreakdown": "Dettaglio fasi (opzionale)",
+      "deep": "Sonno profondo",
+      "light": "Sonno leggero",
+      "rem": "Sonno REM",
+      "awake": "Sveglio",
+      "metrics": "Metriche (opzionale)",
+      "sleepScore": "Punteggio sonno (0–100)",
+      "restingHeartRate": "Frequenza cardiaca a riposo (bpm)",
+      "skinTempDeviation": "Dev. temperatura cutanea (°C)",
+      "spo2": "SpO₂ media (%)",
+      "sleepTimes": "Orari di sonno (opzionale)",
+      "startTime": "Inizio sonno",
+      "endTime": "Fine sonno",
+      "endBeforeStart": "La fine del sonno deve essere successiva all'inizio.",
+      "awakeCount": "Risvegli",
+      "heartRate": "Frequenza cardiaca (opzionale)",
+      "avgHeartRate": "FC media (bpm)",
+      "minHeartRate": "FC minima (bpm)",
+      "maxHeartRate": "FC massima (bpm)",
+      "bloodOxygen": "Ossigeno nel sangue (opzionale)",
+      "lowestSpo2": "SpO₂ minima (%)",
+      "highestSpo2": "SpO₂ massima (%)",
+      "avgSleepStress": "Stress medio nel sonno (0–100)",
+      "sleepStages": "Fasi del sonno (opzionale)",
+      "noStages": "Ancora nessuna fase aggiunta.",
+      "addStage": "Aggiungi fase",
+      "removeStage": "Rimuovi fase",
+      "stageLabel": "Fase {index}",
+      "stageType": "Fase",
+      "stageDeep": "Profondo",
+      "stageLight": "Leggero",
+      "stageRem": "REM",
+      "stageAwake": "Sveglio",
+      "stageStart": "Inizio",
+      "stageEnd": "Fine",
+      "stageDuration": "Durata",
+      "create": "Registra",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Sonno registrato.",
+      "updateSuccess": "Voce sonno aggiornata.",
+      "saveError": "Impossibile salvare la voce sonno. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo sonno",
+      "description": "Scegli un obiettivo di sonno notturno, oppure lascia i campi vuoti per rimuoverlo.",
+      "hours": "Ore",
+      "minutes": "Minuti",
+      "hint": "Lascia vuoto per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo sonno aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo sonno. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessuna voce sonno",
+      "description": "Registra una notte di sonno per iniziare a monitorare il tuo riposo nel tempo."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia del sonno",
+      "description": "Si è verificato un errore durante il caricamento delle voci sonno. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina voce sonno",
+      "body": "Questa voce sonno verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Voce sonno eliminata.",
+      "error": "Impossibile eliminare la voce sonno. Riprova."
+    }
+  },
+  "water": {
+    "title": "Idratazione",
+    "subtitle": "Monitora la tua assunzione giornaliera di acqua nel tempo",
+    "logButton": "Registra acqua",
+    "targetButton": "Imposta obiettivo",
+    "sourceGarmin": "Da Garmin Connect",
+    "chartTitle": "Andamento dell'idratazione",
+    "chartWaterSeries": "Acqua",
+    "chartTargetSeries": "Obiettivo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica voce",
+      "delete": "Elimina voce"
+    },
+    "form": {
+      "addTitle": "Registra acqua",
+      "editTitle": "Modifica voce acqua",
+      "description": "Registra l'assunzione di acqua per la giornata.",
+      "date": "Data",
+      "dateRequired": "Scegli una data.",
+      "amount": "Quantità",
+      "amountRequired": "Inserisci una quantità.",
+      "amountInvalid": "Inserisci una quantità maggiore di zero.",
+      "create": "Registra",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Acqua registrata.",
+      "updateSuccess": "Voce acqua aggiornata.",
+      "saveError": "Impossibile salvare la voce acqua. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo idratazione",
+      "description": "Scegli un obiettivo giornaliero di acqua, oppure lascia il campo vuoto per rimuoverlo.",
+      "amount": "Obiettivo giornaliero",
+      "hint": "Lascia vuoto per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo idratazione aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo idratazione. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessuna voce acqua",
+      "description": "Registra la tua assunzione di acqua per iniziare a monitorare la tua idratazione nel tempo."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia dell'idratazione",
+      "description": "Si è verificato un errore durante il caricamento delle voci acqua. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina voce acqua",
+      "body": "Questa voce acqua verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Voce acqua eliminata.",
+      "error": "Impossibile eliminare la voce acqua. Riprova."
+    }
+  },
+  "poop": {
+    "title": "Movimenti intestinali",
+    "subtitle": "Monitora i tuoi movimenti intestinali nel tempo",
+    "logButton": "Registra voce",
+    "targetButton": "Imposta obiettivo",
+    "chartTitle": "Frequenza giornaliera",
+    "chartCountSeries": "Movimenti intestinali",
+    "chartTargetSeries": "Obiettivo",
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica voce",
+      "delete": "Elimina voce"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Movimento intestinale"
+    },
+    "form": {
+      "addTitle": "Registra movimento intestinale",
+      "editTitle": "Modifica movimento intestinale",
+      "description": "Registra l'orario e i dettagli del movimento intestinale.",
+      "dateTime": "Data e ora",
+      "dateTimeRequired": "Scegli una data e un'ora.",
+      "bristolType": "Tipo Bristol",
+      "color": "Colore",
+      "notes": "Note",
+      "none": "Nessuno",
+      "colors": {
+        "brown": "Marrone",
+        "dark_brown": "Marrone scuro",
+        "light_brown": "Marrone chiaro",
+        "yellow": "Giallo",
+        "green": "Verde",
+        "black": "Nero",
+        "red": "Rosso",
+        "white": "Bianco"
+      },
+      "create": "Registra",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Movimento intestinale registrato.",
+      "updateSuccess": "Movimento intestinale aggiornato.",
+      "saveError": "Impossibile salvare la voce. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo movimenti intestinali",
+      "description": "Scegli un obiettivo giornaliero, oppure lascia il campo vuoto per rimuoverlo.",
+      "count": "Obiettivo per giorno",
+      "hint": "Lascia vuoto per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo movimenti intestinali aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessuna voce",
+      "description": "Registra un movimento intestinale per iniziare a monitorare nel tempo."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia",
+      "description": "Si è verificato un errore durante il caricamento delle voci. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina voce",
+      "body": "Questa voce verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Voce eliminata.",
+      "error": "Impossibile eliminare la voce. Riprova."
+    }
+  },
+  "fasting": {
+    "title": "Digiuno",
+    "subtitle": "Inizia un digiuno, monitora i progressi e rivedi la cronologia",
+    "startButton": "Inizia il digiuno",
+    "targetButton": "Imposta obiettivo",
+    "sourceGarmin": "Da Garmin Connect",
+    "active": {
+      "title": "Digiuno in corso",
+      "started": "Iniziato",
+      "target": "Obiettivo",
+      "complete": "Completa",
+      "break": "Interrompi digiuno",
+      "cancel": "Annulla",
+      "completeHint": "Puoi completare il digiuno una volta raggiunto l'obiettivo."
+    },
+    "stats": {
+      "totalFasts": "Digiuni totali",
+      "currentStreak": "Serie attuale",
+      "longestStreak": "Serie più lunga",
+      "avgDuration": "Durata media",
+      "totalTime": "Tempo totale di digiuno",
+      "completionRate": "Tasso di completamento",
+      "days": "giorni"
+    },
+    "types": {
+      "16:8": "16:8 (16h digiuno, 8h mangiare)",
+      "18:6": "18:6 (18h digiuno, 6h mangiare)",
+      "20:4": "20:4 (20h digiuno, 4h mangiare)",
+      "OMAD": "OMAD (un pasto al giorno)",
+      "24h": "Digiuno di 24 ore",
+      "36h": "Digiuno di 36 ore",
+      "48h": "Digiuno di 48 ore",
+      "72h": "Digiuno di 72 ore",
+      "custom": "Personalizzato"
+    },
+    "status": {
+      "in_progress": "In corso",
+      "completed": "Completato",
+      "broken": "Interrotto",
+      "cancelled": "Annullato"
+    },
+    "interval": {
+      "label": "Intervallo di tempo",
+      "last_7_days": "Ultimi 7 giorni",
+      "last_30_days": "Ultimi 30 giorni",
+      "last_90_days": "Ultimi 90 giorni",
+      "last_year": "Ultimo anno",
+      "all_time": "Da sempre"
+    },
+    "actions": {
+      "edit": "Modifica digiuno",
+      "delete": "Elimina digiuno"
+    },
+    "list": {
+      "notesLabel": "Note"
+    },
+    "form": {
+      "addTitle": "Inizia il digiuno",
+      "editTitle": "Modifica sessione di digiuno",
+      "description": "Scegli un protocollo di digiuno e quando è iniziato.",
+      "type": "Protocollo di digiuno",
+      "customDuration": "Durata personalizzata",
+      "customDurationHint": "Durata del digiuno, in ore (1–72).",
+      "hours": "ore",
+      "startTime": "Ora di inizio",
+      "startTimeRequired": "Scegli un'ora di inizio.",
+      "endTime": "Ora di fine",
+      "status": "Stato",
+      "notes": "Note",
+      "create": "Inizia",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "createSuccess": "Digiuno avviato.",
+      "updateSuccess": "Sessione di digiuno aggiornata.",
+      "saveError": "Impossibile salvare la sessione di digiuno. Riprova."
+    },
+    "target": {
+      "title": "Imposta obiettivo digiuno",
+      "description": "Scegli una durata obiettivo del digiuno, oppure lascia entrambi i campi vuoti per rimuoverlo.",
+      "hours": "Ore",
+      "minutes": "Minuti",
+      "hint": "Lascia entrambi vuoti per rimuovere l'obiettivo.",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "saveSuccess": "Obiettivo digiuno aggiornato.",
+      "saveError": "Impossibile aggiornare l'obiettivo digiuno. Riprova."
+    },
+    "complete": {
+      "success": "Digiuno terminato.",
+      "error": "Impossibile terminare il digiuno. Riprova."
+    },
+    "empty": {
+      "title": "Ancora nessun digiuno",
+      "description": "Inizia un digiuno per cominciare a monitorare la tua cronologia."
+    },
+    "error": {
+      "title": "Impossibile caricare la cronologia del digiuno",
+      "description": "Si è verificato un errore durante il caricamento delle sessioni di digiuno. Riprova.",
+      "retry": "Riprova"
+    },
+    "delete": {
+      "title": "Elimina sessione di digiuno",
+      "body": "Questa sessione di digiuno verrà eliminata definitivamente. Non sarà possibile annullare l'operazione.",
+      "confirm": "Elimina",
+      "cancel": "Annulla",
+      "close": "Chiudi",
+      "success": "Sessione di digiuno eliminata.",
+      "error": "Impossibile eliminare la sessione di digiuno. Riprova."
+    }
+  }
+}

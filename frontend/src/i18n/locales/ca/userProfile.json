@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Usuari no trobat",
+    "description": "Aquest perfil no existeix o no és visible per a tu."
+  },
+  "error": {
+    "title": "No s'ha pogut carregar el perfil",
+    "description": "S'ha produït un error en carregar aquest perfil.",
+    "retry": "Torna-ho a intentar"
+  },
+  "editProfile": "Edita el perfil",
+  "activities": {
+    "weekNav": "Navega per les activitats per setmana",
+    "thisWeek": "Aquesta setmana",
+    "oneYearAgo": "Fa un any"
+  },
+  "stats": {
+    "thisMonth": "Activitats aquest mes",
+    "following": "Seguint",
+    "followers": "Seguidors"
+  },
+  "tabs": {
+    "activities": "Activitats",
+    "following": "Seguint",
+    "followers": "Seguidors"
+  },
+  "activitiesError": {
+    "title": "No s'han pogut carregar les activitats",
+    "description": "S'ha produït un error en carregar les activitats.",
+    "retry": "Torna-ho a intentar"
+  },
+  "listError": {
+    "title": "No s'ha pogut carregar la llista",
+    "description": "S'ha produït un error. Torna-ho a intentar.",
+    "retry": "Torna-ho a intentar"
+  },
+  "follow": {
+    "follow": "Segueix",
+    "requested": "Sol·licitat",
+    "following": "Seguint",
+    "withdraw": "Retira la sol·licitud",
+    "unfollow": "Deixa de seguir",
+    "cancel": "Cancel·la",
+    "close": "Tanca",
+    "followError": "No s'ha pogut enviar la sol·licitud de seguiment.",
+    "unfollowError": "No s'ha pogut actualitzar la sol·licitud de seguiment.",
+    "confirmCancelTitle": "Retira la sol·licitud",
+    "confirmCancelBody": "Retirar la teva sol·licitud de seguiment a {name}?",
+    "confirmUnfollowTitle": "Deixa de seguir {name}",
+    "confirmUnfollowBody": "Deixar de seguir {name}? Podràs seguir-lo/la de nou més endavant."
+  },
+  "list": {
+    "accept": "Accepta",
+    "decline": "Rebutja",
+    "remove": "Elimina",
+    "unfollow": "Deixa de seguir",
+    "cancel": "Cancel·la",
+    "close": "Tanca",
+    "accepted": "Acceptat",
+    "pending": "Pendent",
+    "acceptError": "No s'ha pogut acceptar la sol·licitud.",
+    "removeError": "No s'ha pogut actualitzar aquest seguidor.",
+    "unfollowError": "No s'ha pogut deixar de seguir aquest usuari.",
+    "confirmUnfollowTitle": "Deixa de seguir {name}",
+    "confirmUnfollowBody": "Deixar de seguir {name}? Podràs seguir-lo/la de nou més endavant.",
+    "confirmDeclineTitle": "Rebutja la sol·licitud",
+    "confirmDeclineBody": "Rebutjar la sol·licitud de seguiment de {name}?",
+    "confirmRemoveTitle": "Elimina el seguidor",
+    "confirmRemoveBody": "Eliminar {name} dels teus seguidors?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Encara no hi ha activitats",
+      "ownDescription": "Les teves activitats apareixeran aquí un cop les afegeixis o importis.",
+      "otherTitle": "Sense activitats per mostrar"
+    },
+    "following": {
+      "ownTitle": "Encara no segueixes ningú.",
+      "otherTitle": "Encara no segueix ningú."
+    },
+    "followers": {
+      "ownTitle": "Encara no tens cap seguidor.",
+      "otherTitle": "Sense seguidors de moment."
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Lep pozdrav,",
+  "common.team": "Ekipa Endurain",
+  "common.system": "Sistem Endurain",
+  "common.visit": "Obiščite Endurain na:",
+  "common.source_code": "Izvorna koda na:",
+  "common.copy_link": "Če zgornji gumb ne deluje, lahko kopirate in prilepite naslednjo povezavo v svoj brskalnik:",
+
+  "password_reset.subject": "Endurain - Ponastavitev gesla",
+  "password_reset.heading": "Zahteva za ponastavitev gesla",
+  "password_reset.greeting": "Pozdravljeni {name},",
+  "password_reset.intro": "Zahtevali ste ponastavitev gesla za svoj račun Endurain. Kliknite spodnji gumb za ponastavitev gesla:",
+  "password_reset.cta": "Ponastavi geslo",
+  "password_reset.security_label": "Varnostno obvestilo:",
+  "password_reset.security_notice": "Ta povezava bo iz varnostnih razlogov potekla čez 1 uro.",
+  "password_reset.ignore": "Če te ponastavitve gesla niste zahtevali, prezrite to e-pošto. Vaše geslo bo ostalo nespremenjeno.",
+
+  "signup_confirmation.subject": "Endurain - Potrdite svoj račun",
+  "signup_confirmation.heading": "Potrdite svoj račun",
+  "signup_confirmation.greeting": "Pozdravljeni {name},",
+  "signup_confirmation.intro": "Hvala, ker ste se registrirali v Endurain! Potrdite svoj račun s klikom na spodnji gumb:",
+  "signup_confirmation.cta": "Potrdi račun",
+  "signup_confirmation.security_label": "Varnostno obvestilo:",
+  "signup_confirmation.security_notice": "Ta potrditvena povezava bo potekla čez 24 ur.",
+  "signup_confirmation.ignore": "Če računa Endurain niste ustvarili, prezrite to e-pošto.",
+
+  "admin_signup.subject": "Endurain - Nova registracija uporabnika čaka na odobritev",
+  "admin_signup.heading": "Nova registracija zahteva odobritev",
+  "admin_signup.greeting": "Pozdravljeni {name},",
+  "admin_signup.intro": "Nov uporabnik se je registriral in čaka na odobritev:",
+  "admin_signup.user_label": "Uporabnik:",
+  "admin_signup.review": "Prijavite se v skrbniško ploščo Endurain, da pregledate in odobrite to zahtevo.",
+  "admin_signup.cta": "Pojdi na skrbniško ploščo",
+
+  "signup_approved.subject": "Endurain - Vaš račun je bil odobren",
+  "signup_approved.heading": "Vaš račun je zdaj aktiven",
+  "signup_approved.greeting": "Pozdravljeni {name},",
+  "signup_approved.intro": "Dobre novice! Vaš račun je bil odobren in je zdaj aktiven.",
+  "signup_approved.username_label": "Uporabniško ime:",
+  "signup_approved.login_intro": "Zdaj se lahko prijavite in začnete uporabljati Endurain:",
+  "signup_approved.cta": "Prijava v Endurain"
+}

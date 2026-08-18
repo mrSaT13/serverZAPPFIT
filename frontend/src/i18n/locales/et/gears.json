@@ -1,0 +1,152 @@
+{
+  "title": "Varustus",
+  "subtitle": "Jalgrattad, jalanõud ja varustus, millega tegevusi jälgid",
+  "buttonAddGear": "Lisa varustus",
+  "searchPlaceholder": "Otsi hüüdnime järgi",
+  "clearSearch": "Tühjenda otsing",
+  "showInactive": "Näita mitteaktiivseid",
+  "inactive": "Mitteaktiivne",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtrid",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Jalgratas",
+    "shoes": "Jalanõud",
+    "wetsuit": "Märgülikond",
+    "racquet": "Reket",
+    "skis": "Suusad",
+    "snowboard": "Lumelaud",
+    "windsurf": "Purjelaud",
+    "waterSportsBoard": "Veespordilaud",
+    "unknown": "Varustus"
+  },
+  "actions": {
+    "edit": "Muuda varustust",
+    "delete": "Kustuta varustus"
+  },
+  "form": {
+    "title": "Statistika",
+    "addTitle": "Lisa varustus",
+    "editTitle": "Muuda varustust",
+    "description": "Jälgi varustust, mida oma tegevusteks kasutad.",
+    "nickname": "Hüüdnimi",
+    "nicknameRequired": "Hüüdnimi on kohustuslik",
+    "nicknameTooLong": "Hüüdnimi tohib olla kuni 250 tähemärki",
+    "nicknameTaken": "Sul on juba selle hüüdnimega varustus",
+    "gearType": "Tüüp",
+    "brand": "Bränd",
+    "brandTooLong": "Bränd tohib olla kuni 250 tähemärki",
+    "model": "Mudel",
+    "modelTooLong": "Mudel tohib olla kuni 250 tähemärki",
+    "active": "Aktiivne",
+    "createdAt": "Loodud",
+    "createdAtRequired": "Loomiskuupäev on kohustuslik",
+    "initialDistance": "Algvahemaa",
+    "purchaseValue": "Ostuväärtus",
+    "totalCost": "Kogumaksumus",
+    "create": "Lisa varustus",
+    "save": "Salvesta muudatused",
+    "cancel": "Tühista",
+    "close": "Sulge",
+    "createSuccess": "Varustus lisatud",
+    "updateSuccess": "Varustus uuendatud",
+    "saveError": "Varustust ei õnnestunud salvestada. Palun proovi uuesti."
+  },
+  "delete": {
+    "title": "Kustuta varustus",
+    "body": "Kas oled kindel, et soovid kustutada „{nickname}“? Seda ei saa tagasi võtta.",
+    "confirm": "Kustuta",
+    "cancel": "Tühista",
+    "close": "Sulge",
+    "success": "Varustus kustutatud",
+    "error": "Varustust ei õnnestunud kustutada. Palun proovi uuesti."
+  },
+  "error": {
+    "title": "Varustust ei õnnestunud laadida",
+    "description": "Sinu varustuse laadimisel läks midagi valesti.",
+    "retry": "Proovi uuesti"
+  },
+  "empty": {
+    "title": "Veel pole ühtegi varustust",
+    "description": "Lisa jalgrattad, jalanõud ja varustus, mida kasutad, et hakata nende kasutust jälgima.",
+    "searchTitle": "Ükski varustus ei vasta sinu otsingule",
+    "searchDescription": "Proovi teist hüüdnime.",
+    "activeTitle": "Aktiivset varustust pole",
+    "activeDescription": "Lisa varustust või lülita sisse „Näita mitteaktiivseid“, et näha mitteaktiivset varustust."
+  },
+  "detail": {
+    "back": "Tagasi varustuse juurde",
+    "notFoundTitle": "Varustust ei leitud",
+    "notFoundDescription": "See varustus võib olla kustutatud või ei kuulu sulle.",
+    "totalDistance": "Vahemaa",
+    "totalTime": "Aeg",
+    "componentsCost": "Komponendid"
+  },
+  "components": {
+    "title": "Komponendid",
+    "add": "Lisa komponent",
+    "empty": "Veel pole ühtegi komponenti. Lisa osad, mille kulumist soovid jälgida.",
+    "unsupported": "See varustuse tüüp ei jälgi komponente.",
+    "noneActive": "Kõik komponendid on mitteaktiivsed. Lülita sisse „Näita mitteaktiivseid“, et neid näha.",
+    "inactive": "Mitteaktiivne",
+    "unitHours": "h",
+    "purchasedOn": "Ostetud {date}",
+    "wearLabel": "{name} kulumine",
+    "actions": {
+      "edit": "Muuda komponenti",
+      "delete": "Kustuta komponent"
+    },
+    "form": {
+      "addTitle": "Lisa komponent",
+      "editTitle": "Muuda komponenti",
+      "description": "Jälgi osi, mida vahetad, et nende kulumist jälgida.",
+      "type": "Tüüp",
+      "typePlaceholder": "Vali tüüp",
+      "typeRequired": "Tüüp on kohustuslik",
+      "brand": "Bränd",
+      "brandRequired": "Bränd on kohustuslik",
+      "brandTooLong": "Bränd tohib olla kuni 250 tähemärki",
+      "model": "Mudel",
+      "modelRequired": "Mudel on kohustuslik",
+      "modelTooLong": "Mudel tohib olla kuni 250 tähemärki",
+      "purchaseDate": "Ostetud",
+      "purchaseDateRequired": "Ostukuupäev on kohustuslik",
+      "retiredDate": "Kasutuselt kõrvaldatud",
+      "expectedDistance": "Oodatav vahemaa",
+      "expectedTime": "Oodatav aeg",
+      "purchaseValue": "Ostuväärtus",
+      "active": "Aktiivne",
+      "retiredBeforePurchase": "Kasutuselt kõrvaldamise kuupäev peab olema pärast ostukuupäeva.",
+      "create": "Lisa komponent",
+      "save": "Salvesta muudatused",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "createSuccess": "Komponent lisatud",
+      "updateSuccess": "Komponent uuendatud",
+      "saveError": "Komponenti ei õnnestunud salvestada. Palun proovi uuesti."
+    },
+    "delete": {
+      "title": "Kustuta komponent",
+      "body": "Kas oled kindel, et soovid kustutada „{name}“? Seda ei saa tagasi võtta.",
+      "confirm": "Kustuta",
+      "cancel": "Tühista",
+      "close": "Sulge",
+      "success": "Komponent kustutatud",
+      "error": "Komponenti ei õnnestunud kustutada. Palun proovi uuesti."
+    },
+    "error": {
+      "title": "Komponente ei õnnestunud laadida",
+      "description": "Selle varustuse komponentide laadimisel läks midagi valesti."
+    }
+  },
+  "activities": {
+    "title": "Tegevused",
+    "empty": "Selle varustusega pole veel ühtegi tegevust salvestatud.",
+    "error": {
+      "title": "Tegevusi ei õnnestunud laadida",
+      "description": "Selle varustuse tegevuste laadimisel läks midagi valesti."
+    }
+  }
+}

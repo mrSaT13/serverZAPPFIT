@@ -1,0 +1,152 @@
+{
+  "title": "Gear",
+  "subtitle": "Bikes, shoes and equipment you track activities with",
+  "buttonAddGear": "Add gear",
+  "searchPlaceholder": "Search by nickname",
+  "clearSearch": "Clear search",
+  "showInactive": "Show inactive",
+  "inactive": "Inactive",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filters",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Bicycle",
+    "shoes": "Shoes",
+    "wetsuit": "Wetsuit",
+    "racquet": "Racquet",
+    "skis": "Skis",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf board",
+    "waterSportsBoard": "Water sports board",
+    "unknown": "Gear"
+  },
+  "actions": {
+    "edit": "Edit gear",
+    "delete": "Delete gear"
+  },
+  "form": {
+    "title": "Stats",
+    "addTitle": "Add gear",
+    "editTitle": "Edit gear",
+    "description": "Track the equipment you use for your activities.",
+    "nickname": "Nickname",
+    "nicknameRequired": "Nickname is required",
+    "nicknameTooLong": "Nickname must be 250 characters or fewer",
+    "nicknameTaken": "You already have gear with that nickname",
+    "gearType": "Type",
+    "brand": "Brand",
+    "brandTooLong": "Brand must be 250 characters or fewer",
+    "model": "Model",
+    "modelTooLong": "Model must be 250 characters or fewer",
+    "active": "Active",
+    "createdAt": "Created at",
+    "createdAtRequired": "A creation date is required",
+    "initialDistance": "Initial distance",
+    "purchaseValue": "Purchase value",
+    "totalCost": "Total cost",
+    "create": "Add gear",
+    "save": "Save changes",
+    "cancel": "Cancel",
+    "close": "Close",
+    "createSuccess": "Gear added",
+    "updateSuccess": "Gear updated",
+    "saveError": "Couldn't save the gear. Please try again."
+  },
+  "delete": {
+    "title": "Delete gear",
+    "body": "Are you sure you want to delete \"{nickname}\"? This can't be undone.",
+    "confirm": "Delete",
+    "cancel": "Cancel",
+    "close": "Close",
+    "success": "Gear deleted",
+    "error": "Couldn't delete the gear. Please try again."
+  },
+  "error": {
+    "title": "Couldn't load gear",
+    "description": "Something went wrong while loading your gear.",
+    "retry": "Try again"
+  },
+  "empty": {
+    "title": "No gear yet",
+    "description": "Add the bikes, shoes and equipment you use to start tracking their usage.",
+    "searchTitle": "No gear matches your search",
+    "searchDescription": "Try a different nickname.",
+    "activeTitle": "No active gear",
+    "activeDescription": "Add gear, or enable \"Show inactive\" to see inactive gear."
+  },
+  "detail": {
+    "back": "Back to gear",
+    "notFoundTitle": "Gear not found",
+    "notFoundDescription": "This gear may have been deleted or doesn't belong to you.",
+    "totalDistance": "Distance",
+    "totalTime": "Time",
+    "componentsCost": "Components"
+  },
+  "components": {
+    "title": "Components",
+    "add": "Add component",
+    "empty": "No components yet. Add the parts you want to track wear on.",
+    "unsupported": "This gear type doesn't track components.",
+    "noneActive": "All components are inactive. Turn on \"Show inactive\" to see them.",
+    "inactive": "Inactive",
+    "unitHours": "h",
+    "purchasedOn": "Purchased {date}",
+    "wearLabel": "{name} wear",
+    "actions": {
+      "edit": "Edit component",
+      "delete": "Delete component"
+    },
+    "form": {
+      "addTitle": "Add component",
+      "editTitle": "Edit component",
+      "description": "Track the parts you replace to monitor their wear.",
+      "type": "Type",
+      "typePlaceholder": "Select a type",
+      "typeRequired": "A type is required",
+      "brand": "Brand",
+      "brandRequired": "Brand is required",
+      "brandTooLong": "Brand must be 250 characters or fewer",
+      "model": "Model",
+      "modelRequired": "Model is required",
+      "modelTooLong": "Model must be 250 characters or fewer",
+      "purchaseDate": "Purchased on",
+      "purchaseDateRequired": "A purchase date is required",
+      "retiredDate": "Retired on",
+      "expectedDistance": "Expected distance",
+      "expectedTime": "Expected time",
+      "purchaseValue": "Purchase value",
+      "active": "Active",
+      "retiredBeforePurchase": "The retired date must be after the purchase date.",
+      "create": "Add component",
+      "save": "Save changes",
+      "cancel": "Cancel",
+      "close": "Close",
+      "createSuccess": "Component added",
+      "updateSuccess": "Component updated",
+      "saveError": "Couldn't save the component. Please try again."
+    },
+    "delete": {
+      "title": "Delete component",
+      "body": "Are you sure you want to delete \"{name}\"? This can't be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel",
+      "close": "Close",
+      "success": "Component deleted",
+      "error": "Couldn't delete the component. Please try again."
+    },
+    "error": {
+      "title": "Couldn't load components",
+      "description": "Something went wrong while loading this gear's components."
+    }
+  },
+  "activities": {
+    "title": "Activities",
+    "empty": "No activities recorded with this gear yet.",
+    "error": {
+      "title": "Couldn't load activities",
+      "description": "Something went wrong while loading this gear's activities."
+    }
+  }
+}

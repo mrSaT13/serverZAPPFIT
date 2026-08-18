@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain-logo",
+  "title": "Design system foundation is live",
+  "subtitle": "Tailwind v4, shadcn-vue, strict TypeScript en het Endurain-tokenpalet zijn gekoppeld",
+  "primaryAction": "Primaire actie",
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "message": "De pagina die je zoekt bestaat niet of is verplaatst",
+    "action": "Naar startpagina"
+  },
+  "error": {
+    "title": "Er is iets misgegaan",
+    "message": "Dit onderdeel kon niet worden geladen. Je kunt het opnieuw proberen.",
+    "retry": "Opnieuw proberen",
+    "toast": "Er is iets misgegaan. Probeer het opnieuw."
+  },
+  "configError": {
+    "title": "Configuratiefout",
+    "message": "De app kon de Endurain-backend niet bereiken. Dit komt meestal door een ontbrekende of verkeerd geconfigureerde ENDURAIN_HOST-omgevingsvariabele, of doordat de backend niet draait.",
+    "notSet": "(niet ingesteld)",
+    "help": "Controleer of ENDURAIN_HOST verwijst naar de URL waar je Endurain-instantie bereikbaar is (bijvoorbeeld https://endurain.example.com) en dat de backend draait, en herlaad daarna de pagina.",
+    "reload": "Opnieuw laden"
+  },
+  "dismiss": "Sluiten",
+  "language": "Taal",
+  "theme": {
+    "toLight": "Lichte modus",
+    "toDark": "Donkere modus"
+  },
+  "pagination": {
+    "label": "Paginering",
+    "previous": "Vorige pagina",
+    "next": "Volgende pagina",
+    "goToPage": "Naar pagina {page}"
+  },
+  "markdownEditor": {
+    "preview": "Voorbeeld",
+    "edit": "Bewerken",
+    "supported": "Markdown ondersteund",
+    "empty": "Niets om een voorbeeld van te tonen"
+  }
+}

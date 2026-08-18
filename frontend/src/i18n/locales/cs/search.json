@@ -1,0 +1,43 @@
+{
+  "title": "Hledat",
+  "subtitle": "Najděte uživatele, aktivity a vybavení napříč Endurain.",
+  "placeholder": "Hledat…",
+  "clear": "Vymazat hledání",
+  "scopes": {
+    "users": "Uživatelé",
+    "activities": "Aktivity",
+    "gears": "Vybavení"
+  },
+  "filters": {
+    "all": "Všechny typy",
+    "activityType": "Filtrovat podle typu aktivity",
+    "gearType": "Filtrovat podle typu vybavení"
+  },
+  "activityCategories": {
+    "running": "Běh",
+    "cycling": "Cyklistika",
+    "swimming": "Plavání",
+    "walking": "Chůze a turistika",
+    "racquet": "Raketové sporty",
+    "rowing": "Veslování a pádlování",
+    "winterSports": "Zimní sporty",
+    "waterSports": "Vodní sporty",
+    "skating": "Bruslení"
+  },
+  "results": {
+    "inactive": "Neaktivní"
+  },
+  "idle": {
+    "title": "Hledat v Endurain",
+    "description": "Vyberte, co chcete najít, a začněte psát, abyste viděli shody."
+  },
+  "empty": {
+    "title": "Nenalezeny žádné shody",
+    "description": "Výrazu „{term}“ nic neodpovídá. Zkuste jiné hledání."
+  },
+  "error": {
+    "title": "Hledání selhalo",
+    "description": "Vaše hledání se nepodařilo provést. Zkontrolujte připojení a zkuste to znovu.",
+    "retry": "Zkusit znovu"
+  }
+}

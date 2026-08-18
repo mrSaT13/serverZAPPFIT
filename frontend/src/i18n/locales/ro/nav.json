@@ -1,0 +1,22 @@
+{
+  "home": "Acasă",
+  "search": "Căutare",
+  "activities": "Activități",
+  "activitiesList": "Listă",
+  "summary": "Rezumat",
+  "gear": "Echipament",
+  "health": "Sănătate",
+  "alerts": "Alerte",
+  "settings": "Setări",
+  "profile": "Profil",
+  "login": "Autentificare",
+  "logout": "Deconectare",
+  "userMenu": "Meniu utilizator",
+  "menu": "Meniu",
+  "primary": "Navigare principală",
+  "account": "Cont",
+  "preferences": "Preferințe",
+  "updateAvailable": "Actualizare disponibilă",
+  "updateAvailableTitle": "Versiunea {version} este disponibilă",
+  "updateViewRelease": "Vezi notele de lansare"
+}

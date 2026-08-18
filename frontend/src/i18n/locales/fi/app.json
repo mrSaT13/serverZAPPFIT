@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain-logo",
+  "title": "Suunnittelujärjestelmän perusta on käytössä",
+  "subtitle": "Tailwind v4, shadcn-vue, tiukka TypeScript ja Endurainin tunnistepaletti on kytketty käyttöön",
+  "primaryAction": "Ensisijainen toiminto",
+  "notFound": {
+    "title": "Sivua ei löytynyt",
+    "message": "Etsimääsi sivua ei ole olemassa tai se on siirretty",
+    "action": "Siirry etusivulle"
+  },
+  "error": {
+    "title": "Jokin meni pieleen",
+    "message": "Tämän osion lataaminen epäonnistui. Voit yrittää uudelleen.",
+    "retry": "Yritä uudelleen",
+    "toast": "Jokin meni pieleen. Yritä uudelleen."
+  },
+  "configError": {
+    "title": "Määritysvirhe",
+    "message": "Sovellus ei saanut yhteyttä Endurainin taustapalveluun. Tämä johtuu yleensä puuttuvasta tai väärin määritetystä ENDURAIN_HOST-ympäristömuuttujasta tai siitä, ettei taustapalvelu ole käynnissä.",
+    "notSet": "(ei asetettu)",
+    "help": "Tarkista, että ENDURAIN_HOST osoittaa osoitteeseen, josta Endurain-instanssisi on tavoitettavissa (esimerkiksi https://endurain.example.com) ja että taustapalvelu on käynnissä, ja lataa sitten sivu uudelleen.",
+    "reload": "Lataa uudelleen"
+  },
+  "dismiss": "Hylkää",
+  "language": "Kieli",
+  "theme": {
+    "toLight": "Vaalea tila",
+    "toDark": "Tumma tila"
+  },
+  "pagination": {
+    "label": "Sivutus",
+    "previous": "Edellinen sivu",
+    "next": "Seuraava sivu",
+    "goToPage": "Siirry sivulle {page}"
+  },
+  "markdownEditor": {
+    "preview": "Esikatselu",
+    "edit": "Muokkaa",
+    "supported": "Markdown tuettu",
+    "empty": "Ei mitään esikatseltavaa"
+  }
+}

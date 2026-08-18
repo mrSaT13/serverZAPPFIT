@@ -1,0 +1,73 @@
+{
+  "addActivity": "Ajouter une activité",
+  "upload": {
+    "uploading": "Téléversement…",
+    "success": "Activité téléversée avec succès",
+    "error": "Impossible de téléverser le fichier d'activité"
+  },
+  "refresh": {
+    "label": "Actualiser",
+    "refreshing": "Actualisation…",
+    "success": "Actualisation démarrée",
+    "error": "Impossible d'actualiser les activités"
+  },
+  "feed": {
+    "scopeLabel": "Portée du fil d'actualité",
+    "myActivities": "Mes activités",
+    "following": "Abonnements",
+    "loadMore": "Charger plus",
+    "loading": "Chargement…",
+    "error": {
+      "title": "Impossible de charger les activités",
+      "description": "Une erreur s'est produite lors du chargement du fil d'actualité.",
+      "retry": "Réessayer"
+    },
+    "empty": {
+      "mine": {
+        "title": "Aucune activité pour l'instant",
+        "description": "Ajoutez une activité ou connectez une intégration pour commencer."
+      },
+      "following": {
+        "title": "Rien ici pour l'instant",
+        "description": "Les activités des personnes que vous suivez apparaîtront ici."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistiques",
+    "metricLabel": "Métrique",
+    "thisWeek": "Cette semaine",
+    "thisMonth": "Ce mois-ci",
+    "empty": "Aucune activité sur cette période",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distance",
+      "time": "Temps",
+      "calories": "Calories"
+    }
+  },
+  "sports": {
+    "run": "Course",
+    "bike": "Vélo",
+    "swim": "Natation",
+    "walk": "Marche",
+    "hike": "Randonnée",
+    "rowing": "Aviron",
+    "snow_ski": "Ski",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf",
+    "stand_up_paddleboarding": "Stand-up paddle",
+    "surfing": "Surf",
+    "kayaking": "Kayak",
+    "sailing": "Voile",
+    "snowshoeing": "Raquettes",
+    "inline_skating": "Roller"
+  },
+  "goals": {
+    "title": "Objectifs",
+    "empty": {
+      "title": "Aucun objectif défini",
+      "description": "Définissez des objectifs dans les paramètres pour suivre votre progression ici."
+    }
+  }
+}

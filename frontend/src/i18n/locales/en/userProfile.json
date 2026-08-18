@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "User not found",
+    "description": "This profile doesn't exist or isn't visible to you."
+  },
+  "error": {
+    "title": "Couldn't load profile",
+    "description": "Something went wrong while loading this profile.",
+    "retry": "Try again"
+  },
+  "editProfile": "Edit profile",
+  "activities": {
+    "weekNav": "Browse activities by week",
+    "thisWeek": "This week",
+    "oneYearAgo": "One year ago"
+  },
+  "stats": {
+    "thisMonth": "Activities this month",
+    "following": "Following",
+    "followers": "Followers"
+  },
+  "tabs": {
+    "activities": "Activities",
+    "following": "Following",
+    "followers": "Followers"
+  },
+  "activitiesError": {
+    "title": "Couldn't load activities",
+    "description": "Something went wrong while loading activities.",
+    "retry": "Try again"
+  },
+  "listError": {
+    "title": "Couldn't load the list",
+    "description": "Something went wrong. Please try again.",
+    "retry": "Try again"
+  },
+  "follow": {
+    "follow": "Follow",
+    "requested": "Requested",
+    "following": "Following",
+    "withdraw": "Withdraw request",
+    "unfollow": "Unfollow",
+    "cancel": "Cancel",
+    "close": "Close",
+    "followError": "Couldn't send the follow request.",
+    "unfollowError": "Couldn't update the follow request.",
+    "confirmCancelTitle": "Withdraw request",
+    "confirmCancelBody": "Withdraw your follow request to {name}?",
+    "confirmUnfollowTitle": "Unfollow {name}",
+    "confirmUnfollowBody": "Stop following {name}? You can follow them again later."
+  },
+  "list": {
+    "accept": "Accept",
+    "decline": "Decline",
+    "remove": "Remove",
+    "unfollow": "Unfollow",
+    "cancel": "Cancel",
+    "close": "Close",
+    "accepted": "Accepted",
+    "pending": "Pending",
+    "acceptError": "Couldn't accept the request.",
+    "removeError": "Couldn't update this follower.",
+    "unfollowError": "Couldn't unfollow this user.",
+    "confirmUnfollowTitle": "Unfollow {name}",
+    "confirmUnfollowBody": "Stop following {name}? You can follow them again later.",
+    "confirmDeclineTitle": "Decline request",
+    "confirmDeclineBody": "Decline the follow request from {name}?",
+    "confirmRemoveTitle": "Remove follower",
+    "confirmRemoveBody": "Remove {name} from your followers?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "No activities yet",
+      "ownDescription": "Your activities will appear here once you add or import them.",
+      "otherTitle": "No activities to show"
+    },
+    "following": {
+      "ownTitle": "You aren't following anyone yet.",
+      "otherTitle": "Not following anyone yet."
+    },
+    "followers": {
+      "ownTitle": "You don't have any followers yet.",
+      "otherTitle": "No followers yet."
+    }
+  }
+}

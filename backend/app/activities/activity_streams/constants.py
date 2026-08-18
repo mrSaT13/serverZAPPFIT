@@ -1,0 +1,10 @@
+"""Constants for activity stream types."""
+
+STREAM_TYPE_HR: int = 1
+STREAM_TYPE_POWER: int = 2
+STREAM_TYPE_CADENCE: int = 3
+STREAM_TYPE_ELEVATION: int = 4
+STREAM_TYPE_SPEED: int = 5
+STREAM_TYPE_PACE: int = 6
+STREAM_TYPE_MAP: int = 7
+STREAM_TYPE_TEMPERATURE: int = 8

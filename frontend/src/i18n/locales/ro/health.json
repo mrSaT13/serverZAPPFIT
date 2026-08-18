@@ -1,0 +1,648 @@
+{
+  "title": "Sănătate",
+  "subtitle": "Vezi toate datele tale de sănătate într-un singur loc",
+  "nav": {
+    "label": "Secțiuni de sănătate",
+    "soon": "În curând",
+    "dashboard": "Tablou de bord",
+    "sleep": "Somn",
+    "rhr": "Puls în repaus",
+    "steps": "Pași",
+    "weight": "Greutate",
+    "fasting": "Post",
+    "water": "Aport de apă",
+    "poop": "Tranzit intestinal"
+  },
+  "dashboard": {
+    "title": "Tablou de bord",
+    "subtitle": "Starea ta zilnică de bine dintr-o privire",
+    "sleep": "Somn",
+    "restingHeartRate": "Puls în repaus",
+    "avgSkinTemperatureDeviation": "Dev. temp. piele",
+    "weight": "Greutate",
+    "bmi": "BMI",
+    "steps": "Pași",
+    "fasting": "Post",
+    "water": "Aport de apă",
+    "poop": "Tranzit intestinal",
+    "noSleepTarget": "Niciun obiectiv de somn",
+    "noWeightTarget": "Niciun obiectiv de greutate",
+    "noStepsTarget": "Niciun obiectiv de pași",
+    "noFastingTarget": "Niciun obiectiv de post",
+    "noWaterTarget": "Niciun obiectiv de apă",
+    "noPoopTarget": "Niciun obiectiv de tranzit intestinal",
+    "stepsTargetLabel": "pași",
+    "poopTargetLabel": "/ zi",
+    "noWeightData": "Niciun fel de date despre greutate",
+    "bmiUnderweight": "Subponderal",
+    "bmiNormalWeight": "Greutate normală",
+    "bmiOverweight": "Supraponderal",
+    "bmiObesityClass1": "Obezitate (gradul 1)",
+    "bmiObesityClass2": "Obezitate (gradul 2)",
+    "bmiObesityClass3": "Obezitate extremă (gradul 3)",
+    "hrvBalanced": "Echilibrat",
+    "hrvUnbalanced": "Dezechilibrat",
+    "hrvLow": "Scăzut",
+    "hrvPoor": "Slab",
+    "labelNoData": "Fără date",
+    "errorTitle": "Nu am putut încărca datele tale de sănătate",
+    "errorDescription": "Ceva nu a mers bine la încărcarea statisticilor tale zilnice de sănătate. Te rugăm să încerci din nou.",
+    "retry": "Încearcă din nou"
+  },
+  "weight": {
+    "title": "Greutate",
+    "subtitle": "Urmărește-ți greutatea și compoziția corporală de-a lungul timpului",
+    "logButton": "Înregistrează greutatea",
+    "targetButton": "Setează obiectivul",
+    "sourceGarmin": "De la Garmin Connect",
+    "toggleDetails": "Comută detaliile compoziției corporale",
+    "chartTitle": "Tendința greutății",
+    "chartWeightSeries": "Greutate",
+    "chartTargetSeries": "Obiectiv",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează înregistrarea",
+      "delete": "Șterge înregistrarea"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Grăsime corporală",
+      "bodyWater": "Apă corporală",
+      "boneMass": "Masă osoasă",
+      "muscleMass": "Masă musculară"
+    },
+    "form": {
+      "addTitle": "Înregistrează greutatea",
+      "editTitle": "Editează înregistrarea de greutate",
+      "description": "Înregistrează-ți greutatea și, opțional, compoziția corporală.",
+      "date": "Dată",
+      "dateRequired": "Te rugăm să alegi o dată.",
+      "weight": "Greutate",
+      "weightRequired": "Te rugăm să introduci greutatea ta.",
+      "weightInvalid": "Introdu o greutate mai mare decât zero.",
+      "bodyComposition": "Compoziție corporală (opțional)",
+      "bmi": "BMI",
+      "bodyFat": "Grăsime corporală (%)",
+      "bodyWater": "Apă corporală (%)",
+      "boneMass": "Masă osoasă",
+      "muscleMass": "Masă musculară",
+      "create": "Înregistrează",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Greutate înregistrată.",
+      "updateSuccess": "Înregistrarea de greutate a fost actualizată.",
+      "saveError": "Nu am putut salva înregistrarea ta de greutate. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de greutate",
+      "description": "Alege o greutate țintă sau golește câmpul pentru a o elimina.",
+      "weight": "Greutate țintă",
+      "hint": "Lasă gol pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de greutate a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău de greutate. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă nicio înregistrare de greutate",
+      "description": "Înregistrează-ți greutatea pentru a începe să-ți urmărești progresul de-a lungul timpului."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul greutății tale",
+      "description": "Ceva nu a mers bine la încărcarea înregistrărilor tale de greutate. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge înregistrarea de greutate",
+      "body": "Această înregistrare de greutate va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Înregistrare de greutate ștearsă.",
+      "error": "Nu am putut șterge înregistrarea de greutate. Te rugăm să încerci din nou."
+    }
+  },
+  "steps": {
+    "title": "Pași",
+    "subtitle": "Urmărește-ți numărul zilnic de pași de-a lungul timpului",
+    "logButton": "Înregistrează pașii",
+    "targetButton": "Setează obiectivul",
+    "sourceGarmin": "De la Garmin Connect",
+    "chartTitle": "Tendința pașilor",
+    "chartStepsSeries": "Pași",
+    "chartTargetSeries": "Obiectiv",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează înregistrarea",
+      "delete": "Șterge înregistrarea"
+    },
+    "form": {
+      "addTitle": "Înregistrează pașii",
+      "editTitle": "Editează înregistrarea de pași",
+      "description": "Înregistrează numărul tău de pași pentru ziua respectivă.",
+      "date": "Dată",
+      "dateRequired": "Te rugăm să alegi o dată.",
+      "steps": "Pași",
+      "stepsRequired": "Te rugăm să introduci numărul tău de pași.",
+      "stepsInvalid": "Introdu un număr de pași mai mare decât zero.",
+      "create": "Înregistrează",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Pași înregistrați.",
+      "updateSuccess": "Înregistrarea de pași a fost actualizată.",
+      "saveError": "Nu am putut salva înregistrarea ta de pași. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de pași",
+      "description": "Alege un obiectiv zilnic de pași sau golește câmpul pentru a-l elimina.",
+      "steps": "Pași zilnici țintă",
+      "hint": "Lasă gol pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de pași a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău de pași. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă nicio înregistrare de pași",
+      "description": "Înregistrează-ți pașii pentru a începe să-ți urmărești activitatea de-a lungul timpului."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul pașilor tăi",
+      "description": "Ceva nu a mers bine la încărcarea înregistrărilor tale de pași. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge înregistrarea de pași",
+      "body": "Această înregistrare de pași va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Înregistrare de pași ștearsă.",
+      "error": "Nu am putut șterge înregistrarea de pași. Te rugăm să încerci din nou."
+    }
+  },
+  "rhr": {
+    "title": "Puls în repaus",
+    "subtitle": "Urmărește-ți pulsul în repaus de-a lungul timpului",
+    "sourceGarmin": "De la Garmin Connect",
+    "chartTitle": "Tendința pulsului în repaus",
+    "chartSeries": "Puls în repaus",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "empty": {
+      "title": "Încă niciun fel de date despre pulsul în repaus",
+      "description": "Pulsul în repaus este înregistrat împreună cu somnul tău. Sincronizează un dispozitiv care îl urmărește pentru a-ți vedea tendința aici."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul pulsului tău în repaus",
+      "description": "Ceva nu a mers bine la încărcarea datelor tale despre pulsul în repaus. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    }
+  },
+  "sleep": {
+    "title": "Somn",
+    "subtitle": "Urmărește-ți durata și calitatea somnului de-a lungul timpului",
+    "logButton": "Înregistrează somnul",
+    "targetButton": "Setează obiectivul",
+    "sourceGarmin": "De la Garmin Connect",
+    "toggleDetails": "Comută detaliile somnului",
+    "chartTitle": "Tendința somnului",
+    "chartSleepSeries": "Somn",
+    "chartTargetSeries": "Obiectiv",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează înregistrarea",
+      "delete": "Șterge înregistrarea"
+    },
+    "score": "Scor",
+    "hrvBalanced": "Echilibrat",
+    "hrvUnbalanced": "Dezechilibrat",
+    "hrvLow": "Scăzut",
+    "hrvPoor": "Slab",
+    "scoreExcellent": "Excelent",
+    "scoreGood": "Bun",
+    "scoreFair": "Acceptabil",
+    "scorePoor": "Slab",
+    "detail": {
+      "tabsLabel": "Secțiuni de detalii ale somnului",
+      "tabScore": "Scor de somn",
+      "tabDetails": "Detalii ale somnului",
+      "deep": "Profund",
+      "light": "Ușor",
+      "rem": "REM",
+      "awake": "Treaz",
+      "score": "Scor de somn",
+      "quality": "Calitate",
+      "duration": "Durată",
+      "restingHeartRate": "Puls în repaus",
+      "avgHeartRate": "Puls mediu",
+      "minHeartRate": "Puls minim",
+      "maxHeartRate": "Puls maxim",
+      "skinTempDeviation": "Dev. temp. piele",
+      "hrv": "Stare HRV",
+      "spo2": "SpO₂ mediu",
+      "lowestSpo2": "SpO₂ minim",
+      "highestSpo2": "SpO₂ maxim",
+      "avgRespiration": "Respirație medie",
+      "lowestRespiration": "Respirație minimă",
+      "highestRespiration": "Respirație maximă",
+      "avgSleepStress": "Stres mediu în somn",
+      "awakeCount": "Treziri",
+      "summary": "Rezumat",
+      "breakdown": "Defalcare",
+      "overview": "Prezentare generală",
+      "heartRate": "Puls",
+      "bloodOxygen": "Oxigen în sânge",
+      "respiration": "Respirație",
+      "avg": "Med.",
+      "min": "Min.",
+      "max": "Max.",
+      "noData": "Nicio dată înregistrată."
+    },
+    "hypnogram": {
+      "title": "Faze ale somnului",
+      "deep": "Profund",
+      "light": "Ușor",
+      "rem": "REM",
+      "awake": "Treaz",
+      "noData": "Nicio cronologie a fazelor disponibilă."
+    },
+    "form": {
+      "addTitle": "Înregistrează somnul",
+      "editTitle": "Editează înregistrarea de somn",
+      "description": "Înregistrează-ți durata somnului și, opțional, defalcarea pe faze și indicatorii.",
+      "date": "Dată",
+      "dateRequired": "Te rugăm să alegi o dată.",
+      "totalSleep": "Somn total",
+      "totalSleepRequired": "Te rugăm să introduci cât ai dormit.",
+      "hours": "Ore",
+      "minutes": "Minute",
+      "stageBreakdown": "Defalcare pe faze (opțional)",
+      "deep": "Somn profund",
+      "light": "Somn ușor",
+      "rem": "Somn REM",
+      "awake": "Treaz",
+      "metrics": "Indicatori (opțional)",
+      "sleepScore": "Scor de somn (0–100)",
+      "restingHeartRate": "Puls în repaus (bpm)",
+      "skinTempDeviation": "Deviație temp. piele (°C)",
+      "spo2": "SpO₂ mediu (%)",
+      "sleepTimes": "Ore de somn (opțional)",
+      "startTime": "Început somn",
+      "endTime": "Sfârșit somn",
+      "endBeforeStart": "Sfârșitul somnului trebuie să fie ulterior orei de început.",
+      "awakeCount": "Treziri",
+      "heartRate": "Puls (opțional)",
+      "avgHeartRate": "Puls mediu (bpm)",
+      "minHeartRate": "Puls minim (bpm)",
+      "maxHeartRate": "Puls maxim (bpm)",
+      "bloodOxygen": "Oxigen în sânge (opțional)",
+      "lowestSpo2": "SpO₂ minim (%)",
+      "highestSpo2": "SpO₂ maxim (%)",
+      "avgSleepStress": "Stres mediu în somn (0–100)",
+      "sleepStages": "Faze ale somnului (opțional)",
+      "noStages": "Încă nicio fază adăugată.",
+      "addStage": "Adaugă fază",
+      "removeStage": "Elimină faza",
+      "stageLabel": "Faza {index}",
+      "stageType": "Fază",
+      "stageDeep": "Profund",
+      "stageLight": "Ușor",
+      "stageRem": "REM",
+      "stageAwake": "Treaz",
+      "stageStart": "Început",
+      "stageEnd": "Sfârșit",
+      "stageDuration": "Durată",
+      "create": "Înregistrează",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Somn înregistrat.",
+      "updateSuccess": "Înregistrarea de somn a fost actualizată.",
+      "saveError": "Nu am putut salva înregistrarea ta de somn. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de somn",
+      "description": "Alege un obiectiv de somn pe noapte sau golește câmpurile pentru a-l elimina.",
+      "hours": "Ore",
+      "minutes": "Minute",
+      "hint": "Lasă gol pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de somn a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău de somn. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă nicio înregistrare de somn",
+      "description": "Înregistrează somnul unei nopți pentru a începe să-ți urmărești odihna de-a lungul timpului."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul somnului tău",
+      "description": "Ceva nu a mers bine la încărcarea înregistrărilor tale de somn. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge înregistrarea de somn",
+      "body": "Această înregistrare de somn va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Înregistrare de somn ștearsă.",
+      "error": "Nu am putut șterge înregistrarea de somn. Te rugăm să încerci din nou."
+    }
+  },
+  "water": {
+    "title": "Aport de apă",
+    "subtitle": "Urmărește-ți aportul zilnic de apă de-a lungul timpului",
+    "logButton": "Înregistrează apa",
+    "targetButton": "Setează obiectivul",
+    "sourceGarmin": "De la Garmin Connect",
+    "chartTitle": "Tendința aportului de apă",
+    "chartWaterSeries": "Apă",
+    "chartTargetSeries": "Obiectiv",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează înregistrarea",
+      "delete": "Șterge înregistrarea"
+    },
+    "form": {
+      "addTitle": "Înregistrează apa",
+      "editTitle": "Editează înregistrarea de apă",
+      "description": "Înregistrează-ți aportul de apă pentru ziua respectivă.",
+      "date": "Dată",
+      "dateRequired": "Te rugăm să alegi o dată.",
+      "amount": "Cantitate",
+      "amountRequired": "Te rugăm să introduci o cantitate.",
+      "amountInvalid": "Introdu o cantitate mai mare decât zero.",
+      "create": "Înregistrează",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Apă înregistrată.",
+      "updateSuccess": "Înregistrarea de apă a fost actualizată.",
+      "saveError": "Nu am putut salva înregistrarea ta de apă. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de apă",
+      "description": "Alege un obiectiv zilnic de apă sau golește câmpul pentru a-l elimina.",
+      "amount": "Obiectiv zilnic",
+      "hint": "Lasă gol pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de apă a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău de apă. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă nicio înregistrare de apă",
+      "description": "Înregistrează-ți aportul de apă pentru a începe să-ți urmărești hidratarea de-a lungul timpului."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul tău de apă",
+      "description": "Ceva nu a mers bine la încărcarea înregistrărilor tale de apă. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge înregistrarea de apă",
+      "body": "Această înregistrare de apă va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Înregistrare de apă ștearsă.",
+      "error": "Nu am putut șterge înregistrarea de apă. Te rugăm să încerci din nou."
+    }
+  },
+  "poop": {
+    "title": "Tranzit intestinal",
+    "subtitle": "Urmărește-ți tranzitul intestinal de-a lungul timpului",
+    "logButton": "Înregistrează o intrare",
+    "targetButton": "Setează obiectivul",
+    "chartTitle": "Frecvență zilnică",
+    "chartCountSeries": "Scaune",
+    "chartTargetSeries": "Obiectiv",
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează înregistrarea",
+      "delete": "Șterge înregistrarea"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Scaun"
+    },
+    "form": {
+      "addTitle": "Înregistrează un scaun",
+      "editTitle": "Editează scaunul",
+      "description": "Înregistrează ora și detaliile scaunului tău.",
+      "dateTime": "Dată și oră",
+      "dateTimeRequired": "Te rugăm să alegi o dată și o oră.",
+      "bristolType": "Tip de scaun Bristol",
+      "color": "Culoare",
+      "notes": "Note",
+      "none": "Niciunul",
+      "colors": {
+        "brown": "Maro",
+        "dark_brown": "Maro închis",
+        "light_brown": "Maro deschis",
+        "yellow": "Galben",
+        "green": "Verde",
+        "black": "Negru",
+        "red": "Roșu",
+        "white": "Alb"
+      },
+      "create": "Înregistrează",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Scaun înregistrat.",
+      "updateSuccess": "Scaun actualizat.",
+      "saveError": "Nu am putut salva înregistrarea ta. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de tranzit intestinal",
+      "description": "Alege un obiectiv zilnic de scaune sau golește câmpul pentru a-l elimina.",
+      "count": "Obiectiv pe zi",
+      "hint": "Lasă gol pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de tranzit intestinal a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă nicio înregistrare",
+      "description": "Înregistrează un scaun pentru a începe să urmărești de-a lungul timpului."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul tău",
+      "description": "Ceva nu a mers bine la încărcarea înregistrărilor tale. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge înregistrarea",
+      "body": "Această înregistrare va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Înregistrare ștearsă.",
+      "error": "Nu am putut șterge înregistrarea. Te rugăm să încerci din nou."
+    }
+  },
+  "fasting": {
+    "title": "Post",
+    "subtitle": "Începe un post, urmărește-ți progresul și revizuiește-ți istoricul",
+    "startButton": "Începe postul",
+    "targetButton": "Setează obiectivul",
+    "sourceGarmin": "De la Garmin Connect",
+    "active": {
+      "title": "Post în desfășurare",
+      "started": "Început",
+      "target": "Obiectiv",
+      "complete": "Finalizat",
+      "break": "Întrerupe postul",
+      "cancel": "Anulează",
+      "completeHint": "Poți finaliza postul odată ce îți atingi obiectivul."
+    },
+    "stats": {
+      "totalFasts": "Total posturi",
+      "currentStreak": "Serie curentă",
+      "longestStreak": "Cea mai lungă serie",
+      "avgDuration": "Durată medie",
+      "totalTime": "Timp total de post",
+      "completionRate": "Rată de finalizare",
+      "days": "zile"
+    },
+    "types": {
+      "16:8": "16:8 (16h post, 8h mâncat)",
+      "18:6": "18:6 (18h post, 6h mâncat)",
+      "20:4": "20:4 (20h post, 4h mâncat)",
+      "OMAD": "OMAD (o singură masă pe zi)",
+      "24h": "Post de 24 de ore",
+      "36h": "Post de 36 de ore",
+      "48h": "Post de 48 de ore",
+      "72h": "Post de 72 de ore",
+      "custom": "Personalizat"
+    },
+    "status": {
+      "in_progress": "În desfășurare",
+      "completed": "Finalizat",
+      "broken": "Întrerupt",
+      "cancelled": "Anulat"
+    },
+    "interval": {
+      "label": "Interval de timp",
+      "last_7_days": "Ultimele 7 zile",
+      "last_30_days": "Ultimele 30 de zile",
+      "last_90_days": "Ultimele 90 de zile",
+      "last_year": "Ultimul an",
+      "all_time": "Tot timpul"
+    },
+    "actions": {
+      "edit": "Editează postul",
+      "delete": "Șterge postul"
+    },
+    "list": {
+      "notesLabel": "Note"
+    },
+    "form": {
+      "addTitle": "Începe postul",
+      "editTitle": "Editează sesiunea de post",
+      "description": "Alege un protocol de post și când a început.",
+      "type": "Protocol de post",
+      "customDuration": "Durată personalizată",
+      "customDurationHint": "Durata postului, în ore (1–72).",
+      "hours": "ore",
+      "startTime": "Ora de început",
+      "startTimeRequired": "Te rugăm să alegi o oră de început.",
+      "endTime": "Ora de sfârșit",
+      "status": "Stare",
+      "notes": "Note",
+      "create": "Începe",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "createSuccess": "Post început.",
+      "updateSuccess": "Sesiunea de post a fost actualizată.",
+      "saveError": "Nu am putut salva sesiunea ta de post. Te rugăm să încerci din nou."
+    },
+    "target": {
+      "title": "Setează obiectivul de post",
+      "description": "Alege o durată țintă de post sau golește ambele câmpuri pentru a o elimina.",
+      "hours": "Ore",
+      "minutes": "Minute",
+      "hint": "Lasă ambele goale pentru a-ți elimina obiectivul.",
+      "save": "Salvează",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "saveSuccess": "Obiectivul de post a fost actualizat.",
+      "saveError": "Nu am putut actualiza obiectivul tău de post. Te rugăm să încerci din nou."
+    },
+    "complete": {
+      "success": "Post încheiat.",
+      "error": "Nu am putut încheia postul tău. Te rugăm să încerci din nou."
+    },
+    "empty": {
+      "title": "Încă niciun post",
+      "description": "Începe un post pentru a începe să-ți urmărești istoricul de post."
+    },
+    "error": {
+      "title": "Nu am putut încărca istoricul tău de post",
+      "description": "Ceva nu a mers bine la încărcarea sesiunilor tale de post. Te rugăm să încerci din nou.",
+      "retry": "Încearcă din nou"
+    },
+    "delete": {
+      "title": "Șterge sesiunea de post",
+      "body": "Această sesiune de post va fi ștearsă definitiv. Această acțiune nu poate fi anulată.",
+      "confirm": "Șterge",
+      "cancel": "Anulează",
+      "close": "Închide",
+      "success": "Sesiune de post ștearsă.",
+      "error": "Nu am putut șterge sesiunea de post. Te rugăm să încerci din nou."
+    }
+  }
+}

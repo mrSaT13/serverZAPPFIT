@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logo",
+  "title": "La base del sistema de disseny és activa",
+  "subtitle": "Tailwind v4, shadcn-vue, TypeScript estricte i la paleta de tokens d'Endurain estan configurats",
+  "primaryAction": "Acció principal",
+  "notFound": {
+    "title": "Pàgina no trobada",
+    "message": "La pàgina que cerques no existeix o s'ha mogut",
+    "action": "Ves a l'inici"
+  },
+  "error": {
+    "title": "Alguna cosa ha anat malament",
+    "message": "Aquesta secció no s'ha pogut carregar. Pots tornar-ho a intentar.",
+    "retry": "Torna-ho a intentar",
+    "toast": "Alguna cosa ha anat malament. Torna-ho a intentar."
+  },
+  "configError": {
+    "title": "Error de configuració",
+    "message": "L'aplicació no s'ha pogut connectar al backend d'Endurain. Això sol ser causat per una variable d'entorn ENDURAIN_HOST absent o mal configurada, o perquè el backend no s'està executant.",
+    "notSet": "(sense definir)",
+    "help": "Comprova que ENDURAIN_HOST apunta a l'URL on la teva instància d'Endurain és accessible (per exemple https://endurain.example.com) i que el backend s'està executant; després, torna a carregar la pàgina.",
+    "reload": "Torna a carregar"
+  },
+  "dismiss": "Descarta",
+  "language": "Idioma",
+  "theme": {
+    "toLight": "Mode clar",
+    "toDark": "Mode fosc"
+  },
+  "pagination": {
+    "label": "Paginació",
+    "previous": "Pàgina anterior",
+    "next": "Pàgina següent",
+    "goToPage": "Ves a la pàgina {page}"
+  },
+  "markdownEditor": {
+    "preview": "Previsualitza",
+    "edit": "Edita",
+    "supported": "Markdown compatible",
+    "empty": "Res per previsualitzar"
+  }
+}

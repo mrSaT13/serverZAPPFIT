@@ -1,0 +1,43 @@
+{
+  "title": "搜索",
+  "subtitle": "在 Endurain 中查找用户、活动和装备。",
+  "placeholder": "搜索…",
+  "clear": "清除搜索",
+  "scopes": {
+    "users": "用户",
+    "activities": "活动",
+    "gears": "装备"
+  },
+  "filters": {
+    "all": "所有类型",
+    "activityType": "按活动类型筛选",
+    "gearType": "按装备类型筛选"
+  },
+  "activityCategories": {
+    "running": "跑步",
+    "cycling": "骑行",
+    "swimming": "游泳",
+    "walking": "步行与徒步",
+    "racquet": "球拍运动",
+    "rowing": "划船与划桨",
+    "winterSports": "冬季运动",
+    "waterSports": "水上运动",
+    "skating": "滑冰"
+  },
+  "results": {
+    "inactive": "不活跃"
+  },
+  "idle": {
+    "title": "搜索 Endurain",
+    "description": "选择要查找的内容，然后开始输入以查看匹配结果。"
+  },
+  "empty": {
+    "title": "未找到匹配结果",
+    "description": "没有与“{term}”匹配的内容。请尝试其他搜索。"
+  },
+  "error": {
+    "title": "搜索失败",
+    "description": "无法执行您的搜索。请检查您的连接并重试。",
+    "retry": "重试"
+  }
+}

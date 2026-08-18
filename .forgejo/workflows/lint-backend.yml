@@ -1,0 +1,49 @@
+name: Lint Backend
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - backend/**
+      - .forgejo/workflows/lint-backend.yml
+  pull_request:
+    paths:
+      - backend/**
+      - .forgejo/workflows/lint-backend.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ forgejo.workflow }}-${{ forgejo.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  lint-backend:
+    name: Backend (ruff)
+    runs-on: local-runner
+    steps:
+      - name: Checkout code
+        uses: https://data.forgejo.org/actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+
+      - name: Install uv
+        uses: https://data.forgejo.org/astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          working-directory: backend
+
+      - name: Sync dependencies
+        working-directory: backend
+        run: uv sync --frozen --only-group lint
+
+      - name: Lint check
+        working-directory: backend
+        run: uv run --no-sync ruff check .
+
+      - name: Format check
+        working-directory: backend
+        run: uv run --no-sync ruff format --check .

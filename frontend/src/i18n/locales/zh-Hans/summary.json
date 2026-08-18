@@ -1,0 +1,49 @@
+{
+  "title": "Summary",
+  "subtitle": "Review your training totals and trends over time.",
+  "viewType": {
+    "label": "Summary period",
+    "week": "Week",
+    "month": "Month",
+    "year": "Year",
+    "lifetime": "Lifetime"
+  },
+  "filters": {
+    "type": "Activity type",
+    "allTypes": "All types"
+  },
+  "period": {
+    "previous": "Previous period",
+    "next": "Next period",
+    "picker": "Select period",
+    "allTime": "All time"
+  },
+  "metrics": {
+    "distance": "Distance",
+    "duration": "Duration",
+    "elevation": "Elevation",
+    "calories": "Calories",
+    "activities": "Activities"
+  },
+  "breakdown": {
+    "title": "Breakdown",
+    "period": "Period",
+    "weekNumber": "Week {number}"
+  },
+  "typeBreakdown": {
+    "title": "By activity type",
+    "type": "Type"
+  },
+  "activities": {
+    "title": "Activities in this period"
+  },
+  "empty": {
+    "title": "No activity in this period",
+    "description": "No activities match the selected period and type."
+  },
+  "error": {
+    "title": "Couldn’t load summary",
+    "description": "Something went wrong loading your stats. Check your connection and try again.",
+    "retry": "Try again"
+  }
+}

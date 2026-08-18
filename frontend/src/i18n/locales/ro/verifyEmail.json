@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Se verifică adresa de e-mail",
+  "verifyingBody": "Așteaptă puțin cât confirmăm adresa ta.",
+  "successTitle": "E-mail verificat",
+  "successBody": "Adresa ta de e-mail a fost confirmată.",
+  "adminApprovalBody": "Contul tău așteaptă acum aprobarea administratorului.",
+  "continueButton": "Continuă către autentificare",
+  "invalidTitle": "Verificarea a eșuat",
+  "missingTokenBody": "Acestui link de verificare îi lipsește tokenul.",
+  "errorInvalidToken": "Acest link de verificare este invalid sau a expirat.",
+  "errorNotFound": "Nu am putut găsi un cont pentru acest link.",
+  "errorGeneral": "Nu am putut verifica adresa ta de e-mail. Te rugăm să încerci din nou.",
+  "retry": "Încearcă din nou",
+  "backToLogin": "Înapoi la autentificare"
+}

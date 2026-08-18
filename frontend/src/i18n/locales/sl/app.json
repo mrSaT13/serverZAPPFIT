@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain logotip",
+  "title": "Osnova sistema oblikovanja je aktivna",
+  "subtitle": "Tailwind v4, shadcn-vue, strogi TypeScript in barvna paleta Endurain so pripravljeni",
+  "primaryAction": "Primarna akcija",
+  "notFound": {
+    "title": "Stran ni najdena",
+    "message": "Stran, ki jo iščeš, ne obstaja ali je bila premaknjena",
+    "action": "Pojdi domov"
+  },
+  "error": {
+    "title": "Nekaj je šlo narobe",
+    "message": "Ta razdelek se ni uspel naložiti. Poskusi znova.",
+    "retry": "Poskusi znova",
+    "toast": "Nekaj je šlo narobe. Prosim, poskusi znova."
+  },
+  "configError": {
+    "title": "Napaka konfiguracije",
+    "message": "Aplikacija ni mogla doseči zaledja Endurain. To je običajno posledica manjkajoče ali napačno nastavljene okoljske spremenljivke ENDURAIN_HOST ali pa zaledje ne deluje.",
+    "notSet": "(ni nastavljeno)",
+    "help": "Preverite, ali ENDURAIN_HOST kaže na URL, kjer je vaša instanca Endurain dosegljiva (na primer https://endurain.example.com), in ali zaledje deluje, nato pa znova naložite stran.",
+    "reload": "Znova naloži"
+  },
+  "dismiss": "Zapri",
+  "language": "Jezik",
+  "theme": {
+    "toLight": "Svetli način",
+    "toDark": "Temni način"
+  },
+  "pagination": {
+    "label": "Strani",
+    "previous": "Prejšnja stran",
+    "next": "Naslednja stran",
+    "goToPage": "Pojdi na stran {page}"
+  },
+  "markdownEditor": {
+    "preview": "Predogled",
+    "edit": "Uredi",
+    "supported": "Markdown podprt",
+    "empty": "Ni ničesar za predogled"
+  }
+}

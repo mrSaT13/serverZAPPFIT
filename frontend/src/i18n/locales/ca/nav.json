@@ -1,0 +1,22 @@
+{
+  "home": "Inici",
+  "search": "Cerca",
+  "activities": "Activitats",
+  "activitiesList": "Llista",
+  "summary": "Resum",
+  "gear": "Equipament",
+  "health": "Salut",
+  "alerts": "Alertes",
+  "settings": "Configuració",
+  "profile": "Perfil",
+  "login": "Inici de sessió",
+  "logout": "Tanca sessió",
+  "userMenu": "Menú d'usuari",
+  "menu": "Menú",
+  "primary": "Navegació principal",
+  "account": "Compte",
+  "preferences": "Preferències",
+  "updateAvailable": "Actualització disponible",
+  "updateAvailableTitle": "La versió {version} està disponible",
+  "updateViewRelease": "Veure les notes de versió"
+}

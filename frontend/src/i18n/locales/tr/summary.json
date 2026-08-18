@@ -1,0 +1,49 @@
+{
+  "title": "Özet",
+  "subtitle": "Antrenman toplamlarınızı ve zaman içindeki eğilimlerinizi inceleyin.",
+  "viewType": {
+    "label": "Özet dönemi",
+    "week": "Hafta",
+    "month": "Ay",
+    "year": "Yıl",
+    "lifetime": "Tüm zamanlar"
+  },
+  "filters": {
+    "type": "Etkinlik türü",
+    "allTypes": "Tüm türler"
+  },
+  "period": {
+    "previous": "Önceki dönem",
+    "next": "Sonraki dönem",
+    "picker": "Dönem seç",
+    "allTime": "Tüm zamanlar"
+  },
+  "metrics": {
+    "distance": "Mesafe",
+    "duration": "Süre",
+    "elevation": "Yükseklik",
+    "calories": "Kalori",
+    "activities": "Etkinlikler"
+  },
+  "breakdown": {
+    "title": "Dağılım",
+    "period": "Dönem",
+    "weekNumber": "{number}. hafta"
+  },
+  "typeBreakdown": {
+    "title": "Etkinlik türüne göre",
+    "type": "Tür"
+  },
+  "activities": {
+    "title": "Bu dönemdeki etkinlikler"
+  },
+  "empty": {
+    "title": "Bu dönemde etkinlik yok",
+    "description": "Seçilen dönem ve türle eşleşen etkinlik yok."
+  },
+  "error": {
+    "title": "Özet yüklenemedi",
+    "description": "İstatistikleriniz yüklenirken bir şeyler ters gitti. Bağlantınızı kontrol edip tekrar deneyin.",
+    "retry": "Tekrar dene"
+  }
+}

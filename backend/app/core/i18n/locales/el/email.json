@@ -1,0 +1,42 @@
+{
+  "common.best_regards": "Με εκτίμηση,",
+  "common.team": "Η ομάδα του Endurain",
+  "common.system": "Το σύστημα Endurain",
+  "common.visit": "Επισκεφθείτε το Endurain στο:",
+  "common.source_code": "Πηγαίος κώδικας στο:",
+  "common.copy_link": "Αν το παραπάνω κουμπί δεν λειτουργεί, μπορείτε να αντιγράψετε και να επικολλήσετε τον ακόλουθο σύνδεσμο στο πρόγραμμα περιήγησής σας:",
+
+  "password_reset.subject": "Endurain - Επαναφορά κωδικού",
+  "password_reset.heading": "Αίτημα επαναφοράς κωδικού",
+  "password_reset.greeting": "Γεια σου {name},",
+  "password_reset.intro": "Ζητήσατε επαναφορά του κωδικού για τον λογαριασμό σας Endurain. Κάντε κλικ στο παρακάτω κουμπί για να επαναφέρετε τον κωδικό σας:",
+  "password_reset.cta": "Επαναφορά κωδικού",
+  "password_reset.security_label": "Ειδοποίηση ασφαλείας:",
+  "password_reset.security_notice": "Αυτός ο σύνδεσμος θα λήξει σε 1 ώρα για λόγους ασφαλείας.",
+  "password_reset.ignore": "Αν δεν ζητήσατε αυτήν την επαναφορά κωδικού, αγνοήστε αυτό το email. Ο κωδικός σας θα παραμείνει αμετάβλητος.",
+
+  "signup_confirmation.subject": "Endurain - Επιβεβαιώστε τον λογαριασμό σας",
+  "signup_confirmation.heading": "Επιβεβαιώστε τον λογαριασμό σας",
+  "signup_confirmation.greeting": "Γεια σου {name},",
+  "signup_confirmation.intro": "Σας ευχαριστούμε που εγγραφήκατε στο Endurain! Παρακαλώ επιβεβαιώστε τον λογαριασμό σας κάνοντας κλικ στο παρακάτω κουμπί:",
+  "signup_confirmation.cta": "Επιβεβαίωση λογαριασμού",
+  "signup_confirmation.security_label": "Ειδοποίηση ασφαλείας:",
+  "signup_confirmation.security_notice": "Αυτός ο σύνδεσμος επιβεβαίωσης θα λήξει σε 24 ώρες.",
+  "signup_confirmation.ignore": "Αν δεν δημιουργήσατε λογαριασμό Endurain, αγνοήστε αυτό το email.",
+
+  "admin_signup.subject": "Endurain - Νέα εγγραφή χρήστη σε αναμονή έγκρισης",
+  "admin_signup.heading": "Νέα εγγραφή απαιτεί έγκριση",
+  "admin_signup.greeting": "Γεια σας {name},",
+  "admin_signup.intro": "Ένας νέος χρήστης εγγράφηκε και αναμένει έγκριση:",
+  "admin_signup.user_label": "Χρήστης:",
+  "admin_signup.review": "Παρακαλώ συνδεθείτε στον πίνακα διαχείρισης του Endurain για να ελέγξετε και να εγκρίνετε αυτό το αίτημα.",
+  "admin_signup.cta": "Μετάβαση στον πίνακα διαχείρισης",
+
+  "signup_approved.subject": "Endurain - Ο λογαριασμός σας εγκρίθηκε",
+  "signup_approved.heading": "Ο λογαριασμός σας είναι πλέον ενεργός",
+  "signup_approved.greeting": "Γεια σας {name},",
+  "signup_approved.intro": "Καλά νέα! Ο λογαριασμός σας εγκρίθηκε και είναι πλέον ενεργός.",
+  "signup_approved.username_label": "Όνομα χρήστη:",
+  "signup_approved.login_intro": "Μπορείτε τώρα να συνδεθείτε και να αρχίσετε να χρησιμοποιείτε το Endurain:",
+  "signup_approved.cta": "Σύνδεση στο Endurain"
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Aviseringar",
+  "subtitle": "Senaste aktivitet, förfrågningar och aviseringar",
+  "navLabel": "Aviseringar",
+  "unread": "Olästa",
+  "markRead": "Markera som läst",
+  "markAllRead": "Markera alla som lästa",
+  "seeAll": "Se alla",
+  "loadMore": "Ladda fler",
+  "loading": "Laddar…",
+  "badge": "{count} olästa aviseringar",
+  "empty": {
+    "title": "Du är uppdaterad",
+    "description": "Uppdateringar om dina aktiviteter, följare och integrationer visas här."
+  },
+  "error": {
+    "title": "Kunde inte ladda aviseringar",
+    "description": "Något gick fel när dina aviseringar laddades.",
+    "retry": "Försök igen"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Ny aktivitet",
+      "body": "En ny aktivitet har lagts till i ditt konto."
+    },
+    "duplicateActivity": {
+      "title": "Möjlig dubblettaktivitet",
+      "body": "En aktivitet med samma starttid kanske redan finns."
+    },
+    "newFollowerRequest": {
+      "title": "Ny följarförfrågan",
+      "body": "{name} ({'@'}{username}) vill följa dig."
+    },
+    "followerRequestAccepted": {
+      "title": "Följarförfrågan accepterad",
+      "body": "{name} ({'@'}{username}) accepterade din följarförfrågan."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect behöver åtgärd",
+      "body": "Din Garmin Connect-session har gått ut. Återanslut den för att fortsätta synkronisera."
+    },
+    "adminSignUpApproval": {
+      "title": "Ny registrering behöver godkännande",
+      "body": "{name} ({'@'}{username}) väntar på kontogodkännande."
+    },
+    "unknown": {
+      "title": "Avisering",
+      "body": "Du har en ny avisering."
+    }
+  }
+}

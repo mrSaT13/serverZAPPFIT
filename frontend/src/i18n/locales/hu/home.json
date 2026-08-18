@@ -1,0 +1,73 @@
+{
+  "addActivity": "Tevékenység hozzáadása",
+  "upload": {
+    "uploading": "Feltöltés…",
+    "success": "A tevékenység sikeresen feltöltve",
+    "error": "Nem sikerült feltölteni a tevékenységfájlt"
+  },
+  "refresh": {
+    "label": "Frissítés",
+    "refreshing": "Frissítés…",
+    "success": "A frissítés elindult",
+    "error": "Nem sikerült frissíteni a tevékenységeket"
+  },
+  "feed": {
+    "scopeLabel": "Hírfolyam köre",
+    "myActivities": "Saját tevékenységeim",
+    "following": "Követett",
+    "loadMore": "Több betöltése",
+    "loading": "Betöltés…",
+    "error": {
+      "title": "Nem sikerült betölteni a tevékenységeket",
+      "description": "Valami hiba történt a hírfolyam betöltése közben.",
+      "retry": "Próbáld újra"
+    },
+    "empty": {
+      "mine": {
+        "title": "Még nincs tevékenység",
+        "description": "Adj hozzá egy tevékenységet, vagy csatlakoztass egy integrációt a kezdéshez."
+      },
+      "following": {
+        "title": "Itt még nincs semmi",
+        "description": "Az általad követett emberek tevékenységei itt jelennek meg."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statisztikák",
+    "metricLabel": "Statisztikai mutató",
+    "thisWeek": "Ezen a héten",
+    "thisMonth": "Ebben a hónapban",
+    "empty": "Nincs tevékenység ebben az időszakban",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Táv",
+      "time": "Idő",
+      "calories": "Kalória"
+    }
+  },
+  "sports": {
+    "run": "Futás",
+    "bike": "Kerékpározás",
+    "swim": "Úszás",
+    "walk": "Gyaloglás",
+    "hike": "Túrázás",
+    "rowing": "Evezés",
+    "snow_ski": "Síelés",
+    "snowboard": "Snowboardozás",
+    "windsurf": "Szörfözés",
+    "stand_up_paddleboarding": "SUP-ozás",
+    "surfing": "Hullámlovaglás",
+    "kayaking": "Kajakozás",
+    "sailing": "Vitorlázás",
+    "snowshoeing": "Hótalpazás",
+    "inline_skating": "Görkorcsolyázás"
+  },
+  "goals": {
+    "title": "Célok",
+    "empty": {
+      "title": "Nincs beállított cél",
+      "description": "Állíts be célokat a beállításokban, hogy itt nyomon követhesd az előrehaladásod."
+    }
+  }
+}

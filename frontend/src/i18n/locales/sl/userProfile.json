@@ -1,0 +1,86 @@
+{
+  "notFound": {
+    "title": "Uporabnik ni najden",
+    "description": "Ta profil ne obstaja ali ti ni viden."
+  },
+  "error": {
+    "title": "Profila ni bilo mogoče naložiti",
+    "description": "Med nalaganjem tega profila je prišlo do napake.",
+    "retry": "Poskusi znova"
+  },
+  "editProfile": "Uredi profil",
+  "activities": {
+    "weekNav": "Prebrskaj aktivnosti po tednih",
+    "thisWeek": "Ta teden",
+    "oneYearAgo": "Pred enim letom"
+  },
+  "stats": {
+    "thisMonth": "Aktivnosti ta mesec",
+    "following": "Sledim",
+    "followers": "Sledilci"
+  },
+  "tabs": {
+    "activities": "Aktivnosti",
+    "following": "Sledim",
+    "followers": "Sledilci"
+  },
+  "activitiesError": {
+    "title": "Aktivnosti ni bilo mogoče naložiti",
+    "description": "Med nalaganjem aktivnosti je prišlo do napake.",
+    "retry": "Poskusi znova"
+  },
+  "listError": {
+    "title": "Seznam ni bilo mogoče naložiti",
+    "description": "Prišlo je do napake. Prosim, poskusi znova.",
+    "retry": "Poskusi znova"
+  },
+  "follow": {
+    "follow": "Sledi",
+    "requested": "Zahtevano",
+    "following": "Sledim",
+    "withdraw": "Umakni zahtevo",
+    "unfollow": "Nehaj slediti",
+    "cancel": "Prekliči",
+    "close": "Zapri",
+    "followError": "Zahteve za sledenje ni bilo mogoče poslati.",
+    "unfollowError": "Zahteve za sledenje ni bilo mogoče posodobiti.",
+    "confirmCancelTitle": "Umakni zahtevo",
+    "confirmCancelBody": "Umakni zahtevo za sledenje {name}?",
+    "confirmUnfollowTitle": "Nehaj slediti {name}",
+    "confirmUnfollowBody": "Nehaj slediti {name}? Pozneje mu/ji spet lahko slediš."
+  },
+  "list": {
+    "accept": "Sprejmi",
+    "decline": "Zavrni",
+    "remove": "Odstrani",
+    "unfollow": "Nehaj slediti",
+    "cancel": "Prekliči",
+    "close": "Zapri",
+    "accepted": "Sprejeto",
+    "pending": "V teku",
+    "acceptError": "Zahteve ni bilo mogoče sprejeti.",
+    "removeError": "Tega sledilca ni bilo mogoče posodobiti.",
+    "unfollowError": "Temu uporabniku ni bilo mogoče nehati slediti.",
+    "confirmUnfollowTitle": "Nehaj slediti {name}",
+    "confirmUnfollowBody": "Nehaj slediti {name}? Pozneje mu/ji spet lahko slediš.",
+    "confirmDeclineTitle": "Zavrni zahtevo",
+    "confirmDeclineBody": "Zavrni zahtevo za sledenje od {name}?",
+    "confirmRemoveTitle": "Odstrani sledilca",
+    "confirmRemoveBody": "Odstrani {name} iz tvojih sledilcev?"
+  },
+  "empty": {
+    "activities": {
+      "ownTitle": "Še ni aktivnosti",
+      "ownDescription": "Tvoje aktivnosti se bodo prikazale tukaj, ko jih dodaš ali uvoziti.",
+      "otherTitle": "Ni aktivnosti za prikaz"
+    },
+    "following": {
+      "ownTitle": "Še ne slediš nikomur.",
+      "otherTitle": "Še ne sledi nikomur."
+    },
+    "followers": {
+      "ownTitle": "Še nimaš sledilcev.",
+      "otherTitle": "Še ni sledilcev."
+    }
+  }
+}

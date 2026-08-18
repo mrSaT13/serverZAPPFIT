@@ -1,0 +1,152 @@
+{
+  "title": "裝備",
+  "subtitle": "您用於追蹤活動的自行車、鞋子與器材",
+  "buttonAddGear": "新增裝備",
+  "searchPlaceholder": "依暱稱搜尋",
+  "clearSearch": "清除搜尋",
+  "showInactive": "顯示停用裝備",
+  "inactive": "停用",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "篩選",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "自行車",
+    "shoes": "跑鞋",
+    "wetsuit": "防寒衣",
+    "racquet": "球拍",
+    "skis": "滑雪板（雙板）",
+    "snowboard": "滑雪板（單板）",
+    "windsurf": "帆板",
+    "waterSportsBoard": "水上運動板",
+    "unknown": "裝備"
+  },
+  "actions": {
+    "edit": "編輯裝備",
+    "delete": "刪除裝備"
+  },
+  "form": {
+    "title": "統計資料",
+    "addTitle": "新增裝備",
+    "editTitle": "編輯裝備",
+    "description": "追蹤您活動中使用的器材。",
+    "nickname": "暱稱",
+    "nicknameRequired": "暱稱為必填",
+    "nicknameTooLong": "暱稱不可超過 250 個字元",
+    "nicknameTaken": "您已有相同暱稱的裝備",
+    "gearType": "類型",
+    "brand": "品牌",
+    "brandTooLong": "品牌不可超過 250 個字元",
+    "model": "型號",
+    "modelTooLong": "型號不可超過 250 個字元",
+    "active": "啟用",
+    "createdAt": "建立日期",
+    "createdAtRequired": "建立日期為必填",
+    "initialDistance": "初始里程",
+    "purchaseValue": "購買金額",
+    "totalCost": "總費用",
+    "create": "新增裝備",
+    "save": "儲存變更",
+    "cancel": "取消",
+    "close": "關閉",
+    "createSuccess": "裝備已新增",
+    "updateSuccess": "裝備已更新",
+    "saveError": "無法儲存裝備。請再試一次。"
+  },
+  "delete": {
+    "title": "刪除裝備",
+    "body": "確定要刪除「{nickname}」嗎？此操作無法復原。",
+    "confirm": "刪除",
+    "cancel": "取消",
+    "close": "關閉",
+    "success": "裝備已刪除",
+    "error": "無法刪除裝備。請再試一次。"
+  },
+  "error": {
+    "title": "無法載入裝備",
+    "description": "載入裝備時發生錯誤。",
+    "retry": "再試一次"
+  },
+  "empty": {
+    "title": "尚無裝備",
+    "description": "新增您使用的自行車、鞋子與器材，以開始追蹤使用量。",
+    "searchTitle": "沒有符合搜尋的裝備",
+    "searchDescription": "嘗試不同的暱稱。",
+    "activeTitle": "沒有啟用的裝備",
+    "activeDescription": "新增裝備，或啟用「顯示停用裝備」以查看停用的裝備。"
+  },
+  "detail": {
+    "back": "返回裝備列表",
+    "notFoundTitle": "找不到裝備",
+    "notFoundDescription": "此裝備可能已被刪除或不屬於您。",
+    "totalDistance": "距離",
+    "totalTime": "時間",
+    "componentsCost": "零件費用"
+  },
+  "components": {
+    "title": "零件",
+    "add": "新增零件",
+    "empty": "尚無零件。新增您想追蹤磨耗的零件。",
+    "unsupported": "此裝備類型不支援零件追蹤。",
+    "noneActive": "所有零件均已停用。開啟「顯示停用裝備」以查看。",
+    "inactive": "停用",
+    "unitHours": "h",
+    "purchasedOn": "購買於 {date}",
+    "wearLabel": "{name} 磨耗",
+    "actions": {
+      "edit": "編輯零件",
+      "delete": "刪除零件"
+    },
+    "form": {
+      "addTitle": "新增零件",
+      "editTitle": "編輯零件",
+      "description": "追蹤您更換的零件以監控磨耗狀況。",
+      "type": "類型",
+      "typePlaceholder": "選擇類型",
+      "typeRequired": "類型為必填",
+      "brand": "品牌",
+      "brandRequired": "品牌為必填",
+      "brandTooLong": "品牌不可超過 250 個字元",
+      "model": "型號",
+      "modelRequired": "型號為必填",
+      "modelTooLong": "型號不可超過 250 個字元",
+      "purchaseDate": "購買日期",
+      "purchaseDateRequired": "購買日期為必填",
+      "retiredDate": "停用日期",
+      "expectedDistance": "預期里程",
+      "expectedTime": "預期時間",
+      "purchaseValue": "購買金額",
+      "active": "啟用",
+      "retiredBeforePurchase": "停用日期必須晚於購買日期。",
+      "create": "新增零件",
+      "save": "儲存變更",
+      "cancel": "取消",
+      "close": "關閉",
+      "createSuccess": "零件已新增",
+      "updateSuccess": "零件已更新",
+      "saveError": "無法儲存零件。請再試一次。"
+    },
+    "delete": {
+      "title": "刪除零件",
+      "body": "確定要刪除「{name}」嗎？此操作無法復原。",
+      "confirm": "刪除",
+      "cancel": "取消",
+      "close": "關閉",
+      "success": "零件已刪除",
+      "error": "無法刪除零件。請再試一次。"
+    },
+    "error": {
+      "title": "無法載入零件",
+      "description": "載入此裝備的零件時發生錯誤。"
+    }
+  },
+  "activities": {
+    "title": "活動",
+    "empty": "此裝備尚未記錄任何活動。",
+    "error": {
+      "title": "無法載入活動",
+      "description": "載入此裝備的活動時發生錯誤。"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "addActivity": "Aktivität hinzufügen",
+  "upload": {
+    "uploading": "Wird hochgeladen…",
+    "success": "Aktivität erfolgreich hochgeladen",
+    "error": "Die Aktivitätsdatei konnte nicht hochgeladen werden"
+  },
+  "refresh": {
+    "label": "Aktualisieren",
+    "refreshing": "Wird aktualisiert…",
+    "success": "Aktualisierung gestartet",
+    "error": "Aktivitäten konnten nicht aktualisiert werden"
+  },
+  "feed": {
+    "scopeLabel": "Feed-Bereich",
+    "myActivities": "Meine Aktivitäten",
+    "following": "Gefolgte",
+    "loadMore": "Mehr laden",
+    "loading": "Lädt…",
+    "error": {
+      "title": "Aktivitäten konnten nicht geladen werden",
+      "description": "Beim Laden des Feeds ist etwas schiefgelaufen.",
+      "retry": "Erneut versuchen"
+    },
+    "empty": {
+      "mine": {
+        "title": "Noch keine Aktivitäten",
+        "description": "Füge eine Aktivität hinzu oder verbinde eine Integration, um loszulegen."
+      },
+      "following": {
+        "title": "Noch nichts hier",
+        "description": "Aktivitäten von Personen, denen du folgst, werden hier angezeigt."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statistiken",
+    "metricLabel": "Statistikkennzahl",
+    "thisWeek": "Diese Woche",
+    "thisMonth": "Diesen Monat",
+    "empty": "Keine Aktivität in diesem Zeitraum",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Distanz",
+      "time": "Zeit",
+      "calories": "Kalorien"
+    }
+  },
+  "sports": {
+    "run": "Laufen",
+    "bike": "Radfahren",
+    "swim": "Schwimmen",
+    "walk": "Gehen",
+    "hike": "Wandern",
+    "rowing": "Rudern",
+    "snow_ski": "Skifahren",
+    "snowboard": "Snowboarden",
+    "windsurf": "Windsurfen",
+    "stand_up_paddleboarding": "Paddeln",
+    "surfing": "Surfen",
+    "kayaking": "Kajak",
+    "sailing": "Segeln",
+    "snowshoeing": "Schneeschuhwandern",
+    "inline_skating": "Inlineskaten"
+  },
+  "goals": {
+    "title": "Ziele",
+    "empty": {
+      "title": "Keine Ziele gesetzt",
+      "description": "Setze Ziele in den Einstellungen, um deinen Fortschritt hier zu verfolgen."
+    }
+  }
+}

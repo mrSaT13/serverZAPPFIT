@@ -1,0 +1,46 @@
+{
+  "title": "Welcome to {brand}",
+  "subtitle": "Let's configure your instance in a few steps before you get started.",
+  "identity": {
+    "title": "Appearance & language",
+    "description": "These defaults are used for new visitors. Everyone can change them later in their profile."
+  },
+  "language": {
+    "label": "Language",
+    "description": "Default interface language."
+  },
+  "theme": {
+    "label": "Theme",
+    "description": "Default appearance for new visitors."
+  },
+  "brand": {
+    "label": "Instance name",
+    "description": "Shown in the header, footer, and login screens."
+  },
+  "preferences": {
+    "title": "General preferences",
+    "description": "Defaults applied to every new account.",
+    "units": "Units",
+    "unitsMetric": "Metric (km, kg)",
+    "unitsImperial": "Imperial (mi, lb)",
+    "currency": "Currency",
+    "currencyEuro": "Euro (€)",
+    "currencyDollar": "US Dollar ($)",
+    "currencyPound": "British Pound (£)",
+    "recordsPerPage": "Records per page",
+    "signup": "Allow new sign-ups"
+  },
+  "submit": "Finish setup",
+  "submitting": "Saving…",
+  "loading": "Loading setup…",
+  "loadError": {
+    "title": "Couldn't load the setup",
+    "description": "Something went wrong while loading the configuration.",
+    "retry": "Try again"
+  },
+  "submitError": {
+    "title": "Couldn't complete the setup",
+    "description": "Something went wrong while saving the configuration.",
+    "retry": "Try again"
+  }
+}

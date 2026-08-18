@@ -1,0 +1,49 @@
+{
+  "title": "Súhrn",
+  "subtitle": "Prezrite si svoje tréningové súčty a trendy v čase.",
+  "viewType": {
+    "label": "Obdobie súhrnu",
+    "week": "Týždeň",
+    "month": "Mesiac",
+    "year": "Rok",
+    "lifetime": "Celé obdobie"
+  },
+  "filters": {
+    "type": "Typ aktivity",
+    "allTypes": "Všetky typy"
+  },
+  "period": {
+    "previous": "Predchádzajúce obdobie",
+    "next": "Ďalšie obdobie",
+    "picker": "Vybrať obdobie",
+    "allTime": "Celé obdobie"
+  },
+  "metrics": {
+    "distance": "Vzdialenosť",
+    "duration": "Trvanie",
+    "elevation": "Prevýšenie",
+    "calories": "Kalórie",
+    "activities": "Aktivity"
+  },
+  "breakdown": {
+    "title": "Rozpis",
+    "period": "Obdobie",
+    "weekNumber": "Týždeň {number}"
+  },
+  "typeBreakdown": {
+    "title": "Podľa typu aktivity",
+    "type": "Typ"
+  },
+  "activities": {
+    "title": "Aktivity v tomto období"
+  },
+  "empty": {
+    "title": "V tomto období žiadna aktivita",
+    "description": "Žiadne aktivity nezodpovedajú vybranému obdobiu a typu."
+  },
+  "error": {
+    "title": "Súhrn sa nepodarilo načítať",
+    "description": "Pri načítavaní štatistík sa niečo pokazilo. Skontrolujte pripojenie a skúste to znova.",
+    "retry": "Skúsiť znova"
+  }
+}

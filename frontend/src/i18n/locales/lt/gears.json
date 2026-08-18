@@ -1,0 +1,152 @@
+{
+  "title": "Įranga",
+  "subtitle": "Dviračiai, batai ir įranga, su kuria stebite veiklas",
+  "buttonAddGear": "Pridėti įrangą",
+  "searchPlaceholder": "Ieškoti pagal slapyvardį",
+  "clearSearch": "Išvalyti paiešką",
+  "showInactive": "Rodyti neaktyvius",
+  "inactive": "Neaktyvus",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtrai",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Dviratis",
+    "shoes": "Batai",
+    "wetsuit": "Hidrokostiumas",
+    "racquet": "Raketė",
+    "skis": "Slidės",
+    "snowboard": "Snieglentė",
+    "windsurf": "Burlentė",
+    "waterSportsBoard": "Vandens sporto lenta",
+    "unknown": "Įranga"
+  },
+  "actions": {
+    "edit": "Redaguoti įrangą",
+    "delete": "Ištrinti įrangą"
+  },
+  "form": {
+    "title": "Statistika",
+    "addTitle": "Pridėti įrangą",
+    "editTitle": "Redaguoti įrangą",
+    "description": "Stebėkite įrangą, kurią naudojate savo veikloms.",
+    "nickname": "Slapyvardis",
+    "nicknameRequired": "Slapyvardis yra privalomas",
+    "nicknameTooLong": "Slapyvardis turi būti ne ilgesnis nei 250 simbolių",
+    "nicknameTaken": "Jūs jau turite įrangą su tokiu slapyvardžiu",
+    "gearType": "Tipas",
+    "brand": "Prekės ženklas",
+    "brandTooLong": "Prekės ženklas turi būti ne ilgesnis nei 250 simbolių",
+    "model": "Modelis",
+    "modelTooLong": "Modelis turi būti ne ilgesnis nei 250 simbolių",
+    "active": "Aktyvus",
+    "createdAt": "Sukurta",
+    "createdAtRequired": "Sukūrimo data yra privaloma",
+    "initialDistance": "Pradinis atstumas",
+    "purchaseValue": "Pirkimo vertė",
+    "totalCost": "Bendra kaina",
+    "create": "Pridėti įrangą",
+    "save": "Išsaugoti pakeitimus",
+    "cancel": "Atšaukti",
+    "close": "Uždaryti",
+    "createSuccess": "Įranga pridėta",
+    "updateSuccess": "Įranga atnaujinta",
+    "saveError": "Nepavyko išsaugoti įrangos. Bandykite dar kartą."
+  },
+  "delete": {
+    "title": "Ištrinti įrangą",
+    "body": "Ar tikrai norite ištrinti „{nickname}“? Šio veiksmo atšaukti negalima.",
+    "confirm": "Ištrinti",
+    "cancel": "Atšaukti",
+    "close": "Uždaryti",
+    "success": "Įranga ištrinta",
+    "error": "Nepavyko ištrinti įrangos. Bandykite dar kartą."
+  },
+  "error": {
+    "title": "Nepavyko įkelti įrangos",
+    "description": "Įkeliant jūsų įrangą kažkas nepavyko.",
+    "retry": "Bandyti dar kartą"
+  },
+  "empty": {
+    "title": "Įrangos dar nėra",
+    "description": "Pridėkite dviračius, batus ir įrangą, kurią naudojate, kad pradėtumėte stebėti jų naudojimą.",
+    "searchTitle": "Jokia įranga neatitinka jūsų paieškos",
+    "searchDescription": "Bandykite kitą slapyvardį.",
+    "activeTitle": "Aktyvios įrangos nėra",
+    "activeDescription": "Pridėkite įrangą arba įjunkite „Rodyti neaktyvius“, kad pamatytumėte neaktyvią įrangą."
+  },
+  "detail": {
+    "back": "Atgal į įrangą",
+    "notFoundTitle": "Įranga nerasta",
+    "notFoundDescription": "Ši įranga galėjo būti ištrinta arba jums nepriklauso.",
+    "totalDistance": "Atstumas",
+    "totalTime": "Laikas",
+    "componentsCost": "Komponentai"
+  },
+  "components": {
+    "title": "Komponentai",
+    "add": "Pridėti komponentą",
+    "empty": "Komponentų dar nėra. Pridėkite dalis, kurių nusidėvėjimą norite stebėti.",
+    "unsupported": "Šis įrangos tipas nestebi komponentų.",
+    "noneActive": "Visi komponentai neaktyvūs. Įjunkite „Rodyti neaktyvius“, kad juos pamatytumėte.",
+    "inactive": "Neaktyvus",
+    "unitHours": "h",
+    "purchasedOn": "Įsigyta {date}",
+    "wearLabel": "{name} nusidėvėjimas",
+    "actions": {
+      "edit": "Redaguoti komponentą",
+      "delete": "Ištrinti komponentą"
+    },
+    "form": {
+      "addTitle": "Pridėti komponentą",
+      "editTitle": "Redaguoti komponentą",
+      "description": "Stebėkite keičiamas dalis, kad galėtumėte sekti jų nusidėvėjimą.",
+      "type": "Tipas",
+      "typePlaceholder": "Pasirinkite tipą",
+      "typeRequired": "Tipas yra privalomas",
+      "brand": "Prekės ženklas",
+      "brandRequired": "Prekės ženklas yra privalomas",
+      "brandTooLong": "Prekės ženklas turi būti ne ilgesnis nei 250 simbolių",
+      "model": "Modelis",
+      "modelRequired": "Modelis yra privalomas",
+      "modelTooLong": "Modelis turi būti ne ilgesnis nei 250 simbolių",
+      "purchaseDate": "Įsigijimo data",
+      "purchaseDateRequired": "Įsigijimo data yra privaloma",
+      "retiredDate": "Nurašymo data",
+      "expectedDistance": "Numatomas atstumas",
+      "expectedTime": "Numatomas laikas",
+      "purchaseValue": "Pirkimo vertė",
+      "active": "Aktyvus",
+      "retiredBeforePurchase": "Nurašymo data turi būti vėlesnė už įsigijimo datą.",
+      "create": "Pridėti komponentą",
+      "save": "Išsaugoti pakeitimus",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "createSuccess": "Komponentas pridėtas",
+      "updateSuccess": "Komponentas atnaujintas",
+      "saveError": "Nepavyko išsaugoti komponento. Bandykite dar kartą."
+    },
+    "delete": {
+      "title": "Ištrinti komponentą",
+      "body": "Ar tikrai norite ištrinti „{name}“? Šio veiksmo atšaukti negalima.",
+      "confirm": "Ištrinti",
+      "cancel": "Atšaukti",
+      "close": "Uždaryti",
+      "success": "Komponentas ištrintas",
+      "error": "Nepavyko ištrinti komponento. Bandykite dar kartą."
+    },
+    "error": {
+      "title": "Nepavyko įkelti komponentų",
+      "description": "Įkeliant šios įrangos komponentus kažkas nepavyko."
+    }
+  },
+  "activities": {
+    "title": "Veiklos",
+    "empty": "Su šia įranga dar neužregistruota jokių veiklų.",
+    "error": {
+      "title": "Nepavyko įkelti veiklų",
+      "description": "Įkeliant šios įrangos veiklas kažkas nepavyko."
+    }
+  }
+}

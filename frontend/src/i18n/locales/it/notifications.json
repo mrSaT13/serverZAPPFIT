@@ -1,0 +1,51 @@
+{
+  "title": "Notifiche",
+  "subtitle": "Attività recenti, richieste e avvisi",
+  "navLabel": "Notifiche",
+  "unread": "Non lette",
+  "markRead": "Segna come letta",
+  "markAllRead": "Segna tutte come lette",
+  "seeAll": "Vedi tutte",
+  "loadMore": "Carica altre",
+  "loading": "Caricamento…",
+  "badge": "{count} notifiche non lette",
+  "empty": {
+    "title": "Sei in pari",
+    "description": "Qui verranno mostrati gli aggiornamenti sulle tue attività, follower e integrazioni."
+  },
+  "error": {
+    "title": "Impossibile caricare le notifiche",
+    "description": "Si è verificato un errore durante il caricamento delle notifiche.",
+    "retry": "Riprova"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nuova attività",
+      "body": "Una nuova attività è stata aggiunta al tuo account."
+    },
+    "duplicateActivity": {
+      "title": "Possibile attività duplicata",
+      "body": "Potrebbe già esistere un'attività con la stessa ora di inizio."
+    },
+    "newFollowerRequest": {
+      "title": "Nuova richiesta di follow",
+      "body": "{name} ({'@'}{username}) vuole seguirti."
+    },
+    "followerRequestAccepted": {
+      "title": "Richiesta di follow accettata",
+      "body": "{name} ({'@'}{username}) ha accettato la tua richiesta di follow."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect richiede attenzione",
+      "body": "La tua sessione Garmin Connect è scaduta. Ricollegala per continuare la sincronizzazione."
+    },
+    "adminSignUpApproval": {
+      "title": "Nuova registrazione in attesa di approvazione",
+      "body": "{name} ({'@'}{username}) è in attesa di approvazione dell'account."
+    },
+    "unknown": {
+      "title": "Notifica",
+      "body": "Hai una nuova notifica."
+    }
+  }
+}

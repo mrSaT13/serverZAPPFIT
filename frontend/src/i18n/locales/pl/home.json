@@ -1,0 +1,73 @@
+{
+  "addActivity": "Dodaj aktywność",
+  "upload": {
+    "uploading": "Przesyłanie…",
+    "success": "Pomyślnie przesłano aktywność",
+    "error": "Nie udało się przesłać pliku aktywności"
+  },
+  "refresh": {
+    "label": "Odśwież",
+    "refreshing": "Odświeżanie…",
+    "success": "Rozpoczęto odświeżanie",
+    "error": "Nie udało się odświeżyć aktywności"
+  },
+  "feed": {
+    "scopeLabel": "Zakres kanału",
+    "myActivities": "Moje aktywności",
+    "following": "Obserwowani",
+    "loadMore": "Wczytaj więcej",
+    "loading": "Ładowanie…",
+    "error": {
+      "title": "Nie udało się wczytać aktywności",
+      "description": "Coś poszło nie tak podczas wczytywania kanału.",
+      "retry": "Spróbuj ponownie"
+    },
+    "empty": {
+      "mine": {
+        "title": "Brak aktywności",
+        "description": "Dodaj aktywność lub połącz integrację, aby zacząć."
+      },
+      "following": {
+        "title": "Jeszcze nic tu nie ma",
+        "description": "Aktywności osób, które obserwujesz, pojawią się tutaj."
+      }
+    }
+  },
+  "stats": {
+    "title": "Statystyki",
+    "metricLabel": "Wskaźnik statystyk",
+    "thisWeek": "Ten tydzień",
+    "thisMonth": "Ten miesiąc",
+    "empty": "Brak aktywności w tym okresie",
+    "caloriesUnit": "kcal",
+    "metric": {
+      "distance": "Dystans",
+      "time": "Czas",
+      "calories": "Kalorie"
+    }
+  },
+  "sports": {
+    "run": "Bieganie",
+    "bike": "Kolarstwo",
+    "swim": "Pływanie",
+    "walk": "Chodzenie",
+    "hike": "Wędrówki",
+    "rowing": "Wioślarstwo",
+    "snow_ski": "Narciarstwo",
+    "snowboard": "Snowboarding",
+    "windsurf": "Windsurfing",
+    "stand_up_paddleboarding": "Paddleboarding",
+    "surfing": "Surfing",
+    "kayaking": "Kajakarstwo",
+    "sailing": "Żeglarstwo",
+    "snowshoeing": "Chodzenie w rakietach śnieżnych",
+    "inline_skating": "Jazda na rolkach"
+  },
+  "goals": {
+    "title": "Cele",
+    "empty": {
+      "title": "Nie ustawiono celów",
+      "description": "Ustaw cele w ustawieniach, aby śledzić tutaj swoje postępy."
+    }
+  }
+}

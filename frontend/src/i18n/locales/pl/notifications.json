@@ -1,0 +1,51 @@
+{
+  "title": "Powiadomienia",
+  "subtitle": "Ostatnia aktywność, prośby i alerty",
+  "navLabel": "Powiadomienia",
+  "unread": "Nieprzeczytane",
+  "markRead": "Oznacz jako przeczytane",
+  "markAllRead": "Oznacz wszystkie jako przeczytane",
+  "seeAll": "Zobacz wszystkie",
+  "loadMore": "Wczytaj więcej",
+  "loading": "Ładowanie…",
+  "badge": "{count} nieprzeczytanych powiadomień",
+  "empty": {
+    "title": "Wszystko na bieżąco",
+    "description": "Aktualizacje dotyczące Twoich aktywności, obserwujących i integracji pojawią się tutaj."
+  },
+  "error": {
+    "title": "Nie udało się wczytać powiadomień",
+    "description": "Coś poszło nie tak podczas wczytywania powiadomień.",
+    "retry": "Spróbuj ponownie"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Nowa aktywność",
+      "body": "Do Twojego konta dodano nową aktywność."
+    },
+    "duplicateActivity": {
+      "title": "Możliwa zduplikowana aktywność",
+      "body": "Aktywność o tym samym czasie rozpoczęcia może już istnieć."
+    },
+    "newFollowerRequest": {
+      "title": "Nowa prośba o obserwowanie",
+      "body": "{name} ({'@'}{username}) chce Cię obserwować."
+    },
+    "followerRequestAccepted": {
+      "title": "Zaakceptowano prośbę o obserwowanie",
+      "body": "{name} ({'@'}{username}) zaakceptował(a) Twoją prośbę o obserwowanie."
+    },
+    "garminTokenExpired": {
+      "title": "Garmin Connect wymaga uwagi",
+      "body": "Twoja sesja Garmin Connect wygasła. Połącz ją ponownie, aby kontynuować synchronizację."
+    },
+    "adminSignUpApproval": {
+      "title": "Nowa rejestracja wymaga zatwierdzenia",
+      "body": "{name} ({'@'}{username}) oczekuje na zatwierdzenie konta."
+    },
+    "unknown": {
+      "title": "Powiadomienie",
+      "body": "Masz nowe powiadomienie."
+    }
+  }
+}

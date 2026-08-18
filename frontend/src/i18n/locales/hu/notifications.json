@@ -1,0 +1,51 @@
+{
+  "title": "Értesítések",
+  "subtitle": "Legutóbbi tevékenységek, kérések és értesítések",
+  "navLabel": "Értesítések",
+  "unread": "Olvasatlan",
+  "markRead": "Megjelölés olvasottként",
+  "markAllRead": "Összes megjelölése olvasottként",
+  "seeAll": "Összes megtekintése",
+  "loadMore": "Több betöltése",
+  "loading": "Betöltés…",
+  "badge": "{count} olvasatlan értesítés",
+  "empty": {
+    "title": "Mindennel naprakész vagy",
+    "description": "A tevékenységeiddel, követőiddel és integrációiddal kapcsolatos frissítések itt jelennek meg."
+  },
+  "error": {
+    "title": "Nem sikerült betölteni az értesítéseket",
+    "description": "Valami hiba történt az értesítéseid betöltése közben.",
+    "retry": "Próbáld újra"
+  },
+  "types": {
+    "newActivity": {
+      "title": "Új tevékenység",
+      "body": "Új tevékenység került a fiókodba."
+    },
+    "duplicateActivity": {
+      "title": "Lehetséges duplikált tevékenység",
+      "body": "Lehet, hogy már létezik egy azonos kezdési idejű tevékenység."
+    },
+    "newFollowerRequest": {
+      "title": "Új követési kérelem",
+      "body": "{name} ({'@'}{username}) szeretne követni téged."
+    },
+    "followerRequestAccepted": {
+      "title": "Követési kérelem elfogadva",
+      "body": "{name} ({'@'}{username}) elfogadta a követési kérelmedet."
+    },
+    "garminTokenExpired": {
+      "title": "A Garmin Connect figyelmet igényel",
+      "body": "A Garmin Connect munkameneted lejárt. Csatlakoztasd újra a szinkronizálás folytatásához."
+    },
+    "adminSignUpApproval": {
+      "title": "Új regisztráció vár jóváhagyásra",
+      "body": "{name} ({'@'}{username}) a fiók jóváhagyására vár."
+    },
+    "unknown": {
+      "title": "Értesítés",
+      "body": "Új értesítésed van."
+    }
+  }
+}

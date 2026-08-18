@@ -1,0 +1,15 @@
+{
+  "verifyingTitle": "Verifica dell'email in corso",
+  "verifyingBody": "Attendi mentre confermiamo il tuo indirizzo.",
+  "successTitle": "Email verificata",
+  "successBody": "Il tuo indirizzo email è stato confermato.",
+  "adminApprovalBody": "Il tuo account è ora in attesa di approvazione da parte dell'amministratore.",
+  "continueButton": "Continua con l'accesso",
+  "invalidTitle": "Verifica non riuscita",
+  "missingTokenBody": "Questo link di verifica è privo del token.",
+  "errorInvalidToken": "Questo link di verifica non è valido o è scaduto.",
+  "errorNotFound": "Non abbiamo trovato un account per questo link.",
+  "errorGeneral": "Impossibile verificare la tua email. Riprova.",
+  "retry": "Riprova",
+  "backToLogin": "Torna all'accesso"
+}

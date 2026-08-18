@@ -1,0 +1,152 @@
+{
+  "title": "Oprema",
+  "subtitle": "Kolesa, čevlji in oprema, s katero slediš aktivnostim",
+  "buttonAddGear": "Dodaj opremo",
+  "searchPlaceholder": "Išči po vzdevku",
+  "clearSearch": "Počisti iskanje",
+  "showInactive": "Pokaži neaktivno",
+  "inactive": "Neaktivno",
+  "fromStrava": "Strava",
+  "fromGarmin": "Garmin Connect",
+  "filters": "Filtri",
+  "unitKm": "km",
+  "unitMi": "mi",
+  "types": {
+    "bicycle": "Kolo",
+    "shoes": "Čevlji",
+    "wetsuit": "Neopren",
+    "racquet": "Reket",
+    "skis": "Smuči",
+    "snowboard": "Snowboard",
+    "windsurf": "Windsurf deska",
+    "waterSportsBoard": "Deska za vodne športe",
+    "unknown": "Oprema"
+  },
+  "actions": {
+    "edit": "Uredi opremo",
+    "delete": "Izbriši opremo"
+  },
+  "form": {
+    "title": "Statistike",
+    "addTitle": "Dodaj opremo",
+    "editTitle": "Uredi opremo",
+    "description": "Sledi opremi, ki jo uporabljaš za aktivnosti.",
+    "nickname": "Vzdevek",
+    "nicknameRequired": "Vzdevek je obvezen",
+    "nicknameTooLong": "Vzdevek mora biti 250 znakov ali manj",
+    "nicknameTaken": "Oprema s tem vzdevkom že obstaja",
+    "gearType": "Vrsta",
+    "brand": "Znamka",
+    "brandTooLong": "Znamka mora biti 250 znakov ali manj",
+    "model": "Model",
+    "modelTooLong": "Model mora biti 250 znakov ali manj",
+    "active": "Aktivno",
+    "createdAt": "Ustvarjeno",
+    "createdAtRequired": "Datum ustvaritve je obvezen",
+    "initialDistance": "Začetna razdalja",
+    "purchaseValue": "Vrednost nakupa",
+    "totalCost": "Skupni strošek",
+    "create": "Dodaj opremo",
+    "save": "Shrani spremembe",
+    "cancel": "Prekliči",
+    "close": "Zapri",
+    "createSuccess": "Oprema dodana",
+    "updateSuccess": "Oprema posodobljena",
+    "saveError": "Opreme ni bilo mogoče shraniti. Prosim, poskusi znova."
+  },
+  "delete": {
+    "title": "Izbriši opremo",
+    "body": "Ali si prepričan/a, da želiš izbrisati \"{nickname}\"? Tega ni mogoče razveljaviti.",
+    "confirm": "Izbriši",
+    "cancel": "Prekliči",
+    "close": "Zapri",
+    "success": "Oprema izbrisana",
+    "error": "Opreme ni bilo mogoče izbrisati. Prosim, poskusi znova."
+  },
+  "error": {
+    "title": "Opreme ni bilo mogoče naložiti",
+    "description": "Med nalaganjem tvoje opreme je prišlo do napake.",
+    "retry": "Poskusi znova"
+  },
+  "empty": {
+    "title": "Še ni opreme",
+    "description": "Dodaj kolesa, čevlje in opremo, ki jo uporabljaš, da začneš slediti njihovi uporabi.",
+    "searchTitle": "Nobena oprema ne ustreza tvojemu iskanju",
+    "searchDescription": "Poskusi z drugačnim vzdevkom.",
+    "activeTitle": "Ni aktivne opreme",
+    "activeDescription": "Dodaj opremo ali omogoči \"Pokaži neaktivno\", da vidiš neaktivno opremo."
+  },
+  "detail": {
+    "back": "Nazaj na opremo",
+    "notFoundTitle": "Oprema ni najdena",
+    "notFoundDescription": "Ta oprema je morda bila izbrisana ali pa ti ne pripada.",
+    "totalDistance": "Razdalja",
+    "totalTime": "Čas",
+    "componentsCost": "Komponente"
+  },
+  "components": {
+    "title": "Komponente",
+    "add": "Dodaj komponento",
+    "empty": "Še ni komponent. Dodaj dele, katerih obrabo želiš slediti.",
+    "unsupported": "Ta vrsta opreme ne sledi komponentam.",
+    "noneActive": "Vse komponente so neaktivne. Vklopi \"Pokaži neaktivno\", da jih vidiš.",
+    "inactive": "Neaktivno",
+    "unitHours": "h",
+    "purchasedOn": "Kupljeno {date}",
+    "wearLabel": "Obraba {name}",
+    "actions": {
+      "edit": "Uredi komponento",
+      "delete": "Izbriši komponento"
+    },
+    "form": {
+      "addTitle": "Dodaj komponento",
+      "editTitle": "Uredi komponento",
+      "description": "Sledi delom, ki jih menjaš, da spremljaš njihovo obrabo.",
+      "type": "Vrsta",
+      "typePlaceholder": "Izberi vrsto",
+      "typeRequired": "Vrsta je obvezna",
+      "brand": "Znamka",
+      "brandRequired": "Znamka je obvezna",
+      "brandTooLong": "Znamka mora biti 250 znakov ali manj",
+      "model": "Model",
+      "modelRequired": "Model je obvezen",
+      "modelTooLong": "Model mora biti 250 znakov ali manj",
+      "purchaseDate": "Kupljeno",
+      "purchaseDateRequired": "Datum nakupa je obvezen",
+      "retiredDate": "Upokojeno",
+      "expectedDistance": "Pričakovana razdalja",
+      "expectedTime": "Pričakovan čas",
+      "purchaseValue": "Vrednost nakupa",
+      "active": "Aktivno",
+      "retiredBeforePurchase": "Datum upokojitve mora biti po datumu nakupa.",
+      "create": "Dodaj komponento",
+      "save": "Shrani spremembe",
+      "cancel": "Prekliči",
+      "close": "Zapri",
+      "createSuccess": "Komponenta dodana",
+      "updateSuccess": "Komponenta posodobljena",
+      "saveError": "Komponente ni bilo mogoče shraniti. Prosim, poskusi znova."
+    },
+    "delete": {
+      "title": "Izbriši komponento",
+      "body": "Ali si prepričan/a, da želiš izbrisati \"{name}\"? Tega ni mogoče razveljaviti.",
+      "confirm": "Izbriši",
+      "cancel": "Prekliči",
+      "close": "Zapri",
+      "success": "Komponenta izbrisana",
+      "error": "Komponente ni bilo mogoče izbrisati. Prosim, poskusi znova."
+    },
+    "error": {
+      "title": "Komponent ni bilo mogoče naložiti",
+      "description": "Med nalaganjem komponent te opreme je prišlo do napake."
+    }
+  },
+  "activities": {
+    "title": "Aktivnosti",
+    "empty": "Še ni zabeleženih aktivnosti s to opremo.",
+    "error": {
+      "title": "Aktivnosti ni bilo mogoče naložiti",
+      "description": "Med nalaganjem aktivnosti te opreme je prišlo do napake."
+    }
+  }
+}

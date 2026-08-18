@@ -1,0 +1,72 @@
+name: OpenAPI Types Drift
+
+# Guarantees frontend/src/types/api.generated.ts stays in lockstep with the
+# backend API. The generated client is committed so the frontend builds without
+# the backend; this job regenerates it from the live FastAPI schema and fails
+# if the committed copy is stale.
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - backend/**
+      - frontend/src/types/api.generated.ts
+      - frontend/package.json
+      - frontend/package-lock.json
+      - .forgejo/workflows/openapi-types-drift.yml
+  pull_request:
+    paths:
+      - backend/**
+      - frontend/src/types/api.generated.ts
+      - frontend/package.json
+      - frontend/package-lock.json
+      - .forgejo/workflows/openapi-types-drift.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ forgejo.workflow }}-${{ forgejo.ref }}
+  cancel-in-progress: true
+
+jobs:
+
+  drift:
+    name: Generated API types in sync with backend
+    runs-on: local-runner
+    steps:
+      - name: Checkout code
+        uses: https://data.forgejo.org/actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          fetch-depth: 1
+
+      - name: Install uv
+        uses: https://data.forgejo.org/astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          working-directory: backend
+
+      - name: Sync backend dependencies
+        working-directory: backend
+        run: uv sync --frozen
+
+      - name: Export OpenAPI schema
+        working-directory: backend
+        run: uv run --no-sync python scripts/export_openapi.py ../frontend/openapi.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Regenerate API types
+        working-directory: frontend
+        run: npm run gen:api
+
+      - name: Fail if generated API types are out of date
+        working-directory: frontend
+        run: |
+          if ! git diff --exit-code -- src/types/api.generated.ts; then
+            echo "::error::src/types/api.generated.ts is stale. Regenerate it (export the backend OpenAPI schema, then 'npm run gen:api') and commit the result." >&2
+            exit 1
+          fi

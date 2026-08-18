@@ -1,0 +1,648 @@
+{
+  "title": "Zdrowie",
+  "subtitle": "Zobacz wszystkie swoje dane o zdrowiu w jednym miejscu",
+  "nav": {
+    "label": "Sekcje zdrowia",
+    "soon": "Wkrótce",
+    "dashboard": "Pulpit",
+    "sleep": "Sen",
+    "rhr": "Tętno spoczynkowe",
+    "steps": "Kroki",
+    "weight": "Waga",
+    "fasting": "Post",
+    "water": "Spożycie wody",
+    "poop": "Wypróżnienia"
+  },
+  "dashboard": {
+    "title": "Pulpit",
+    "subtitle": "Twoje codzienne samopoczucie w skrócie",
+    "sleep": "Sen",
+    "restingHeartRate": "Tętno spocz.",
+    "avgSkinTemperatureDeviation": "Odch. temp. skóry",
+    "weight": "Waga",
+    "bmi": "BMI",
+    "steps": "Kroki",
+    "fasting": "Post",
+    "water": "Spożycie wody",
+    "poop": "Wypróżnienia",
+    "noSleepTarget": "Brak celu snu",
+    "noWeightTarget": "Brak celu wagi",
+    "noStepsTarget": "Brak celu kroków",
+    "noFastingTarget": "Brak celu postu",
+    "noWaterTarget": "Brak celu wody",
+    "noPoopTarget": "Brak celu wypróżnień",
+    "stepsTargetLabel": "kroków",
+    "poopTargetLabel": "/ dzień",
+    "noWeightData": "Brak danych o wadze",
+    "bmiUnderweight": "Niedowaga",
+    "bmiNormalWeight": "Waga prawidłowa",
+    "bmiOverweight": "Nadwaga",
+    "bmiObesityClass1": "Otyłość (I stopnia)",
+    "bmiObesityClass2": "Otyłość (II stopnia)",
+    "bmiObesityClass3": "Otyłość skrajna (III stopnia)",
+    "hrvBalanced": "Zrównoważone",
+    "hrvUnbalanced": "Niezrównoważone",
+    "hrvLow": "Niskie",
+    "hrvPoor": "Słabe",
+    "labelNoData": "Brak danych",
+    "errorTitle": "Nie udało się wczytać danych o zdrowiu",
+    "errorDescription": "Coś poszło nie tak podczas wczytywania Twoich dziennych statystyk zdrowia. Spróbuj ponownie.",
+    "retry": "Spróbuj ponownie"
+  },
+  "weight": {
+    "title": "Waga",
+    "subtitle": "Śledź swoją wagę i skład ciała w czasie",
+    "logButton": "Zapisz wagę",
+    "targetButton": "Ustaw cel",
+    "sourceGarmin": "Z Garmin Connect",
+    "toggleDetails": "Przełącz szczegóły składu ciała",
+    "chartTitle": "Trend wagi",
+    "chartWeightSeries": "Waga",
+    "chartTargetSeries": "Cel",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj wpis",
+      "delete": "Usuń wpis"
+    },
+    "detail": {
+      "bmi": "BMI",
+      "bodyFat": "Tkanka tłuszczowa",
+      "bodyWater": "Woda w organizmie",
+      "boneMass": "Masa kostna",
+      "muscleMass": "Masa mięśniowa"
+    },
+    "form": {
+      "addTitle": "Zapisz wagę",
+      "editTitle": "Edytuj wpis wagi",
+      "description": "Zapisz swoją wagę i opcjonalnie skład ciała.",
+      "date": "Data",
+      "dateRequired": "Wybierz datę.",
+      "weight": "Waga",
+      "weightRequired": "Wprowadź swoją wagę.",
+      "weightInvalid": "Wprowadź wagę większą niż zero.",
+      "bodyComposition": "Skład ciała (opcjonalnie)",
+      "bmi": "BMI",
+      "bodyFat": "Tkanka tłuszczowa (%)",
+      "bodyWater": "Woda w organizmie (%)",
+      "boneMass": "Masa kostna",
+      "muscleMass": "Masa mięśniowa",
+      "create": "Zapisz",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Zapisano wagę.",
+      "updateSuccess": "Zaktualizowano wpis wagi.",
+      "saveError": "Nie udało się zapisać wpisu wagi. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel wagi",
+      "description": "Wybierz docelową wagę lub wyczyść pole, aby ją usunąć.",
+      "weight": "Docelowa waga",
+      "hint": "Pozostaw puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel wagi.",
+      "saveError": "Nie udało się zaktualizować celu wagi. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak wpisów wagi",
+      "description": "Zapisz swoją wagę, aby zacząć śledzić postępy w czasie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii wagi",
+      "description": "Coś poszło nie tak podczas wczytywania wpisów wagi. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń wpis wagi",
+      "body": "Ten wpis wagi zostanie trwale usunięty. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto wpis wagi.",
+      "error": "Nie udało się usunąć wpisu wagi. Spróbuj ponownie."
+    }
+  },
+  "steps": {
+    "title": "Kroki",
+    "subtitle": "Śledź dzienną liczbę kroków w czasie",
+    "logButton": "Zapisz kroki",
+    "targetButton": "Ustaw cel",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend kroków",
+    "chartStepsSeries": "Kroki",
+    "chartTargetSeries": "Cel",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj wpis",
+      "delete": "Usuń wpis"
+    },
+    "form": {
+      "addTitle": "Zapisz kroki",
+      "editTitle": "Edytuj wpis kroków",
+      "description": "Zapisz liczbę kroków na dany dzień.",
+      "date": "Data",
+      "dateRequired": "Wybierz datę.",
+      "steps": "Kroki",
+      "stepsRequired": "Wprowadź liczbę kroków.",
+      "stepsInvalid": "Wprowadź liczbę kroków większą niż zero.",
+      "create": "Zapisz",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Zapisano kroki.",
+      "updateSuccess": "Zaktualizowano wpis kroków.",
+      "saveError": "Nie udało się zapisać wpisu kroków. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel kroków",
+      "description": "Wybierz dzienny cel kroków lub wyczyść pole, aby go usunąć.",
+      "steps": "Docelowa liczba kroków dziennie",
+      "hint": "Pozostaw puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel kroków.",
+      "saveError": "Nie udało się zaktualizować celu kroków. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak wpisów kroków",
+      "description": "Zapisz swoje kroki, aby zacząć śledzić aktywność w czasie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii kroków",
+      "description": "Coś poszło nie tak podczas wczytywania wpisów kroków. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń wpis kroków",
+      "body": "Ten wpis kroków zostanie trwale usunięty. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto wpis kroków.",
+      "error": "Nie udało się usunąć wpisu kroków. Spróbuj ponownie."
+    }
+  },
+  "rhr": {
+    "title": "Tętno spoczynkowe",
+    "subtitle": "Śledź swoje tętno spoczynkowe w czasie",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend tętna spoczynkowego",
+    "chartSeries": "Tętno spoczynkowe",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "empty": {
+      "title": "Brak danych o tętnie spoczynkowym",
+      "description": "Tętno spoczynkowe jest rejestrowane razem ze snem. Zsynchronizuj urządzenie, które je śledzi, aby zobaczyć tutaj swój trend."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii tętna spoczynkowego",
+      "description": "Coś poszło nie tak podczas wczytywania danych o tętnie spoczynkowym. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    }
+  },
+  "sleep": {
+    "title": "Sen",
+    "subtitle": "Śledź długość i jakość snu w czasie",
+    "logButton": "Zapisz sen",
+    "targetButton": "Ustaw cel",
+    "sourceGarmin": "Z Garmin Connect",
+    "toggleDetails": "Przełącz szczegóły snu",
+    "chartTitle": "Trend snu",
+    "chartSleepSeries": "Sen",
+    "chartTargetSeries": "Cel",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj wpis",
+      "delete": "Usuń wpis"
+    },
+    "score": "Wynik",
+    "hrvBalanced": "Zrównoważone",
+    "hrvUnbalanced": "Niezrównoważone",
+    "hrvLow": "Niskie",
+    "hrvPoor": "Słabe",
+    "scoreExcellent": "Doskonały",
+    "scoreGood": "Dobry",
+    "scoreFair": "Przeciętny",
+    "scorePoor": "Słaby",
+    "detail": {
+      "tabsLabel": "Sekcje szczegółów snu",
+      "tabScore": "Wynik snu",
+      "tabDetails": "Szczegóły snu",
+      "deep": "Głęboki",
+      "light": "Lekki",
+      "rem": "REM",
+      "awake": "Czuwanie",
+      "score": "Wynik snu",
+      "quality": "Jakość",
+      "duration": "Czas trwania",
+      "restingHeartRate": "Tętno spocz.",
+      "avgHeartRate": "Śr. tętno",
+      "minHeartRate": "Min. tętno",
+      "maxHeartRate": "Maks. tętno",
+      "skinTempDeviation": "Odch. temp. skóry",
+      "hrv": "Status HRV",
+      "spo2": "Śr. SpO₂",
+      "lowestSpo2": "Najniższe SpO₂",
+      "highestSpo2": "Najwyższe SpO₂",
+      "avgRespiration": "Śr. oddech",
+      "lowestRespiration": "Najniższy oddech",
+      "highestRespiration": "Najwyższy oddech",
+      "avgSleepStress": "Śr. stres podczas snu",
+      "awakeCount": "Przebudzenia",
+      "summary": "Podsumowanie",
+      "breakdown": "Rozbicie",
+      "overview": "Przegląd",
+      "heartRate": "Tętno",
+      "bloodOxygen": "Natlenienie krwi",
+      "respiration": "Oddech",
+      "avg": "Śr.",
+      "min": "Min.",
+      "max": "Maks.",
+      "noData": "Nie zarejestrowano danych."
+    },
+    "hypnogram": {
+      "title": "Fazy snu",
+      "deep": "Głęboki",
+      "light": "Lekki",
+      "rem": "REM",
+      "awake": "Czuwanie",
+      "noData": "Brak dostępnej osi czasu faz."
+    },
+    "form": {
+      "addTitle": "Zapisz sen",
+      "editTitle": "Edytuj wpis snu",
+      "description": "Zapisz długość snu i opcjonalnie rozbicie na fazy oraz wskaźniki.",
+      "date": "Data",
+      "dateRequired": "Wybierz datę.",
+      "totalSleep": "Łączny sen",
+      "totalSleepRequired": "Wprowadź, jak długo spałeś/spałaś.",
+      "hours": "Godziny",
+      "minutes": "Minuty",
+      "stageBreakdown": "Rozbicie na fazy (opcjonalnie)",
+      "deep": "Sen głęboki",
+      "light": "Sen lekki",
+      "rem": "Sen REM",
+      "awake": "Czuwanie",
+      "metrics": "Wskaźniki (opcjonalnie)",
+      "sleepScore": "Wynik snu (0–100)",
+      "restingHeartRate": "Tętno spoczynkowe (bpm)",
+      "skinTempDeviation": "Odch. temp. skóry (°C)",
+      "spo2": "Śr. SpO₂ (%)",
+      "sleepTimes": "Godziny snu (opcjonalnie)",
+      "startTime": "Początek snu",
+      "endTime": "Koniec snu",
+      "endBeforeStart": "Koniec snu musi być późniejszy niż jego początek.",
+      "awakeCount": "Przebudzenia",
+      "heartRate": "Tętno (opcjonalnie)",
+      "avgHeartRate": "Śr. tętno (bpm)",
+      "minHeartRate": "Min. tętno (bpm)",
+      "maxHeartRate": "Maks. tętno (bpm)",
+      "bloodOxygen": "Natlenienie krwi (opcjonalnie)",
+      "lowestSpo2": "Najniższe SpO₂ (%)",
+      "highestSpo2": "Najwyższe SpO₂ (%)",
+      "avgSleepStress": "Śr. stres podczas snu (0–100)",
+      "sleepStages": "Fazy snu (opcjonalnie)",
+      "noStages": "Nie dodano jeszcze faz.",
+      "addStage": "Dodaj fazę",
+      "removeStage": "Usuń fazę",
+      "stageLabel": "Faza {index}",
+      "stageType": "Faza",
+      "stageDeep": "Głęboki",
+      "stageLight": "Lekki",
+      "stageRem": "REM",
+      "stageAwake": "Czuwanie",
+      "stageStart": "Początek",
+      "stageEnd": "Koniec",
+      "stageDuration": "Czas trwania",
+      "create": "Zapisz",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Zapisano sen.",
+      "updateSuccess": "Zaktualizowano wpis snu.",
+      "saveError": "Nie udało się zapisać wpisu snu. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel snu",
+      "description": "Wybierz nocny cel snu lub wyczyść pola, aby go usunąć.",
+      "hours": "Godziny",
+      "minutes": "Minuty",
+      "hint": "Pozostaw puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel snu.",
+      "saveError": "Nie udało się zaktualizować celu snu. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak wpisów snu",
+      "description": "Zapisz nocny sen, aby zacząć śledzić swój odpoczynek w czasie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii snu",
+      "description": "Coś poszło nie tak podczas wczytywania wpisów snu. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń wpis snu",
+      "body": "Ten wpis snu zostanie trwale usunięty. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto wpis snu.",
+      "error": "Nie udało się usunąć wpisu snu. Spróbuj ponownie."
+    }
+  },
+  "water": {
+    "title": "Spożycie wody",
+    "subtitle": "Śledź dzienne spożycie wody w czasie",
+    "logButton": "Zapisz wodę",
+    "targetButton": "Ustaw cel",
+    "sourceGarmin": "Z Garmin Connect",
+    "chartTitle": "Trend spożycia wody",
+    "chartWaterSeries": "Woda",
+    "chartTargetSeries": "Cel",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj wpis",
+      "delete": "Usuń wpis"
+    },
+    "form": {
+      "addTitle": "Zapisz wodę",
+      "editTitle": "Edytuj wpis wody",
+      "description": "Zapisz spożycie wody na dany dzień.",
+      "date": "Data",
+      "dateRequired": "Wybierz datę.",
+      "amount": "Ilość",
+      "amountRequired": "Wprowadź ilość.",
+      "amountInvalid": "Wprowadź ilość większą niż zero.",
+      "create": "Zapisz",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Zapisano wodę.",
+      "updateSuccess": "Zaktualizowano wpis wody.",
+      "saveError": "Nie udało się zapisać wpisu wody. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel wody",
+      "description": "Wybierz dzienny cel spożycia wody lub wyczyść pole, aby go usunąć.",
+      "amount": "Cel dzienny",
+      "hint": "Pozostaw puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel wody.",
+      "saveError": "Nie udało się zaktualizować celu wody. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak wpisów wody",
+      "description": "Zapisz spożycie wody, aby zacząć śledzić nawodnienie w czasie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii wody",
+      "description": "Coś poszło nie tak podczas wczytywania wpisów wody. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń wpis wody",
+      "body": "Ten wpis wody zostanie trwale usunięty. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto wpis wody.",
+      "error": "Nie udało się usunąć wpisu wody. Spróbuj ponownie."
+    }
+  },
+  "poop": {
+    "title": "Wypróżnienia",
+    "subtitle": "Śledź swoje wypróżnienia w czasie",
+    "logButton": "Zapisz wpis",
+    "targetButton": "Ustaw cel",
+    "chartTitle": "Dzienna częstotliwość",
+    "chartCountSeries": "Wypróżnienia",
+    "chartTargetSeries": "Cel",
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj wpis",
+      "delete": "Usuń wpis"
+    },
+    "list": {
+      "bristolBadge": "Bristol {type}",
+      "noDetails": "Wypróżnienie"
+    },
+    "form": {
+      "addTitle": "Zapisz wypróżnienie",
+      "editTitle": "Edytuj wypróżnienie",
+      "description": "Zapisz czas i szczegóły wypróżnienia.",
+      "dateTime": "Data i godzina",
+      "dateTimeRequired": "Wybierz datę i godzinę.",
+      "bristolType": "Typ stolca wg skali Bristolskiej",
+      "color": "Kolor",
+      "notes": "Notatki",
+      "none": "Brak",
+      "colors": {
+        "brown": "Brązowy",
+        "dark_brown": "Ciemnobrązowy",
+        "light_brown": "Jasnobrązowy",
+        "yellow": "Żółty",
+        "green": "Zielony",
+        "black": "Czarny",
+        "red": "Czerwony",
+        "white": "Biały"
+      },
+      "create": "Zapisz",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Zapisano wypróżnienie.",
+      "updateSuccess": "Zaktualizowano wypróżnienie.",
+      "saveError": "Nie udało się zapisać wpisu. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel wypróżnień",
+      "description": "Wybierz dzienny cel wypróżnień lub wyczyść pole, aby go usunąć.",
+      "count": "Cel na dzień",
+      "hint": "Pozostaw puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel wypróżnień.",
+      "saveError": "Nie udało się zaktualizować celu. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak wpisów",
+      "description": "Zapisz wypróżnienie, aby zacząć śledzić je w czasie."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii",
+      "description": "Coś poszło nie tak podczas wczytywania wpisów. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń wpis",
+      "body": "Ten wpis zostanie trwale usunięty. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto wpis.",
+      "error": "Nie udało się usunąć wpisu. Spróbuj ponownie."
+    }
+  },
+  "fasting": {
+    "title": "Post",
+    "subtitle": "Rozpocznij post, śledź postępy i przeglądaj historię",
+    "startButton": "Rozpocznij post",
+    "targetButton": "Ustaw cel",
+    "sourceGarmin": "Z Garmin Connect",
+    "active": {
+      "title": "Post w toku",
+      "started": "Rozpoczęto",
+      "target": "Cel",
+      "complete": "Zakończ",
+      "break": "Przerwij post",
+      "cancel": "Anuluj",
+      "completeHint": "Możesz zakończyć post po osiągnięciu celu."
+    },
+    "stats": {
+      "totalFasts": "Łączna liczba postów",
+      "currentStreak": "Aktualna seria",
+      "longestStreak": "Najdłuższa seria",
+      "avgDuration": "Śr. czas trwania",
+      "totalTime": "Łączny czas postu",
+      "completionRate": "Wskaźnik ukończenia",
+      "days": "dni"
+    },
+    "types": {
+      "16:8": "16:8 (16 h postu, 8 h jedzenia)",
+      "18:6": "18:6 (18 h postu, 6 h jedzenia)",
+      "20:4": "20:4 (20 h postu, 4 h jedzenia)",
+      "OMAD": "OMAD (jeden posiłek dziennie)",
+      "24h": "Post 24-godzinny",
+      "36h": "Post 36-godzinny",
+      "48h": "Post 48-godzinny",
+      "72h": "Post 72-godzinny",
+      "custom": "Niestandardowy"
+    },
+    "status": {
+      "in_progress": "W toku",
+      "completed": "Ukończony",
+      "broken": "Przerwany",
+      "cancelled": "Anulowany"
+    },
+    "interval": {
+      "label": "Zakres czasu",
+      "last_7_days": "Ostatnie 7 dni",
+      "last_30_days": "Ostatnie 30 dni",
+      "last_90_days": "Ostatnie 90 dni",
+      "last_year": "Ostatni rok",
+      "all_time": "Cały okres"
+    },
+    "actions": {
+      "edit": "Edytuj post",
+      "delete": "Usuń post"
+    },
+    "list": {
+      "notesLabel": "Notatki"
+    },
+    "form": {
+      "addTitle": "Rozpocznij post",
+      "editTitle": "Edytuj sesję postu",
+      "description": "Wybierz protokół postu i moment jego rozpoczęcia.",
+      "type": "Protokół postu",
+      "customDuration": "Niestandardowy czas trwania",
+      "customDurationHint": "Długość postu w godzinach (1–72).",
+      "hours": "godziny",
+      "startTime": "Czas rozpoczęcia",
+      "startTimeRequired": "Wybierz czas rozpoczęcia.",
+      "endTime": "Czas zakończenia",
+      "status": "Status",
+      "notes": "Notatki",
+      "create": "Rozpocznij",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "createSuccess": "Rozpoczęto post.",
+      "updateSuccess": "Zaktualizowano sesję postu.",
+      "saveError": "Nie udało się zapisać sesji postu. Spróbuj ponownie."
+    },
+    "target": {
+      "title": "Ustaw cel postu",
+      "description": "Wybierz docelowy czas trwania postu lub wyczyść oba pola, aby go usunąć.",
+      "hours": "Godziny",
+      "minutes": "Minuty",
+      "hint": "Pozostaw oba puste, aby usunąć cel.",
+      "save": "Zapisz",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "saveSuccess": "Zaktualizowano cel postu.",
+      "saveError": "Nie udało się zaktualizować celu postu. Spróbuj ponownie."
+    },
+    "complete": {
+      "success": "Zakończono post.",
+      "error": "Nie udało się zakończyć postu. Spróbuj ponownie."
+    },
+    "empty": {
+      "title": "Brak postów",
+      "description": "Rozpocznij post, aby zacząć śledzić swoją historię postów."
+    },
+    "error": {
+      "title": "Nie udało się wczytać historii postów",
+      "description": "Coś poszło nie tak podczas wczytywania sesji postów. Spróbuj ponownie.",
+      "retry": "Spróbuj ponownie"
+    },
+    "delete": {
+      "title": "Usuń sesję postu",
+      "body": "Ta sesja postu zostanie trwale usunięta. Tej operacji nie można cofnąć.",
+      "confirm": "Usuń",
+      "cancel": "Anuluj",
+      "close": "Zamknij",
+      "success": "Usunięto sesję postu.",
+      "error": "Nie udało się usunąć sesji postu. Spróbuj ponownie."
+    }
+  }
+}

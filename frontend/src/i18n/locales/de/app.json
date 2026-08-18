@@ -1,0 +1,43 @@
+{
+  "badge": "Endurain v2",
+  "logoAlt": "Endurain Logo",
+  "title": "Design-System-Grundlage ist aktiv",
+  "subtitle": "Tailwind v4, shadcn-vue, striktes TypeScript und die Endurain-Token-Palette sind eingerichtet",
+  "primaryAction": "Primäre Aktion",
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Die gesuchte Seite existiert nicht oder wurde verschoben",
+    "action": "Zur Startseite"
+  },
+  "error": {
+    "title": "Etwas ist schiefgelaufen",
+    "message": "Dieser Bereich konnte nicht geladen werden. Du kannst es erneut versuchen.",
+    "retry": "Erneut versuchen",
+    "toast": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  },
+  "configError": {
+    "title": "Konfigurationsfehler",
+    "message": "Die App konnte das Endurain-Backend nicht erreichen. Das liegt meist an einer fehlenden oder falsch konfigurierten Umgebungsvariable ENDURAIN_HOST oder daran, dass das Backend nicht läuft.",
+    "notSet": "(nicht gesetzt)",
+    "help": "Stelle sicher, dass ENDURAIN_HOST auf die URL zeigt, unter der deine Endurain-Instanz erreichbar ist (zum Beispiel https://endurain.example.com), und dass das Backend läuft. Lade anschließend die Seite neu.",
+    "reload": "Neu laden"
+  },
+  "dismiss": "Schließen",
+  "language": "Sprache",
+  "theme": {
+    "toLight": "Heller Modus",
+    "toDark": "Dunkler Modus"
+  },
+  "pagination": {
+    "label": "Seitennavigation",
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "goToPage": "Zu Seite {page} gehen"
+  },
+  "markdownEditor": {
+    "preview": "Vorschau",
+    "edit": "Bearbeiten",
+    "supported": "Markdown unterstützt",
+    "empty": "Nichts zu sehen"
+  }
+}

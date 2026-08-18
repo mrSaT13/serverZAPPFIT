@@ -1,0 +1,43 @@
+{
+  "title": "Cerca",
+  "subtitle": "Troba usuaris, activitats i equipament a Endurain.",
+  "placeholder": "Cerca…",
+  "clear": "Esborra la cerca",
+  "scopes": {
+    "users": "Usuaris",
+    "activities": "Activitats",
+    "gears": "Equipament"
+  },
+  "filters": {
+    "all": "Tots els tipus",
+    "activityType": "Filtra per tipus d'activitat",
+    "gearType": "Filtra per tipus d'equipament"
+  },
+  "activityCategories": {
+    "running": "Córrer",
+    "cycling": "Ciclisme",
+    "swimming": "Natació",
+    "walking": "Caminar i senderisme",
+    "racquet": "Esports de raqueta",
+    "rowing": "Rem i paddle",
+    "winterSports": "Esports d'hivern",
+    "waterSports": "Esports aquàtics",
+    "skating": "Patinatge"
+  },
+  "results": {
+    "inactive": "Inactiu"
+  },
+  "idle": {
+    "title": "Cerca a Endurain",
+    "description": "Tria el que vols cercar i comença a escriure per veure resultats."
+  },
+  "empty": {
+    "title": "Sense resultats",
+    "description": "Res coincideix amb \"{term}\". Prova una cerca diferent."
+  },
+  "error": {
+    "title": "La cerca ha fallat",
+    "description": "No s'ha pogut executar la cerca. Comprova la connexió i torna-ho a intentar.",
+    "retry": "Torna-ho a intentar"
+  }
+}

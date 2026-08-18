@@ -1,0 +1,43 @@
+{
+  "title": "Paieška",
+  "subtitle": "Raskite naudotojus, veiklas ir įrangą visame Endurain.",
+  "placeholder": "Ieškoti…",
+  "clear": "Išvalyti paiešką",
+  "scopes": {
+    "users": "Naudotojai",
+    "activities": "Veiklos",
+    "gears": "Įranga"
+  },
+  "filters": {
+    "all": "Visi tipai",
+    "activityType": "Filtruoti pagal veiklos tipą",
+    "gearType": "Filtruoti pagal įrangos tipą"
+  },
+  "activityCategories": {
+    "running": "Bėgimas",
+    "cycling": "Dviračių sportas",
+    "swimming": "Plaukimas",
+    "walking": "Ėjimas ir žygiai",
+    "racquet": "Raketės sportas",
+    "rowing": "Irklavimas ir irklenčių sportas",
+    "winterSports": "Žiemos sportas",
+    "waterSports": "Vandens sportas",
+    "skating": "Čiuožimas"
+  },
+  "results": {
+    "inactive": "Neaktyvus"
+  },
+  "idle": {
+    "title": "Ieškoti Endurain",
+    "description": "Pasirinkite, ko ieškoti, tada pradėkite rašyti, kad pamatytumėte atitikmenis."
+  },
+  "empty": {
+    "title": "Atitikmenų nerasta",
+    "description": "Niekas neatitinka „{term}“. Bandykite kitą paiešką."
+  },
+  "error": {
+    "title": "Paieška nepavyko",
+    "description": "Nepavyko atlikti jūsų paieškos. Patikrinkite ryšį ir bandykite dar kartą.",
+    "retry": "Bandyti dar kartą"
+  }
+}

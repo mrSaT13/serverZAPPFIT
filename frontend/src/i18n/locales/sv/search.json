@@ -1,0 +1,43 @@
+{
+  "title": "Sök",
+  "subtitle": "Hitta användare, aktiviteter och utrustning i Endurain.",
+  "placeholder": "Sök…",
+  "clear": "Rensa sökning",
+  "scopes": {
+    "users": "Användare",
+    "activities": "Aktiviteter",
+    "gears": "Utrustning"
+  },
+  "filters": {
+    "all": "Alla typer",
+    "activityType": "Filtrera efter aktivitetstyp",
+    "gearType": "Filtrera efter utrustningstyp"
+  },
+  "activityCategories": {
+    "running": "Löpning",
+    "cycling": "Cykling",
+    "swimming": "Simning",
+    "walking": "Promenad och vandring",
+    "racquet": "Racketsporter",
+    "rowing": "Rodd och paddling",
+    "winterSports": "Vintersporter",
+    "waterSports": "Vattensporter",
+    "skating": "Skridskor"
+  },
+  "results": {
+    "inactive": "Inaktiv"
+  },
+  "idle": {
+    "title": "Sök i Endurain",
+    "description": "Välj vad du vill leta efter och börja sedan skriva för att se träffar."
+  },
+  "empty": {
+    "title": "Inga träffar hittades",
+    "description": "Inget matchar \"{term}\". Prova en annan sökning."
+  },
+  "error": {
+    "title": "Sökning misslyckades",
+    "description": "Vi kunde inte genomföra din sökning. Kontrollera din anslutning och försök igen.",
+    "retry": "Försök igen"
+  }
+}
