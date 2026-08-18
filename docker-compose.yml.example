@@ -15,7 +15,7 @@ services:
       - ${LOCAL_PATH:-/var/opt/endurain}/backend/data:/app/backend/data:Z # necessary for activity files, user images and server images persistence on container image updates
       - ${LOCAL_PATH:-/var/opt/endurain}/backend/logs:/app/backend/logs:Z # log files for the backend
     ports:
-      - "8080:8080"
+      - "${ZAPFIT_PORT:-6342}:8080"
     depends_on:
       postgres:
         condition: service_healthy
