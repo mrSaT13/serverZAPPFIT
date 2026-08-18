@@ -14,7 +14,7 @@ export const DEFAULT_APP_CONFIG: AppConfig = {
     federation: false,
   },
   branding: {
-    appName: 'Endurain',
+    appName: 'ZAPFIT',
   },
   enabledLocales: null,
 }
