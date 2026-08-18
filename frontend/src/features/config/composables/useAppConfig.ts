@@ -11,7 +11,7 @@ const config = ref<AppConfig>(DEFAULT_APP_CONFIG)
 /**
  * Set when the public server settings can't be reached at all — a network
  * failure, CORS block, or timeout rather than an HTTP error response. That
- * almost always means the runtime `ENDURAIN_HOST` points somewhere the browser
+ * almost always means the runtime `ZAPFIT_HOST` points somewhere the browser
  * can't reach, so the app surfaces a blocking configuration screen instead of
  * silently booting on unreachable defaults.
  */
@@ -27,7 +27,7 @@ const configError = ref(false)
  * A reachable backend that answers with an HTTP error ({@link HttpError}) is
  * treated as a transient backend problem and stays quiet. Any other failure —
  * a `TypeError` ("Failed to fetch"), CORS block, or timeout — means the host
- * itself was unreachable, which is the signal that `ENDURAIN_HOST` is
+ * itself was unreachable, which is the signal that `ZAPFIT_HOST` is
  * misconfigured, so it raises {@link configError}.
  */
 export async function loadAppConfig(): Promise<void> {

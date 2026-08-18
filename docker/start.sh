@@ -64,14 +64,14 @@ done
 
 HOST="${ZAPFIT_HOST:-$ENDURAIN_HOST}"
 if [ -n "$HOST" ]; then
-    echo "window.env = { ENDURAIN_HOST: \"$HOST\" };" > "$FRONTEND_FOLDER/env.js"
-    echo_info_log "Runtime env.js written with ENDURAIN_HOST=$HOST (ZAPFIT_HOST=${ZAPFIT_HOST:-unset})"
+    echo "window.env = { ZAPFIT_HOST: \"$HOST\" };" > "$FRONTEND_FOLDER/env.js"
+    echo_info_log "Runtime env.js written with ZAPFIT_HOST=$HOST"
 
     # Pin the SPA's fallback Content-Security-Policy connect-src to the exact
-    # backend API/WebSocket origin derived from ENDURAIN_HOST, replacing the
+    # backend API/WebSocket origin derived from ZAPFIT_HOST, replacing the
     # broad build-time default. Only a statically served SPA relies on this meta
     # CSP; the backend response-header CSP stays authoritative where it serves
-    # the page. Re-derived on every start so it tracks ENDURAIN_HOST changes.
+    # the page. Re-derived on every start so it tracks ZAPFIT_HOST changes.
     INDEX_HTML="$FRONTEND_FOLDER/index.html"
     if [ -f "$INDEX_HTML" ]; then
         # Strip trailing slashes to get a clean origin (scheme://host[:port]).
@@ -111,7 +111,7 @@ if [ -n "$HOST" ]; then
             rm -f "$tmp_file"
             echo_info_log "Hardened CSP connect-src to 'self' $API_ORIGIN $WS_ORIGIN $EXTERNAL_CONNECT"
         else
-            echo_error_log "ENDURAIN_HOST is not a clean http(s) origin; left CSP connect-src as 'self'."
+            echo_error_log "ZAPFIT_HOST is not a clean http(s) origin; left CSP connect-src as 'self'."
         fi
     fi
 fi

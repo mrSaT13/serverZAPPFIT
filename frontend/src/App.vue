@@ -14,7 +14,7 @@ import { useAppConfig } from '@/features/config/composables/useAppConfig'
 const route = useRoute()
 
 // Set at boot when the backend host is unreachable (misconfigured
-// ENDURAIN_HOST); when set, nothing else can work so we block the whole shell.
+// ZAPFIT_HOST); when set, nothing else can work so we block the whole shell.
 const { configError } = useAppConfig()
 
 // Auth screens (login/signup) render bare — no navbar, footer, or bottom nav.

@@ -16,7 +16,7 @@ function trimTrailingSlash(value: string): string {
  * @returns The configured backend host, or `null` when not set.
  */
 export function getRuntimeBackendHost(): string | null {
-  const host = window.env?.ENDURAIN_HOST?.trim()
+  const host = window.env?.ZAPFIT_HOST?.trim() || window.env?.ENDURAIN_HOST?.trim()
   return host ? trimTrailingSlash(host) : null
 }
 

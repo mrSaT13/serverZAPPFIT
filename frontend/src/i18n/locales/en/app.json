@@ -1,8 +1,8 @@
 {
-  "badge": "Endurain v2",
-  "logoAlt": "Endurain logo",
+  "badge": "ZAPFIT v2",
+  "logoAlt": "ZAPFIT logo",
   "title": "Design system foundation is live",
-  "subtitle": "Tailwind v4, shadcn-vue, strict TypeScript and the Endurain token palette are wired up",
+  "subtitle": "Tailwind v4, shadcn-vue, strict TypeScript and the ZAPFIT token palette are wired up",
   "primaryAction": "Primary action",
   "notFound": {
     "title": "Page not found",
@@ -17,9 +17,9 @@
   },
   "configError": {
     "title": "Configuration error",
-    "message": "The app couldn't reach the Endurain backend. This is usually caused by a missing or misconfigured ENDURAIN_HOST environment variable, or by the backend not running.",
+    "message": "The app couldn't reach the ZAPFIT backend. This is usually caused by a missing or misconfigured ZAPFIT_HOST environment variable, or by the backend not running.",
     "notSet": "(not set)",
-    "help": "Check that ENDURAIN_HOST points to the URL where your Endurain instance is reachable (for example https://endurain.example.com) and that the backend is running, then reload the page.",
+    "help": "Check that ZAPFIT_HOST points to the URL where your ZAPFIT instance is reachable (for example https://zapfit.example.com) and that the backend is running, then reload the page.",
     "reload": "Reload"
   },
   "dismiss": "Dismiss",
