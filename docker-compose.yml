@@ -1,21 +1,31 @@
-# Использование готового образа из GitHub Container Registry
-# (Pull + Up — без сборки на сервере)
-#
-# docker compose -f docker-compose.yml pull
-# docker compose -f docker-compose.yml up -d
-#
-# Для локальной разработки со сборкой из исходников:
-# docker compose -f docker-compose.build.yml up -d --build
+networks:
+  zapfit:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
 
 services:
   zapfit:
     container_name: zapfit-app
-    image: ghcr.io/mrsaT13/serverzappfit:latest
+    image: ghcr.io/mrsat13/serverzappfit:sha-656a675
+    environment:
+      DB_PASSWORD: CdC8oS8p2x982
+      SECRET_KEY: CdC8oS8p2x982
+      FERNET_KEY: CdC8oS8p2x982
+      TZ: Europe/Moscow
+      ZAPFIT_HOST: http://192.168.1.42:6342
+      ALLOW_API_KEY_QUERY_PARAM: "true"
+      BEHIND_PROXY: "false"
+      RATE_LIMIT_STORAGE_URI: redis://redis:6379/0
+      AUTH_SECURITY_STORAGE_URI: redis://redis:6379/0
     volumes:
-      - ./data:/app/backend/data:Z
-      - ./logs:/app/backend/logs:Z
+      - /srv/dev-disk-by-uuid-a943862e-5d1c-4d1e-b641-d98c8f6e883b/config/zapfit1/data:/app/backend/data:Z
+      - /srv/dev-disk-by-uuid-a943862e-5d1c-4d1e-b641-d98c8f6e883b/config/zapfit1/backend/logs:/app/backend/logs:Z
     ports:
       - "6342:8080"
+    networks:
+      - zapfit
     depends_on:
       postgres:
         condition: service_healthy
@@ -26,13 +36,20 @@ services:
   postgres:
     image: docker.io/postgres:18-alpine
     container_name: zapfit-postgres
+    environment:
+      POSTGRES_PASSWORD: CdC8oS8p2x982
+      POSTGRES_USER: endurain
+      POSTGRES_DB: endurain
+      PGDATA: /var/lib/postgresql/data/pgdata
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U endurain"]
       interval: 5s
       timeout: 5s
       retries: 5
     volumes:
-      - ./postgres:/var/lib/postgresql/data:Z
+      - /srv/dev-disk-by-uuid-a943862e-5d1c-4d1e-b641-d98c8f6e883b/config/zapfit1/postgresql/data:/var/lib/postgresql/data:Z
+    networks:
+      - zapfit
     restart: unless-stopped
 
   redis:
@@ -45,5 +62,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - ./redis:/data:Z
+      - /srv/dev-disk-by-uuid-a943862e-5d1c-4d1e-b641-d98c8f6e883b/config/zapfit1/redis:/data:Z
+    networks:
+      - zapfit
     restart: unless-stopped
