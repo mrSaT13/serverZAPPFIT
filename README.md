@@ -1,113 +1,113 @@
 > [!NOTE]
-> **GitHub Mirror** - If you are viewing this on GitHub, please be aware that this repository is a read-only mirror. Issues, pull requests, and all project activity are tracked on Codeberg: [https://codeberg.org/endurain-project/endurain](https://codeberg.org/endurain-project/endurain)
+> **Зеркало GitHub** — Если вы просматриваете этот репозиторий на GitHub, обратите внимание, что это зеркало только для чтения. Задачи, pull request и вся активность проекта отслеживаются на Codeberg: [https://codeberg.org/endurain-project/endurain](https://codeberg.org/endurain-project/endurain)
 
 > [!IMPORTANT]
-> **This is the ZAPFIT fork** — a rebranded, locally-extended build of
+> **Это форк ZAPFIT** — переименованный, локально дополненный билд
 > [Endurain](https://codeberg.org/endurain-project/endurain). ZAPFIT
-> inherits Endurain's code under the AGPL-3.0-or-later licence and adds
-> a first-time setup wizard, native Russian localisation, a `system`
-> theme option and additional branding hooks. All upstream trademarks,
-> project metadata and Codeberg issue trackers remain owned by the
-> original Endurain authors. See [Acknowledgements](#acknowledgements)
-> below for full credits.
+> наследует код Endurain по лицензии AGPL-3.0-or-later и добавляет
+> мастер настройки при первом входе, нативную русскую локализацию,
+> опцию темы `system` и дополнительные хуки брендинга. Все товарные знаки,
+> метаданные проекта и трекеры задач Codeberg остаются собственностью
+> оригинальных авторов Endurain. Подробности см. в разделе [Благодарности](#благодарности)
+> ниже.
 
 > [!NOTE]
-> **Endurain is on a temporary feature freeze** - The project is not paused. The focus is shifting from new features to strengthening the foundations. More details [here](https://docs.endurain.com/blog/2026/05/23/pausing-new-features-so-endurain-can-keep-growing/)
+> **Endurain на временном замораживании функций** — Проект не приостановлен. Фокус смещается с новых функций на укрепление основ. Подробнее [здесь](https://docs.endurain.com/blog/2026/05/23/pausing-new-features-so-endurain-can-keep-growing/)
 
 <div align="center">
   <img src="logo/brand_logo_dark_theme.png" width="128" height="128">
 
-  # Endurain (ZAPFIT fork)
+  # ZAPFIT (форк Endurain)
 
-  <a href="https://translate.codeberg.org/engage/endurain/"><img src="https://translate.codeberg.org/widget/endurain/svg-badge.svg" alt="Translation status"></a>
-  [![License](https://img.shields.io/badge/license-AGPL%20v3-blue)](./LICENSE)
-  [![Release](https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/endurain-project/endurain/releases/latest&query=$.tag_name&label=release&color=blue)](https://codeberg.org/endurain-project/endurain/releases)
-  [![Stars](https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/endurain-project/endurain&query=$.stars_count&label=stars&logo=codeberg)](https://codeberg.org/endurain-project/endurain)
-  [![Trademark Policy](https://img.shields.io/badge/trademark-Endurain%E2%84%A2-blue)](./TRADEMARK.md)
+  <a href="https://translate.codeberg.org/engage/endurain/"><img src="https://translate.codeberg.org/widget/endurain/svg-badge.svg" alt="Статус перевода"></a>
+  [![Лицензия](https://img.shields.io/badge/license-AGPL%20v3-blue)](./LICENSE)
+  [![Релиз](https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/endurain-project/endurain/releases/latest&query=$.tag_name&label=release&color=blue)](https://codeberg.org/endurain-project/endurain/releases)
+  [![Звёзды](https://img.shields.io/badge/dynamic/json?url=https://codeberg.org/api/v1/repos/endurain-project/endurain&query=$.stars_count&label=stars&logo=codeberg)](https://codeberg.org/endurain-project/endurain)
+  [![Политика товарных знаков](https://img.shields.io/badge/trademark-Endurain%E2%84%A2-blue)](./TRADEMARK.md)
 
-  **A self-hosted fitness tracking service**  
-  Visit Endurain's [Mastodon profile](https://fosstodon.org/@endurain) and [Discord server](https://discord.gg/6VUjUq2uZR).
+  **Самостоятельно размещаемый сервис фитнес-трекинга**  
+  Посетите [Mastodon профиль](https://fosstodon.org/@endurain) и [Discord сервер](https://discord.gg/6VUjUq2uZR) Endurain.
 
-  <img src="screenshot_01.png" alt="Endurain Screenshot">
+  <img src="screenshot_01.png" alt="Скриншот Endurain">
 </div>
 
-## 🚀 Try the Demo
+## 🚀 Попробовать демо
 
-Experience Endurain without installation:
+Познакомьтесь с Endurain без установки:
 
-**Demo URL:** [https://demo.endurain.com](https://demo.endurain.com)
+**Демо URL:** [https://demo.endurain.com](https://demo.endurain.com)
 
-- **Username:** `admin`
-- **Password:** `admin`
-- **Reset Schedule:** Daily at midnight (Europe/Lisbon timezone)
+- **Логин:** `admin`
+- **Пароль:** `admin`
+- **Расписание сброса:** Ежедневно в полночь (часовой пояс Europe/Lisbon)
 
-> ⚠️ **Note:** The demo environment resets every day. Do not store important data.
+> ⚠️ **Примечание:** Демо-окружение сбрасывается каждый день. Не храните важные данные.
 
-## Table of Contents
+## Содержание
 
-- [Endurain documentation](https://docs.endurain.com)
-- [What is Endurain?](#what-is-endurain)
-- [Endurain screenshots](https://docs.endurain.com/gallery/)
-- [Sponsors](#sponsors)
-- [Contributing](#contributing)
-- [Help Translate](#help-translate)
-- [License](#license)
+- [Документация Endurain](https://docs.endurain.com)
+- [Что такое Endurain?](#что-такое-endurain)
+- [Скриншоты Endurain](https://docs.endurain.com/gallery/)
+- [Спонсоры](#спонсоры)
+- [Участие в проекте](#участие-в-проекте)
+- [Помощь с переводом](#помощь-с-переводом)
+- [Лицензия](#лицензия)
 
-## Acknowledgements
+## Благодарности
 
-ZAPFIT is an independent **fork** of the [Endurain](https://codeberg.org/endurain-project/endurain) project (AGPL-3.0-or-later), originally authored by João Vitória Silva and the Endurain community. ZAPFIT builds on that foundation, and the upstream authors are owed a huge thank-you for their work.
+ZAPFIT — это самостоятельный **форк** проекта [Endurain](https://codeberg.org/endurain-project/endurain) (AGPL-3.0-or-later), первоначально написанный Жуаном Виторией Силвой и сообществом Endurain. ZAPFIT опирается на эту основу, и авторы оригинала заслуживают огромной благодарности за их работу.
 
-Differences from upstream:
-- First-time setup wizard (post-login, full server configuration in one pass).
-- Native Russian (`ru`) localisation on the frontend.
-- `system` UI theme option and a configurable default theme/language/brand name.
-- `ZAPFIT_HOST` environment variable (legacy `ENDURAIN_HOST` still honoured).
+Отличия от оригинала:
+- Мастер настройки при первом входе (полная настройка сервера за один проход после логина).
+- Нативная русская (`ru`) локализация фронтенда.
+- Опция темы `system` и настраиваемая тема/язык/имя бренда по умолчанию.
+- Переменная окружения `ZAPFIT_HOST` (устаревшая `ENDURAIN_HOST` всё ещё поддерживается).
 
-## What is Endurain?
+## Что такое Endurain?
 
-Endurain is a self-hosted fitness tracking service designed to give users full control over their data and hosting environment. It's similar to Strava but focused on privacy and customization. Built with:
+Endurain — это самостоятельно размещаемый сервис фитнес-трекинга, разработанный для предоставления пользователям полного контроля над своими данными и средой размещения. Это аналог Strava, но с акцентом на приватность и кастомизацию. Построен на:
 
-- **Frontend:** Vue.js 3 with TypeScript, Tailwind CSS and shadcn-vue components, with Pinia and TanStack Query for state management
-- **Backend:** Python FastAPI, Alembic, SQLAlchemy, Apprise, stravalib and python-garminconnect for Strava and Garmin Connect integration, gpxpy, tcxreader and fitdecode for .gpx, .tcx and .fit file import respectively
-- **Database:** PostgreSQL for efficient data management
-- **Observability:** Jaeger for basic tracing and monitoring
-- **Integrations:** Supports Strava and Garmin Connect. Manual upload of activities using .gpx, .tcx and .fit files are also supported
+- **Фронтенд:** Vue.js 3 с TypeScript, Tailwind CSS и компонентами shadcn-vue, с Pinia и TanStack Query для управления состоянием
+- **Бэкенд:** Python FastAPI, Alembic, SQLAlchemy, Apprise, stravalib и python-garminconnect для интеграции со Strava и Garmin Connect, gpxpy, tcxreader и fitdecode для импорта файлов .gpx, .tcx и .fit соответственно
+- **База данных:** PostgreSQL для эффективного управления данными
+- **Наблюдаемость:** Jaeger для базового трекинга и мониторинга
+- **Интеграции:** Поддержка Strava и Garmin Connect. Также поддерживается ручная загрузка активностей с помощью файлов .gpx, .tcx и .fit
 
-To deploy Endurain, a Docker image is available, and a comprehensive example can be found in the "docker-compose.yml.example" file provided. Configuration is facilitated through environment variables, ensuring flexibility and ease of customization.
+Для развёртывания доступен Docker-образ, подробный пример можно найти в файле `docker-compose.yml.example`. Конфигурация осуществляется через переменные окружения, обеспечивая гибкость и простоту настройки.
 
-For more information please see the Endurain's [documentation](https://docs.endurain.com).
+Для получения дополнительной информации см. [документацию](https://docs.endurain.com) Endurain.
 
-## Sponsors
+## Спонсоры
 
-A huge thank you to the project sponsors! Your support helps keep this project going.
+Огромное спасибо спонсорам проекта! Ваша поддержка помогает проекту развиваться.
 
-Support Endurain's development on:
+Поддержите разработку Endurain на:
 
 - [Buy Me a Coffee](https://buymeacoffee.com/endurain)
 - [liberapay](https://liberapay.com/endurain/)
 - [Patreon](https://patreon.com/u84745218)
-- [GitHub Sponsors using archived repo](https://github.com/endurain-project/endurain)
+- [GitHub Sponsors (архивированный репозиторий)](https://github.com/endurain-project/endurain)
 
-## Contributing
+## Участие в проекте
 
-Contributions are welcomed! Please open an issue to discuss any changes or improvements before submitting a PR. Check out the [Contributing Guidelines](CONTRIBUTING.md) for more details.
+Приглашаем к участию! Пожалуйста, откройте задачу для обсуждения любых изменений или улучшений перед отправкой PR. Ознакомьтесь с [руководством по участию](CONTRIBUTING.md) для получения подробной информации.
 
-## Help Translate
+## Помощь с переводом
 
-Endurain has multi-language support, and you can help translate it into more languages via [Codeberg Translate](https://translate.codeberg.org/projects/endurain/). 
+Endurain поддерживает несколько языков, и вы можете помочь перевести его на другие языки через [Codeberg Translate](https://translate.codeberg.org/projects/endurain/).
 
-## License
+## Лицензия
 
-This project is licensed under the AGPL-3.0-or-later License - see the [LICENSE](LICENSE) file for details.
+Этот проект распространяется под лицензией AGPL-3.0-or-later — см. файл [LICENSE](LICENSE) для получения подробной информации.
 
-## Trademark Notice
+## Уведомление о товарном знаке
 
-Endurain® is a trademark of João Vitória Silva and remains owned by the original authors.  
+Endurain® — товарный знак Жуана Витории Силвы и остаётся собственностью оригинальных авторов.
 
-This **ZAPFIT fork** intentionally uses a distinct name and does not claim any rights to the Endurain name or logo. You are welcome to self-host ZAPFIT; commercial use of the **Endurain** name or logos (such as offering paid hosting, products, or services) is **not permitted without prior written permission** from the Endurain authors.
+Этот **форк ZAPFIT** намеренно использует отдельное название и не претендует на какие-либо права на название или логотип Endurain. Вы можете самостоятельно размещать ZAPFIT; коммерческое использование названия или логотипов **Endurain** (например, предложения платного хостинга, продуктов или услуг) **не разрешено без предварительного письменного разрешения** от авторов Endurain.
 
-See [`TRADEMARK.md`](./TRADEMARK.md) for full details.
+Подробности см. в [`TRADEMARK.md`](./TRADEMARK.md).
 
 <div align="center">
-  <sub>ZAPFIT — a fork of <a href="https://codeberg.org/endurain-project">Endurain</a> | Built with ❤️</sub>
+  <sub>ZAPFIT — форк <a href="https://codeberg.org/endurain-project">Endurain</a> | Сделано с ❤️</sub>
 </div>
