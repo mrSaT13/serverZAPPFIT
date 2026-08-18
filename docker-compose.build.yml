@@ -1,16 +1,13 @@
-# Использование готового образа из GitHub Container Registry
-# (Pull + Up — без сборки на сервере)
+# Локальная сборка из исходников (для разработки)
 #
-# docker compose -f docker-compose.yml pull
-# docker compose -f docker-compose.yml up -d
-#
-# Для локальной разработки со сборкой из исходников:
 # docker compose -f docker-compose.build.yml up -d --build
+#
+# Для прода — используй docker-compose.yml (готовый образ из GHCR)
 
 services:
   zapfit:
     container_name: zapfit-app
-    image: ghcr.io/mrsaT13/serverzappfit:latest
+    build: .
     volumes:
       - ./data:/app/backend/data:Z
       - ./logs:/app/backend/logs:Z
