@@ -12,6 +12,8 @@ interface ImportMeta {
 interface Window {
   env?: {
     /** Runtime backend host injected by `/env.js`. */
+    ZAPFIT_HOST?: string
+    /** Legacy alias for backwards compatibility. */
     ENDURAIN_HOST?: string
   }
 }

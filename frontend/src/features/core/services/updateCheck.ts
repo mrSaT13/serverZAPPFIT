@@ -1,12 +1,12 @@
 import { apiFetch } from '@/services/http'
 
-/** The Codeberg API endpoint for the latest stable release of Endurain. */
+/** The GitHub API endpoint for the latest stable release of ZAPFIT. */
 const LATEST_RELEASE_URL =
-  'https://codeberg.org/api/v1/repos/endurain-project/endurain/releases/latest'
+  'https://api.github.com/repos/mrSaT13/serverZAPPFIT/releases/latest'
 
-/** The Codeberg API endpoint listing recent releases (includes pre-releases). */
+/** The GitHub API endpoint listing recent releases (includes pre-releases). */
 const RELEASES_LIST_URL =
-  'https://codeberg.org/api/v1/repos/endurain-project/endurain/releases?limit=10'
+  'https://api.github.com/repos/mrSaT13/serverZAPPFIT/releases?per_page=10'
 
 /** Minimal shape returned by the backend `/about` endpoint. */
 export interface AboutResponse {
