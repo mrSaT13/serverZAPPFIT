@@ -21,6 +21,7 @@ import ActivityLapsTable from '@/features/activities/components/ActivityLapsTabl
 import ActivityMetricsGrid from '@/features/activities/components/ActivityMetricsGrid.vue'
 import ActivityPrivacyAlerts from '@/features/activities/components/ActivityPrivacyAlerts.vue'
 import ActivityStreamChart from '@/features/activities/components/ActivityStreamChart.vue'
+import ActivityTrainingMetrics from '@/features/activities/components/ActivityTrainingMetrics.vue'
 import ActivityWorkoutSets from '@/features/activities/components/ActivityWorkoutSets.vue'
 import {
   useActivityExerciseTitlesQuery,
@@ -296,6 +297,8 @@ const notFound = computed(() => !isPending.value && !isError.value && activity.v
       />
 
       <ActivityGearCard v-if="isOwner" :activity="activity" />
+
+      <ActivityTrainingMetrics :activity="activity" />
 
       <div v-if="chartPanels.length > 0" class="grid gap-3 lg:grid-cols-2">
         <template v-for="panel in chartPanels" :key="panel.key">

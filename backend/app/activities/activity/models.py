@@ -351,6 +351,53 @@ class Activity(Base):
         nullable=True,
         comment=("Total number of cycles (e.g., pedal strokes) recorded"),
     )
+    # ZAPFIT computed fitness metrics (sent by client)
+    vo2max: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=5, scale=2),
+        nullable=True,
+        comment="Estimated VO2max (ml/kg/min)",
+    )
+    tss: Mapped[int | None] = mapped_column(
+        nullable=True,
+        comment="Training Stress Score",
+    )
+    hr_tss: Mapped[int | None] = mapped_column(
+        nullable=True,
+        comment="Heart Rate Training Stress Score",
+    )
+    trimp: Mapped[int | None] = mapped_column(
+        nullable=True,
+        comment="TRIMP (Banister exponential)",
+    )
+    intensity_factor: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=5, scale=3),
+        nullable=True,
+        comment="Intensity Factor (0.000-1.500)",
+    )
+    aerobic_te: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=3, scale=1),
+        nullable=True,
+        comment="Aerobic Training Effect (1.0-5.0)",
+    )
+    anaerobic_te: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=3, scale=1),
+        nullable=True,
+        comment="Anaerobic Training Effect (1.0-5.0)",
+    )
+    epoc: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=8, scale=2),
+        nullable=True,
+        comment="EPOC in kcal",
+    )
+    suffer_score: Mapped[int | None] = mapped_column(
+        nullable=True,
+        comment="Suffer Score (0-100)",
+    )
+    efficiency_factor: Mapped[Decimal | None] = mapped_column(
+        DECIMAL(precision=8, scale=4),
+        nullable=True,
+        comment="Efficiency Factor (pace per HR)",
+    )
 
     # Define a relationship to the Users model
     users: Mapped["Users"] = relationship(

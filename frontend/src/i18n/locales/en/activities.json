@@ -266,5 +266,18 @@
     "inlineSkating": "Inline skating",
     "hiit": "HIIT",
     "jumpRope": "Jump rope"
+  },
+  "training": {
+    "title": "Training Metrics",
+    "vo2max": "VO2max",
+    "tss": "TSS",
+    "hrTss": "HR TSS",
+    "trimp": "TRIMP",
+    "intensityFactor": "IF",
+    "aerobicTe": "Aerobic TE",
+    "anaerobicTe": "Anaerobic TE",
+    "epoc": "EPOC",
+    "sufferScore": "Suffer Score",
+    "efficiencyFactor": "EF"
   }
 }

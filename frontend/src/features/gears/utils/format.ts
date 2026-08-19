@@ -7,6 +7,7 @@ const CURRENCY_SYMBOLS: Record<Schemas['Currency'], string> = {
   euro: '€',
   dollar: '$',
   pound: '£',
+  ruble: '₽',
 }
 
 /**
