@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useQueryClient } from '@tanstack/vue-query'
 import { LoaderCircle } from '@lucide/vue'
 
 import type {
@@ -21,6 +22,7 @@ import { Switch } from '@/components/ui/switch'
 import { useSafeRedirect } from '@/composables/useSafeRedirect'
 import { useTheme } from '@/composables/useTheme'
 import { getInitialLocale, isSupportedLocale, loadLocaleMessages, setI18nLocale } from '@/i18n'
+import { queryKeys } from '@/services/queryKeys'
 import {
   useCompleteSetupMutation,
   useServerSettingsQuery,
@@ -30,6 +32,7 @@ import {
 const { t } = useI18n()
 const { setTheme } = useTheme()
 const { navigateAfterLogin } = useSafeRedirect()
+const queryClient = useQueryClient()
 
 const optionsQuery = useSetupOptionsQuery()
 const settingsQuery = useServerSettingsQuery()
@@ -131,6 +134,7 @@ async function submit(): Promise<void> {
   try {
     await completeMutation.mutateAsync(payload)
     setTheme(theme.value)
+    await queryClient.invalidateQueries({ queryKey: queryKeys.serverSettings.setupStatus() })
     await navigateAfterLogin()
   } catch {
     submitError.value = true
@@ -246,9 +250,10 @@ async function submit(): Promise<void> {
             <FormField :label="t('setup.preferences.currency')">
               <template #default="{ fieldId }">
                 <Select v-model="currency" :id="fieldId">
-                  <option value="euro">{{ t('setup.preferences.currencyEuro') }}</option>
-                  <option value="dollar">{{ t('setup.preferences.currencyDollar') }}</option>
-                  <option value="pound">{{ t('setup.preferences.currencyPound') }}</option>
+              <option value="euro">{{ t('setup.preferences.currencyEuro') }}</option>
+              <option value="dollar">{{ t('setup.preferences.currencyDollar') }}</option>
+              <option value="pound">{{ t('setup.preferences.currencyPound') }}</option>
+              <option value="ruble">{{ t('setup.preferences.currencyRuble') }}</option>
                 </Select>
               </template>
             </FormField>
