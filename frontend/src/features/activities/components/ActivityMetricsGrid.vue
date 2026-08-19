@@ -18,6 +18,12 @@ const props = defineProps<{
 const { t } = useI18n()
 
 const tiles = computed(() => buildActivityMetrics(props.activity, props.units, props.visibility))
+
+function translateUnit(unit: string): string {
+  const key = `activities.units.${unit}`
+  const translated = t(key)
+  return translated === key ? unit : translated
+}
 </script>
 
 <template>
@@ -27,7 +33,7 @@ const tiles = computed(() => buildActivityMetrics(props.activity, props.units, p
       :key="tile.key"
       :label="t(tile.labelKey)"
       :value="tile.value"
-      :unit="tile.unit"
+      :unit="translateUnit(tile.unit)"
       :accent="tile.accent"
       class=""
     />
