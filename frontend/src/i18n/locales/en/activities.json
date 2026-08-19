@@ -279,5 +279,25 @@
     "epoc": "EPOC",
     "sufferScore": "Suffer Score",
     "efficiencyFactor": "EF"
+  },
+  "units": {
+    "km": "km",
+    "mi": "mi",
+    "m": "m",
+    "yd": "yd",
+    "ft": "ft",
+    "km/h": "km/h",
+    "mph": "mph",
+    "kn": "kn",
+    "min/km": "min/km",
+    "min/mi": "min/mi",
+    "min/100m": "min/100m",
+    "min/100yd": "min/100yd",
+    "min/500m": "min/500m",
+    "kcal": "kcal",
+    "bpm": "bpm",
+    "W": "W",
+    "spm": "spm",
+    "rpm": "rpm"
   }
 }

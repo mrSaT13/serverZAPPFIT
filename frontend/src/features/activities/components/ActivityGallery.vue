@@ -171,6 +171,7 @@ async function confirmDelete(): Promise<void> {
           v-else-if="slide.kind === 'thumbnail'"
           :to="thumbnailTo"
           class="block size-full"
+          @click.stop
         >
           <img :src="thumbnailUrl ?? ''" alt="" loading="lazy" class="size-full object-cover" />
         </component>

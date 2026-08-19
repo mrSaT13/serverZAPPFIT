@@ -37,7 +37,7 @@ const props = defineProps<{
   units: Units
 }>()
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 const presentation = computed(() => presentActivityType(props.activity.activityType))
 const isDistanceBased = computed(() => activityTypeIsDistanceBased(props.activity.activityType))
@@ -71,6 +71,12 @@ const tempoMetric = computed(() =>
     : formatSpeed(props.activity.averageSpeed, props.activity.activityType, props.units),
 )
 const elevationMetric = computed(() => formatElevation(props.activity.elevationGain, props.units))
+
+function translateUnit(unit: string): string {
+  const key = `activities.units.${unit}`
+  const translated = t(key)
+  return translated === key ? unit : translated
+}
 
 /**
  * The formatted metric for each column, keyed for the template and the mobile
@@ -145,7 +151,7 @@ const mobileSummary = computed(() => {
         >
           {{ cells[col.key].value }}
           <span v-if="cells[col.key].unit" class="text-hint font-normal">{{
-            cells[col.key].unit
+            translateUnit(cells[col.key].unit)
           }}</span>
         </p>
         <p v-else class="text-metric font-medium leading-tight text-muted-foreground">—</p>

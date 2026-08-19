@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import { Globe, Lock, Users } from '@lucide/vue'
 
 import type { Activity, ActivityOwner } from '@/features/activities/types'
@@ -40,6 +40,7 @@ const props = defineProps<{
 }>()
 
 const { t, locale } = useI18n()
+const router = useRouter()
 
 const { data: currentUser } = useCurrentUser()
 const ownerQuery = useActivityOwnerQuery(() => props.activity)
@@ -139,7 +140,10 @@ const ownerRoute = computed(() =>
 </script>
 
 <template>
-  <Card :class="cn('flex flex-col gap-3', activity.isHidden && 'border-effort/60')">
+  <Card
+    :class="cn('flex flex-col gap-3 cursor-pointer', activity.isHidden && 'border-effort/60')"
+    @click="router.push(activityRoute)"
+  >
     <!-- Athlete header -->
     <div class="flex items-start justify-between gap-3">
       <div class="flex min-w-0 items-center gap-3">
@@ -151,7 +155,7 @@ const ownerRoute = computed(() =>
         />
         <div class="min-w-0">
           <p class="truncate text-item-title">
-            <RouterLink v-if="owner && ownerRoute" :to="ownerRoute" class="hover:underline">
+            <RouterLink v-if="owner && ownerRoute" :to="ownerRoute" class="hover:underline" @click.stop>
               {{ owner.name }}
             </RouterLink>
             <span v-else>{{ owner ? owner.name : t('activities.athlete') }}</span>
@@ -185,6 +189,7 @@ const ownerRoute = computed(() =>
           rel="noopener noreferrer"
           :aria-label="t('activities.openInStrava')"
           class="rounded-input p-1 hover:bg-accent"
+          @click.stop
         >
           <img :src="INTEGRATION_LOGOS.stravaMark" alt="" class="size-5 object-contain" />
         </a>
@@ -195,15 +200,16 @@ const ownerRoute = computed(() =>
           rel="noopener noreferrer"
           :aria-label="t('activities.openInGarmin')"
           class="rounded-input p-1 hover:bg-accent"
+          @click.stop
         >
           <img :src="INTEGRATION_LOGOS.garminApp" alt="" class="size-5 rounded object-contain" />
         </a>
-        <ActivityActionsMenu v-if="isOwner" :activity="activity" />
+        <ActivityActionsMenu v-if="isOwner" :activity="activity" @click.stop />
       </div>
     </div>
 
     <!-- Title -->
-    <RouterLink :to="activityRoute" class="text-card-heading hover:underline">
+    <RouterLink :to="activityRoute" class="text-card-heading hover:underline" @click.stop>
       {{ activity.name }}
     </RouterLink>
 
