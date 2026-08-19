@@ -188,6 +188,7 @@ watch(selectedTemplate, (templateId) => {
               <option value="euro">{{ t('settings.server.general.currencyEuro') }}</option>
               <option value="dollar">{{ t('settings.server.general.currencyDollar') }}</option>
               <option value="pound">{{ t('settings.server.general.currencyPound') }}</option>
+              <option value="ruble">{{ t('settings.server.general.currencyRuble') }}</option>
             </Select>
           </template>
         </FormField>

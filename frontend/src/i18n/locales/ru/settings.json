@@ -292,6 +292,7 @@
       "currencyEuro": "Евро (€)",
       "currencyDollar": "Доллар ($)",
       "currencyPound": "Фунт (£)",
+      "currencyRuble": "Рубль (₽)",
       "numRecords": "Записей на странице"
     },
     "password": {

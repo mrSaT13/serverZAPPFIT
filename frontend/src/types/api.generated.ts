@@ -6016,7 +6016,7 @@ export interface components {
          *         POUND: Represents the British Pound currency.
          * @enum {string}
          */
-        Currency: "euro" | "dollar" | "pound";
+        Currency: "euro" | "dollar" | "pound" | "ruble";
         /**
          * DaySummary
          * @description Daily activity summary within a week.
@@ -9513,7 +9513,7 @@ export interface components {
              * @default ZAPFIT
              */
             brand_name: string;
-            /** @description Currency (euro, dollar, pound) */
+            /** @description Currency (euro, dollar, pound, ruble) */
             currency: components["schemas"]["Currency"];
             /**
              * Default Language
@@ -9652,7 +9652,7 @@ export interface components {
              * @description Whether the first-time setup wizard has been completed.
              */
             setup_completed: boolean;
-            /** @description Currency (euro, dollar, pound) */
+            /** @description Currency (euro, dollar, pound, ruble) */
             currency: components["schemas"]["Currency"];
             /**
              * Default Language
@@ -9783,7 +9783,7 @@ export interface components {
          *     excludes admin-level configuration fields.
          */
         ServerSettingsReadPublic: {
-            /** @description Currency (euro, dollar, pound) */
+            /** @description Currency (euro, dollar, pound, ruble) */
             currency: components["schemas"]["Currency"];
             /**
              * Local Login Enabled
@@ -10461,7 +10461,7 @@ export interface components {
              */
             city?: string | null;
             /**
-             * @description User currency (euro, dollar, pound)
+             * @description User currency (euro, dollar, pound, ruble)
              * @default euro
              */
             currency: components["schemas"]["Currency"];
@@ -11162,7 +11162,7 @@ export interface components {
              */
             city?: string | null;
             /**
-             * @description User currency (euro, dollar, pound)
+             * @description User currency (euro, dollar, pound, ruble)
              * @default euro
              */
             currency: components["schemas"]["Currency"];
@@ -11440,7 +11440,7 @@ export interface components {
              */
             city?: string | null;
             /**
-             * @description User currency (euro, dollar, pound)
+             * @description User currency (euro, dollar, pound, ruble)
              * @default euro
              */
             currency: components["schemas"]["Currency"];
@@ -11611,7 +11611,7 @@ export interface components {
              */
             city?: string | null;
             /**
-             * @description User currency (euro, dollar, pound)
+             * @description User currency (euro, dollar, pound, ruble)
              * @default euro
              */
             currency: components["schemas"]["Currency"];

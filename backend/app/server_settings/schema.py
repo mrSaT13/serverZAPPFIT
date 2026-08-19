@@ -41,11 +41,13 @@ class Currency(Enum):
         EURO: Represents the Euro currency.
         DOLLAR: Represents the US Dollar currency.
         POUND: Represents the British Pound currency.
+        RUBLE: Represents the Russian Ruble currency.
     """
 
     EURO = "euro"
     DOLLAR = "dollar"
     POUND = "pound"
+    RUBLE = "ruble"
 
 
 class PasswordType(Enum):

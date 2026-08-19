@@ -91,6 +91,7 @@
   "currencies": {
     "euro": "Euro",
     "dollar": "Dollar",
-    "pound": "Pound"
+    "pound": "Pound",
+    "ruble": "Ruble"
   }
 }
