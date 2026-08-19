@@ -134,6 +134,12 @@ async function submit(): Promise<void> {
   try {
     await completeMutation.mutateAsync(payload)
     setTheme(theme.value)
+    // Ensure the locale is explicitly applied and persisted so the chosen
+    // language survives a page reload even if applyPreferredLocale runs.
+    if (isSupportedLocale(language.value)) {
+      await loadLocaleMessages(language.value)
+      setI18nLocale(language.value)
+    }
     await queryClient.invalidateQueries({ queryKey: queryKeys.serverSettings.setupStatus() })
     await navigateAfterLogin()
   } catch {
