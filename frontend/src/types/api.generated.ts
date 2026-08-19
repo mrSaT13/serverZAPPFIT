@@ -5527,6 +5527,26 @@ export interface components {
             user_id?: number | null;
             /** Visibility */
             visibility?: number | null;
+            /** Vo2max */
+            vo2max?: number | null;
+            /** Tss */
+            tss?: number | null;
+            /** Hr Tss */
+            hr_tss?: number | null;
+            /** Trimp */
+            trimp?: number | null;
+            /** Intensity Factor */
+            intensity_factor?: number | null;
+            /** Aerobic Te */
+            aerobic_te?: number | null;
+            /** Anaerobic Te */
+            anaerobic_te?: number | null;
+            /** Epoc */
+            epoc?: number | null;
+            /** Suffer Score */
+            suffer_score?: number | null;
+            /** Efficiency Factor */
+            efficiency_factor?: number | null;
             /** Workout Feeling */
             workout_feeling?: number | null;
             /** Workout Rpe */
@@ -5599,6 +5619,26 @@ export interface components {
             private_notes?: string | null;
             /** Visibility */
             visibility?: number | null;
+            /** Vo2max */
+            vo2max?: number | null;
+            /** Tss */
+            tss?: number | null;
+            /** Hr Tss */
+            hr_tss?: number | null;
+            /** Trimp */
+            trimp?: number | null;
+            /** Intensity Factor */
+            intensity_factor?: number | null;
+            /** Aerobic Te */
+            aerobic_te?: number | null;
+            /** Anaerobic Te */
+            anaerobic_te?: number | null;
+            /** Epoc */
+            epoc?: number | null;
+            /** Suffer Score */
+            suffer_score?: number | null;
+            /** Efficiency Factor */
+            efficiency_factor?: number | null;
         };
         /**
          * ActivityExerciseTitles

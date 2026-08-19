@@ -266,5 +266,18 @@
     "inlineSkating": "Роликовые коньки",
     "hiit": "HIIT",
     "jumpRope": "Скакалка"
+  },
+  "training": {
+    "title": "Метрики тренировки",
+    "vo2max": "VO2макс",
+    "tss": "ТСС",
+    "hrTss": "ТСС по пульсу",
+    "trimp": "ТРИМП",
+    "intensityFactor": "ИФ",
+    "aerobicTe": "Аэробная ТН",
+    "anaerobicTe": "Анаэробная ТН",
+    "epoc": "ЭПОК",
+    "sufferScore": "Балл боли",
+    "efficiencyFactor": "КЭ"
   }
 }

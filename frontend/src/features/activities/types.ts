@@ -254,6 +254,18 @@ export interface Activity {
    */
   mapThumbnailPath: string | null
 
+  // ZAPFIT computed fitness metrics
+  vo2max: number | null
+  tss: number | null
+  hrTss: number | null
+  trimp: number | null
+  intensityFactor: number | null
+  aerobicTe: number | null
+  anaerobicTe: number | null
+  epoc: number | null
+  sufferScore: number | null
+  efficiencyFactor: number | null
+
   privacy: ActivityPrivacy
 }
 

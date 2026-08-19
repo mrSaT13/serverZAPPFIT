@@ -83,6 +83,18 @@ export function mapActivity(dto: ActivityDto): Activity {
 
     mapThumbnailPath: dto.map_thumbnail_path ?? null,
 
+    // ZAPFIT computed fitness metrics
+    vo2max: dto.vo2max ?? null,
+    tss: dto.tss ?? null,
+    hrTss: dto.hr_tss ?? null,
+    trimp: dto.trimp ?? null,
+    intensityFactor: dto.intensity_factor ?? null,
+    aerobicTe: dto.aerobic_te ?? null,
+    anaerobicTe: dto.anaerobic_te ?? null,
+    epoc: dto.epoc ?? null,
+    sufferScore: dto.suffer_score ?? null,
+    efficiencyFactor: dto.efficiency_factor ?? null,
+
     privacy: {
       hideStartTime: dto.hide_start_time ?? false,
       hideLocation: dto.hide_location ?? false,
