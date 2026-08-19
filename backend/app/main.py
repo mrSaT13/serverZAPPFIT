@@ -102,6 +102,50 @@ def _run_alembic_migrations() -> None:
     command.upgrade(alembic_cfg, "head")
 
 
+def _ensure_zapfit_columns() -> None:
+    """Add ZAPFIT fitness-metrics columns if they are missing.
+
+    Idempotent: each ADD COLUMN is guarded by an information_schema
+    check so it is safe to run on every startup.  This avoids a
+    dedicated Alembic migration whose chain position is fragile
+    across rebases and Docker-layer caches.
+    """
+    columns = [
+        ("vo2max", "NUMERIC(5,2)"),
+        ("tss", "INTEGER"),
+        ("hr_tss", "INTEGER"),
+        ("trimp", "INTEGER"),
+        ("intensity_factor", "NUMERIC(5,3)"),
+        ("aerobic_te", "NUMERIC(3,1)"),
+        ("anaerobic_te", "NUMERIC(3,1)"),
+        ("epoc", "NUMERIC(8,2)"),
+        ("suffer_score", "INTEGER"),
+        ("efficiency_factor", "NUMERIC(8,4)"),
+    ]
+    try:
+        from sqlalchemy import text
+
+        with SessionLocal() as db:
+            for col_name, col_type in columns:
+                result = db.execute(
+                    text(
+                        "SELECT 1 FROM information_schema.columns "
+                        "WHERE table_name = 'activities' AND column_name = :col"
+                    ),
+                    {"col": col_name},
+                )
+                if result.fetchone() is None:
+                    db.execute(text(f"ALTER TABLE activities ADD COLUMN {col_name} {col_type}"))
+                    core_logger.print_to_log(f"ZAPFIT: added column activities.{col_name}")
+            db.commit()
+    except Exception as err:
+        core_logger.print_to_log(
+            f"ZAPFIT column check failed: {type(err).__name__}",
+            "error",
+            exc=err,
+        )
+
+
 def _refresh_strava_tokens() -> None:
     """Refresh persisted Strava OAuth tokens."""
     strava_utils.refresh_strava_tokens(True)
@@ -200,6 +244,7 @@ async def startup_event(fastapi_app: FastAPI) -> None:
 
     # Phase 1: critical pre-flight tasks.
     _run_alembic_migrations()
+    _ensure_zapfit_columns()
     await core_migrations.check_migrations()
     core_scheduler.start_scheduler()
 
