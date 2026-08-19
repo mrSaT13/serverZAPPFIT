@@ -8,6 +8,7 @@ import core.cryptography as core_cryptography
 import core.decorators as core_decorators
 import server_settings.models as server_settings_models
 import server_settings.schema as server_settings_schema
+import users.users.models as users_models
 
 # Private internal helpers
 
@@ -182,6 +183,17 @@ def apply_setup_complete(
 
     # Always flip the wizard flag on success — never trust the client.
     db_server_settings.setup_completed = True
+
+    # Sync the chosen default language to the admin user's profile so the
+    # locale sticks across page reloads (applyPreferredLocale reads the
+    # user's preferredLanguage, not the server-level defaultLanguage).
+    if "default_language" in payload_dict:
+        admin_stmt = select(users_models.Users).where(
+            users_models.Users.access_type == "admin"
+        )
+        admin_user = db.execute(admin_stmt).scalar_one_or_none()
+        if admin_user is not None:
+            admin_user.preferred_language = payload_dict["default_language"]
 
     db.commit()
     db.refresh(db_server_settings)
