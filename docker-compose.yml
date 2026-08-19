@@ -8,13 +8,13 @@ networks:
 services:
   zapfit:
     container_name: zapfit-app
-    image: ghcr.io/mrsat13/serverzappfit:sha-656a675
+    image: ghcr.io/mrsat13/serverzappfit:sha-bc271db
     environment:
       DB_PASSWORD: CdC8oS8p2x982
       SECRET_KEY: CdC8oS8p2x982
       FERNET_KEY: CdC8oS8p2x982
       TZ: Europe/Moscow
-      ZAPFIT_HOST: http://192.168.1.42:6342
+      ZAPFIT_HOST: https://zf.genergy13.keenetic.pro
       ALLOW_API_KEY_QUERY_PARAM: "true"
       BEHIND_PROXY: "false"
       RATE_LIMIT_STORAGE_URI: redis://redis:6379/0
