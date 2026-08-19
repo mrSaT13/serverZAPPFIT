@@ -1,7 +1,7 @@
 """v0.19.0 ZAPFIT fitness metrics
 
 Revision ID: a1b2c3d4e5f6
-Revises: 895a29b12c8c
+Revises: b1c2d3e4f5a6
 Create Date: 2026-08-19 12:00:00.000000
 
 """
@@ -14,7 +14,7 @@ import sqlalchemy as sa
 
 # revision identifiers, used by Alembic.
 revision: str = "a1b2c3d4e5f6"
-down_revision: str | None = "895a29b12c8c"
+down_revision: str | None = "b1c2d3e4f5a6"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
