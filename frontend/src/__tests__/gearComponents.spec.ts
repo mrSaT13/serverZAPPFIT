@@ -148,6 +148,7 @@ describe('gear-component service requests', () => {
       shoes: ['cleats'],
       racquet: ['strings'],
       windsurf: ['sail'],
+      ski: ['bindings'],
     }
     vi.mocked(apiFetch).mockResolvedValue(types)
 

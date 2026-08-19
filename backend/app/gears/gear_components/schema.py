@@ -95,6 +95,17 @@ WINDSURF_COMPONENT_TYPES: list[str] = [
     "fuselage",
 ]
 
+SKI_COMPONENT_TYPES: list[str] = [
+    "bindings",
+    "boots",
+    "poles",
+    "helmet",
+    "goggles",
+    "ski_brakes",
+    "skins",
+    "deviation_skins",
+]
+
 
 class GearComponentBase(BaseModel):
     """
@@ -219,6 +230,7 @@ class GearComponentTypesRead(BaseModel):
         shoes: Valid shoes component types.
         racquet: Valid racquet component types.
         windsurf: Valid windsurf component types.
+        ski: Valid ski component types.
     """
 
     bike: list[str] = Field(
@@ -236,6 +248,10 @@ class GearComponentTypesRead(BaseModel):
     windsurf: list[str] = Field(
         ...,
         description=("Valid windsurf component types"),
+    )
+    ski: list[str] = Field(
+        ...,
+        description=("Valid ski component types"),
     )
 
     model_config = ConfigDict(

@@ -76,7 +76,7 @@ export const WEEKDAY_OPTIONS: ReadonlyArray<Schemas['WeekDay']> = [
 ]
 
 /** Currency options offered in the selector. */
-export const CURRENCY_OPTIONS: ReadonlyArray<Schemas['Currency']> = ['euro', 'dollar', 'pound']
+export const CURRENCY_OPTIONS: ReadonlyArray<Schemas['Currency']> = ['euro', 'dollar', 'pound', 'ruble']
 
 /**
  * Builds a validator for an optional whole-number field: an empty value passes,

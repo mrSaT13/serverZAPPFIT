@@ -70,6 +70,7 @@ def validate_gear_component_type(
         1: gc_schema.BIKE_COMPONENT_TYPES,
         2: gc_schema.SHOES_COMPONENT_TYPES,
         4: gc_schema.RACQUET_COMPONENT_TYPES,
+        5: gc_schema.SKI_COMPONENT_TYPES,
         7: gc_schema.WINDSURF_COMPONENT_TYPES,
     }
 
@@ -80,6 +81,7 @@ def validate_gear_component_type(
                 1: "bike",
                 2: "shoes",
                 4: "racquet",
+                5: "ski",
                 7: "windsurf",
             }
             raise HTTPException(

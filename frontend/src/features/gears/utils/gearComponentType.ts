@@ -19,6 +19,8 @@ export function componentTypeListKey(gearType: number): ComponentTypeListKey | n
       return 'shoes'
     case GEAR_TYPE.RACQUET:
       return 'racquet'
+    case GEAR_TYPE.SKIS:
+      return 'ski'
     case GEAR_TYPE.WINDSURF:
       return 'windsurf'
     default:

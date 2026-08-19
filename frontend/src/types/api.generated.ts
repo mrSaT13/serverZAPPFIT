@@ -6325,6 +6325,7 @@ export interface components {
          *         shoes: Valid shoes component types.
          *         racquet: Valid racquet component types.
          *         windsurf: Valid windsurf component types.
+         *         ski: Valid ski component types.
          */
         GearComponentTypesRead: {
             /**
@@ -6342,6 +6343,11 @@ export interface components {
              * @description Valid shoes component types
              */
             shoes: string[];
+            /**
+             * Ski
+             * @description Valid ski component types
+             */
+            ski: string[];
             /**
              * Windsurf
              * @description Valid windsurf component types

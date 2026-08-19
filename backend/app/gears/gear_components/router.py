@@ -54,6 +54,7 @@ async def read_gear_component_types(
         shoes=gear_components_schema.SHOES_COMPONENT_TYPES,
         racquet=(gear_components_schema.RACQUET_COMPONENT_TYPES),
         windsurf=(gear_components_schema.WINDSURF_COMPONENT_TYPES),
+        ski=gear_components_schema.SKI_COMPONENT_TYPES,
     )
 
 
