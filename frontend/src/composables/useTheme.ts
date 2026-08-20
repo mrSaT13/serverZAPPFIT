@@ -43,14 +43,6 @@ export interface AccentPreset {
   }
 }
 
-function h(hex: string, alpha: number): string {
-  const n = hex.replace('#', '')
-  const r = Number.parseInt(n.slice(0, 2), 16)
-  const g = Number.parseInt(n.slice(2, 4), 16)
-  const b = Number.parseInt(n.slice(4, 6), 16)
-  return `${r} ${g} ${b}`
-}
-
 function derivePreset(id: string, label: string, base: string, darkPrimary: string, darkSurface: string): AccentPreset {
   return {
     id,
@@ -99,43 +91,33 @@ export const ACCENT_PRESETS: AccentPreset[] = [
  * Applies a full accent preset to `<html>` element as inline CSS variables.
  */
 function applyAccent(preset: AccentPreset, effectiveTheme: 'light' | 'dark'): void {
-  const vars = effectiveTheme === 'dark' ? preset.dark : preset.light
   const el = document.documentElement
-
-  el.style.setProperty('--brand', vars.brand)
-  el.style.setProperty('--primary', vars.primary)
-  el.style.setProperty('--primary-foreground', vars.primaryFg)
-  el.style.setProperty('--secondary', vars.secondary)
-  el.style.setProperty('--secondary-foreground', vars.secondaryFg)
-  el.style.setProperty('--accent', vars.accent)
-  el.style.setProperty('--accent-foreground', vars.accentFg)
-  el.style.setProperty('--ring', vars.ring)
-
-  // @theme block tokens (used by bg-brand / text-brand classes)
-  el.style.setProperty('--color-brand', vars.brand)
-  el.style.setProperty('--color-brand-light', vars.brandLight)
-  el.style.setProperty('--color-brand-mid', vars.brandMid)
-  el.style.setProperty('--color-brand-dark', vars.brandDark)
 
   if (effectiveTheme === 'dark') {
-    el.style.setProperty('--color-brand-dark-foreground', vars.brandDarkFg)
-    el.style.setProperty('--color-brand-dark-surface', vars.brandDarkSurface)
-  }
-}
-
-/**
- * Clears all runtime accent overrides so the CSS default (from `main.css`) applies.
- */
-function clearAccentOverrides(): void {
-  const el = document.documentElement
-  for (const prop of [
-    '--brand', '--primary', '--primary-foreground',
-    '--secondary', '--secondary-foreground',
-    '--accent', '--accent-foreground', '--ring',
-    '--color-brand', '--color-brand-light', '--color-brand-mid', '--color-brand-dark',
-    '--color-brand-dark-foreground', '--color-brand-dark-surface',
-  ]) {
-    el.style.removeProperty(prop)
+    const v = preset.dark
+    el.style.setProperty('--primary', v.primary)
+    el.style.setProperty('--primary-foreground', v.primaryFg)
+    el.style.setProperty('--secondary', v.secondary)
+    el.style.setProperty('--secondary-foreground', v.secondaryFg)
+    el.style.setProperty('--accent', v.accent)
+    el.style.setProperty('--accent-foreground', v.accentFg)
+    el.style.setProperty('--ring', v.ring)
+    el.style.setProperty('--color-brand-dark-foreground', v.brandDarkFg)
+    el.style.setProperty('--color-brand-dark-surface', v.brandDarkSurface)
+  } else {
+    const v = preset.light
+    el.style.setProperty('--brand', v.brand)
+    el.style.setProperty('--primary', v.primary)
+    el.style.setProperty('--primary-foreground', v.primaryFg)
+    el.style.setProperty('--secondary', v.secondary)
+    el.style.setProperty('--secondary-foreground', v.secondaryFg)
+    el.style.setProperty('--accent', v.accent)
+    el.style.setProperty('--accent-foreground', v.accentFg)
+    el.style.setProperty('--ring', v.ring)
+    el.style.setProperty('--color-brand', v.brand)
+    el.style.setProperty('--color-brand-light', v.brandLight)
+    el.style.setProperty('--color-brand-mid', v.brandMid)
+    el.style.setProperty('--color-brand-dark', v.brandDark)
   }
 }
 
