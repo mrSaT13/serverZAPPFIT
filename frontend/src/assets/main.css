@@ -5,17 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Endurain design tokens — single source of truth for visual design.
- * See devdocs/UX_INCREMENTAL_MIGRATION_PLAN.md § 12.4.
+ * ZAPFIT design tokens — single source of truth for visual design.
  */
 @theme {
-  /* Brand — Teal */
-  --color-brand-light: #e1f5ee;
-  --color-brand: #1d9e75;
-  --color-brand-mid: #0f6e56;
-  --color-brand-dark: #085041;
-  --color-brand-dark-foreground: #5dcaa5;
-  --color-brand-dark-surface: #04342c;
+  /* Brand — Blue */
+  --color-brand-light: #dbeafe;
+  --color-brand: #2563eb;
+  --color-brand-mid: #1d4ed8;
+  --color-brand-dark: #1e40af;
+  --color-brand-dark-foreground: #60a5fa;
+  --color-brand-dark-surface: #172554;
 
   /* Semantic accents */
   --color-effort: #ef9f27;
@@ -130,7 +129,7 @@
 }
 
 /*
- * shadcn-vue semantic layer, wired to the Endurain palette so primitives
+ * shadcn-vue semantic layer, wired to the ZAPFIT blue palette so primitives
  * added under src/components/ui/ render with the brand colors out of the box.
  */
 :root {
@@ -142,20 +141,20 @@
   --card-foreground: #2c2c2a;
   --popover: #ffffff;
   --popover-foreground: #2c2c2a;
-  --primary: #1d9e75;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #e1f5ee;
-  --secondary-foreground: #0f6e56;
+  --secondary: #dbeafe;
+  --secondary-foreground: #1d4ed8;
   --muted: #f1efe8;
   --muted-foreground: #888780;
-  --accent: #e1f5ee;
-  --accent-foreground: #0f6e56;
+  --accent: #dbeafe;
+  --accent-foreground: #1d4ed8;
   --destructive: #e24b4a;
   --destructive-foreground: #ffffff;
   --warning: #d97706;
   --border: rgba(0, 0, 0, 0.08);
   --input: rgba(0, 0, 0, 0.15);
-  --ring: #1d9e75;
+  --ring: #2563eb;
 }
 
 .dark {
@@ -165,20 +164,20 @@
   --card-foreground: #f4f4f5;
   --popover: #27272a;
   --popover-foreground: #f4f4f5;
-  --primary: #5dcaa5;
-  --primary-foreground: #04342c;
-  --secondary: #04342c;
-  --secondary-foreground: #5dcaa5;
+  --primary: #60a5fa;
+  --primary-foreground: #172554;
+  --secondary: #172554;
+  --secondary-foreground: #60a5fa;
   --muted: #27272a;
   --muted-foreground: #a1a1aa;
-  --accent: #04342c;
-  --accent-foreground: #5dcaa5;
+  --accent: #172554;
+  --accent-foreground: #60a5fa;
   --destructive: #e24b4a;
   --destructive-foreground: #ffffff;
   --warning: #fbbf24;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.15);
-  --ring: #5dcaa5;
+  --ring: #60a5fa;
 }
 
 @theme inline {

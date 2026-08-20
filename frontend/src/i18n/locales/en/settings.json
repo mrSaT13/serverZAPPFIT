@@ -903,6 +903,10 @@
       "exportError": "Couldn't export your data. Please try again.",
       "importSuccess": "Data imported",
       "importError": "Couldn't import the archive. Please check the file and try again."
+    },
+    "accentColor": {
+      "title": "Accent color",
+      "subtitle": "Choose the accent colour used across the app"
     }
   }
 }

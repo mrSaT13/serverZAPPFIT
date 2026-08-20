@@ -1,5 +1,5 @@
 /**
- * Resolves an Endurain design-token colour (declared in the `@theme` block of
+ * Resolves a ZAPFIT design-token colour (declared in the `@theme` block of
  * `src/assets/main.css`) to a concrete colour string for canvas/JS contexts —
  * Chart.js and similar render to a `<canvas>` and cannot consume `var(--…)`.
  *
@@ -23,8 +23,8 @@ export type ThemeColorToken =
  * available (SSR, unit tests). The single place these hex values are repeated.
  */
 const TOKEN_FALLBACKS: Record<ThemeColorToken, string> = {
-  '--color-brand': '#1d9e75',
-  '--color-brand-mid': '#0f6e56',
+  '--color-brand': '#2563eb',
+  '--color-brand-mid': '#1d4ed8',
   '--color-effort': '#ef9f27',
   '--color-hr': '#e24b4a',
   '--color-info': '#378add',

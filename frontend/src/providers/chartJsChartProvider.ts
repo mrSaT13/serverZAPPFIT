@@ -17,14 +17,14 @@ import type {
 
 Chart.register(...registerables, zoomPlugin)
 
-/** Design-token-aligned series palette, brand teal first. */
+/** Design-token-aligned series palette, brand blue first. */
 export const DEFAULT_CHART_PALETTE: readonly string[] = [
-  '#1d9e75',
   '#2563eb',
   '#f59e0b',
   '#ef4444',
   '#8b5cf6',
   '#14b8a6',
+  '#ec4899',
 ]
 
 /** Configuration for the Chart.js provider. */
@@ -48,7 +48,7 @@ function colorFor(index: number, explicit: string | undefined, palette: readonly
   }
   // The literal fallback guards the (impossible in practice) empty-palette case
   // so the return type stays a non-nullable string under noUncheckedIndexedAccess.
-  return palette[index % palette.length] ?? DEFAULT_CHART_PALETTE[0] ?? '#1d9e75'
+  return palette[index % palette.length] ?? DEFAULT_CHART_PALETTE[0] ?? '#2563eb'
 }
 
 /** Converts a 6-digit hex colour to an `rgba()` string at the given alpha. */

@@ -8975,7 +8975,7 @@ export interface components {
          *         ESTONIAN: Estonian (et).
          * @enum {string}
          */
-        Language: "ca" | "zh-Hans" | "zh-Hant" | "de" | "fr" | "gl" | "it" | "nl" | "pt-PT" | "sl" | "sv" | "es" | "en" | "pl" | "tr" | "uk" | "ro" | "nb" | "da" | "fi" | "cs" | "el" | "hu" | "bg" | "hr" | "sr" | "sk" | "lt" | "lv" | "et";
+        Language: "ca" | "zh-Hans" | "zh-Hant" | "de" | "fr" | "gl" | "it" | "nl" | "pt-PT" | "sl" | "sv" | "es" | "en" | "ru" | "pl" | "tr" | "uk" | "ro" | "nb" | "da" | "fi" | "cs" | "el" | "hu" | "bg" | "hr" | "sr" | "sk" | "lt" | "lv" | "et";
         /**
          * LicenseInfo
          * @description API license metadata.

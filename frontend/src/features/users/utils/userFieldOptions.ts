@@ -16,6 +16,7 @@ export const TEXT_MAX = 250
 /** Backend language codes offered in the preferred-language selector. */
 export const LANGUAGE_CODES: ReadonlyArray<Schemas['Language']> = [
   'en',
+  'ru',
   'pt-PT',
   'es',
   'ca',
