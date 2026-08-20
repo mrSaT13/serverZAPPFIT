@@ -29,7 +29,7 @@ function handleExport(): void {
   exportMutation.mutate(undefined, {
     onSuccess: (blob) => {
       const stamp = new Date().toISOString().slice(0, 16).replace(':', '-')
-      downloadBlob(blob, `endurain_user_${props.userId}_${stamp}.zip`)
+      downloadBlob(blob, `zapfit_user_${props.userId}_${stamp}.zip`)
       toasts.success(t('settings.profile.dataTransfer.exportSuccess'))
     },
     onError: () => toasts.error(t('settings.profile.dataTransfer.exportError')),

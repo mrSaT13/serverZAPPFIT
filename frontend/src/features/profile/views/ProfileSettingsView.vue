@@ -6,6 +6,7 @@ import PrivacySettingsCard from '@/features/profile/components/PrivacySettingsCa
 import ProfileInfoCard from '@/features/profile/components/ProfileInfoCard.vue'
 import DefaultGearCard from '@/features/profile/components/DefaultGearCard.vue'
 import DataTransferCard from '@/features/profile/components/DataTransferCard.vue'
+import AccentColorCard from '@/features/profile/components/AccentColorCard.vue'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { ErrorState } from '@/components/ui/error-state'
@@ -64,6 +65,7 @@ const profile = computed(() => profileQuery.data.value ?? null)
 
     <template v-else-if="profile">
       <ProfileInfoCard :profile="profile" />
+      <AccentColorCard />
       <DefaultGearCard />
       <PrivacySettingsCard :privacy="profile.privacy" />
       <DataTransferCard :user-id="profile.id" />
