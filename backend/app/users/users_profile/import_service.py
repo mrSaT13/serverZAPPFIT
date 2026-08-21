@@ -806,6 +806,10 @@ class ImportService:
             core_logger.print_to_log("No user integrations data to import", "info")
             return
 
+        # Ensure a record exists to update (edit path raises 404 otherwise)
+        if user_integrations_crud.get_user_integrations_by_user_id(self.user_id, self.db) is None:
+            user_integrations_crud.create_user_integrations(self.user_id, self.db)
+
         integrations_data = user_integrations_data[0]
         integrations_data.pop("id", None)
         integrations_data.pop("user_id", None)
@@ -846,6 +850,10 @@ class ImportService:
         if not user_privacy_settings_data:
             core_logger.print_to_log("No user privacy settings data to import", "info")
             return
+
+        # Ensure a record exists to update (edit path raises 404 otherwise)
+        if users_privacy_settings_crud.get_user_privacy_settings_by_user_id(self.user_id, self.db) is None:
+            users_privacy_settings_crud.create_user_privacy_settings(self.user_id, self.db)
 
         privacy_data = user_privacy_settings_data[0]
         privacy_data.pop("id", None)
@@ -1250,6 +1258,12 @@ class ImportService:
             for target_data in health_targets_data:
                 current_health_target = health_targets_crud.get_health_targets_by_user_id(self.user_id, self.db)
 
+                # Ensure a health target record exists to update. The
+                # edit path raises 404 when none is present, so create
+                # an empty one first on a fresh import.
+                if current_health_target is None:
+                    current_health_target = health_targets_crud.create_health_targets(self.user_id, self.db)
+
                 # Convert string numeric values to floats/ints
                 if isinstance(target_data.get("weight"), str):
                     try:
@@ -1266,10 +1280,7 @@ class ImportService:
                             target_data[field] = None
 
                 target_data["user_id"] = self.user_id
-                if current_health_target is not None:
-                    target_data["id"] = current_health_target.id
-                else:
-                    target_data.pop("id", None)
+                target_data["id"] = current_health_target.id
 
                 target = health_targets_schema.HealthTargetsUpdate(**target_data)
                 health_targets_crud.edit_health_target(target, self.user_id, self.db)
