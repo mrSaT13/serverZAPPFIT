@@ -739,6 +739,14 @@ class ImportService:
             sanitized = {
                 key: value for key, value in user_profile.items() if key in users_crud.PROFILE_SELF_SERVICE_FIELDS
             }
+
+            # Map old Endurain language codes to valid ZAPFIT values.
+            _LEGACY_LANG_MAP = {"us": "en", "uk-UA": "uk", "pt-BR": "pt-PT"}
+            if "preferred_language" in sanitized:
+                lang = sanitized["preferred_language"]
+                if lang in _LEGACY_LANG_MAP:
+                    sanitized["preferred_language"] = _LEGACY_LANG_MAP[lang]
+
             profile_payload = users_schema.ProfileUpdate.model_validate(sanitized)
             await users_crud.edit_profile_user(self.user_id, profile_payload, self.db)
             self.counts["user"] += 1
