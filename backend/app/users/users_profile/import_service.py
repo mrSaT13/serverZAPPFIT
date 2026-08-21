@@ -651,6 +651,12 @@ class ImportService:
             original_id = gear_data.get("id")
             gear_data.pop("id", None)
 
+            nickname = gear_data.get("nickname")
+            existing = gear_crud.get_gear_user_by_nickname(self.user_id, nickname, self.db) if nickname else None
+            if existing is not None:
+                gears_id_mapping[original_id] = existing.id
+                continue
+
             gear = gear_schema.GearCreate(**gear_data)
             new_gear = gear_crud.create_gear(gear, self.user_id, self.db)
             gears_id_mapping[original_id] = new_gear.id
@@ -682,9 +688,12 @@ class ImportService:
 
             gear_component_data.pop("id", None)
 
-            gear_component = gear_components_schema.GearComponentCreate(**gear_component_data)
-            gear_components_crud.create_gear_component(gear_component, self.user_id, self.db)
-            self.counts["gear_components"] += 1
+            try:
+                gear_component = gear_components_schema.GearComponentCreate(**gear_component_data)
+                gear_components_crud.create_gear_component(gear_component, self.user_id, self.db)
+                self.counts["gear_components"] += 1
+            except HTTPException:
+                pass
 
         core_logger.print_to_log(f"Imported {self.counts['gear_components']} gear components", "info")
 
@@ -834,9 +843,12 @@ class ImportService:
             goal_data.pop("id", None)
             goal_data.pop("user_id", None)
 
-            goal = user_goals_schema.UsersGoalCreate(**goal_data)
-            user_goals_crud.create_user_goal(self.user_id, goal, self.db)
-            self.counts["user_goals"] += 1
+            try:
+                goal = user_goals_schema.UsersGoalCreate(**goal_data)
+                user_goals_crud.create_user_goal(self.user_id, goal, self.db)
+                self.counts["user_goals"] += 1
+            except HTTPException:
+                pass
 
         core_logger.print_to_log(f"Imported {self.counts['user_goals']} user goals", "info")
 
@@ -1247,8 +1259,11 @@ class ImportService:
                             health_weight[field] = None
 
                 data = health_weight_schema.HealthWeightCreate(**health_weight)
-                health_weight_crud.create_health_weight(self.user_id, data, self.db)
-                self.counts["health_weight"] += 1
+                try:
+                    health_weight_crud.create_health_weight(self.user_id, data, self.db)
+                    self.counts["health_weight"] += 1
+                except HTTPException:
+                    pass
             core_logger.print_to_log(f"Imported {self.counts['health_weight']} health weight records", "info")
         else:
             core_logger.print_to_log("No health weight data to import", "debug")
