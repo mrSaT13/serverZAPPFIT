@@ -40,7 +40,7 @@ const CONTENT_SECURITY_POLICY = [
   // pinned here at container start by docker/start.sh (from ENDURAIN_HOST), which
   // rewrites this directive by matching to the end of the meta `content` attribute
   // — so connect-src MUST stay the LAST directive in this list.
-  "connect-src 'self' https://codeberg.org",
+  "connect-src 'self' https://codeberg.org https://api.github.com",
 ].join('; ')
 
 /**
