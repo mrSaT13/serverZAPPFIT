@@ -687,6 +687,7 @@ class ImportService:
             )
 
             gear_component_data.pop("id", None)
+            gear_component_data.pop("user_id", None)
 
             try:
                 gear_component = gear_components_schema.GearComponentCreate(**gear_component_data)
