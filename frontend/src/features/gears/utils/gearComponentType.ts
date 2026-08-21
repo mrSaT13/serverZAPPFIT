@@ -64,6 +64,19 @@ export function humanizeComponentType(type: string): string {
 }
 
 /**
+ * Returns a translated label for a component type using vue-i18n, falling
+ * back to {@link humanizeComponentType} when no translation is available.
+ *
+ * @param type - The component-type id from the backend catalogue.
+ * @param t - The vue-i18n translation function (`t('gears.componentTypes.<type>')`).
+ * @returns A display label in the user's locale.
+ */
+export function translatedComponentType(type: string, t: (key: string) => string): string {
+  const translated = t(`gears.componentTypes.${type}`)
+  return translated !== `gears.componentTypes.${type}` ? translated : humanizeComponentType(type)
+}
+
+/**
  * Computes a component's wear as a whole-number percentage of its expected
  * lifespan. Both arguments must already be in the same base unit (metres for
  * distance gears, seconds for the racquet family), so this is a unit-agnostic
