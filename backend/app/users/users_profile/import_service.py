@@ -1175,6 +1175,11 @@ class ImportService:
         for filename in component_files:
             try:
                 components = json.loads(self._read_zip_entry(zipf, filename))
+                if not isinstance(components, list):
+                    continue
+                # Handle legacy repr() format for laps/streams
+                if components and isinstance(components[0], str):
+                    components = [self._parse_legacy_repr(s) for s in components if isinstance(s, str)]
                 # Only keep components for activities in this batch
                 filtered = [comp for comp in components if comp.get("activity_id") in batch_activity_ids]
                 all_components.extend(filtered)
