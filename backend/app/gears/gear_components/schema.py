@@ -10,6 +10,7 @@ from pydantic import (
     StrictFloat,
     StrictInt,
     StrictStr,
+    field_validator,
 )
 
 BIKE_COMPONENT_TYPES: list[str] = [
@@ -170,6 +171,17 @@ class GearComponentBase(BaseModel):
         extra="forbid",
         validate_assignment=True,
     )
+
+    @field_validator("purchase_value", mode="before")
+    @classmethod
+    def _coerce_string_to_float(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return float(v)
+            except ValueError:
+                pass
+        return v
 
 
 class GearComponentCreate(GearComponentBase):
