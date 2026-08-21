@@ -999,7 +999,7 @@ def get_activity_by_start_time(
             activities_models.Activity.user_id == user_id,
             activities_models.Activity.start_time == start_time,
         )
-        activity = db.execute(stmt).scalar_one_or_none()
+        activity = db.execute(stmt).scalars().first()
         if not activity:
             return None
         return activities_utils.serialize_activity(activity)
