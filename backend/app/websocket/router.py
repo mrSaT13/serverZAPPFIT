@@ -13,7 +13,7 @@ router = APIRouter()
 
 @router.post("/ticket", response_model=dict[str, str], status_code=201)
 def issue_ws_ticket(
-    user_id: Annotated[int, Depends(auth_dependencies.get_sub_from_access_token)],
+    user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
     ticket_store: Annotated[
         ws_ticket_store.WsTicketStore | ws_ticket_store.RedisWsTicketStore,
         Depends(ws_ticket_store.get_ws_ticket_store),
@@ -26,6 +26,8 @@ def issue_ws_ticket(
     bound to the authenticated user. Use the ticket as the
     ?ticket= query parameter when connecting to the WebSocket
     endpoint, so the real access token never appears in a URL.
+
+    Supports both JWT and API key authentication.
 
     Args:
         user_id: Authenticated user ID from auth dependency.
