@@ -15,7 +15,7 @@ import {
 } from '@/features/gears/utils/format'
 import {
   componentWearPercent,
-  humanizeComponentType,
+  translatedComponentType,
   isTimeBasedGear,
 } from '@/features/gears/utils/gearComponentType'
 
@@ -35,7 +35,7 @@ const emit = defineEmits<{ edit: [component: GearComponent]; delete: [component:
 const { t, locale } = useI18n()
 
 const title = computed(() => `${props.component.brand} ${props.component.model}`.trim())
-const typeLabel = computed(() => humanizeComponentType(props.component.type))
+const typeLabel = computed(() => translatedComponentType(props.component.type, t))
 const timeBased = computed(() => isTimeBasedGear(props.gearType))
 const distanceUnit = computed(() =>
   props.units === 'imperial' ? t('gears.unitMi') : t('gears.unitKm'),

@@ -18,7 +18,7 @@ import { toNumberOrNull } from '@/utils/number'
 import { kmToMiles, milesToKm } from '@/utils/units'
 import { compose, maxLength, required } from '@/utils/validators'
 import { currencySymbol } from '@/features/gears/utils/format'
-import { humanizeComponentType, isTimeBasedGear } from '@/features/gears/utils/gearComponentType'
+import { translatedComponentType, isTimeBasedGear } from '@/features/gears/utils/gearComponentType'
 import {
   useCreateGearComponentMutation,
   useUpdateGearComponentMutation,
@@ -181,10 +181,10 @@ const isEditing = computed(() => props.component !== null)
 const dialogTitle = computed(() =>
   isEditing.value ? t('gears.components.form.editTitle') : t('gears.components.form.addTitle'),
 )
-// Component types are sorted by their human label for an easier-to-scan select.
+// Component types are sorted by their translated label for an easier-to-scan select.
 const sortedTypes = computed(() =>
   [...props.availableTypes].sort((a, b) =>
-    humanizeComponentType(a).localeCompare(humanizeComponentType(b)),
+    translatedComponentType(a, t).localeCompare(translatedComponentType(b, t)),
   ),
 )
 const distanceUnitLabel = computed(() =>
@@ -270,7 +270,7 @@ watch(open, (isOpen) => {
           >
             <option value="" disabled>{{ t('gears.components.form.typePlaceholder') }}</option>
             <option v-for="type in sortedTypes" :key="type" :value="type">
-              {{ humanizeComponentType(type) }}
+              {{ translatedComponentType(type, t) }}
             </option>
           </Select>
         </template>
