@@ -27,6 +27,15 @@ router = APIRouter()
 
 
 @router.get(
+    "",
+    status_code=status.HTTP_200_OK,
+)
+def health_check() -> dict[str, str]:
+    """Lightweight health-check endpoint for mobile clients."""
+    return {"status": "ok"}
+
+
+@router.get(
     "/stats/daily",
     response_model=health_schema.HealthDashboardResponse,
     status_code=status.HTTP_200_OK,

@@ -693,6 +693,40 @@ async def create_activity_with_uploaded_file(
     return await activities_utils.parse_and_store_activity_from_uploaded_file(token_user_id, file, ws_manager, db)
 
 
+@api_upload_router.post(
+    "/upload",
+    status_code=201,
+    response_model=list[activities_schema.Activity],
+)
+async def create_activity_with_uploaded_file_alt(
+    token_user_id: Annotated[
+        int,
+        Depends(auth_dependencies.get_user_id_from_auth),
+    ],
+    file: UploadFile,
+    _check_scopes: Annotated[
+        Callable,
+        Security(
+            auth_dependencies.check_auth_scopes,
+            scopes=["activities:upload"],
+        ),
+    ],
+    ws_manager: Annotated[
+        websocket_manager.WebSocketManager,
+        Depends(websocket_manager.get_websocket_manager),
+    ],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+):
+    """Alternate upload path (/upload) for the EndurainUploader class.
+
+    Delegates to the same handler as /create/upload.
+    """
+    return await activities_utils.parse_and_store_activity_from_uploaded_file(token_user_id, file, ws_manager, db)
+
+
 @router.post(
     "/create/bulkimport",
     status_code=status.HTTP_202_ACCEPTED,

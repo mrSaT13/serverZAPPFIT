@@ -302,6 +302,7 @@ router.include_router(
     websocket_router.router,
     prefix=core_config.ROOT_PATH + "/ws",
     tags=["websocket"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
 )
 
 # PUBLIC ROUTES (alphabetical order)

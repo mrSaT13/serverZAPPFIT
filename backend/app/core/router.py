@@ -68,6 +68,12 @@ async def about() -> AboutResponse:
     )
 
 
+@router.get("/status", status_code=status.HTTP_200_OK)
+async def status_check() -> dict[str, str]:
+    """Lightweight liveness probe for mobile clients."""
+    return {"status": "ok"}
+
+
 @router.get("/user_images/{user_img}", response_class=FileResponse)
 def user_img_return(
     user_img: str,
