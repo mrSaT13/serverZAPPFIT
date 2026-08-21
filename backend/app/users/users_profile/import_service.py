@@ -67,6 +67,147 @@ from users.users_profile.exceptions import (
 )
 
 
+def _parse_legacy_value(raw: str) -> Any:
+    """Parse a single legacy repr() value token.
+
+    Handles: int, float, None, True, False, datetime.datetime(...),
+    np.float64(...), zoneinfo.ZoneInfo(...), lists, dicts, and
+    plain strings.
+
+    Args:
+        raw: Raw token string (may contain nested structures).
+
+    Returns:
+        Parsed Python value.
+    """
+    raw = raw.strip()
+
+    # None / booleans
+    if raw == "None":
+        return None
+    if raw == "True":
+        return True
+    if raw == "False":
+        return False
+
+    # Integer
+    try:
+        return int(raw)
+    except ValueError:
+        pass
+
+    # Float
+    try:
+        return float(raw)
+    except ValueError:
+        pass
+
+    # np.float64(...) → float
+    if raw.startswith("np.float64(") and raw.endswith(")"):
+        inner = raw[len("np.float64(") : -1].strip()
+        try:
+            return float(inner)
+        except ValueError:
+            return raw
+
+    # datetime.datetime(...) → ISO string
+    if raw.startswith("datetime.datetime("):
+        try:
+            inner = raw[len("datetime.datetime(") : -1]
+            parts = _split_datetime_args(inner)
+            nums = []
+            tz = None
+            for p in parts:
+                p = p.strip()
+                if p.startswith("tzinfo="):
+                    tz_str = p[len("tzinfo=") :]
+                    tz = _parse_legacy_value(tz_str)
+                else:
+                    nums.append(int(p))
+            if len(nums) >= 3:
+                y, mo, d = nums[0], nums[1], nums[2]
+                h = nums[3] if len(nums) > 3 else 0
+                mi = nums[4] if len(nums) > 4 else 0
+                s = nums[5] if len(nums) > 5 else 0
+                dt_str = f"{y:04d}-{mo:02d}-{d:02d}T{h:02d}:{mi:02d}:{s:02d}"
+                if tz and isinstance(tz, str) and "UTC" in tz:
+                    dt_str += "+00:00"
+                return dt_str
+        except Exception:
+            return raw
+
+    # zoneinfo.ZoneInfo(...) → string
+    if raw.startswith("zoneinfo.ZoneInfo("):
+        try:
+            inner = raw[len("zoneinfo.ZoneInfo(") : -1]
+            if "key='" in inner:
+                start = inner.index("key='") + 5
+                end = inner.index("'", start)
+                return inner[start:end]
+        except Exception:
+            pass
+        return "UTC"
+
+    # Lists and dicts
+    if raw.startswith("[") or raw.startswith("{"):
+        try:
+            import ast
+
+            import re
+
+            cleaned = re.sub(r"np\.float64\(([^)]+)\)", r"\1", raw)
+            return ast.literal_eval(cleaned)
+        except Exception:
+            return raw
+
+    return raw
+
+
+def _split_datetime_args(inner: str) -> list[str]:
+    """Split comma-separated datetime args, respecting nested parens."""
+    parts: list[str] = []
+    depth = 0
+    current: list[str] = []
+    for ch in inner:
+        if ch in ("(", "[", "{"):
+            depth += 1
+            current.append(ch)
+        elif ch in (")", "]", "}"):
+            depth -= 1
+            current.append(ch)
+        elif ch == "," and depth == 0:
+            parts.append("".join(current))
+            current = []
+        else:
+            current.append(ch)
+    if current:
+        parts.append("".join(current))
+    return parts
+
+
+_COMPOUND_PREFIXES = (
+    "datetime.datetime(",
+    "zoneinfo.ZoneInfo(",
+    "np.float64(",
+)
+
+
+def _find_matching_close(text: str, start: int, opener: str) -> int:
+    """Find index AFTER the matching closing bracket/paren."""
+    closer = {"(": ")", "[": "]", "{": "}"}[opener]
+    depth = 1
+    i = start + 1
+    length = len(text)
+    while i < length and depth > 0:
+        ch = text[i]
+        if ch in ("(", "[", "{"):
+            depth += 1
+        elif ch in (")", "]", "}"):
+            depth -= 1
+        i += 1
+    return i
+
+
 class ImportPerformanceConfig(profile_utils.BasePerformanceConfig):
     """
     Performance configuration for import operations.
@@ -290,9 +431,99 @@ class ImportService:
 
         return {"detail": "Import completed", "imported": self.counts}
 
+    @staticmethod
+    def _parse_legacy_repr(record: str) -> dict[str, Any]:
+        """Parse a single old-Endurain ``repr()`` record into a dict.
+
+        Old Endurain versions exported activities, laps, and streams
+        as Python ``repr()`` strings rather than JSON objects::
+
+            "id=263 user_id=2 name='Bike' distance=889 ..."
+
+        Values containing nested structures (lists, dicts,
+        ``datetime.datetime(...)``, ``np.float64(...)``) require
+        special handling.
+
+        Args:
+            record: Single repr()-encoded string.
+
+        Returns:
+            Parsed dictionary.
+        """
+        result: dict[str, Any] = {}
+        i = 0
+        length = len(record)
+
+        while i < length:
+            # Skip whitespace
+            while i < length and record[i] == " ":
+                i += 1
+            if i >= length:
+                break
+
+            # Read key
+            key_start = i
+            while i < length and record[i] not in ("=", " "):
+                i += 1
+            if i >= length or record[i] != "=":
+                break
+            key = record[key_start:i]
+            i += 1  # skip '='
+
+            # Read value — may be quoted, nested, compound, or bare
+            if i < length and record[i] == "'":
+                # Quoted string: find matching closing quote
+                i += 1  # skip opening quote
+                val_start = i
+                while i < length:
+                    if record[i] == "\\":
+                        i += 2  # skip escaped char
+                        continue
+                    if record[i] == "'":
+                        break
+                    i += 1
+                value = record[val_start:i].replace("\\'", "'")
+                i += 1  # skip closing quote
+
+            elif i < length and record[i] in ("(", "[", "{"):
+                # Value starts with a bracket character
+                end = _find_matching_close(record, i, record[i])
+                value = _parse_legacy_value(record[i:end])
+                i = end
+
+            else:
+                # Check for compound prefix: datetime.datetime(, zoneinfo.ZoneInfo(, np.float64(
+                rest = record[i:]
+                compound_end = None
+                for prefix in _COMPOUND_PREFIXES:
+                    if rest.startswith(prefix):
+                        paren_pos = i + len(prefix) - 1
+                        compound_end = _find_matching_close(record, paren_pos, "(")
+                        break
+
+                if compound_end is not None:
+                    value = _parse_legacy_value(record[i:compound_end])
+                    i = compound_end
+                else:
+                    # Bare token: number, None, True, False
+                    val_start = i
+                    while i < length and record[i] != " ":
+                        i += 1
+                    raw = record[val_start:i]
+                    value = _parse_legacy_value(raw)
+
+            result[key] = value
+
+        return result
+
     def _load_single_json(self, zipf: zipfile.ZipFile, filename: str, check_memory: bool = True) -> list[Any]:
         """
         Load and parse JSON file from ZIP archive.
+
+        Supports two formats:
+        1. Modern ZAPFIT: valid JSON list of dicts ``[{...}, ...]``
+        2. Legacy Endurain: JSON list of repr()-encoded strings
+           ``["id=1 name='...' ...", ...]``
 
         Args:
             zipf: ZipFile instance to read from.
@@ -300,7 +531,7 @@ class ImportService:
             check_memory: Whether to check memory usage.
 
         Returns:
-            Parsed JSON data as list.
+            Parsed JSON data as list of dicts.
 
         Raises:
             JSONParseError: If JSON parsing fails.
@@ -322,6 +553,15 @@ class ImportService:
                     "warning",
                 )
                 return []
+
+            # Detect legacy repr() format: list of strings instead of
+            # list of dicts.
+            if data and isinstance(data[0], str):
+                core_logger.print_to_log(
+                    f"Detected legacy Endurain repr() format in {filename}, converting",
+                    "info",
+                )
+                data = [self._parse_legacy_repr(s) for s in data if isinstance(s, str)]
 
             core_logger.print_to_log(
                 f"Loaded {len(data)} items from {filename}",
