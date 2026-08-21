@@ -20,6 +20,11 @@ from fastapi.staticfiles import StaticFiles
 from slowapi.middleware import SlowAPIMiddleware
 from starlette.middleware.sessions import SessionMiddleware
 
+from typing import Annotated
+
+from fastapi import Depends, Query, WebSocket, WebSocketDisconnect, WebSocketException
+from fastapi import status as fastapi_status
+
 import auth.identity_providers.link_tokens.utils as idp_link_token_utils
 import auth.oauth_state.utils as oauth_state_utils
 import auth.password_reset_tokens.utils as password_reset_tokens_utils
@@ -146,6 +151,44 @@ def _ensure_zapfit_columns() -> None:
         )
 
 
+def _ensure_activity_comments_table() -> None:
+    """Create the activity_comments table if it does not exist.
+
+    Idempotent: checks information_schema before creating.
+    """
+    try:
+        from sqlalchemy import text
+
+        with SessionLocal() as db:
+            result = db.execute(
+                text(
+                    "SELECT 1 FROM information_schema.tables "
+                    "WHERE table_name = 'activity_comments'"
+                )
+            )
+            if result.fetchone() is None:
+                db.execute(text("""
+                    CREATE TABLE activity_comments (
+                        id SERIAL PRIMARY KEY,
+                        activity_id INTEGER NOT NULL REFERENCES activities(id) ON DELETE CASCADE,
+                        user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                        content TEXT NOT NULL,
+                        created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL,
+                        updated_at TIMESTAMP WITH TIME ZONE
+                    )
+                """))
+                db.execute(text("CREATE INDEX ix_activity_comments_activity_id ON activity_comments (activity_id)"))
+                db.execute(text("CREATE INDEX ix_activity_comments_user_id ON activity_comments (user_id)"))
+                db.commit()
+                core_logger.print_to_log("ZAPFIT: created table activity_comments")
+    except Exception as err:
+        core_logger.print_to_log(
+            f"ZAPFIT activity_comments table check failed: {type(err).__name__}",
+            "error",
+            exc=err,
+        )
+
+
 def _refresh_strava_tokens() -> None:
     """Refresh persisted Strava OAuth tokens."""
     strava_utils.refresh_strava_tokens(True)
@@ -245,6 +288,7 @@ async def startup_event(fastapi_app: FastAPI) -> None:
     # Phase 1: critical pre-flight tasks.
     _run_alembic_migrations()
     _ensure_zapfit_columns()
+    _ensure_activity_comments_table()
     await core_migrations.check_migrations()
     core_scheduler.start_scheduler()
 
@@ -424,6 +468,7 @@ def create_app() -> FastAPI:
             "Content-Type",
             "X-Client-Type",
             "X-CSRF-Token",
+            "X-API-Key",
         ],
         expose_headers=["X-Request-ID"],
         max_age=600,
@@ -480,6 +525,37 @@ def create_app() -> FastAPI:
 
     # Router files
     fastapi_app.include_router(api_router)
+
+    # Fallback WebSocket route at /ws for clients that skip the
+    # /api/v1 prefix (e.g. some Flutter builds).  The canonical
+    # endpoint lives at /api/v1/ws via the websocket router.
+    import websocket.manager as ws_manager
+    import websocket.ticket_store as ws_ticket_store
+
+    @fastapi_app.websocket("/ws")
+    async def _fallback_ws(
+        websocket: WebSocket,
+        ticket: str = Query(alias="ticket"),
+        ticket_store: ws_ticket_store.WsTicketStore | ws_ticket_store.RedisWsTicketStore = Depends(
+            ws_ticket_store.get_ws_ticket_store
+        ),
+        manager: ws_manager.WebSocketManager = Depends(ws_manager.get_websocket_manager),
+    ) -> None:
+        user_id = ticket_store.consume_ticket(ticket)
+        if user_id is None:
+            raise WebSocketException(
+                code=fastapi_status.WS_1008_POLICY_VIOLATION,
+                reason="Invalid or expired ticket",
+            )
+        await manager.connect(user_id, websocket)
+        try:
+            while True:
+                try:
+                    await websocket.receive_json()
+                except ValueError:
+                    core_logger.print_to_log(f"Received malformed JSON from user {user_id}", "warning")
+        except WebSocketDisconnect:
+            manager.disconnect(user_id)
 
     # Setup tracing once the app and its routes are
     # registered so instrumentation can wrap them.

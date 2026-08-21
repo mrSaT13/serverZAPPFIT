@@ -438,3 +438,9 @@ class Activity(Base):
         back_populates="activity",
         cascade="all, delete-orphan",
     )
+
+    # Establish a one-to-many relationship with 'activity_comments'
+    comments: Mapped[list["ActivityComment"]] = relationship(
+        back_populates="activity",
+        cascade="all, delete-orphan",
+    )

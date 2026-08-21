@@ -6,6 +6,7 @@ import activities.activity.public_router as activities_public_router
 
 # Alphabetized router imports
 import activities.activity.router as activities_router
+import activities.activity_comments.router as activity_comments_router
 import activities.activity_laps.public_router as activity_laps_public_router
 import activities.activity_laps.router as activity_laps_router
 import activities.activity_media.router as activity_media_router
@@ -77,6 +78,12 @@ router.include_router(
     activities_router.api_upload_router,
     prefix=core_config.ROOT_PATH + "/activities",
     tags=["activities"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
+)
+router.include_router(
+    activity_comments_router.router,
+    prefix=core_config.ROOT_PATH + "/activities_comments",
+    tags=["activity_comments"],
     dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
 )
 router.include_router(
