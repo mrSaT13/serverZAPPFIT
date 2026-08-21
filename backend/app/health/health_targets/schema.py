@@ -1,4 +1,4 @@
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, field_validator
 
 
 class HealthTargetsBase(BaseModel):
@@ -41,6 +41,28 @@ class HealthTargetsBase(BaseModel):
         extra="forbid",
         validate_assignment=True,
     )
+
+    @field_validator("weight", "water_ml", mode="before")
+    @classmethod
+    def _coerce_string_to_float(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return float(v)
+            except ValueError:
+                pass
+        return v
+
+    @field_validator("steps", "sleep", "fasting", "poop_count", mode="before")
+    @classmethod
+    def _coerce_string_to_int(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return int(v)
+            except ValueError:
+                pass
+        return v
 
 
 class HealthTargetsRead(HealthTargetsBase):
