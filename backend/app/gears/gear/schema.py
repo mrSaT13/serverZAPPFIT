@@ -11,6 +11,7 @@ from pydantic import (
     StrictFloat,
     StrictInt,
     StrictStr,
+    field_validator,
 )
 
 
@@ -109,6 +110,17 @@ class GearBase(BaseModel):
         extra="forbid",
         validate_assignment=True,
     )
+
+    @field_validator("initial_kms", "purchase_value", mode="before")
+    @classmethod
+    def _coerce_string_to_float(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return float(v)
+            except ValueError:
+                pass
+        return v
 
 
 class GearCreate(GearBase):
