@@ -642,6 +642,10 @@ async def import_profile_data(
     # Comprehensive security validation via the unified pipeline.
     await core_file_uploads.validate_upload(file, kind=core_file_uploads.UploadKind.ZIP)
 
+    # Rewind after validation — safeuploads reads the stream for
+    # content checks and may leave the cursor at EOF.
+    await file.seek(0)
+
     try:
         # Read the ZIP file data
         zip_data = await file.read()
