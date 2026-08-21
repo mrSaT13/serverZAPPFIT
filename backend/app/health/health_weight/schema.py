@@ -7,6 +7,7 @@ from pydantic import (
     Field,
     StrictFloat,
     StrictInt,
+    field_validator,
     model_validator,
 )
 
@@ -69,6 +70,28 @@ class HealthWeightBase(BaseModel):
         validate_assignment=True,
         use_enum_values=True,
     )
+
+    @field_validator("weight", "bmi", "body_fat", "body_water", "bone_mass", "muscle_mass", "visceral_fat", mode="before")
+    @classmethod
+    def _coerce_string_to_float(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return float(v)
+            except ValueError:
+                pass
+        return v
+
+    @field_validator("physique_rating", "metabolic_age", mode="before")
+    @classmethod
+    def _coerce_string_to_int(cls, v: object) -> object:
+        """Accept numeric strings from old Endurain exports."""
+        if isinstance(v, str) and v.strip():
+            try:
+                return int(v)
+            except ValueError:
+                pass
+        return v
 
 
 class HealthWeightCreate(HealthWeightBase):
