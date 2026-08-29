@@ -38,25 +38,72 @@ class AppriseService:
         loads the password via :func:`read_secret` once.
         Re-instantiating after env changes is the
         intended way to reload configuration.
+
+        DB overrides env: if ``server_settings.smtp_host`` is set in the DB,
+        it takes precedence (admin UI). Otherwise env vars are used.
         """
         s = core_config.settings
-        self.smtp_host: str = s.SMTP_HOST
-        self.smtp_port: int = s.SMTP_PORT
-        self.smtp_username: str = s.SMTP_USERNAME
+        # Defaults from env
+        smtp_host: str | None = s.SMTP_HOST
+        smtp_port: int = s.SMTP_PORT
+        smtp_username: str | None = s.SMTP_USERNAME
+        smtp_from: str | None = s.SMTP_FROM
+        smtp_secure: bool = s.SMTP_SECURE
+        smtp_secure_type: str = s.SMTP_SECURE_TYPE
+        smtp_password: str | None = core_config.read_secret("SMTP_PASSWORD")
+        frontend_host: str = s.ZAPFIT_HOST or s.ENDURAIN_HOST
+
+        # Try DB override (admin UI) — best-effort, never break startup
+        try:
+            # Local import to avoid circular
+            import server_settings.models as _ss_models
+            from core.database import SessionLocal as _SessionLocal
+            import core.cryptography as _crypt
+
+            db = _SessionLocal()
+            try:
+                row = db.query(_ss_models.ServerSettings).filter(_ss_models.ServerSettings.id == 1).first()
+                if row is not None and row.smtp_host:
+                    smtp_host = row.smtp_host
+                    if row.smtp_port is not None:
+                        smtp_port = row.smtp_port
+                    if row.smtp_username is not None:
+                        smtp_username = row.smtp_username
+                    if row.smtp_password:
+                        try:
+                            smtp_password = _crypt.decrypt_token_fernet(row.smtp_password)
+                        except Exception:
+                            pass
+                    if row.smtp_from is not None:
+                        smtp_from = row.smtp_from
+                    if row.smtp_secure is not None:
+                        smtp_secure = row.smtp_secure
+                    if row.smtp_secure_type:
+                        smtp_secure_type = row.smtp_secure_type
+                    # frontend_host may also be overridden by brand? keep env host for email footer
+                    # but prefer DB brand? frontend_host stays env for now
+            finally:
+                db.close()
+        except Exception:
+            pass
+
+        self.smtp_host: str | None = smtp_host
+        self.smtp_port: int = smtp_port
+        self.smtp_username: str | None = smtp_username
         # Optional explicit "From" address. When unset,
         # Apprise auto-detects it from the URL. Needed for
         # providers like Brevo that validate the sender
         # against a verified-sender list.
-        self.smtp_from: str | None = s.SMTP_FROM
-        self.smtp_secure: bool = s.SMTP_SECURE
-        self.smtp_secure_type: str = s.SMTP_SECURE_TYPE
+        self.smtp_from: str | None = smtp_from
+        self.smtp_secure: bool = smtp_secure
+        self.smtp_secure_type: str = smtp_secure_type
         # Password is intentionally not stored on the
         # Settings object; it is loaded from env or a
-        # Docker secret file via ``read_secret``.
-        self.smtp_password: str | None = core_config.read_secret("SMTP_PASSWORD")
+        # Docker secret file via ``read_secret`` or DB.
+        self.smtp_password: str | None = smtp_password
         # Public attribute consumed by email-body templates
         # (e.g. ``{email_service.frontend_host}/login``).
-        self.frontend_host: str = s.ENDURAIN_HOST
+        self.frontend_host: str = frontend_host
 
     # SMTP URL construction
     def _build_smtp_url(self) -> str:

@@ -355,6 +355,24 @@
       "deleteError": "Couldn't remove the login photo. Please try again.",
       "cancel": "Cancel",
       "close": "Close"
+    },
+    "email": {
+      "title": "Email / SMTP",
+      "subtitle": "Transactional email for password reset and notifications",
+      "info": "When SMTP host is set, DB values override env vars. Leave password blank to keep current.",
+      "host": "SMTP host",
+      "port": "SMTP port",
+      "username": "SMTP username",
+      "password": "SMTP password",
+      "from": "From address",
+      "secure": "Use secure connection",
+      "secureType": "Secure type",
+      "presetHint": "For mail.ru: host smtp.mail.ru, 465→ssl or 587→starttls, username = your@mail.ru",
+      "testTo": "Test recipient",
+      "testSend": "Send test email",
+      "testNeedEmail": "Enter recipient email",
+      "testSuccess": "Test email sent",
+      "testError": "Failed to send test email"
     }
   },
   "idp": {

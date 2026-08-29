@@ -4,6 +4,7 @@ from fastapi import HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+import core.apprise as core_apprise
 import core.cryptography as core_cryptography
 import core.decorators as core_decorators
 import server_settings.models as server_settings_models
@@ -114,8 +115,17 @@ def edit_server_settings(
 
     if server_settings.tileserver_api_key is not None:
         # Encrypt the tile server API key before storing
-        encrypted_api_key = core_cryptography.encrypt_token_fernet(server_settings.tileserver_api_key)
-        server_settings.tileserver_api_key = encrypted_api_key
+        if server_settings.tileserver_api_key == "":
+            server_settings.tileserver_api_key = None
+        elif server_settings.tileserver_api_key:
+            encrypted_api_key = core_cryptography.encrypt_token_fernet(server_settings.tileserver_api_key)
+            server_settings.tileserver_api_key = encrypted_api_key
+
+    if server_settings.smtp_password is not None:
+        if server_settings.smtp_password == "":
+            server_settings.smtp_password = None
+        elif server_settings.smtp_password:
+            server_settings.smtp_password = core_cryptography.encrypt_token_fernet(server_settings.smtp_password)
 
     # Dictionary of the fields to update if they are not None
     server_settings_data = server_settings.model_dump(exclude_unset=True)
@@ -127,6 +137,12 @@ def edit_server_settings(
     db.commit()
     # Refresh the object to ensure it reflects database state
     db.refresh(db_server_settings)
+
+    # Invalidate cached email service so SMTP changes take effect without restart
+    try:
+        core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
+    except Exception:
+        pass
 
     return _transform_server_settings(db_server_settings)
 
@@ -177,6 +193,11 @@ def apply_setup_complete(
     raw_api_key = payload_dict.get("tileserver_api_key")
     if raw_api_key:
         payload_dict["tileserver_api_key"] = core_cryptography.encrypt_token_fernet(raw_api_key)
+    raw_smtp = payload_dict.get("smtp_password")
+    if raw_smtp:
+        payload_dict["smtp_password"] = core_cryptography.encrypt_token_fernet(raw_smtp)
+    elif raw_smtp == "":
+        payload_dict["smtp_password"] = None
 
     for key, value in payload_dict.items():
         setattr(db_server_settings, key, value)
@@ -197,4 +218,8 @@ def apply_setup_complete(
 
     db.commit()
     db.refresh(db_server_settings)
+    try:
+        core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
+    except Exception:
+        pass
     return _transform_server_settings(db_server_settings)

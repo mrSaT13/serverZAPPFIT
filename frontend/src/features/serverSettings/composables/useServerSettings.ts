@@ -12,6 +12,7 @@ import {
   fetchSetupOptions,
   fetchSetupStatus,
   fetchTileMapsTemplates,
+  sendTestEmail,
   updateServerSettings,
   uploadLoginPhoto,
 } from '@/features/serverSettings/services/serverSettings'
@@ -156,5 +157,16 @@ export function useCompleteSetupMutation() {
       invalidateServerSettings(client)
       void client.invalidateQueries({ queryKey: queryKeys.serverSettings.setupStatus() })
     },
+  })
+}
+
+/**
+ * Test SMTP email mutation.
+ *
+ * @returns Mutation that sends a test email to the supplied address.
+ */
+export function useTestEmailMutation() {
+  return useMutation<void, Error, string>({
+    mutationFn: (toEmail) => sendTestEmail(toEmail),
   })
 }

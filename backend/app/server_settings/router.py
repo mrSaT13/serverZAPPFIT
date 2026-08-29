@@ -13,6 +13,7 @@ from fastapi import (
 from sqlalchemy.orm import Session
 
 import auth.dependencies as auth_dependencies
+import core.apprise as core_apprise
 import core.config as core_config
 import core.database as core_database
 import core.file_uploads as core_file_uploads
@@ -130,6 +131,48 @@ def edit_server_settings(
         core_scheduler.schedule_thumbnail_regeneration()
 
     return server_settings_updated
+
+
+@router.post(
+    "/test-email",
+    response_model=dict[str, str],
+    status_code=status.HTTP_200_OK,
+)
+async def test_smtp_email(
+    payload: server_settings_schema.TestEmailRequest,
+    _check_scopes: Annotated[
+        Callable,
+        Security(auth_dependencies.check_scopes, scopes=["server_settings:write"]),
+    ],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+) -> dict[str, str]:
+    """
+    Send a test email via the configured SMTP.
+
+    Uses the DB-stored SMTP settings when present, otherwise env vars.
+    Requires ``server_settings:write``. The recipient is supplied in the
+    payload so the admin can verify any address (typically their own).
+    """
+    # Ensure we use fresh DB values (edit already cleared cache, but test may be called standalone)
+    try:
+        core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
+    except Exception:
+        pass
+    email_service = core_apprise.get_email_service()
+    if not email_service.is_smtp_configured():
+        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="SMTP not configured. Save SMTP settings first.")
+    success = await email_service.send_email(
+        [payload.to_email],
+        subject="ZAPFIT — тестовое письмо",
+        html_content="<p>SMTP настроен верно. Это тестовое письмо из ZAPFIT.</p><p>Если вы видите это — сброс пароля и другие уведомления будут работать.</p>",
+        text_content="SMTP настроен верно. Тестовое письмо из ZAPFIT.",
+    )
+    if not success:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail="Failed to send test email. Check SMTP host/port/credentials and server logs.")
+    return {"message": f"Test email sent to {payload.to_email}"}
 
 
 @router.post(

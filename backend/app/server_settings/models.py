@@ -1,4 +1,4 @@
-from sqlalchemy import CheckConstraint, String
+from sqlalchemy import Boolean, CheckConstraint, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
 
 from core.database import Base
@@ -173,6 +173,49 @@ class ServerSettings(Base):
         default="ZAPFIT",
         nullable=False,
         comment="Display brand name shown in the UI (fork rebranding hook)",
+    )
+    # SMTP / email — configured via admin UI, overrides env vars. Password stored encrypted (Fernet).
+    smtp_host: Mapped[str | None] = mapped_column(
+        String(255),
+        default=None,
+        nullable=True,
+        comment="SMTP host for transactional email (overrides SMTP_HOST env)",
+    )
+    smtp_port: Mapped[int | None] = mapped_column(
+        Integer(),
+        default=None,
+        nullable=True,
+        comment="SMTP port (overrides SMTP_PORT env)",
+    )
+    smtp_username: Mapped[str | None] = mapped_column(
+        String(320),
+        default=None,
+        nullable=True,
+        comment="SMTP username (overrides SMTP_USERNAME env)",
+    )
+    smtp_password: Mapped[str | None] = mapped_column(
+        String(512),
+        default=None,
+        nullable=True,
+        comment="SMTP password encrypted with Fernet (overrides SMTP_PASSWORD env)",
+    )
+    smtp_from: Mapped[str | None] = mapped_column(
+        String(320),
+        default=None,
+        nullable=True,
+        comment="SMTP From address (overrides SMTP_FROM env)",
+    )
+    smtp_secure: Mapped[bool | None] = mapped_column(
+        Boolean(),
+        default=None,
+        nullable=True,
+        comment="Use secure SMTP (overrides SMTP_SECURE env)",
+    )
+    smtp_secure_type: Mapped[str | None] = mapped_column(
+        String(10),
+        default=None,
+        nullable=True,
+        comment="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)",
     )
 
     __table_args__ = (CheckConstraint("id = 1", name="single_row_check"),)

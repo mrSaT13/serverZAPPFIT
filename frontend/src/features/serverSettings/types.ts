@@ -85,6 +85,13 @@ export interface ServerSettings {
   defaultTheme: ThemePreference
   defaultLanguage: string
   brandName: string
+  smtpHost: string | null
+  smtpPort: number | null
+  smtpUsername: string | null
+  smtpPassword: string | null
+  smtpFrom: string | null
+  smtpSecure: boolean | null
+  smtpSecureType: string | null
 }
 
 /**

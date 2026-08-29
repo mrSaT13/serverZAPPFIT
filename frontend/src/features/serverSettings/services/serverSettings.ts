@@ -43,6 +43,13 @@ export function mapServerSettings(dto: ServerSettingsDto): ServerSettings {
     defaultTheme: dto.default_theme,
     defaultLanguage: dto.default_language,
     brandName: dto.brand_name,
+    smtpHost: (dto as unknown as Record<string, unknown>).smtp_host as string | null ?? null,
+    smtpPort: (dto as unknown as Record<string, unknown>).smtp_port as number | null ?? null,
+    smtpUsername: (dto as unknown as Record<string, unknown>).smtp_username as string | null ?? null,
+    smtpPassword: (dto as unknown as Record<string, unknown>).smtp_password as string | null ?? null,
+    smtpFrom: (dto as unknown as Record<string, unknown>).smtp_from as string | null ?? null,
+    smtpSecure: (dto as unknown as Record<string, unknown>).smtp_secure as boolean | null ?? null,
+    smtpSecureType: (dto as unknown as Record<string, unknown>).smtp_secure_type as string | null ?? null,
   }
 }
 
@@ -100,7 +107,14 @@ export function toServerSettingsWire(settings: ServerSettings): ServerSettingsEd
     default_theme: settings.defaultTheme,
     default_language: settings.defaultLanguage,
     brand_name: settings.brandName,
-  }
+    smtp_host: settings.smtpHost,
+    smtp_port: settings.smtpPort,
+    smtp_username: settings.smtpUsername,
+    smtp_password: settings.smtpPassword,
+    smtp_from: settings.smtpFrom,
+    smtp_secure: settings.smtpSecure,
+    smtp_secure_type: settings.smtpSecureType,
+  } as unknown as ServerSettingsEditDto
 }
 
 /**
@@ -178,6 +192,19 @@ export async function deleteLoginPhoto(): Promise<void> {
   await apiFetch('/server_settings/upload/login', {
     method: 'DELETE',
     responseType: 'void',
+  })
+}
+
+/**
+ * Sends a test email via the configured SMTP (admin scope `server_settings:write`).
+ *
+ * @param toEmail - Recipient for the test.
+ * @throws {HttpError} When SMTP not configured or send fails.
+ */
+export async function sendTestEmail(toEmail: string): Promise<void> {
+  await apiFetch('/server_settings/test-email', {
+    method: 'POST',
+    body: JSON.stringify({ to_email: toEmail }),
   })
 }
 

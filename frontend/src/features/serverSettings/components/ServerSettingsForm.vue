@@ -20,7 +20,10 @@ import { Select } from '@/components/ui/select'
 import { Switch } from '@/components/ui/switch'
 import { useForm } from '@/composables/useForm'
 import { useToasts } from '@/composables/useToasts'
-import { useUpdateServerSettingsMutation } from '@/features/serverSettings/composables/useServerSettings'
+import {
+  useTestEmailMutation,
+  useUpdateServerSettingsMutation,
+} from '@/features/serverSettings/composables/useServerSettings'
 
 const props = defineProps<{
   /** The loaded server settings; seeds the form (the parent mounts this only after load). */
@@ -32,6 +35,8 @@ const props = defineProps<{
 const { t } = useI18n()
 const toasts = useToasts()
 const updateMutation = useUpdateServerSettingsMutation()
+const testEmailMutation = useTestEmailMutation()
+const testEmailTo = ref('')
 
 /** Records-per-page options offered in the list (mirrors v1). */
 const NUM_RECORDS_OPTIONS = [5, 10, 25, 50, 100] as const
@@ -77,6 +82,28 @@ function toFormValues(settings: ServerSettings): ServerSettingsFormValues {
     defaultTheme: settings.defaultTheme,
     defaultLanguage: settings.defaultLanguage,
     brandName: settings.brandName,
+    smtpHost: settings.smtpHost,
+    smtpPort: settings.smtpPort,
+    smtpUsername: settings.smtpUsername,
+    smtpPassword: settings.smtpPassword,
+    smtpFrom: settings.smtpFrom,
+    smtpSecure: settings.smtpSecure,
+    smtpSecureType: settings.smtpSecureType,
+  }
+}
+
+async function sendTestEmail(): Promise<void> {
+  const to = testEmailTo.value.trim()
+  if (!to) {
+    toasts.error(t('settings.server.email.testNeedEmail'))
+    return
+  }
+  try {
+    await testEmailMutation.mutateAsync(to)
+    toasts.success(t('settings.server.email.testSuccess'))
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err)
+    toasts.error(`${t('settings.server.email.testError')}: ${msg}`)
   }
 }
 
@@ -396,6 +423,70 @@ watch(selectedTemplate, (templateId) => {
       <Switch v-model="values.tileserverRegenerateThumbnailsOnChange" :disabled="isSubmitting">
         {{ t('settings.server.maps.regenerateThumbnails') }}
       </Switch>
+    </Card>
+
+    <!-- Email / SMTP -->
+    <Card class="flex flex-col gap-3">
+      <h2 class="text-card-heading">{{ t('settings.server.email.title') }}</h2>
+      <p class="text-body">{{ t('settings.server.email.subtitle') }}</p>
+      <Alert kind="info">{{ t('settings.server.email.info') }}</Alert>
+
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <FormField :label="t('settings.server.email.host')">
+          <template #default="{ fieldId }">
+            <Input :id="fieldId" v-model="values.smtpHost" type="text" placeholder="smtp.mail.ru" maxlength="255" :disabled="isSubmitting" @update:model-value="values.smtpHost = String($event).trim() || null" />
+          </template>
+        </FormField>
+        <FormField :label="t('settings.server.email.port')">
+          <template #default="{ fieldId }">
+            <Input :id="fieldId" :model-value="values.smtpPort !== null && values.smtpPort !== undefined ? String(values.smtpPort) : ''" type="number" placeholder="465" min="1" max="65535" :disabled="isSubmitting" @update:model-value="values.smtpPort = $event ? Number($event) : null" />
+          </template>
+        </FormField>
+      </div>
+
+      <FormField :label="t('settings.server.email.username')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" v-model="values.smtpUsername" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpUsername = String($event).trim() || null" />
+        </template>
+      </FormField>
+
+      <FormField :label="t('settings.server.email.password')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" :model-value="values.smtpPassword ?? ''" type="password" autocomplete="off" maxlength="512" :disabled="isSubmitting" @update:model-value="values.smtpPassword = String($event) || null" />
+        </template>
+      </FormField>
+
+      <FormField :label="t('settings.server.email.from')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" v-model="values.smtpFrom" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpFrom = String($event).trim() || null" />
+        </template>
+      </FormField>
+
+      <Switch v-model="values.smtpSecure" :disabled="isSubmitting">
+        {{ t('settings.server.email.secure') }}
+      </Switch>
+
+      <FormField :label="t('settings.server.email.secureType')">
+        <template #default="{ fieldId }">
+          <Select :id="fieldId" v-model="values.smtpSecureType" :disabled="isSubmitting || !values.smtpSecure">
+            <option value="starttls">starttls (587)</option>
+            <option value="ssl">ssl (465)</option>
+          </Select>
+        </template>
+      </FormField>
+
+      <Alert kind="warning">{{ t('settings.server.email.presetHint') }}</Alert>
+
+      <div class="flex flex-col gap-2 rounded-input border p-3">
+        <Label for="test-email-to">{{ t('settings.server.email.testTo') }}</Label>
+        <div class="flex gap-2">
+          <Input id="test-email-to" v-model="testEmailTo" type="email" placeholder="test@example.com" class="flex-1" :disabled="testEmailMutation.isPending.value" />
+          <Button type="button" variant="secondary" :disabled="testEmailMutation.isPending.value || !testEmailTo.trim()" @click="sendTestEmail">
+            <LoaderCircle v-if="testEmailMutation.isPending.value" class="size-4 animate-spin" />
+            {{ t('settings.server.email.testSend') }}
+          </Button>
+        </div>
+      </div>
     </Card>
 
     <div class="flex justify-begin">

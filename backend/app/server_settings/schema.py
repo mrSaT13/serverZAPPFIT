@@ -270,6 +270,7 @@ class ServerSettings(ServerSettingsBase):
     Attributes:
         id: Unique identifier (always 1, singleton pattern).
         tileserver_api_key: API key encrypted for the tile server.
+        smtp_* : Email SMTP settings (overrides env). Password is stored encrypted.
     """
 
     id: StrictInt = Field(..., description="Unique identifier for server settings (always 1)")
@@ -278,6 +279,25 @@ class ServerSettings(ServerSettingsBase):
         max_length=512,
         description="API key encrypted for the tile server",
     )
+    smtp_host: StrictStr | None = Field(default=None, max_length=255, description="SMTP host (overrides SMTP_HOST env)")
+    smtp_port: StrictInt | None = Field(default=None, ge=1, le=65535, description="SMTP port (overrides SMTP_PORT env)")
+    smtp_username: StrictStr | None = Field(default=None, max_length=320, description="SMTP username (overrides SMTP_USERNAME env)")
+    smtp_password: StrictStr | None = Field(default=None, max_length=512, description="SMTP password encrypted (overrides SMTP_PASSWORD env)")
+    smtp_from: StrictStr | None = Field(default=None, max_length=320, description="SMTP From address (overrides SMTP_FROM env)")
+    smtp_secure: StrictBool | None = Field(default=None, description="Use secure SMTP (overrides SMTP_SECURE env)")
+    smtp_secure_type: StrictStr | None = Field(default=None, max_length=10, description="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)")
+
+    @field_validator("smtp_secure_type", mode="before")
+    @classmethod
+    def validate_smtp_secure_type(cls, value: str | None) -> str | None:
+        if value is None or value == "":
+            return None
+        if not isinstance(value, str):
+            return None
+        normalised = value.lower().strip()
+        if normalised not in ("starttls", "ssl"):
+            raise ValueError("smtp_secure_type must be 'starttls' or 'ssl'")
+        return normalised
 
 
 class ServerSettingsEdit(ServerSettings):
@@ -422,6 +442,14 @@ class SetupOptions(BaseModel):
         ...,
         description="Brand name to render in the wizard chrome.",
     )
+
+    model_config = ConfigDict(from_attributes=True, extra="forbid")
+
+
+class TestEmailRequest(BaseModel):
+    """Payload for SMTP test email."""
+
+    to_email: StrictStr = Field(..., min_length=5, max_length=320, description="Recipient email for test")
 
     model_config = ConfigDict(from_attributes=True, extra="forbid")
 
