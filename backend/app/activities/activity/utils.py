@@ -1332,8 +1332,9 @@ def location_based_on_coordinates(latitude: float | None, longitude: float | Non
     # Make the request and get the response
     try:
         headers = {"User-Agent": f"Endurain/{core_config.API_VERSION} (ReverseGeocoding)"}
-        # Make the request and get the response
-        response = requests.get(url, headers=headers, timeout=10)
+        # Make the request and get the response - short timeout to avoid blocking activity upload
+        # 3s connect, 5s read is enough for Nominatim/Photon; failure returns None and does not block import
+        response = requests.get(url, headers=headers, timeout=(3, 5))
         response.raise_for_status()
 
         if core_config.settings.REVERSE_GEO_PROVIDER in ("geocode", "nominatim"):

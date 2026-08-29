@@ -310,13 +310,13 @@ class ActivityEdit(BaseModel):
     hide_workout_sets_steps: StrictBool | None = None
     hide_gear: StrictBool | None = None
     # ZAPFIT computed fitness metrics (client sends these)
-    vo2max: StrictInt | None = None
-    tss: StrictInt | None = None
-    hr_tss: StrictInt | None = None
-    trimp: StrictInt | None = None
-    intensity_factor: StrictInt | None = None
-    aerobic_te: StrictInt | None = None
-    anaerobic_te: StrictInt | None = None
-    epoc: StrictInt | None = None
-    suffer_score: StrictInt | None = None
-    efficiency_factor: StrictInt | None = None
+    vo2max: float | None = Field(default=None, ge=0, le=100)
+    tss: int | None = Field(default=None, ge=0)
+    hr_tss: int | None = Field(default=None, ge=0)
+    trimp: int | None = Field(default=None, ge=0)
+    intensity_factor: float | None = Field(default=None, ge=0, le=2)
+    aerobic_te: float | None = Field(default=None, ge=0, le=5)
+    anaerobic_te: float | None = Field(default=None, ge=0, le=5)
+    epoc: float | None = Field(default=None, ge=0)
+    suffer_score: int | None = Field(default=None, ge=0, le=100)
+    efficiency_factor: float | None = Field(default=None, ge=0)
