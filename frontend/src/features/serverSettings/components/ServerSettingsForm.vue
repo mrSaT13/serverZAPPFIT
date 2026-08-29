@@ -434,7 +434,7 @@ watch(selectedTemplate, (templateId) => {
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <FormField :label="t('settings.server.email.host')">
           <template #default="{ fieldId }">
-            <Input :id="fieldId" v-model="values.smtpHost" type="text" placeholder="smtp.mail.ru" maxlength="255" :disabled="isSubmitting" @update:model-value="values.smtpHost = String($event).trim() || null" />
+            <Input :id="fieldId" :model-value="values.smtpHost ?? ''" type="text" placeholder="smtp.mail.ru" maxlength="255" :disabled="isSubmitting" @update:model-value="values.smtpHost = String($event).trim() || null" />
           </template>
         </FormField>
         <FormField :label="t('settings.server.email.port')">
@@ -446,7 +446,7 @@ watch(selectedTemplate, (templateId) => {
 
       <FormField :label="t('settings.server.email.username')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" v-model="values.smtpUsername" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpUsername = String($event).trim() || null" />
+          <Input :id="fieldId" :model-value="values.smtpUsername ?? ''" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpUsername = String($event).trim() || null" />
         </template>
       </FormField>
 
@@ -458,17 +458,17 @@ watch(selectedTemplate, (templateId) => {
 
       <FormField :label="t('settings.server.email.from')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" v-model="values.smtpFrom" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpFrom = String($event).trim() || null" />
+          <Input :id="fieldId" :model-value="values.smtpFrom ?? ''" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpFrom = String($event).trim() || null" />
         </template>
       </FormField>
 
-      <Switch v-model="values.smtpSecure" :disabled="isSubmitting">
+      <Switch :model-value="!!values.smtpSecure" :disabled="isSubmitting" @update:model-value="values.smtpSecure = Boolean($event)">
         {{ t('settings.server.email.secure') }}
       </Switch>
 
       <FormField :label="t('settings.server.email.secureType')">
         <template #default="{ fieldId }">
-          <Select :id="fieldId" v-model="values.smtpSecureType" :disabled="isSubmitting || !values.smtpSecure">
+          <Select :id="fieldId" :model-value="values.smtpSecureType ?? 'starttls'" :disabled="isSubmitting || !values.smtpSecure" @update:model-value="values.smtpSecureType = String($event) || null">
             <option value="starttls">starttls (587)</option>
             <option value="ssl">ssl (465)</option>
           </Select>

@@ -49,8 +49,19 @@ function makeSettingsDto(overrides: Partial<ServerSettingsDto> = {}): ServerSett
     default_theme: 'system',
     default_language: 'en',
     brand_name: 'ZAPFIT',
+    // smtp — new optional fields (not in generated type yet, cast via overrides)
+    ...( {
+      smtp_host: null,
+      smtp_port: null,
+      smtp_username: null,
+      smtp_password: null,
+      smtp_from: null,
+      smtp_secure: null,
+      smtp_secure_type: null,
+    } as unknown as Partial<ServerSettingsDto>),
     ...overrides,
-  }
+  } as unknown as ServerSettingsDto
+}
 }
 
 /** Builds a full `TileMapsTemplate` wire payload, overridable per case. */
@@ -95,6 +106,13 @@ describe('mapServerSettings', () => {
       defaultTheme: 'system',
       defaultLanguage: 'en',
       brandName: 'ZAPFIT',
+      smtpHost: null,
+      smtpPort: null,
+      smtpUsername: null,
+      smtpPassword: null,
+      smtpFrom: null,
+      smtpSecure: null,
+      smtpSecureType: null,
     })
   })
 

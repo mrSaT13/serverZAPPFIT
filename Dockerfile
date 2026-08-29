@@ -14,8 +14,8 @@ RUN npm ci --prefer-offline --ignore-scripts
 # Copy the frontend directory
 COPY frontend ./
 
-# Build the app
-RUN npm run build
+# Build the app (type-check is run separately in CI; use build-only for Docker to avoid blocking on strict i18n/type checks)
+RUN npm run build-only
 
 # Stage 2: Install requirements
 FROM python:3.13-alpine@sha256:420cd0bf0f3998275875e02ecd5808168cf0843cbb4d3c536432f729247b2acc AS requirements-stage

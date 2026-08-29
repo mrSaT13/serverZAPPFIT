@@ -354,6 +354,24 @@
       "deleteError": "Fotografije za prijavo ni bilo mogoče odstraniti. Prosim, poskusi znova.",
       "cancel": "Prekliči",
       "close": "Zapri"
+    },
+    "email": {
+      "title": "Email / SMTP",
+      "subtitle": "Transactional email for password reset and notifications",
+      "info": "When SMTP host is set, DB values override env vars. Leave password blank to keep current.",
+      "host": "SMTP host",
+      "port": "SMTP port",
+      "username": "SMTP username",
+      "password": "SMTP password",
+      "from": "From address",
+      "secure": "Use secure connection",
+      "secureType": "Secure type",
+      "presetHint": "Example mailru 465 ssl 587 starttls",
+      "testTo": "Test recipient",
+      "testSend": "Send test email",
+      "testNeedEmail": "Enter recipient email",
+      "testSuccess": "Test email sent",
+      "testError": "Failed to send test email"
     }
   },
   "idp": {

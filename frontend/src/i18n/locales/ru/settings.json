@@ -368,7 +368,7 @@
       "from": "Адрес From",
       "secure": "Использовать защиту",
       "secureType": "Тип защиты",
-      "presetHint": "Для mail.ru: хост smtp.mail.ru, 465→ssl или 587→starttls, логин = your@mail.ru",
+      "presetHint": "Primer mailru 465 ssl 587 starttls",
       "testTo": "Адрес для теста",
       "testSend": "Отправить тест",
       "testNeedEmail": "Укажите email получателя",
