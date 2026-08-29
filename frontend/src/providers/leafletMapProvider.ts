@@ -6,7 +6,7 @@
  * The pure {@link toLatLngs} and {@link boundsOf} helpers are exported so the
  * seam → Leaflet data translation can be unit-tested without a real map.
  */
-import { circleMarker, map as createMap, polyline, tileLayer, type Layer } from 'leaflet'
+import { control, circleMarker, map as createMap, polyline, tileLayer, type Layer } from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 import type {
@@ -39,6 +39,11 @@ const DEFAULT_TILE_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 const DEFAULT_ATTRIBUTION =
   '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 const DEFAULT_MAX_ZOOM = 19
+
+/** Esri World Imagery — satellite layer, same as in mobile app (“Спутник”). */
+const ESRI_SATELLITE_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+const ESRI_ATTRIBUTION =
+  'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
 /** Brand teal track colour, from the `--color-brand` design token. */
 const DEFAULT_TRACK_COLOR = themeColor('--color-brand')
 /** Start-marker fill — the `--color-goal` design token (green). */
@@ -134,7 +139,58 @@ export function createLeafletMapProvider(config: LeafletMapProviderConfig = {}):
         keyboard: interactive,
       })
 
-      tileLayer(tileUrl, { attribution, maxZoom }).addTo(map)
+      // Two base layers: OSM (default/configured) + Esri satellite.
+      // Stored preference mirrors mobile app behaviour.
+      const STORAGE_KEY = 'zapfit:mapLayer'
+      let storedLayer: string | null = null
+      try {
+        storedLayer = localStorage.getItem(STORAGE_KEY)
+      } catch {
+        storedLayer = null
+      }
+
+      const isCustom = tileUrl !== DEFAULT_TILE_URL
+      const osmLayer = tileLayer(tileUrl, { attribution, maxZoom })
+      const satelliteLayer = tileLayer(ESRI_SATELLITE_URL, {
+        attribution: ESRI_ATTRIBUTION,
+        maxZoom: 19,
+      })
+
+      // Choose initial base layer (satellite if user picked it before and no custom tileserver).
+      const initialIsSatellite = !isCustom && storedLayer === 'satellite'
+      if (initialIsSatellite) {
+        satelliteLayer.addTo(map)
+      } else {
+        osmLayer.addTo(map)
+      }
+
+      // Layer switcher control (only when interactive). Labels match mobile app.
+      if (interactive) {
+        const baseMaps: Record<string, Layer> = isCustom
+          ? { 'Спутник (Esri)': satelliteLayer }
+          : {
+              'Карта': osmLayer,
+              'Спутник (Esri)': satelliteLayer,
+            }
+        // When custom tileserver is set, keep it as default but still allow satellite.
+        if (isCustom) {
+          baseMaps['Карта (настроена)'] = osmLayer
+        }
+        control.layers(baseMaps, {}, { position: 'topleft', collapsed: true }).addTo(map)
+
+        // Remember choice.
+        map.on('baselayerchange', (e: { name: string }) => {
+          try {
+            if (e.name.includes('Спутник')) {
+              localStorage.setItem(STORAGE_KEY, 'satellite')
+            } else {
+              localStorage.setItem(STORAGE_KEY, 'osm')
+            }
+          } catch {
+            // ignore
+          }
+        })
+      }
 
       let overlays: Layer[] = []
       let currentTrack: MapTrack = options.track

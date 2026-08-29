@@ -50,6 +50,14 @@ TILE_MAPS_TEMPLATES: dict[str, dict[str, Any]] = {
         "requires_api_key_frontend": False,
         "requires_api_key_backend": True,
     },
+    "esri_satellite": {
+        "name": "Esri World Imagery (Спутник)",
+        "url_template": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": 'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+        "map_background_color": "#0a0a0a",
+        "requires_api_key_frontend": False,
+        "requires_api_key_backend": False,
+    },
 }
 
 

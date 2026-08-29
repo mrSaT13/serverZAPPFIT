@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BookOpen, GitBranch } from '@lucide/vue'
+import { GitBranch } from '@lucide/vue'
 
 import { useAppConfig, useFeatureFlags } from '@/features/config/composables/useAppConfig'
 import { INTEGRATION_LOGOS } from '@/constants/integrationLogos'
@@ -27,7 +27,7 @@ const yearRange = computed(() => {
         <span aria-hidden="true">•</span>
         <a
           class="inline-flex items-center hover:text-foreground"
-          href="https://codeberg.org/endurain-project"
+          href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
           :aria-label="t('footer.repository')"
@@ -35,37 +35,7 @@ const yearRange = computed(() => {
           <GitBranch class="size-4" />
         </a>
         <span aria-hidden="true">•</span>
-        <a
-          class="inline-flex items-center hover:text-foreground"
-          href="https://docs.endurain.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          :aria-label="t('footer.documentation')"
-        >
-          <BookOpen class="size-4" />
-        </a>
-        <span aria-hidden="true">•</span>
-        <a
-          class="inline-flex items-center hover:text-foreground"
-          href="https://fosstodon.org/@endurain"
-          target="_blank"
-          rel="noopener noreferrer"
-          :aria-label="t('footer.mastodon')"
-        >
-          Mastodon
-        </a>
-        <span aria-hidden="true">•</span>
-        <a
-          class="inline-flex items-center hover:text-foreground"
-          href="https://discord.gg/6VUjUq2uZR"
-          target="_blank"
-          rel="noopener noreferrer"
-          :aria-label="t('footer.discord')"
-        >
-          Discord
-        </a>
-        <span aria-hidden="true">•</span>
-        <span>v0.19.0-beta4</span>
+        <span>v0.20.0</span>
       </p>
 
       <p

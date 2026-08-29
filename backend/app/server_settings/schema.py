@@ -17,6 +17,7 @@ import core.sanitization as core_sanitization
 DEFAULT_ALLOWED_TILE_DOMAINS: list[str] = [
     "https://*.openstreetmap.org",  # OpenStreetMap
     "https://*.stadiamaps.com",  # Stadia Maps
+    "https://*.arcgisonline.com",  # Esri World Imagery (satellite)
 ]
 
 
