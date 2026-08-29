@@ -1,8 +1,8 @@
 [project]
-name = "endurain"
-version = "0.19.0-beta4"
-description = "Endurain API for the Endurain app"
-authors = [{name = "João Vitória Silva", email = "joao@endurain.com"}]
+name = "zapfit"
+version = "0.20.0"
+description = "ZAPFIT API"
+authors = [{name = "mrSaT13", email = "zapfit@example.com"}]
 # readme intentionally omitted — internal app, not published to PyPI
 requires-python = ">=3.13,<4.0"
 dependencies = [

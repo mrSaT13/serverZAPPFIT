@@ -79,6 +79,7 @@ async function confirmDelete(): Promise<void> {
     <DropdownMenuTrigger
       class="flex cursor-pointer items-center rounded-input p-1 text-muted-foreground outline-none transition-colors hover:bg-accent hover:text-foreground focus-visible:ring-3 focus-visible:ring-ring/30"
       :aria-label="t('activities.actions.menu')"
+      @click.stop
     >
       <EllipsisVertical class="size-5" />
     </DropdownMenuTrigger>

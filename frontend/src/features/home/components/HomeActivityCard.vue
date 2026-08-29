@@ -204,7 +204,9 @@ const ownerRoute = computed(() =>
         >
           <img :src="INTEGRATION_LOGOS.garminApp" alt="" class="size-5 rounded object-contain" />
         </a>
-        <ActivityActionsMenu v-if="isOwner" :activity="activity" @click.stop />
+        <div v-if="isOwner" @click.stop>
+          <ActivityActionsMenu :activity="activity" />
+        </div>
       </div>
     </div>
 

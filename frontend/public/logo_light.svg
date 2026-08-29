@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
-  <rect width="40" height="40" rx="8" fill="#1d9e75"/>
+  <rect width="40" height="40" rx="8" fill="#2563eb"/>
   <text x="8" y="28" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="white">Z</text>
-  <text x="48" y="28" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#1d9e75">APFIT</text>
+  <text x="48" y="28" font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#2563eb">APFIT</text>
 </svg>
