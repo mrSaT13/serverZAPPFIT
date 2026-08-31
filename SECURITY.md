@@ -12,7 +12,6 @@
 If you discover a security vulnerability, please follow these steps:
 
 1. **Do not** open a public issue;
-2. Send an email to joao@endurain.com with the details of the vulnerability;
 3. Include the following in your report:
 - Steps to reproduce the vulnerability;
 - Potential impact;
