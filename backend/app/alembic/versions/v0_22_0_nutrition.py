@@ -1,7 +1,7 @@
 """Add nutrition meal_logs + wger settings.
 
-Revision ID: b2c3d4e5f6a7
-Revises: a1b2c3d4e5f6
+Revision ID: a1870b5d1097
+Revises: e8184fe13279
 Create Date: 2026-08-31
 """
 
@@ -10,8 +10,8 @@ from collections.abc import Sequence
 import sqlalchemy as sa
 from alembic import op
 
-revision: str = "b2c3d4e5f6a7"
-down_revision: str | None = "a1b2c3d4e5f6"
+revision: str = "a1870b5d1097"
+down_revision: str | None = "e8184fe13279"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
