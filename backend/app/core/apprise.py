@@ -212,6 +212,15 @@ class AppriseService:
                 exc=err,
             )
             return False
+        except Exception as err:
+            # Apprise can raise ValueError/other on bad URL/mode (e.g. wrong
+            # smtp_secure_type for mail.ru). Treat as send failure, not 500.
+            core_logger.print_to_log(
+                f"send_email apprise error for subject '{subject}': {type(err).__name__}: {err}",
+                "error",
+                exc=err,
+            )
+            return False
 
         if success:
             core_logger.print_to_log(f"Email sent: {subject} (recipients={len(to_emails)})", "info")

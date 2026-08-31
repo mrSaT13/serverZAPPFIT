@@ -279,6 +279,8 @@ export const queryKeys = {
     byType: (gearType: number) => ['gears', 'by-type', gearType] as const,
     /** Broad prefix for every gear-activities query (all gears). */
     activitiesLists: () => ['gears', 'activities'] as const,
+    /** Gear images for one gear. */
+    images: (gearId: number) => ['gears', 'images', gearId] as const,
     /**
      * @param gearId - Parent gear identifier.
      * @param filters - Serializable list filters (paging).

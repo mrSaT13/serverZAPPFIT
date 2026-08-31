@@ -102,6 +102,12 @@ const router = createRouter({
       meta: { requiresAuth: false, cardless: true },
     },
     {
+      path: '/nutrition',
+      name: 'nutrition',
+      component: () => import('@/features/nutrition/views/NutritionView.vue'),
+      meta: { requiresAuth: true, cardless: true },
+    },
+    {
       path: '/health',
       component: () => import('@/features/health/views/HealthView.vue'),
       // Cardless: the health shell supplies its own sidebar + content surfaces.

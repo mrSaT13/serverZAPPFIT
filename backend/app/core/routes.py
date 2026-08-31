@@ -27,6 +27,8 @@ import followers.router as followers_router
 import garmin.router as garmin_router
 import gears.gear.router as gears_router
 import gears.gear_components.router as gear_components_router
+import gears.gear_images.router as gear_images_router
+import nutrition.router as nutrition_router
 import health.health_fasting.router as health_fasting_router
 import health.health_poop.router as health_poop_router
 import health.health_sleep.router as health_sleep_router
@@ -158,6 +160,18 @@ router.include_router(
     gears_router.router,
     prefix=core_config.ROOT_PATH + "/gears",
     tags=["gears"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
+)
+router.include_router(
+    gear_images_router.router,
+    prefix=core_config.ROOT_PATH + "/gear_images",
+    tags=["gear_images"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
+)
+router.include_router(
+    nutrition_router.router,
+    prefix=core_config.ROOT_PATH + "/nutrition",
+    tags=["nutrition"],
     dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
 )
 router.include_router(

@@ -228,5 +228,16 @@
       "title": "Couldn't load activities",
       "description": "Something went wrong while loading this gear's activities."
     }
+  },
+  "images": {
+    "title": "Photos",
+    "add": "Add photo",
+    "empty": "No photos yet. Upload gear photos to track its condition.",
+    "alt": "Gear photo",
+    "delete": "Delete",
+    "uploadSuccess": "Photo uploaded",
+    "uploadError": "Couldn't upload photo",
+    "deleteSuccess": "Photo deleted",
+    "deleteError": "Couldn't delete photo"
   }
 }
