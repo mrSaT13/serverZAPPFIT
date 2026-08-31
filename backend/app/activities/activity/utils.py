@@ -313,6 +313,16 @@ def transform_schema_activity_to_model_activity(
         tracker_manufacturer=activity.tracker_manufacturer,
         tracker_model=activity.tracker_model,
         total_cycles=activity.total_cycles,
+        vo2max=activity.vo2max,
+        tss=activity.tss,
+        hr_tss=activity.hr_tss,
+        trimp=activity.trimp,
+        intensity_factor=activity.intensity_factor,
+        aerobic_te=activity.aerobic_te,
+        anaerobic_te=activity.anaerobic_te,
+        epoc=activity.epoc,
+        suffer_score=activity.suffer_score,
+        efficiency_factor=activity.efficiency_factor,
     )
 
     return new_activity
