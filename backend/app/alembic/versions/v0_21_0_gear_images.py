@@ -1,6 +1,6 @@
 """Add gear_images table for gear photo carousel.
 
-Revision ID: a1b2c3d4e5f6
+Revision ID: e8184fe13279
 Revises: c9d1e2f3a4b5
 Create Date: 2026-08-31
 """
@@ -10,7 +10,7 @@ from collections.abc import Sequence
 import sqlalchemy as sa
 from alembic import op
 
-revision: str = "a1b2c3d4e5f6"
+revision: str = "e8184fe13279"
 down_revision: str | None = "c9d1e2f3a4b5"
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None

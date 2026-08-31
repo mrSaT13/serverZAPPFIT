@@ -25,6 +25,7 @@ REQUIRED_DIRS="
 $DATA_FOLDER
 $DATA_FOLDER/user_images
 $DATA_FOLDER/server_images
+$DATA_FOLDER/gear_images
 $DATA_FOLDER/activity_media
 $DATA_FOLDER/activity_thumbnails
 $DATA_FOLDER/activity_files
