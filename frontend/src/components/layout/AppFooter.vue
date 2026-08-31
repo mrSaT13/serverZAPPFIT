@@ -35,7 +35,7 @@ const yearRange = computed(() => {
           <GitBranch class="size-4" />
         </a>
         <span aria-hidden="true">•</span>
-        <span>v0.20.0</span>
+        <span>v0.21.0</span>
       </p>
 
       <p

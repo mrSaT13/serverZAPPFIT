@@ -2,6 +2,8 @@ import stravaLight from '@/assets/strava/api_logo_cptblWith_strava_horiz_light.p
 import stravaMark from '@/assets/strava/stravaLogo.jpeg'
 import garminConnectBadge from '@/assets/garminconnect/Garmin_connect_badge_print_RESOURCE_FILE-01.png'
 import garminConnectApp from '@/assets/garminconnect/Garmin_Connect_app_1024x1024-02.png'
+import wgerPng from '@/assets/wger/wger.png'
+import wgerSvg from '@/assets/wger/wger.svg'
 
 /**
  * Brand logos for third-party fitness integrations, resolved to hashed asset
@@ -11,10 +13,13 @@ import garminConnectApp from '@/assets/garminconnect/Garmin_Connect_app_1024x102
  * @property stravaMark - The Strava "S" mark (square icon use).
  * @property garmin - "Works with Garmin Connect" badge.
  * @property garminApp - The Garmin Connect app icon (square icon use).
+ * @property wger - Wger logo (nutrition).
  */
 export const INTEGRATION_LOGOS = {
   strava: stravaLight,
   stravaMark,
   garmin: garminConnectBadge,
   garminApp: garminConnectApp,
+  wger: wgerPng,
+  wgerSvg,
 } as const

@@ -503,27 +503,27 @@ def create_app() -> FastAPI:
     # Static mounts must be registered before the
     # catch-all frontend route included by api_router.
     fastapi_app.mount(
-        f"/{core_config.USER_IMAGES_DIR}",
+        f"/{core_config.USER_IMAGES_URL_PATH}",
         StaticFiles(directory=core_config.USER_IMAGES_DIR),
         name="user_images",
     )
     fastapi_app.mount(
-        f"/{core_config.SERVER_IMAGES_DIR}",
+        f"/{core_config.SERVER_IMAGES_URL_PATH}",
         StaticFiles(directory=core_config.SERVER_IMAGES_DIR),
         name="server_images",
     )
     fastapi_app.mount(
-        f"/{core_config.settings.ACTIVITY_MEDIA_DIR}",
+        "/activity_media",
         StaticFiles(directory=core_config.settings.ACTIVITY_MEDIA_DIR),
         name="activity_media",
     )
     fastapi_app.mount(
-        f"/{core_config.settings.ACTIVITY_THUMBNAILS_DIR}",
+        "/activity_thumbnails",
         StaticFiles(directory=core_config.settings.ACTIVITY_THUMBNAILS_DIR),
         name="activity_thumbnails",
     )
     fastapi_app.mount(
-        f"/{core_config.settings.GEAR_IMAGES_DIR}",
+        "/gear_images",
         StaticFiles(directory=core_config.settings.GEAR_IMAGES_DIR),
         name="gear_images",
     )

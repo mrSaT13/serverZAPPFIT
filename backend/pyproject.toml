@@ -1,6 +1,6 @@
 [project]
 name = "zapfit"
-version = "0.20.0"
+version = "0.21.0"
 description = "ZAPFIT API"
 authors = [{name = "mrSaT13", email = "zapfit@example.com"}]
 # readme intentionally omitted — internal app, not published to PyPI
