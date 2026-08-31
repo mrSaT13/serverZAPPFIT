@@ -103,6 +103,9 @@ function getAuthErrorMessage(error: unknown, duringMfa: boolean): string {
 
 /**
  * Submits either the password form or the MFA verification form.
+ * Auth errors and post-login navigation errors are handled separately
+ * so a successful MFA verification that only fails to navigate (e.g.
+ * NavigationDuplicated) is not shown as "Invalid code".
  */
 async function submitForm(): Promise<void> {
   if (!canSubmit.value || isLoading.value) {
@@ -115,7 +118,7 @@ async function submitForm(): Promise<void> {
 
   try {
     const result = duringMfa
-      ? await auth.verifyMfa(pendingUsername.value, mfaCode.value.trim().toUpperCase())
+      ? await auth.verifyMfa(pendingUsername.value, mfaCode.value.trim())
       : await auth.login(username.value.trim(), password.value)
 
     if (result.status === 'mfa-required') {
@@ -125,7 +128,13 @@ async function submitForm(): Promise<void> {
       return
     }
 
-    await navigateAfterLogin()
+    try {
+      await navigateAfterLogin()
+    } catch {
+      // Navigation failures (e.g. duplicate navigation) must not be
+      // surfaced as auth errors — the session is already valid and
+      // restoreSession on reload will succeed. Silently ignore.
+    }
   } catch (error) {
     if (duringMfa) {
       mfaCode.value = ''

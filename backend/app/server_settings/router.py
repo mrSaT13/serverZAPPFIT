@@ -5,6 +5,7 @@ from typing import Annotated
 from fastapi import (
     APIRouter,
     Depends,
+    HTTPException,
     Request,
     Security,
     UploadFile,
@@ -164,14 +165,20 @@ async def test_smtp_email(
     email_service = core_apprise.get_email_service()
     if not email_service.is_smtp_configured():
         raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="SMTP not configured. Save SMTP settings first.")
-    success = await email_service.send_email(
-        [payload.to_email],
-        subject="ZAPFIT — тестовое письмо",
-        html_content="<p>SMTP настроен верно. Это тестовое письмо из ZAPFIT.</p><p>Если вы видите это — сброс пароля и другие уведомления будут работать.</p>",
-        text_content="SMTP настроен верно. Тестовое письмо из ZAPFIT.",
-    )
+    # Use ASCII-only subject/body to avoid Apprise urlencode issues with cyrillic;
+    # mail.ru handles UTF-8 but transport errors surfaced as 500 before.
+    try:
+        success = await email_service.send_email(
+            [payload.to_email],
+            subject="ZAPFIT - test email",
+            html_content="<p>SMTP configured correctly. This is a test email from ZAPFIT.</p><p>If you see this, password reset will work.</p>",
+            text_content="SMTP configured correctly. Test email from ZAPFIT.",
+        )
+    except Exception as exc:
+        core_logger.print_to_log(f"test_smtp_email exception: {type(exc).__name__}: {exc}", "error", exc=exc)
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=f"SMTP error: {type(exc).__name__}. Check host/port/secure type (mail.ru: 465/ssl or 587/starttls, From=Username) and logs.") from exc
     if not success:
-        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail="Failed to send test email. Check SMTP host/port/credentials and server logs.")
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail="Failed to send test email. Check SMTP host/port/credentials and server logs. For mail.ru use smtp.mail.ru:465/ssl or 587/starttls and ensure From equals username.")
     return {"message": f"Test email sent to {payload.to_email}"}
 
 

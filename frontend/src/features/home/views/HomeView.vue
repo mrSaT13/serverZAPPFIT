@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Activity as ActivityIcon, Plus, RefreshCw, Users as UsersIcon } from '@lucide/vue'
@@ -7,6 +7,7 @@ import type { LucideIcon } from '@lucide/vue'
 import HomeProfileCard from '@/features/home/components/HomeProfileCard.vue'
 import UserDistanceStats from '@/features/home/components/UserDistanceStats.vue'
 import UserGoalResults from '@/features/home/components/UserGoalResults.vue'
+import TrainingMetricsCard from '@/features/training/components/TrainingMetricsCard.vue'
 import HomeActivityCard from '@/features/home/components/HomeActivityCard.vue'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -160,7 +161,7 @@ function onRefresh(): void {
   <div class="grid grid-cols-1 gap-3 lg:grid-cols-12">
     <!-- Left sidebar -->
     <aside class="flex flex-col gap-3 lg:col-span-3">
-      <!-- Profile (photo + username) — hidden on small screens. -->
+      <!-- Profile (photo + username) вЂ” hidden on small screens. -->
       <div class="hidden lg:block">
         <HomeProfileCard
           v-if="currentUser"
@@ -204,7 +205,7 @@ function onRefresh(): void {
         />
       </Card>
 
-      <!-- Distance stats — hidden on small screens. -->
+      <!-- Distance stats вЂ” hidden on small screens. -->
       <div class="hidden lg:block">
         <UserDistanceStats
           :week-stats="weekStats.data.value"
@@ -297,6 +298,7 @@ function onRefresh(): void {
 
     <!-- Right sidebar (hidden on small screens, matching v1). -->
     <aside class="hidden flex-col gap-3 lg:col-span-3 lg:flex">
+      <TrainingMetricsCard />
       <UserGoalResults
         :goals="goalResults.data.value ?? []"
         :units="units"
@@ -305,3 +307,4 @@ function onRefresh(): void {
     </aside>
   </div>
 </template>
+

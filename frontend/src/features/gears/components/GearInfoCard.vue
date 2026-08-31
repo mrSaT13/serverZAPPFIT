@@ -115,19 +115,20 @@ const createdAtLabel = computed(() => {
         </div>
       </dl>
     </div>
-    <div class="flex flex-col lg:flex-row gap-2 px-4 py-3">
-      <Button size="sm" :aria-label="t('gears.actions.edit')" @click="emit('edit')">
-        <Pencil class="size-4" aria-hidden="true" />
-        {{ t('gears.actions.edit') }}
+    <div class="flex flex-wrap gap-2 px-4 py-3">
+      <Button size="sm" class="min-w-0 flex-1 sm:flex-none" :aria-label="t('gears.actions.edit')" @click="emit('edit')">
+        <Pencil class="size-4 shrink-0" aria-hidden="true" />
+        <span class="truncate">{{ t('gears.actions.edit') }}</span>
       </Button>
       <Button
         variant="destructive"
         size="sm"
+        class="min-w-0 flex-1 sm:flex-none"
         :aria-label="t('gears.actions.delete')"
         @click="emit('delete')"
       >
-        <Trash2 class="size-4" aria-hidden="true" />
-        {{ t('gears.actions.delete') }}
+        <Trash2 class="size-4 shrink-0" aria-hidden="true" />
+        <span class="truncate">{{ t('gears.actions.delete') }}</span>
       </Button>
     </div>
   </Card>

@@ -31,7 +31,7 @@ import core.network as core_network
 import core.redis as core_redis
 
 # Pure constants — neither env-driven nor derived from settings.
-API_VERSION = "v0.20.0"
+API_VERSION = "v0.21.0"
 LICENSE_NAME = "GNU Affero General Public License v3.0 or later"
 LICENSE_IDENTIFIER = "AGPL-3.0-or-later"
 LICENSE_URL = "https://spdx.org/licenses/AGPL-3.0-or-later.html"
@@ -124,6 +124,7 @@ class Settings(BaseSettings):
     FILES_DIR: str = ""
     ACTIVITY_MEDIA_DIR: str = ""
     ACTIVITY_THUMBNAILS_DIR: str = ""
+    GEAR_IMAGES_DIR: str = ""
 
     # --- Rate limiting ---
     RATE_LIMIT_ENABLED: bool = True
@@ -424,6 +425,8 @@ class Settings(BaseSettings):
             self.ACTIVITY_MEDIA_DIR = f"{self.DATA_DIR}/activity_media"
         if not self.ACTIVITY_THUMBNAILS_DIR:
             self.ACTIVITY_THUMBNAILS_DIR = f"{self.DATA_DIR}/activity_thumbnails"
+        if not self.GEAR_IMAGES_DIR:
+            self.GEAR_IMAGES_DIR = f"{self.DATA_DIR}/gear_images"
         if not self.TRUSTED_PROXIES and self.ENVIRONMENT == "development" and "TRUSTED_PROXIES" not in os.environ:
             self.TRUSTED_PROXIES = ["*"]
         # ZAPFIT rebranding: prefer ZAPFIT_HOST, fall back to the legacy
@@ -477,6 +480,7 @@ settings = Settings()
 # Derived module-level paths and runtime state.
 USER_IMAGES_DIR = f"{settings.DATA_DIR}/{USER_IMAGES_URL_PATH}"
 SERVER_IMAGES_DIR = f"{settings.DATA_DIR}/{SERVER_IMAGES_URL_PATH}"
+GEAR_IMAGES_DIR = f"{settings.GEAR_IMAGES_DIR}"
 
 FILES_PROCESSED_DIR = f"{settings.FILES_DIR}/processed"
 FILES_BULK_IMPORT_DIR = f"{settings.FILES_DIR}/bulk_import"
@@ -754,6 +758,7 @@ def check_required_dirs():
         SERVER_IMAGES_DIR,
         settings.ACTIVITY_MEDIA_DIR,
         settings.ACTIVITY_THUMBNAILS_DIR,
+        settings.GEAR_IMAGES_DIR,
         settings.FILES_DIR,
         FILES_PROCESSED_DIR,
         FILES_BULK_IMPORT_DIR,

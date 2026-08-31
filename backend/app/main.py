@@ -522,6 +522,11 @@ def create_app() -> FastAPI:
         StaticFiles(directory=core_config.settings.ACTIVITY_THUMBNAILS_DIR),
         name="activity_thumbnails",
     )
+    fastapi_app.mount(
+        f"/{core_config.settings.GEAR_IMAGES_DIR}",
+        StaticFiles(directory=core_config.settings.GEAR_IMAGES_DIR),
+        name="gear_images",
+    )
 
     # Router files
     fastapi_app.include_router(api_router)

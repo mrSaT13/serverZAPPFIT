@@ -9,6 +9,7 @@ import type { Gear } from '@/features/gears/types'
 import GearActivitiesPanel from '@/features/gears/components/GearActivitiesPanel.vue'
 import GearComponentsPanel from '@/features/gears/components/GearComponentsPanel.vue'
 import GearFormDialog from '@/features/gears/components/GearFormDialog.vue'
+import GearImageCarousel from '@/features/gears/components/GearImageCarousel.vue'
 import GearInfoCard from '@/features/gears/components/GearInfoCard.vue'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -40,6 +41,31 @@ const { data: gear, isPending, isError, refetch } = useGearQuery(gearId)
 const typeLabel = computed(() =>
   gear.value ? t(presentGearType(gear.value.gearType).labelKey) : '',
 )
+
+// Gear images
+import { useQuery, useQueryClient } from '@tanstack/vue-query'
+import { queryKeys } from '@/services/queryKeys'
+import { apiFetch } from '@/services/http'
+
+interface GearImageDto {
+  id: number
+  gear_id: number
+  image_path: string
+  image_url: string | null
+  created_at: string | null
+}
+
+const queryClient = useQueryClient()
+const imagesQuery = useQuery({
+  queryKey: computed(() => queryKeys.gears.images(gearId.value ?? -1)),
+  queryFn: ({ signal }) => apiFetch<GearImageDto[]>(`/gear_images/gear/${gearId.value}`, { signal }),
+  enabled: computed(() => gearId.value !== null),
+})
+const gearImages = computed(() => imagesQuery.data.value ?? [])
+
+function onImagesChange(): void {
+  void queryClient.invalidateQueries({ queryKey: queryKeys.gears.images(gearId.value ?? -1) })
+}
 
 // Edit dialog reuses the shared form; the detail is a superset of `Gear`.
 const isFormOpen = ref(false)
@@ -191,14 +217,10 @@ function confirmDelete(): void {
       <!-- v1-style layout: a single stacked column on mobile, a three-column row
            (gear info | components | activities) from lg up. -->
       <div class="grid gap-3 lg:grid-cols-12 lg:items-start">
-        <GearInfoCard
-          class="lg:col-span-4"
-          :gear="gear"
-          :units="units"
-          :currency="currency"
-          @edit="openEdit"
-          @delete="openDelete"
-        />
+        <div class="lg:col-span-4 flex flex-col gap-3">
+          <GearInfoCard :gear="gear" :units="units" :currency="currency" @edit="openEdit" @delete="openDelete" />
+          <GearImageCarousel :gear-id="gear.id" :images="gearImages" :can-edit="true" @uploaded="onImagesChange" @deleted="onImagesChange" />
+        </div>
         <GearComponentsPanel
           class="lg:col-span-4"
           :gear="gear"

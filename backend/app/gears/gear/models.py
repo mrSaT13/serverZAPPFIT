@@ -13,6 +13,7 @@ from core.database import Base
 if TYPE_CHECKING:
     from activities.activity.models import Activity
     from gears.gear_components.models import GearComponents
+    from gears.gear_images.models import GearImage
     from users.users.models import Users
     from users.users_default_gear.models import UsersDefaultGear
 
@@ -196,4 +197,9 @@ class Gear(Base):
     users_default_windsurf_gear: Mapped[list["UsersDefaultGear"]] = relationship(
         back_populates="windsurf_gear",
         foreign_keys="[UsersDefaultGear.windsurf_gear_id]",
+    )
+    gear_images: Mapped[list["GearImage"]] = relationship(
+        back_populates="gear",
+        cascade="all, delete-orphan",
+        foreign_keys="[GearImage.gear_id]",
     )
