@@ -103,6 +103,11 @@ export const queryKeys = {
      * @returns A sleep-history list key scoped to the given filters.
      */
     sleep: (filters: Record<string, unknown> = {}) => ['health', 'sleep', filters] as const,
+    /** A single night's sleep entry by calendar date (`YYYY-MM-DD`). */
+    sleepByDate: (date: string) => ['health', 'sleep', 'by-date', date] as const,
+    /** Aggregated sleep statistics for an inclusive date range. */
+    sleepRangeStats: (startDate: string, endDate: string) =>
+      ['health', 'sleep', 'range-stats', startDate, endDate] as const,
   },
 
   /** Reference domain factory — copy this shape for activities, gears, etc. */
@@ -174,6 +179,8 @@ export const queryKeys = {
     exerciseTitles: () => ['activities', 'exercise-titles'] as const,
     /** Media (photos) attached to one activity. */
     media: (id: number) => ['activities', 'detail', id, 'media'] as const,
+    /** The comment thread of one activity (activity author + visible viewers). */
+    comments: (id: number) => ['activities', 'detail', id, 'comments'] as const,
     /** The activity's owner user (public or authenticated), keyed by user id. */
     owner: (userId: number) => ['activities', 'owner', userId] as const,
     /** The distinct activity-type codes the user owns (type-filter options). */

@@ -16,6 +16,30 @@ export type ActivitySetDto = Schemas['ActivitySetsRead']
 export type ActivityExerciseTitleDto = Schemas['ActivityExerciseTitles']
 
 /**
+ * Wire shapes for activity comments. Defined manually (the generated
+ * OpenAPI snapshot predates the comments endpoints); kept identical to the
+ * backend `ActivityComment` schema so `gen:api` stays a no-op here.
+ */
+export interface ActivityCommentDto {
+  id: number
+  activity_id: number
+  user_id: number
+  content: string
+  created_at: string
+  updated_at: string | null
+}
+
+/** An activity comment in the camelCase domain model. */
+export interface ActivityComment {
+  id: number
+  activityId: number
+  userId: number
+  content: string
+  createdAt: string
+  updatedAt: string | null
+}
+
+/**
  * Per-sport aggregated stats for a timeframe (this week / this month). Keys are
  * sport names (`run`, `bike`, `swim`, …); each value is a {@link ActivitySportStats}.
  * Used by the home dashboard's distance/time/calories summary. The wire shape is

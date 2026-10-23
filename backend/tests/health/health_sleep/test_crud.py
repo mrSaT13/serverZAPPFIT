@@ -428,3 +428,67 @@ class TestDeleteHealthSleep:
 
         assert exc_info.value.status_code == status.HTTP_500_INTERNAL_SERVER_ERROR
         mock_db.rollback.assert_called_once()
+
+
+class TestGetHealthSleepInRange:
+    """
+    Test suite for get_health_sleep_by_user_id_in_range function.
+    """
+
+    def test_get_health_sleep_in_range_success(self, mock_db):
+        """
+        Test successful retrieval of health sleep records within a range.
+        """
+        # Arrange
+        user_id = 1
+        start = datetime_date(2024, 1, 1)
+        end = datetime_date(2024, 1, 7)
+
+        mock_sleep = health_sleep_schema.HealthSleepRead(
+            id=1,
+            user_id=1,
+            date=datetime_date(2024, 1, 3),
+            total_sleep_seconds=28800,
+        )
+        mock_db.execute.return_value.scalars.return_value.all.return_value = [
+            MagicMock(spec=health_sleep_models.HealthSleep)
+        ]
+
+        # Act
+        with patch.object(health_sleep_crud, "_transform_health_sleep", return_value=[mock_sleep]):
+            result = health_sleep_crud.get_health_sleep_by_user_id_in_range(user_id, start, end, mock_db)
+
+        # Assert
+        assert result == [mock_sleep]
+        mock_db.execute.assert_called_once()
+
+    def test_get_health_sleep_in_range_empty(self, mock_db):
+        """
+        Test retrieval when no records exist within the range.
+        """
+        # Arrange
+        mock_db.execute.return_value.scalars.return_value.all.return_value = []
+
+        # Act
+        with patch.object(health_sleep_crud, "_transform_health_sleep", return_value=[]):
+            result = health_sleep_crud.get_health_sleep_by_user_id_in_range(
+                1, datetime_date(2024, 1, 1), datetime_date(2024, 1, 7), mock_db
+            )
+
+        # Assert
+        assert result == []
+
+    def test_get_health_sleep_in_range_exception(self, mock_db):
+        """
+        Test exception handling in get_health_sleep_by_user_id_in_range.
+        """
+        # Arrange
+        mock_db.execute.side_effect = SQLAlchemyError("Database error")
+
+        # Act & Assert
+        with pytest.raises(HTTPException) as exc_info:
+            health_sleep_crud.get_health_sleep_by_user_id_in_range(
+                1, datetime_date(2024, 1, 1), datetime_date(2024, 1, 7), mock_db
+            )
+
+        assert exc_info.value.status_code == status.HTTP_500_INTERNAL_SERVER_ERROR

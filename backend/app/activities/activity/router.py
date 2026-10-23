@@ -25,6 +25,7 @@ from sqlalchemy.orm import Session
 import activities.activity.crud as activities_crud
 import activities.activity.dependencies as activities_dependencies
 import activities.activity.schema as activities_schema
+import activities.activity.training_metrics as activities_training_metrics
 import activities.activity.utils as activities_utils
 import auth.dependencies as auth_dependencies
 import core.config as core_config
@@ -601,6 +602,30 @@ async def read_activities_user_activities_refresh(
 
     # Return the activities or None if the list is empty
     return activities if activities else None
+
+
+@router.get(
+    "/pmc",
+    response_model=activities_schema.TrainingMetrics,
+)
+async def read_activities_pmc(
+    token_user_id: Annotated[
+        int,
+        Depends(auth_dependencies.get_user_id_from_auth),
+    ],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["activities:read"])],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+    days: Annotated[int, Query(ge=7, le=365)] = 90,
+) -> activities_schema.TrainingMetrics:
+    # Compute the PMC series over the requested window (plus 90 days
+    # of warm-up for CTL/ATL so early values are not stuck at zero).
+    today = datetime.now(UTC).date()
+    start = today - timedelta(days=days + 90)
+    activities = activities_crud.get_user_activities_for_pmc(token_user_id, start, db)
+    return activities_training_metrics.compute_training_metrics(activities, today=today, days=days)
 
 
 @router.get(

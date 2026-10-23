@@ -130,6 +130,11 @@ const router = createRouter({
           component: () => import('@/features/health/views/HealthSleepView.vue'),
         },
         {
+          path: 'sleep/:date',
+          name: 'health-sleep-detail',
+          component: () => import('@/features/health/views/SleepDetailView.vue'),
+        },
+        {
           path: 'rhr',
           name: 'health-rhr',
           component: () => import('@/features/health/views/HealthRestingHeartRateView.vue'),

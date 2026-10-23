@@ -303,3 +303,24 @@ class HealthSleepListResponse(health_schema.HealthListResponse):
     """
 
     records: list[HealthSleepRead] = Field(..., description="List of health sleep records")
+
+
+class HealthSleepRangeStats(BaseModel):
+    """
+    Aggregated sleep statistics over an inclusive date range.
+
+    Averages are computed over the nights that actually have a record
+    (``nights``); missing nights do not dilute the averages.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    start_date: datetime_date = Field(..., description="Inclusive range start")
+    end_date: datetime_date = Field(..., description="Inclusive range end")
+    nights: StrictInt = Field(..., ge=0, description="Nights with a sleep record")
+    avg_total_sleep_seconds: float | None = Field(default=None, description="Average total sleep in seconds")
+    avg_deep_sleep_seconds: float | None = Field(default=None, description="Average deep sleep in seconds")
+    avg_light_sleep_seconds: float | None = Field(default=None, description="Average light sleep in seconds")
+    avg_rem_sleep_seconds: float | None = Field(default=None, description="Average REM sleep in seconds")
+    avg_awake_sleep_seconds: float | None = Field(default=None, description="Average awake time in seconds")
+    avg_sleep_score_overall: float | None = Field(default=None, description="Average overall sleep score (0-100)")

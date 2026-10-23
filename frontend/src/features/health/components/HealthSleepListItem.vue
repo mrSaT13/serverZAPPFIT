@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ChevronDown, Pencil, Trash2 } from '@lucide/vue'
+import { ChevronDown, ExternalLink, Pencil, Trash2 } from '@lucide/vue'
+import { RouterLink } from 'vue-router'
 
 import type { SleepEntry } from '@/features/health/types'
 
@@ -156,6 +157,14 @@ const hrvLabel = computed(() => {
         </span>
       </div>
       <div class="flex shrink-0 items-center gap-1">
+        <Button v-if="entry.date" variant="ghost" size="icon-sm" as-child>
+          <RouterLink
+            :to="{ name: 'health-sleep-detail', params: { date: entry.date } }"
+            :aria-label="t('health.sleep.night.openDetails')"
+          >
+            <ExternalLink class="size-4" aria-hidden="true" />
+          </RouterLink>
+        </Button>
         <Button
           v-if="hasDetails"
           variant="ghost"

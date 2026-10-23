@@ -1,7 +1,8 @@
 from collections.abc import Callable
+from datetime import date as datetime_date
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, Query, Security, status
+from fastapi import APIRouter, Depends, HTTPException, Query, Security, status
 from sqlalchemy.orm import Session
 
 import auth.dependencies as auth_dependencies
@@ -87,6 +88,118 @@ def read_health_sleep_all_pagination(
         num_records=num_records,
         page_number=page_number,
         records=records,
+    )
+
+
+@router.get(
+    "/by_date/{sleep_date}",
+    response_model=health_sleep_schema.HealthSleepRead,
+    status_code=status.HTTP_200_OK,
+)
+def read_health_sleep_by_date(
+    sleep_date: datetime_date,
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["health:read"])],
+    token_user_id: Annotated[
+        int,
+        Depends(auth_dependencies.get_user_id_from_auth),
+    ],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+) -> health_sleep_schema.HealthSleepRead:
+    """
+    Retrieve the sleep record of the authenticated user for one date.
+
+    Args:
+        sleep_date: Calendar date of the sleep session (YYYY-MM-DD).
+        _check_scopes: Security dependency requiring 'health:read'.
+        token_user_id: The ID of the authenticated user.
+        db: Database session.
+
+    Returns:
+        The sleep record for the date.
+
+    Raises:
+        HTTPException: 404 when no record exists for the date.
+    """
+    record = health_sleep_crud.get_health_sleep_by_date_and_user_id(
+        token_user_id, sleep_date.isoformat(), db
+    )
+    if record is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"No sleep record found for date {sleep_date.isoformat()}",
+        )
+    return record
+
+
+@router.get(
+    "/stats/range",
+    response_model=health_sleep_schema.HealthSleepRangeStats,
+    status_code=status.HTTP_200_OK,
+)
+def read_health_sleep_range_stats(
+    start_date: Annotated[datetime_date, Query(description="Inclusive range start (YYYY-MM-DD)")],
+    end_date: Annotated[datetime_date, Query(description="Inclusive range end (YYYY-MM-DD)")],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["health:read"])],
+    token_user_id: Annotated[
+        int,
+        Depends(auth_dependencies.get_user_id_from_auth),
+    ],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+) -> health_sleep_schema.HealthSleepRangeStats:
+    """
+    Aggregate sleep statistics of the authenticated user over a date range.
+
+    Averages are computed over nights that have a record; missing nights
+    are not counted.
+
+    Args:
+        start_date: Inclusive range start.
+        end_date: Inclusive range end.
+        _check_scopes: Security dependency requiring 'health:read'.
+        token_user_id: The ID of the authenticated user.
+        db: Database session.
+
+    Returns:
+        Aggregated statistics for the range.
+
+    Raises:
+        HTTPException: 400 when the range is invalid.
+    """
+    if end_date < start_date:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="end_date must be on or after start_date",
+        )
+    if (end_date - start_date).days > 366:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Date range must not exceed 366 days",
+        )
+
+    records = health_sleep_crud.get_health_sleep_by_user_id_in_range(token_user_id, start_date, end_date, db)
+
+    def _average(values: list[int | None]) -> float | None:
+        present = [value for value in values if value is not None]
+        if not present:
+            return None
+        return sum(present) / len(present)
+
+    return health_sleep_schema.HealthSleepRangeStats(
+        start_date=start_date,
+        end_date=end_date,
+        nights=len(records),
+        avg_total_sleep_seconds=_average([record.total_sleep_seconds for record in records]),
+        avg_deep_sleep_seconds=_average([record.deep_sleep_seconds for record in records]),
+        avg_light_sleep_seconds=_average([record.light_sleep_seconds for record in records]),
+        avg_rem_sleep_seconds=_average([record.rem_sleep_seconds for record in records]),
+        avg_awake_sleep_seconds=_average([record.awake_sleep_seconds for record in records]),
+        avg_sleep_score_overall=_average([record.sleep_score_overall for record in records]),
     )
 
 

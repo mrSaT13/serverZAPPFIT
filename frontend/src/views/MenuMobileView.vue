@@ -4,7 +4,6 @@ import { RouterLink, useRouter, type RouteLocationRaw } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { Activity, Calendar, LogOut, Search, Settings, User } from '@lucide/vue'
 
-import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import { Badge } from '@/components/ui/badge'
@@ -116,8 +115,7 @@ async function signOut(): Promise<void> {
         <p class="mb-1 px-1 text-caption">
           {{ t('nav.preferences') }}
         </p>
-        <Card padding="none" class="flex items-center justify-between gap-3 px-4 py-3">
-          <LocaleSwitcher />
+        <Card padding="none" class="flex items-center justify-end gap-3 px-4 py-3">
           <ThemeToggle />
         </Card>
       </div>

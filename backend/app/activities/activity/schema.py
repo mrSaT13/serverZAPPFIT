@@ -1,6 +1,6 @@
 """Pydantic schemas for activity API payloads."""
 
-from datetime import datetime
+from datetime import date, datetime
 from typing import Annotated
 
 from pydantic import (
@@ -162,6 +162,35 @@ class Activity(BaseModel):
     epoc: float | None = Field(default=None, ge=0)
     suffer_score: int | None = Field(default=None, ge=0, le=100)
     efficiency_factor: float | None = Field(default=None, ge=0)
+
+
+class PmcPoint(BaseModel):
+    """A single date in the PMC series with total TSS for the day."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    date: date
+    tss: int
+
+
+class TrainingMetrics(BaseModel):
+    """ZAPFIT Performance Management Chart metrics for the current user.
+
+    Attributes:
+        ctl: Chronic training load (42-day exponential average).
+        atl: Acute training load (7-day exponential average).
+        tsb: Training stress balance (CTL - ATL).
+        tss_today: Sum of estimated TSS for today.
+        points: Daily TSS series (ascending by date).
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    ctl: float
+    atl: float
+    tsb: float
+    tss_today: int
+    points: list[PmcPoint]
 
 
 class ActivitySportStats(BaseModel):

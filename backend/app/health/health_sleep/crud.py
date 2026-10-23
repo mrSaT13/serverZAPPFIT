@@ -1,3 +1,4 @@
+from datetime import date as datetime_date
 from typing import overload
 
 from fastapi import HTTPException, status
@@ -302,3 +303,38 @@ def delete_health_sleep(user_id: int, health_sleep_id: int, db: Session) -> None
     # Delete the record
     db.delete(db_health_sleep)
     db.commit()
+
+
+@core_decorators.handle_db_errors
+def get_health_sleep_by_user_id_in_range(
+    user_id: int,
+    start_date: datetime_date,
+    end_date: datetime_date,
+    db: Session,
+) -> list[health_sleep_schema.HealthSleepRead]:
+    """
+    Retrieve health sleep records for a user within an inclusive date range.
+
+    Args:
+        user_id: User ID who owns the sleep records.
+        start_date: Inclusive range start.
+        end_date: Inclusive range end.
+        db: Database session.
+
+    Returns:
+        List of sleep records sorted by date ascending.
+
+    Raises:
+        HTTPException: If database error occurs.
+    """
+    stmt = (
+        select(health_sleep_models.HealthSleep)
+        .where(
+            health_sleep_models.HealthSleep.user_id == user_id,
+            health_sleep_models.HealthSleep.date >= start_date,
+            health_sleep_models.HealthSleep.date <= end_date,
+        )
+        .order_by(health_sleep_models.HealthSleep.date.asc())
+    )
+    records = list(db.execute(stmt).scalars().all())
+    return _transform_health_sleep(records)

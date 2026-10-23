@@ -1513,3 +1513,41 @@ def delete_all_strava_activities_for_user(user_id: int, db: Session) -> int:
     except SQLAlchemyError as err:
         db.rollback()
         raise _internal_server_error(err, "delete_all_strava_activities_for_user") from err
+
+
+def get_user_activities_for_pmc(user_id: int, start: date, db: Session) -> list[Any]:
+    """Fetch lightweight activity projections for PMC computation.
+
+    Returns scalar column tuples instead of full ORM entities so the
+    query stays cheap over the wide ``activities`` table.
+
+    Args:
+        user_id: Owner user ID.
+        start: Inclusive lower bound on ``start_time``.
+        db: Database session.
+
+    Returns:
+        List of projection rows with the TSS-relevant columns.
+
+    Raises:
+        HTTPException: 500 on database error.
+    """
+    try:
+        stmt = select(
+            activities_models.Activity.start_time,
+            activities_models.Activity.total_elapsed_time,
+            activities_models.Activity.total_timer_time,
+            activities_models.Activity.activity_type,
+            activities_models.Activity.workout_rpe,
+            activities_models.Activity.tss,
+            activities_models.Activity.hr_tss,
+            activities_models.Activity.trimp,
+            activities_models.Activity.suffer_score,
+        ).where(
+            activities_models.Activity.user_id == user_id,
+            activities_models.Activity.is_hidden.is_(False),
+            activities_models.Activity.start_time >= start,
+        )
+        return list(db.execute(stmt).all())
+    except SQLAlchemyError as err:
+        raise _internal_server_error(err, "get_user_activities_for_pmc") from err

@@ -13,6 +13,7 @@ import { Badge } from '@/components/ui/badge'
 import { SafeHtml } from '@/components/federation'
 import UserAvatar from '@/components/UserAvatar.vue'
 import ActivityActionsMenu from '@/features/activities/components/ActivityActionsMenu.vue'
+import ActivityComments from '@/features/activities/components/ActivityComments.vue'
 import ActivityGallery from '@/features/activities/components/ActivityGallery.vue'
 import ActivityMetricsGrid from '@/features/activities/components/ActivityMetricsGrid.vue'
 import { INTEGRATION_LOGOS } from '@/constants/integrationLogos'
@@ -235,5 +236,8 @@ const ownerRoute = computed(() =>
       :is-owner="isOwner"
       height-class="h-65"
     />
+
+    <!-- Comments: visible to whoever may see the activity (backend-enforced). -->
+    <ActivityComments :activity-id="activity.id" :activity-owner-id="activity.userId" />
   </Card>
 </template>

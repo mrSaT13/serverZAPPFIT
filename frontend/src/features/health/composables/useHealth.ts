@@ -53,7 +53,9 @@ import {
   fetchWeightEntries,
   fetchPoopEntries,
   fetchRhrEntries,
+  fetchSleepByDate,
   fetchSleepEntries,
+  fetchSleepRangeStats,
   updateStepsEntry,
   updateStepsTarget,
   updateWaterEntry,
@@ -655,6 +657,42 @@ export function useUpdateSleepEntryMutation() {
  */
 export function useDeleteSleepEntryMutation() {
   return useDeleteHealthEntryMutation(queryKeys.health.sleepLists(), deleteSleepEntry)
+}
+
+/**
+ * Loads a single night by calendar date for the detail view.
+ *
+ * @param date - Reactive night date (`YYYY-MM-DD`).
+ * @returns The TanStack Query result; data is `null` when no night was recorded.
+ */
+export function useSleepByDateQuery(date: MaybeRefOrGetter<string>) {
+  return useQuery({
+    queryKey: computed(() => queryKeys.health.sleepByDate(toValue(date))),
+    queryFn: ({ signal }) => fetchSleepByDate(toValue(date), signal),
+    enabled: computed(() => toValue(date).length > 0),
+    staleTime: 60_000,
+  })
+}
+
+/**
+ * Loads aggregated sleep statistics over an inclusive date range.
+ *
+ * @param startDate - Reactive range start (`YYYY-MM-DD`).
+ * @param endDate - Reactive range end (`YYYY-MM-DD`).
+ * @returns The TanStack Query result for the range statistics.
+ */
+export function useSleepRangeStatsQuery(
+  startDate: MaybeRefOrGetter<string>,
+  endDate: MaybeRefOrGetter<string>,
+) {
+  return useQuery({
+    queryKey: computed(() =>
+      queryKeys.health.sleepRangeStats(toValue(startDate), toValue(endDate)),
+    ),
+    queryFn: ({ signal }) => fetchSleepRangeStats(toValue(startDate), toValue(endDate), signal),
+    enabled: computed(() => toValue(startDate).length > 0 && toValue(endDate).length > 0),
+    staleTime: 60_000,
+  })
 }
 
 /**

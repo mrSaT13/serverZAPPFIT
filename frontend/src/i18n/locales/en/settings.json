@@ -839,6 +839,12 @@
       "cancel": "Cancel",
       "close": "Close"
     },
+    "language": {
+      "title": "Language",
+      "subtitle": "Interface language; also synced to your profile",
+      "updated": "Language updated",
+      "updateError": "Couldn't update the language. Please try again."
+    },
     "privacy": {
       "title": "Privacy",
       "subtitle": "Control what others can see on your shared activities",
