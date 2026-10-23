@@ -280,6 +280,20 @@
     "sufferScore": "Suffer Score",
     "efficiencyFactor": "EF"
   },
+  "comments": {
+    "title": "Comments",
+    "toggle": "Comments",
+    "count": "{count} comment | {count} comments",
+    "empty": "No comments yet — be the first",
+    "placeholder": "Write a comment…",
+    "send": "Send",
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteConfirm": "Delete this comment?",
+    "loadFailed": "Failed to load comments"
+  },
   "units": {
     "km": "km",
     "mi": "mi",

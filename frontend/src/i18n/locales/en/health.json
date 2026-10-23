@@ -298,6 +298,21 @@
       "awake": "Awake",
       "noData": "No stage timeline available."
     },
+    "night": {
+      "title": "Night details",
+      "openDetails": "Open night details",
+      "noRecord": "No sleep recorded for this night",
+      "noRecordHint": "Log this night from the sleep history to see the full breakdown here.",
+      "hypnogram": "Sleep stages",
+      "vitals": "Night vitals",
+      "respirationAvg": "Respiration (avg)",
+      "respirationMin": "Respiration (min)",
+      "respirationMax": "Respiration (max)",
+      "hrvLabel": "HRV status",
+      "averageTitle": "Last 7 nights",
+      "averageLine": "{nights} nights · avg {duration} · score {score}",
+      "noAverage": "No other recorded nights nearby."
+    },
     "form": {
       "addTitle": "Log sleep",
       "editTitle": "Edit sleep entry",

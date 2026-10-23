@@ -33,7 +33,7 @@ def get_comments_by_activity_id(
     Raises:
         HTTPException: 404 if the activity is not found.
     """
-    activity = activity_crud.get_activity_by_id_from_user_id(activity_id, token_user_id, db)
+    activity = activity_crud.get_activity_by_id_from_user_id_or_has_visibility(activity_id, token_user_id, db)
     if not activity:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
@@ -70,7 +70,7 @@ def create_comment(
     Raises:
         HTTPException: 404 if the activity is not found.
     """
-    activity = activity_crud.get_activity_by_id_from_user_id(activity_id, user_id, db)
+    activity = activity_crud.get_activity_by_id_from_user_id_or_has_visibility(activity_id, user_id, db)
     if not activity:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

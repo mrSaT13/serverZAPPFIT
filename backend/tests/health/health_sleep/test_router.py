@@ -485,3 +485,125 @@ class TestDeleteHealthSleep:
 
         # Assert
         assert response.status_code == 404
+
+
+class TestReadHealthSleepByDate:
+    """
+    Test suite for read_health_sleep_by_date endpoint.
+    """
+
+    @patch("health.health_sleep.router.health_sleep_crud.get_health_sleep_by_date_and_user_id")
+    def test_read_health_sleep_by_date_success(self, mock_get_by_date, fast_api_client, fast_api_app):
+        """
+        Test successful retrieval of a sleep record for one date.
+        """
+        # Arrange
+        mock_get_by_date.return_value = health_sleep_schema.HealthSleepRead(
+            id=1,
+            user_id=1,
+            date=datetime_date(2024, 1, 15),
+            total_sleep_seconds=28800,
+        )
+
+        # Act
+        response = fast_api_client.get(
+            "/health_sleep/by_date/2024-01-15",
+            headers={"Authorization": "Bearer mock_token"},
+        )
+
+        # Assert
+        assert response.status_code == 200
+        body = response.json()
+        assert body["id"] == 1
+        assert body["date"] == "2024-01-15"
+        assert body["total_sleep_seconds"] == 28800
+        mock_get_by_date.assert_called_once_with(1, "2024-01-15", ANY)
+
+    @patch("health.health_sleep.router.health_sleep_crud.get_health_sleep_by_date_and_user_id")
+    def test_read_health_sleep_by_date_not_found(self, mock_get_by_date, fast_api_client, fast_api_app):
+        """
+        Test 404 when no sleep record exists for the date.
+        """
+        # Arrange
+        mock_get_by_date.return_value = None
+
+        # Act
+        response = fast_api_client.get(
+            "/health_sleep/by_date/2024-02-01",
+            headers={"Authorization": "Bearer mock_token"},
+        )
+
+        # Assert
+        assert response.status_code == 404
+
+
+class TestReadHealthSleepRangeStats:
+    """
+    Test suite for read_health_sleep_range_stats endpoint.
+    """
+
+    @patch("health.health_sleep.router.health_sleep_crud.get_health_sleep_by_user_id_in_range")
+    def test_read_health_sleep_range_stats_success(self, mock_get_range, fast_api_client, fast_api_app):
+        """
+        Test aggregated statistics over a range with missing nights ignored.
+        """
+        # Arrange
+        mock_get_range.return_value = [
+            health_sleep_schema.HealthSleepRead(
+                id=1,
+                user_id=1,
+                date=datetime_date(2024, 1, 15),
+                total_sleep_seconds=28800,
+                deep_sleep_seconds=7200,
+                sleep_score_overall=80,
+            ),
+            health_sleep_schema.HealthSleepRead(
+                id=2,
+                user_id=1,
+                date=datetime_date(2024, 1, 16),
+                total_sleep_seconds=25200,
+                deep_sleep_seconds=5400,
+                sleep_score_overall=70,
+            ),
+        ]
+
+        # Act
+        response = fast_api_client.get(
+            "/health_sleep/stats/range?start_date=2024-01-15&end_date=2024-01-16",
+            headers={"Authorization": "Bearer mock_token"},
+        )
+
+        # Assert
+        assert response.status_code == 200
+        body = response.json()
+        assert body["nights"] == 2
+        assert body["avg_total_sleep_seconds"] == 27000.0
+        assert body["avg_deep_sleep_seconds"] == 6300.0
+        assert body["avg_sleep_score_overall"] == 75.0
+        assert body["avg_light_sleep_seconds"] is None
+
+    def test_read_health_sleep_range_stats_reversed_range(self, fast_api_client, fast_api_app):
+        """
+        Test 400 when end_date precedes start_date.
+        """
+        # Act
+        response = fast_api_client.get(
+            "/health_sleep/stats/range?start_date=2024-01-16&end_date=2024-01-15",
+            headers={"Authorization": "Bearer mock_token"},
+        )
+
+        # Assert
+        assert response.status_code == 400
+
+    def test_read_health_sleep_range_stats_too_wide(self, fast_api_client, fast_api_app):
+        """
+        Test 400 when the range exceeds 366 days.
+        """
+        # Act
+        response = fast_api_client.get(
+            "/health_sleep/stats/range?start_date=2023-01-01&end_date=2025-01-01",
+            headers={"Authorization": "Bearer mock_token"},
+        )
+
+        # Assert
+        assert response.status_code == 400

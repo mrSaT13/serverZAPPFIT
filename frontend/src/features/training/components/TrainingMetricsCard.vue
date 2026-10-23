@@ -6,9 +6,16 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 const metrics = ref<TrainingMetrics | null>(null)
 const loading = ref(true)
+const failed = ref(false)
 
 onMounted(async () => {
-  try { metrics.value = await fetchTrainingMetrics() } finally { loading.value = false }
+  try {
+    metrics.value = await fetchTrainingMetrics()
+  } catch {
+    failed.value = true
+  } finally {
+    loading.value = false
+  }
 })
 
 function ctlLabel(v:number){ if(v<30) return 'База'; if(v<60) return 'Строит.'; if(v<100) return 'На пик'; return 'Высокая' }
@@ -21,6 +28,7 @@ function ctlLabel(v:number){ if(v<30) return 'База'; if(v<60) return 'Стр
       <Skeleton class="h-6 w-32" />
       <Skeleton class="h-20 w-full" />
     </div>
+    <div v-else-if="failed" class="text-hint text-red-500">Не удалось загрузить метрики формы</div>
     <template v-else-if="metrics">
       <div class="grid grid-cols-3 gap-2 text-center">
         <div class="rounded-input border p-2">

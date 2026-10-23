@@ -4,6 +4,7 @@ import { useI18n } from 'vue-i18n'
 
 import PrivacySettingsCard from '@/features/profile/components/PrivacySettingsCard.vue'
 import ProfileInfoCard from '@/features/profile/components/ProfileInfoCard.vue'
+import LanguageCard from '@/features/profile/components/LanguageCard.vue'
 import DefaultGearCard from '@/features/profile/components/DefaultGearCard.vue'
 import DataTransferCard from '@/features/profile/components/DataTransferCard.vue'
 import AccentColorCard from '@/features/profile/components/AccentColorCard.vue'
@@ -65,6 +66,7 @@ const profile = computed(() => profileQuery.data.value ?? null)
 
     <template v-else-if="profile">
       <ProfileInfoCard :profile="profile" />
+      <LanguageCard :profile="profile" />
       <AccentColorCard />
       <DefaultGearCard />
       <PrivacySettingsCard :privacy="profile.privacy" />

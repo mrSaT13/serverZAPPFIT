@@ -30,7 +30,7 @@ import type {
   WeightEntryInput,
 } from '@/features/health/types'
 
-import { apiFetch } from '@/services/http'
+import { apiFetch, HttpError } from '@/services/http'
 
 type HealthTargetsDto = Schemas['HealthTargetsRead']
 type HealthDashboardDto = Schemas['HealthDashboardResponse']
@@ -741,3 +741,77 @@ export const updateSleepEntry = sleepService.update
 export const deleteSleepEntry = sleepService.remove
 /** Updates only the user's sleep-duration target, preserving the other targets. */
 export const updateSleepTarget = createHealthTargetUpdater('sleep')
+
+/**
+ * Fetches a single night by calendar date for the detail view.
+ *
+ * @param date - The night's date (`YYYY-MM-DD`).
+ * @param signal - Optional abort signal.
+ * @returns The night's entry, or `null` when none was recorded.
+ */
+export async function fetchSleepByDate(date: string, signal?: AbortSignal): Promise<SleepEntry | null> {
+  try {
+    const dto = await apiFetch<HealthSleepDto>(`/health/sleep/by_date/${date}`, { signal })
+    return dto ? mapSleepEntry(dto) : null
+  } catch (error) {
+    if (error instanceof HttpError && error.status === 404) {
+      return null
+    }
+    throw error
+  }
+}
+
+/** Aggregated sleep statistics over a date range (backend `HealthSleepRangeStats`). */
+export interface SleepRangeStats {
+  startDate: string
+  endDate: string
+  nights: number
+  avgTotalSleepSeconds: number | null
+  avgDeepSleepSeconds: number | null
+  avgLightSleepSeconds: number | null
+  avgRemSleepSeconds: number | null
+  avgAwakeSleepSeconds: number | null
+  avgSleepScoreOverall: number | null
+}
+
+interface SleepRangeStatsDto {
+  start_date: string
+  end_date: string
+  nights: number
+  avg_total_sleep_seconds: number | null
+  avg_deep_sleep_seconds: number | null
+  avg_light_sleep_seconds: number | null
+  avg_rem_sleep_seconds: number | null
+  avg_awake_sleep_seconds: number | null
+  avg_sleep_score_overall: number | null
+}
+
+/**
+ * Fetches aggregated sleep statistics over an inclusive date range.
+ *
+ * @param startDate - Inclusive range start (`YYYY-MM-DD`).
+ * @param endDate - Inclusive range end (`YYYY-MM-DD`).
+ * @param signal - Optional abort signal.
+ * @returns The range statistics (averages over recorded nights only).
+ */
+export async function fetchSleepRangeStats(
+  startDate: string,
+  endDate: string,
+  signal?: AbortSignal,
+): Promise<SleepRangeStats> {
+  const dto = await apiFetch<SleepRangeStatsDto>(
+    `/health/sleep/stats/range?start_date=${startDate}&end_date=${endDate}`,
+    { signal },
+  )
+  return {
+    startDate: dto.start_date,
+    endDate: dto.end_date,
+    nights: dto.nights,
+    avgTotalSleepSeconds: dto.avg_total_sleep_seconds,
+    avgDeepSleepSeconds: dto.avg_deep_sleep_seconds,
+    avgLightSleepSeconds: dto.avg_light_sleep_seconds,
+    avgRemSleepSeconds: dto.avg_rem_sleep_seconds,
+    avgAwakeSleepSeconds: dto.avg_awake_sleep_seconds,
+    avgSleepScoreOverall: dto.avg_sleep_score_overall,
+  }
+}

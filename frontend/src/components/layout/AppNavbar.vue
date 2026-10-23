@@ -4,7 +4,6 @@ import { RouterLink, useRoute, useRouter, type RouteLocationRaw } from 'vue-rout
 import { useI18n } from 'vue-i18n'
 import { ChevronDown, LogOut, Settings } from '@lucide/vue'
 
-import LocaleSwitcher from '@/components/LocaleSwitcher.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
 import AppLogo from '@/components/AppLogo.vue'
 import UserAvatar from '@/components/UserAvatar.vue'
@@ -119,9 +118,9 @@ async function signOut(): Promise<void> {
 
       <!-- Right-aligned controls -->
       <div class="ms-auto flex items-center gap-2">
-        <!-- Locale/theme on desktop only; on mobile they live in the menu view. -->
+        <!-- Theme on desktop only; on mobile it lives in the menu view. The language
+             selector moved to the profile settings (settings.profile.language). -->
         <div class="hidden items-center gap-2 lg:flex">
-          <LocaleSwitcher />
           <ThemeToggle />
         </div>
 
