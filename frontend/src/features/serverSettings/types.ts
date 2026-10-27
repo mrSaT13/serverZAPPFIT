@@ -92,6 +92,10 @@ export interface ServerSettings {
   smtpFrom: string | null
   smtpSecure: boolean | null
   smtpSecureType: string | null
+  aiEnabled: boolean
+  aiBaseUrl: string | null
+  aiModel: string | null
+  aiApiKey: string | null
 }
 
 /**

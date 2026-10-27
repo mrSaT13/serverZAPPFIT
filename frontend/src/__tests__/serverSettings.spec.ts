@@ -58,6 +58,11 @@ function makeSettingsDto(overrides: Partial<ServerSettingsDto> = {}): ServerSett
       smtp_from: null,
       smtp_secure: null,
       smtp_secure_type: null,
+      // ai assistant — same situation, not in the generated type yet
+      ai_enabled: false,
+      ai_base_url: null,
+      ai_model: null,
+      ai_api_key: null,
     } as unknown as Partial<ServerSettingsDto>),
     ...overrides,
   } as unknown as ServerSettingsDto
@@ -112,6 +117,10 @@ describe('mapServerSettings', () => {
       smtpFrom: null,
       smtpSecure: null,
       smtpSecureType: null,
+      aiEnabled: false,
+      aiBaseUrl: null,
+      aiModel: null,
+      aiApiKey: null,
     })
   })
 

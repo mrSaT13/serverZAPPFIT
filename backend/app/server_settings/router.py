@@ -183,6 +183,53 @@ async def test_smtp_email(
 
 
 @router.post(
+    "/ai/test",
+    response_model=dict[str, str],
+    status_code=status.HTTP_200_OK,
+)
+async def test_ai_provider(
+    payload: server_settings_schema.AiTestRequest,
+    _check_scopes: Annotated[
+        Callable,
+        Security(auth_dependencies.check_scopes, scopes=["server_settings:write"]),
+    ],
+    db: Annotated[
+        Session,
+        Depends(core_database.get_db),
+    ],
+) -> dict[str, str]:
+    """
+    Probe the configured OpenAI-compatible provider with a tiny chat call.
+
+    Omitted fields fall back to the stored (encrypted) values so the admin
+    form can re-test after saving without re-entering the key. Requires
+    ``server_settings:write``.
+    """
+    import nutrition.ai as nutrition_ai
+
+    stored = nutrition_ai.get_ai_settings(db)
+    base_url = payload.ai_base_url or stored.base_url
+    api_key = payload.ai_api_key or stored.api_key
+    model = payload.ai_model or stored.model
+    if not (base_url and api_key and model):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="AI provider is incomplete: base URL, model and API key are all required.",
+        )
+    try:
+        reply = await nutrition_ai.chat_completion(
+            base_url,
+            api_key,
+            model,
+            [{"role": "user", "content": "Reply with the single word: ok"}],
+            timeout=15.0,
+        )
+    except nutrition_ai.AiAssistantError as e:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
+    return {"message": f"AI provider OK (model {model})"}
+
+
+@router.post(
     "/setup-complete",
     response_model=server_settings_schema.ServerSettingsRead,
     status_code=status.HTTP_200_OK,

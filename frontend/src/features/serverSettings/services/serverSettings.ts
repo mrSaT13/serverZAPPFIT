@@ -50,6 +50,10 @@ export function mapServerSettings(dto: ServerSettingsDto): ServerSettings {
     smtpFrom: (dto as unknown as Record<string, unknown>).smtp_from as string | null ?? null,
     smtpSecure: (dto as unknown as Record<string, unknown>).smtp_secure as boolean | null ?? null,
     smtpSecureType: (dto as unknown as Record<string, unknown>).smtp_secure_type as string | null ?? null,
+    aiEnabled: (dto as unknown as Record<string, unknown>).ai_enabled as boolean ?? false,
+    aiBaseUrl: (dto as unknown as Record<string, unknown>).ai_base_url as string | null ?? null,
+    aiModel: (dto as unknown as Record<string, unknown>).ai_model as string | null ?? null,
+    aiApiKey: (dto as unknown as Record<string, unknown>).ai_api_key as string | null ?? null,
   }
 }
 
@@ -114,6 +118,10 @@ export function toServerSettingsWire(settings: ServerSettings): ServerSettingsEd
     smtp_from: settings.smtpFrom,
     smtp_secure: settings.smtpSecure,
     smtp_secure_type: settings.smtpSecureType,
+    ai_enabled: settings.aiEnabled,
+    ai_base_url: settings.aiBaseUrl,
+    ai_model: settings.aiModel,
+    ai_api_key: settings.aiApiKey,
   } as unknown as ServerSettingsEditDto
 }
 
@@ -205,6 +213,29 @@ export async function sendTestEmail(toEmail: string): Promise<void> {
   await apiFetch('/server_settings/test-email', {
     method: 'POST',
     body: JSON.stringify({ to_email: toEmail }),
+  })
+}
+
+/** Wire payload for the AI provider test; omitted fields fall back to stored values. */
+export interface AiTestPayload {
+  ai_base_url?: string | null
+  ai_api_key?: string | null
+  ai_model?: string | null
+}
+
+/**
+ * Probes the configured OpenAI-compatible provider with a tiny chat call
+ * (admin scope `server_settings:write`). Omitted fields fall back to the
+ * values already stored on the server.
+ *
+ * @param payload - Optional overrides for base URL / model / key.
+ * @throws {HttpError} When the provider is incomplete or unreachable.
+ */
+export async function testAiProvider(payload: AiTestPayload): Promise<void> {
+  await apiFetch('/server_settings/ai/test', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    responseType: 'void',
   })
 }
 

@@ -10,6 +10,7 @@ import { Select } from '@/components/ui/select'
 import { Label } from '@/components/ui/label'
 import { useToasts } from '@/composables/useToasts'
 import NutritionScannerDialog from '@/features/nutrition/components/NutritionScannerDialog.vue'
+import NutritionAssistantChat from '@/features/nutrition/components/NutritionAssistantChat.vue'
 import { fetchLogs, createLog, deleteLog, searchOff, getOffProduct, fetchSummary, type MealLog, type OffProduct } from '@/features/nutrition/services/nutrition'
 
 const { t } = useI18n()
@@ -162,6 +163,8 @@ onMounted(load)
     <Card class="p-3 text-hint">
       {{ t('health.nutrition.wgerHint') }}
     </Card>
+
+    <NutritionAssistantChat />
 
     <NutritionScannerDialog v-model:open="scannerOpen" @detected="onScanned" />
   </div>

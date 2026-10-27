@@ -21,6 +21,7 @@ import { Switch } from '@/components/ui/switch'
 import { useForm } from '@/composables/useForm'
 import { useToasts } from '@/composables/useToasts'
 import {
+  useTestAiMutation,
   useTestEmailMutation,
   useUpdateServerSettingsMutation,
 } from '@/features/serverSettings/composables/useServerSettings'
@@ -37,6 +38,7 @@ const toasts = useToasts()
 const updateMutation = useUpdateServerSettingsMutation()
 const testEmailMutation = useTestEmailMutation()
 const testEmailTo = ref('')
+const testAiMutation = useTestAiMutation()
 
 /** Records-per-page options offered in the list (mirrors v1). */
 const NUM_RECORDS_OPTIONS = [5, 10, 25, 50, 100] as const
@@ -89,6 +91,10 @@ function toFormValues(settings: ServerSettings): ServerSettingsFormValues {
     smtpFrom: settings.smtpFrom,
     smtpSecure: settings.smtpSecure,
     smtpSecureType: settings.smtpSecureType,
+    aiEnabled: settings.aiEnabled,
+    aiBaseUrl: settings.aiBaseUrl,
+    aiModel: settings.aiModel,
+    aiApiKey: settings.aiApiKey,
   }
 }
 
@@ -104,6 +110,25 @@ async function sendTestEmail(): Promise<void> {
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err)
     toasts.error(`${t('settings.server.email.testError')}: ${msg}`)
+  }
+}
+
+/**
+ * Probes the AI provider with the values currently in the form. The key field
+ * is sent only when non-empty so a saved key can be re-tested without
+ * re-entering it; empty string would clear the stored key.
+ */
+async function testAi(): Promise<void> {
+  try {
+    await testAiMutation.mutateAsync({
+      ai_base_url: values.aiBaseUrl ?? undefined,
+      ai_model: values.aiModel ?? undefined,
+      ai_api_key: values.aiApiKey || undefined,
+    })
+    toasts.success(t('settings.server.ai.testSuccess'))
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err)
+    toasts.error(`${t('settings.server.ai.testError')}: ${msg}`)
   }
 }
 
@@ -484,6 +509,45 @@ watch(selectedTemplate, (templateId) => {
           <Button type="button" variant="secondary" :disabled="testEmailMutation.isPending.value || !testEmailTo.trim()" @click="sendTestEmail">
             <LoaderCircle v-if="testEmailMutation.isPending.value" class="size-4 animate-spin" />
             {{ t('settings.server.email.testSend') }}
+          </Button>
+        </div>
+      </div>
+    </Card>
+
+    <!-- AI assistant (OpenAI-compatible provider) -->
+    <Card class="flex flex-col gap-3">
+      <h2 class="text-card-heading">{{ t('settings.server.ai.title') }}</h2>
+      <p class="text-body">{{ t('settings.server.ai.subtitle') }}</p>
+      <Alert kind="info">{{ t('settings.server.ai.info') }}</Alert>
+
+      <Switch :model-value="!!values.aiEnabled" :disabled="isSubmitting" @update:model-value="values.aiEnabled = Boolean($event)">
+        {{ t('settings.server.ai.enabled') }}
+      </Switch>
+
+      <FormField :label="t('settings.server.ai.baseUrl')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" :model-value="values.aiBaseUrl ?? ''" type="text" placeholder="https://api.openai.com/v1" maxlength="500" :disabled="isSubmitting" @update:model-value="values.aiBaseUrl = String($event).trim() || null" />
+        </template>
+      </FormField>
+
+      <FormField :label="t('settings.server.ai.model')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" :model-value="values.aiModel ?? ''" type="text" placeholder="gpt-4o-mini" maxlength="100" :disabled="isSubmitting" @update:model-value="values.aiModel = String($event).trim() || null" />
+        </template>
+      </FormField>
+
+      <FormField :label="t('settings.server.ai.apiKey')">
+        <template #default="{ fieldId }">
+          <Input :id="fieldId" :model-value="values.aiApiKey ?? ''" type="password" autocomplete="off" maxlength="512" :disabled="isSubmitting" @update:model-value="values.aiApiKey = String($event) || null" />
+        </template>
+      </FormField>
+
+      <div class="flex flex-col gap-2 rounded-input border p-3">
+        <Label>{{ t('settings.server.ai.testTitle') }}</Label>
+        <div class="flex gap-2">
+          <Button type="button" variant="secondary" :disabled="testAiMutation.isPending.value" @click="testAi">
+            <LoaderCircle v-if="testAiMutation.isPending.value" class="size-4 animate-spin" />
+            {{ t('settings.server.ai.testSend') }}
           </Button>
         </div>
       </div>
