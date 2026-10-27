@@ -102,10 +102,10 @@ const router = createRouter({
       meta: { requiresAuth: false, cardless: true },
     },
     {
+      // Legacy standalone path kept as a redirect so old bookmarks land in the
+      // health shell where nutrition now lives.
       path: '/nutrition',
-      name: 'nutrition',
-      component: () => import('@/features/nutrition/views/NutritionView.vue'),
-      meta: { requiresAuth: true, cardless: true },
+      redirect: { name: 'health-nutrition' },
     },
     {
       path: '/health',
@@ -148,6 +148,11 @@ const router = createRouter({
           path: 'weight',
           name: 'health-weight',
           component: () => import('@/features/health/views/HealthWeightView.vue'),
+        },
+        {
+          path: 'nutrition',
+          name: 'health-nutrition',
+          component: () => import('@/features/nutrition/views/NutritionView.vue'),
         },
         {
           path: 'fasting',

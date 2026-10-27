@@ -14,6 +14,7 @@ import {
   Scale,
   Toilet,
   Utensils,
+  UtensilsCrossed,
 } from '@lucide/vue'
 import type { LucideIcon } from '@lucide/vue'
 
@@ -41,6 +42,12 @@ export const HEALTH_ZONES: readonly HealthZone[] = [
   { name: 'health-rhr', labelKey: 'health.nav.rhr', icon: HeartPulse, implemented: true },
   { name: 'health-steps', labelKey: 'health.nav.steps', icon: Footprints, implemented: true },
   { name: 'health-weight', labelKey: 'health.nav.weight', icon: Scale, implemented: true },
+  {
+    name: 'health-nutrition',
+    labelKey: 'health.nav.nutrition',
+    icon: UtensilsCrossed,
+    implemented: true,
+  },
   { name: 'health-fasting', labelKey: 'health.nav.fasting', icon: Utensils, implemented: true },
   { name: 'health-water', labelKey: 'health.nav.water', icon: Droplet, implemented: true },
   { name: 'health-poop', labelKey: 'health.nav.poop', icon: Toilet, implemented: true },

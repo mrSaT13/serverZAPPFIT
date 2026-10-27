@@ -11,7 +11,8 @@
     "weight": "Вес",
     "fasting": "Голодание",
     "water": "Вода",
-    "poop": "Стул"
+    "poop": "Стул",
+    "nutrition": "Питание"
   },
   "dashboard": {
     "title": "Обзор",
@@ -659,5 +660,45 @@
       "success": "Сеанс голодания удалён.",
       "error": "Не удалось удалить сеанс голодания. Попробуйте ещё раз."
     }
+  },
+  "nutrition": {
+    "title": "Питание",
+    "subtitle": "дневник + Open Food Facts + wger (опц.)",
+    "date": "Дата",
+    "eaten": "Съедено",
+    "burned": "Сожжено",
+    "balance": "Баланс",
+    "kcal": "ккал",
+    "macrosProtein": "Б",
+    "macrosCarbs": "У",
+    "macrosFat": "Ж",
+    "addEntry": "Добавить приём",
+    "meal": "Приём",
+    "meals": {
+      "breakfast": "Завтрак",
+      "lunch": "Обед",
+      "dinner": "Ужин",
+      "snack": "Перекус"
+    },
+    "portionG": "Порция (г)",
+    "product": "Продукт",
+    "add": "Добавить",
+    "scanner": "Сканер",
+    "manual": "Вручную",
+    "barcodeScanner": "Сканер штрих-кода",
+    "close": "Закрыть",
+    "offSearchPlaceholder": "Поиск Open Food Facts (напр. гречка, молоко)",
+    "offFind": "Найти",
+    "unnamed": "Без названия",
+    "kcalPer100g": "ккал/100 г",
+    "offHint": "Введи запрос и нажми «Найти» — подтянем из Open Food Facts без ключа.",
+    "logFor": "Приёмы за {date}",
+    "empty": "Пока пусто — добавь первый приём.",
+    "gram": "г",
+    "notFound": "Продукт не найден",
+    "filledFromOff": "Заполнено из Open Food Facts",
+    "needProduct": "Укажи продукт",
+    "manualBarcodePrompt": "Введи штрих-код вручную:",
+    "wgerHint": "wger: настрой URL + API-ключ в карточке интеграции (ключ шифруется Fernet на сервере). Базовый дневник работает без wger."
   }
 }

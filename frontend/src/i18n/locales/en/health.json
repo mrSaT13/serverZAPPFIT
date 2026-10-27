@@ -11,7 +11,8 @@
     "weight": "Weight",
     "fasting": "Fasting",
     "water": "Water intake",
-    "poop": "Bowel movements"
+    "poop": "Bowel movements",
+    "nutrition": "Nutrition"
   },
   "dashboard": {
     "title": "Dashboard",
@@ -659,5 +660,45 @@
       "success": "Fasting session deleted.",
       "error": "Couldn't delete the fasting session. Please try again."
     }
+  },
+  "nutrition": {
+    "title": "Nutrition",
+    "subtitle": "Diary + Open Food Facts + wger (optional)",
+    "date": "Date",
+    "eaten": "Eaten",
+    "burned": "Burned",
+    "balance": "Balance",
+    "kcal": "kcal",
+    "macrosProtein": "P",
+    "macrosCarbs": "C",
+    "macrosFat": "F",
+    "addEntry": "Add entry",
+    "meal": "Meal",
+    "meals": {
+      "breakfast": "Breakfast",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "snack": "Snack"
+    },
+    "portionG": "Portion (g)",
+    "product": "Product",
+    "add": "Add",
+    "scanner": "Scan",
+    "manual": "Manual entry",
+    "barcodeScanner": "Barcode scanner",
+    "close": "Close",
+    "offSearchPlaceholder": "Search Open Food Facts (e.g. oatmeal, milk)",
+    "offFind": "Find",
+    "unnamed": "Unnamed",
+    "kcalPer100g": "kcal/100 g",
+    "offHint": "Type a query and press Find — data comes from Open Food Facts, no key needed.",
+    "logFor": "Entries for {date}",
+    "empty": "Nothing here yet — add your first entry.",
+    "gram": "g",
+    "notFound": "Product not found",
+    "filledFromOff": "Filled from Open Food Facts",
+    "needProduct": "Enter a product name",
+    "manualBarcodePrompt": "Enter barcode manually:",
+    "wgerHint": "wger: set URL + API key in the Integrations card (key is Fernet-encrypted on the server). The basic diary works without wger."
   }
 }
