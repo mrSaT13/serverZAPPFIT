@@ -2963,7 +2963,7 @@ wheels = [
 
 [[package]]
 name = "zapfit"
-version = "0.22.0"
+version = "0.24.0"
 source = { editable = "." }
 dependencies = [
     { name = "aiofiles" },
