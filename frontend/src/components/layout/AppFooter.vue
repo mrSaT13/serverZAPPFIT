@@ -10,6 +10,9 @@ const { t } = useI18n()
 const { config } = useAppConfig()
 const { isEnabled } = useFeatureFlags()
 
+// Injected at build time from package.json (vite define) — never goes stale.
+const appVersion = __APP_VERSION__
+
 const startYear = 2023
 const yearRange = computed(() => {
   const current = new Date().getFullYear()
@@ -35,7 +38,7 @@ const yearRange = computed(() => {
           <GitBranch class="size-4" />
         </a>
         <span aria-hidden="true">•</span>
-        <span>v0.22.0</span>
+        <span>v{{ appVersion }}</span>
       </p>
 
       <p
