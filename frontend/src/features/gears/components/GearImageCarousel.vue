@@ -5,7 +5,6 @@ import { useI18n } from 'vue-i18n'
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
 import { useToasts } from '@/composables/useToasts'
 import { apiFetch } from '@/services/http'
 

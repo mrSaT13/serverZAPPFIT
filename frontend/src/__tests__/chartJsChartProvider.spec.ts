@@ -22,8 +22,11 @@ describe('buildChartConfiguration', () => {
     expect(dataset?.label).toBe('Pace')
     expect(dataset?.data).toEqual([1, 2])
     expect(dataset?.fill).toBe(true)
-    // Flat translucent fill (not a gradient), per the design system.
-    expect(dataset?.backgroundColor).toBe('rgba(29, 158, 117, 0.15)')
+    // Flat translucent fill (not a gradient), per the design system. Derived
+    // from the brand palette's first colour so palette changes stay in sync.
+    expect(dataset?.backgroundColor).toBe('rgba(37, 99, 235, 0.15)')
+    // 37, 99, 235 === DEFAULT_CHART_PALETTE[0] (#2563eb)
+    expect(DEFAULT_CHART_PALETTE[0]).toBe('#2563eb')
     expect(dataset?.tension).toBe(0.3)
   })
 

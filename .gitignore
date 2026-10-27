@@ -2,6 +2,8 @@
 .vscode/
 .env
 .venv/
+# Local deploy config carries real secrets and is never committed.
+docker-compose.yml
 docker_forgejo_runner/data
 .DS_Store
 
