@@ -154,6 +154,17 @@ class TestEditServerSettings:
         mock_updated_settings.default_language = "en"
         mock_updated_settings.brand_name = "ZAPFIT"
         mock_updated_settings.setup_completed = True
+        mock_updated_settings.smtp_host = None
+        mock_updated_settings.smtp_port = None
+        mock_updated_settings.smtp_username = None
+        mock_updated_settings.smtp_password = None
+        mock_updated_settings.smtp_from = None
+        mock_updated_settings.smtp_secure = None
+        mock_updated_settings.smtp_secure_type = None
+        mock_updated_settings.ai_enabled = False
+        mock_updated_settings.ai_base_url = None
+        mock_updated_settings.ai_model = None
+        mock_updated_settings.ai_api_key = None
 
         mock_edit_settings.return_value = mock_updated_settings
 
@@ -263,6 +274,17 @@ class TestCompleteSetup:
         mock_updated_settings.default_language = "ru"
         mock_updated_settings.brand_name = "ZAPFIT"
         mock_updated_settings.setup_completed = True
+        mock_updated_settings.smtp_host = None
+        mock_updated_settings.smtp_port = None
+        mock_updated_settings.smtp_username = None
+        mock_updated_settings.smtp_password = None
+        mock_updated_settings.smtp_from = None
+        mock_updated_settings.smtp_secure = None
+        mock_updated_settings.smtp_secure_type = None
+        mock_updated_settings.ai_enabled = False
+        mock_updated_settings.ai_base_url = None
+        mock_updated_settings.ai_model = None
+        mock_updated_settings.ai_api_key = None
 
         mock_apply.return_value = mock_updated_settings
 

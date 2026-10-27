@@ -11,6 +11,15 @@ from sqlalchemy.orm import Session
 
 import users.users_profile.import_service as profile_import_service
 import users.users_profile.utils as profile_utils
+# Import every models.py under app/ exactly like alembic/env.py does, so all
+# ``Users`` relationships (SignUpToken, PasswordResetToken, ...) resolve and
+# SQLAlchemy mapper configuration succeeds when this file runs in isolation.
+import pathlib as _pathlib
+from importlib import import_module as _import_module
+
+_app_dir = _pathlib.Path(profile_import_service.__file__).resolve().parents[2]
+for _path in sorted(_app_dir.glob("**/models.py")):
+    _import_module(".".join(_path.relative_to(_app_dir).with_suffix("").parts))
 from users.users_profile.exceptions import (
     ActivityLimitError,
     FileFormatError,
@@ -247,10 +256,7 @@ class TestImportServiceGears:
         mock_new_gear.id = 10
 
         with (
-            patch(
-                "users.users_profile.import_service.gear_crud.get_gear_user_by_nickname",
-                return_value=None,
-            ),
+            patch("users.users_profile.import_service.gear_crud.get_gear_user_by_nickname", return_value=None),
             patch(
                 "users.users_profile.import_service.gear_crud.create_gear",
                 return_value=mock_new_gear,
@@ -1667,10 +1673,7 @@ class TestImportServiceHealthEmptyBranches:
                 "users.users_profile.import_service.health_targets_crud.get_health_targets_by_user_id",
                 return_value=None,
             ),
-            patch(
-                "users.users_profile.import_service.health_targets_crud.create_health_targets",
-                return_value=MagicMock(id=1),
-            ),
+            patch("users.users_profile.import_service.health_targets_crud.create_health_targets"),
             patch("users.users_profile.import_service.health_targets_crud.edit_health_target"),
             patch(
                 "users.users_profile.import_service.health_targets_schema.HealthTargetsUpdate", return_value=MagicMock()

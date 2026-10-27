@@ -20,7 +20,7 @@ const saving = ref(false)
 async function load(){
   loading.value=true
   try{
-    const data:any = await apiFetch('/nutrition/wger/settings')
+    const data = await apiFetch<{ wger_base_url: string | null; wger_enabled: boolean }>('/nutrition/wger/settings')
     baseUrl.value = data.wger_base_url ?? ''
     apiKey.value = ''
     enabled.value = !!data.wger_enabled
@@ -37,7 +37,7 @@ async function test(){
   try{
     await apiFetch('/nutrition/wger/test', { method:'POST', body: JSON.stringify({ wger_base_url: baseUrl.value, wger_api_key: apiKey.value || null }) })
     toasts.success(t('settings.integrations.wger.testOk'))
-  }catch(e:any){ toasts.error(e.message || t('settings.integrations.wger.testFailed')) }
+  }catch(e: unknown){ toasts.error(e instanceof Error ? e.message : t('settings.integrations.wger.testFailed')) }
 }
 onMounted(load)
 </script>
