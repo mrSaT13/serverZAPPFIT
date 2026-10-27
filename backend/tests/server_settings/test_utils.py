@@ -141,7 +141,7 @@ class TestGetTileMapsTemplates:
 
         # Assert - based on TILE_MAPS_TEMPLATES in utils.py
         assert (
-            len(result) == 5
+            len(result) == 6
         )  # openstreetmap, alidade_smooth, alidade_smooth_dark, alidade_satellite, stadia_outdoors
 
 
@@ -290,7 +290,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
         assert "https://*.tiles.com" in result
-        assert len(result) == 3
+        assert len(result) == 4
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_with_builtin_domain(self, mock_get_settings, mock_db):
@@ -308,7 +308,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.stadiamaps.com" in result
         # Should not duplicate stadiamaps.com
         assert result.count("https://*.stadiamaps.com") == 1
-        assert len(result) == 2
+        assert len(result) == 3
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_with_localhost(self, mock_get_settings, mock_db):
@@ -325,7 +325,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
         assert "http://localhost:8080" in result
-        assert len(result) == 3
+        assert len(result) == 4
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_no_custom_domain(self, mock_get_settings, mock_db):
@@ -341,7 +341,8 @@ class TestGetAllowedTileDomains:
         # Assert
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
-        assert len(result) == 2
+        assert "https://*.arcgisonline.com" in result
+        assert len(result) == 3
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_invalid_url(self, mock_get_settings, mock_db):
@@ -357,7 +358,8 @@ class TestGetAllowedTileDomains:
         # Assert
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
-        assert len(result) == 2
+        assert "https://*.arcgisonline.com" in result
+        assert len(result) == 3
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_db_error(self, mock_get_settings, mock_db):
@@ -371,7 +373,8 @@ class TestGetAllowedTileDomains:
         # Assert - should return builtins as fallback
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
-        assert len(result) == 2
+        assert "https://*.arcgisonline.com" in result
+        assert len(result) == 3
 
 
 class TestGetSetupOptions:

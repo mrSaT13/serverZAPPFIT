@@ -246,9 +246,15 @@ class TestImportServiceGears:
         mock_new_gear = MagicMock()
         mock_new_gear.id = 10
 
-        with patch(
-            "users.users_profile.import_service.gear_crud.create_gear",
-            return_value=mock_new_gear,
+        with (
+            patch(
+                "users.users_profile.import_service.gear_crud.get_gear_user_by_nickname",
+                return_value=None,
+            ),
+            patch(
+                "users.users_profile.import_service.gear_crud.create_gear",
+                return_value=mock_new_gear,
+            ),
         ):
             mapping = await service.collect_and_import_gears_data([{"id": 5, "nickname": "Garmin", "gear_type": 1}])
 
@@ -447,8 +453,14 @@ class TestImportServiceUserData:
             websocket_manager=mock_ws,
         )
 
-        with patch(
-            "users.users_profile.import_service.user_integrations_crud.edit_user_integrations",
+        with (
+            patch(
+                "users.users_profile.import_service.user_integrations_crud.get_user_integrations_by_user_id",
+                return_value=MagicMock(),
+            ),
+            patch(
+                "users.users_profile.import_service.user_integrations_crud.edit_user_integrations",
+            ),
         ):
             await service.collect_and_import_user_integrations([{"strava_sync_gear": True}])
 
@@ -479,8 +491,17 @@ class TestImportServiceUserData:
             websocket_manager=mock_ws,
         )
 
-        with patch(
-            "users.users_profile.import_service.users_privacy_settings_crud.edit_user_privacy_settings",
+        with (
+            patch(
+                "users.users_profile.import_service.users_privacy_settings_crud.get_user_privacy_settings_by_user_id",
+                return_value=MagicMock(),
+            ),
+            patch(
+                "users.users_profile.import_service.users_privacy_settings_crud.create_user_privacy_settings",
+            ),
+            patch(
+                "users.users_profile.import_service.users_privacy_settings_crud.edit_user_privacy_settings",
+            ),
         ):
             await service.collect_and_import_user_privacy_settings([{"hide_activity_map": True}])
 
@@ -1645,6 +1666,10 @@ class TestImportServiceHealthEmptyBranches:
             patch(
                 "users.users_profile.import_service.health_targets_crud.get_health_targets_by_user_id",
                 return_value=None,
+            ),
+            patch(
+                "users.users_profile.import_service.health_targets_crud.create_health_targets",
+                return_value=MagicMock(id=1),
             ),
             patch("users.users_profile.import_service.health_targets_crud.edit_health_target"),
             patch(
