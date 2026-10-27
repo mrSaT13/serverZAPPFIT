@@ -133,7 +133,8 @@
       "currencies": {
         "euro": "Евро",
         "dollar": "Доллар",
-        "pound": "Фунт"
+        "pound": "Фунт",
+        "ruble": "Рубль"
       },
       "firstDayOfWeek": "Первый день недели",
       "weekdays": {
@@ -781,6 +782,14 @@
       "unlinkBody": "ZAPFIT перестанет импортировать из Garmin Connect. Существующие данные сохранятся.",
       "unlinkSuccess": "Garmin Connect отключён",
       "unlinkError": "Не удалось отключить Garmin Connect. Попробуйте ещё раз."
+    },
+    "wger": {
+      "subtitle": "Синхронизация питания (опц., по умолчанию Open Food Facts)",
+      "loading": "Загрузка…",
+      "saved": "Настройки wger сохранены",
+      "saveFailed": "Не удалось сохранить",
+      "testOk": "Соединение с wger в порядке",
+      "testFailed": "Не удалось соединиться"
     }
   },
   "import": {

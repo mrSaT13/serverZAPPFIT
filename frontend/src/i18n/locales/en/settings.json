@@ -109,7 +109,8 @@
         "sk": "Slovak",
         "lt": "Lithuanian",
         "lv": "Latvian",
-        "et": "Estonian"
+        "et": "Estonian",
+        "ru": "Russian"
       },
       "gender": "Gender",
       "genders": {
@@ -292,7 +293,8 @@
       "currencyEuro": "Euro (€)",
       "currencyDollar": "Dollar ($)",
       "currencyPound": "Pound (£)",
-      "numRecords": "Records per page"
+      "numRecords": "Records per page",
+      "currencyRuble": "Ruble (₽)"
     },
     "password": {
       "title": "Password policy",
@@ -780,6 +782,14 @@
       "unlinkBody": "ZAPFIT will stop importing from Garmin Connect. Your existing data is kept.",
       "unlinkSuccess": "Garmin Connect disconnected",
       "unlinkError": "Couldn't disconnect Garmin Connect. Please try again."
+    },
+    "wger": {
+      "subtitle": "Nutrition sync (optional, Open Food Facts is default)",
+      "loading": "Loading…",
+      "saved": "Wger settings saved",
+      "saveFailed": "Save failed",
+      "testOk": "wger connection OK",
+      "testFailed": "Connection test failed"
     }
   },
   "import": {
