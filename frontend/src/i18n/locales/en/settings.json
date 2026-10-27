@@ -375,6 +375,19 @@
       "testNeedEmail": "Enter recipient email",
       "testSuccess": "Test email sent",
       "testError": "Failed to send test email"
+    },
+    "ai": {
+      "title": "AI assistant",
+      "subtitle": "Nutrition AI assistant for all users (chat on the Nutrition page)",
+      "info": "Any OpenAI-compatible provider works (OpenAI, OpenRouter, Ollama, vLLM). The base URL should include the version segment (e.g. https://api.openai.com/v1). Leave the key blank to keep the current one; the key is stored encrypted.",
+      "enabled": "Enable the AI assistant",
+      "baseUrl": "API base URL",
+      "model": "Model",
+      "apiKey": "API key",
+      "testTitle": "Test the provider with a tiny chat request",
+      "testSend": "Test connection",
+      "testSuccess": "AI provider connection OK",
+      "testError": "AI provider test failed"
     }
   },
   "idp": {

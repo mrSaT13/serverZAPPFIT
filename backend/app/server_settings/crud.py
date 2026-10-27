@@ -127,6 +127,12 @@ def edit_server_settings(
         elif server_settings.smtp_password:
             server_settings.smtp_password = core_cryptography.encrypt_token_fernet(server_settings.smtp_password)
 
+    if server_settings.ai_api_key is not None:
+        if server_settings.ai_api_key == "":
+            server_settings.ai_api_key = None
+        elif server_settings.ai_api_key:
+            server_settings.ai_api_key = core_cryptography.encrypt_token_fernet(server_settings.ai_api_key)
+
     # Dictionary of the fields to update if they are not None
     server_settings_data = server_settings.model_dump(exclude_unset=True)
     # Iterate over the fields and update the db_user dynamically
@@ -198,6 +204,12 @@ def apply_setup_complete(
         payload_dict["smtp_password"] = core_cryptography.encrypt_token_fernet(raw_smtp)
     elif raw_smtp == "":
         payload_dict["smtp_password"] = None
+
+    raw_ai_key = payload_dict.get("ai_api_key")
+    if raw_ai_key:
+        payload_dict["ai_api_key"] = core_cryptography.encrypt_token_fernet(raw_ai_key)
+    elif raw_ai_key == "":
+        payload_dict["ai_api_key"] = None
 
     for key, value in payload_dict.items():
         setattr(db_server_settings, key, value)

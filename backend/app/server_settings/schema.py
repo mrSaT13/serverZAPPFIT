@@ -286,6 +286,25 @@ class ServerSettings(ServerSettingsBase):
     smtp_from: StrictStr | None = Field(default=None, max_length=320, description="SMTP From address (overrides SMTP_FROM env)")
     smtp_secure: StrictBool | None = Field(default=None, description="Use secure SMTP (overrides SMTP_SECURE env)")
     smtp_secure_type: StrictStr | None = Field(default=None, max_length=10, description="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)")
+    ai_enabled: StrictBool = Field(
+        False,
+        description="Enable the AI nutrition assistant for all users",
+    )
+    ai_base_url: StrictStr | None = Field(
+        default=None,
+        max_length=500,
+        description="Base URL of an OpenAI-compatible API (e.g. https://api.openai.com/v1)",
+    )
+    ai_model: StrictStr | None = Field(
+        default=None,
+        max_length=100,
+        description="Chat model name (e.g. gpt-4o-mini)",
+    )
+    ai_api_key: StrictStr | None = Field(
+        default=None,
+        max_length=512,
+        description="AI provider API key, stored encrypted",
+    )
 
     @field_validator("smtp_secure_type", mode="before")
     @classmethod
@@ -450,6 +469,21 @@ class TestEmailRequest(BaseModel):
     """Payload for SMTP test email."""
 
     to_email: StrictStr = Field(..., min_length=5, max_length=320, description="Recipient email for test")
+
+    model_config = ConfigDict(from_attributes=True, extra="forbid")
+
+
+class AiTestRequest(BaseModel):
+    """Payload for the AI provider connectivity test.
+
+    Every field is optional: omitted fields fall back to the values already
+    stored (encrypted) in server settings, so the admin form can re-test
+    after saving without re-entering the key.
+    """
+
+    ai_base_url: StrictStr | None = Field(default=None, max_length=500)
+    ai_api_key: StrictStr | None = Field(default=None, max_length=512)
+    ai_model: StrictStr | None = Field(default=None, max_length=100)
 
     model_config = ConfigDict(from_attributes=True, extra="forbid")
 

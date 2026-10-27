@@ -13,8 +13,10 @@ import {
   fetchSetupStatus,
   fetchTileMapsTemplates,
   sendTestEmail,
+  testAiProvider,
   updateServerSettings,
   uploadLoginPhoto,
+  type AiTestPayload,
 } from '@/features/serverSettings/services/serverSettings'
 
 /**
@@ -168,5 +170,16 @@ export function useCompleteSetupMutation() {
 export function useTestEmailMutation() {
   return useMutation<void, Error, string>({
     mutationFn: (toEmail) => sendTestEmail(toEmail),
+  })
+}
+
+/**
+ * AI provider connectivity test mutation.
+ *
+ * @returns Mutation that probes the configured OpenAI-compatible provider.
+ */
+export function useTestAiMutation() {
+  return useMutation<void, Error, AiTestPayload>({
+    mutationFn: (payload) => testAiProvider(payload),
   })
 }

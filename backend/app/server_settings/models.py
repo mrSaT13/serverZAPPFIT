@@ -217,5 +217,30 @@ class ServerSettings(Base):
         nullable=True,
         comment="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)",
     )
+    # AI nutrition assistant — any OpenAI-compatible chat completions backend.
+    # Key is stored Fernet-encrypted, mirroring smtp_password / tileserver_api_key.
+    ai_enabled: Mapped[bool] = mapped_column(
+        default=False,
+        nullable=False,
+        comment="Enable the AI nutrition assistant for all users",
+    )
+    ai_base_url: Mapped[str | None] = mapped_column(
+        String(500),
+        default=None,
+        nullable=True,
+        comment="Base URL of an OpenAI-compatible API (e.g. https://api.openai.com/v1)",
+    )
+    ai_model: Mapped[str | None] = mapped_column(
+        String(100),
+        default=None,
+        nullable=True,
+        comment="Chat model name (e.g. gpt-4o-mini)",
+    )
+    ai_api_key: Mapped[str | None] = mapped_column(
+        String(512),
+        default=None,
+        nullable=True,
+        comment="API key encrypted with Fernet",
+    )
 
     __table_args__ = (CheckConstraint("id = 1", name="single_row_check"),)

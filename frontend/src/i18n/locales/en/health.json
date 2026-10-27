@@ -699,6 +699,15 @@
     "filledFromOff": "Filled from Open Food Facts",
     "needProduct": "Enter a product name",
     "manualBarcodePrompt": "Enter barcode manually:",
-    "wgerHint": "wger: set URL + API key in the Integrations card (key is Fernet-encrypted on the server). The basic diary works without wger."
+    "wgerHint": "wger: set URL + API key in the Integrations card (key is Fernet-encrypted on the server). The basic diary works without wger.",
+    "assistant": {
+      "title": "AI assistant",
+      "greeting": "Hi! Ask me anything about your nutrition — I can see your logged meals, workouts, weight, sleep and hydration.",
+      "placeholder": "Ask about your calories, macros, workouts…",
+      "send": "Send",
+      "thinking": "Thinking…",
+      "error": "The assistant is unavailable right now",
+      "disabled": "AI assistant: an administrator can enable it in Server settings → AI assistant."
+    }
   }
 }

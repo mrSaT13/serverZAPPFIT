@@ -50,3 +50,35 @@ export async function getOffProduct(barcode: string): Promise<OffProduct> {
 export async function fetchSummary(date: string) {
   return apiFetch<{ date: string; intake_calories: number; intake_protein: number; intake_carbs: number; intake_fat: number; burned_calories: number | null; net_calories: number | null }>(`/nutrition/summary?date=${date}`)
 }
+
+export interface AiChatMessage {
+  role: 'user' | 'assistant'
+  content: string
+}
+
+export interface AiStatus {
+  enabled: boolean
+  configured: boolean
+  model: string | null
+}
+
+export interface AiChatReply {
+  reply: string
+  model: string | null
+}
+
+/** Whether the AI nutrition assistant is available for this server. */
+export async function fetchAiStatus(): Promise<AiStatus> {
+  return apiFetch<AiStatus>(`/nutrition/ai/status`)
+}
+
+/**
+ * Sends the recent chat window plus a language hint; the server rebuilds the
+ * read-only data snapshot on every call (stateless multi-turn chat).
+ */
+export async function aiChat(messages: AiChatMessage[], language: string): Promise<AiChatReply> {
+  return apiFetch<AiChatReply>(`/nutrition/ai/chat`, {
+    method: 'POST',
+    body: JSON.stringify({ messages, language }),
+  })
+}

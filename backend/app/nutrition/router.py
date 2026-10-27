@@ -14,6 +14,7 @@ import core.logger as core_logger
 import nutrition.crud as nutrition_crud
 import nutrition.models as nutrition_models
 import nutrition.off_client as off_client
+import nutrition.ai as nutrition_ai
 import nutrition.schema as nutrition_schema
 from sqlalchemy import select
 
@@ -239,3 +240,53 @@ async def test_wger(
         raise
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=f"wger test failed: {e}") from e
+
+
+# --- AI assistant ---
+@router.get("/ai/status", response_model=nutrition_schema.AiStatusRead)
+async def ai_status(
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> nutrition_schema.AiStatusRead:
+    """Tell the UI whether the AI nutrition assistant is available."""
+    settings = nutrition_ai.get_ai_settings(db)
+    return nutrition_schema.AiStatusRead(
+        enabled=settings.enabled,
+        configured=settings.configured,
+        model=settings.model,
+    )
+
+
+@router.post("/ai/chat", response_model=nutrition_schema.AiChatReply)
+async def ai_chat(
+    payload: nutrition_schema.AiChatRequest,
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> nutrition_schema.AiChatReply:
+    """Answer a nutrition question grounded in the user's own data.
+
+    Stateless: the client sends the recent chat window; the server rebuilds
+    the read-only data snapshot on every call and never stores the
+    conversation.
+    """
+    settings = nutrition_ai.get_ai_settings(db)
+    if not settings.configured:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="AI assistant is not configured. Ask your server administrator to enable it in server settings.",
+        )
+
+    context = nutrition_ai.build_context(db, token_user_id)
+    messages: list[dict[str, str]] = [
+        {"role": "system", "content": nutrition_ai.system_prompt(payload.language)},
+        {"role": "system", "content": f"User data snapshot:\n{context}"},
+    ]
+    messages += [{"role": m.role, "content": m.content} for m in payload.messages]
+
+    try:
+        reply = await nutrition_ai.chat_completion(settings.base_url, settings.api_key, settings.model, messages)
+    except nutrition_ai.AiAssistantError as e:
+        core_logger.print_to_log(f"AI chat error: {e}", "error", exc=e)
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
+    return nutrition_schema.AiChatReply(reply=reply, model=settings.model)

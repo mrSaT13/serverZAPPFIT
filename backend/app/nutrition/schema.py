@@ -81,3 +81,28 @@ class WgerTestRequest(BaseModel):
     # Optional: falls back to the stored (Fernet-encrypted) key when omitted,
     # so the integration card can re-test without re-entering the token.
     wger_api_key: StrictStr | None = Field(default=None, max_length=512)
+
+
+class AiChatMessage(BaseModel):
+    """One turn of the stateless client-side chat history."""
+
+    role: StrictStr = Field(..., pattern="^(user|assistant)$")
+    content: StrictStr = Field(..., min_length=1, max_length=8000)
+
+
+class AiChatRequest(BaseModel):
+    messages: list[AiChatMessage] = Field(..., max_length=16)
+    language: StrictStr | None = Field(default=None, max_length=35)
+
+
+class AiChatReply(BaseModel):
+    reply: StrictStr
+    model: StrictStr | None = None
+
+
+class AiStatusRead(BaseModel):
+    """Whether the AI nutrition assistant is available for this user."""
+
+    enabled: bool = False
+    configured: bool = False
+    model: StrictStr | None = None

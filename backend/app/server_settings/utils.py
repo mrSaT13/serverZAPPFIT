@@ -138,8 +138,20 @@ def get_server_settings_for_admin(
             decrypted_smtp = core_cryptography.decrypt_token_fernet(server_settings.smtp_password)
         except Exception:
             decrypted_smtp = None
+    decrypted_ai_key = None
+    if server_settings.ai_api_key:
+        try:
+            decrypted_ai_key = core_cryptography.decrypt_token_fernet(server_settings.ai_api_key)
+        except Exception:
+            decrypted_ai_key = None
 
-    return server_settings.model_copy(update={"tileserver_api_key": decrypted_api_key, "smtp_password": decrypted_smtp})
+    return server_settings.model_copy(
+        update={
+            "tileserver_api_key": decrypted_api_key,
+            "smtp_password": decrypted_smtp,
+            "ai_api_key": decrypted_ai_key,
+        }
+    )
 
 
 def get_tile_maps_templates() -> list[server_settings_schema.TileMapsTemplate]:
