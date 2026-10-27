@@ -48,6 +48,7 @@ import users.users_goals.router as user_goals_router
 import users.users_profile.browser_redirect_router as profile_browser_redirect_router
 import users.users_profile.router as profile_router
 import websocket.router as websocket_router
+import workouts.router as workouts_router
 from activities.activity_exercise_titles import (
     public_router as activity_exercise_titles_public_router,
 )
@@ -172,6 +173,12 @@ router.include_router(
     nutrition_router.router,
     prefix=core_config.ROOT_PATH + "/nutrition",
     tags=["nutrition"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
+)
+router.include_router(
+    workouts_router.router,
+    prefix=core_config.ROOT_PATH + "/workouts",
+    tags=["workouts"],
     dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
 )
 router.include_router(

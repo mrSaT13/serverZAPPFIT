@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { Bell, Bike, Heart, House, Menu, type LucideIcon } from '@lucide/vue'
+import { Bell, Dumbbell, Heart, House, Menu, type LucideIcon } from '@lucide/vue'
 
 import { useUnreadNotificationsCount } from '@/features/notifications/composables/useNotifications'
 import { useAuthStore } from '@/features/auth/stores/auth'
@@ -32,7 +32,7 @@ const alertsLabel = computed(() =>
  */
 const links = computed<BottomNavLink[]>(() => [
   { name: 'home', label: t('nav.home'), icon: House },
-  { name: 'gears', label: t('nav.gear'), icon: Bike },
+  { name: 'workouts', label: t('nav.workouts'), icon: Dumbbell },
   { name: 'health', label: t('nav.health'), icon: Heart },
 ])
 </script>

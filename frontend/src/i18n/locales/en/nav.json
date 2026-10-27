@@ -18,5 +18,6 @@
   "preferences": "Preferences",
   "updateAvailable": "Update available",
   "updateAvailableTitle": "Version {version} is available",
-  "updateViewRelease": "View release notes"
+  "updateViewRelease": "View release notes",
+  "workouts": "Workouts"
 }

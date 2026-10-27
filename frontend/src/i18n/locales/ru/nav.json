@@ -18,5 +18,6 @@
   "preferences": "Предпочтения",
   "updateAvailable": "Доступно обновление",
   "updateAvailableTitle": "Доступна версия {version}",
-  "updateViewRelease": "Смотреть примечания к релизу"
+  "updateViewRelease": "Смотреть примечания к релизу",
+  "workouts": "Тренировки"
 }
