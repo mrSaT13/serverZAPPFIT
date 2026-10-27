@@ -62,7 +62,6 @@ function makeSettingsDto(overrides: Partial<ServerSettingsDto> = {}): ServerSett
     ...overrides,
   } as unknown as ServerSettingsDto
 }
-}
 
 /** Builds a full `TileMapsTemplate` wire payload, overridable per case. */
 function makeTemplateDto(overrides: Partial<TileMapsTemplateDto> = {}): TileMapsTemplateDto {
