@@ -142,7 +142,7 @@ class TestGetTileMapsTemplates:
         # Assert - based on TILE_MAPS_TEMPLATES in utils.py
         assert (
             len(result) == 6
-        )  # openstreetmap, alidade_smooth, alidade_smooth_dark, alidade_satellite, stadia_outdoors
+        )  # openstreetmap, alidade_smooth, alidade_smooth_dark, alidade_satellite, stadia_outdoors, esri_satellite
 
 
 class TestExtractDomainFromTileUrl:
@@ -290,7 +290,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
         assert "https://*.tiles.com" in result
-        assert len(result) == 4
+        assert len(result) == 4  # 3 builtins (incl. Esri) + custom
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_with_builtin_domain(self, mock_get_settings, mock_db):
@@ -308,7 +308,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.stadiamaps.com" in result
         # Should not duplicate stadiamaps.com
         assert result.count("https://*.stadiamaps.com") == 1
-        assert len(result) == 3
+        assert len(result) == 3  # the 3 builtin domains (incl. Esri)
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_with_localhost(self, mock_get_settings, mock_db):
@@ -325,7 +325,7 @@ class TestGetAllowedTileDomains:
         assert "https://*.openstreetmap.org" in result
         assert "https://*.stadiamaps.com" in result
         assert "http://localhost:8080" in result
-        assert len(result) == 4
+        assert len(result) == 4  # 3 builtins (incl. Esri) + custom localhost
 
     @patch("server_settings.utils.get_server_settings_or_404")
     def test_get_allowed_tile_domains_no_custom_domain(self, mock_get_settings, mock_db):
@@ -401,3 +401,4 @@ class TestGetSetupOptions:
         # Assert
         assert all(option.label.strip() for option in result.themes)
         assert all(option.label.strip() for option in result.languages)
+
