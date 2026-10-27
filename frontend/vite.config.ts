@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import { readFileSync } from 'node:fs'
 
 import { defineConfig, type Plugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -70,8 +71,15 @@ function cspPlugin(): Plugin {
   }
 }
 
+// Single source of truth for the app version: package.json, read at build
+// time and injected as the `__APP_VERSION__` global (declared in env.d.ts).
+const APP_VERSION = (JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as { version: string }).version
+
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    __APP_VERSION__: JSON.stringify(APP_VERSION),
+  },
   plugins: [
     vue(),
     vueDevTools(),

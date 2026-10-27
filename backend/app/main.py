@@ -107,6 +107,23 @@ def _run_alembic_migrations() -> None:
     command.upgrade(alembic_cfg, "head")
 
 
+def _seed_exercise_catalog() -> None:
+    """Seed the exercise catalog from the bundled snapshot when empty.
+
+    Best-effort: the strength UI degrades to manual exercise input if the
+    snapshot is missing, so failures are logged and never abort startup.
+    """
+    import workouts.exercise_catalog as exercise_catalog
+
+    with SessionLocal() as db:
+        row_count = db.execute(text("SELECT count(*) FROM exercise_catalog")).scalar()
+        if row_count:
+            core_logger.print_to_log(f"Exercise catalog already seeded ({row_count} rows)")
+            return
+        seeded = exercise_catalog.seed_catalog(db)
+        core_logger.print_to_log_and_console(f"Seeded exercise catalog: {seeded} exercises")
+
+
 def _ensure_zapfit_columns() -> None:
     """Add ZAPFIT fitness-metrics columns if they are missing.
 
@@ -293,6 +310,9 @@ async def startup_event(fastapi_app: FastAPI) -> None:
     core_scheduler.start_scheduler()
 
     # Phase 2: best-effort background syncs and clean-up.
+    core_logger.print_to_log_and_console("Seeding exercise catalog if empty")
+    _safe_run("seed_exercise_catalog", _seed_exercise_catalog)
+
     core_logger.print_to_log_and_console("Refreshing Strava tokens on startup")
     _safe_run("refresh_strava_tokens", _refresh_strava_tokens)
 

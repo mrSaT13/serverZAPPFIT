@@ -83,6 +83,11 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY --chown=${UID}:${GID} backend/app ./
 
+# Baked exercise-catalog snapshot: workouts.exercise_catalog resolves it from
+# parents[2] of /app/backend/workouts/exercise_catalog.py -> /app/assets.
+# Needed both for the startup seed (main.py) and /workouts/exercises/meta.
+COPY --chown=${UID}:${GID} backend/assets /app/assets
+
 # --- Entrypoint ---
 COPY --chown=${UID}:${GID} docker/start.sh /docker-entrypoint.d/start.sh
 
