@@ -83,10 +83,13 @@ async def summary(
         import activities.activity.models as _act_models
         from sqlalchemy import func as _func
 
-        # activities.calories is int (kcal) per activity
+        # activities.calories is int (kcal) per activity.
+        # func.date() yields a date — compare it to a date, not a string
+        # (Postgres refuses `date = varchar`).
+        d_date = date.fromisoformat(d)
         stmt = select(_func.coalesce(_func.sum(_act_models.Activity.calories), 0)).where(
             _act_models.Activity.user_id == token_user_id,
-            _func.date(_act_models.Activity.start_time) == d,
+            _func.date(_act_models.Activity.start_time) == d_date,
         )
         burned = float(db.execute(stmt).scalar() or 0)
     except Exception:

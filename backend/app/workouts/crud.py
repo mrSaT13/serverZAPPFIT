@@ -85,10 +85,11 @@ def list_sessions(
         .options(selectinload(workouts_models.WorkoutSession.sets))
         .order_by(workouts_models.WorkoutSession.date.desc(), workouts_models.WorkoutSession.id.desc())
     )
+    # Postgres refuses `Date >= VARCHAR` — normalise filter strings to dates.
     if date_from:
-        stmt = stmt.where(workouts_models.WorkoutSession.date >= date_from)
+        stmt = stmt.where(workouts_models.WorkoutSession.date >= date_type.fromisoformat(str(date_from)))
     if date_to:
-        stmt = stmt.where(workouts_models.WorkoutSession.date <= date_to)
+        stmt = stmt.where(workouts_models.WorkoutSession.date <= date_type.fromisoformat(str(date_to)))
     return list(db.scalars(stmt).all())
 
 
