@@ -72,7 +72,8 @@
     "sk": "Slovak",
     "lt": "Lithuanian",
     "lv": "Latvian",
-    "et": "Estonian"
+    "et": "Estonian",
+    "ru": "Russian"
   },
   "genders": {
     "male": "Male",

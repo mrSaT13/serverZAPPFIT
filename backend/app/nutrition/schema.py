@@ -78,4 +78,6 @@ class WgerSettingsUpdate(BaseModel):
 
 class WgerTestRequest(BaseModel):
     wger_base_url: StrictStr = Field(..., max_length=500)
-    wger_api_key: StrictStr = Field(..., max_length=512)
+    # Optional: falls back to the stored (Fernet-encrypted) key when omitted,
+    # so the integration card can re-test without re-entering the token.
+    wger_api_key: StrictStr | None = Field(default=None, max_length=512)

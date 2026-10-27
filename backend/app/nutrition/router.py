@@ -207,11 +207,28 @@ async def put_wger_settings(
 async def test_wger(
     payload: nutrition_schema.WgerTestRequest,
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:write"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
 ) -> dict[str, str]:
     import httpx
 
+    # Explicit token wins; otherwise reuse the stored (encrypted) one so the
+    # integration card can re-test without re-entering the token.
+    api_key = payload.wger_api_key
+    if not api_key:
+        stmt = select(nutrition_models.UserNutritionSettings).where(
+            nutrition_models.UserNutritionSettings.user_id == token_user_id
+        )
+        row = db.scalars(stmt).first()
+        api_key = core_cryptography.decrypt_token_fernet(row.wger_api_key) if row and row.wger_api_key else None
+    if not api_key:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="No wger API key provided or saved",
+        )
+
     url = payload.wger_base_url.rstrip("/") + "/api/v2/nutrition/"
-    headers = {"Authorization": f"Token {payload.wger_api_key}"}
+    headers = {"Authorization": f"Token {api_key}"}
     try:
         async with httpx.AsyncClient(timeout=8.0) as client:
             r = await client.get(url, headers=headers)
