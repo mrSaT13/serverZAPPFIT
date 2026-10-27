@@ -26,6 +26,7 @@ import core.cryptography as core_cryptography
 import core.logger as core_logger
 import server_settings.models as server_settings_models
 import users.users.models as users_models
+import users.users_goals.models as users_goals_models
 from activities.activity.models import Activity
 from health.health_sleep.models import HealthSleep
 from health.health_steps.models import HealthSteps
@@ -33,6 +34,17 @@ from health.health_water.models import HealthWater
 from health.health_weight.models import HealthWeight
 from nutrition.models import MealLog
 from server_settings.models import ServerSettings
+
+# Ensure every ORM model is registered before any query runs: build_context
+# touches Activity, whose relationships (ActivityComment, ActivityMedia, ...)
+# only resolve once those classes are imported. Mirrors alembic/env.py and is
+# a no-op when the app already imported everything through the routers.
+import pathlib as _pathlib
+from importlib import import_module as _import_module
+
+_app_dir = _pathlib.Path(__file__).resolve().parents[1]
+for _path in sorted(_app_dir.glob("**/models.py")):
+    _import_module(".".join(_path.relative_to(_app_dir).with_suffix("").parts))
 
 CHAT_MAX_USER_MESSAGES = 16  # rolled-up window sent to the model
 MEAL_SNIPPET_LIMIT = 40  # max product names echoed per day
@@ -147,7 +159,7 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
 
     # --- goals ---
     goals = db.scalars(
-        select(users_models.UsersGoal).where(users_models.UsersGoal.user_id == user_id)
+        select(users_goals_models.UsersGoal).where(users_goals_models.UsersGoal.user_id == user_id)
     ).all()
     for goal in goals:
         parts = [f"interval={goal.interval}"]

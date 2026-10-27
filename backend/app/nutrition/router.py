@@ -144,9 +144,10 @@ async def summary(
 async def off_search(
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],
     q: Annotated[str, Query(min_length=2, max_length=100)],
+    language: Annotated[str | None, Query(max_length=35)] = None,
 ) -> list[nutrition_schema.OffSearchResult]:
     try:
-        results = await off_client.search_off(q)
+        results = await off_client.search_off(q, language=language or "en")
         return [nutrition_schema.OffSearchResult(**r) for r in results]
     except Exception as e:
         core_logger.print_to_log(f"OFF search error: {e}", "error", exc=e)

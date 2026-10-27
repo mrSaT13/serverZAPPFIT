@@ -39,8 +39,10 @@ export async function deleteLog(id: number): Promise<void> {
   await apiFetch(`/nutrition/${id}`, { method: 'DELETE', responseType: 'void' })
 }
 
-export async function searchOff(q: string): Promise<OffProduct[]> {
-  return apiFetch<OffProduct[]>(`/nutrition/off/search?q=${encodeURIComponent(q)}`)
+export async function searchOff(q: string, language?: string): Promise<OffProduct[]> {
+  const qs = new URLSearchParams({ q })
+  if (language) qs.set('language', language)
+  return apiFetch<OffProduct[]>(`/nutrition/off/search?${qs.toString()}`)
 }
 
 export async function getOffProduct(barcode: string): Promise<OffProduct> {
