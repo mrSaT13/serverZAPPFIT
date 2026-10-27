@@ -102,6 +102,13 @@ const router = createRouter({
       meta: { requiresAuth: false, cardless: true },
     },
     {
+      path: '/workouts',
+      name: 'workouts',
+      component: () => import('@/features/strength/views/WorkoutsView.vue'),
+      // Cardless: the view supplies its own plan cards and history surfaces.
+      meta: { requiresAuth: true, cardless: true },
+    },
+    {
       // Legacy standalone path kept as a redirect so old bookmarks land in the
       // health shell where nutrition now lives.
       path: '/nutrition',

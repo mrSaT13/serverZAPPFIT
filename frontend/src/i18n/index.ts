@@ -17,6 +17,7 @@ import enSearch from './locales/en/search.json'
 import enUserProfile from './locales/en/userProfile.json'
 import enSummary from './locales/en/summary.json'
 import enHealth from './locales/en/health.json'
+import enWorkouts from './locales/en/workouts.json'
 import enSetup from './locales/en/setup.json'
 
 /**
@@ -41,6 +42,7 @@ const en = {
   userProfile: enUserProfile,
   summary: enSummary,
   health: enHealth,
+  workouts: enWorkouts,
   setup: enSetup,
 }
 

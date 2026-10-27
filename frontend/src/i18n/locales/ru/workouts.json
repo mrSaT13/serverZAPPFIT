@@ -1,0 +1,144 @@
+{
+  "title": "Тренировки",
+  "subtitle": "Силовые: планы из встроенного каталога упражнений, дневник сессий, прогресс",
+  "sections": {
+    "plans": "Планы",
+    "history": "История",
+    "progress": "Прогресс"
+  },
+  "plansEmpty": {
+    "title": "Планов пока нет",
+    "description": "Создай план вручную или импортируй из своего инстанса wger."
+  },
+  "historyEmpty": {
+    "title": "Сессий пока нет",
+    "description": "Начни сессию из плана или запиши подходы вручную."
+  },
+  "progressEmpty": {
+    "title": "Пока нечего отслеживать",
+    "description": "Прогресс появится после первой записанной сессии."
+  },
+  "plan": {
+    "createTitle": "Новый план",
+    "editTitle": "Редактировать план",
+    "name": "Название",
+    "namePlaceholder": "напр. Тяжёлые ноги",
+    "description": "Описание",
+    "descriptionPlaceholder": "Акцент, заметки…",
+    "exercises": "Упражнения",
+    "addExercise": "Добавить упражнение",
+    "day": "День",
+    "sets": "Подходы",
+    "reps": "Повторы",
+    "weightKg": "Вес (кг)",
+    "restS": "Отдых (с)",
+    "noExercises": "Упражнений пока нет — добавь из каталога.",
+    "ungrouped": "Без группы",
+    "days": "дней",
+    "saved": "План сохранён"
+  },
+  "picker": {
+    "title": "Каталог упражнений",
+    "searchPlaceholder": "Поиск упражнений…",
+    "allCategories": "Все категории",
+    "allEquipment": "Любое снаряжение",
+    "empty": "Ничего не найдено — попробуй другой запрос."
+  },
+  "session": {
+    "start": "Начать сессию",
+    "logEmpty": "Записать сессию",
+    "date": "Дата",
+    "duration": "Длительность (мин)",
+    "comment": "Комментарий",
+    "commentPlaceholder": "Название плана или заметки…",
+    "exercise": "Упражнение",
+    "addSet": "Добавить подход",
+    "saveError": "Не удалось сохранить сессию"
+  },
+  "import": {
+    "title": "Импорт из wger",
+    "hint": "Забирает структуру рутин из твоего инстанса wger (настраивается в Интеграциях). После импорта всё хранится на сервере ZAPFIT и работает оффлайн.",
+    "empty": "В wger рутин не найдено.",
+    "loadError": "Не удалось связаться с wger.",
+    "button": "Импорт",
+    "done": "Рутина импортирована",
+    "error": "Импорт не удался",
+    "working": "Импортирую…",
+    "unnamed": "Безымянная рутина",
+    "template": "шаблон"
+  },
+  "fromWger": "Из wger",
+  "manual": "Вручную",
+  "exercisesShort": "упр.",
+  "sessionsShort": "сессий",
+  "setsShort": "подх.",
+  "minutesShort": "мин",
+  "kg": "кг",
+  "edit": "Изменить",
+  "delete": "Удалить",
+  "deleted": "Удалено",
+  "deleteConfirm": {
+    "title": "Удалить?",
+    "description": "План (или сессия) и его история будут удалены безвозвратно."
+  },
+  "form": {
+    "cancel": "Отмена",
+    "save": "Сохранить"
+  },
+  "catalog": {
+    "categories": {
+      "Arms": "Руки",
+      "Legs": "Ноги",
+      "Abs": "Пресс",
+      "Chest": "Грудь",
+      "Back": "Спина",
+      "Shoulders": "Плечи",
+      "Calves": "Икры",
+      "Cardio": "Кардио"
+    },
+    "equipment": {
+      "Barbell": "Штанга",
+      "SZ-Bar": "Штанга SZ",
+      "Dumbbell": "Гантели",
+      "Gym mat": "Коврик",
+      "Swiss Ball": "Фитбол",
+      "Pull-up bar": "Турник",
+      "none (bodyweight exercise)": "Собственный вес",
+      "Bench": "Скамья",
+      "Incline bench": "Наклонная скамья",
+      "Kettlebell": "Гиря",
+      "Resistance band": "Резиновый жгут",
+      "Cable machine": "Блочная рама"
+    },
+    "muscles": {
+      "Biceps brachii": "Бицепс",
+      "Biceps": "Бицепс",
+      "Anterior deltoid": "Передняя дельта",
+      "Serratus anterior": "Передняя зубчатая мышца",
+      "Pectoralis major": "Грудные",
+      "Pectoralis": "Грудь",
+      "Chest": "Грудные",
+      "Triceps brachii": "Трицепс",
+      "Triceps": "Трицепс",
+      "Rectus abdominis": "Прямая мышца живота",
+      "Abs": "Пресс",
+      "Gastrocnemius": "Икроножная мышца",
+      "Calves": "Икры",
+      "Gluteus maximus": "Большая ягодичная",
+      "Glutes": "Ягодицы",
+      "Obliquus externus abdominis": "Косые мышцы живота",
+      "Quadriceps femoris": "Квадрицепс",
+      "Quads": "Квадрицепс",
+      "Trapezius": "Трапеция",
+      "Deltoid": "Дельты",
+      "Shoulders": "Плечи",
+      "Latissimus dorsi": "Широчайшие",
+      "Lats": "Широчайшие",
+      "Erector spinae": "Разгибатель позвоночника",
+      "Lower back": "Поясница",
+      "Soleus": "Камбаловидная мышца",
+      "Hamstrings": "Бицепс бедра",
+      "Biceps femoris": "Бицепс бедра"
+    }
+  }
+}

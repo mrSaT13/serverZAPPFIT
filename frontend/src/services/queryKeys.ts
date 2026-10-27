@@ -32,6 +32,12 @@ export const queryKeys = {
   /** The authenticated user's profile (seeded by the auth store on login). */
   currentUser: () => ['current-user'] as const,
 
+  workouts: {
+    plans: () => ['workouts', 'plans'] as const,
+    sessions: () => ['workouts', 'sessions'] as const,
+    progress: () => ['workouts', 'progress'] as const,
+  },
+
   /** Unauthenticated settings consumed by the login / sign-up screens. */
   public: {
     serverSettings: () => ['public-server-settings'] as const,

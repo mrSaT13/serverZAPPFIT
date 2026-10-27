@@ -1,0 +1,143 @@
+{
+  "title": "Workouts",
+  "subtitle": "Strength training: plans from the built-in exercise catalog, session logs, progress",
+  "sections": {
+    "plans": "Plans",
+    "history": "History",
+    "progress": "Progress"
+  },
+  "plansEmpty": {
+    "title": "No plans yet",
+    "description": "Create a plan manually or import one from your wger instance."
+  },
+  "historyEmpty": {
+    "title": "No sessions yet",
+    "description": "Start a session from a plan or log sets manually."
+  },
+  "progressEmpty": {
+    "title": "Nothing to track yet",
+    "description": "Progress appears after your first logged session."
+  },
+  "plan": {
+    "createTitle": "New plan",
+    "editTitle": "Edit plan",
+    "name": "Name",
+    "namePlaceholder": "e.g. Heavy legs",
+    "description": "Description",
+    "descriptionPlaceholder": "Focus, notes…",
+    "exercises": "Exercises",
+    "addExercise": "Add exercise",
+    "day": "Day",
+    "sets": "Sets",
+    "reps": "Reps",
+    "weightKg": "Weight (kg)",
+    "restS": "Rest (s)",
+    "noExercises": "No exercises yet — add them from the catalog.",
+    "ungrouped": "Ungrouped",
+    "days": "days",
+    "saved": "Plan saved"
+  },
+  "picker": {
+    "title": "Exercise catalog",
+    "searchPlaceholder": "Search exercises…",
+    "allCategories": "All categories",
+    "allEquipment": "All equipment",
+    "empty": "Nothing found — try another query."
+  },
+  "session": {
+    "start": "Start session",
+    "logEmpty": "Log session",
+    "date": "Date",
+    "duration": "Duration (min)",
+    "comment": "Comment",
+    "commentPlaceholder": "Plan name or notes…",
+    "exercise": "Exercise",
+    "addSet": "Add set",
+    "saveError": "Failed to save session"
+  },
+  "import": {
+    "title": "Import from wger",
+    "hint": "Reads the routine structure from your own wger instance (configured in Integrations). After import everything is stored on the ZAPFIT server and works offline.",
+    "empty": "No routines found in wger.",
+    "loadError": "Failed to reach wger.",
+    "button": "Import",
+    "done": "Routine imported",
+    "error": "Import failed",
+    "working": "Importing…",
+    "unnamed": "Unnamed routine",
+    "template": "template"
+  },
+  "fromWger": "From wger",
+  "manual": "Manual",
+  "exercisesShort": "ex.",
+  "sessionsShort": "sessions",
+  "setsShort": "sets",
+  "minutesShort": "min",
+  "kg": "kg",
+  "edit": "Edit",
+  "delete": "Delete",
+  "deleted": "Deleted",
+  "deleteConfirm": {
+    "title": "Delete?",
+    "description": "This plan (or session) and its history will be removed permanently."
+  },
+  "form": {
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "catalog": {
+    "categories": {
+      "Arms": "Arms",
+      "Legs": "Legs",
+      "Abs": "Abs",
+      "Chest": "Chest",
+      "Back": "Back",
+      "Shoulders": "Shoulders",
+      "Calves": "Calves",
+      "Cardio": "Cardio"
+    },
+    "equipment": {
+      "Barbell": "Barbell",
+      "SZ-Bar": "SZ barbell",
+      "Dumbbell": "Dumbbell",
+      "Gym mat": "Gym mat",
+      "Swiss Ball": "Swiss ball",
+      "Pull-up bar": "Pull-up bar",
+      "none (bodyweight exercise)": "Bodyweight",
+      "Bench": "Bench",
+      "Incline bench": "Incline bench",
+      "Kettlebell": "Kettlebell",
+      "Resistance band": "Resistance band",
+      "Cable machine": "Cable machine"
+    },
+    "muscles": {
+      "Biceps": "Biceps",
+      "Anterior deltoid": "Front delts",
+      "Serratus anterior": "Serratus anterior",
+      "Pectoralis major": "Chest",
+      "Pectoralis": "Pectorals",
+      "Triceps brachii": "Triceps",
+      "Triceps": "Triceps",
+      "Rectus abdominis": "Rectus abdominis",
+      "Abs": "Abs",
+      "Gastrocnemius": "Calves",
+      "Calves": "Calves",
+      "Gluteus maximus": "Glutes",
+      "Glutes": "Glutes",
+      "Obliquus externus abdominis": "External obliques",
+      "Quadriceps femoris": "Quadriceps",
+      "Quads": "Quads",
+      "Trapezius": "Trapezius",
+      "Deltoid": "Deltoids",
+      "Shoulders": "Shoulders",
+      "Latissimus dorsi": "Latissimus dorsi",
+      "Lats": "Lats",
+      "Erector spinae": "Lower back",
+      "Lower back": "Lower back",
+      "Soleus": "Soleus",
+      "Hamstrings": "Hamstrings",
+      "Biceps femoris": "Hamstrings",
+      "Biceps brachii": "Biceps"
+    }
+  }
+}
