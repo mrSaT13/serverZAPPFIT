@@ -13,7 +13,7 @@ import NutritionScannerDialog from '@/features/nutrition/components/NutritionSca
 import NutritionAssistantChat from '@/features/nutrition/components/NutritionAssistantChat.vue'
 import { fetchLogs, createLog, deleteLog, searchOff, getOffProduct, fetchSummary, type MealLog, type OffProduct } from '@/features/nutrition/services/nutrition'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const toasts = useToasts()
 
 const today = new Date().toISOString().slice(0,10)
@@ -38,7 +38,7 @@ async function onScanned(code: string) {
 }
 async function doSearch() {
   if (offQuery.value.trim().length < 2) return
-  offResults.value = await searchOff(offQuery.value.trim())
+  offResults.value = await searchOff(offQuery.value.trim(), locale.value)
 }
 function fillFromOff(p: OffProduct) {
   form.value.product_name = p.product_name ?? ''

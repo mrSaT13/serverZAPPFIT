@@ -113,6 +113,8 @@ def _seed_exercise_catalog() -> None:
     Best-effort: the strength UI degrades to manual exercise input if the
     snapshot is missing, so failures are logged and never abort startup.
     """
+    from sqlalchemy import text
+
     import workouts.exercise_catalog as exercise_catalog
 
     with SessionLocal() as db:
