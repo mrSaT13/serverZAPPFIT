@@ -14,16 +14,13 @@ from alembic import command
 # transitively imports it runs.
 os.environ["SILENCE_TOKEN_WARNINGS"] = "TRUE"
 
-from fastapi import FastAPI
+
+from fastapi import Depends, FastAPI, Query, WebSocket, WebSocketDisconnect, WebSocketException
+from fastapi import status as fastapi_status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from slowapi.middleware import SlowAPIMiddleware
 from starlette.middleware.sessions import SessionMiddleware
-
-from typing import Annotated
-
-from fastapi import Depends, Query, WebSocket, WebSocketDisconnect, WebSocketException
-from fastapi import status as fastapi_status
 
 import auth.identity_providers.link_tokens.utils as idp_link_token_utils
 import auth.oauth_state.utils as oauth_state_utils
@@ -110,8 +107,11 @@ def _run_alembic_migrations() -> None:
 def _seed_exercise_catalog() -> None:
     """Seed the exercise catalog from the bundled snapshot when empty.
 
-    Best-effort: the strength UI degrades to manual exercise input if the
-    snapshot is missing, so failures are logged and never abort startup.
+    Also re-seeds once when existing rows predate snapshot enrichment
+    (aliases/tips/license names added in v0.25) — the upsert refreshes the
+    rows in place. Best-effort: the strength UI degrades to manual exercise
+    input if the snapshot is missing, so failures are logged and never abort
+    startup.
     """
     from sqlalchemy import text
 
@@ -120,8 +120,16 @@ def _seed_exercise_catalog() -> None:
     with SessionLocal() as db:
         row_count = db.execute(text("SELECT count(*) FROM exercise_catalog")).scalar()
         if row_count:
-            core_logger.print_to_log(f"Exercise catalog already seeded ({row_count} rows)")
-            return
+            enriched = db.execute(
+                text(
+                    "SELECT count(*) FROM exercise_catalog "
+                    "WHERE license_name IS NOT NULL OR aliases <> '{}' OR tips <> '{}'"
+                )
+            ).scalar()
+            if enriched:
+                core_logger.print_to_log(f"Exercise catalog already seeded ({row_count} rows)")
+                return
+            core_logger.print_to_log("Exercise catalog lacks enrichment — re-seeding")
         seeded = exercise_catalog.seed_catalog(db)
         core_logger.print_to_log_and_console(f"Seeded exercise catalog: {seeded} exercises")
 
@@ -179,14 +187,10 @@ def _ensure_activity_comments_table() -> None:
         from sqlalchemy import text
 
         with SessionLocal() as db:
-            result = db.execute(
-                text(
-                    "SELECT 1 FROM information_schema.tables "
-                    "WHERE table_name = 'activity_comments'"
-                )
-            )
+            result = db.execute(text("SELECT 1 FROM information_schema.tables WHERE table_name = 'activity_comments'"))
             if result.fetchone() is None:
-                db.execute(text("""
+                db.execute(
+                    text("""
                     CREATE TABLE activity_comments (
                         id SERIAL PRIMARY KEY,
                         activity_id INTEGER NOT NULL REFERENCES activities(id) ON DELETE CASCADE,
@@ -195,7 +199,8 @@ def _ensure_activity_comments_table() -> None:
                         created_at TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL,
                         updated_at TIMESTAMP WITH TIME ZONE
                     )
-                """))
+                """)
+                )
                 db.execute(text("CREATE INDEX ix_activity_comments_activity_id ON activity_comments (activity_id)"))
                 db.execute(text("CREATE INDEX ix_activity_comments_user_id ON activity_comments (user_id)"))
                 db.commit()

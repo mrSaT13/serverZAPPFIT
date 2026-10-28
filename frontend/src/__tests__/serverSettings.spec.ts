@@ -50,7 +50,7 @@ function makeSettingsDto(overrides: Partial<ServerSettingsDto> = {}): ServerSett
     default_language: 'en',
     brand_name: 'ZAPFIT',
     // smtp — new optional fields (not in generated type yet, cast via overrides)
-    ...( {
+    ...({
       smtp_host: null,
       smtp_port: null,
       smtp_username: null,

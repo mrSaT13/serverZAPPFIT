@@ -7,7 +7,11 @@ import { Download } from '@lucide/vue'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Skeleton } from '@/components/ui/skeleton'
-import { importWgerRoutine, previewWgerRoutines, type WgerRoutinePreview } from '@/features/strength/services/workouts'
+import {
+  importWgerRoutine,
+  previewWgerRoutines,
+  type WgerRoutinePreview,
+} from '@/features/strength/services/workouts'
 import { INTEGRATION_LOGOS } from '@/constants/integrationLogos'
 import { useToasts } from '@/composables/useToasts'
 
@@ -74,21 +78,37 @@ async function importOne(r: WgerRoutinePreview): Promise<void> {
         <Button variant="outline" size="sm" @click="load">{{ t('app.error.retry') }}</Button>
       </div>
       <div v-else class="flex max-h-[40vh] flex-col gap-1 overflow-auto">
-        <div v-for="r in routines" :key="r.wger_id" class="flex items-center gap-2 rounded-input border px-3 py-2">
+        <div
+          v-for="r in routines"
+          :key="r.wger_id"
+          class="flex items-center gap-2 rounded-input border px-3 py-2"
+        >
           <div class="flex min-w-0 flex-col">
-            <span class="truncate text-body font-medium">{{ r.name || t('workouts.import.unnamed') }}</span>
+            <span class="truncate text-body font-medium">{{
+              r.name || t('workouts.import.unnamed')
+            }}</span>
             <span class="text-hint">
               {{ r.days }} {{ t('workouts.plan.days') }}
               <template v-if="r.is_template"> · {{ t('workouts.import.template') }}</template>
               <template v-if="r.start"> · {{ r.start }}</template>
             </span>
           </div>
-          <Button class="ml-auto" size="sm" :variant="'secondary'" :disabled="importingId !== null" @click="importOne(r)">
+          <Button
+            class="ml-auto"
+            size="sm"
+            :variant="'secondary'"
+            :disabled="importingId !== null"
+            @click="importOne(r)"
+          >
             <Download v-if="importingId !== r.wger_id" class="size-4" />
-            {{ importingId === r.wger_id ? t('workouts.import.working') : t('workouts.import.button') }}
+            {{
+              importingId === r.wger_id ? t('workouts.import.working') : t('workouts.import.button')
+            }}
           </Button>
         </div>
-        <div v-if="routines.length === 0" class="text-hint py-6 text-center">{{ t('workouts.import.empty') }}</div>
+        <div v-if="routines.length === 0" class="text-hint py-6 text-center">
+          {{ t('workouts.import.empty') }}
+        </div>
       </div>
     </DialogContent>
   </Dialog>

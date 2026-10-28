@@ -1,6 +1,6 @@
 [project]
 name = "zapfit"
-version = "0.24.1"
+version = "0.25.0"
 description = "ZAPFIT API"
 authors = [{name = "mrSaT13", email = "zapfit@example.com"}]
 # readme intentionally omitted — internal app, not published to PyPI
@@ -192,7 +192,7 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**/*.py" = ["S101", "S105", "S106"]  # allow assert and test data with password-like strings
+"tests/**/*.py" = ["S101", "S105", "S106", "RUF001"]  # allow assert, test data with password-like strings, and intentional Cyrillic test strings
 "app/alembic/**/*.py" = ["E402", "I001"]  # alembic migrations have specific import order
 "app/alembic/versions/v0_3_0_migration.py" = ["S105", "S106"]  # legitimate password hashes in seed migration
 "app/auth/identity_providers/public_router.py" = ["S105", "S106"]  # false positive on token_type
@@ -202,6 +202,8 @@ ignore = [
 "app/main.py" = ["S105"]  # false positive on env var value
 "app/profile/mfa_store.py" = ["S105"]  # false positive on Redis key prefix
 "app/profile/**/*.py" = ["A005"]  # tracked in https://codeberg.org/endurain-project/endurain/issues/677
+"app/workouts/ai_planner.py" = ["RUF001"]  # intentional Cyrillic in the LLM prompt template (day labels for ru users)
+"scripts/**/*.py" = ["T201"]  # CLI scripts print their result to stdout
 
 [tool.ruff.format]
 quote-style = "double"

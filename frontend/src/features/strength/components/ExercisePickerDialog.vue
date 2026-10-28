@@ -1,22 +1,20 @@
-/**
- * Exercise picker dialog— searches the offline (baked wger) catalog and
- * returns the chosen exercise to the plan editor.
- */
+/** * Exercise picker dialog— searches the offline (baked wger) catalog and * returns the chosen
+exercise to the plan editor. */
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Dumbbell, Search } from '@lucide/vue'
 
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 import { Skeleton } from '@/components/ui/skeleton'
-import { searchCatalog, fetchCatalogMeta, type CatalogExercise, type CatalogMeta } from '@/features/strength/services/workouts'
+import {
+  searchCatalog,
+  fetchCatalogMeta,
+  type CatalogExercise,
+  type CatalogMeta,
+} from '@/features/strength/services/workouts'
 
 const open = defineModel<boolean>('open', { default: false })
 const emit = defineEmits<{ picked: [exercise: CatalogExercise] }>()
@@ -27,9 +25,14 @@ const q = ref('')
 const meta = ref<CatalogMeta | null>(null)
 const results = ref<CatalogExercise[]>([])
 const loading = ref(false)
+/** Set when the catalog endpoint failed (e.g. snapshot missing on the server). */
+const loadError = ref(false)
 // '' === "all"; Select values are plain strings.
 const categoryId = ref<string>('')
 const equipmentId = ref<string>('')
+
+/** The offline snapshot was never seeded into this server's database. */
+const notSeeded = computed(() => (meta.value?.counts.seedError ?? 0) === 1)
 
 /** Prefers the UI language's translation, falls back to English (always present). */
 function displayName(exercise: CatalogExercise): string {
@@ -40,8 +43,16 @@ function displayName(exercise: CatalogExercise): string {
   return tr?.name ?? exercise.name
 }
 
+/** First technique tip in the UI language (English fallback), if any. */
+function displayTip(exercise: CatalogExercise): string | null {
+  const lang = locale.value.split('-')[0] ?? 'en'
+  const tips = exercise.tips ?? {}
+  return tips[lang]?.[0] ?? tips.en?.[0] ?? null
+}
+
 async function runSearch(): Promise<void> {
   loading.value = true
+  loadError.value = false
   try {
     if (!meta.value) meta.value = await fetchCatalogMeta()
     const data = await searchCatalog(q.value, {
@@ -50,6 +61,7 @@ async function runSearch(): Promise<void> {
     })
     results.value = data.records
   } catch {
+    loadError.value = true
     results.value = []
   } finally {
     loading.value = false
@@ -109,12 +121,31 @@ watch(open, (v) => {
               <span class="truncate text-body font-medium">{{ displayName(ex) }}</span>
               <span class="text-hint">
                 {{ ex.category ? t(`workouts.catalog.categories.${ex.category.name}`) : '' }}
-                <template v-if="ex.muscles.length"> · {{ ex.muscles.map((m) => t(`workouts.catalog.muscles.${m.name_en || m.name}`)).join(', ') }}</template>
+                <template v-if="ex.muscles.length">
+                  ·
+                  {{
+                    ex.muscles
+                      .map((m) => t(`workouts.catalog.muscles.${m.name_en || m.name}`))
+                      .join(', ')
+                  }}</template
+                >
               </span>
+              <span v-if="displayTip(ex)" class="text-hint truncate italic">{{
+                displayTip(ex)
+              }}</span>
             </div>
           </div>
         </button>
-        <div v-if="results.length === 0" class="text-hint py-6 text-center">
+        <div
+          v-if="notSeeded"
+          class="rounded-input border border-orange-300 bg-orange-50 px-3 py-2 text-hint text-orange-700"
+        >
+          {{ t('workouts.picker.notSeeded') }}
+        </div>
+        <div v-else-if="loadError" class="text-hint py-6 text-center text-destructive">
+          {{ t('workouts.picker.loadError') }}
+        </div>
+        <div v-else-if="results.length === 0" class="text-hint py-6 text-center">
           {{ t('workouts.picker.empty') }}
         </div>
       </div>

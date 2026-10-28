@@ -43,17 +43,20 @@ export function mapServerSettings(dto: ServerSettingsDto): ServerSettings {
     defaultTheme: dto.default_theme,
     defaultLanguage: dto.default_language,
     brandName: dto.brand_name,
-    smtpHost: (dto as unknown as Record<string, unknown>).smtp_host as string | null ?? null,
-    smtpPort: (dto as unknown as Record<string, unknown>).smtp_port as number | null ?? null,
-    smtpUsername: (dto as unknown as Record<string, unknown>).smtp_username as string | null ?? null,
-    smtpPassword: (dto as unknown as Record<string, unknown>).smtp_password as string | null ?? null,
-    smtpFrom: (dto as unknown as Record<string, unknown>).smtp_from as string | null ?? null,
-    smtpSecure: (dto as unknown as Record<string, unknown>).smtp_secure as boolean | null ?? null,
-    smtpSecureType: (dto as unknown as Record<string, unknown>).smtp_secure_type as string | null ?? null,
-    aiEnabled: (dto as unknown as Record<string, unknown>).ai_enabled as boolean ?? false,
-    aiBaseUrl: (dto as unknown as Record<string, unknown>).ai_base_url as string | null ?? null,
-    aiModel: (dto as unknown as Record<string, unknown>).ai_model as string | null ?? null,
-    aiApiKey: (dto as unknown as Record<string, unknown>).ai_api_key as string | null ?? null,
+    smtpHost: ((dto as unknown as Record<string, unknown>).smtp_host as string | null) ?? null,
+    smtpPort: ((dto as unknown as Record<string, unknown>).smtp_port as number | null) ?? null,
+    smtpUsername:
+      ((dto as unknown as Record<string, unknown>).smtp_username as string | null) ?? null,
+    smtpPassword:
+      ((dto as unknown as Record<string, unknown>).smtp_password as string | null) ?? null,
+    smtpFrom: ((dto as unknown as Record<string, unknown>).smtp_from as string | null) ?? null,
+    smtpSecure: ((dto as unknown as Record<string, unknown>).smtp_secure as boolean | null) ?? null,
+    smtpSecureType:
+      ((dto as unknown as Record<string, unknown>).smtp_secure_type as string | null) ?? null,
+    aiEnabled: ((dto as unknown as Record<string, unknown>).ai_enabled as boolean) ?? false,
+    aiBaseUrl: ((dto as unknown as Record<string, unknown>).ai_base_url as string | null) ?? null,
+    aiModel: ((dto as unknown as Record<string, unknown>).ai_model as string | null) ?? null,
+    aiApiKey: ((dto as unknown as Record<string, unknown>).ai_api_key as string | null) ?? null,
   }
 }
 

@@ -1,7 +1,8 @@
 """Schemas for nutrition diary."""
 
 from datetime import date, datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 
 
 class MealLogBase(BaseModel):
@@ -58,6 +59,25 @@ class NutritionSummary(BaseModel):
     intake_fat: float
     burned_calories: float | None = None
     net_calories: float | None = None
+
+
+class NutritionTrendPoint(BaseModel):
+    """One day's intake totals (+ burned from activities) for the trend charts."""
+
+    date: date
+    calories: float = 0
+    protein: float = 0
+    carbs: float = 0
+    fat: float = 0
+    burned_calories: float | None = None
+
+
+class NutritionTrend(BaseModel):
+    """Aggregated per-day nutrition totals for an inclusive date range."""
+
+    date_from: date
+    date_to: date
+    days: list[NutritionTrendPoint] = []
 
 
 class WgerSettingsRead(BaseModel):

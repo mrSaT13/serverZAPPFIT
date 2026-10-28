@@ -401,4 +401,3 @@ class TestGetSetupOptions:
         # Assert
         assert all(option.label.strip() for option in result.themes)
         assert all(option.label.strip() for option in result.languages)
-

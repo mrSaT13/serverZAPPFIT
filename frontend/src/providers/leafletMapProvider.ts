@@ -41,7 +41,8 @@ const DEFAULT_ATTRIBUTION =
 const DEFAULT_MAX_ZOOM = 19
 
 /** Esri World Imagery — satellite layer, same as in mobile app (“Спутник”). */
-const ESRI_SATELLITE_URL = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
+const ESRI_SATELLITE_URL =
+  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 const ESRI_ATTRIBUTION =
   'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community'
 /** Brand teal track colour, from the `--color-brand` design token. */
@@ -169,7 +170,7 @@ export function createLeafletMapProvider(config: LeafletMapProviderConfig = {}):
         const baseMaps: Record<string, Layer> = isCustom
           ? { 'Спутник (Esri)': satelliteLayer }
           : {
-              'Карта': osmLayer,
+              Карта: osmLayer,
               'Спутник (Esri)': satelliteLayer,
             }
         // When custom tileserver is set, keep it as default but still allow satellite.

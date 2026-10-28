@@ -41,11 +41,15 @@ class ExerciseCatalog(Base):
     category_id: Mapped[int] = mapped_column(Integer, nullable=False, index=True)
     equipment_ids: Mapped[list[int]] = mapped_column(JSON, nullable=False, server_default="[]")
     muscle_ids: Mapped[list[int]] = mapped_column(JSON, nullable=False, server_default="[]")
-    muscle_ids_secondary: Mapped[list[int]] = mapped_column(
-        JSON, nullable=False, server_default="[]"
-    )
+    muscle_ids_secondary: Mapped[list[int]] = mapped_column(JSON, nullable=False, server_default="[]")
     variation_group: Mapped[str | None] = mapped_column(String(50), nullable=True)
     license_author: Mapped[str | None] = mapped_column(String(250), nullable=True)
+    # Enrichment harvested from wger's fixtures (see scripts/generate_exercise_catalog.py):
+    # alternative exercise names per language (search synonyms) and short
+    # technique tips per language, both keyed by language code.
+    aliases: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False, server_default="{}")
+    tips: Mapped[dict[str, Any]] = mapped_column(JSON, nullable=False, server_default="{}")
+    license_name: Mapped[str | None] = mapped_column(String(100), nullable=True)
     updated_at: Mapped[datetime_type] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False
     )
@@ -58,9 +62,7 @@ def load_snapshot() -> dict:
         return json_module.load(fh)
 
 
-def seed_catalog(
-    db: Session, catalog_path: str | None = None, snapshot: dict | None = None
-) -> int:
+def seed_catalog(db: Session, catalog_path: str | None = None, snapshot: dict | None = None) -> int:
     """Upsert the catalog snapshot into the database. Returns the row count.
 
     Idempotent: existing wger ids are refreshed in place, new ones inserted.
@@ -73,14 +75,10 @@ def seed_catalog(
             if catalog_path is None
             else json_module.loads(Path(catalog_path).read_text(encoding="utf-8"))
         )
-    existing = {
-        row.wger_id: row
-        for row in db.scalars(select(ExerciseCatalog)).all()
-    }
+    existing = {row.wger_id: row for row in db.scalars(select(ExerciseCatalog)).all()}
     for item in snapshot["exercises"]:
         translations = {
-            tr["language"]: {"name": tr["name"], "description": tr["description"]}
-            for tr in item["translations"]
+            tr["language"]: {"name": tr["name"], "description": tr["description"]} for tr in item["translations"]
         }
         en_name = translations.get("en", {}).get("name") or item["uuid"]
         row = existing.get(item["id"])
@@ -97,5 +95,8 @@ def seed_catalog(
         row.muscle_ids_secondary = list(item["muscles_secondary"])
         row.variation_group = item.get("variation_group")
         row.license_author = item.get("license_author") or None
+        row.aliases = item.get("aliases") or {}
+        row.tips = item.get("tips") or {}
+        row.license_name = item.get("license") or None
     db.commit()
     return len(snapshot["exercises"])

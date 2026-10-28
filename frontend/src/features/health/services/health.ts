@@ -749,7 +749,10 @@ export const updateSleepTarget = createHealthTargetUpdater('sleep')
  * @param signal - Optional abort signal.
  * @returns The night's entry, or `null` when none was recorded.
  */
-export async function fetchSleepByDate(date: string, signal?: AbortSignal): Promise<SleepEntry | null> {
+export async function fetchSleepByDate(
+  date: string,
+  signal?: AbortSignal,
+): Promise<SleepEntry | null> {
   try {
     const dto = await apiFetch<HealthSleepDto>(`/health/sleep/by_date/${date}`, { signal })
     return dto ? mapSleepEntry(dto) : null

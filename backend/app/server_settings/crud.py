@@ -1,3 +1,4 @@
+import contextlib
 from typing import overload
 
 from fastapi import HTTPException, status
@@ -145,10 +146,8 @@ def edit_server_settings(
     db.refresh(db_server_settings)
 
     # Invalidate cached email service so SMTP changes take effect without restart
-    try:
+    with contextlib.suppress(Exception):
         core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
-    except Exception:
-        pass
 
     return _transform_server_settings(db_server_settings)
 
@@ -221,17 +220,13 @@ def apply_setup_complete(
     # locale sticks across page reloads (applyPreferredLocale reads the
     # user's preferredLanguage, not the server-level defaultLanguage).
     if "default_language" in payload_dict:
-        admin_stmt = select(users_models.Users).where(
-            users_models.Users.access_type == "admin"
-        )
+        admin_stmt = select(users_models.Users).where(users_models.Users.access_type == "admin")
         admin_user = db.execute(admin_stmt).scalar_one_or_none()
         if admin_user is not None:
             admin_user.preferred_language = payload_dict["default_language"]
 
     db.commit()
     db.refresh(db_server_settings)
-    try:
+    with contextlib.suppress(Exception):
         core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
-    except Exception:
-        pass
     return _transform_server_settings(db_server_settings)

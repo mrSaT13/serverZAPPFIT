@@ -256,10 +256,10 @@ async function submit(): Promise<void> {
             <FormField :label="t('setup.preferences.currency')">
               <template #default="{ fieldId }">
                 <Select v-model="currency" :id="fieldId">
-              <option value="euro">{{ t('setup.preferences.currencyEuro') }}</option>
-              <option value="dollar">{{ t('setup.preferences.currencyDollar') }}</option>
-              <option value="pound">{{ t('setup.preferences.currencyPound') }}</option>
-              <option value="ruble">{{ t('setup.preferences.currencyRuble') }}</option>
+                  <option value="euro">{{ t('setup.preferences.currencyEuro') }}</option>
+                  <option value="dollar">{{ t('setup.preferences.currencyDollar') }}</option>
+                  <option value="pound">{{ t('setup.preferences.currencyPound') }}</option>
+                  <option value="ruble">{{ t('setup.preferences.currencyRuble') }}</option>
                 </Select>
               </template>
             </FormField>

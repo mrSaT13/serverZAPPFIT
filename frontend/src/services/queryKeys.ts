@@ -36,6 +36,8 @@ export const queryKeys = {
     plans: () => ['workouts', 'plans'] as const,
     sessions: () => ['workouts', 'sessions'] as const,
     progress: () => ['workouts', 'progress'] as const,
+    /** Weekly aggregates for the workouts page charts. */
+    statistics: () => ['workouts', 'statistics'] as const,
   },
 
   /** Unauthenticated settings consumed by the login / sign-up screens. */

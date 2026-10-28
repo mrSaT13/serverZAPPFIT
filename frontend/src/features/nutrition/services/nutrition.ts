@@ -31,7 +31,9 @@ export async function fetchLogs(date?: string): Promise<MealLog[]> {
   return apiFetch<MealLog[]>(`/nutrition${qs}`)
 }
 
-export async function createLog(payload: Omit<MealLog, 'id' | 'user_id' | 'created_at'>): Promise<MealLog> {
+export async function createLog(
+  payload: Omit<MealLog, 'id' | 'user_id' | 'created_at'>,
+): Promise<MealLog> {
   return apiFetch<MealLog>(`/nutrition`, { method: 'POST', body: JSON.stringify(payload) })
 }
 
@@ -50,7 +52,36 @@ export async function getOffProduct(barcode: string): Promise<OffProduct> {
 }
 
 export async function fetchSummary(date: string) {
-  return apiFetch<{ date: string; intake_calories: number; intake_protein: number; intake_carbs: number; intake_fat: number; burned_calories: number | null; net_calories: number | null }>(`/nutrition/summary?date=${date}`)
+  return apiFetch<{
+    date: string
+    intake_calories: number
+    intake_protein: number
+    intake_carbs: number
+    intake_fat: number
+    burned_calories: number | null
+    net_calories: number | null
+  }>(`/nutrition/summary?date=${date}`)
+}
+
+export interface NutritionTrendPoint {
+  date: string
+  calories: number
+  protein: number
+  carbs: number
+  fat: number
+  burned_calories: number | null
+}
+
+export interface NutritionTrend {
+  date_from: string
+  date_to: string
+  days: NutritionTrendPoint[]
+}
+
+/** Per-day intake (+ burned) totals for the nutrition page charts. */
+export async function fetchTrend(dateFrom: string, dateTo: string): Promise<NutritionTrend> {
+  const qs = new URLSearchParams({ date_from: dateFrom, date_to: dateTo })
+  return apiFetch<NutritionTrend>(`/nutrition/trend?${qs.toString()}`)
 }
 
 export interface AiChatMessage {

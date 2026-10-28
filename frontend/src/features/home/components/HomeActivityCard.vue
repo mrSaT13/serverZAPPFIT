@@ -156,7 +156,12 @@ const ownerRoute = computed(() =>
         />
         <div class="min-w-0">
           <p class="truncate text-item-title">
-            <RouterLink v-if="owner && ownerRoute" :to="ownerRoute" class="hover:underline" @click.stop>
+            <RouterLink
+              v-if="owner && ownerRoute"
+              :to="ownerRoute"
+              class="hover:underline"
+              @click.stop
+            >
               {{ owner.name }}
             </RouterLink>
             <span v-else>{{ owner ? owner.name : t('activities.athlete') }}</span>

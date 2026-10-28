@@ -1,22 +1,22 @@
 """Nutrition router — meal diary + OFF proxy + optional wger sync scaffold."""
 
 from collections.abc import Callable
-from datetime import date
+from datetime import date, timedelta
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Security, status
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 import auth.dependencies as auth_dependencies
 import core.cryptography as core_cryptography
 import core.database as core_database
 import core.logger as core_logger
+import nutrition.ai as nutrition_ai
 import nutrition.crud as nutrition_crud
 import nutrition.models as nutrition_models
 import nutrition.off_client as off_client
-import nutrition.ai as nutrition_ai
 import nutrition.schema as nutrition_schema
-from sqlalchemy import select
 
 router = APIRouter()
 
@@ -80,8 +80,9 @@ async def summary(
     # Burned calories from activities on that date
     burned = 0.0
     try:
-        import activities.activity.models as _act_models
         from sqlalchemy import func as _func
+
+        import activities.activity.models as _act_models
 
         # activities.calories is int (kcal) per activity.
         # func.date() yields a date — compare it to a date, not a string
@@ -98,9 +99,10 @@ async def summary(
     # BMR Mifflin-St Jeor from users + latest weight
     bmr = 0.0
     try:
-        import users.users.models as _users_models
         from datetime import date as _date
+
         import health.health_weight.crud as _weight_crud
+        import users.users.models as _users_models
 
         user = db.get(_users_models.Users, token_user_id)
         if user:
@@ -113,7 +115,11 @@ async def summary(
             age = None
             if user.birthdate:
                 today_d = _date.today()
-                age = today_d.year - user.birthdate.year - ((today_d.month, today_d.day) < (user.birthdate.month, user.birthdate.day))
+                age = (
+                    today_d.year
+                    - user.birthdate.year
+                    - ((today_d.month, today_d.day) < (user.birthdate.month, user.birthdate.day))
+                )
             if weight_kg and height_cm and age is not None:
                 s = 5 if gender == "male" else (-161 if gender == "female" else 0)
                 bmr = 10 * weight_kg + 6.25 * height_cm - 5 * age + s
@@ -138,6 +144,70 @@ async def summary(
         burned_calories=total_burned,
         net_calories=net,
     )
+
+
+@router.get("/trend", response_model=nutrition_schema.NutritionTrend)
+async def trend(
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+    date_from: Annotated[str | None, Query()] = None,
+    date_to: Annotated[str | None, Query()] = None,
+) -> nutrition_schema.NutritionTrend:
+    """Per-day intake (+ burned) totals for the nutrition page charts.
+
+    Defaults to the last 30 days; the range is capped at 366 days so a single
+    client request can never scan the whole diary.
+    """
+    today = date.today()
+    end_d = date.fromisoformat(date_to) if date_to else today
+    start_d = date.fromisoformat(date_from) if date_from else end_d - timedelta(days=29)
+    if start_d > end_d:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="date_from must be <= date_to")
+    if (end_d - start_d).days > 366:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Date range must not exceed 366 days")
+
+    totals = nutrition_crud.daily_totals(token_user_id, start_d.isoformat(), end_d.isoformat(), db)
+    points = {
+        row["date"]: nutrition_schema.NutritionTrendPoint(
+            date=row["date"],
+            calories=row["calories"],
+            protein=row["protein"],
+            carbs=row["carbs"],
+            fat=row["fat"],
+        )
+        for row in totals
+    }
+
+    # Burned calories per day from activities (best-effort, mirrors /summary).
+    try:
+        from sqlalchemy import func as _func
+
+        import activities.activity.models as _act_models
+
+        stmt = (
+            select(
+                _func.date(_act_models.Activity.start_time).label("day"),
+                _func.coalesce(_func.sum(_act_models.Activity.calories), 0),
+            )
+            .where(
+                _act_models.Activity.user_id == token_user_id,
+                _func.date(_act_models.Activity.start_time) >= start_d,
+                _func.date(_act_models.Activity.start_time) <= end_d,
+            )
+            .group_by(_func.date(_act_models.Activity.start_time))
+        )
+        for day, kcal in db.execute(stmt).all():
+            point = points.get(day)
+            if point is None:
+                point = nutrition_schema.NutritionTrendPoint(date=day)
+                points[day] = point
+            point.burned_calories = float(kcal or 0)
+    except Exception:
+        core_logger.print_to_log("Nutrition trend: burned-per-day aggregation failed", "error")
+
+    ordered = [points[d] for d in sorted(points)]
+    return nutrition_schema.NutritionTrend(date_from=start_d, date_to=end_d, days=ordered)
 
 
 @router.get("/off/search", response_model=list[nutrition_schema.OffSearchResult])
@@ -178,11 +248,15 @@ async def get_wger_settings(
     token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
     db: Annotated[Session, Depends(core_database.get_db)],
 ) -> nutrition_schema.WgerSettingsRead:
-    stmt = select(nutrition_models.UserNutritionSettings).where(nutrition_models.UserNutritionSettings.user_id == token_user_id)
+    stmt = select(nutrition_models.UserNutritionSettings).where(
+        nutrition_models.UserNutritionSettings.user_id == token_user_id
+    )
     row = db.scalars(stmt).first()
     if not row:
         return nutrition_schema.WgerSettingsRead()
-    return nutrition_schema.WgerSettingsRead(wger_base_url=row.wger_base_url, wger_enabled=row.wger_enabled, has_api_key=bool(row.wger_api_key))
+    return nutrition_schema.WgerSettingsRead(
+        wger_base_url=row.wger_base_url, wger_enabled=row.wger_enabled, has_api_key=bool(row.wger_api_key)
+    )
 
 
 @router.put("/wger/settings", response_model=nutrition_schema.WgerSettingsRead)
@@ -192,7 +266,9 @@ async def put_wger_settings(
     token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
     db: Annotated[Session, Depends(core_database.get_db)],
 ) -> nutrition_schema.WgerSettingsRead:
-    stmt = select(nutrition_models.UserNutritionSettings).where(nutrition_models.UserNutritionSettings.user_id == token_user_id)
+    stmt = select(nutrition_models.UserNutritionSettings).where(
+        nutrition_models.UserNutritionSettings.user_id == token_user_id
+    )
     row = db.scalars(stmt).first()
     if not row:
         row = nutrition_models.UserNutritionSettings(user_id=token_user_id)
@@ -205,7 +281,9 @@ async def put_wger_settings(
         row.wger_api_key = None
     db.commit()
     db.refresh(row)
-    return nutrition_schema.WgerSettingsRead(wger_base_url=row.wger_base_url, wger_enabled=row.wger_enabled, has_api_key=bool(row.wger_api_key))
+    return nutrition_schema.WgerSettingsRead(
+        wger_base_url=row.wger_base_url, wger_enabled=row.wger_enabled, has_api_key=bool(row.wger_api_key)
+    )
 
 
 @router.post("/wger/test", response_model=dict[str, str])
@@ -239,7 +317,9 @@ async def test_wger(
             r = await client.get(url, headers=headers)
             if r.status_code == 200:
                 return {"message": "wger connection OK"}
-            raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=f"wger returned {r.status_code}: {r.text[:200]}")
+            raise HTTPException(
+                status_code=status.HTTP_502_BAD_GATEWAY, detail=f"wger returned {r.status_code}: {r.text[:200]}"
+            )
     except HTTPException:
         raise
     except Exception as e:

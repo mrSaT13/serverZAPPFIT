@@ -20,7 +20,10 @@ export const severityClasses: Record<Severity, string> = {
  */
 export const toastAccentClasses: Record<Severity, string> = {
   info: 'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-info shadow-xl backdrop-blur-md',
-  success: 'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-goal shadow-xl backdrop-blur-md',
-  warning: 'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-effort shadow-xl backdrop-blur-md',
-  error: 'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-hr shadow-xl backdrop-blur-md',
+  success:
+    'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-goal shadow-xl backdrop-blur-md',
+  warning:
+    'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-effort shadow-xl backdrop-blur-md',
+  error:
+    'border-primary/30 bg-accent/95 text-accent-foreground border-l-4 border-l-hr shadow-xl backdrop-blur-md',
 }

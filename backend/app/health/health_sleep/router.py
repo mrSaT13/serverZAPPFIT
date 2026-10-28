@@ -123,9 +123,7 @@ def read_health_sleep_by_date(
     Raises:
         HTTPException: 404 when no record exists for the date.
     """
-    record = health_sleep_crud.get_health_sleep_by_date_and_user_id(
-        token_user_id, sleep_date.isoformat(), db
-    )
+    record = health_sleep_crud.get_health_sleep_by_date_and_user_id(token_user_id, sleep_date.isoformat(), db)
     if record is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

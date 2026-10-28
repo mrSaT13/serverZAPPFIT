@@ -6,6 +6,7 @@ sign-up verification, admin alerts, …) without knowing
 the underlying transport.
 """
 
+import contextlib
 import hashlib
 import secrets
 from functools import lru_cache
@@ -54,11 +55,11 @@ class AppriseService:
         frontend_host: str = s.ZAPFIT_HOST or s.ENDURAIN_HOST
 
         # Try DB override (admin UI) — best-effort, never break startup
-        try:
+        with contextlib.suppress(Exception):
             # Local import to avoid circular
+            import core.cryptography as _crypt
             import server_settings.models as _ss_models
             from core.database import SessionLocal as _SessionLocal
-            import core.cryptography as _crypt
 
             db = _SessionLocal()
             try:
@@ -70,10 +71,8 @@ class AppriseService:
                     if row.smtp_username is not None:
                         smtp_username = row.smtp_username
                     if row.smtp_password:
-                        try:
+                        with contextlib.suppress(Exception):
                             smtp_password = _crypt.decrypt_token_fernet(row.smtp_password)
-                        except Exception:
-                            pass
                     if row.smtp_from is not None:
                         smtp_from = row.smtp_from
                     if row.smtp_secure is not None:
@@ -84,8 +83,6 @@ class AppriseService:
                     # but prefer DB brand? frontend_host stays env for now
             finally:
                 db.close()
-        except Exception:
-            pass
 
         self.smtp_host: str | None = smtp_host
         self.smtp_port: int = smtp_port

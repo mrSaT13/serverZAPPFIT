@@ -17,6 +17,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from core.database import Base
 
 if TYPE_CHECKING:
+    from activities.activity_comments.models import ActivityComment
     from activities.activity_laps.models import ActivityLaps
     from activities.activity_media.models import ActivityMedia
     from activities.activity_sets.models import ActivitySets

@@ -25,13 +25,53 @@ depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
-    op.add_column("server_settings", sa.Column("smtp_host", sa.String(length=255), nullable=True, comment="SMTP host for transactional email (overrides SMTP_HOST env)"))
-    op.add_column("server_settings", sa.Column("smtp_port", sa.Integer(), nullable=True, comment="SMTP port (overrides SMTP_PORT env)"))
-    op.add_column("server_settings", sa.Column("smtp_username", sa.String(length=320), nullable=True, comment="SMTP username (overrides SMTP_USERNAME env)"))
-    op.add_column("server_settings", sa.Column("smtp_password", sa.String(length=512), nullable=True, comment="SMTP password encrypted with Fernet (overrides SMTP_PASSWORD env)"))
-    op.add_column("server_settings", sa.Column("smtp_from", sa.String(length=320), nullable=True, comment="SMTP From address (overrides SMTP_FROM env)"))
-    op.add_column("server_settings", sa.Column("smtp_secure", sa.Boolean(), nullable=True, comment="Use secure SMTP (overrides SMTP_SECURE env)"))
-    op.add_column("server_settings", sa.Column("smtp_secure_type", sa.String(length=10), nullable=True, comment="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)"))
+    op.add_column(
+        "server_settings",
+        sa.Column(
+            "smtp_host",
+            sa.String(length=255),
+            nullable=True,
+            comment="SMTP host for transactional email (overrides SMTP_HOST env)",
+        ),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column("smtp_port", sa.Integer(), nullable=True, comment="SMTP port (overrides SMTP_PORT env)"),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column(
+            "smtp_username", sa.String(length=320), nullable=True, comment="SMTP username (overrides SMTP_USERNAME env)"
+        ),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column(
+            "smtp_password",
+            sa.String(length=512),
+            nullable=True,
+            comment="SMTP password encrypted with Fernet (overrides SMTP_PASSWORD env)",
+        ),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column(
+            "smtp_from", sa.String(length=320), nullable=True, comment="SMTP From address (overrides SMTP_FROM env)"
+        ),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column("smtp_secure", sa.Boolean(), nullable=True, comment="Use secure SMTP (overrides SMTP_SECURE env)"),
+    )
+    op.add_column(
+        "server_settings",
+        sa.Column(
+            "smtp_secure_type",
+            sa.String(length=10),
+            nullable=True,
+            comment="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)",
+        ),
+    )
 
 
 def downgrade() -> None:

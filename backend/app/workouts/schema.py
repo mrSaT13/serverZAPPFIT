@@ -1,6 +1,7 @@
 """Schemas for strength workouts."""
 
 from datetime import date, datetime
+
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
 
 
@@ -118,3 +119,67 @@ class WgerRoutinePreview(BaseModel):
     end: date | None = None
     days: StrictInt = 0
     is_template: bool = False
+
+
+class WorkoutStatisticsPoint(BaseModel):
+    """One ISO-week aggregate (Monday-anchored) for the workouts charts."""
+
+    week_start: date
+    sessions: StrictInt = 0
+    volume_kg: float = 0
+    sets: StrictInt = 0
+    reps: StrictInt = 0
+
+
+class WorkoutStatistics(BaseModel):
+    """Aggregated strength-training statistics for an inclusive date range."""
+
+    date_from: date
+    date_to: date
+    total_sessions: StrictInt = 0
+    total_volume_kg: float = 0
+    total_sets: StrictInt = 0
+    total_reps: StrictInt = 0
+    weeks: list[WorkoutStatisticsPoint] = []
+
+
+class AiPlanGenerateRequest(BaseModel):
+    """Free-text goal for the AI plan generator (e.g. "накачать грудные")."""
+
+    prompt: StrictStr = Field(..., min_length=3, max_length=2000)
+    language: StrictStr | None = Field(default=None, max_length=35)
+
+
+class AiStatusRead(BaseModel):
+    """Whether the shared AI provider is available for this user."""
+
+    enabled: bool = False
+    configured: bool = False
+    model: StrictStr | None = None
+
+
+class AiPlanDraftExercise(BaseModel):
+    """One AI-proposed exercise row (same wire shape as the plan editor rows)."""
+
+    day_label: StrictStr | None = Field(default=None, max_length=100)
+    name: StrictStr = Field(..., max_length=250)
+    muscle_group: StrictStr | None = Field(default=None, max_length=100)
+    wger_exercise_id: StrictInt | None = None
+    notes: StrictStr | None = Field(default=None, max_length=500)
+    target_sets: StrictInt | None = Field(default=None, ge=1)
+    target_reps: StrictStr | None = Field(default=None, max_length=50)
+    target_weight_kg: StrictFloat | None = Field(default=None, ge=0)
+    rest_s: StrictInt | None = Field(default=None, ge=0)
+
+
+class AiPlanDraft(BaseModel):
+    """A ready-to-review plan draft returned by the AI generator.
+
+    The client fills its editor with this and still sends a normal
+    ``POST /workouts`` (create) — the AI never writes to the DB itself.
+    """
+
+    name: StrictStr = Field(..., max_length=250)
+    description: StrictStr | None = Field(default=None, max_length=1000)
+    exercises: list[AiPlanDraftExercise] = []
+    model: StrictStr | None = None

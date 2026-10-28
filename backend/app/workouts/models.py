@@ -8,7 +8,8 @@ Design notes:
   server and works offline.
 """
 
-from datetime import date as date_type, datetime as datetime_type
+from datetime import date as date_type
+from datetime import datetime as datetime_type
 
 from sqlalchemy import Date, DateTime, Float, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -21,9 +22,7 @@ class WorkoutPlan(Base):
     __tablename__ = "workout_plans"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    user_id: Mapped[int] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
-    )
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     name: Mapped[str] = mapped_column(String(250), nullable=False)
     description: Mapped[str | None] = mapped_column(String(1000), nullable=True)
     # 'manual' or 'wger' (imported snapshot; ids kept for provenance only)
@@ -47,9 +46,7 @@ class WorkoutExercise(Base):
     __tablename__ = "workout_plan_exercises"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    plan_id: Mapped[int] = mapped_column(
-        ForeignKey("workout_plans.id", ondelete="CASCADE"), nullable=False, index=True
-    )
+    plan_id: Mapped[int] = mapped_column(ForeignKey("workout_plans.id", ondelete="CASCADE"), nullable=False, index=True)
     position: Mapped[int] = mapped_column(Integer, nullable=False)
     # Optional grouping (wger day / user label, e.g. "Legs", "Day 1")
     day_label: Mapped[str | None] = mapped_column(String(100), nullable=True)
@@ -70,9 +67,7 @@ class WorkoutSession(Base):
     __tablename__ = "workout_sessions"
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    user_id: Mapped[int] = mapped_column(
-        ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True
-    )
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
     plan_id: Mapped[int | None] = mapped_column(
         ForeignKey("workout_plans.id", ondelete="SET NULL"), nullable=True, index=True
     )

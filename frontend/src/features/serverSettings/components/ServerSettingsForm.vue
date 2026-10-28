@@ -459,41 +459,95 @@ watch(selectedTemplate, (templateId) => {
       <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <FormField :label="t('settings.server.email.host')">
           <template #default="{ fieldId }">
-            <Input :id="fieldId" :model-value="values.smtpHost ?? ''" type="text" placeholder="smtp.mail.ru" maxlength="255" :disabled="isSubmitting" @update:model-value="values.smtpHost = String($event).trim() || null" />
+            <Input
+              :id="fieldId"
+              :model-value="values.smtpHost ?? ''"
+              type="text"
+              placeholder="smtp.mail.ru"
+              maxlength="255"
+              :disabled="isSubmitting"
+              @update:model-value="values.smtpHost = String($event).trim() || null"
+            />
           </template>
         </FormField>
         <FormField :label="t('settings.server.email.port')">
           <template #default="{ fieldId }">
-            <Input :id="fieldId" :model-value="values.smtpPort !== null && values.smtpPort !== undefined ? String(values.smtpPort) : ''" type="number" placeholder="465" min="1" max="65535" :disabled="isSubmitting" @update:model-value="values.smtpPort = $event ? Number($event) : null" />
+            <Input
+              :id="fieldId"
+              :model-value="
+                values.smtpPort !== null && values.smtpPort !== undefined
+                  ? String(values.smtpPort)
+                  : ''
+              "
+              type="number"
+              placeholder="465"
+              min="1"
+              max="65535"
+              :disabled="isSubmitting"
+              @update:model-value="values.smtpPort = $event ? Number($event) : null"
+            />
           </template>
         </FormField>
       </div>
 
       <FormField :label="t('settings.server.email.username')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.smtpUsername ?? ''" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpUsername = String($event).trim() || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.smtpUsername ?? ''"
+            type="text"
+            placeholder="your@mail.ru"
+            maxlength="320"
+            :disabled="isSubmitting"
+            @update:model-value="values.smtpUsername = String($event).trim() || null"
+          />
         </template>
       </FormField>
 
       <FormField :label="t('settings.server.email.password')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.smtpPassword ?? ''" type="password" autocomplete="off" maxlength="512" :disabled="isSubmitting" @update:model-value="values.smtpPassword = String($event) || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.smtpPassword ?? ''"
+            type="password"
+            autocomplete="off"
+            maxlength="512"
+            :disabled="isSubmitting"
+            @update:model-value="values.smtpPassword = String($event) || null"
+          />
         </template>
       </FormField>
 
       <FormField :label="t('settings.server.email.from')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.smtpFrom ?? ''" type="text" placeholder="your@mail.ru" maxlength="320" :disabled="isSubmitting" @update:model-value="values.smtpFrom = String($event).trim() || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.smtpFrom ?? ''"
+            type="text"
+            placeholder="your@mail.ru"
+            maxlength="320"
+            :disabled="isSubmitting"
+            @update:model-value="values.smtpFrom = String($event).trim() || null"
+          />
         </template>
       </FormField>
 
-      <Switch :model-value="!!values.smtpSecure" :disabled="isSubmitting" @update:model-value="values.smtpSecure = Boolean($event)">
+      <Switch
+        :model-value="!!values.smtpSecure"
+        :disabled="isSubmitting"
+        @update:model-value="values.smtpSecure = Boolean($event)"
+      >
         {{ t('settings.server.email.secure') }}
       </Switch>
 
       <FormField :label="t('settings.server.email.secureType')">
         <template #default="{ fieldId }">
-          <Select :id="fieldId" :model-value="values.smtpSecureType ?? 'starttls'" :disabled="isSubmitting || !values.smtpSecure" @update:model-value="values.smtpSecureType = String($event) || null">
+          <Select
+            :id="fieldId"
+            :model-value="values.smtpSecureType ?? 'starttls'"
+            :disabled="isSubmitting || !values.smtpSecure"
+            @update:model-value="values.smtpSecureType = String($event) || null"
+          >
             <option value="starttls">starttls (587)</option>
             <option value="ssl">ssl (465)</option>
           </Select>
@@ -505,8 +559,20 @@ watch(selectedTemplate, (templateId) => {
       <div class="flex flex-col gap-2 rounded-input border p-3">
         <Label for="test-email-to">{{ t('settings.server.email.testTo') }}</Label>
         <div class="flex gap-2">
-          <Input id="test-email-to" v-model="testEmailTo" type="email" placeholder="test@example.com" class="flex-1" :disabled="testEmailMutation.isPending.value" />
-          <Button type="button" variant="secondary" :disabled="testEmailMutation.isPending.value || !testEmailTo.trim()" @click="sendTestEmail">
+          <Input
+            id="test-email-to"
+            v-model="testEmailTo"
+            type="email"
+            placeholder="test@example.com"
+            class="flex-1"
+            :disabled="testEmailMutation.isPending.value"
+          />
+          <Button
+            type="button"
+            variant="secondary"
+            :disabled="testEmailMutation.isPending.value || !testEmailTo.trim()"
+            @click="sendTestEmail"
+          >
             <LoaderCircle v-if="testEmailMutation.isPending.value" class="size-4 animate-spin" />
             {{ t('settings.server.email.testSend') }}
           </Button>
@@ -520,32 +586,65 @@ watch(selectedTemplate, (templateId) => {
       <p class="text-body">{{ t('settings.server.ai.subtitle') }}</p>
       <Alert kind="info">{{ t('settings.server.ai.info') }}</Alert>
 
-      <Switch :model-value="!!values.aiEnabled" :disabled="isSubmitting" @update:model-value="values.aiEnabled = Boolean($event)">
+      <Switch
+        :model-value="!!values.aiEnabled"
+        :disabled="isSubmitting"
+        @update:model-value="values.aiEnabled = Boolean($event)"
+      >
         {{ t('settings.server.ai.enabled') }}
       </Switch>
 
       <FormField :label="t('settings.server.ai.baseUrl')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.aiBaseUrl ?? ''" type="text" placeholder="https://api.openai.com/v1" maxlength="500" :disabled="isSubmitting" @update:model-value="values.aiBaseUrl = String($event).trim() || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.aiBaseUrl ?? ''"
+            type="text"
+            placeholder="https://api.openai.com/v1"
+            maxlength="500"
+            :disabled="isSubmitting"
+            @update:model-value="values.aiBaseUrl = String($event).trim() || null"
+          />
         </template>
       </FormField>
 
       <FormField :label="t('settings.server.ai.model')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.aiModel ?? ''" type="text" placeholder="gpt-4o-mini" maxlength="100" :disabled="isSubmitting" @update:model-value="values.aiModel = String($event).trim() || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.aiModel ?? ''"
+            type="text"
+            placeholder="gpt-4o-mini"
+            maxlength="100"
+            :disabled="isSubmitting"
+            @update:model-value="values.aiModel = String($event).trim() || null"
+          />
         </template>
       </FormField>
 
       <FormField :label="t('settings.server.ai.apiKey')">
         <template #default="{ fieldId }">
-          <Input :id="fieldId" :model-value="values.aiApiKey ?? ''" type="password" autocomplete="off" maxlength="512" :disabled="isSubmitting" @update:model-value="values.aiApiKey = String($event) || null" />
+          <Input
+            :id="fieldId"
+            :model-value="values.aiApiKey ?? ''"
+            type="password"
+            autocomplete="off"
+            maxlength="512"
+            :disabled="isSubmitting"
+            @update:model-value="values.aiApiKey = String($event) || null"
+          />
         </template>
       </FormField>
 
       <div class="flex flex-col gap-2 rounded-input border p-3">
         <Label>{{ t('settings.server.ai.testTitle') }}</Label>
         <div class="flex gap-2">
-          <Button type="button" variant="secondary" :disabled="testAiMutation.isPending.value" @click="testAi">
+          <Button
+            type="button"
+            variant="secondary"
+            :disabled="testAiMutation.isPending.value"
+            @click="testAi"
+          >
             <LoaderCircle v-if="testAiMutation.isPending.value" class="size-4 animate-spin" />
             {{ t('settings.server.ai.testSend') }}
           </Button>

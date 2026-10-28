@@ -17,9 +17,10 @@ if str(_APP_DIR) not in sys.path:
 os.environ.setdefault("DB_PASSWORD", "seed-placeholder")
 os.environ.setdefault("SECRET_KEY", "seed-placeholder")
 
+from sqlalchemy.orm import Session  # noqa: E402
+
 import workouts.exercise_catalog as exercise_catalog  # noqa: E402
 from core.database import engine  # noqa: E402
-from sqlalchemy.orm import Session  # noqa: E402
 
 
 def main() -> int:

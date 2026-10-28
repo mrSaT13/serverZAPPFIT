@@ -1,6 +1,10 @@
 ﻿<script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { fetchTrainingMetrics, formLabel, type TrainingMetrics } from '@/features/training/services/pmc'
+import {
+  fetchTrainingMetrics,
+  formLabel,
+  type TrainingMetrics,
+} from '@/features/training/services/pmc'
 import { Card } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 
@@ -18,7 +22,12 @@ onMounted(async () => {
   }
 })
 
-function ctlLabel(v:number){ if(v<30) return 'База'; if(v<60) return 'Строит.'; if(v<100) return 'На пик'; return 'Высокая' }
+function ctlLabel(v: number) {
+  if (v < 30) return 'База'
+  if (v < 60) return 'Строит.'
+  if (v < 100) return 'На пик'
+  return 'Высокая'
+}
 </script>
 
 <template>
@@ -48,9 +57,17 @@ function ctlLabel(v:number){ if(v<30) return 'База'; if(v<60) return 'Стр
       </div>
       <div class="text-hint">TSS сегодня: {{ metrics.tssToday.toFixed(0) }}</div>
       <div class="flex gap-1 items-end h-12">
-        <div v-for="p in metrics.points.slice(-30)" :key="p.date" class="flex-1 bg-primary/70 rounded-t" :style="{ height: (Math.min(p.tss,100)/100*48)+'px' }" :title="p.date + ': ' + p.tss" />
+        <div
+          v-for="p in metrics.points.slice(-30)"
+          :key="p.date"
+          class="flex-1 bg-primary/70 rounded-t"
+          :style="{ height: (Math.min(p.tss, 100) / 100) * 48 + 'px' }"
+          :title="p.date + ': ' + p.tss"
+        />
       </div>
-      <div class="text-hint">30 дней TSS — высота до 100. CTL/ATL — экспоненциальное сглаживание.</div>
+      <div class="text-hint">
+        30 дней TSS — высота до 100. CTL/ATL — экспоненциальное сглаживание.
+      </div>
     </template>
   </Card>
 </template>

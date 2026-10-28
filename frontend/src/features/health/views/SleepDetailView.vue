@@ -107,9 +107,12 @@ const vitals = computed(() => {
   if (entry.lowestSpo2 !== null) push('health.sleep.detail.lowestSpo2', `${entry.lowestSpo2} %`)
   if (entry.highestSpo2 !== null) push('health.sleep.detail.highestSpo2', `${entry.highestSpo2} %`)
   if (entry.avgRespiration !== null) push('health.sleep.respirationAvg', `${entry.avgRespiration}`)
-  if (entry.lowestRespiration !== null) push('health.sleep.respirationMin', `${entry.lowestRespiration}`)
-  if (entry.highestRespiration !== null) push('health.sleep.respirationMax', `${entry.highestRespiration}`)
-  if (entry.avgSleepStress !== null) push('health.sleep.detail.avgSleepStress', String(entry.avgSleepStress))
+  if (entry.lowestRespiration !== null)
+    push('health.sleep.respirationMin', `${entry.lowestRespiration}`)
+  if (entry.highestRespiration !== null)
+    push('health.sleep.respirationMax', `${entry.highestRespiration}`)
+  if (entry.avgSleepStress !== null)
+    push('health.sleep.detail.avgSleepStress', String(entry.avgSleepStress))
   if (entry.awakeCount !== null) push('health.sleep.detail.awakeCount', String(entry.awakeCount))
   push(
     'health.sleep.detail.skinTempDeviation',
@@ -218,7 +221,10 @@ function goBack() {
             <div class="h-2 overflow-hidden rounded-full bg-muted">
               <div
                 class="h-full rounded-full"
-                :style="{ width: `${Math.min(row.share, 100)}%`, backgroundColor: STAGE_COLORS[row.key] }"
+                :style="{
+                  width: `${Math.min(row.share, 100)}%`,
+                  backgroundColor: STAGE_COLORS[row.key],
+                }"
               />
             </div>
           </div>
@@ -248,9 +254,10 @@ function goBack() {
                 weekStats.avgTotalSleepSeconds !== null
                   ? formatHoursMinutes(Math.round(weekStats.avgTotalSleepSeconds))
                   : '–',
-              score: weekStats.avgSleepScoreOverall !== null
-                ? Math.round(weekStats.avgSleepScoreOverall)
-                : '–',
+              score:
+                weekStats.avgSleepScoreOverall !== null
+                  ? Math.round(weekStats.avgSleepScoreOverall)
+                  : '–',
             })
           }}
         </p>

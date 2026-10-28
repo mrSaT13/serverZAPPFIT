@@ -700,6 +700,19 @@
     "needProduct": "Enter a product name",
     "manualBarcodePrompt": "Enter barcode manually:",
     "wgerHint": "wger: set URL + API key in the Integrations card (key is Fernet-encrypted on the server). The basic diary works without wger.",
+    "trend": {
+      "title": "Nutrition trends",
+      "rangeDays": "{days} days",
+      "calories": "Daily calories",
+      "caloriesSeries": "Intake (kcal)",
+      "burnedSeries": "Burned (kcal)",
+      "macros": "Daily macros",
+      "proteinSeries": "Protein (g)",
+      "carbsSeries": "Carbs (g)",
+      "fatSeries": "Fat (g)",
+      "gramsShort": "g",
+      "empty": "No entries in the selected period."
+    },
     "assistant": {
       "title": "AI assistant",
       "greeting": "Hi! Ask me anything about your nutrition — I can see your logged meals, workouts, weight, sleep and hydration.",

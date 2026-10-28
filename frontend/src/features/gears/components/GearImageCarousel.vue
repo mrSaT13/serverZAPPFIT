@@ -58,7 +58,11 @@ async function onFileChange(e: Event): Promise<void> {
   try {
     const fd = new FormData()
     fd.append('file', file)
-    await apiFetch(`/gear_images/upload/gear/${props.gearId}`, { method: 'POST', body: fd, responseType: 'void' })
+    await apiFetch(`/gear_images/upload/gear/${props.gearId}`, {
+      method: 'POST',
+      body: fd,
+      responseType: 'void',
+    })
     toasts.success(t('gears.images.uploadSuccess'))
     emit('uploaded')
   } catch {
@@ -75,7 +79,8 @@ async function deleteCurrent(): Promise<void> {
   try {
     await apiFetch(`/gear_images/${img.id}`, { method: 'DELETE', responseType: 'void' })
     emit('deleted', img.id)
-    if (current.value >= props.images.length - 1) current.value = Math.max(0, props.images.length - 2)
+    if (current.value >= props.images.length - 1)
+      current.value = Math.max(0, props.images.length - 2)
     toasts.success(t('gears.images.deleteSuccess'))
   } catch {
     toasts.error(t('gears.images.deleteError'))
@@ -89,7 +94,13 @@ async function deleteCurrent(): Promise<void> {
       <h3 class="text-card-heading flex items-center gap-2">
         <ImageIcon class="size-4" /> {{ t('gears.images.title') }}
       </h3>
-      <Button v-if="canEdit" size="sm" variant="outline" :disabled="uploading" @click="fileInput?.click()">
+      <Button
+        v-if="canEdit"
+        size="sm"
+        variant="outline"
+        :disabled="uploading"
+        @click="fileInput?.click()"
+      >
         <Upload class="size-4" /> {{ t('gears.images.add') }}
       </Button>
       <input ref="fileInput" type="file" accept="image/*" class="hidden" @change="onFileChange" />
@@ -101,13 +112,25 @@ async function deleteCurrent(): Promise<void> {
 
     <div v-else class="relative">
       <div class="aspect-[16/10] bg-muted flex items-center justify-center overflow-hidden">
-        <img :src="resolveUrl(currentImage!)" :alt="t('gears.images.alt')" class="h-full w-full object-cover" />
+        <img
+          :src="resolveUrl(currentImage!)"
+          :alt="t('gears.images.alt')"
+          class="h-full w-full object-cover"
+        />
       </div>
 
-      <button v-if="images.length > 1" class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white" @click="prev">
+      <button
+        v-if="images.length > 1"
+        class="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+        @click="prev"
+      >
         <ChevronLeft class="size-5" />
       </button>
-      <button v-if="images.length > 1" class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white" @click="next">
+      <button
+        v-if="images.length > 1"
+        class="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+        @click="next"
+      >
         <ChevronRight class="size-5" />
       </button>
 

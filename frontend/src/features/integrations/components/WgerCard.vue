@@ -17,48 +17,79 @@ const enabled = ref(false)
 const loading = ref(true)
 const saving = ref(false)
 
-async function load(){
-  loading.value=true
-  try{
-    const data = await apiFetch<{ wger_base_url: string | null; wger_enabled: boolean }>('/nutrition/wger/settings')
+async function load() {
+  loading.value = true
+  try {
+    const data = await apiFetch<{ wger_base_url: string | null; wger_enabled: boolean }>(
+      '/nutrition/wger/settings',
+    )
     baseUrl.value = data.wger_base_url ?? ''
     apiKey.value = ''
     enabled.value = !!data.wger_enabled
-  }catch{ } finally{ loading.value=false }
+  } catch {
+  } finally {
+    loading.value = false
+  }
 }
-async function save(){
-  saving.value=true
-  try{
-    await apiFetch('/nutrition/wger/settings', { method:'PUT', body: JSON.stringify({ wger_base_url: baseUrl.value || null, wger_api_key: apiKey.value || null, wger_enabled: enabled.value }) })
+async function save() {
+  saving.value = true
+  try {
+    await apiFetch('/nutrition/wger/settings', {
+      method: 'PUT',
+      body: JSON.stringify({
+        wger_base_url: baseUrl.value || null,
+        wger_api_key: apiKey.value || null,
+        wger_enabled: enabled.value,
+      }),
+    })
     toasts.success(t('settings.integrations.wger.saved'))
-  }catch{ toasts.error(t('settings.integrations.saveFailed')) } finally{ saving.value=false }
+  } catch {
+    toasts.error(t('settings.integrations.saveFailed'))
+  } finally {
+    saving.value = false
+  }
 }
-async function test(){
-  try{
-    await apiFetch('/nutrition/wger/test', { method:'POST', body: JSON.stringify({ wger_base_url: baseUrl.value, wger_api_key: apiKey.value || null }) })
+async function test() {
+  try {
+    await apiFetch('/nutrition/wger/test', {
+      method: 'POST',
+      body: JSON.stringify({ wger_base_url: baseUrl.value, wger_api_key: apiKey.value || null }),
+    })
     toasts.success(t('settings.integrations.wger.testOk'))
-  }catch(e: unknown){ toasts.error(e instanceof Error ? e.message : t('settings.integrations.wger.testFailed')) }
+  } catch (e: unknown) {
+    toasts.error(e instanceof Error ? e.message : t('settings.integrations.wger.testFailed'))
+  }
 }
 onMounted(load)
 </script>
 <template>
   <Card class="flex flex-col gap-3 p-4">
     <div class="flex items-center gap-3">
-      <img :src="INTEGRATION_LOGOS.wger" alt="Wger" class="size-10 rounded-full object-contain bg-white p-1" />
+      <img
+        :src="INTEGRATION_LOGOS.wger"
+        alt="Wger"
+        class="size-10 rounded-full object-contain bg-white p-1"
+      />
       <div class="flex flex-col">
         <span class="font-medium">Wger</span>
-        <span class="text-sm text-muted-foreground">{{ t('settings.integrations.wger.subtitle') }}</span>
+        <span class="text-sm text-muted-foreground">{{
+          t('settings.integrations.wger.subtitle')
+        }}</span>
       </div>
       <img :src="INTEGRATION_LOGOS.wgerSvg" alt="" class="ml-auto h-8 w-auto opacity-80" />
     </div>
-    <div v-if="loading" class="text-sm text-muted-foreground">{{ t('settings.integrations.wger.loading') }}</div>
+    <div v-if="loading" class="text-sm text-muted-foreground">
+      {{ t('settings.integrations.wger.loading') }}
+    </div>
     <template v-else>
       <div class="flex flex-col gap-2">
         <Label>Base URL</Label>
         <Input v-model="baseUrl" placeholder="https://wger.de/api/v2" />
         <Label>API Key (Token)</Label>
         <Input v-model="apiKey" type="password" placeholder="wger token" />
-        <label class="flex items-center gap-2 text-sm"><input type="checkbox" v-model="enabled" /> Enabled</label>
+        <label class="flex items-center gap-2 text-sm"
+          ><input type="checkbox" v-model="enabled" /> Enabled</label
+        >
       </div>
       <div class="flex gap-2">
         <Button :disabled="saving" @click="save">Save</Button>
@@ -67,4 +98,3 @@ onMounted(load)
     </template>
   </Card>
 </template>
-

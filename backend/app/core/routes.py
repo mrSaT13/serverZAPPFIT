@@ -28,7 +28,6 @@ import garmin.router as garmin_router
 import gears.gear.router as gears_router
 import gears.gear_components.router as gear_components_router
 import gears.gear_images.router as gear_images_router
-import nutrition.router as nutrition_router
 import health.health_fasting.router as health_fasting_router
 import health.health_poop.router as health_poop_router
 import health.health_sleep.router as health_sleep_router
@@ -38,6 +37,7 @@ import health.health_water.router as health_water_router
 import health.health_weight.router as health_weight_router
 import health.router as health_router
 import notifications.router as notifications_router
+import nutrition.router as nutrition_router
 import server_settings.public_router as server_settings_public_router
 import server_settings.router as server_settings_router
 import strava.router as strava_router
