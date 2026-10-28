@@ -228,7 +228,16 @@ async def generate_plan(
     model: str | None = None,
 ) -> workouts_schema.AiPlanDraft:
     """Full pipeline: catalog excerpt → LLM → validated ``AiPlanDraft``."""
-    excerpt = build_catalog_excerpt(db, prompt, language)
+    try:
+        excerpt = build_catalog_excerpt(db, prompt, language)
+    except FileNotFoundError as e:
+        # Snapshot missing (image built without backend/assets) would
+        # surface as a raw HTTP 500 — turn it into an actionable message.
+        raise AiPlanError(
+            "Exercise catalog is not bundled with this server — update the server image and restart the container"
+        ) from e
+    if not excerpt:
+        raise AiPlanError("Exercise catalog is empty — restart the server to re-seed it")
     catalog_text = "\n".join(excerpt)
     user_message = (
         f"User request: {prompt.strip()}\n\n"
