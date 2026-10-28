@@ -306,6 +306,14 @@ def _resolve_upload_path(upload_dir: str, filename: str) -> Path:
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Invalid filename",
         ) from err
+    if file_path == upload_root:
+        # Whitespace-only names (e.g. " ") normalise to the directory
+        # itself on Windows (trailing-space stripping) — reject instead
+        # of returning the upload root as a "file" path.
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid filename",
+        )
     return file_path
 
 
