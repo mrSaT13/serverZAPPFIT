@@ -83,6 +83,10 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY --chown=${UID}:${GID} backend/app ./
 
+# Catalog snapshot for the exercise picker + AI planner (seeded at startup;
+# the AI plan endpoint crashes with 500 and the picker stays empty without it)
+COPY --chown=${UID}:${GID} backend/assets ./assets
+
 # --- Entrypoint ---
 COPY --chown=${UID}:${GID} docker/start.sh /docker-entrypoint.d/start.sh
 

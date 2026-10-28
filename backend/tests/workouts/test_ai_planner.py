@@ -130,6 +130,27 @@ class TestCatalogExcerpt:
         assert ids == {2}
 
 
+class TestGeneratePlanGuards:
+    """The catalog guards must yield actionable AiPlanErrors, not HTTP 500s."""
+
+    async def test_missing_snapshot_raises_actionable_error(self, mock_db) -> None:
+        settings = MagicMock()
+        with (
+            patch.object(exercise_catalog, "load_snapshot", side_effect=FileNotFoundError),
+            pytest.raises(workouts_ai_planner.AiPlanError, match="not bundled"),
+        ):
+            await workouts_ai_planner.generate_plan(mock_db, settings, "накачать бицепсы", "ru")
+
+    async def test_empty_catalog_raises_actionable_error(self, mock_db) -> None:
+        settings = MagicMock()
+        with (
+            patch.object(exercise_catalog, "load_snapshot", return_value={"categories": [], "equipment": []}),
+            patch.object(workouts_ai_planner, "_catalog_rows", return_value=[]),
+            pytest.raises(workouts_ai_planner.AiPlanError, match="empty"),
+        ):
+            await workouts_ai_planner.generate_plan(mock_db, settings, "накачать бицепсы", "ru")
+
+
 class TestAiPlanDraftShape:
     def test_draft_fields_default_none(self, mock_db) -> None:
         """The draft rows must carry every field the plan editor needs."""
