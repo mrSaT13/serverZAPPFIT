@@ -20,7 +20,7 @@ dependencies = [
     "gpxpy>=1.6.2",
     "tcxreader>=0.4.11",
     "alembic>=1.18.4",
-    "joserfc>=1.6.4",
+    "joserfc>=1.6.8,<1.7",  # 1.7+ требует sub:StringOrURI, а приложение кладёт int user.id (сломал бы вход); 1.6.8 = фиксы CVE-2026-48990/CVE-2026-49852
     "fitdecode>=0.11.0",
     "numpy>=2.4.4",
     "geopy>=2.4.1",
