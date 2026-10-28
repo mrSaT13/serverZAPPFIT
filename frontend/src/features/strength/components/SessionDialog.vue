@@ -112,7 +112,9 @@ async function save(): Promise<void> {
   <Dialog v-model:open="open">
     <DialogContent class="max-w-2xl">
       <DialogHeader>
-        <DialogTitle>{{ props.plan ? t('workouts.session.start') : t('workouts.session.logEmpty') }}</DialogTitle>
+        <DialogTitle>{{
+          props.plan ? t('workouts.session.start') : t('workouts.session.logEmpty')
+        }}</DialogTitle>
       </DialogHeader>
 
       <div class="grid grid-cols-3 gap-2">
@@ -141,7 +143,12 @@ async function save(): Promise<void> {
             <Input v-model="row.exerciseName" :placeholder="t('workouts.session.exercise')" />
           </div>
           <Input v-model="row.setNo" type="number" :placeholder="t('workouts.plan.sets')" />
-          <Input v-model="row.weightKg" type="number" step="0.1" :placeholder="t('workouts.plan.weightKg')" />
+          <Input
+            v-model="row.weightKg"
+            type="number"
+            step="0.1"
+            :placeholder="t('workouts.plan.weightKg')"
+          />
           <Input v-model="row.reps" type="number" :placeholder="t('workouts.plan.reps')" />
           <Button size="sm" variant="ghost" class="text-destructive" @click="rows.splice(idx, 1)">
             <Trash2 class="size-4" />

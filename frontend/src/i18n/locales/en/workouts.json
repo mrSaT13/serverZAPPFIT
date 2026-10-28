@@ -4,6 +4,7 @@
   "sections": {
     "plans": "Plans",
     "history": "History",
+    "charts": "Charts",
     "progress": "Progress"
   },
   "plansEmpty": {
@@ -17,6 +18,30 @@
   "progressEmpty": {
     "title": "Nothing to track yet",
     "description": "Progress appears after your first logged session."
+  },
+  "charts": {
+    "volume": "Weekly volume",
+    "sessions": "Weekly sessions",
+    "volumeSeries": "Volume (kg)",
+    "sessionsSeries": "Sessions",
+    "oneRm": "Exercise progress",
+    "oneRmSeries": "1RM (est.)",
+    "weightSeries": "Set weight",
+    "empty": {
+      "title": "No charts yet",
+      "description": "Log your first session — weekly volume, sessions and 1RM progress will appear here."
+    }
+  },
+  "ai": {
+    "button": "Create with AI",
+    "title": "AI plan generation",
+    "promptPlaceholder": "e.g. I want to build my chest, 3 days a week, I have a barbell and dumbbells",
+    "generate": "Generate plan",
+    "generating": "Building your plan…",
+    "applied": "Plan ready — review the exercises and save.",
+    "error": "AI could not build a plan",
+    "notConfigured": "The AI assistant is not configured on this server. Ask your administrator to enable it in server settings.",
+    "hint": "The AI sees the built-in exercise catalog and picks exercises and equipment to match your request."
   },
   "plan": {
     "createTitle": "New plan",
@@ -42,7 +67,9 @@
     "searchPlaceholder": "Search exercises…",
     "allCategories": "All categories",
     "allEquipment": "All equipment",
-    "empty": "Nothing found — try another query."
+    "empty": "Nothing found — try another query.",
+    "notSeeded": "The exercise catalog is not loaded on this server yet. Update the server to the latest version and restart the container — the catalog seeds automatically on startup.",
+    "loadError": "Failed to load the exercise catalog."
   },
   "session": {
     "start": "Start session",

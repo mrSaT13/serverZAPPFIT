@@ -32,9 +32,12 @@ export async function fetchActivityComments(
   activityId: number,
   signal?: AbortSignal,
 ): Promise<ActivityComment[]> {
-  const dtos = await apiFetch<ActivityCommentDto[]>(`/activities_comments/activity_id/${activityId}`, {
-    signal,
-  })
+  const dtos = await apiFetch<ActivityCommentDto[]>(
+    `/activities_comments/activity_id/${activityId}`,
+    {
+      signal,
+    },
+  )
   return (dtos ?? []).map(mapActivityComment)
 }
 

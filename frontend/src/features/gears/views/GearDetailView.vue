@@ -58,7 +58,8 @@ interface GearImageDto {
 const queryClient = useQueryClient()
 const imagesQuery = useQuery({
   queryKey: computed(() => queryKeys.gears.images(gearId.value ?? -1)),
-  queryFn: ({ signal }) => apiFetch<GearImageDto[]>(`/gear_images/gear/${gearId.value}`, { signal }),
+  queryFn: ({ signal }) =>
+    apiFetch<GearImageDto[]>(`/gear_images/gear/${gearId.value}`, { signal }),
   enabled: computed(() => gearId.value !== null),
 })
 const gearImages = computed(() => imagesQuery.data.value ?? [])
@@ -218,8 +219,20 @@ function confirmDelete(): void {
            (gear info | components | activities) from lg up. -->
       <div class="grid gap-3 lg:grid-cols-12 lg:items-start">
         <div class="lg:col-span-4 flex flex-col gap-3">
-          <GearInfoCard :gear="gear" :units="units" :currency="currency" @edit="openEdit" @delete="openDelete" />
-          <GearImageCarousel :gear-id="gear.id" :images="gearImages" :can-edit="true" @uploaded="onImagesChange" @deleted="onImagesChange" />
+          <GearInfoCard
+            :gear="gear"
+            :units="units"
+            :currency="currency"
+            @edit="openEdit"
+            @delete="openDelete"
+          />
+          <GearImageCarousel
+            :gear-id="gear.id"
+            :images="gearImages"
+            :can-edit="true"
+            @uploaded="onImagesChange"
+            @deleted="onImagesChange"
+          />
         </div>
         <GearComponentsPanel
           class="lg:col-span-4"

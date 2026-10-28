@@ -1,7 +1,14 @@
+# ruff: noqa: E402  (the models-import loop below must run before app imports)
 """Tests for profile data import service."""
 
 import json
+
+# Import every models.py under app/ exactly like alembic/env.py does, so all
+# ``Users`` relationships (SignUpToken, PasswordResetToken, ...) resolve and
+# SQLAlchemy mapper configuration succeeds when this file runs in isolation.
+import pathlib as _pathlib
 import zipfile
+from importlib import import_module as _import_module
 from io import BytesIO
 from unittest.mock import AsyncMock, MagicMock, PropertyMock, patch
 
@@ -11,11 +18,6 @@ from sqlalchemy.orm import Session
 
 import users.users_profile.import_service as profile_import_service
 import users.users_profile.utils as profile_utils
-# Import every models.py under app/ exactly like alembic/env.py does, so all
-# ``Users`` relationships (SignUpToken, PasswordResetToken, ...) resolve and
-# SQLAlchemy mapper configuration succeeds when this file runs in isolation.
-import pathlib as _pathlib
-from importlib import import_module as _import_module
 
 _app_dir = _pathlib.Path(profile_import_service.__file__).resolve().parents[2]
 for _path in sorted(_app_dir.glob("**/models.py")):

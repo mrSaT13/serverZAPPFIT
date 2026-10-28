@@ -55,4 +55,3 @@ const profile = computed(() => profileQuery.data.value ?? null)
     </template>
   </div>
 </template>
-

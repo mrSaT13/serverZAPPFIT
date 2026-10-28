@@ -18,7 +18,11 @@ def get_gear_images(gear_id: int, token_user_id: int, db: Session) -> list[gear_
     gear = gears_crud.get_gear_user_by_id(token_user_id, gear_id, db)
     if not gear:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Gear not found")
-    stmt = select(gear_images_models.GearImage).where(gear_images_models.GearImage.gear_id == gear_id).order_by(gear_images_models.GearImage.created_at.desc())
+    stmt = (
+        select(gear_images_models.GearImage)
+        .where(gear_images_models.GearImage.gear_id == gear_id)
+        .order_by(gear_images_models.GearImage.created_at.desc())
+    )
     return list(db.scalars(stmt).all())
 
 
@@ -55,4 +59,4 @@ def delete_gear_image(image_id: int, token_user_id: int, db: Session) -> None:
         except HTTPException as err:
             core_logger.print_to_log(f"Refused to remove gear image outside dir id {image_id}: {err.detail}", "warning")
         except Exception:
-            pass
+            core_logger.print_to_log(f"Failed to remove gear image file for id {image_id}", "warning")

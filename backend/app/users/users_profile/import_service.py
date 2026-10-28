@@ -11,6 +11,7 @@ Key Features:
 - Memory and timeout monitoring
 """
 
+import contextlib
 import json
 import os
 import time
@@ -138,21 +139,18 @@ def _parse_legacy_value(raw: str) -> Any:
 
     # zoneinfo.ZoneInfo(...) → string
     if raw.startswith("zoneinfo.ZoneInfo("):
-        try:
+        with contextlib.suppress(Exception):
             inner = raw[len("zoneinfo.ZoneInfo(") : -1]
             if "key='" in inner:
                 start = inner.index("key='") + 5
                 end = inner.index("'", start)
                 return inner[start:end]
-        except Exception:
-            pass
         return "UTC"
 
     # Lists and dicts
     if raw.startswith("[") or raw.startswith("{"):
         try:
             import ast
-
             import re
 
             cleaned = re.sub(r"np\.float64\(([^)]+)\)", r"\1", raw)
@@ -194,7 +192,6 @@ _COMPOUND_PREFIXES = (
 
 def _find_matching_close(text: str, start: int, opener: str) -> int:
     """Find index AFTER the matching closing bracket/paren."""
-    closer = {"(": ")", "[": "]", "{": "}"}[opener]
     depth = 1
     i = start + 1
     length = len(text)
@@ -741,11 +738,11 @@ class ImportService:
             }
 
             # Map old Endurain language codes to valid ZAPFIT values.
-            _LEGACY_LANG_MAP = {"us": "en", "uk-UA": "uk", "pt-BR": "pt-PT"}
+            _legacy_lang_map = {"us": "en", "uk-UA": "uk", "pt-BR": "pt-PT"}
             if "preferred_language" in sanitized:
                 lang = sanitized["preferred_language"]
-                if lang in _LEGACY_LANG_MAP:
-                    sanitized["preferred_language"] = _LEGACY_LANG_MAP[lang]
+                if lang in _legacy_lang_map:
+                    sanitized["preferred_language"] = _legacy_lang_map[lang]
 
             profile_payload = users_schema.ProfileUpdate.model_validate(sanitized)
             await users_crud.edit_profile_user(self.user_id, profile_payload, self.db)

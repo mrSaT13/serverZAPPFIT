@@ -1,7 +1,5 @@
 """Validators for gear images."""
 
-from fastapi import HTTPException, status
-
 import core.dependencies as core_dependencies
 
 

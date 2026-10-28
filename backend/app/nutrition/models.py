@@ -1,8 +1,9 @@
 """Nutrition ORM models: meal_logs + user wger settings."""
 
-from datetime import date as date_type, datetime as datetime_type
+from datetime import date as date_type
+from datetime import datetime as datetime_type
 
-from sqlalchemy import Date, DateTime, ForeignKey, String, Float, Integer
+from sqlalchemy import Date, DateTime, Float, ForeignKey, String
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
 
@@ -23,7 +24,9 @@ class MealLog(Base):
     fat: Mapped[float | None] = mapped_column(Float, nullable=True)
     portion_g: Mapped[float | None] = mapped_column(Float, nullable=True)
     off_barcode: Mapped[str | None] = mapped_column(String(50), nullable=True, index=True)
-    created_at: Mapped[datetime_type] = mapped_column(DateTime(timezone=True), server_default=func.now(), nullable=False)
+    created_at: Mapped[datetime_type] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
 
 
 class UserNutritionSettings(Base):
@@ -35,4 +38,6 @@ class UserNutritionSettings(Base):
     wger_base_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     wger_api_key: Mapped[str | None] = mapped_column(String(512), nullable=True, comment="Fernet encrypted")
     wger_enabled: Mapped[bool] = mapped_column(default=False, nullable=False)
-    updated_at: Mapped[datetime_type] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False)
+    updated_at: Mapped[datetime_type] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), onupdate=func.now(), nullable=False
+    )

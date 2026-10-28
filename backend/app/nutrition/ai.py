@@ -13,18 +13,25 @@ Design:
   connectivity test lives in server_settings.router (/ai/test).
 """
 
+# Ensure every ORM model is registered before any query runs: build_context
+# touches Activity, whose relationships (ActivityComment, ActivityMedia, ...)
+# only resolve once those classes are imported. Mirrors alembic/env.py and is
+# a no-op when the app already imported everything through the routers.
+import pathlib as _pathlib
 from dataclasses import dataclass
-from datetime import date as date_type, timedelta
+from datetime import date as date_type
+from datetime import timedelta
+from importlib import import_module as _import_module
 from typing import Any
 
 import httpx
-from sqlalchemy import func as sa_func, select
+from sqlalchemy import func as sa_func
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 import activities.activity.crud as activities_crud
 import core.cryptography as core_cryptography
 import core.logger as core_logger
-import server_settings.models as server_settings_models
 import users.users.models as users_models
 import users.users_goals.models as users_goals_models
 from activities.activity.models import Activity
@@ -34,13 +41,6 @@ from health.health_water.models import HealthWater
 from health.health_weight.models import HealthWeight
 from nutrition.models import MealLog
 from server_settings.models import ServerSettings
-
-# Ensure every ORM model is registered before any query runs: build_context
-# touches Activity, whose relationships (ActivityComment, ActivityMedia, ...)
-# only resolve once those classes are imported. Mirrors alembic/env.py and is
-# a no-op when the app already imported everything through the routers.
-import pathlib as _pathlib
-from importlib import import_module as _import_module
 
 _app_dir = _pathlib.Path(__file__).resolve().parents[1]
 for _path in sorted(_app_dir.glob("**/models.py")):
@@ -154,8 +154,10 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
     # --- demographics ---
     if user.birthdate:
         age = today.year - user.birthdate.year - ((today.month, today.day) < (user.birthdate.month, user.birthdate.day))
-        lines.append(f"Demographics: age {age}, gender {user.gender or 'unspecified'}"
-                     + (f", height {user.height} cm" if user.height else ""))
+        lines.append(
+            f"Demographics: age {age}, gender {user.gender or 'unspecified'}"
+            + (f", height {user.height} cm" if user.height else "")
+        )
 
     # --- goals ---
     goals = db.scalars(
@@ -194,7 +196,9 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
         lines.append(f"Logged intake per day (last {days} days, date: kcal / protein_g / carbs_g / fat_g):")
         for row in totals_rows:
             d, cals, prot, carbs, fat = row
-            lines.append(f"  {d.isoformat()}: {float(cals):.0f} / {float(prot):.0f} / {float(carbs):.0f} / {float(fat):.0f}")
+            lines.append(
+                f"  {d.isoformat()}: {float(cals):.0f} / {float(prot):.0f} / {float(carbs):.0f} / {float(fat):.0f}"
+            )
         recent = _recent_meals(db, user_id, today - timedelta(days=1))
         if recent:
             lines.append(f"Meals logged yesterday ({(today - timedelta(days=1)).isoformat()}): {recent}")
@@ -211,7 +215,9 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
     ).all()
     if acts:
         type_names = _activity_type_names(db, user_id, acts)
-        lines.append(f"Recent workouts (last {ACTIVITY_WINDOW_DAYS} days, newest first, date / sport / distance_km / minutes / kcal):")
+        lines.append(
+            f"Recent workouts (last {ACTIVITY_WINDOW_DAYS} days, newest first, date / sport / distance_km / minutes / kcal):"
+        )
         for act in acts:
             sport = type_names.get(act.activity_type, str(act.activity_type))
             minutes = round((act.total_timer_time or act.total_elapsed_time or 0) / 60)
@@ -240,12 +246,36 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
         lines.append("No weight entries in the last 14 days.")
 
     # --- sleep / hydration / steps averages ---
-    _append_average(lines, db, HealthSleep, HealthSleep.total_sleep_seconds, user_id, start,
-                    "Sleep", lambda total, n: f"{(total / n / 3600):.1f} h per night")
-    _append_average(lines, db, HealthWater, HealthWater.amount_ml, user_id, start,
-                    "Hydration", lambda total, n: f"{(total / n / 1000):.2f} l per day")
-    _append_average(lines, db, HealthSteps, HealthSteps.steps, user_id, start,
-                    "Steps", lambda total, n: f"{(total / n):.0f} per day")
+    _append_average(
+        lines,
+        db,
+        HealthSleep,
+        HealthSleep.total_sleep_seconds,
+        user_id,
+        start,
+        "Sleep",
+        lambda total, n: f"{(total / n / 3600):.1f} h per night",
+    )
+    _append_average(
+        lines,
+        db,
+        HealthWater,
+        HealthWater.amount_ml,
+        user_id,
+        start,
+        "Hydration",
+        lambda total, n: f"{(total / n / 1000):.2f} l per day",
+    )
+    _append_average(
+        lines,
+        db,
+        HealthSteps,
+        HealthSteps.steps,
+        user_id,
+        start,
+        "Steps",
+        lambda total, n: f"{(total / n):.0f} per day",
+    )
 
     return "\n".join(lines)
 
@@ -255,9 +285,7 @@ def build_context(db: Session, user_id: int, days: int = CONTEXT_WINDOW_DAYS) ->
 
 def _recent_meals(db: Session, user_id: int, day: date_type) -> str:
     """One-line listing of the meals logged on a given day."""
-    rows = db.scalars(
-        select(MealLog).where(MealLog.user_id == user_id, MealLog.date == day).order_by(MealLog.id)
-    ).all()
+    rows = db.scalars(select(MealLog).where(MealLog.user_id == user_id, MealLog.date == day).order_by(MealLog.id)).all()
     snippets: list[str] = []
     for row in rows[:MEAL_SNIPPET_LIMIT]:
         kcal = f" {row.calories:.0f} kcal" if row.calories is not None else ""
@@ -292,7 +320,9 @@ def _append_average(
         select(sa_func.sum(column), sa_func.count()).where(model.user_id == user_id, model.date >= start)
     ).one()
     if count and total:
-        lines.append(f"{label}: {format_avg(float(total), int(count))} ({count} entries in the last {CONTEXT_WINDOW_DAYS} days).")
+        lines.append(
+            f"{label}: {format_avg(float(total), int(count))} ({count} entries in the last {CONTEXT_WINDOW_DAYS} days)."
+        )
 
 
 def func_date(column: Any) -> Any:

@@ -77,7 +77,10 @@ async def upload_gear_image(
     gear_images_crud.get_gear_images(gear_id, token_user_id, db)
     filename = _safe_gear_filename(gear_id, file.filename)
     file_path = await core_file_uploads.save_validated_upload(
-        file, kind=core_file_uploads.UploadKind.IMAGE, upload_dir=core_config.settings.GEAR_IMAGES_DIR, filename=filename
+        file,
+        kind=core_file_uploads.UploadKind.IMAGE,
+        upload_dir=core_config.settings.GEAR_IMAGES_DIR,
+        filename=filename,
     )
     try:
         img = gear_images_crud.create_gear_image(gear_id, file_path, db)

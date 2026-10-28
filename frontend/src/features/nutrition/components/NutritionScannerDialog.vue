@@ -38,29 +38,46 @@ async function start() {
 
 async function stop() {
   if (scanner && running) {
-    try { await scanner.stop(); } catch {}
-    try { scanner.clear(); } catch {}
+    try {
+      await scanner.stop()
+    } catch {}
+    try {
+      scanner.clear()
+    } catch {}
     running = false
     scanner = null
   }
 }
 
-watch(() => props.open, (v) => {
-  if (v) start()
-  else stop()
-})
+watch(
+  () => props.open,
+  (v) => {
+    if (v) start()
+    else stop()
+  },
+)
 
-onBeforeUnmount(() => { void stop() })
+onBeforeUnmount(() => {
+  void stop()
+})
 </script>
 
 <template>
   <Dialog :open="open" @update:open="(v: boolean) => emit('update:open', v)">
     <DialogContent class="max-w-[420px]">
-      <DialogHeader><DialogTitle>{{ t('health.nutrition.barcodeScanner') }}</DialogTitle></DialogHeader>
-      <div id="nutrition-scanner" class="w-full overflow-hidden rounded-input bg-black" style="min-height: 260px" />
+      <DialogHeader
+        ><DialogTitle>{{ t('health.nutrition.barcodeScanner') }}</DialogTitle></DialogHeader
+      >
+      <div
+        id="nutrition-scanner"
+        class="w-full overflow-hidden rounded-input bg-black"
+        style="min-height: 260px"
+      />
       <p v-if="error" class="text-hint text-destructive">{{ error }}</p>
       <div class="flex justify-end gap-2">
-        <Button variant="outline" @click="emit('update:open', false)">{{ t('health.nutrition.close') }}</Button>
+        <Button variant="outline" @click="emit('update:open', false)">{{
+          t('health.nutrition.close')
+        }}</Button>
       </div>
       <!-- Fallback for desktop without camera: manual entry handled in parent -->
     </DialogContent>

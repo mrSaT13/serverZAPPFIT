@@ -46,7 +46,11 @@ async def search_off(query: str, language: str = "en", page_size: int = 20) -> l
     for attempt in range(2):
         try:
             async with httpx.AsyncClient(timeout=TIMEOUT) as client:
-                r = await client.get(OFF_SEARCH_URL, params=params, headers={"User-Agent": "ZAPFIT/0.24 (https://github.com/mrSaT13/serverZAPPFIT)"})
+                r = await client.get(
+                    OFF_SEARCH_URL,
+                    params=params,
+                    headers={"User-Agent": "ZAPFIT/0.25 (https://github.com/mrSaT13/serverZAPPFIT)"},
+                )
                 r.raise_for_status()
                 data = r.json()
             break
@@ -63,16 +67,18 @@ async def search_off(query: str, language: str = "en", page_size: int = 20) -> l
         nutr = p.get("nutriments", {})
         # Prefer the localized name when the generic one is empty.
         localized_name = p.get(f"product_name_{locale}") or p.get("product_name")
-        out.append({
-            "barcode": p.get("code"),
-            "product_name": localized_name,
-            "brands": p.get("brands"),
-            "calories_100g": nutr.get("energy-kcal_100g") or nutr.get("energy_100g"),
-            "proteins_100g": nutr.get("proteins_100g"),
-            "carbs_100g": nutr.get("carbohydrates_100g"),
-            "fat_100g": nutr.get("fat_100g"),
-            "image_url": p.get("image_front_small_url"),
-        })
+        out.append(
+            {
+                "barcode": p.get("code"),
+                "product_name": localized_name,
+                "brands": p.get("brands"),
+                "calories_100g": nutr.get("energy-kcal_100g") or nutr.get("energy_100g"),
+                "proteins_100g": nutr.get("proteins_100g"),
+                "carbs_100g": nutr.get("carbohydrates_100g"),
+                "fat_100g": nutr.get("fat_100g"),
+                "image_url": p.get("image_front_small_url"),
+            }
+        )
     _search_cache[(query.lower(), locale)] = (time.monotonic(), out)
     return out
 

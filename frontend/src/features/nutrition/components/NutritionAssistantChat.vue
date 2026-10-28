@@ -8,7 +8,12 @@ import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { SafeHtml } from '@/components/federation'
 import { useToasts } from '@/composables/useToasts'
-import { aiChat, fetchAiStatus, type AiChatMessage, type AiStatus } from '@/features/nutrition/services/nutrition'
+import {
+  aiChat,
+  fetchAiStatus,
+  type AiChatMessage,
+  type AiStatus,
+} from '@/features/nutrition/services/nutrition'
 
 const { t, locale } = useI18n()
 const toasts = useToasts()

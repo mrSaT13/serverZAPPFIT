@@ -1,5 +1,7 @@
 """CRUD operations for activity comments."""
 
+from datetime import UTC
+
 from fastapi import HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -110,7 +112,7 @@ def update_comment(
     Raises:
         HTTPException: 404 if not found, 403 if not the owner.
     """
-    from datetime import datetime, timezone
+    from datetime import datetime
 
     stmt = select(comment_models.ActivityComment).where(comment_models.ActivityComment.id == comment_id)
     db_comment = db.scalars(stmt).first()
@@ -128,7 +130,7 @@ def update_comment(
         )
 
     db_comment.content = data.content
-    db_comment.updated_at = datetime.now(timezone.utc)
+    db_comment.updated_at = datetime.now(UTC)
     db.commit()
     db.refresh(db_comment)
     return db_comment

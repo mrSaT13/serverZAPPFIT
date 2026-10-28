@@ -71,7 +71,9 @@ class HealthWeightBase(BaseModel):
         use_enum_values=True,
     )
 
-    @field_validator("weight", "bmi", "body_fat", "body_water", "bone_mass", "muscle_mass", "visceral_fat", mode="before")
+    @field_validator(
+        "weight", "bmi", "body_fat", "body_water", "bone_mass", "muscle_mass", "visceral_fat", mode="before"
+    )
     @classmethod
     def _coerce_string_to_float(cls, v: object) -> object:
         """Accept numeric strings from old Endurain exports."""

@@ -10,9 +10,13 @@ import { Card } from '@/components/ui/card'
 import { ConfirmDialog } from '@/components/ui/confirm-dialog'
 import { EmptyState } from '@/components/ui/empty-state'
 import { Skeleton } from '@/components/ui/skeleton'
-import PlanDialog, { type PlanDialogSavePayload } from '@/features/strength/components/PlanDialog.vue'
+import PlanDialog, {
+  type PlanDialogSavePayload,
+} from '@/features/strength/components/PlanDialog.vue'
 import SessionDialog from '@/features/strength/components/SessionDialog.vue'
 import ImportWgerDialog from '@/features/strength/components/ImportWgerDialog.vue'
+import WorkoutWeeklyChart from '@/features/strength/components/WorkoutWeeklyChart.vue'
+import ExerciseProgressChart from '@/features/strength/components/ExerciseProgressChart.vue'
 import {
   createPlan,
   deletePlan,
@@ -20,6 +24,7 @@ import {
   fetchPlans,
   fetchProgress,
   fetchSessions,
+  fetchWorkoutStatistics,
   updatePlan,
   type WorkoutPlan,
 } from '@/features/strength/services/workouts'
@@ -29,7 +34,7 @@ import { queryKeys } from '@/services/queryKeys'
 const { t } = useI18n()
 const toasts = useToasts()
 
-const section = ref<'plans' | 'history' | 'progress'>('plans')
+const section = ref<'plans' | 'history' | 'charts' | 'progress'>('plans')
 const planDialogOpen = ref(false)
 const editingPlan = ref<WorkoutPlan | null>(null)
 const sessionDialogOpen = ref(false)
@@ -39,17 +44,26 @@ const deleteTarget = ref<WorkoutPlan | { kind: 'session'; id: number } | null>(n
 const isDeleteOpen = ref(false)
 
 const plansQuery = useQuery({ queryKey: queryKeys.workouts.plans(), queryFn: fetchPlans })
-const sessionsQuery = useQuery({ queryKey: queryKeys.workouts.sessions(), queryFn: () => fetchSessions() })
+const sessionsQuery = useQuery({
+  queryKey: queryKeys.workouts.sessions(),
+  queryFn: () => fetchSessions(),
+})
 const progressQuery = useQuery({ queryKey: queryKeys.workouts.progress(), queryFn: fetchProgress })
+const statisticsQuery = useQuery({
+  queryKey: queryKeys.workouts.statistics(),
+  queryFn: () => fetchWorkoutStatistics(),
+})
 
 const plans = computed(() => plansQuery.data.value ?? [])
 const sessions = computed(() => sessionsQuery.data.value ?? [])
 const progress = computed(() => progressQuery.data.value ?? [])
+const statistics = computed(() => statisticsQuery.data.value ?? null)
 
 function invalidate(): void {
   void plansQuery.refetch()
   void sessionsQuery.refetch()
   void progressQuery.refetch()
+  void statisticsQuery.refetch()
 }
 
 function askDelete(target: WorkoutPlan | { kind: 'session'; id: number }): void {
@@ -141,7 +155,7 @@ function planDays(plan: WorkoutPlan): string[] {
     <!-- section switch -->
     <div class="flex gap-2">
       <Button
-        v-for="s in (['plans', 'history', 'progress'] as const)"
+        v-for="s in ['plans', 'history', 'charts', 'progress'] as const"
         :key="s"
         size="sm"
         :variant="section === s ? 'secondary' : 'ghost'"
@@ -208,12 +222,18 @@ function planDays(plan: WorkoutPlan): string[] {
         <Skeleton v-for="i in 3" :key="i" class="h-14 w-full" />
       </div>
       <Card v-else-if="sessions.length" class="flex flex-col gap-1">
-        <div v-for="s in sessions" :key="s.id" class="flex items-center gap-2 rounded-input border px-3 py-2">
+        <div
+          v-for="s in sessions"
+          :key="s.id"
+          class="flex items-center gap-2 rounded-input border px-3 py-2"
+        >
           <div class="flex min-w-0 flex-col">
             <span class="text-body font-medium">{{ s.date }}</span>
             <span class="text-hint truncate">
               {{ s.sets.length }} {{ t('workouts.setsShort') }}
-              <template v-if="s.duration_min"> · {{ s.duration_min }} {{ t('workouts.minutesShort') }}</template>
+              <template v-if="s.duration_min">
+                · {{ s.duration_min }} {{ t('workouts.minutesShort') }}</template
+              >
               {{ s.comment ? ' · ' + s.comment : '' }}
             </span>
           </div>
@@ -234,6 +254,23 @@ function planDays(plan: WorkoutPlan): string[] {
       />
     </template>
 
+    <!-- CHARTS -->
+    <template v-else-if="section === 'charts'">
+      <div v-if="statisticsQuery.isPending.value" class="flex flex-col gap-2">
+        <Skeleton v-for="i in 2" :key="i" class="h-64 w-full" />
+      </div>
+      <div v-else-if="(statistics?.weeks.length ?? 0) > 0" class="flex flex-col gap-3">
+        <WorkoutWeeklyChart :weeks="statistics!.weeks" metric="volume" />
+        <WorkoutWeeklyChart :weeks="statistics!.weeks" metric="sessions" />
+        <ExerciseProgressChart :progress="progress" />
+      </div>
+      <EmptyState
+        v-else
+        :title="t('workouts.charts.empty.title')"
+        :description="t('workouts.charts.empty.description')"
+      />
+    </template>
+
     <!-- PROGRESS -->
     <template v-else>
       <div v-if="progressQuery.isPending.value" class="flex flex-col gap-2">
@@ -245,14 +282,22 @@ function planDays(plan: WorkoutPlan): string[] {
             <span class="truncate text-body font-medium">{{ p.exercise_name }}</span>
             <span class="text-hint whitespace-nowrap">
               {{ p.sessions }} {{ t('workouts.sessionsShort') }}
-              <template v-if="p.best_est_1rm"> · 1RM ≈ {{ (Math.round(p.best_est_1rm * 10) / 10).toFixed(1) }} {{ t('workouts.kg') }}</template>
+              <template v-if="p.best_est_1rm">
+                · 1RM ≈ {{ (Math.round(p.best_est_1rm * 10) / 10).toFixed(1) }}
+                {{ t('workouts.kg') }}</template
+              >
             </span>
           </div>
           <template v-if="p.points.length">
             <div class="text-hint mt-0.5">
               {{ p.points[p.points.length - 1]?.date }}
-              — {{ (Math.round((p.points[p.points.length - 1]?.best_weight_kg ?? 0) * 10) / 10).toFixed(1) }} {{ t('workouts.kg') }}
-              × {{ p.points[p.points.length - 1]?.best_reps ?? 0 }}
+              —
+              {{
+                (
+                  Math.round((p.points[p.points.length - 1]?.best_weight_kg ?? 0) * 10) / 10
+                ).toFixed(1)
+              }}
+              {{ t('workouts.kg') }} × {{ p.points[p.points.length - 1]?.best_reps ?? 0 }}
             </div>
           </template>
         </div>

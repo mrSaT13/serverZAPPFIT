@@ -1,6 +1,15 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Activity, Bike, Calendar, Dumbbell, Heart, List, Search, type LucideIcon } from '@lucide/vue'
+import {
+  Activity,
+  Bike,
+  Calendar,
+  Dumbbell,
+  Heart,
+  List,
+  Search,
+  type LucideIcon,
+} from '@lucide/vue'
 
 import { useAuthStore } from '@/features/auth/stores/auth'
 

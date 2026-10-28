@@ -12,14 +12,14 @@ All requests run through a single pooled httpx.Client per import/preview call.
 """
 
 import httpx
+from sqlalchemy import select
+from sqlalchemy.orm import Session
 
 import core.cryptography as core_cryptography
 import core.logger as core_logger
 import nutrition.models as nutrition_models
 import workouts.exercise_catalog as exercise_catalog
 import workouts.schema as workouts_schema
-from sqlalchemy import select
-from sqlalchemy.orm import Session
 
 REQUEST_TIMEOUT = 20.0
 
@@ -39,15 +39,9 @@ class WgerClient:
         row = db.scalars(stmt).first()
         base_url = (row.wger_base_url or "").rstrip("/") if row else ""
         enabled = bool(row.wger_enabled) if row else False
-        token = (
-            core_cryptography.decrypt_token_fernet(row.wger_api_key)
-            if row and row.wger_api_key
-            else None
-        )
+        token = core_cryptography.decrypt_token_fernet(row.wger_api_key) if row and row.wger_api_key else None
         if not base_url or not enabled or not token:
-            raise WgerImportError(
-                "wger integration is not configured — set URL and API key in Integrations first"
-            )
+            raise WgerImportError("wger integration is not configured — set URL and API key in Integrations first")
         self._client = httpx.Client(
             base_url=f"{base_url}/api/v2",
             headers={"Authorization": f"Token {token}"},
@@ -76,9 +70,7 @@ class WgerClient:
             return data
         return data.get("results", []) if isinstance(data, dict) else []
 
-    def exercise_names(
-        self, needed_ids: set[int], lang_priority: tuple[str, ...] = ("en",)
-    ) -> dict[int, str]:
+    def exercise_names(self, needed_ids: set[int], lang_priority: tuple[str, ...] = ("en",)) -> dict[int, str]:
         """Map wger exercise id -> display name.
 
         Resolves from the local (seeded) exercise catalog first; unknown ids
@@ -88,9 +80,7 @@ class WgerClient:
         out: dict[int, str] = {}
         missing: set[int] = set()
         rows = self._session.scalars(
-            select(exercise_catalog.ExerciseCatalog).where(
-                exercise_catalog.ExerciseCatalog.wger_id.in_(needed_ids)
-            )
+            select(exercise_catalog.ExerciseCatalog).where(exercise_catalog.ExerciseCatalog.wger_id.in_(needed_ids))
         ).all()
         for row in rows:
             names = {lang: tr.get("name") for lang, tr in (row.translations or {}).items()}
@@ -156,9 +146,7 @@ def _as_float(value: str | float | None) -> float | None:
     return float(value) if isinstance(value, (int, float)) else None
 
 
-def routine_to_plan(
-    wger: WgerClient, wger_routine_id: int
-) -> workouts_schema.WorkoutPlanCreate:
+def routine_to_plan(wger: WgerClient, wger_routine_id: int) -> workouts_schema.WorkoutPlanCreate:
     """Fetch one routine structure and map it to a ZAPFIT plan payload."""
     data = wger.get(f"/routine/{wger_routine_id}/structure/")
     if not isinstance(data, dict):

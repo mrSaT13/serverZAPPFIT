@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 import auth.dependencies as auth_dependencies
 import core.database as core_database
+import core.logger as core_logger
 import workouts.exercise_catalog as exercise_catalog
 
 
@@ -31,6 +32,10 @@ class CatalogExerciseRead(BaseModel):
     equipment: list[dict] = []
     variation_group: StrictStr | None = None
     license_author: StrictStr | None = None
+    license: StrictStr | None = None
+    # language code -> alternative names (search synonyms) / technique tips
+    aliases: dict[str, list[StrictStr]] = {}
+    tips: dict[str, list[StrictStr]] = {}
 
     model_config = ConfigDict(from_attributes=True)
 
@@ -70,14 +75,50 @@ def _to_read(row: exercise_catalog.ExerciseCatalog, snapshot: dict) -> CatalogEx
         equipment=[equipment[i] for i in row.equipment_ids or [] if i in equipment],
         variation_group=row.variation_group,
         license_author=row.license_author,
+        license=row.license_name,
+        aliases=row.aliases or {},
+        tips=row.tips or {},
     )
+
+
+def _snapshot_or_none() -> dict | None:
+    """Load the bundled snapshot, or ``None`` when the asset is unavailable.
+
+    A missing snapshot used to 500 both catalog endpoints, which left the
+    picker with an empty list and no explanation. Instead the endpoints keep
+    working and ``/meta`` reports ``seedError: 1`` so the UI can show a clear
+    "catalog not seeded" hint.
+    """
+    try:
+        return exercise_catalog.load_snapshot()
+    except Exception as e:  # pragma: no cover — only hit on broken deployments
+        core_logger.print_to_log(f"Exercise catalog snapshot unavailable: {e}", "error", exc=e)
+        return None
+
+
+def _matches_query(row: exercise_catalog.ExerciseCatalog, q_lower: str) -> bool:
+    """Name match against the canonical name, every translation and aliases.
+
+    Search used to check only the canonical English name, so a Russian UI
+    query ("жим") found nothing even when a translated name existed. Aliases
+    (alternative exercise names harvested from wger) are checked as well, so
+    synonyms like "становая" / "Deadlift" find the exercise too.
+    """
+    if q_lower in row.name.lower():
+        return True
+    for tr in (row.translations or {}).values():
+        name = tr.get("name") if isinstance(tr, dict) else None
+        if name and q_lower in str(name).lower():
+            return True
+    for alias_list in (row.aliases or {}).values():
+        if any(q_lower in str(alias).lower() for alias in alias_list):
+            return True
+    return False
 
 
 @router.get("", response_model=CatalogExerciseListResponse)
 async def search_catalog(
-    _check_scopes: Annotated[
-        Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])
-    ],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
     q: Annotated[str | None, Query(max_length=100)] = None,
     category_id: Annotated[int | None, Query()] = None,
     equipment_id: Annotated[int | None, Query()] = None,
@@ -87,22 +128,24 @@ async def search_catalog(
     db: Annotated[Session, Depends(core_database.get_db)] = None,  # type: ignore[assignment]
 ) -> CatalogExerciseListResponse:
     """Search the offline exercise catalog by name/category/equipment/muscle."""
+    snapshot = _snapshot_or_none()
+    if snapshot is None:
+        return CatalogExerciseListResponse(total=0, records=[])
     filters = []
-    if q:
-        filters.append(exercise_catalog.ExerciseCatalog.name.ilike(f"%{q}%"))
     if category_id is not None:
         filters.append(exercise_catalog.ExerciseCatalog.category_id == category_id)
     # JSON columns are searched in memory (catalog is small, ~875 rows).
     rows = db.scalars(select(exercise_catalog.ExerciseCatalog).where(*filters)).all()
+    q_lower = q.lower().strip() if q else None
     matched = [
         r
         for r in rows
-        if (equipment_id is None or equipment_id in (r.equipment_ids or []))
+        if (q_lower is None or _matches_query(r, q_lower))
+        and (equipment_id is None or equipment_id in (r.equipment_ids or []))
         and (muscle_id is None or muscle_id in (r.muscle_ids or []))
     ]
     matched.sort(key=lambda r: r.name.lower())
     total = len(matched)
-    snapshot = exercise_catalog.load_snapshot()
     return CatalogExerciseListResponse(
         total=total,
         records=[_to_read(r, snapshot) for r in matched[offset : offset + limit]],
@@ -111,34 +154,31 @@ async def search_catalog(
 
 @router.get("/meta", response_model=CatalogMetaResponse)
 async def catalog_meta(
-    _check_scopes: Annotated[
-        Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])
-    ],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
     db: Annotated[Session, Depends(core_database.get_db)] = None,  # type: ignore[assignment]
 ) -> CatalogMetaResponse:
     """Filter dictionaries + counts for the picker UI (one call on page load)."""
-    snapshot = exercise_catalog.load_snapshot()
+    snapshot = _snapshot_or_none()
     total = db.scalars(select(func.count()).select_from(exercise_catalog.ExerciseCatalog)).one()
-    empty = total == 0
+    broken = snapshot is None or total == 0
     return CatalogMetaResponse(
-        counts={"exercises": int(total), "seedError": 1 if empty else 0},
-        categories=snapshot["categories"],
-        equipment=snapshot["equipment"],
-        muscles=snapshot["muscles"],
+        counts={"exercises": int(total), "seedError": 1 if broken else 0},
+        categories=snapshot["categories"] if snapshot else [],
+        equipment=snapshot["equipment"] if snapshot else [],
+        muscles=snapshot["muscles"] if snapshot else [],
     )
 
 
 @router.get("/{wger_id}", response_model=CatalogExerciseRead)
 async def get_catalog_exercise(
     wger_id: int,
-    _check_scopes: Annotated[
-        Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])
-    ],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
     db: Annotated[Session, Depends(core_database.get_db)] = None,  # type: ignore[assignment]
 ) -> CatalogExerciseRead:
     row = db.scalars(
         select(exercise_catalog.ExerciseCatalog).where(exercise_catalog.ExerciseCatalog.wger_id == wger_id)
     ).first()
-    if not row:
+    snapshot = _snapshot_or_none()
+    if not row or snapshot is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Exercise not found in catalog")
-    return _to_read(row, exercise_catalog.load_snapshot())
+    return _to_read(row, snapshot)

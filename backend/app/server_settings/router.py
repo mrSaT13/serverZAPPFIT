@@ -1,4 +1,5 @@
 import asyncio
+import contextlib
 from collections.abc import Callable
 from typing import Annotated
 
@@ -158,13 +159,13 @@ async def test_smtp_email(
     payload so the admin can verify any address (typically their own).
     """
     # Ensure we use fresh DB values (edit already cleared cache, but test may be called standalone)
-    try:
+    with contextlib.suppress(Exception):
         core_apprise.get_email_service.cache_clear()  # type: ignore[attr-defined]
-    except Exception:
-        pass
     email_service = core_apprise.get_email_service()
     if not email_service.is_smtp_configured():
-        raise HTTPException(status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="SMTP not configured. Save SMTP settings first.")
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE, detail="SMTP not configured. Save SMTP settings first."
+        )
     # Use ASCII-only subject/body to avoid Apprise urlencode issues with cyrillic;
     # mail.ru handles UTF-8 but transport errors surfaced as 500 before.
     try:
@@ -176,9 +177,15 @@ async def test_smtp_email(
         )
     except Exception as exc:
         core_logger.print_to_log(f"test_smtp_email exception: {type(exc).__name__}: {exc}", "error", exc=exc)
-        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=f"SMTP error: {type(exc).__name__}. Check host/port/secure type (mail.ru: 465/ssl or 587/starttls, From=Username) and logs.") from exc
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail=f"SMTP error: {type(exc).__name__}. Check host/port/secure type (mail.ru: 465/ssl or 587/starttls, From=Username) and logs.",
+        ) from exc
     if not success:
-        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail="Failed to send test email. Check SMTP host/port/credentials and server logs. For mail.ru use smtp.mail.ru:465/ssl or 587/starttls and ensure From equals username.")
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail="Failed to send test email. Check SMTP host/port/credentials and server logs. For mail.ru use smtp.mail.ru:465/ssl or 587/starttls and ensure From equals username.",
+        )
     return {"message": f"Test email sent to {payload.to_email}"}
 
 
@@ -226,7 +233,9 @@ async def test_ai_provider(
         )
     except nutrition_ai.AiAssistantError as e:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
-    return {"message": f"AI provider OK (model {model})"}
+    # The provider answered (any reply proves connectivity); surface its text
+    # so the admin test response shows what came back.
+    return {"message": f"AI provider OK (model {model}): {reply.strip()[:100]}"}
 
 
 @router.post(

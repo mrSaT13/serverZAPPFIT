@@ -43,7 +43,13 @@ export interface AccentPreset {
   }
 }
 
-function derivePreset(id: string, label: string, base: string, darkPrimary: string, darkSurface: string): AccentPreset {
+function derivePreset(
+  id: string,
+  label: string,
+  base: string,
+  darkPrimary: string,
+  darkSurface: string,
+): AccentPreset {
   return {
     id,
     label,

@@ -281,11 +281,19 @@ class ServerSettings(ServerSettingsBase):
     )
     smtp_host: StrictStr | None = Field(default=None, max_length=255, description="SMTP host (overrides SMTP_HOST env)")
     smtp_port: StrictInt | None = Field(default=None, ge=1, le=65535, description="SMTP port (overrides SMTP_PORT env)")
-    smtp_username: StrictStr | None = Field(default=None, max_length=320, description="SMTP username (overrides SMTP_USERNAME env)")
-    smtp_password: StrictStr | None = Field(default=None, max_length=512, description="SMTP password encrypted (overrides SMTP_PASSWORD env)")
-    smtp_from: StrictStr | None = Field(default=None, max_length=320, description="SMTP From address (overrides SMTP_FROM env)")
+    smtp_username: StrictStr | None = Field(
+        default=None, max_length=320, description="SMTP username (overrides SMTP_USERNAME env)"
+    )
+    smtp_password: StrictStr | None = Field(
+        default=None, max_length=512, description="SMTP password encrypted (overrides SMTP_PASSWORD env)"
+    )
+    smtp_from: StrictStr | None = Field(
+        default=None, max_length=320, description="SMTP From address (overrides SMTP_FROM env)"
+    )
     smtp_secure: StrictBool | None = Field(default=None, description="Use secure SMTP (overrides SMTP_SECURE env)")
-    smtp_secure_type: StrictStr | None = Field(default=None, max_length=10, description="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)")
+    smtp_secure_type: StrictStr | None = Field(
+        default=None, max_length=10, description="Secure type: starttls or ssl (overrides SMTP_SECURE_TYPE env)"
+    )
     ai_enabled: StrictBool = Field(
         False,
         description="Enable the AI nutrition assistant for all users",

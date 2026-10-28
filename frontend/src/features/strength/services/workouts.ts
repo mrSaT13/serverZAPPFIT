@@ -77,6 +77,37 @@ export interface ExerciseProgress {
   points: ExercisePoint[]
 }
 
+export interface WorkoutStatisticsPoint {
+  week_start: string
+  sessions: number
+  volume_kg: number
+  sets: number
+  reps: number
+}
+
+export interface WorkoutStatistics {
+  date_from: string
+  date_to: string
+  total_sessions: number
+  total_volume_kg: number
+  total_sets: number
+  total_reps: number
+  weeks: WorkoutStatisticsPoint[]
+}
+
+export interface AiPlanStatus {
+  enabled: boolean
+  configured: boolean
+  model: string | null
+}
+
+export interface AiPlanDraft {
+  name: string
+  description?: string | null
+  exercises: PlanExercise[]
+  model?: string | null
+}
+
 export interface CatalogTranslation {
   name: string
   description: string
@@ -93,6 +124,12 @@ export interface CatalogExercise {
   equipment: Array<{ id: number; name: string }>
   variation_group?: string | null
   license_author?: string | null
+  /** Full CC license name harvested from wger (e.g. "Creative Commons Attribution Share Alike 4"). */
+  license?: string | null
+  /** Alternative exercise names per language — search synonyms. */
+  aliases?: Record<string, string[]>
+  /** Short technique tips per language (wger exercise comments). */
+  tips?: Record<string, string[]>
 }
 
 export interface CatalogMeta {
@@ -117,11 +154,18 @@ export function fetchPlans(): Promise<WorkoutPlan[]> {
   return apiFetch<WorkoutPlan[]>('/workouts')
 }
 
-export function createPlan(body: { name: string; description?: string | null; exercises: PlanExercise[] }): Promise<WorkoutPlan> {
+export function createPlan(body: {
+  name: string
+  description?: string | null
+  exercises: PlanExercise[]
+}): Promise<WorkoutPlan> {
   return apiFetch<WorkoutPlan>('/workouts', { method: 'POST', body: JSON.stringify(body) })
 }
 
-export function updatePlan(id: number, body: { name: string; description?: string | null; exercises: PlanExercise[] }): Promise<WorkoutPlan> {
+export function updatePlan(
+  id: number,
+  body: { name: string; description?: string | null; exercises: PlanExercise[] },
+): Promise<WorkoutPlan> {
   return apiFetch<WorkoutPlan>(`/workouts/${id}`, { method: 'PUT', body: JSON.stringify(body) })
 }
 
@@ -139,8 +183,18 @@ export function fetchSessions(dateFrom?: string, dateTo?: string): Promise<Worko
   return apiFetch<WorkoutSession[]>(`/workouts/sessions${q}`)
 }
 
-export function createSession(body: { date: string; plan_id?: number | null; duration_min?: number | null; calories?: number | null; comment?: string | null; sets: SetLog[] }): Promise<WorkoutSession> {
-  return apiFetch<WorkoutSession>('/workouts/sessions', { method: 'POST', body: JSON.stringify(body) })
+export function createSession(body: {
+  date: string
+  plan_id?: number | null
+  duration_min?: number | null
+  calories?: number | null
+  comment?: string | null
+  sets: SetLog[]
+}): Promise<WorkoutSession> {
+  return apiFetch<WorkoutSession>('/workouts/sessions', {
+    method: 'POST',
+    body: JSON.stringify(body),
+  })
 }
 
 export async function deleteSession(id: number): Promise<void> {
@@ -153,9 +207,38 @@ export function fetchProgress(): Promise<ExerciseProgress[]> {
   return apiFetch<ExerciseProgress[]>('/workouts/progress')
 }
 
+// ---- statistics ----
+
+export function fetchWorkoutStatistics(
+  dateFrom?: string,
+  dateTo?: string,
+): Promise<WorkoutStatistics> {
+  const qs = new URLSearchParams()
+  if (dateFrom) qs.set('date_from', dateFrom)
+  if (dateTo) qs.set('date_to', dateTo)
+  const q = qs.size ? `?${qs}` : ''
+  return apiFetch<WorkoutStatistics>(`/workouts/statistics${q}`)
+}
+
+// ---- AI plan generator ----
+
+export function fetchAiPlanStatus(): Promise<AiPlanStatus> {
+  return apiFetch<AiPlanStatus>('/workouts/ai/status')
+}
+
+export function generateAiPlan(prompt: string, language?: string): Promise<AiPlanDraft> {
+  return apiFetch<AiPlanDraft>('/workouts/ai/plan', {
+    method: 'POST',
+    body: JSON.stringify({ prompt, language: language ?? null }),
+  })
+}
+
 // ---- catalog ----
 
-export function searchCatalog(q?: string, extra?: { category_id?: number; equipment_id?: number; muscle_id?: number }): Promise<{ total: number; records: CatalogExercise[] }> {
+export function searchCatalog(
+  q?: string,
+  extra?: { category_id?: number; equipment_id?: number; muscle_id?: number },
+): Promise<{ total: number; records: CatalogExercise[] }> {
   const qs = new URLSearchParams()
   if (q?.trim()) qs.set('q', q.trim())
   if (extra?.category_id != null) qs.set('category_id', String(extra.category_id))

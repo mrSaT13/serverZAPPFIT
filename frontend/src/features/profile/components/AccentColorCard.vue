@@ -35,7 +35,9 @@ const PREVIEW_HEX: Record<string, string> = {
         :key="preset.id"
         type="button"
         class="flex flex-col items-center gap-1.5 rounded-lg p-2 transition-colors hover:bg-accent"
-        :class="accentId === preset.id ? 'ring-2 ring-primary ring-offset-2 ring-offset-background' : ''"
+        :class="
+          accentId === preset.id ? 'ring-2 ring-primary ring-offset-2 ring-offset-background' : ''
+        "
         :title="preset.label"
         @click="setAccentColor(preset.id)"
       >
@@ -43,11 +45,7 @@ const PREVIEW_HEX: Record<string, string> = {
           class="flex size-8 items-center justify-center rounded-full border border-border"
           :style="{ backgroundColor: PREVIEW_HEX[preset.id] }"
         >
-          <Check
-            v-if="accentId === preset.id"
-            class="size-4 text-white"
-            aria-hidden="true"
-          />
+          <Check v-if="accentId === preset.id" class="size-4 text-white" aria-hidden="true" />
         </span>
         <span class="text-meta text-muted-foreground">{{ preset.label }}</span>
       </button>

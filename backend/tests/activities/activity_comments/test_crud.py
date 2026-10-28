@@ -10,10 +10,7 @@ import activities.activity_comments.crud as comments_crud
 import activities.activity_comments.schema as comment_schema
 
 VISIBLE_ACTIVITY = SimpleNamespace(id=10, user_id=5)
-_VISIBILITY_FN = (
-    "activities.activity_comments.crud.activity_crud"
-    ".get_activity_by_id_from_user_id_or_has_visibility"
-)
+_VISIBILITY_FN = "activities.activity_comments.crud.activity_crud.get_activity_by_id_from_user_id_or_has_visibility"
 
 
 class TestGetComments:
