@@ -167,7 +167,13 @@ Build & Push Docker Image #53 = completed successfully (2m 32s)**.
    (push/pull/tombstones, коммит `20bba4d` в ZAPFIT-app-andoid · собрать APK
    и bump версии при релизе — pubspec всё ещё 0.8.9+39).
    **Синхронизация упражнений** отдаёт описания с EN-фоллбеком (пикер,
-   кнопка ℹ).
+   кнопка ℹ). Flutter **Phase A СИЛОВЫЕ — готово** (коммиты `4b551fb`,
+   `3e72439` в ZAPFIT-app-andoid): версия бамп 0.8.10+40; 5-й таб
+   «Тренировки» (plans/journal); каталог 914 вшит в APK
+   (assets/catalog/exercise_catalog.json, поиск как на сервере);
+   plans CRUD + сессии с оффлайн-очередью (workouts.db);
+_pendingCountProxy оставлено для истории: renamed в pendingCount().
+   сканер mobile_scanner) — следующий заход.
 5. Аудит «синхронизация комментариев»: сервер и web-клиент полноценно
    работают (`/activities_comments` CRUD + UI в ActivityDetailView).
    Flutter: ГОТОВО 2026-10-29 (коммиты `8cb18ca` в ZAPFIT-app-andoid):
