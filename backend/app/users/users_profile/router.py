@@ -153,6 +153,7 @@ async def read_users_me(
             "hide_activity_laps": (user_privacy_settings.hide_activity_laps),
             "hide_activity_workout_sets_steps": (user_privacy_settings.hide_activity_workout_sets_steps),
             "hide_activity_gear": (user_privacy_settings.hide_activity_gear),
+            "publish_workouts_in_feed": (user_privacy_settings.publish_workouts_in_feed),
             # Derived flag for the frontend: distinguishes
             # SSO-only accounts from accounts with a local
             # password so step-up modals can hide the password

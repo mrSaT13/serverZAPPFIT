@@ -35,6 +35,7 @@ export function mapPrivacySettings(dto: ProfileDto): PrivacySettings {
     hideLaps: dto.hide_activity_laps ?? false,
     hideWorkoutSetsSteps: dto.hide_activity_workout_sets_steps ?? false,
     hideGear: dto.hide_activity_gear ?? false,
+    publishWorkoutsInFeed: dto.publish_workouts_in_feed ?? false,
   }
 }
 
@@ -131,6 +132,7 @@ export async function updatePrivacySettings(privacy: PrivacySettings): Promise<v
     hide_activity_laps: privacy.hideLaps,
     hide_activity_workout_sets_steps: privacy.hideWorkoutSetsSteps,
     hide_activity_gear: privacy.hideGear,
+    publish_workouts_in_feed: privacy.publishWorkoutsInFeed,
   }
   await apiFetch('/profile/privacy', {
     method: 'PUT',

@@ -43,6 +43,9 @@ function displayName(exercise: CatalogExercise): string {
   return tr?.name ?? exercise.name
 }
 
+/** UI language code for language-scoped catalog search. */
+const searchLang = computed(() => locale.value.split('-')[0] ?? 'en')
+
 /** First technique tip in the UI language (English fallback), if any. */
 function displayTip(exercise: CatalogExercise): string | null {
   const lang = locale.value.split('-')[0] ?? 'en'
@@ -58,6 +61,7 @@ async function runSearch(): Promise<void> {
     const data = await searchCatalog(q.value, {
       category_id: categoryId.value !== '' ? Number(categoryId.value) : undefined,
       equipment_id: equipmentId.value !== '' ? Number(equipmentId.value) : undefined,
+      lang: searchLang.value,
     })
     results.value = data.records
   } catch {
@@ -74,6 +78,8 @@ watch(q, () => {
   timer = setTimeout(runSearch, 300)
 })
 watch([categoryId, equipmentId], runSearch)
+// Re-run the search when the user switches language so names/sort follow.
+watch(searchLang, () => void runSearch())
 watch(open, (v) => {
   if (v && results.value.length === 0) void runSearch()
 })

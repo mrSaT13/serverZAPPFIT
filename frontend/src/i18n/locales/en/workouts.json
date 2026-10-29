@@ -135,7 +135,11 @@
       "Incline bench": "Incline bench",
       "Kettlebell": "Kettlebell",
       "Resistance band": "Resistance band",
-      "Cable machine": "Cable machine"
+      "Cable machine": "Cable machine",
+      "Machine": "Machine",
+      "Medicine ball": "Medicine ball",
+      "Foam roller": "Foam roller",
+      "Other": "Other"
     },
     "muscles": {
       "Biceps": "Biceps",
@@ -164,7 +168,10 @@
       "Soleus": "Soleus",
       "Hamstrings": "Hamstrings",
       "Biceps femoris": "Hamstrings",
-      "Biceps brachii": "Biceps"
+      "Biceps brachii": "Biceps",
+      "Adductors": "Adductors",
+      "Abductors": "Abductors",
+      "Forearms": "Forearms"
     }
   }
 }

@@ -115,6 +115,11 @@ class UsersPrivacySettings(Base):
         nullable=False,
         comment="Hide activity gear",
     )
+    publish_workouts_in_feed: Mapped[bool] = mapped_column(
+        default=False,
+        nullable=False,
+        comment="Publish logged strength sessions to the activity feed",
+    )
 
     # Define a relationship to the Users model
     users: Mapped["Users"] = relationship(back_populates="users_privacy_settings")

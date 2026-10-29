@@ -75,6 +75,13 @@ class WorkoutSession(Base):
     duration_min: Mapped[float | None] = mapped_column(Float, nullable=True)
     calories: Mapped[float | None] = mapped_column(Float, nullable=True)
     comment: Mapped[str | None] = mapped_column(String(1000), nullable=True)
+    # Feed activity published for this session (users with
+    # publish_workouts_in_feed enabled); cleared when the activity is deleted.
+    activity_id: Mapped[int | None] = mapped_column(
+        ForeignKey("activities.id", ondelete="SET NULL"),
+        nullable=True,
+        index=True,
+    )
     created_at: Mapped[datetime_type] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), nullable=False
     )

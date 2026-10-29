@@ -173,6 +173,7 @@ describe('profile service requests', () => {
       hideLaps: false,
       hideWorkoutSetsSteps: false,
       hideGear: true,
+      publishWorkoutsInFeed: false,
     }
 
     await updatePrivacySettings(privacy)

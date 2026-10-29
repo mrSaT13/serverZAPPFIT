@@ -96,16 +96,25 @@ def _snapshot_or_none() -> dict | None:
         return None
 
 
-def _matches_query(row: exercise_catalog.ExerciseCatalog, q_lower: str) -> bool:
-    """Name match against the canonical name, every translation and aliases.
+def _matches_query(row: exercise_catalog.ExerciseCatalog, q_lower: str, lang: str | None = None) -> bool:
+    """Name match scoped to the requested display language.
 
-    Search used to check only the canonical English name, so a Russian UI
-    query ("жим") found nothing even when a translated name existed. Aliases
-    (alternative exercise names harvested from wger) are checked as well, so
-    synonyms like "становая" / "Deadlift" find the exercise too.
+    Without ``lang`` every translation and alias is checked (legacy
+    behaviour). With ``lang`` only that language's translated name and
+    aliases are matched — plus the canonical English name, which stays the
+    stable identity of a row, so "bench press" keeps working in a Russian UI
+    while "жим" no longer leaks into an English search. When a translation is
+    missing in ``lang`` the row displays its English name, so that name is
+    searched instead (search always sees what the UI shows).
     """
     if q_lower in row.name.lower():
         return True
+    if lang:
+        tr = (row.translations or {}).get(lang)
+        name = tr.get("name") if isinstance(tr, dict) else None
+        if name and q_lower in str(name).lower():
+            return True
+        return any(q_lower in str(alias).lower() for alias in (row.aliases or {}).get(lang, []))
     for tr in (row.translations or {}).values():
         name = tr.get("name") if isinstance(tr, dict) else None
         if name and q_lower in str(name).lower():
@@ -116,6 +125,16 @@ def _matches_query(row: exercise_catalog.ExerciseCatalog, q_lower: str) -> bool:
     return False
 
 
+def _display_name(row: exercise_catalog.ExerciseCatalog, lang: str | None) -> str:
+    """Row name as the UI shows it in ``lang`` (English fallback)."""
+    if lang:
+        tr = (row.translations or {}).get(lang)
+        name = tr.get("name") if isinstance(tr, dict) else None
+        if name:
+            return str(name)
+    return row.name
+
+
 @router.get("", response_model=CatalogExerciseListResponse)
 async def search_catalog(
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
@@ -123,6 +142,7 @@ async def search_catalog(
     category_id: Annotated[int | None, Query()] = None,
     equipment_id: Annotated[int | None, Query()] = None,
     muscle_id: Annotated[int | None, Query()] = None,
+    lang: Annotated[str | None, Query(max_length=10, description="Scope search & sort to this UI language")] = None,
     limit: Annotated[int, Query(ge=1, le=100)] = 25,
     offset: Annotated[int, Query(ge=0)] = 0,
     db: Annotated[Session, Depends(core_database.get_db)] = None,  # type: ignore[assignment]
@@ -134,17 +154,18 @@ async def search_catalog(
     filters = []
     if category_id is not None:
         filters.append(exercise_catalog.ExerciseCatalog.category_id == category_id)
-    # JSON columns are searched in memory (catalog is small, ~875 rows).
+    # JSON columns are searched in memory (catalog is small, ~915 rows).
     rows = db.scalars(select(exercise_catalog.ExerciseCatalog).where(*filters)).all()
     q_lower = q.lower().strip() if q else None
     matched = [
         r
         for r in rows
-        if (q_lower is None or _matches_query(r, q_lower))
+        if (q_lower is None or _matches_query(r, q_lower, lang))
         and (equipment_id is None or equipment_id in (r.equipment_ids or []))
         and (muscle_id is None or muscle_id in (r.muscle_ids or []))
     ]
-    matched.sort(key=lambda r: r.name.lower())
+    # Sort by the name the user actually sees in their language.
+    matched.sort(key=lambda r: _display_name(r, lang).lower())
     total = len(matched)
     return CatalogExerciseListResponse(
         total=total,

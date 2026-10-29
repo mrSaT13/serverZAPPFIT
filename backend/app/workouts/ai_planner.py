@@ -37,7 +37,9 @@ SYSTEM_PROMPT_TEMPLATE = (
     "You build one workout plan from a short user request, choosing exercises "
     "ONLY from the numbered catalog list provided in the user message. Rules:\n"
     "1. Pick exercises that match the requested muscles and goal; respect the "
-    "equipment shown per catalog entry (never invent equipment).\n"
+    "equipment shown per catalog entry (never invent equipment). When the "
+    "user's inventory is listed, prefer exercises runnable with that inventory "
+    "and use its real weights for target_weight_kg when sensible.\n"
     '2. Group exercises into training days with day_label (e.g. "День 1", "День 2" '
     "in the user's language). 3-6 exercises per day, 1-4 days.\n"
     "3. Sensible prescriptions: target_sets 2-5; target_reps as a string like "
@@ -55,6 +57,10 @@ SYSTEM_PROMPT_TEMPLATE = (
     "6. Write name, description, day_label and notes in the language coded as "
     "'<lang>'. At most " + str(MAX_EXERCISES) + " exercises total."
 )
+
+# Equipment ids always available (snapshot dictionary): gym mat + bodyweight —
+# any user can train on the floor, so these never disqualify a catalog row.
+_ALWAYS_AVAILABLE_EQUIPMENT = {4, 7}
 
 # ru/en keywords that narrow the catalog excerpt to matching categories.
 _CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
@@ -99,12 +105,16 @@ def localized_name(row: exercise_catalog.ExerciseCatalog, language: str | None) 
     return translations.get(lang, {}).get("name") or translations.get("en", {}).get("name") or row.name
 
 
-def build_catalog_excerpt(db: Session, prompt: str, language: str | None) -> list[str]:
+def build_catalog_excerpt(
+    db: Session, prompt: str, language: str | None, allowed_equipment: set[int] | None = None
+) -> list[str]:
     """Compact numbered catalog lines, narrowed by request keywords.
 
     Every line: ``<wger_id> | <name> | <category> | <equipment names>``; names
     are resolved in the request language (English fallback) so the model can
-    copy recognisable names verbatim.
+    copy recognisable names verbatim. When ``allowed_equipment`` is given
+    (user's inventory), only rows fully covered by it are kept — a floor-only
+    user never gets offered barbell exercises.
     """
     snapshot = exercise_catalog.load_snapshot()
     categories = {c["id"]: c["name"] for c in snapshot["categories"]}
@@ -112,6 +122,8 @@ def build_catalog_excerpt(db: Session, prompt: str, language: str | None) -> lis
 
     focus = _focus_category_ids(prompt.lower(), categories)
     rows = _catalog_rows(db, focus)
+    if allowed_equipment is not None:
+        rows = [r for r in rows if set(r.equipment_ids or []) <= allowed_equipment]
 
     lang = (language or "en").split("-")[0]
     lines: list[str] = []
@@ -120,6 +132,48 @@ def build_catalog_excerpt(db: Session, prompt: str, language: str | None) -> lis
         equip = ", ".join(equipment.get(i, "?") for i in row.equipment_ids or [])
         lines.append(f"{row.wger_id} | {name} | {categories.get(row.category_id, '?')} | {equip}")
     return lines
+
+
+def user_inventory(db: Session, user_id: int | None) -> list[Any]:
+    """The user's training inventory rows (empty when unknown/disabled)."""
+    if user_id is None:
+        return []
+    from sqlalchemy import select
+
+    import workouts.equipment_models as equipment_models
+
+    stmt = (
+        select(equipment_models.UserEquipment)
+        .where(equipment_models.UserEquipment.user_id == user_id)
+        .order_by(equipment_models.UserEquipment.name)
+    )
+    return list(db.scalars(stmt).all())
+
+
+def inventory_block(db: Session, user_id: int | None) -> tuple[str, set[int] | None]:
+    """Prompt block describing the user's inventory + allowed equipment ids.
+
+    Returns the text to append to the user message and the set of equipment
+    ids the catalog should be filtered by (``None`` = no inventory, no filter).
+    """
+    rows = user_inventory(db, user_id)
+    if not rows:
+        return "", None
+    snapshot = exercise_catalog.load_snapshot()
+    equipment = {e["id"]: e["name"] for e in snapshot["equipment"]}
+
+    allowed: set[int] = set(_ALWAYS_AVAILABLE_EQUIPMENT)
+    lines: list[str] = []
+    for row in rows:
+        if row.equipment_id is not None:
+            allowed.add(int(row.equipment_id))
+        qty = f" x{row.quantity}" if row.quantity and row.quantity > 1 else ""
+        weight = f" ({row.weight_kg} kg)" if row.weight_kg is not None else ""
+        kind = equipment.get(row.equipment_id) if row.equipment_id is not None else None
+        suffix = f" — {kind}" if kind else ""
+        lines.append(f"- {row.name}{weight}{qty}{suffix}")
+    block = "User's available training inventory (prefer exercises using only these):\n" + "\n".join(lines)
+    return block, allowed
 
 
 def parse_plan_json(text: str) -> dict[str, Any]:
@@ -226,10 +280,21 @@ async def generate_plan(
     prompt: str,
     language: str | None,
     model: str | None = None,
+    user_id: int | None = None,
 ) -> workouts_schema.AiPlanDraft:
-    """Full pipeline: catalog excerpt → LLM → validated ``AiPlanDraft``."""
+    """Full pipeline: catalog excerpt → LLM → validated ``AiPlanDraft``.
+
+    When the user has a training inventory (``user_equipment``), the catalog
+    is filtered to what they own and the inventory block is appended to the
+    request so the model can pick feasible exercises and real weights.
+    """
+    inventory_text, allowed_equipment = inventory_block(db, user_id)
     try:
-        excerpt = build_catalog_excerpt(db, prompt, language)
+        excerpt = build_catalog_excerpt(db, prompt, language, allowed_equipment)
+        if not excerpt and allowed_equipment is not None:
+            # Inventory filter starved the (keyword-narrowed) excerpt — retry
+            # against the full catalog rather than failing the request.
+            excerpt = build_catalog_excerpt(db, "", language, allowed_equipment)
     except FileNotFoundError as e:
         # Snapshot missing (image built without backend/assets) would
         # surface as a raw HTTP 500 — turn it into an actionable message.
@@ -244,6 +309,8 @@ async def generate_plan(
         f"Catalog (id | name | category | equipment), {len(excerpt)} entries:\n"
         f"{catalog_text}"
     )
+    if inventory_text:
+        user_message = f"{inventory_text}\n\n{user_message}"
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT_TEMPLATE.replace("<lang>", language or "en")},
         {"role": "user", "content": user_message},

@@ -11271,6 +11271,12 @@ export interface components {
              */
             hide_activity_gear?: boolean | null;
             /**
+             * Publish Workouts In Feed
+             * @description Publish logged strength sessions to the activity feed
+             * @default false
+             */
+            publish_workouts_in_feed?: boolean | null;
+            /**
              * Hide Activity Hr
              * @description Hide activity heart rate
              */
@@ -11404,6 +11410,12 @@ export interface components {
              * @default false
              */
             hide_activity_gear: boolean | null;
+            /**
+             * Publish Workouts In Feed
+             * @description Publish logged strength sessions to the activity feed
+             * @default false
+             */
+            publish_workouts_in_feed: boolean | null;
             /**
              * Hide Activity Hr
              * @description Hide activity heart rate

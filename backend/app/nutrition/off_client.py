@@ -49,7 +49,7 @@ async def search_off(query: str, language: str = "en", page_size: int = 20) -> l
                 r = await client.get(
                     OFF_SEARCH_URL,
                     params=params,
-                    headers={"User-Agent": "ZAPFIT/0.26 (https://github.com/mrSaT13/serverZAPPFIT)"},
+                    headers={"User-Agent": "ZAPFIT/0.27 (https://github.com/mrSaT13/serverZAPPFIT)"},
                 )
                 r.raise_for_status()
                 data = r.json()

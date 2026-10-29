@@ -12,13 +12,16 @@ import nutrition.ai as nutrition_ai
 import workouts.ai_planner as workouts_ai_planner
 import workouts.catalog_router as catalog_router
 import workouts.crud as workouts_crud
+import workouts.equipment_router as workouts_equipment_router
+import workouts.feed as workouts_feed
 import workouts.schema as workouts_schema
 import workouts.wger_client as workouts_wger_client
 
 router = APIRouter()
 
-# Catalog endpoints must register before the /{plan_id} catch-all routes.
+# Catalog and equipment endpoints must register before the /{plan_id} catch-all routes.
 router.include_router(catalog_router.router, prefix="/exercises")
+router.include_router(workouts_equipment_router.router, prefix="/equipment")
 
 
 @router.get("", response_model=list[workouts_schema.WorkoutPlanRead])
@@ -62,6 +65,13 @@ async def create_workout_session(
     db: Annotated[Session, Depends(core_database.get_db)],
 ) -> workouts_schema.WorkoutSessionRead:
     row = workouts_crud.create_session(token_user_id, payload, db)
+    # Opt-in mirror into the activity feed (publish_workouts_in_feed).
+    try:
+        workouts_feed.publish_session_activity(token_user_id, row, db)
+    except Exception as e:
+        import core.logger as core_logger
+
+        core_logger.print_to_log(f"Feed publish for session {row.id} failed: {e}", "error", exc=e)
     return workouts_schema.WorkoutSessionRead.model_validate(row)
 
 
@@ -132,7 +142,9 @@ async def generate_ai_plan(
             detail="AI assistant is not configured. Ask your server administrator to enable it in server settings.",
         )
     try:
-        return await workouts_ai_planner.generate_plan(db, settings, payload.prompt, payload.language)
+        return await workouts_ai_planner.generate_plan(
+            db, settings, payload.prompt, payload.language, user_id=token_user_id
+        )
     except (workouts_ai_planner.AiPlanError, nutrition_ai.AiAssistantError) as e:
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
 
@@ -220,4 +232,9 @@ async def delete_workout_session(
     token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
     db: Annotated[Session, Depends(core_database.get_db)],
 ) -> None:
+    # Look up the linked feed activity before the row disappears.
+    session_row = workouts_crud.get_session(token_user_id, session_id, db)
+    activity_id = session_row.activity_id
     workouts_crud.delete_session(token_user_id, session_id, db)
+    if activity_id is not None:
+        workouts_feed.delete_published_activity(activity_id, db)

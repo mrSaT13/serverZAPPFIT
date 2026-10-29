@@ -237,13 +237,14 @@ export function generateAiPlan(prompt: string, language?: string): Promise<AiPla
 
 export function searchCatalog(
   q?: string,
-  extra?: { category_id?: number; equipment_id?: number; muscle_id?: number },
+  extra?: { category_id?: number; equipment_id?: number; muscle_id?: number; lang?: string },
 ): Promise<{ total: number; records: CatalogExercise[] }> {
   const qs = new URLSearchParams()
   if (q?.trim()) qs.set('q', q.trim())
   if (extra?.category_id != null) qs.set('category_id', String(extra.category_id))
   if (extra?.equipment_id != null) qs.set('equipment_id', String(extra.equipment_id))
   if (extra?.muscle_id != null) qs.set('muscle_id', String(extra.muscle_id))
+  if (extra?.lang) qs.set('lang', extra.lang)
   qs.set('limit', '50')
   return apiFetch<{ total: number; records: CatalogExercise[] }>(`/workouts/exercises?${qs}`)
 }

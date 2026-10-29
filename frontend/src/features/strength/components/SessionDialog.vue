@@ -17,7 +17,7 @@ const props = defineProps<{ plan: WorkoutPlan | null }>()
 const open = defineModel<boolean>('open', { default: false })
 const emit = defineEmits<{ saved: [] }>()
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const toasts = useToasts()
 
 const today = new Date().toISOString().slice(0, 10)
@@ -83,6 +83,15 @@ function num(value: string): number | null {
   if (!String(value).trim()) return null
   const n = Number(value)
   return Number.isFinite(n) ? n : null
+}
+
+/** Exercise name in the current UI language (English fallback) for logged sets. */
+function localizedName(ex: {
+  name: string
+  translations: Record<string, { name: string } | undefined>
+}): string {
+  const lang = locale.value.split('-')[0] ?? 'en'
+  return ex.translations[lang]?.name ?? ex.translations.en?.name ?? ex.name
 }
 
 async function save(): Promise<void> {
@@ -166,7 +175,7 @@ async function save(): Promise<void> {
         </div>
       </div>
 
-      <ExercisePickerDialog v-model:open="pickerOpen" @picked="(ex) => addRow(ex.name)" />
+      <ExercisePickerDialog v-model:open="pickerOpen" @picked="(ex) => addRow(localizedName(ex))" />
     </DialogContent>
   </Dialog>
 </template>

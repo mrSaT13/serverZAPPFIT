@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Filter, Plus, Search, Wrench, X } from '@lucide/vue'
+import { Dumbbell, Filter, Plus, Search, Wrench, X } from '@lucide/vue'
 
 import type { Gear } from '@/features/gears/types'
 
+import EquipmentDialog from '@/features/gears/components/EquipmentDialog.vue'
 import GearFormDialog from '@/features/gears/components/GearFormDialog.vue'
 import GearListItem from '@/features/gears/components/GearListItem.vue'
 import { Button } from '@/components/ui/button'
@@ -39,6 +40,8 @@ const isFilterOpen = ref(false)
 const page = ref(1)
 const searchTerm = ref('')
 const debouncedSearch = ref('')
+/** Training-inventory (dumbbells/barbells for the AI planner) dialog. */
+const equipmentOpen = ref(false)
 
 // Page size follows the server's enforced `num_records_per_page` setting.
 const { recordsPerPage } = useRecordsPerPage()
@@ -204,12 +207,17 @@ function confirmDelete(): void {
       breakpoint (no desktop-only sidebar that disappears on mobile).
     -->
     <div class="grid gap-3 lg:grid-cols-[18rem_minmax(0,1fr)] lg:items-start">
-      <!-- Controls rail: add + nickname search. -->
+      <!-- Controls rail: add + nickname search + training inventory. -->
       <aside class="lg:sticky lg:top-6">
         <Card class="flex flex-col gap-3">
           <Button class="w-full" @click="openAdd">
             <Plus class="size-4" aria-hidden="true" />
             {{ t('gears.buttonAddGear') }}
+          </Button>
+
+          <Button variant="outline" class="w-full" @click="equipmentOpen = true">
+            <Dumbbell class="size-4" aria-hidden="true" />
+            {{ t('gears.equipment.open') }}
           </Button>
 
           <div class="relative">
@@ -319,6 +327,7 @@ function confirmDelete(): void {
       @success="onFormSuccess"
       @error="onFormError"
     />
+    <EquipmentDialog v-model:open="equipmentOpen" />
     <ConfirmDialog
       v-model:open="isDeleteOpen"
       :title="t('gears.delete.title')"
