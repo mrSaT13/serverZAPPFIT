@@ -132,6 +132,47 @@ export interface CatalogExercise {
   tips?: Record<string, string[]>
 }
 
+/**
+ * wger descriptions are stored as small HTML fragments (`<p>` paragraphs).
+ * Render them as plain text instead of injecting HTML — the catalog is
+ * third-party (CC-BY-SA) data and must never reach `v-html`.
+ */
+export function catalogTextToPlain(html: string): string {
+  return html
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/<\/p>/gi, '\n\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ')
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+}
+
+/**
+ * Exercise "how to perform" text: the given language first (usually the UI
+ * language), English fallback; `null` when neither has a description (RU is
+ * only translated for a handful of wger entries, so the fallback matters).
+ */
+export function catalogDescriptionText(
+  exercise: CatalogExercise,
+  lang: string,
+): { text: string; fellBackToEnglish: boolean } | null {
+  const translations = exercise.translations as Record<string, CatalogTranslation | undefined>
+  const own = (translations[lang]?.description ?? '').trim()
+  const english = (translations.en?.description ?? '').trim()
+  const description = own || english
+  if (!description) return null
+  return {
+    text: catalogTextToPlain(description),
+    fellBackToEnglish: lang !== 'en' && !own,
+  }
+}
+
 export interface CatalogMeta {
   counts: { exercises: number; seedError?: number }
   categories: Array<{ id: number; name: string }>

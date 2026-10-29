@@ -69,7 +69,11 @@
     "allEquipment": "All equipment",
     "empty": "Nothing found — try another query.",
     "notSeeded": "The exercise catalog is not loaded on this server yet. Update the server to the latest version and restart the container — the catalog seeds automatically on startup.",
-    "loadError": "Failed to load the exercise catalog."
+    "loadError": "Failed to load the exercise catalog.",
+    "howTo": "How to perform",
+    "howToObject": "Show the exercise description",
+    "englishOnly": "No translation available — description in English.",
+    "closeDetails": "Hide the description"
   },
   "session": {
     "start": "Start session",
