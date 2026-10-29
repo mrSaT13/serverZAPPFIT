@@ -2,7 +2,7 @@
 
 **Проект (сервер):** `D:\projex\serverZap` (ветка `master`) → https://github.com/mrSaT13/serverZAPPFIT
 **Мобильный клиент:** `D:\apktrack\endurain-flutter` (ветка `main`) → https://github.com/mrSaT13/ZAPFIT-app-andoid- — **версия бампнута до 0.8.10+40** (release-notes `RELEASE_NOTES_v0.8.10+40.md` в корне клиента); в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — НЕ использовать.
-**Пользователь ещё НЕ сделал:** (1) `docker compose pull && docker compose up -d` на сервере (единый образ несёт v0.27 каталог + v0.28 соревнования; собрать `latest` успела CI #57/#60 — success), (2) сборку APK и GitHub-Release с тегом `MC_ZAPFITv0.8.10+40` (без него автоапдейтер старой сборки 0.8.9+39 не предложит новую).
+**Пользователь ещё НЕ сделал:** (1) `docker compose pull && docker compose up -d` на сервере (единый образ несёт v0.28 каталог + соревнования; собран CI #57/#60 — success), (2) GitHub-Release с тегом `MC_ZAPFITv0.8.10+40` — **APK релизный собран 29.10** (`D:\apktrack\endurain-flutter\build\app\outputs\flutter-apk\app-release.apk`, 96.7MB, release-keystore) — осталось залить его в Release, чтобы автоапдейтер с 0.8.9+39 предложил обновление.
 
 ## ✅ ЧТО УЖЕ ГОТОВО (сессии 29.10, все пушнуты)
 
@@ -18,23 +18,37 @@
 - **`4b551fb` — Phase A Силовые:** 5-го таб «Тренировки» (Material+Cupertino в `lib/shared/widgets/app_bottom_nav.dart`);
   каталог 914 ВШИТ в APK (`assets/catalog/exercise_catalog.json`, сервис `lib/core/services/catalog_service.dart` — поиск зеркалит сервер: язык запроса + канонический EN, категории/снаряды, пазл в Isolate);
   `lib/features/workouts/`: список планов, редактор плана (пикер + целевые подход/повторы/вес, перемещение), LogSessionScreen (подход-подход, дефолты из плана), журнал с объёмом; `WorkoutsService` + `WorkoutsLocalRepository` (sqflite `workouts.db`: plans-кэш + sessions-очередь с is_synced, `syncPending()` — иконка синка с бейджем в AppBar).
+- **`786891f` — Phase B Питание (ГОТОВО, запушено 29.10):**
+  `nutrition_models.dart` (MealLog/OffProduct/NutritionSummary/AiStatus, payload зеркалит серверные схемы);
+  `nutrition_local_repository.dart` — sqflite `nutrition.db`: `meal_logs` (is_synced + tombstone `pending_delete` для удалений) + кэш `products` (barcode → питание на 100 г);
+  `nutrition_service.dart` — CRUD `/api/v1/nutrition`, `syncPending()` (POST/PUT/DELETE офлайн-очереди; серверное 4xx-отклонение креата — локальная строка гасится, сетевая ошибка — остаётся в очереди), `fetchSummary` + локальный фолбэк (приём, без «сожжено»), OFF `search?q=` и `product/{barcode}` (офлайн — отдача из кэша);
+  `nutrition_meal_dialog.dart` — добавление/правка: OFF-поиск с debounce (офлайн-фолбэк на кэш), пересчёт «г × значения на 100 г», ручной ввод выключает автопересчёт;
+  `nutrition_scanner_dialog.dart` — полноэкранный сканер mobile_scanner 7.4.2 (EAN8/13, UPC-A/E, Code128, ITF14, фонарик; CAMERA-пермисс уже был в манифесте);
+  `nutrition_tab.dart` — дневник поверх живой TDEE-вкладки: «Итог дня» (съедено/сожжено/баланс; офлайн — только приём), навигация по датам (окно ±15 дней, выход за окно → дозагрузка), 4 секции приёмов с суммами, пометка ☁ офлайн-записей, INFO-строка счётчика очереди.
+  Release APK собран 29.10 (96.7MB, v0.8.10+40, release-keystore): знает каталог/соревнования/комментарии/силовые/питание разом.
 - Известное окружение телефона: sdk Dart через `D:\flutter\bin\dart.bat`; `flutter pub get` работает; в клиенте НЕТ CI (пуш ничего не собирает) и НЕТ мобильного релиз-лайна — APK только руками.
 
-## ⏳ ОСТАЛОСЬ (следующий заход Phase B)
+## ⏳ ОСТАЛОСЬ (после Phase B)
 
-**Решения пользователя по Phase B (фиксированы через question-tool):**
-- Питание реализуется **поверх живой вкладки «Питание»** в «Здоровье» (сейчас там только TDEE-калькулятор: `lib/features/health/tabs/nutrition_tab.dart`).
-- **Со сканером штрихкодов** (пакет `mobile_scanner` — новый деп, Android permission: добавить в pubspec+android).
-- Сервер ждёт: CRUD `/api/v1/nutrition` (get list?date_from&date_to, POST, PUT/{log_id}, DELETE/{log_id}, schemas `MealLog{Base,Create,Update,Read}`, поля `date, meal_type (breakfast|lunch|dinner|snack), product_name, calories, protein, carbs, fat, portion_g, off_barcode`), `/nutrition/summary?date=` (intake+burned+net; burned = activities+BMR), `/nutrition/trend?date_from&date_to`, `/nutrition/off/search?q=`, `/nutrition/off/product/{barcode}`, ИИ `/nutrition/ai/{status,chat}` — их же приственном интерфейсе `ai_enabled/ai_base_url/ai_model` Server Settings.
+**Phase B Flutter — завершена (кроме опционального ИИ-чата).** Остаток:
 
-**План Phase B (продуман, договорились):**
-1. `lib/core/services/nutrition_service.dart` в паттерне WorkoutsService + sqflite `meal_logs` (is_synced) — двусторонний синк по образцу health_service.dart.
-2. Экран диеты в NutritionTab: список приёмов по датам, добавление по типу приёма (breakfast/lunch/dinner/snack), поиск по Open Food Facts; кэш продуктов в sqflite `products` (barcode → имя/ккал/макросы).
-3. Блок summary поверх вкладки: «съедено / сожжено / баланс» за день (burned уже считает сервер в /nutrition/summary).
-4. mobile_scanner: диалог сканирования штрихкода → \/nutrition/off/product/{barcode}\ → предзаполнение формы приёма.
-5. ИИ-помощник \/nutrition/ai/chat\ (серверный) — опционально после базы.
-
-**Не забыть в Phase B:** \lutter pub get\ + \dart analyze\ (0 ошибок — норма); строки интерфейса по-русски захардкожены (как в preparation_tab — конвенция клиента); AndroidManifest: permission CAMERA для mobile_scanner (android/app/src/main/AndroidManifest.xml); pubspec: новый деп mobile_scanner; после написания каждого файла перечитывать его — генерация кода даёт опечатки, анализатор ловит.
+1. **GitHub-Release клиента** `MC_ZAPFITv0.8.10+40`: залить
+   `D:\apktrack\endurain-flutter\build\app\outputs\flutter-apk\app-release.apk`
+   (96.7MB; release-notes под этот тег уже лежат в корне клиента) — активирует
+   автоапдейтер у 0.8.9+39.
+2. **Деплой сервера** (см. «Деплой» ниже): compose `:latest` →
+   `docker compose pull && up -d`, в логах сид каталога. После деплоя — ручные
+   проверки: пикер с ru-поиском, виджет «Подготовка», комментарии, сканер на вебе,
+   нутри-виджеты Обзора.
+3. **Питание в мобильном** — ручная проверка после установки 0.8.10+40:
+   дневник ± синк, OFF-поиск, сканер штрихкода (камера), «Итог дня»,
+   удаление офлайн → tombstone → push при следующем старте.
+4. **Опционально на следующий заход:** ИИ-чат в мобильном
+   (`/nutrition/ai/chat`; серверные эндпоинты `/ai/status` + `/ai/chat` готовы,
+   остался экран чата).
+5. Техдолг со старых сессий: бэк-карантин `exclude-newer = 30 дней` истекает
+   ~11.11 → пересобрать `uv lock`; ~207 старых mypy-ошибок; 4 low npm
+   (deepmerge — фикса нет); `connect_timeout` в `core/database.py` — полезно.
 
 ------
 **Версия:** 0.27.0 + коммит **`a16a7bc` запушен 2026-10-29**; CI #57 success.
@@ -222,6 +236,16 @@ _pendingCountProxy оставлено для истории: renamed в pendingC
   `docker-compose.yml` — UTF-16 LE с BOM (редактировать байтово/через Unicode-кодировку).
 - Генератор каталога: `python scripts/generate_exercise_catalog.py D:\wger-master\wger-master`
   (после обновления wger — пересобрать снапшот и закоммитить `backend/assets/`).
+- Сборка Flutter APK (29.10): диск D был заполнен в 0 — артефакты gradle
+  выведены на C: через junctions: `D:\apktrack\endurain-flutter\build` →
+  `C:\flutterbuild\zapfit\build`, `android\app\build` →
+  `C:\flutterbuild\zapfit\android_app_build`, `android\.gradle` →
+  `C:\flutterbuild\zapfit\android_project_gradle`. Собирать так:
+  `D:\flutter\bin\flutter.bat build apk --release` (из корня клиента).
+  `flutter clean` НЕ удалять junctions руками; чистить содержимое цели на C:.
+  Прим: `Get-Content`/`Set-Content` PowerShell 5.1 перекодирует UTF-8 в ANSI —
+  НЕ редактировать dart-файлы с кириллицей PowerShell-ом (случай выловлен и
+  переписан заново в этой сессии).
 
 ---
 
