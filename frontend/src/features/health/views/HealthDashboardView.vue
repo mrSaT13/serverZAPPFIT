@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/card'
 import { ErrorState } from '@/components/ui/error-state'
 import HealthDashboardCard from '@/features/health/components/HealthDashboardCard.vue'
 import { useCurrentUser } from '@/features/auth/composables/useCurrentUser'
+import NextCompetitionWidget from '@/features/competitions/components/NextCompetitionWidget.vue'
 import {
   useHealthDashboardQuery,
   useHealthTargetsQuery,
@@ -302,6 +303,9 @@ const nutritionCards = computed<CardModel[]>(() => {
           />
         </div>
       </div>
+
+      <!-- Upcoming competition + training readiness: hidden while nothing is scheduled. -->
+      <NextCompetitionWidget />
     </div>
   </div>
 </template>

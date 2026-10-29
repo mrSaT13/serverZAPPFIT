@@ -21,6 +21,7 @@ import auth.password_reset_tokens.router as password_reset_tokens_router
 import auth.router as auth_router
 import auth.sessions.router as auth_sessions_router
 import auth.sign_up_tokens.router as sign_up_tokens_router
+import competitions.router as competitions_router
 import core.config as core_config
 import core.router as core_router
 import followers.router as followers_router
@@ -135,6 +136,12 @@ router.include_router(
     auth_router.router,
     prefix=core_config.ROOT_PATH + "/auth",
     tags=["auth"],
+)
+router.include_router(
+    competitions_router.router,
+    prefix=core_config.ROOT_PATH + "/competitions",
+    tags=["competitions"],
+    dependencies=[Depends(auth_dependencies.validate_access_token_or_api_key)],
 )
 router.include_router(
     followers_router.router,

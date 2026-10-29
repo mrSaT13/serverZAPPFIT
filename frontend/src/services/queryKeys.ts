@@ -49,6 +49,13 @@ export const queryKeys = {
     summary: (date: string) => ['nutrition', 'summary', date] as const,
   },
 
+  competitions: {
+    /** Broad prefix; invalidating this cascades to every competition query. */
+    all: () => ['competitions'] as const,
+    /** The next upcoming race + readiness estimate (dashboard widget). */
+    next: () => ['competitions', 'next'] as const,
+  },
+
   /** Unauthenticated settings consumed by the login / sign-up screens. */
   public: {
     serverSettings: () => ['public-server-settings'] as const,

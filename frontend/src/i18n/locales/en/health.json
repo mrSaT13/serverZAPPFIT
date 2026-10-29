@@ -722,5 +722,15 @@
       "error": "The assistant is unavailable right now",
       "disabled": "AI assistant: an administrator can enable it in Server settings → AI assistant."
     }
+  },
+  "competition": {
+    "sectionTitle": "Preparation",
+    "readiness": "readiness",
+    "raceToday": "race day is today — good luck!",
+    "inDay": "in {n} day",
+    "inDays": "in {n} days",
+    "inDaysFew": "in {n} days",
+    "inDaysMany": "in {n} days",
+    "volumeHint": "{actual} km/week over the last 28 days; {required} km/week is expected for this distance."
   }
 }
