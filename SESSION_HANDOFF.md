@@ -1,7 +1,14 @@
-# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессиями 2026-10-29 (v0.27.0, каталог-деплой)
+# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессиями 2026-10-29 (v0.27.0 → v0.28.0 «Соревнования»)
 
 **Проект:** `D:\projex\serverZap` (git-клон, ветка `master`)
 **GitHub:** https://github.com/mrSaT13/serverZAPPFIT
+**MOBILE-КЛИЕНТ:** `D:\apktrack\endurain-flutter` (0.8.9+39 = сборка на телефоне;
+в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — не использовать;
+Release-репо APK: `mrSaT13/ZAPFIT-app-andoid-`, app_update_service сверяется с
+pubspec.yaml). Ориентировка по клиенту: `lib/core/services/*` (`api_client.dart`,
+auth/websocket/health/feed…), экраны `lib/features/*`, соревнования —
+`lib/features/activities/tabs/preparation_tab.dart` (офлайн-движок готовности:
+рейтинг = недельный объём/требуемый, ступени 5/10/21.5+ км → 20/30/45/60 км/нед).
 **Версия:** 0.27.0 + коммит **`a16a7bc` запушен 2026-10-29**; CI #57 success.
 **ГЛАВНЫЙ УРОК сессии «каталог пуст»:** в репо ДВА Dockerfile — корневой `Dockerfile`
 (его собирает CI: `.github/workflows/docker.yml` → `file: ./Dockerfile`) и
@@ -148,12 +155,24 @@ Build & Push Docker Image #53 = completed successfully (2m 32s)**.
 ## Деплой (что делать на сервере)
 
 1. В compose на сервере: `image: ghcr.io/mrsat13/serverzappfit:latest`
-   (или точный `:sha-a52538f`).
+   (или точный `:sha-e3c6a07`).
 2. `docker compose pull && docker compose up -d`.
-3. При старте автоматически: alembic → `v0_25_0` (новые колонки) → автопересид
-   каталога (советы/алиасы/лицензии). Руками ничего не нужно.
-4. ИИ-план включается теми же настройками, что и ИИ-ассистент питания
-   (Server settings → AI: base URL + model + key).
+3. При старте автоматически: alembic → `v0_28_0` (таблица `competitions`) →
+   автосид каталога. Руками ничего не нужно.
+4. **Соревнования:** сервер 0.28.0 добавляет домен `/api/v1/competitions`
+   (CRUD + `GET /competitions/next` с готовностью; scopes
+   `competitions:read/write`; миграция `b8c9d0e1f2a3` ← `a7b2c3d4e5f6`).
+   Web: виджет «Подготовка» на Обзоре (`features/competitions/…`,
+   скрыт, если нет будущих стартов). Flutter: preparation_tab синкается
+   (push/pull/tombstones, коммит `20bba4d` в ZAPFIT-app-andoid · собрать APK
+   и bump версии при релизе — pubspec всё ещё 0.8.9+39).
+   **Синхронизация упражнений** отдаёт описания с EN-фоллбеком (пикер,
+   кнопка ℹ).
+5. Аудит «синхронизация комментариев»: сервер и web-клиент полноценно
+   работают (`/activities_comments` CRUD + UI в ActivityDetailView),
+   Flutter-клиент комментариев НЕ показывает и не пишет — так и осталось
+   в TODO (комментарий-сервис + экран с комментариями на
+   `activity_detail_screen/feed`); идеи для следующей сессии ниже.
 
 ## Полезные команды/заметки окружения
 - Python: `D:\projex\serverZap\backend\.venv\Scripts\python.exe` (3.14); `uv` не работает.
