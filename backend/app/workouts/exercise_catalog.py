@@ -26,7 +26,19 @@ from sqlalchemy.orm import Mapped, Session, mapped_column
 
 from core.database import Base
 
-_CATALOG_ASSET = Path(__file__).resolve().parents[2] / "assets" / "exercise_catalog.json"
+# Layouts seen in the wild (first existing wins):
+# - repo/dev checkout:  backend/app/workouts/* -> parents[2] = backend
+# - Docker image:       /app/backend/workouts/* -> parents[2] = /app
+# Older published images packaged the snapshot at /app/backend/assets
+# (COPY backend/assets ./assets under WORKDIR /app/backend) — check it too so
+# the loader works regardless of which Dockerfile produced the image.
+_CATALOG_FILENAME = "exercise_catalog.json"
+_CATALOG_SEARCH = (
+    Path(__file__).resolve().parents[2] / "assets" / _CATALOG_FILENAME,
+    Path(__file__).resolve().parents[1] / "assets" / _CATALOG_FILENAME,
+    Path("/app") / "assets" / _CATALOG_FILENAME,
+)
+_CATALOG_ASSET = _CATALOG_SEARCH[0]
 
 
 class ExerciseCatalog(Base):
@@ -58,8 +70,14 @@ class ExerciseCatalog(Base):
 @lru_cache(maxsize=1)
 def load_snapshot() -> dict:
     """Load the bundled catalog snapshot (categories, equipment, muscles, exercises)."""
-    with open(_CATALOG_ASSET, encoding="utf-8") as fh:
-        return json_module.load(fh)
+    asset = next((path for path in _CATALOG_SEARCH if path.is_file()), _CATALOG_SEARCH[0])
+    try:
+        with open(asset, encoding="utf-8") as fh:
+            return json_module.load(fh)
+    except FileNotFoundError:
+        raise FileNotFoundError(
+            "Exercise catalog snapshot not found; searched: " + ", ".join(str(path) for path in _CATALOG_SEARCH)
+        ) from None
 
 
 def seed_catalog(db: Session, catalog_path: str | None = None, snapshot: dict | None = None) -> int:

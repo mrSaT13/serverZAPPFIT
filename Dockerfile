@@ -84,8 +84,11 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY --chown=${UID}:${GID} backend/app ./
 
 # Catalog snapshot for the exercise picker + AI planner (seeded at startup;
-# the AI plan endpoint crashes with 500 and the picker stays empty without it)
-COPY --chown=${UID}:${GID} backend/assets ./assets
+# the AI plan endpoint crashes with 500 and the picker stays empty without it).
+# Absolute destination: code (workouts.exercise_catalog) resolves it at
+# parents[2] of /app/backend/workouts/exercise_catalog.py -> /app/assets.
+# Must match docker/Dockerfile — this root Dockerfile is the one CI builds.
+COPY --chown=${UID}:${GID} backend/assets /app/assets
 
 # --- Entrypoint ---
 COPY --chown=${UID}:${GID} docker/start.sh /docker-entrypoint.d/start.sh
