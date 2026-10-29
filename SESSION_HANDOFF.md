@@ -1,12 +1,20 @@
-# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессией 2026-10-29 (v0.27.0)
+# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессиями 2026-10-29 (v0.27.0, каталог-деплой)
 
 **Проект:** `D:\projex\serverZap` (git-клон, ветка `master`)
 **GitHub:** https://github.com/mrSaT13/serverZAPPFIT
-**Версия:** 0.27.0 — коммит **`2468705` запушен 2026-10-29**; CI «Build & Push Docker
-Image» #56 для него: https://github.com/mrSaT13/serverZAPPFIT/actions/runs/40869643177 —
-при возобновлении сессии ПЕРВЫМ ДЕЛОМ проверить этот run: success → деплоить,
-failure → лог и в первую очередь drift-check `api.generated.ts` (типы правил
-руками — npx не смог скачать пакет; правки точные, так что риск низкий).
+**Версия:** 0.27.0 + коммит **`a16a7bc` запушен 2026-10-29**; CI #57 success.
+**ГЛАВНЫЙ УРОК сессии «каталог пуст»:** в репо ДВА Dockerfile — корневой `Dockerfile`
+(его собирает CI: `.github/workflows/docker.yml` → `file: ./Dockerfile`) и
+`docker/Dockerfile` (только локальные сборки, `docker-compose.build.yml` тоже берёт
+корневой). Правки упаковки каталога трижды делались в `docker/Dockerfile`, а CI
+собирал корневой, где `COPY backend/assets ./assets` при `WORKDIR /app/backend`
+клали снапшот в `/app/backend/assets`, а код (`exercise_catalog.py`) ищет
+`parents[2]` → `/app/assets`. Теперь оба Dockerfile копируют в `/app/assets`, а
+`load_snapshot()` ищет по трём кандидиатам (`_CATALOG_SEARCH`) — раскладка
+упаковки больше не может оставить каталог пустым. ПРОВЕРКА КАТОГА В БУДУЩЕМ:
+`docker exec zapfit-app ls -la /app/assets` должно показывать
+`exercise_catalog.json` + `exercise_names_ru.json`; в логе при старте —
+`Seeded exercise catalog: 914`.
 
 ---
 
