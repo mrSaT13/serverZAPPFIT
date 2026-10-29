@@ -108,10 +108,11 @@ def _seed_exercise_catalog() -> None:
     """Seed the exercise catalog from the bundled snapshot when empty.
 
     Also re-seeds once when existing rows predate snapshot enrichment
-    (aliases/tips/license names added in v0.25) — the upsert refreshes the
-    rows in place. Best-effort: the strength UI degrades to manual exercise
-    input if the snapshot is missing, so failures are logged and never abort
-    startup.
+    (aliases/tips/license names added in v0.25), when the snapshot gained
+    rows (extra exercises merged in v0.27) or when rows lack Russian names —
+    the upsert refreshes the rows in place. Best-effort: the strength UI
+    degrades to manual exercise input if the snapshot is missing, so failures
+    are logged and never abort startup.
     """
     from sqlalchemy import text
 
@@ -119,6 +120,11 @@ def _seed_exercise_catalog() -> None:
 
     with SessionLocal() as db:
         row_count = db.execute(text("SELECT count(*) FROM exercise_catalog")).scalar()
+        try:
+            expected = exercise_catalog.load_snapshot().get("count") or 0
+        except Exception as e:
+            core_logger.print_to_log(f"Exercise catalog snapshot unavailable: {e}", "error", exc=e)
+            expected = 0
         if row_count:
             enriched = db.execute(
                 text(
@@ -126,10 +132,17 @@ def _seed_exercise_catalog() -> None:
                     "WHERE license_name IS NOT NULL OR aliases <> '{}' OR tips <> '{}'"
                 )
             ).scalar()
-            if enriched:
+            translated = db.execute(
+                text("SELECT count(*) FROM exercise_catalog WHERE CAST(translations AS TEXT) LIKE '%\"ru\"%'")
+            ).scalar()
+            complete = (not expected or row_count >= expected) and enriched and translated
+            if complete:
                 core_logger.print_to_log(f"Exercise catalog already seeded ({row_count} rows)")
                 return
-            core_logger.print_to_log("Exercise catalog lacks enrichment — re-seeding")
+            core_logger.print_to_log(
+                f"Exercise catalog stale (rows={row_count}, expected={expected}, "
+                f"enriched={enriched}, ru={translated}) — re-seeding"
+            )
         seeded = exercise_catalog.seed_catalog(db)
         core_logger.print_to_log_and_console(f"Seeded exercise catalog: {seeded} exercises")
 

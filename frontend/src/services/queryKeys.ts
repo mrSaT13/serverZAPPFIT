@@ -38,6 +38,15 @@ export const queryKeys = {
     progress: () => ['workouts', 'progress'] as const,
     /** Weekly aggregates for the workouts page charts. */
     statistics: () => ['workouts', 'statistics'] as const,
+    /** The user's training inventory (dumbbells/barbells feeding the AI planner). */
+    equipment: () => ['workouts', 'equipment'] as const,
+  },
+
+  nutrition: {
+    /** Broad prefix; invalidating this cascades to every nutrition query. */
+    all: () => ['nutrition'] as const,
+    /** Daily intake/burned/net summary for one date (dashboard widgets). */
+    summary: (date: string) => ['nutrition', 'summary', date] as const,
   },
 
   /** Unauthenticated settings consumed by the login / sign-up screens. */

@@ -72,6 +72,10 @@ class UsersPrivacySettingsBase(BaseModel):
         default=False, description="Hide activity workout sets and steps"
     )
     hide_activity_gear: StrictBool | None = Field(default=False, description="Hide activity gear")
+    publish_workouts_in_feed: StrictBool | None = Field(
+        default=False,
+        description="Publish logged strength sessions to the activity feed",
+    )
 
     model_config = ConfigDict(
         from_attributes=True,

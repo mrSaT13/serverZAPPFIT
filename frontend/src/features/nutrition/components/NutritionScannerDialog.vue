@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeUnmount, ref, watch } from 'vue'
+import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Html5Qrcode } from 'html5-qrcode'
 
@@ -17,6 +17,10 @@ let running = false
 async function start() {
   error.value = null
   try {
+    // Dialog content lives in a portal mounted on open; wait for the DOM node.
+    await nextTick()
+    const host = document.getElementById('nutrition-scanner')
+    if (!host) return
     scanner = new Html5Qrcode('nutrition-scanner')
     running = true
     await scanner.start(
@@ -52,9 +56,10 @@ async function stop() {
 watch(
   () => props.open,
   (v) => {
-    if (v) start()
-    else stop()
+    if (v) void start()
+    else void stop()
   },
+  { flush: 'post' },
 )
 
 onBeforeUnmount(() => {

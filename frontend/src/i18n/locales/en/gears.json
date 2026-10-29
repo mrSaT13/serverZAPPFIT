@@ -239,5 +239,26 @@
     "uploadError": "Couldn't upload photo",
     "deleteSuccess": "Photo deleted",
     "deleteError": "Couldn't delete photo"
+  },
+  "equipment": {
+    "open": "Training inventory",
+    "title": "My inventory",
+    "subtitle": "Dumbbells, barbells and other gear with weights — the AI planner builds plans around them.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Dumbbells 10 kg",
+    "weightLabel": "Weight, kg",
+    "quantityLabel": "Qty",
+    "typeLabel": "Gear type",
+    "typeAny": "Unspecified",
+    "add": "Add",
+    "added": "Inventory item added",
+    "addError": "Failed to add inventory item",
+    "remove": "Remove",
+    "removed": "Inventory item removed",
+    "removeError": "Failed to remove inventory item",
+    "listTitle": "Added",
+    "loading": "Loading…",
+    "empty": "Nothing here yet. Add your dumbbells and barbells — the AI will take them into account.",
+    "close": "Close"
   }
 }

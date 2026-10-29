@@ -377,6 +377,10 @@ class UsersMe(UsersRead):
         default=None, description="Hide activity workout sets and steps"
     )
     hide_activity_gear: StrictBool | None = Field(default=None, description="Hide activity gear")
+    publish_workouts_in_feed: StrictBool | None = Field(
+        default=None,
+        description="Publish logged strength sessions to the activity feed",
+    )
     has_local_password: StrictBool | None = Field(
         default=None,
         description=(

@@ -123,11 +123,36 @@ class TestCatalogExcerpt:
         assert lines == ["9 | Жим лёжа | Chest | Barbell, Bench"]
 
     def test_focus_keywords(self) -> None:
-        ids = workouts_ai_planner._focus_category_ids(
-            "хочу накачать грудные мышцы",
-            {1: "Arms", 2: "Chest", 3: "Back"},
-        )
-        assert ids == {2}
+        with patch.object(workouts_ai_planner, "_catalog_rows", return_value=[]) as rows:
+            workouts_ai_planner.build_catalog_excerpt(MagicMock(), "накачать грудные мышцы", "ru")
+        ids = rows.call_args.args[1]
+        assert ids == {11}  # snapshot category Chest (id 11 in the real dictionary)
+
+
+class TestInventoryBlock:
+    """User's inventory is described in the prompt and shrinks the catalog."""
+
+    def test_empty_inventory_means_no_filter(self, mock_db) -> None:
+        block, allowed = workouts_ai_planner.inventory_block(mock_db, None)
+        assert block == ""
+        assert allowed is None
+
+    def test_block_lists_items_and_allowed_ids(self, mock_db) -> None:
+        snapshot = {"equipment": [{"id": 3, "name": "Dumbbell"}, {"id": 1, "name": "Barbell"}]}
+        item = MagicMock()
+        item.name = "Гантели 10 кг"
+        item.equipment_id = 3
+        item.weight_kg = 10
+        item.quantity = 2
+
+        with (
+            patch.object(exercise_catalog, "load_snapshot", return_value=snapshot),
+            patch("workouts.ai_planner.user_inventory", return_value=[item]),
+        ):
+            block, allowed = workouts_ai_planner.inventory_block(mock_db, 1)
+        assert "Гантели 10 кг" in block
+        assert "x2" in block
+        assert allowed == workouts_ai_planner._ALWAYS_AVAILABLE_EQUIPMENT | {3}
 
 
 class TestGeneratePlanGuards:

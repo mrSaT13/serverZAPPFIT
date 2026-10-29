@@ -1,4 +1,4 @@
-# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0)
+# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессией 2026-10-29 (v0.27.0)
 
 **Проект:** `D:\projex\serverZap` (git-клон, ветка `master`)
 **GitHub:** https://github.com/mrSaT13/serverZAPPFIT
@@ -190,3 +190,88 @@ safeuploads ждёт, что на Windows модуля `resource` нет (мон
 Оценка риска при карантине: низкая (pillow только генерирует QR, валидацию токенов делает
 патченный joserfc, certifi — устаревший корень). Dev: virtualenv 11, filelock 3, uv 2,
 dnspython 1 — неважно для прода.
+
+---
+
+## Сессия 3 — каталог 914+RU, лента, инвентарь для ИИ, виджеты (2026-10-29, v0.27.0)
+
+**Заголовок:** `feat: exercise catalog 914 + russian names, feed publishing, training inventory, overview nutrition widgets, v0.27.0`.
+
+**Коммит:** (смотри HEAD) + `fix: scanner dialog, privacy publish toggle` в теле.
+
+### 1. Каталог упражнений (ядро запроса пользователя)
+- **+42 упражнения** из публичного датасета wrkout/exercises.json (Unlicense,
+  источник `exercises.json-master/` — добавлен в `.gitignore`, снапшот уже вшит):
+  маппинг полей (category по primaryMuscles, equipment/muscles → словари wger,
+  id 10000+crc32(name) — стабильные, uuid `wrkout-<crc32>`, license Unlicense,
+  instructions → description). Новые словари: equipment 13 Machine, 14 Medicine ball,
+  15 Foam roller, 16 Other; muscles 17 Adductor group, 18 Hip abductors, 19 Forearm flexors.
+- **Русские названия для всех 914** упражнений — `backend/assets/exercise_names_ru.json`
+  (id → ru; перегенерируемые исходники переводов лежали в exercises.json-master,
+  удалены). Снапшот пересобран `scripts/enrich_catalog.py` (новый, идемпотентный:
+  merge extra + ru overlay; хард-правило — не перезаписывает нативные wger-ru).
+- **Поиск по языку**: `GET /workouts/exercises?lang=ru|en` — `_matches_query`
+  сопоставляет только язык запроса (+канонический en всегда); `_display_name`
+  сортирует по названию на языке UI. Фронт `searchCatalog` передаёт `lang`,
+  пикер перезапускает поиск при смене локали.
+- **Uptime-сид**: `main._seed_exercise_catalog` пересеивает, если
+  count < snapshot count ИЛИ строки без ru-имён (LIKE '%"ru"%').
+- i18n: новые equipment/muscles ключи в ru/en `workouts.json`.
+
+### 2. Публикация тренировок в ленту (opt-in)
+- Новая настройка `users_privacy_settings.publish_workouts_in_feed`
+  (default **false**, миграция `v0_27_0_workout_feed.py`, rev `a7b2c3d4e5f6` ← `e5f6a7b8c9d0`).
+- `POST /workouts/sessions` при включённой настройке пишет Activity
+  (type 19, distance 0, start = session.date 12:00 UTC, elapsed = duration,
+  calories, description = comment + "N упражнений · M подходов · V кг"
+  по preferred_language ru/en, hide_* наследуются от privacy).
+  `workout_sessions.activity_id` (FK SET NULL) — ссылка.
+- `DELETE /workouts/sessions/{id}` удаляет связанную Activity (best-effort).
+  Обновления сессий нет (API не имеет PUT).
+- Фронт: тумблер в PrivacySettingsCard (`publishTitle/publishWorkoutsInFeed(+Hint)`),
+  types/profile.ts, `UsersMe`/`UsersPrivacySettingsUpdate` в api.generated.ts
+  (**обновлён вручную** — npx не смог скачать openapi-typescript; при следующем
+  нормальном `npm run gen:api` проверь drift-CI).
+
+### 3. Инвентарь для ИИ (Gears → «Тренировочный инвентарь»)
+- Таблица `user_equipment` (name, equipment_id → словарь каталога, weight_kg,
+  quantity), CRUD `/workouts/equipment` (модели: `workouts/equipment_{models,schema,crud,router}.py`,
+  включён перед `/{plan_id}`).
+- Фронт: `EquipmentDialog.vue` на GearsView (кнопка «Тренировочный инвентарь»),
+  сервис + queryKeys.workouts.equipment(), i18n `gears.equipment.*` ru/en.
+- ИИ-планировщик: `generate_plan(..., user_id)` → `inventory_block` добавляется
+  в промпт; каталог жёстко фильтруется до допустимого снаряжения
+  (`_ALWAYS_AVAILABLE_EQUIPMENT = {4,7}` — коврик+собственный вес) c fallback
+  на полный каталог, если фильтр высушил выборку.
+- Тесты: `tests/workouts/test_equipment.py` (7), `test_feed.py` (10),
+  lang-тесты в `test_catalog.py`, `TestInventoryBlock` в `test_ai_planner.py`.
+
+### 4. «Обзор»: виджеты питания + сканер
+- `HealthDashboardView`: секция «Питание» (съедено + Б/У/Ж, сожжено, баланс)
+  из `useNutritionSummaryQuery` (новое `queryKeys.nutrition.summary`,
+  `features/nutrition/composables/useNutrition.ts`).
+- **Сканер штрих-кодов починен**: `NutritionScannerDialog.vue` —
+  `await nextTick()` + `flush:'post'` (Html5Qrcode создавался до монтирования
+  портала диалога → «HTML Element with id=nutrition-scanner not found»).
+- Иконки: gym-типы (10/19/20/41/46/47) получили Dumbbell в `activityTypeIcon`.
+
+### 5. Системный инцидент окружения (НЕ prod): сломан loopback
+- Пол утрачивал соединения на 127.0.0.1/::1 (accept не получал connect),
+  что вешало **asyncio-тесты и TestClient**; вероятная причина — KumaFlow (VPN;
+  WFP-фильтры; 5 процессов). НО это же объясняет и старое зависание
+  `tests/core/test_apprise.py` из прошлой сессии! После перезагрузки ПК
+  loopback восстановлен, все async-прогоны зелёные. В прод — не переносить,
+  на CI не влияет. Для грядущих отборов: `asyncio.run(asyncio.sleep(0))` —
+  чек здоровья loopback перед полном прогоном.
+
+### Итог проверок v0.27.0
+- Backend: `ruff check/format` ✅; mypy — в правленых файлах 0 ошибок (≈207
+  старых в чужих модулях, baseline без изменений); pytest
+  `workouts + privacy + profile/router + config` = **294 passed** (async включительно).
+- Frontend: vue-tsc ✅, oxlint/eslint ✅, prettier ✅, vitest **685/685** ✅.
+- i18n JSON валидированы (ru/en workouts/gears/settings, health).
+
+### Деплой
+1. compose на сервере → `:latest` (v0.27.0), `docker compose pull && up -d`.
+2. Миграция v0.27.0 применится на старте, каталог пересеется (914 + ru).
+3. Сканер: проверь к/в камер у браузера (HTTPS-контекст обязателен).

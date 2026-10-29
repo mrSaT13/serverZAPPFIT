@@ -135,7 +135,11 @@
       "Incline bench": "Наклонная скамья",
       "Kettlebell": "Гиря",
       "Resistance band": "Резиновый жгут",
-      "Cable machine": "Блочная рама"
+      "Cable machine": "Блочная рама",
+      "Machine": "Тренажёр",
+      "Medicine ball": "Мяч",
+      "Foam roller": "Фоам-ролл",
+      "Other": "Другое"
     },
     "muscles": {
       "Biceps brachii": "Бицепс",
@@ -165,7 +169,10 @@
       "Lower back": "Поясница",
       "Soleus": "Камбаловидная мышца",
       "Hamstrings": "Бицепс бедра",
-      "Biceps femoris": "Бицепс бедра"
+      "Biceps femoris": "Бицепс бедра",
+      "Adductors": "Приводящие мышцы",
+      "Abductors": "Отводящие мышцы",
+      "Forearms": "Предплечья"
     }
   }
 }

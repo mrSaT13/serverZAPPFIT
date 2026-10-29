@@ -11,6 +11,7 @@ import {
   useHealthDashboardQuery,
   useHealthTargetsQuery,
 } from '@/features/health/composables/useHealth'
+import { useNutritionSummaryQuery } from '@/features/nutrition/composables/useNutrition'
 import {
   bmiCategoryKey,
   fastingElapsedSeconds,
@@ -38,6 +39,11 @@ const { data: user } = useCurrentUser()
 const units = computed(() => user.value?.units ?? 'metric')
 const dashboard = computed(() => dashboardQuery.data.value ?? null)
 const targets = computed(() => targetsQuery.data.value ?? null)
+
+// Today's nutrition summary feeding the widgets below the health grid.
+const todayIso = new Date().toISOString().slice(0, 10)
+const nutritionQuery = useNutritionSummaryQuery(() => todayIso)
+const nutrition = computed(() => nutritionQuery.data.value ?? null)
 
 const isLoading = computed(() => dashboardQuery.isPending.value || targetsQuery.isPending.value)
 const isError = computed(() => dashboardQuery.isError.value || targetsQuery.isError.value)
@@ -201,6 +207,47 @@ const cards = computed<CardModel[]>(() => {
     },
   ]
 })
+
+/** Nutrition widgets (today's intake/burned/balance) rendered under the health grid. */
+const nutritionCards = computed<CardModel[]>(() => {
+  const n = nutrition.value
+  const noData = t('health.dashboard.labelNoData')
+  const kcal = t('health.nutrition.kcal')
+  const hasData = n != null && (n.intake_calories > 0 || (n.burned_calories ?? 0) > 0)
+
+  const macros =
+    n != null
+      ? `${t('health.nutrition.macrosProtein')} ${Math.round(n.intake_protein)} · ${t('health.nutrition.macrosCarbs')} ${Math.round(n.intake_carbs)} · ${t('health.nutrition.macrosFat')} ${Math.round(n.intake_fat)}`
+      : null
+
+  const balance =
+    n?.net_calories != null
+      ? `${n.net_calories > 0 ? '+' : ''}${Math.round(n.net_calories)} ${kcal}`
+      : null
+
+  return [
+    {
+      key: 'nutritionIntake',
+      title: t('health.nutrition.eaten'),
+      value: hasData ? `${Math.round(n?.intake_calories ?? 0)} ${kcal}` : null,
+      noDataLabel: noData,
+      subtitle: hasData ? macros : null,
+    },
+    {
+      key: 'nutritionBurned',
+      title: t('health.nutrition.burned'),
+      value:
+        hasData && n?.burned_calories != null ? `${Math.round(n.burned_calories)} ${kcal}` : null,
+      noDataLabel: noData,
+    },
+    {
+      key: 'nutritionBalance',
+      title: t('health.nutrition.balance'),
+      value: hasData ? balance : null,
+      noDataLabel: noData,
+    },
+  ]
+})
 </script>
 
 <template>
@@ -223,20 +270,38 @@ const cards = computed<CardModel[]>(() => {
       </ErrorState>
     </Card>
 
-    <div v-else class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      <HealthDashboardCard
-        v-for="card in cards"
-        :key="card.key"
-        :title="card.title"
-        :value="card.value"
-        :no-data-label="card.noDataLabel"
-        :is-loading="isLoading"
-        :subtitle="card.subtitle"
-        :target-display-value="card.targetDisplayValue"
-        :no-target-label="card.noTargetLabel"
-        :footer-text="card.footerText"
-        :arrow-direction="card.arrowDirection"
-      />
+    <div v-else class="flex flex-col gap-3">
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <HealthDashboardCard
+          v-for="card in cards"
+          :key="card.key"
+          :title="card.title"
+          :value="card.value"
+          :no-data-label="card.noDataLabel"
+          :is-loading="isLoading"
+          :subtitle="card.subtitle"
+          :target-display-value="card.targetDisplayValue"
+          :no-target-label="card.noTargetLabel"
+          :footer-text="card.footerText"
+          :arrow-direction="card.arrowDirection"
+        />
+      </div>
+
+      <div>
+        <p class="text-card-heading">{{ t('health.nutrition.title') }}</p>
+        <div class="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <HealthDashboardCard
+            v-for="card in nutritionCards"
+            :key="card.key"
+            :title="card.title"
+            :value="card.value"
+            :no-data-label="card.noDataLabel"
+            :is-loading="nutritionQuery.isPending.value"
+            :subtitle="card.subtitle"
+            :footer-text="card.footerText"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>

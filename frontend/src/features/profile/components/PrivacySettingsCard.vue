@@ -149,6 +149,14 @@ const { values, isSubmitting, handleSubmit } = useForm<PrivacySettings>({
     </div>
 
     <div class="flex flex-col gap-1">
+      <p class="text-caption">{{ t('settings.profile.privacy.publishTitle') }}</p>
+      <Switch v-model="values.publishWorkoutsInFeed" :disabled="isSubmitting">
+        {{ t('settings.profile.privacy.publishWorkoutsInFeed') }}
+      </Switch>
+      <p class="text-hint">{{ t('settings.profile.privacy.publishWorkoutsInFeedHint') }}</p>
+    </div>
+
+    <div class="flex flex-col gap-1">
       <p class="text-caption">{{ t('settings.profile.privacy.hideTitle') }}</p>
       <div class="grid grid-cols-1 gap-x-6 sm:grid-cols-2">
         <Switch

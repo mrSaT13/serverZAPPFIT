@@ -116,6 +116,14 @@ export function activityTypeIsRacquet(type: number): boolean {
   return RACQUET_TYPES.has(type)
 }
 
+/** Gym/strength session types that get the dumbbell glyph in the feed. */
+const GYM_TYPES = new Set([10, 19, 20, 41, 46, 47])
+
+/** @returns Whether the type is an indoor strength/gym discipline. */
+export function activityTypeIsGym(type: number): boolean {
+  return GYM_TYPES.has(type)
+}
+
 /** @returns Whether the type is a rowing/kayaking discipline. */
 export function activityTypeIsRowing(type: number): boolean {
   return ROWING_TYPES.has(type)
@@ -312,7 +320,7 @@ export function activityTypeIcon(type: number): LucideIcon {
   if (activityTypeIsSnowboarding(type)) {
     return Snowflake
   }
-  if (activityTypeIsRacquet(type)) {
+  if (activityTypeIsRacquet(type) || activityTypeIsGym(type)) {
     return Dumbbell
   }
   return ActivityIcon

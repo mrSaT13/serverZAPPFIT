@@ -43,6 +43,51 @@ class TestMatchesQuery:
         assert not catalog_router._matches_query(_row(), "йога")
 
 
+class TestMatchesQueryLang:
+    """Language-scoped search: the UI language decides what matches."""
+
+    def test_ru_query_matches_in_ru_mode(self) -> None:
+        row = _row(
+            translations={
+                "en": {"name": "Bench Press", "description": ""},
+                "ru": {"name": "Жим лёжа", "description": ""},
+            }
+        )
+        assert catalog_router._matches_query(row, "жим", "ru")
+
+    def test_ru_query_ignored_in_en_mode(self) -> None:
+        row = _row(
+            translations={
+                "en": {"name": "Bench Press", "description": ""},
+                "ru": {"name": "Жим лёжа", "description": ""},
+            }
+        )
+        assert not catalog_router._matches_query(row, "жим", "en")
+
+    def test_en_canonical_matches_in_every_mode(self) -> None:
+        row = _row()
+        assert catalog_router._matches_query(row, "bench", "ru")
+
+    def test_lang_alias_checked(self) -> None:
+        row = _row(aliases={"ru": ["Становая тяга"], "en": ["Deadlift"]})
+        assert catalog_router._matches_query(row, "станов", "ru")
+
+
+class TestDisplayName:
+    def test_localized_name(self) -> None:
+        row = _row(
+            translations={
+                "en": {"name": "Bench Press", "description": ""},
+                "ru": {"name": "Жим лёжа", "description": ""},
+            }
+        )
+        assert catalog_router._display_name(row, "ru") == "Жим лёжа"
+
+    def test_falls_back_to_canonical_without_translation(self) -> None:
+        row = _row()
+        assert catalog_router._display_name(row, "ru") == "Bench Press"
+
+
 class TestToRead:
     def test_exposes_enrichment_fields(self) -> None:
         snapshot = {

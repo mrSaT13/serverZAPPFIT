@@ -30,6 +30,7 @@ export type ActivityVisibility = Schemas['ActivityVisibility']
  * @property hideLaps - Hide lap splits.
  * @property hideWorkoutSetsSteps - Hide workout sets and steps.
  * @property hideGear - Hide the gear used.
+ * @property publishWorkoutsInFeed - Publish logged strength sessions to the activity feed.
  */
 export interface PrivacySettings {
   defaultActivityVisibility: ActivityVisibility
@@ -45,6 +46,7 @@ export interface PrivacySettings {
   hideLaps: boolean
   hideWorkoutSetsSteps: boolean
   hideGear: boolean
+  publishWorkoutsInFeed: boolean
 }
 
 /**
