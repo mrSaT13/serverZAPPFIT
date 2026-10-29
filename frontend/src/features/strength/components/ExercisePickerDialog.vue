@@ -3,13 +3,14 @@ exercise to the plan editor. */
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Dumbbell, Search } from '@lucide/vue'
+import { Dumbbell, Info, Search, X } from '@lucide/vue'
 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Select } from '@/components/ui/select'
 import { Skeleton } from '@/components/ui/skeleton'
 import {
+  catalogDescriptionText,
   searchCatalog,
   fetchCatalogMeta,
   type CatalogExercise,
@@ -53,6 +54,20 @@ function displayTip(exercise: CatalogExercise): string | null {
   return tips[lang]?.[0] ?? tips.en?.[0] ?? null
 }
 
+/** wger_id of the exercise whose "how to perform" block is expanded. */
+const expandedId = ref<number | null>(null)
+
+/** First tips entry for the expanded exercise, matching the description's language. */
+function expandedTips(exercise: CatalogExercise): string[] {
+  const lang = locale.value.split('-')[0] ?? 'en'
+  const tips = exercise.tips ?? {}
+  return tips[lang] ?? tips.en ?? []
+}
+
+function toggleDetails(exercise: CatalogExercise): void {
+  expandedId.value = expandedId.value === exercise.wger_id ? null : exercise.wger_id
+}
+
 async function runSearch(): Promise<void> {
   loading.value = true
   loadError.value = false
@@ -79,7 +94,10 @@ watch(q, () => {
 })
 watch([categoryId, equipmentId], runSearch)
 // Re-run the search when the user switches language so names/sort follow.
-watch(searchLang, () => void runSearch())
+watch(searchLang, () => {
+  expandedId.value = null
+  return runSearch()
+})
 watch(open, (v) => {
   if (v && results.value.length === 0) void runSearch()
 })
@@ -115,33 +133,65 @@ watch(open, (v) => {
         <Skeleton class="h-12 w-full" v-for="i in 3" :key="i" />
       </div>
       <div v-else class="flex max-h-[50vh] flex-col gap-1 overflow-auto">
-        <button
-          v-for="ex in results"
-          :key="ex.wger_id"
-          class="text-left rounded-input border px-3 py-2 hover:bg-muted"
-          @click="emit('picked', ex)"
-        >
-          <div class="flex items-center gap-2">
-            <Dumbbell class="size-4 shrink-0 opacity-60" />
-            <div class="flex min-w-0 flex-col">
-              <span class="truncate text-body font-medium">{{ displayName(ex) }}</span>
-              <span class="text-hint">
-                {{ ex.category ? t(`workouts.catalog.categories.${ex.category.name}`) : '' }}
-                <template v-if="ex.muscles.length">
-                  ·
-                  {{
-                    ex.muscles
-                      .map((m) => t(`workouts.catalog.muscles.${m.name_en || m.name}`))
-                      .join(', ')
-                  }}</template
-                >
-              </span>
-              <span v-if="displayTip(ex)" class="text-hint truncate italic">{{
-                displayTip(ex)
-              }}</span>
-            </div>
+        <div v-for="ex in results" :key="ex.wger_id" class="rounded-input border">
+          <div class="flex items-center gap-1 pr-1">
+            <button
+              class="min-w-0 flex-1 rounded-input px-3 py-2 text-left hover:bg-muted"
+              @click="emit('picked', ex)"
+            >
+              <div class="flex items-center gap-2">
+                <Dumbbell class="size-4 shrink-0 opacity-60" />
+                <div class="flex min-w-0 flex-col">
+                  <span class="truncate text-body font-medium">{{ displayName(ex) }}</span>
+                  <span class="text-hint">
+                    {{ ex.category ? t(`workouts.catalog.categories.${ex.category.name}`) : '' }}
+                    <template v-if="ex.muscles.length">
+                      ·
+                      {{
+                        ex.muscles
+                          .map((m) => t(`workouts.catalog.muscles.${m.name_en || m.name}`))
+                          .join(', ')
+                      }}</template
+                    >
+                  </span>
+                  <span v-if="displayTip(ex)" class="text-hint truncate italic">{{
+                    displayTip(ex)
+                  }}</span>
+                </div>
+              </div>
+            </button>
+            <button
+              v-if="catalogDescriptionText(ex, searchLang) || expandedId === ex.wger_id"
+              class="flex size-7 items-center justify-center rounded-full text-muted-foreground hover:bg-muted"
+              :aria-label="
+                expandedId === ex.wger_id
+                  ? t('workouts.picker.closeDetails')
+                  : t('workouts.picker.howToObject')
+              "
+              :aria-expanded="expandedId === ex.wger_id"
+              @click="toggleDetails(ex)"
+            >
+              <X v-if="expandedId === ex.wger_id" class="size-4" />
+              <Info v-else class="size-4" />
+            </button>
           </div>
-        </button>
+          <div v-if="expandedId === ex.wger_id" class="border-t px-3 py-2">
+            <p class="text-hint mb-1 text-xs font-medium">
+              {{ t('workouts.picker.howTo') }}
+            </p>
+            <template v-for="(desc, i) in [catalogDescriptionText(ex, searchLang)]" :key="i">
+              <p v-if="desc?.fellBackToEnglish" class="text-hint mb-1 text-xs italic">
+                {{ t('workouts.picker.englishOnly') }}
+              </p>
+              <p v-if="desc" class="text-body whitespace-pre-line text-sm">{{ desc.text }}</p>
+            </template>
+            <ul v-if="expandedTips(ex).length" class="mt-2 list-disc pl-4">
+              <li v-for="tip in expandedTips(ex)" :key="tip" class="text-body text-sm">
+                {{ tip }}
+              </li>
+            </ul>
+          </div>
+        </div>
         <div
           v-if="notSeeded"
           class="rounded-input border border-orange-300 bg-orange-50 px-3 py-2 text-hint text-orange-700"
