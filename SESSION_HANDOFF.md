@@ -169,10 +169,14 @@ Build & Push Docker Image #53 = completed successfully (2m 32s)**.
    **Синхронизация упражнений** отдаёт описания с EN-фоллбеком (пикер,
    кнопка ℹ).
 5. Аудит «синхронизация комментариев»: сервер и web-клиент полноценно
-   работают (`/activities_comments` CRUD + UI в ActivityDetailView),
-   Flutter-клиент комментариев НЕ показывает и не пишет — так и осталось
-   в TODO (комментарий-сервис + экран с комментариями на
-   `activity_detail_screen/feed`); идеи для следующей сессии ниже.
+   работают (`/activities_comments` CRUD + UI в ActivityDetailView).
+   Flutter: ГОТОВО 2026-10-29 (коммиты `8cb18ca` в ZAPFIT-app-andoid):
+   `lib/core/services/activity_comments_service.dart` (CRUD + кэш имён
+   авторов) + `lib/features/activities/widgets/activity_comments_section.dart`
+   (секция на detail-экране, свои комментарии можно менять/удалять; для
+   локальных (не залитых) активностей секция скрыта). Счётчики в ленте —
+   нет и на вебе (осознанно, единообразие). Для показа комментариев нужен
+   новый APK.
 
 ## Полезные команды/заметки окружения
 - Python: `D:\projex\serverZap\backend\.venv\Scripts\python.exe` (3.14); `uv` не работает.
