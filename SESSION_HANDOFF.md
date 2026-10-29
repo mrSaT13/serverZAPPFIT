@@ -2,11 +2,21 @@
 
 **Проект:** `D:\projex\serverZap` (git-клон, ветка `master`)
 **GitHub:** https://github.com/mrSaT13/serverZAPPFIT
-**Версия:** 0.25.0 (бамп 0.24.1 → 0.25.0: `backend/pyproject.toml`, `backend/uv.lock`,
+**Версия:** 0.27.0 — коммит **`2468705` запушен 2026-10-29**; CI «Build & Push Docker
+Image» #56 для него: https://github.com/mrSaT13/serverZAPPFIT/actions/runs/40869643177 —
+при возобновлении сессии ПЕРВЫМ ДЕЛОМ проверить этот run: success → деплоить,
+failure → лог и в первую очередь drift-check `api.generated.ts` (типы правил
+руками — npx не смог скачать пакет; правки точные, так что риск низкий).
+
+---
+
+# ИСТОРИЧЕСКАЯ ЧАСТЬ (сессии 1–2, v0.25.0 / dependabot)
+
+**Версия на тот момент:** 0.25.0 (бамп 0.24.1 → 0.25.0: `backend/pyproject.toml`, `backend/uv.lock`,
 `backend/app/core/config.py` → `API_VERSION`, `backend/tests/core/test_config_extra.py`,
 `frontend/package.json` + `package-lock.json`, User-Agent `ZAPFIT/0.25` в `nutrition/off_client.py`)
 **Стек:** FastAPI + PostgreSQL + Redis (бэкенд), Vue 3 + TS + Tailwind 4 + TanStack Query (фронт)
-**Коммит этой сессии:** `a52538f` «feat: AI plan generator, workout/nutrition charts,
+**Коммит той сессии:** `a52538f` «feat: AI plan generator, workout/nutrition charts,
 enriched wger catalog, v0.25.0» (137 файлов, +3142/−565) — **запушлен, CI
 Build & Push Docker Image #53 = completed successfully (2m 32s)**.
 
@@ -265,13 +275,39 @@ dnspython 1 — неважно для прода.
   чек здоровья loopback перед полном прогоном.
 
 ### Итог проверок v0.27.0
-- Backend: `ruff check/format` ✅; mypy — в правленых файлах 0 ошибок (≈207
-  старых в чужих модулях, baseline без изменений); pytest
-  `workouts + privacy + profile/router + config` = **294 passed** (async включительно).
+- Backend: `ruff check/format` ✅; mypy — в правленых файлах 0 ошибок (207
+  старых в чужих модулях: strava 66, activities 67, auth 44 — то же, что было);
+  финальные прогоны pytest: `workouts + privacy + profile/router + config = 294 passed`,
+  в последний заход `tests\workouts + users_privacy + profile_router + config = 282 passed`.
 - Frontend: vue-tsc ✅, oxlint/eslint ✅, prettier ✅, vitest **685/685** ✅.
-- i18n JSON валидированы (ru/en workouts/gears/settings, health).
+- i18n JSON валидированы (ru/en workouts/gears/settings + health).
 
-### Деплой
-1. compose на сервере → `:latest` (v0.27.0), `docker compose pull && up -d`.
-2. Миграция v0.27.0 применится на старте, каталог пересеется (914 + ru).
-3. Сканер: проверь к/в камер у браузера (HTTPS-контекст обязателен).
+### Статус на момент сохранения handoff (2026-10-29)
+- Коммит `2468705` **запушен** в `master` ✅ (`9a38bf0..2468705`).
+- CI «Build & Push Docker Image» #56 для `2468705` был **in_progress** в момент
+  сохранения: https://github.com/mrSaT13/serverZAPPFIT/actions/runs/40869643177 —
+  при возобновлении проверить: success → деплоить; failure → лог, приоритетно
+  `openapi-types-check` drift (api.generated.ts правил руками).
+- `exercises.json-master/` — заигнорен (`# local exercise source dataset`),
+  снапшот = единственный артефакт в репо; временные файлы переводов в нём не
+  коммитились.
+- `oauth/uv.lock`, `package-lock.json`, `pyproject.toml`, `config.py`,
+  `test_config_extra.py`, `off_client.py` — версионный бамп 0.26.0 → 0.27.0 ✅
+  (`uv lock` пересобирать не требовалось).
+
+### ЧТО ОСТАЛОСЬ / ИДЕИ НА СЛЕДУЮЩУЮ СЕССИЮ
+1. **Деплой** на сервере: тег `:latest` в compose → `docker compose pull && up -d`,
+   лог будет `Exercise catalog stale ... — re-seeding` → `Seeded exercise catalog: 914`.
+   Ручная проверка: пикер (русские имена! поиск «жим»), сканер камеры (HTTPS),
+   тумблер публикации + сохранение тренировки → ленты, инвентарь + «Создать с ИИ».
+2. **Деплой: если CI #56 упал** — сначала лог drift-wf или сборки образов.
+3. Open-продолжения со старых сессий: 4 low npm (deepmerge, фикса нет); бэк-каран
+   `exclude-newer=30 дней` истекает ~11.11 — пересобрать лок после; ~207 старых
+   mypy-ошибок; «полный pytest» больше не виснет после перезагрузки (loopback) —
+   но известный пункт `connect_timeout` в `core/database.py` всё равно полезен.
+4. Картинки упражнений (jpg в exercises.json-master) — отложExplicitly по решению
+   пользователя; когда решит встраивать — писать менеджер путей
+   (например, статический роут `/exercise-images/{id}.jpg` с снапшот-полем).
+5. Возможные позднейшие доработки фич: галочка «опубликовать» прямо в диалоге
+   сессии (сейчас — только глобальный тумблер), локализация настроек
+   `gears.equipment.*` на все 31 локаль (сейчас fallback en).
