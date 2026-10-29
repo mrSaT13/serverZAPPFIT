@@ -1,14 +1,42 @@
-# ZAPFIT Server — сессия 2026-10-28 (handoff, v0.25.0) → обновлена сессиями 2026-10-29 (v0.27.0 → v0.28.0 «Соревнования»)
+# ZAPFIT Server — сессии 2026-10-29: v0.27.0 каталог → v0.28.0 «Соревнования» + Flutter: соревнования/комментарии/Workouts Phase A
 
-**Проект:** `D:\projex\serverZap` (git-клон, ветка `master`)
-**GitHub:** https://github.com/mrSaT13/serverZAPPFIT
-**MOBILE-КЛИЕНТ:** `D:\apktrack\endurain-flutter` (0.8.9+39 = сборка на телефоне;
-в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — не использовать;
-Release-репо APK: `mrSaT13/ZAPFIT-app-andoid-`, app_update_service сверяется с
-pubspec.yaml). Ориентировка по клиенту: `lib/core/services/*` (`api_client.dart`,
-auth/websocket/health/feed…), экраны `lib/features/*`, соревнования —
-`lib/features/activities/tabs/preparation_tab.dart` (офлайн-движок готовности:
-рейтинг = недельный объём/требуемый, ступени 5/10/21.5+ км → 20/30/45/60 км/нед).
+**Проект (сервер):** `D:\projex\serverZap` (ветка `master`) → https://github.com/mrSaT13/serverZAPPFIT
+**Мобильный клиент:** `D:\apktrack\endurain-flutter` (ветка `main`) → https://github.com/mrSaT13/ZAPFIT-app-andoid- — **версия бампнута до 0.8.10+40** (release-notes `RELEASE_NOTES_v0.8.10+40.md` в корне клиента); в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — НЕ использовать.
+**Пользователь ещё НЕ сделал:** (1) `docker compose pull && docker compose up -d` на сервере (единый образ несёт v0.27 каталог + v0.28 соревнования; собрать `latest` успела CI #57/#60 — success), (2) сборку APK и GitHub-Release с тегом `MC_ZAPFITv0.8.10+40` (без него автоапдейтер старой сборки 0.8.9+39 не предложит новую).
+
+## ✅ ЧТО УЖЕ ГОТОВО (сессии 29.10, все пушнуты)
+
+### Сервер (GitHub serverZAPPFIT)
+- `704d9bd`/`f4c2c13`+`a16a7bc` — фикс «Каталог пуст»: у репы ДВА Dockerfile, CI собирает **корневой** `Dockerfile` (см. `.github/workflows/docker.yml` → `file: ./Dockerfile`); оба теперь копируют каталог в `/app/assets`, а `exercise_catalog.load_snapshot()` ищет по 3 кандидатам (`_CATALOG_SEARCH`). Проверка после деплоя: `docker exec zapfit-app ls -la /app/assets` → `exercise_catalog.json` + `exercise_names_ru.json`; в логе `Seeded exercise catalog: 914`.
+- `c7a833a` — пикер: кнопка ℹ «Как выполнять» с EN-фоллбеком (`catalogDescriptionText`, тесты `catalogDescription.spec.ts`).
+- **`e3c6a07` (v0.28.0)** — домен `competitions` (CRUD + `GET /competitions/next` с готовностью; скоупы `competitions:read/write`; миграция `b8c9d0e1f2a3` ← `a7b2c3d4e5f6`); web-виджет «Подготовка» на Обзоре (`frontend/src/features/competitions/*`); `openapi.json` + `api.generated.ts` **пересобраны генератором** (npm-скрипт генерирует через `npm run gen:api` — на Windows он падает из-за `${ENDURAIN_OPENAPI_SOURCE:-openapi.json}` (bash-синтаксис), запускать напрямую: `npx -y openapi-typescript@7.13.0 openapi.json --output src/types/api.generated.ts`).
+- `818ff3b`/`563bb6f` — SESSION_HANDOFF-обновления.
+
+### Flutter (GitHub ZAPFIT-app-andoid-)
+- `20bba4d` — синк соревнований (preparation_tab ↔ сервер; push/pull/надгробия/планирование этапов; бейдж 📴); сервис `lib/core/services/competitions_service.dart`.
+- `8cb18ca` — комментарии: сервис `activity_comments_service.dart` (CRUD + кэш авторов) + `lib/features/activities/widgets/activity_comments_section.dart` (секция в detail-экране; для локальных активностей скрыта; счётчик в ленте не делали — на вебе тоже нет).
+- **`4b551fb` — Phase A Силовые:** 5-го таб «Тренировки» (Material+Cupertino в `lib/shared/widgets/app_bottom_nav.dart`);
+  каталог 914 ВШИТ в APK (`assets/catalog/exercise_catalog.json`, сервис `lib/core/services/catalog_service.dart` — поиск зеркалит сервер: язык запроса + канонический EN, категории/снаряды, пазл в Isolate);
+  `lib/features/workouts/`: список планов, редактор плана (пикер + целевые подход/повторы/вес, перемещение), LogSessionScreen (подход-подход, дефолты из плана), журнал с объёмом; `WorkoutsService` + `WorkoutsLocalRepository` (sqflite `workouts.db`: plans-кэш + sessions-очередь с is_synced, `syncPending()` — иконка синка с бейджем в AppBar).
+- Известное окружение телефона: sdk Dart через `D:\flutter\bin\dart.bat`; `flutter pub get` работает; в клиенте НЕТ CI (пуш ничего не собирает) и НЕТ мобильного релиз-лайна — APK только руками.
+
+## ⏳ ОСТАЛОСЬ (следующий заход Phase B)
+
+**Решения пользователя по Phase B (фиксированы через question-tool):**
+- Питание реализуется **поверх живой вкладки «Питание»** в «Здоровье» (сейчас там только TDEE-калькулятор: `lib/features/health/tabs/nutrition_tab.dart`).
+- **Со сканером штрихкодов** (пакет `mobile_scanner` — новый деп, Android permission: добавить в pubspec+android).
+- Сервер ждёт: CRUD `/api/v1/nutrition` (get list?date_from&date_to, POST, PUT/{log_id}, DELETE/{log_id}, schemas `MealLog{Base,Create,Update,Read}`, поля `date, meal_type (breakfast|lunch|dinner|snack), product_name, calories, protein, carbs, fat, portion_g, off_barcode`), `/nutrition/summary?date=` (intake+burned+net; burned = activities+BMR), `/nutrition/trend?date_from&date_to`, `/nutrition/off/search?q=`, `/nutrition/off/product/{barcode}`, ИИ `/nutrition/ai/{status,chat}` — их же приственном интерфейсе `ai_enabled/ai_base_url/ai_model` Server Settings.
+
+**План Phase B (продуман, договорились):**
+1. `lib/core/services/nutrition_service.dart` в паттерне WorkoutsService + sqflite `meal_logs` (is_synced) — двусторонний синк по образцу health_service.dart.
+2. Экран диеты в NutritionTab: список приёмов по датам, добавление по типу приёма (breakfast/lunch/dinner/snack), поиск по Open Food Facts; кэш продуктов в sqflite `products` (barcode → имя/ккал/макросы).
+3. Блок summary поверх вкладки: «съедено / сожжено / баланс» за день (burned уже считает сервер в /nutrition/summary).
+4. mobile_scanner: диалог сканирования штрихкода → \/nutrition/off/product/{barcode}\ → предзаполнение формы приёма.
+5. ИИ-помощник \/nutrition/ai/chat\ (серверный) — опционально после базы.
+
+**Не забыть в Phase B:** \lutter pub get\ + \dart analyze\ (0 ошибок — норма); строки интерфейса по-русски захардкожены (как в preparation_tab — конвенция клиента); AndroidManifest: permission CAMERA для mobile_scanner (android/app/src/main/AndroidManifest.xml); pubspec: новый деп mobile_scanner; после написания каждого файла перечитывать его — генерация кода даёт опечатки, анализатор ловит.
+
+------
 **Версия:** 0.27.0 + коммит **`a16a7bc` запушен 2026-10-29**; CI #57 success.
 **ГЛАВНЫЙ УРОК сессии «каталог пуст»:** в репо ДВА Dockerfile — корневой `Dockerfile`
 (его собирает CI: `.github/workflows/docker.yml` → `file: ./Dockerfile`) и
