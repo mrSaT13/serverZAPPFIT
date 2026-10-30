@@ -160,6 +160,68 @@ function markAllNotificationsReadInCache(
 export type NotificationsSnapshot = [readonly unknown[], CachedNotifications | undefined][]
 
 /**
+ * Snapshot pairing cached lists with the derived unread-count badge value,
+ * so a failed mark-read rolls both back together.
+ */
+export interface NotificationsMutationSnapshot {
+  lists: NotificationsSnapshot
+  unreadCount: number | undefined
+}
+
+/**
+ * Captures lists + badge, then flips one row and decrements the badge
+ * (floored at zero) so the bell clears instantly instead of waiting for the
+ * server round-trip. Exported pure-ish (client passed in) for testability.
+ *
+ * @param client - The active query client.
+ * @param id - The notification id being marked read.
+ * @returns A snapshot of the lists + badge as they were before the update.
+ */
+function snapshotAndOptimisticRead(client: QueryClient, id: number): NotificationsMutationSnapshot {
+  const lists = client.getQueriesData<CachedNotifications>({
+    queryKey: queryKeys.notifications.lists(),
+  })
+  const unreadCount = client.getQueryData<number>(queryKeys.notifications.unreadCount())
+  for (const [key, data] of lists) {
+    client.setQueryData(key, markNotificationReadInCache(data, id))
+  }
+  if (unreadCount != null && unreadCount > 0) {
+    client.setQueryData(queryKeys.notifications.unreadCount(), unreadCount - 1)
+  }
+  return { lists, unreadCount }
+}
+
+/**
+ * Captures lists + badge, then flips every row and zeroes the badge.
+ *
+ * @param client - The active query client.
+ * @returns A snapshot of the lists + badge as they were before the update.
+ */
+function snapshotAndOptimisticReadAll(client: QueryClient): NotificationsMutationSnapshot {
+  const lists = client.getQueriesData<CachedNotifications>({
+    queryKey: queryKeys.notifications.lists(),
+  })
+  const unreadCount = client.getQueryData<number>(queryKeys.notifications.unreadCount())
+  for (const [key, data] of lists) {
+    client.setQueryData(key, markAllNotificationsReadInCache(data))
+  }
+  client.setQueryData(queryKeys.notifications.unreadCount(), 0)
+  return { lists, unreadCount }
+}
+
+/**
+ * Restores notification lists + badge from a snapshot taken by
+ * {@link snapshotAndOptimisticRead}.
+ *
+ * @param client - The active query client.
+ * @param snapshot - The snapshot to restore.
+ */
+function restoreNotificationsSnapshot(client: QueryClient, snapshot: NotificationsMutationSnapshot): void {
+  restoreNotifications(client, snapshot.lists)
+  client.setQueryData(queryKeys.notifications.unreadCount(), snapshot.unreadCount)
+}
+
+/**
  * Optimistically marks a notification read across every cached notifications
  * list, returning a snapshot for rollback. Exported as a pure function so the
  * cache mutation — the easy-to-get-wrong part — is unit-testable without
@@ -232,17 +294,17 @@ export function restoreNotifications(client: QueryClient, snapshot: Notification
 export function useMarkNotificationReadMutation() {
   const client = useQueryClient()
 
-  return useMutation<void, Error, number, NotificationsSnapshot>({
+  return useMutation<void, Error, number, NotificationsMutationSnapshot>({
     mutationKey: queryKeys.notifications.all(),
     mutationFn: (id) => markNotificationRead(id),
     onMutate: async (id) => {
       // Cancel outgoing refetches so they can't clobber the optimistic update.
-      await client.cancelQueries({ queryKey: queryKeys.notifications.lists() })
-      return applyOptimisticRead(client, id)
+      await client.cancelQueries({ queryKey: queryKeys.notifications.all() })
+      return snapshotAndOptimisticRead(client, id)
     },
     onError: (_error, _id, snapshot) => {
       if (snapshot) {
-        restoreNotifications(client, snapshot)
+        restoreNotificationsSnapshot(client, snapshot)
       }
     },
     onSettled: () => {
@@ -261,17 +323,17 @@ export function useMarkNotificationReadMutation() {
 export function useMarkAllNotificationsReadMutation() {
   const client = useQueryClient()
 
-  return useMutation<void, Error, void, NotificationsSnapshot>({
+  return useMutation<void, Error, void, NotificationsMutationSnapshot>({
     mutationKey: queryKeys.notifications.all(),
     mutationFn: () => markAllNotificationsRead(),
     onMutate: async () => {
       // Cancel outgoing refetches so they can't clobber the optimistic update.
-      await client.cancelQueries({ queryKey: queryKeys.notifications.lists() })
-      return applyOptimisticReadAll(client)
+      await client.cancelQueries({ queryKey: queryKeys.notifications.all() })
+      return snapshotAndOptimisticReadAll(client)
     },
     onError: (_error, _vars, snapshot) => {
       if (snapshot) {
-        restoreNotifications(client, snapshot)
+        restoreNotificationsSnapshot(client, snapshot)
       }
     },
     onSettled: () => {

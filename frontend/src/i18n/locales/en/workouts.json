@@ -5,7 +5,16 @@
     "plans": "Plans",
     "history": "History",
     "charts": "Charts",
-    "progress": "Progress"
+    "progress": "Progress",
+    "calendar": "Calendar"
+  },
+  "calendar": {
+    "prev": "Previous month",
+    "next": "Next month",
+    "today": "Today",
+    "legendSession": "workout",
+    "legendRace": "race",
+    "emptyDay": "No workouts on this day — pick another date or log a session."
   },
   "plansEmpty": {
     "title": "No plans yet",

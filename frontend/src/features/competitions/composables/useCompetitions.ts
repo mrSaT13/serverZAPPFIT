@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/vue-query'
 
-import { fetchNextCompetition } from '@/features/competitions/services/competitions'
+import { fetchCompetitions, fetchNextCompetition } from '@/features/competitions/services/competitions'
 import { queryKeys } from '@/services/queryKeys'
 
 /**
@@ -12,6 +12,18 @@ export function useNextCompetitionQuery() {
   return useQuery({
     queryKey: queryKeys.competitions.next(),
     queryFn: fetchNextCompetition,
+    staleTime: 5 * 60 * 1000,
+  })
+}
+
+/**
+ * All of the user's competitions for calendar flags. Same five-minute
+ * staleness as the next-race widget.
+ */
+export function useCompetitionsQuery() {
+  return useQuery({
+    queryKey: queryKeys.competitions.all(),
+    queryFn: fetchCompetitions,
     staleTime: 5 * 60 * 1000,
   })
 }

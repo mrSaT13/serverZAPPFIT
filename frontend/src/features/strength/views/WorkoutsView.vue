@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Dumbbell, History, Plus, TrendingUp, Upload } from '@lucide/vue'
+import { CalendarDays, Dumbbell, History, Plus, TrendingUp, Upload } from '@lucide/vue'
 import { useQuery } from '@tanstack/vue-query'
 
 import { Button } from '@/components/ui/button'
@@ -14,6 +14,7 @@ import PlanDialog, {
   type PlanDialogSavePayload,
 } from '@/features/strength/components/PlanDialog.vue'
 import SessionDialog from '@/features/strength/components/SessionDialog.vue'
+import WorkoutCalendar from '@/features/strength/components/WorkoutCalendar.vue'
 import ImportWgerDialog from '@/features/strength/components/ImportWgerDialog.vue'
 import WorkoutWeeklyChart from '@/features/strength/components/WorkoutWeeklyChart.vue'
 import ExerciseProgressChart from '@/features/strength/components/ExerciseProgressChart.vue'
@@ -28,13 +29,14 @@ import {
   updatePlan,
   type WorkoutPlan,
 } from '@/features/strength/services/workouts'
+import { useCompetitionsQuery } from '@/features/competitions/composables/useCompetitions'
 import { useToasts } from '@/composables/useToasts'
 import { queryKeys } from '@/services/queryKeys'
 
 const { t } = useI18n()
 const toasts = useToasts()
 
-const section = ref<'plans' | 'history' | 'charts' | 'progress'>('plans')
+const section = ref<'plans' | 'history' | 'charts' | 'progress' | 'calendar'>('plans')
 const planDialogOpen = ref(false)
 const editingPlan = ref<WorkoutPlan | null>(null)
 const sessionDialogOpen = ref(false)
@@ -53,6 +55,7 @@ const statisticsQuery = useQuery({
   queryKey: queryKeys.workouts.statistics(),
   queryFn: () => fetchWorkoutStatistics(),
 })
+const competitionsQuery = useCompetitionsQuery()
 
 const plans = computed(() => plansQuery.data.value ?? [])
 const sessions = computed(() => sessionsQuery.data.value ?? [])
@@ -64,6 +67,7 @@ function invalidate(): void {
   void sessionsQuery.refetch()
   void progressQuery.refetch()
   void statisticsQuery.refetch()
+  void competitionsQuery.refetch()
 }
 
 function askDelete(target: WorkoutPlan | { kind: 'session'; id: number }): void {
@@ -155,7 +159,7 @@ function planDays(plan: WorkoutPlan): string[] {
     <!-- section switch -->
     <div class="flex gap-2 overflow-x-auto pb-1">
       <Button
-        v-for="s in ['plans', 'history', 'charts', 'progress'] as const"
+        v-for="s in ['plans', 'history', 'charts', 'progress', 'calendar'] as const"
         :key="s"
         size="sm"
         class="shrink-0"
@@ -164,6 +168,7 @@ function planDays(plan: WorkoutPlan): string[] {
       >
         <History v-if="s === 'history'" class="size-4" />
         <TrendingUp v-else-if="s === 'progress'" class="size-4" />
+        <CalendarDays v-else-if="s === 'calendar'" class="size-4" />
         <Dumbbell v-else class="size-4" />
         {{ t(`workouts.sections.${s}`) }}
       </Button>
@@ -269,6 +274,16 @@ function planDays(plan: WorkoutPlan): string[] {
         v-else
         :title="t('workouts.charts.empty.title')"
         :description="t('workouts.charts.empty.description')"
+      />
+    </template>
+
+    <!-- CALENDAR -->
+    <template v-else-if="section === 'calendar'">
+      <WorkoutCalendar
+        :sessions="sessions"
+        :competitions="competitionsQuery.data.value ?? []"
+        :is-loading="sessionsQuery.isPending.value || competitionsQuery.isPending.value"
+        @log-session="openSession(null)"
       />
     </template>
 

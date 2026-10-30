@@ -32,3 +32,8 @@ export interface NextCompetition {
 export function fetchNextCompetition(): Promise<NextCompetition> {
   return apiFetch<NextCompetition>('/competitions/next')
 }
+
+/** All of the user's competitions, newest race day first (calendar flags). */
+export function fetchCompetitions(): Promise<Competition[]> {
+  return apiFetch<Competition[]>('/competitions')
+}
