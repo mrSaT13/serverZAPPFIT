@@ -731,6 +731,16 @@
     "inDays": "in {n} days",
     "inDaysFew": "in {n} days",
     "inDaysMany": "in {n} days",
-    "volumeHint": "{actual} km/week over the last 28 days; {required} km/week is expected for this distance."
+    "volumeHint": "{actual} km/week over the last 28 days; {required} km/week is expected for this distance.",
+    "weekLabel": "km/wk",
+    "requiredLabel": "target",
+    "gapLabel": "to gain",
+    "statusReady": "peak form",
+    "statusBuilding": "building",
+    "statusBase": "base",
+    "taperFrom": "Taper from {date}",
+    "tipTaper": "cut volume by 30–40%, keep intensity",
+    "tipBase": "base: 3 easy 5 km runs per week",
+    "tipBuild": "long run + intervals once a week"
   }
 }
