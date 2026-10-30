@@ -3,7 +3,7 @@ grouped by a day label; the picker sources them from the offline catalog. -->
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Plus, Sparkles, Trash2 } from '@lucide/vue'
+import { Info, Plus, Sparkles, Trash2 } from '@lucide/vue'
 
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -12,7 +12,9 @@ import { inputFieldClass } from '@/components/ui/input/fieldClasses'
 import { Label } from '@/components/ui/label'
 import ExercisePickerDialog from './ExercisePickerDialog.vue'
 import {
+  catalogDescriptionText,
   fetchAiPlanStatus,
+  fetchCatalogExercise,
   generateAiPlan,
   type AiPlanDraft,
   type CatalogExercise,
@@ -160,6 +162,50 @@ function onPicked(ex: CatalogExercise): void {
   })
 }
 
+/** Per-row "how to" lookup: cached catalog exercise + expanded row index. */
+const catalogCache = ref<Record<number, CatalogExercise>>({})
+const expandedInfo = ref<number | null>(null)
+const infoLoading = ref(false)
+const infoError = ref(false)
+
+/** Exercise description in the UI language (English fallback), if any. */
+function rowDescription(wgerId: number): { text: string; fellBackToEnglish: boolean } | null {
+  const ex = catalogCache.value[wgerId]
+  if (!ex) return null
+  return catalogDescriptionText(ex, locale.value.split('-')[0] ?? 'en')
+}
+
+/** First technique tips matching the description language, if any. */
+function rowTips(wgerId: number): string[] {
+  const ex = catalogCache.value[wgerId]
+  if (!ex) return []
+  const lang = locale.value.split('-')[0] ?? 'en'
+  const tips = ex.tips ?? {}
+  return tips[lang] ?? tips.en ?? []
+}
+
+async function toggleRowInfo(idx: number): Promise<void> {
+  if (expandedInfo.value === idx) {
+    expandedInfo.value = null
+    return
+  }
+  const wgerId = exercises.value[idx]?.wger_exercise_id
+  if (wgerId == null) return
+  expandedInfo.value = idx
+  if (!catalogCache.value[wgerId]) {
+    infoLoading.value = true
+    infoError.value = false
+    try {
+      catalogCache.value[wgerId] = await fetchCatalogExercise(wgerId)
+    } catch {
+      infoError.value = true
+      return
+    } finally {
+      infoLoading.value = false
+    }
+  }
+}
+
 function save(): void {
   const payload: PlanDialogSavePayload = {
     name: name.value.trim(),
@@ -255,13 +301,41 @@ function save(): void {
             <div class="flex items-center gap-2">
               <span class="flex-1 truncate text-body font-medium">{{ ex.name }}</span>
               <Button
+                v-if="ex.wger_exercise_id != null"
+                size="sm"
+                variant="ghost"
+                :title="t('workouts.picker.howTo')"
+                @click="toggleRowInfo(idx)"
+              >
+                <Info class="size-4" />
+              </Button>
+              <Button
                 size="sm"
                 variant="ghost"
                 class="text-destructive"
-                @click="exercises.splice(idx, 1)"
+                @click="
+                  exercises.splice(idx, 1)
+                  expandedInfo = null
+                "
               >
                 <Trash2 class="size-4" />
               </Button>
+            </div>
+            <div
+              v-if="expandedInfo === idx && ex.wger_exercise_id != null"
+              class="text-hint mt-1 rounded-input bg-muted/60 px-2 py-1 text-body"
+            >
+              <template v-if="infoLoading">…</template>
+              <template v-else-if="rowDescription(ex.wger_exercise_id)">
+                {{ rowDescription(ex.wger_exercise_id)?.text }}
+                <span v-if="rowDescription(ex.wger_exercise_id)?.fellBackToEnglish" class="italic">
+                  ({{ t('workouts.picker.englishOnly') }})
+                </span>
+                <template v-if="rowTips(ex.wger_exercise_id).length > 0">
+                  <br />{{ rowTips(ex.wger_exercise_id)[0] }}
+                </template>
+              </template>
+              <template v-else>{{ t('workouts.picker.loadError') }}</template>
             </div>
             <div class="mt-1 grid grid-cols-2 gap-2 sm:grid-cols-5">
               <Input v-model="ex.day_label" :placeholder="t('workouts.plan.day')" />
