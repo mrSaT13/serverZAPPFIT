@@ -547,11 +547,52 @@ export interface paths {
          *         data: Comment content.
          *         token_user_id: Authenticated user ID.
          *         db: Database session.
+         *         ws_manager: WebSocket manager for notifications.
          *
          *     Returns:
          *         The newly created comment.
          */
         post: operations["create_comment_api_v1_activities_comments_activity_id__activity_id__post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/activities_comments/activity_id/{activity_id}/count": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Read Comment Count
+         * @description Return the comment count for one activity (feed badge).
+         */
+        get: operations["read_comment_count_api_v1_activities_comments_activity_id__activity_id__count_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/activities_comments/counts": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Read Comment Counts
+         * @description Batch comment counts for visible feed cards (one query).
+         */
+        post: operations["read_comment_counts_api_v1_activities_comments_counts_post"];
         delete?: never;
         options?: never;
         head?: never;
@@ -6547,6 +6588,34 @@ export interface components {
             updated_at?: string | null;
             /** User Id */
             user_id: number;
+        };
+        /**
+         * ActivityCommentCount
+         * @description Single activity comment count.
+         */
+        ActivityCommentCount: {
+            /** Activity Id */
+            activity_id: number;
+            /** Count */
+            count: number;
+        };
+        /**
+         * ActivityCommentCountsRequest
+         * @description Batch count request for a feed (one query instead of N+1).
+         */
+        ActivityCommentCountsRequest: {
+            /** Activity Ids */
+            activity_ids: number[];
+        };
+        /**
+         * ActivityCommentCountsResponse
+         * @description Mapping activity_id -> comment count.
+         */
+        ActivityCommentCountsResponse: {
+            /** Counts */
+            counts: {
+                [key: string]: number;
+            };
         };
         /**
          * ActivityCommentCreate
@@ -15435,6 +15504,74 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["ActivityComment"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    read_comment_count_api_v1_activities_comments_activity_id__activity_id__count_get: {
+        parameters: {
+            query?: {
+                api_key?: string | null;
+            };
+            header?: never;
+            path: {
+                activity_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ActivityCommentCount"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    read_comment_counts_api_v1_activities_comments_counts_post: {
+        parameters: {
+            query?: {
+                api_key?: string | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ActivityCommentCountsRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ActivityCommentCountsResponse"];
                 };
             };
             /** @description Validation Error */

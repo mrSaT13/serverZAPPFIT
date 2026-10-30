@@ -6,6 +6,7 @@ import { queryKeys } from '@/services/queryKeys'
 import {
   createActivityComment,
   deleteActivityComment,
+  fetchActivityCommentCount,
   fetchActivityComments,
   updateActivityComment,
 } from '../services/comments'
@@ -37,6 +38,23 @@ export function useActivityCommentsQuery(
 }
 
 /**
+ * Comment count badge for a feed card. Cheap `COUNT(*)` query, always
+ * enabled while the card is visible — the toggle shows the number without
+ * loading the whole thread.
+ *
+ * @param id - Reactive activity id.
+ * @returns The TanStack query result; data is `0` while loading.
+ */
+export function useActivityCommentCountQuery(id: MaybeRefOrGetter<number | null | undefined>) {
+  return useQuery({
+    queryKey: computed(() => [...queryKeys.activities.comments(resolveId(id)), 'count'] as const),
+    queryFn: () => fetchActivityCommentCount(resolveId(id)),
+    enabled: computed(() => resolveId(id) > 0),
+    staleTime: 30_000,
+  })
+}
+
+/**
  * Posts a comment and refetches the thread.
  *
  * @returns The TanStack mutation result.
@@ -50,6 +68,9 @@ export function useCreateActivityComment() {
     onSuccess: (comment: ActivityComment) => {
       void queryClient.invalidateQueries({
         queryKey: queryKeys.activities.comments(comment.activityId),
+      })
+      void queryClient.invalidateQueries({
+        queryKey: [...queryKeys.activities.comments(comment.activityId), 'count'],
       })
     },
   })
@@ -88,6 +109,9 @@ export function useDeleteActivityComment() {
     onSuccess: (activityId: number) => {
       void queryClient.invalidateQueries({
         queryKey: queryKeys.activities.comments(activityId),
+      })
+      void queryClient.invalidateQueries({
+        queryKey: [...queryKeys.activities.comments(activityId), 'count'],
       })
     },
   })

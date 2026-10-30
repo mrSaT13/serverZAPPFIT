@@ -12,8 +12,41 @@ import activities.activity_comments.dependencies as comments_dependencies
 import activities.activity_comments.schema as comments_schema
 import auth.dependencies as auth_dependencies
 import core.database as core_database
+import notifications.utils as notifications_utils
+import websocket.manager as websocket_manager
 
 router = APIRouter()
+
+
+@router.get(
+    "/activity_id/{activity_id}/count",
+    response_model=comments_schema.ActivityCommentCount,
+)
+async def read_comment_count(
+    activity_id: int,
+    _validate_id: Annotated[Callable, Depends(activities_dependencies.validate_activity_id)],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["activities:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> comments_schema.ActivityCommentCount:
+    """Return the comment count for one activity (feed badge)."""
+    count = comments_crud.get_comment_count(activity_id, token_user_id, db)
+    return comments_schema.ActivityCommentCount(activity_id=activity_id, count=count)
+
+
+@router.post(
+    "/counts",
+    response_model=comments_schema.ActivityCommentCountsResponse,
+)
+async def read_comment_counts(
+    data: comments_schema.ActivityCommentCountsRequest,
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["activities:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> comments_schema.ActivityCommentCountsResponse:
+    """Batch comment counts for visible feed cards (one query)."""
+    counts = comments_crud.get_comment_counts(data.activity_ids, token_user_id, db)
+    return comments_schema.ActivityCommentCountsResponse(counts={str(k): v for k, v in counts.items()})
 
 
 @router.get(
@@ -53,6 +86,10 @@ async def create_comment(
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["activities:write"])],
     token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
     db: Annotated[Session, Depends(core_database.get_db)],
+    ws_manager: Annotated[
+        websocket_manager.WebSocketManager,
+        Depends(websocket_manager.get_websocket_manager),
+    ],
 ) -> comments_schema.ActivityComment:
     """
     Add a comment to an activity.
@@ -62,11 +99,31 @@ async def create_comment(
         data: Comment content.
         token_user_id: Authenticated user ID.
         db: Database session.
+        ws_manager: WebSocket manager for notifications.
 
     Returns:
         The newly created comment.
     """
-    return comments_crud.create_comment(activity_id, token_user_id, data, db)
+    comment = comments_crud.create_comment(activity_id, token_user_id, data, db)
+    # Best-effort owner notification — never fails the 201.
+    try:
+        activity = comments_crud.activity_crud.get_activity_by_id_from_user_id_or_has_visibility(
+            activity_id, token_user_id, db
+        )
+        owner_id = None
+        if activity is not None:
+            owner_id = getattr(activity, "user_id", None)
+            if owner_id is None and isinstance(activity, dict):
+                owner_id = activity.get("user_id")
+        if owner_id is not None:
+            await notifications_utils.create_new_comment_notification(
+                int(owner_id), token_user_id, activity_id, comment.id, ws_manager
+            )
+    except Exception as err:
+        import core.logger as core_logger
+
+        core_logger.print_to_log(f"Comment notification skipped: {err}", "warning")
+    return comment
 
 
 @router.put(

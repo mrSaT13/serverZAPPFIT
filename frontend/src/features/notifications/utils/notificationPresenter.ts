@@ -2,6 +2,7 @@ import {
   Activity,
   Bell,
   CopyCheck,
+  MessageCircle,
   ShieldAlert,
   UserCheck,
   UserPlus,
@@ -21,6 +22,7 @@ import type { Notification } from '@/features/notifications/types'
 const NOTIFICATION_TYPE = {
   NEW_ACTIVITY: 1,
   DUPLICATE_ACTIVITY: 2,
+  NEW_COMMENT: 3,
   NEW_FOLLOWER_REQUEST: 11,
   NEW_FOLLOWER_REQUEST_ACCEPTED: 12,
   GARMIN_TOKEN_EXPIRED: 21,
@@ -113,6 +115,15 @@ export function presentNotification(
         icon: CopyCheck,
         titleKey: `${base}.duplicateActivity.title`,
         bodyKey: `${base}.duplicateActivity.body`,
+        to: activityId === null ? null : { name: 'activity', params: { id: String(activityId) } },
+      }
+    }
+    case NOTIFICATION_TYPE.NEW_COMMENT: {
+      const activityId = readNumber(options, 'activity_id')
+      return {
+        icon: MessageCircle,
+        titleKey: `${base}.newComment.title`,
+        bodyKey: `${base}.newComment.body`,
         to: activityId === null ? null : { name: 'activity', params: { id: String(activityId) } },
       }
     }

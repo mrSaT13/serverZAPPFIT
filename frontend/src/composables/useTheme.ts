@@ -96,6 +96,15 @@ export const ACCENT_PRESETS: AccentPreset[] = [
 /**
  * Applies a full accent preset to `<html>` element as inline CSS variables.
  */
+function updateMetaThemeColor(color: string): void {
+  const meta = document.querySelector('meta[name="theme-color"]')
+  if (meta) {
+    meta.setAttribute('content', color)
+  }
+  // PWA manifest theme_color is static at install time; updating the meta
+  // keeps the Android status bar / task switcher in sync with the accent.
+}
+
 function applyAccent(preset: AccentPreset, effectiveTheme: 'light' | 'dark'): void {
   const el = document.documentElement
 
@@ -110,6 +119,15 @@ function applyAccent(preset: AccentPreset, effectiveTheme: 'light' | 'dark'): vo
     el.style.setProperty('--ring', v.ring)
     el.style.setProperty('--color-brand-dark-foreground', v.brandDarkFg)
     el.style.setProperty('--color-brand-dark-surface', v.brandDarkSurface)
+    // Mirror light-branch brand tokens so dark+accent charts/nav
+    // (bg-brand-*, text-brand-mid, themeColor('--color-brand')) follow
+    // the chosen accent instead of staying blue.
+    el.style.setProperty('--brand', v.primary)
+    el.style.setProperty('--color-brand', v.primary)
+    el.style.setProperty('--color-brand-light', v.secondary)
+    el.style.setProperty('--color-brand-mid', v.primary)
+    el.style.setProperty('--color-brand-dark', v.primary)
+    updateMetaThemeColor(v.primary)
   } else {
     const v = preset.light
     el.style.setProperty('--brand', v.brand)
@@ -124,6 +142,7 @@ function applyAccent(preset: AccentPreset, effectiveTheme: 'light' | 'dark'): vo
     el.style.setProperty('--color-brand-light', v.brandLight)
     el.style.setProperty('--color-brand-mid', v.brandMid)
     el.style.setProperty('--color-brand-dark', v.brandDark)
+    updateMetaThemeColor(v.brand)
   }
 }
 

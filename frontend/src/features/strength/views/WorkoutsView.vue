@@ -153,11 +153,12 @@ function planDays(plan: WorkoutPlan): string[] {
     </div>
 
     <!-- section switch -->
-    <div class="flex gap-2">
+    <div class="flex gap-2 overflow-x-auto pb-1">
       <Button
         v-for="s in ['plans', 'history', 'charts', 'progress'] as const"
         :key="s"
         size="sm"
+        class="shrink-0"
         :variant="section === s ? 'secondary' : 'ghost'"
         @click="section = s"
       >
@@ -174,16 +175,16 @@ function planDays(plan: WorkoutPlan): string[] {
         <Skeleton v-for="i in 3" :key="i" class="h-20 w-full" />
       </div>
       <div v-else class="grid gap-3 md:grid-cols-2">
-        <Card v-for="plan in plans" :key="plan.id" class="flex flex-col gap-2 p-4">
-          <div class="flex items-start gap-2">
-            <div class="flex min-w-0 flex-col">
+        <Card v-for="plan in plans" :key="plan.id" class="flex min-w-0 flex-col gap-2 p-4">
+          <div class="flex min-w-0 flex-wrap items-start gap-2">
+            <div class="flex min-w-0 flex-1 flex-col">
               <span class="truncate font-medium">{{ plan.name }}</span>
               <span class="text-hint">
                 {{ plan.source === 'wger' ? t('workouts.fromWger') : t('workouts.manual') }}
                 · {{ plan.exercises.length }} {{ t('workouts.exercisesShort') }}
               </span>
             </div>
-            <div class="ml-auto flex gap-1">
+            <div class="flex flex-wrap gap-1">
               <Button size="sm" variant="secondary" @click="openSession(plan)">
                 {{ t('workouts.session.start') }}
               </Button>

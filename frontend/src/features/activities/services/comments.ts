@@ -85,3 +85,39 @@ export async function updateActivityComment(
 export async function deleteActivityComment(commentId: number): Promise<void> {
   await apiFetch<void>(`/activities_comments/${commentId}`, { method: 'DELETE' })
 }
+
+/**
+ * Comment count for one activity (feed badge). Returns 0 when the
+ * activity is not visible or the request fails — the badge then hides.
+ *
+ * @param activityId - The activity id.
+ * @returns The comment count.
+ */
+export async function fetchActivityCommentCount(activityId: number): Promise<number> {
+  const dto = await apiFetch<{ activity_id: number; count: number }>(
+    `/activities_comments/activity_id/${activityId}/count`,
+  )
+  return dto?.count ?? 0
+}
+
+/**
+ * Batch comment counts for feed cards (one request instead of N+1).
+ *
+ * @param activityIds - Visible activity ids (capped at 100 server-side).
+ * @returns Mapping activityId -> count (missing keys mean 0/hidden).
+ */
+export async function fetchActivityCommentCounts(
+  activityIds: number[],
+): Promise<Record<number, number>> {
+  if (activityIds.length === 0) return {}
+  const dto = await apiFetch<{ counts: Record<string, number> }>(`/activities_comments/counts`, {
+    method: 'POST',
+    body: JSON.stringify({ activity_ids: activityIds }),
+  })
+  const out: Record<number, number> = {}
+  for (const [k, v] of Object.entries(dto?.counts ?? {})) {
+    const id = Number(k)
+    if (Number.isFinite(id)) out[id] = v
+  }
+  return out
+}
