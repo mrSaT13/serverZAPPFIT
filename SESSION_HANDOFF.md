@@ -1,4 +1,37 @@
-# ZAPFIT Server — сессии 2026-10-29: v0.27.0 каталог → v0.28.0 «Соревнования» + Flutter: соревнования/комментарии/Workouts Phase A
+# ZAPFIT Server — сессия 2026-10-30: v0.29.0 (тема в профиле, избранное еды, перевод упражнений, календарь) + Flutter v0.8.11+41 (APK собран и подписан)
+
+**Проект (сервер):** `D:\projex\serverZap` (ветка `master`) → https://github.com/mrSaT13/serverZAPPFIT — **v0.29.0 запушен (`a6398a3` + фикс сборки `8c4e056`), CI образ собрался ✅**
+**Мобильный клиент:** `D:\apktrack\endurain-flutter` (ветка `main`) → https://github.com/mrSaT13/ZAPFIT-app-andoid- — **v0.8.11+41** (релиз-ноут `RELEASE_NOTES_v0.8.11+41.md` в стиле `0.8.9+39`); в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — НЕ использовать.
+**Пользователь ещё НЕ сделал:** (1) `docker compose pull && docker compose up -d` на сервере (образ `:latest` = 0.29.0; миграция `c9d0e1f2a3b4` применится сама), (2) GitHub-Release с тегом `MC_ZAPFITv0.8.11+41` — **APK собран и подписан 30.10** (`build/app/outputs/flutter-apk/v0.8.11+41.apk`, 97.3MB, release-keystore CN=ZAPFIT, тот же серт что 0.8.10+40) + `v0.8.11+41.apk.sha1` — залить оба в Release с текстом из релиз-ноута, чтобы автоапдейтер с 0.8.10+40 предложил обновление.
+
+## ✅ ЧТО УЖЕ ГОТОВО (сессия 30.10, всё пушнуто)
+
+### Сервер v0.29.0 (GitHub serverZAPPFIT, `master`)
+- **Тема в профиле** (`c9d0e1f2a3b4` ← `b8c9d0e1f2a3`, `users.theme`/`accent_color`, allow-list `edit_profile`): веб пушит смену в `PUT /profile` и подхватывает при логине — переживает смену браузера. Тест-моки поправлены (`test_users_router`, `test_router`).
+- **Счётчик комментариев**: `GET .../count` + `POST /counts` (батч без N+1), тип уведомления `NEW_COMMENT=3` + WS-пуш владельцу (себя не спамим); веб-бейдж, realtime-инвалидация, презентер; бейдж теперь гаснет мгновенно (оптимистика + откат).
+- **Перевод упражнений**: `POST /workouts/exercises/{wger_id}/translate` (RU через настроенный ИИ, 503 если нет; тесты 5/5). Пайплайн под батч: `assets/exercise_descriptions_ru.json` (`{}`) + поддержка в `scripts/enrich_catalog.py` (заполнение ru-описаний/типов, отчёт о непереведённых).
+- **Избранное еды**: `GET /nutrition/favorites?query=&limit=` — вьюха над логами юзера (последние значения, дедуп), без новой таблицы; тесты 3/3. PWA-форма получила «Вы уже ели» + `favoritesHint` (ru/en).
+- **Календарь тренировок**: 5-я вкладка WorkoutsView (`WorkoutCalendar.vue`: месяц, точки сессий, флажки стартов, панель дня + «Записать сессию»); `fetchCompetitions` + `useCompetitionsQuery`; i18n `sections.calendar` + `calendar.*` (ru/en).
+- **Классный виджет подготовки** (Обзор): пустая секция больше не рендерится; карточка с тейпером/статусом/мини-статами/советом (`taperFrom`, `tipTaper/Base/Build`, `weekLabel/requiredLabel/gapLabel/status*`).
+- **План-редактор веба**: ⓘ lookup (`GET /exercises/{wger_id}`) + кнопка «Перевести на русский»; починка сборки — многострочный `@click` ронял `vite build` (Docker), заменён на `removeExercise(idx)`.
+- Проверки: бэк 738 passed, фронт 693/693, `vue-tsc` + `eslint` чисто, `openapi.json` + `api.generated.ts` пересобраны.
+
+### Flutter v0.8.11+41 (GitHub ZAPFIT-app-andoid-, `main`, запушен)
+- Питание в «Здоровье» (7-й таб), «Мои продукты» (история локально → теперь сервер-first merge через `/favorites`, офлайн-фолбэк).
+- Комменты в ленту + счётчик (`.../count`), `NEW_COMMENT` в модели/иконках, «Открыть» в уведомлении ведёт в активность из кэша ленты.
+- RU-словари каталога (категории/снаряды/мышцы), ⓘ-шиты с описаниями + «Перевести на русский» (кэш сессии).
+- Workouts cache-first (мгновенный рендер из `workouts.db`), соревнования с клампами + видимыми ошибками (больше никакого вечного 📴).
+- `flutter analyze` чисто; APK `v0.8.11+41.apk` подписан тем же сертом (`ad62ce2e…`).
+
+## ⏳ ОСТАЛОСЬ / ОЧЕРЕДЬ
+1. **Деплой + релиз** (за пользователем, см. верх).
+2. **Батч-перевод 914 описаний**: прогнать `translate` по всем id → заполнить `exercise_descriptions_ru.json` → `enrich_catalog.py` → пересобрать снапшот → проверить `Seeded exercise catalog`. Нюанс: локальная `exercises.json-master/` сейчас даёт +42 других extra — решать при батче.
+3. **Календарь-идеи** (пустовато): полоса «Эта неделя» план/факт, топ рекордов на странице, живое пустое состояние (ИИ-план/пример программы).
+4. Техдолг: мобильный ИИ-чат (`/nutrition/ai/chat`), тап уведомления для follower/admin типов (только диалог), бэк-карантин `exclude-newer` истёк ~11.11 → пересобрать `uv lock`, ~207 старых mypy.
+
+---
+
+# ИСТОРИЧЕСКАЯ ЧАСТЬ (сессии до 30.10, v0.28.0 и раньше)
 
 **Проект (сервер):** `D:\projex\serverZap` (ветка `master`) → https://github.com/mrSaT13/serverZAPPFIT
 **Мобильный клиент:** `D:\apktrack\endurain-flutter` (ветка `main`) → https://github.com/mrSaT13/ZAPFIT-app-andoid- — **версия бампнута до 0.8.10+40** (release-notes `RELEASE_NOTES_v0.8.10+40.md` в корне клиента); в `D:\zapfit-github\endurain-flutter` старая копия 0.8.5 — НЕ использовать.
