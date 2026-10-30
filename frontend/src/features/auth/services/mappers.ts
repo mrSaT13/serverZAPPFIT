@@ -64,5 +64,7 @@ export function mapUserProfile(dto: UserProfileDto): User {
     hasLocalPassword: dto.has_local_password ?? false,
     units: dto.units,
     currency: dto.currency,
+    theme: dto.theme ?? 'system',
+    accentColor: dto.accent_color ?? 'blue',
   }
 }

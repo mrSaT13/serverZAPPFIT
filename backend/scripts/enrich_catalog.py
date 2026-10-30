@@ -17,12 +17,24 @@ Two enrichments are applied on top of the wger-derived snapshot
    ``translations`` list as ``{"language": "ru", ...}``; an existing
    wger-provided Russian translation is never overwritten.
 
+3. **Russian descriptions + technique tips** from
+   ``assets/exercise_descriptions_ru.json``
+   (``{"<exercise id>": {"description": "...", "tip": "..."}}``).
+   Fills the ``ru`` translation's ``description`` (only when empty — native
+   wger Russian text wins) and sets ``tips["ru"] = [tip]`` when the snapshot
+   has no Russian tips yet. This is the landing zone for the batch pipeline:
+   call ``POST /workouts/exercises/{wger_id}/translate`` per missing id and
+   store the results in that file, then re-run this script.
+
 Usage (after ``generate_exercise_catalog.py`` or standalone):
 
     python scripts/enrich_catalog.py [extra_dir] [ru_names_file] [snapshot]
 
 All arguments are optional — defaults point at the in-repo snapshot and the
 ``exercises.json-master/`` checkout in the repository root (if present).
+The descriptions overlay is always read from
+``assets/exercise_descriptions_ru.json`` when present (no CLI arg yet —
+the file is the batch pipeline's output).
 Running it twice is a no-op for exercises already merged.
 """
 
@@ -36,6 +48,7 @@ _BACKEND_DIR = Path(__file__).resolve().parent.parent
 _REPO_ROOT = _BACKEND_DIR.parent
 DEFAULT_SNAPSHOT = _BACKEND_DIR / "assets" / "exercise_catalog.json"
 DEFAULT_RU_NAMES = _BACKEND_DIR / "assets" / "exercise_names_ru.json"
+DEFAULT_RU_DESCRIPTIONS = _BACKEND_DIR / "assets" / "exercise_descriptions_ru.json"
 DEFAULT_EXTRA_DIR = _REPO_ROOT / "exercises.json-master" / "exercises"
 
 # Synthetic id range for extra (non-wger) exercises: 10000..99999.
@@ -214,6 +227,30 @@ def apply_russian_names(snapshot: dict, ru_names: dict[str, str]) -> int:
     return touched
 
 
+def apply_russian_descriptions(snapshot: dict, ru_texts: dict[str, dict]) -> int:
+    """Fill ``ru`` descriptions + tips from the batch overlay. Returns rows touched."""
+    touched = 0
+    for exercise in snapshot["exercises"]:
+        wanted = ru_texts.get(str(exercise["id"]))
+        if not isinstance(wanted, dict):
+            continue
+        ru_tr = next((tr for tr in exercise["translations"] if tr.get("language") == "ru"), None)
+        if ru_tr is None:
+            continue  # names overlay runs first; without a ru name row skip descriptions
+        changed = False
+        description = str(wanted.get("description") or "").strip()
+        if description and not str(ru_tr.get("description") or "").strip():
+            ru_tr["description"] = description
+            changed = True
+        tip = str(wanted.get("tip") or "").strip()
+        tips = exercise.setdefault("tips", {})
+        if tip and not tips.get("ru"):
+            tips["ru"] = [tip]
+            changed = True
+        touched += int(changed)
+    return touched
+
+
 def write_snapshot(snapshot: dict, path: Path) -> None:
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(snapshot, fh, ensure_ascii=False, separators=(",", ":"))
@@ -230,13 +267,23 @@ def main() -> int:
     if ru_file.is_file():
         ru_names = json.loads(ru_file.read_text(encoding="utf-8"))
     translated = apply_russian_names(snapshot, ru_names)
+    ru_texts: dict[str, dict] = {}
+    if DEFAULT_RU_DESCRIPTIONS.is_file():
+        ru_texts = json.loads(DEFAULT_RU_DESCRIPTIONS.read_text(encoding="utf-8"))
+    described = apply_russian_descriptions(snapshot, ru_texts)
     write_snapshot(snapshot, snapshot_path)
 
     untranslated = [e["id"] for e in snapshot["exercises"] if not any(t["language"] == "ru" for t in e["translations"])]
+    undescribed = [
+        e["id"]
+        for e in snapshot["exercises"]
+        if not next((t for t in e["translations"] if t["language"] == "ru"), {}).get("description")
+    ]
     print(
         f"Enriched {snapshot_path}: +{added} extra exercises, +{translated} ru names, "
-        f"total {snapshot['count']}; without ru: {len(untranslated)}"
-        + (f" ids={untranslated[:20]}" if untranslated else "")
+        f"+{described} ru descriptions, total {snapshot['count']}; "
+        f"without ru: {len(untranslated)}, without ru description: {len(undescribed)}"
+        + (f" ids={undescribed[:20]}" if undescribed else "")
     )
     return 0
 

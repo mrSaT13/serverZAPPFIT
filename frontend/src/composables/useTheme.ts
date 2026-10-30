@@ -1,6 +1,7 @@
 import { readonly, ref } from 'vue'
 
 import { getStorageItem, setStorageItem } from '@/lib/storage'
+import { apiFetch } from '@/services/http'
 
 const THEME_STORAGE_KEY = 'theme'
 const ACCENT_STORAGE_KEY = 'accentColor'
@@ -150,6 +151,52 @@ const theme = ref<Theme>('system')
 const accentId = ref<string>('blue')
 let initialized = false
 
+/** Server-synced appearance shape (subset of the profile User model). */
+export interface ServerAppearance {
+  theme: string
+  accentColor: string
+}
+
+function isThemeValue(value: string): value is Theme {
+  return value === 'light' || value === 'dark' || value === 'system'
+}
+
+/**
+ * Best-effort push of the current theme + accent to the profile so the
+ * appearance follows the user across browsers and devices. Local state is
+ * already applied — a failed request (offline, logged out) never rolls it
+ * back; the next successful change syncs again.
+ */
+function persistAppearance(): void {
+  void apiFetch('/profile', {
+    method: 'PUT',
+    body: JSON.stringify({ theme: theme.value, accent_color: accentId.value }),
+    responseType: 'void',
+  }).catch(() => {
+    // Offline or logged out — localStorage still holds the choice.
+  })
+}
+
+/**
+ * Applies appearance received from the server (login / session restore).
+ * Unknown values fall back to the local choice instead of breaking the UI.
+ *
+ * @param appearance - Theme + accent from the profile.
+ */
+export function applyServerAppearance(appearance: ServerAppearance): void {
+  const preset = ACCENT_PRESETS.find((p) => p.id === appearance.accentColor)
+  if (preset) {
+    accentId.value = preset.id
+    setStorageItem(ACCENT_STORAGE_KEY, preset.id)
+  }
+  if (isThemeValue(appearance.theme)) {
+    applyTheme(appearance.theme)
+    setStorageItem(THEME_STORAGE_KEY, appearance.theme)
+  } else if (preset) {
+    applyAccent(preset, resolveEffective(theme.value))
+  }
+}
+
 /** Resolves a theme preference (including ``system``) to an effective value. */
 function resolveEffective(value: Theme): 'light' | 'dark' {
   if (value === 'system') {
@@ -216,6 +263,7 @@ export function useTheme() {
   function setTheme(value: Theme): void {
     applyTheme(value)
     setStorageItem(THEME_STORAGE_KEY, value)
+    persistAppearance()
   }
 
   function toggle(): void {
@@ -228,6 +276,7 @@ export function useTheme() {
     accentId.value = presetId
     setStorageItem(ACCENT_STORAGE_KEY, presetId)
     applyAccent(preset, resolveEffective(theme.value))
+    persistAppearance()
   }
 
   return {

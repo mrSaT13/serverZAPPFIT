@@ -6075,6 +6075,30 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/workouts/exercises/{wger_id}/translate": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * Translate Catalog Exercise
+         * @description Translate one catalog exercise's how-to + first tip via the shared AI provider.
+         *
+         *     Stateless: nothing is written to the DB. The batch pipeline reuses this
+         *     endpoint per exercise and stores results in
+         *     ``backend/assets/exercise_descriptions_ru.json``.
+         */
+        post: operations["translate_catalog_exercise_api_v1_workouts_exercises__wger_id__translate_post"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/workouts/import/wger": {
         parameters: {
             query?: never;
@@ -7580,6 +7604,38 @@ export interface components {
             sessions: number;
             /** Wger Exercise Id */
             wger_exercise_id?: number | null;
+        };
+        /**
+         * ExerciseTranslation
+         * @description AI translation of one catalog exercise (stateless, nothing is stored).
+         *
+         *     The same shape feeds the future batch pipeline: a batch job calls this
+         *     endpoint per exercise and writes the results into
+         *     ``backend/assets/exercise_descriptions_ru.json`` for the snapshot build.
+         */
+        ExerciseTranslation: {
+            /**
+             * Description
+             * @default
+             */
+            description: string;
+            /** Language */
+            language: string;
+            /** Tip */
+            tip?: string | null;
+            /** Wger Id */
+            wger_id: number;
+        };
+        /**
+         * ExerciseTranslationRequest
+         * @description Target language for on-demand exercise translation (default Russian).
+         */
+        ExerciseTranslationRequest: {
+            /**
+             * Language
+             * @default ru
+             */
+            language: string;
         };
         /**
          * FastingStatus
@@ -11257,6 +11313,8 @@ export interface components {
          *             stay within the user's own photo directory.
          */
         ProfileUpdate: {
+            /** Accent Color */
+            accent_color?: string | null;
             /** Birthdate */
             birthdate?: string | null;
             /** City */
@@ -11275,6 +11333,7 @@ export interface components {
             /** Photo Path */
             photo_path?: string | null;
             preferred_language?: components["schemas"]["Language"] | null;
+            theme?: components["schemas"]["UsersTheme"] | null;
             units?: components["schemas"]["Units"] | null;
             /** Username */
             username?: string | null;
@@ -12667,6 +12726,12 @@ export interface components {
          *         password: User's password (min 8 chars).
          */
         UsersCreate: {
+            /**
+             * Accent Color
+             * @description User UI accent color preset id
+             * @default blue
+             */
+            accent_color: string;
             /** @description User access level */
             access_type: components["schemas"]["UserAccessType"];
             /**
@@ -12753,6 +12818,11 @@ export interface components {
              * @default en
              */
             preferred_language: components["schemas"]["Language"];
+            /**
+             * @description User UI theme (light, dark, system)
+             * @default system
+             */
+            theme: components["schemas"]["UsersTheme"];
             /**
              * @description User units (metric, imperial)
              * @default metric
@@ -13368,6 +13438,12 @@ export interface components {
          *             password (False for SSO-only accounts).
          */
         UsersMe: {
+            /**
+             * Accent Color
+             * @description User UI accent color preset id
+             * @default blue
+             */
+            accent_color: string;
             /** @description User access level */
             access_type: components["schemas"]["UserAccessType"];
             /**
@@ -13546,6 +13622,11 @@ export interface components {
              */
             publish_workouts_in_feed?: boolean | null;
             /**
+             * @description User UI theme (light, dark, system)
+             * @default system
+             */
+            theme: components["schemas"]["UsersTheme"];
+            /**
              * @description User units (metric, imperial)
              * @default metric
              */
@@ -13657,6 +13738,12 @@ export interface components {
          *         external_auth_count: Number of external auth providers.
          */
         UsersRead: {
+            /**
+             * Accent Color
+             * @description User UI accent color preset id
+             * @default blue
+             */
+            accent_color: string;
             /** @description User access level */
             access_type: components["schemas"]["UserAccessType"];
             /**
@@ -13750,6 +13837,11 @@ export interface components {
              */
             preferred_language: components["schemas"]["Language"];
             /**
+             * @description User UI theme (light, dark, system)
+             * @default system
+             */
+            theme: components["schemas"]["UsersTheme"];
+            /**
              * @description User units (metric, imperial)
              * @default metric
              */
@@ -13836,6 +13928,12 @@ export interface components {
          */
         UsersSignup: {
             /**
+             * Accent Color
+             * @description User UI accent color preset id
+             * @default blue
+             */
+            accent_color: string;
+            /**
              * Birthdate
              * @description User's birthdate
              */
@@ -13892,6 +13990,11 @@ export interface components {
              */
             preferred_language: components["schemas"]["Language"];
             /**
+             * @description User UI theme (light, dark, system)
+             * @default system
+             */
+            theme: components["schemas"]["UsersTheme"];
+            /**
              * @description User units (metric, imperial)
              * @default metric
              */
@@ -13902,6 +14005,17 @@ export interface components {
              */
             username: string;
         };
+        /**
+         * UsersTheme
+         * @description UI theme preference enumeration.
+         *
+         *     Attributes:
+         *         LIGHT: Light theme.
+         *         DARK: Dark theme.
+         *         SYSTEM: Follow the OS setting.
+         * @enum {string}
+         */
+        UsersTheme: "light" | "dark" | "system";
         /** ValidationError */
         ValidationError: {
             /** Context */
@@ -22381,6 +22495,43 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["CatalogExerciseRead"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    translate_catalog_exercise_api_v1_workouts_exercises__wger_id__translate_post: {
+        parameters: {
+            query?: {
+                api_key?: string | null;
+            };
+            header?: never;
+            path: {
+                wger_id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["ExerciseTranslationRequest"];
+            };
+        };
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["ExerciseTranslation"];
                 };
             };
             /** @description Validation Error */
