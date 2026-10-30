@@ -294,6 +294,11 @@ export function fetchCatalogMeta(): Promise<CatalogMeta> {
   return apiFetch<CatalogMeta>('/workouts/exercises/meta')
 }
 
+/** Single catalog exercise by wger id (plan-row "how to" lookup). */
+export function fetchCatalogExercise(wgerId: number): Promise<CatalogExercise> {
+  return apiFetch<CatalogExercise>(`/workouts/exercises/${wgerId}`)
+}
+
 // ---- wger import ----
 
 export function previewWgerRoutines(): Promise<WgerRoutinePreview[]> {
