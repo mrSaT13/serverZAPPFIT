@@ -3,7 +3,7 @@
 from datetime import UTC
 
 from fastapi import HTTPException, status
-from sqlalchemy import select
+from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 import activities.activity.crud as activity_crud
@@ -174,3 +174,76 @@ def delete_comment(
 
     db.delete(db_comment)
     db.commit()
+
+
+@core_decorators.handle_db_errors
+def get_comment_count(
+    activity_id: int,
+    token_user_id: int,
+    db: Session,
+) -> int:
+    """Return the number of comments on an activity.
+
+    Visibility is checked first (same rule as the list endpoint):
+    404 when the activity is not accessible.
+
+    Args:
+        activity_id: Activity ID to count comments for.
+        token_user_id: ID of the user making the request.
+        db: Database session.
+
+    Returns:
+        Comment count (>= 0).
+    """
+    activity = activity_crud.get_activity_by_id_from_user_id_or_has_visibility(activity_id, token_user_id, db)
+    if not activity:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Activity not found",
+        )
+    stmt = (
+        select(func.count())
+        .select_from(comment_models.ActivityComment)
+        .where(comment_models.ActivityComment.activity_id == activity_id)
+    )
+    return int(db.scalar(stmt) or 0)
+
+
+@core_decorators.handle_db_errors
+def get_comment_counts(
+    activity_ids: list[int],
+    token_user_id: int,
+    db: Session,
+) -> dict[int, int]:
+    """Batch comment counts for a feed (one query, no N+1).
+
+    Activities the requester cannot see are silently skipped
+    (no count entry), so callers must treat a missing key as 0/hidden.
+
+    Args:
+        activity_ids: Activity IDs to count (capped at 100).
+        token_user_id: ID of the user making the request.
+        db: Database session.
+
+    Returns:
+        Mapping activity_id -> count.
+    """
+    ids = sorted({i for i in activity_ids if isinstance(i, int) and i > 0})[:100]
+    if not ids:
+        return {}
+    stmt = (
+        select(
+            comment_models.ActivityComment.activity_id,
+            func.count(comment_models.ActivityComment.id),
+        )
+        .where(comment_models.ActivityComment.activity_id.in_(ids))
+        .group_by(comment_models.ActivityComment.activity_id)
+    )
+    rows = db.execute(stmt).all()
+    counts: dict[int, int] = {int(aid): int(cnt) for aid, cnt in rows}
+    # Visibility filter: drop counts for activities the user cannot see.
+    for aid in list(counts.keys()):
+        visible = activity_crud.get_activity_by_id_from_user_id_or_has_visibility(aid, token_user_id, db)
+        if not visible:
+            counts.pop(aid, None)
+    return counts

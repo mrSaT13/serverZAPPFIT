@@ -32,3 +32,28 @@ class ActivityComment(BaseModel):
     content: str
     created_at: datetime
     updated_at: datetime | None = None
+
+
+class ActivityCommentCount(BaseModel):
+    """Single activity comment count."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    activity_id: StrictInt
+    count: StrictInt
+
+
+class ActivityCommentCountsRequest(BaseModel):
+    """Batch count request for a feed (one query instead of N+1)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    activity_ids: list[StrictInt] = Field(max_length=100)
+
+
+class ActivityCommentCountsResponse(BaseModel):
+    """Mapping activity_id -> comment count."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    counts: dict[str, StrictInt]

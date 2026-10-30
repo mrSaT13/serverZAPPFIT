@@ -14,6 +14,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useCurrentUser } from '@/features/auth/composables/useCurrentUser'
 import ActivityDetailHeader from '@/features/activities/components/ActivityDetailHeader.vue'
+import ActivityComments from '@/features/activities/components/ActivityComments.vue'
 import ActivityGallery from '@/features/activities/components/ActivityGallery.vue'
 import ActivityGearCard from '@/features/activities/components/ActivityGearCard.vue'
 import ActivityHrZones from '@/features/activities/components/ActivityHrZones.vue'
@@ -299,6 +300,12 @@ const notFound = computed(() => !isPending.value && !isError.value && activity.v
       <ActivityGearCard v-if="isOwner" :activity="activity" />
 
       <ActivityTrainingMetrics :activity="activity" />
+
+      <ActivityComments
+        v-if="activity.id != null"
+        :activity-id="activity.id"
+        :activity-owner-id="activity.userId"
+      />
 
       <div v-if="chartPanels.length > 0" class="grid gap-3 lg:grid-cols-2">
         <template v-for="panel in chartPanels" :key="panel.key">

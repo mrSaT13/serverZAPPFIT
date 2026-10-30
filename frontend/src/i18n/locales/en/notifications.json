@@ -27,6 +27,10 @@
       "title": "Possible duplicate activity",
       "body": "An activity with the same start time may already exist."
     },
+    "newComment": {
+      "title": "New comment",
+      "body": "Someone commented on your activity."
+    },
     "newFollowerRequest": {
       "title": "New follower request",
       "body": "{name} ({'@'}{username}) wants to follow you."

@@ -124,20 +124,22 @@ onMounted(load)
 </script>
 
 <template>
-  <div class="flex flex-col gap-3">
-    <div class="flex items-center gap-2">
-      <Utensils class="size-6" />
+  <div class="flex min-w-0 flex-col gap-3">
+    <div class="flex flex-wrap items-center gap-2">
+      <Utensils class="size-6 shrink-0" />
       <h1 class="text-page-title">{{ t('health.nutrition.title') }}</h1>
-      <span class="text-body text-muted-foreground">{{ t('health.nutrition.subtitle') }}</span>
+      <span class="text-body w-full text-muted-foreground sm:w-auto">{{
+        t('health.nutrition.subtitle')
+      }}</span>
     </div>
 
-    <Card class="flex flex-col gap-3">
-      <div class="flex flex-wrap gap-2 items-center">
-        <div class="flex items-center gap-2">
+    <Card class="flex min-w-0 flex-col gap-3">
+      <div class="flex min-w-0 flex-wrap items-center gap-2">
+        <div class="flex min-w-0 items-center gap-2">
           <Label for="nutr-date">{{ t('health.nutrition.date') }}</Label>
           <Input id="nutr-date" type="date" v-model="selectedDate" @change="load" />
         </div>
-        <div class="ml-auto flex flex-wrap gap-2">
+        <div class="ml-auto flex min-w-0 flex-wrap gap-2">
           <div class="rounded-input border px-3 py-2 text-body">
             {{ t('health.nutrition.eaten') }}: {{ summary?.intake_calories ?? 0 }}
             {{ t('health.nutrition.kcal') }} · {{ t('health.nutrition.macrosProtein') }}
@@ -150,8 +152,8 @@ onMounted(load)
             class="rounded-input border px-3 py-2 text-body"
             :class="
               (summary?.net_calories ?? 0) < 0
-                ? 'bg-green-50 border-green-200'
-                : 'bg-orange-50 border-orange-200'
+                ? 'border-primary/30 bg-primary/5'
+                : 'border-warning/30 bg-warning/5'
             "
           >
             {{ t('health.nutrition.burned') }}: {{ Math.round(summary.burned_calories) }}

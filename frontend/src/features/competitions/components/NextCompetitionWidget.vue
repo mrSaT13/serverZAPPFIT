@@ -82,7 +82,7 @@ function daysLeftText(daysLeft: number): string {
       <div class="mt-3">
         <div class="h-2 w-full overflow-hidden rounded-full bg-muted">
           <div
-            class="h-full rounded-full bg-emerald-500 transition-all"
+            class="h-full rounded-full bg-primary transition-all"
             :style="{ width: `${readinessPct}%` }"
           />
         </div>

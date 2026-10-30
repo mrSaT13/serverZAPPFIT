@@ -368,3 +368,52 @@ async def create_garmin_token_expired_notification(
             status_code=(status.HTTP_500_INTERNAL_SERVER_ERROR),
             detail="Internal Server Error",
         ) from err
+
+
+async def create_new_comment_notification(
+    activity_owner_id: int,
+    commenter_id: int,
+    activity_id: int,
+    comment_id: int,
+    ws_manager: websocket_manager.WebSocketManager,
+) -> notifications_schema.NotificationRead | None:
+    """Notify the activity owner about a new comment.
+
+    No notification when the owner comments on their own activity
+    (avoids self-spam). Best-effort: failures are logged, never raised,
+    so comment creation never fails because of notifications.
+
+    Args:
+        activity_owner_id: Owner of the commented activity.
+        commenter_id: Author of the comment.
+        activity_id: Commented activity.
+        comment_id: New comment id.
+        ws_manager: WebSocket manager instance.
+
+    Returns:
+        The created notification, or None when skipped/failed.
+    """
+    if activity_owner_id == commenter_id:
+        return None
+    try:
+        return await _create_and_notify(
+            notifications_schema.NotificationCreate(
+                user_id=activity_owner_id,
+                type=(notifications_constants.NotificationType.NEW_COMMENT),
+                options={
+                    "activity_id": activity_id,
+                    "comment_id": comment_id,
+                    "commenter_id": commenter_id,
+                },
+            ),
+            "NEW_COMMENT_NOTIFICATION",
+            activity_owner_id,
+            ws_manager,
+        )
+    except Exception as err:
+        core_logger.print_to_log(
+            f"Error in create_new_comment_notification: {err}",
+            "error",
+            exc=err,
+        )
+        return None

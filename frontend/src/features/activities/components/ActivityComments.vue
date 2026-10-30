@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Skeleton } from '@/components/ui/skeleton'
 import ActivityCommentItem from '@/features/activities/components/ActivityCommentItem.vue'
 import {
+  useActivityCommentCountQuery,
   useActivityCommentsQuery,
   useCreateActivityComment,
 } from '@/features/activities/composables/useActivityComments'
@@ -28,10 +29,15 @@ const commentsQuery = useActivityCommentsQuery(
   () => props.activityId,
   () => expanded.value,
 )
+const countQuery = useActivityCommentCountQuery(() => props.activityId)
 const createMutation = useCreateActivityComment()
 
 const comments = computed(() => commentsQuery.data.value ?? [])
 const failed = computed(() => commentsQuery.isError.value)
+// Badge count: server COUNT(*) when available, else loaded thread length.
+const badgeCount = computed(
+  () => countQuery.data.value ?? (expanded.value ? comments.value.length : 0),
+)
 
 async function send() {
   const content = draft.value.trim()
@@ -51,8 +57,8 @@ function toggle() {
   <div class="border-t pt-2" @click.stop>
     <Button variant="ghost" size="sm" class="gap-1 px-1" @click="toggle">
       <MessageCircle class="size-4" />
-      <span v-if="expanded && comments.length > 0">
-        {{ t('activities.comments.count', comments.length) }}
+      <span v-if="badgeCount > 0">
+        {{ t('activities.comments.count', badgeCount) }}
       </span>
       <span v-else>{{ t('activities.comments.toggle') }}</span>
       <component :is="expanded ? ChevronUp : ChevronDown" class="size-4" />
