@@ -299,6 +299,21 @@ export function fetchCatalogExercise(wgerId: number): Promise<CatalogExercise> {
   return apiFetch<CatalogExercise>(`/workouts/exercises/${wgerId}`)
 }
 
+export interface ExerciseTranslation {
+  wger_id: number
+  language: string
+  description: string
+  tip: string | null
+}
+
+/** On-demand RU translation of one catalog exercise (stateless). */
+export function translateExercise(wgerId: number): Promise<ExerciseTranslation> {
+  return apiFetch<ExerciseTranslation>(`/workouts/exercises/${wgerId}/translate`, {
+    method: 'POST',
+    body: JSON.stringify({ language: 'ru' }),
+  })
+}
+
 // ---- wger import ----
 
 export function previewWgerRoutines(): Promise<WgerRoutinePreview[]> {

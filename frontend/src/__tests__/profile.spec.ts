@@ -45,6 +45,8 @@ function makeProfileDto(overrides: Partial<ProfileDto> = {}): ProfileDto {
     height: 170,
     max_heart_rate: 190,
     photo_path: '/app/backend/data/user_images/5.png',
+    theme: 'system',
+    accent_color: 'blue',
     default_activity_visibility: 'followers',
     hide_activity_start_time: true,
     hide_activity_location: false,

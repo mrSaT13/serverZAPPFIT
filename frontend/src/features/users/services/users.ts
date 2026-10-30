@@ -43,6 +43,8 @@ export function mapManagedUser(dto: UserDto): ManagedUser {
     maxHeartRate: dto.max_heart_rate ?? null,
     photoPath: dto.photo_path ?? null,
     avatarUrl: resolveAvatarUrl(dto.photo_path),
+    theme: dto.theme ?? 'system',
+    accentColor: dto.accent_color ?? 'blue',
   }
 }
 
@@ -77,6 +79,8 @@ function toUserWire(user: ManagedUser): Omit<UserDto, 'mfa_enabled' | 'external_
     height: user.height,
     max_heart_rate: user.maxHeartRate,
     photo_path: user.photoPath,
+    theme: user.theme,
+    accent_color: user.accentColor,
   }
 }
 
@@ -167,6 +171,8 @@ export async function createUser(input: CreateUserInput): Promise<ManagedUser> {
     height: input.height,
     max_heart_rate: input.maxHeartRate,
     photo_path: null,
+    theme: 'system',
+    accent_color: 'blue',
   }
   const dto = await apiFetch<UserDto>('/users', {
     method: 'POST',

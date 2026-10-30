@@ -51,6 +51,27 @@ class OffSearchResult(BaseModel):
     model_config = ConfigDict(extra="allow")
 
 
+class FoodFavorite(BaseModel):
+    """One repeat-food suggestion: the latest log row per product name.
+
+    A view over the user's own meal logs — no extra table, so it stays in
+    sync on every client automatically. Offline clients fall back to their
+    local log history.
+    """
+
+    product_name: StrictStr
+    calories: float | None = None
+    protein: float | None = None
+    carbs: float | None = None
+    fat: float | None = None
+    portion_g: float | None = None
+    off_barcode: StrictStr | None = None
+    last_logged: date | None = None
+    times_logged: StrictInt = 0
+
+    model_config = ConfigDict(from_attributes=True)
+
+
 class NutritionSummary(BaseModel):
     date: date
     intake_calories: float

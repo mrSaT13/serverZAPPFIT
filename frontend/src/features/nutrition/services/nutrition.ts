@@ -26,6 +26,18 @@ export interface OffProduct {
   image_url: string | null
 }
 
+export interface FoodFavorite {
+  product_name: string
+  calories: number | null
+  protein: number | null
+  carbs: number | null
+  fat: number | null
+  portion_g: number | null
+  off_barcode: string | null
+  last_logged: string | null
+  times_logged: number
+}
+
 export async function fetchLogs(date?: string): Promise<MealLog[]> {
   const qs = date ? `?date_from=${date}&date_to=${date}` : ''
   return apiFetch<MealLog[]>(`/nutrition${qs}`)
@@ -49,6 +61,12 @@ export async function searchOff(q: string, language?: string): Promise<OffProduc
 
 export async function getOffProduct(barcode: string): Promise<OffProduct> {
   return apiFetch<OffProduct>(`/nutrition/off/product/${barcode}`)
+}
+
+/** Repeat-food suggestions from the user's own log history. */
+export async function fetchFavorites(query: string, limit = 6): Promise<FoodFavorite[]> {
+  const qs = new URLSearchParams({ query, limit: String(limit) })
+  return apiFetch<FoodFavorite[]>(`/nutrition/favorites?${qs.toString()}`)
 }
 
 export async function fetchSummary(date: string) {

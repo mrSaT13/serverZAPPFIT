@@ -3,7 +3,7 @@ grouped by a day label; the picker sources them from the offline catalog. -->
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Info, Plus, Sparkles, Trash2 } from '@lucide/vue'
+import { Info, Languages, Plus, Sparkles, Trash2 } from '@lucide/vue'
 
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
@@ -16,6 +16,7 @@ import {
   fetchAiPlanStatus,
   fetchCatalogExercise,
   generateAiPlan,
+  translateExercise,
   type AiPlanDraft,
   type CatalogExercise,
   type PlanExercise,
@@ -168,6 +169,11 @@ const expandedInfo = ref<number | null>(null)
 const infoLoading = ref(false)
 const infoError = ref(false)
 
+/** On-demand RU translation cache (wger id → translated text). */
+const ruTranslationCache = ref<Record<number, { description: string; tip: string | null }>>({})
+const translatingIdx = ref<number | null>(null)
+const translateFailed = ref(false)
+
 /** Exercise description in the UI language (English fallback), if any. */
 function rowDescription(wgerId: number): { text: string; fellBackToEnglish: boolean } | null {
   const ex = catalogCache.value[wgerId]
@@ -203,6 +209,40 @@ async function toggleRowInfo(idx: number): Promise<void> {
     } finally {
       infoLoading.value = false
     }
+  }
+}
+
+/** Whether the catalog itself carries a Russian description (EN fallback doesn't count). */
+function hasRuDescription(wgerId: number): boolean {
+  return Boolean(catalogCache.value[wgerId]?.translations.ru?.description?.trim())
+}
+
+/** Translated (or freshly translating) description for the expanded row. */
+function shownDescription(wgerId: number): string | null {
+  return ruTranslationCache.value[wgerId]?.description ?? rowDescription(wgerId)?.text ?? null
+}
+
+function shownTip(wgerId: number): string | null {
+  return ruTranslationCache.value[wgerId]?.tip ?? (rowTips(wgerId)[0] as string | undefined) ?? null
+}
+
+async function translateRow(idx: number): Promise<void> {
+  const wgerId = exercises.value[idx]?.wger_exercise_id
+  if (wgerId == null || translatingIdx.value !== null) return
+  if (ruTranslationCache.value[wgerId]) return
+  translatingIdx.value = idx
+  translateFailed.value = false
+  try {
+    const res = await translateExercise(wgerId)
+    if (res.description.trim()) {
+      ruTranslationCache.value[wgerId] = { description: res.description, tip: res.tip }
+    } else {
+      translateFailed.value = true
+    }
+  } catch {
+    translateFailed.value = true
+  } finally {
+    translatingIdx.value = null
   }
 }
 
@@ -326,16 +366,50 @@ function save(): void {
               class="text-hint mt-1 rounded-input bg-muted/60 px-2 py-1 text-body"
             >
               <template v-if="infoLoading">…</template>
-              <template v-else-if="rowDescription(ex.wger_exercise_id)">
-                {{ rowDescription(ex.wger_exercise_id)?.text }}
-                <span v-if="rowDescription(ex.wger_exercise_id)?.fellBackToEnglish" class="italic">
+              <template v-else-if="shownDescription(ex.wger_exercise_id)">
+                {{ shownDescription(ex.wger_exercise_id) }}
+                <span
+                  v-if="
+                    !hasRuDescription(ex.wger_exercise_id) &&
+                    !ruTranslationCache[ex.wger_exercise_id]
+                  "
+                  class="italic"
+                >
                   ({{ t('workouts.picker.englishOnly') }})
                 </span>
-                <template v-if="rowTips(ex.wger_exercise_id).length > 0">
-                  <br />{{ rowTips(ex.wger_exercise_id)[0] }}
+                <template v-if="shownTip(ex.wger_exercise_id)">
+                  <br />{{ shownTip(ex.wger_exercise_id) }}
                 </template>
               </template>
               <template v-else>{{ t('workouts.picker.loadError') }}</template>
+              <div
+                v-if="
+                  !hasRuDescription(ex.wger_exercise_id) &&
+                  !ruTranslationCache[ex.wger_exercise_id] &&
+                  shownDescription(ex.wger_exercise_id)
+                "
+                class="mt-1"
+              >
+                <Button
+                  size="sm"
+                  variant="outline"
+                  :disabled="translatingIdx !== null"
+                  @click="translateRow(idx)"
+                >
+                  <Languages class="size-4" />
+                  {{
+                    translatingIdx === idx
+                      ? t('workouts.picker.translating')
+                      : t('workouts.picker.translate')
+                  }}
+                </Button>
+                <span
+                  v-if="translateFailed && translatingIdx === null"
+                  class="text-destructive ml-2"
+                >
+                  {{ t('workouts.picker.translateFailed') }}
+                </span>
+              </div>
             </div>
             <div class="mt-1 grid grid-cols-2 gap-2 sm:grid-cols-5">
               <Input v-model="ex.day_label" :placeholder="t('workouts.plan.day')" />

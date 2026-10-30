@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Search, Plus, Trash2, Utensils, ScanLine } from '@lucide/vue'
+import { Search, Plus, Trash2, Utensils, ScanLine, History } from '@lucide/vue'
 
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -19,8 +19,10 @@ import {
   searchOff,
   getOffProduct,
   fetchSummary,
+  fetchFavorites,
   type MealLog,
   type OffProduct,
+  type FoodFavorite,
 } from '@/features/nutrition/services/nutrition'
 
 const { t, locale } = useI18n()
@@ -51,6 +53,37 @@ const form = ref({
   off_barcode: '',
 })
 const scannerOpen = ref(false)
+const favorites = ref<FoodFavorite[]>([])
+
+let favTimer: ReturnType<typeof setTimeout> | undefined
+watch(
+  () => form.value.product_name,
+  (name) => {
+    clearTimeout(favTimer)
+    if (name.trim().length < 2) {
+      favorites.value = []
+      return
+    }
+    favTimer = setTimeout(async () => {
+      try {
+        favorites.value = await fetchFavorites(name.trim())
+      } catch {
+        favorites.value = []
+      }
+    }, 300)
+  },
+)
+
+function fillFromFavorite(f: FoodFavorite) {
+  form.value.product_name = f.product_name
+  form.value.calories = f.calories != null ? String(f.calories) : ''
+  form.value.protein = f.protein != null ? String(f.protein) : ''
+  form.value.carbs = f.carbs != null ? String(f.carbs) : ''
+  form.value.fat = f.fat != null ? String(f.fat) : ''
+  form.value.portion_g = f.portion_g != null ? String(f.portion_g) : form.value.portion_g
+  form.value.off_barcode = f.off_barcode ?? ''
+  favorites.value = []
+}
 
 async function load() {
   logs.value = await fetchLogs(selectedDate.value)
@@ -189,6 +222,27 @@ onMounted(load)
             </div>
           </div>
           <Input v-model="form.product_name" :placeholder="t('health.nutrition.product')" />
+          <div
+            v-if="favorites.length > 0"
+            class="flex flex-col gap-1 rounded-input border border-primary/30 bg-primary/5 p-2"
+          >
+            <span class="text-hint flex items-center gap-1">
+              <History class="size-3.5" />{{ t('health.nutrition.favoritesHint') }}
+            </span>
+            <button
+              v-for="f in favorites"
+              :key="f.product_name"
+              class="rounded-input px-2 py-1 text-left hover:bg-muted"
+              @click="fillFromFavorite(f)"
+            >
+              <span class="text-body font-medium">{{ f.product_name }}</span>
+              <span class="text-hint">
+                ·
+                {{ f.portion_g ?? '?' }} {{ t('health.nutrition.gram') }} · {{ f.calories ?? '?' }}
+                {{ t('health.nutrition.kcal') }} · ×{{ f.times_logged }}
+              </span>
+            </button>
+          </div>
           <div class="grid grid-cols-4 gap-2">
             <Input
               v-model="form.calories"

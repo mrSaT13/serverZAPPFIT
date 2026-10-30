@@ -37,6 +37,8 @@ export type UserAccessType = Schemas['UserAccessType']
  * @property maxHeartRate - Max heart rate in bpm, or `null`.
  * @property photoPath - Raw backend photo path (round-tripped on edit), or `null`.
  * @property avatarUrl - Servable avatar URL derived from `photoPath`, or `null`.
+ * @property theme - UI theme preference (round-tripped on edit).
+ * @property accentColor - UI accent color preset id (round-tripped on edit).
  */
 export interface ManagedUser {
   id: number
@@ -60,6 +62,8 @@ export interface ManagedUser {
   maxHeartRate: number | null
   photoPath: string | null
   avatarUrl: string | null
+  theme: Schemas['UsersTheme']
+  accentColor: string
 }
 
 /** One page of the paginated users list. */
