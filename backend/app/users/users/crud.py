@@ -683,6 +683,8 @@ PROFILE_SELF_SERVICE_FIELDS: frozenset[str] = frozenset(
         "max_heart_rate",
         "first_day_of_week",
         "currency",
+        "theme",
+        "accent_color",
         "photo_path",
     }
 )

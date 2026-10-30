@@ -126,6 +126,21 @@ class WeekDay(Enum):
     SATURDAY = "saturday"
 
 
+class UsersTheme(Enum):
+    """
+    UI theme preference enumeration.
+
+    Attributes:
+        LIGHT: Light theme.
+        DARK: Dark theme.
+        SYSTEM: Follow the OS setting.
+    """
+
+    LIGHT = "light"
+    DARK = "dark"
+    SYSTEM = "system"
+
+
 class UserAccessType(Enum):
     """
     User access level enumeration.
@@ -234,6 +249,15 @@ class UsersBase(BaseModel):
     currency: server_settings_schema.Currency = Field(
         default=server_settings_schema.Currency.EURO,
         description="User currency (euro, dollar, pound)",
+    )
+    theme: UsersTheme = Field(
+        default=UsersTheme.SYSTEM,
+        description="User UI theme (light, dark, system)",
+    )
+    accent_color: StrictStr = Field(
+        default="blue",
+        max_length=20,
+        description="User UI accent color preset id",
     )
 
     model_config = ConfigDict(use_enum_values=True)
@@ -587,6 +611,8 @@ class ProfileUpdate(BaseModel):
     max_heart_rate: StrictInt | None = Field(default=None, ge=30, le=250)
     first_day_of_week: WeekDay | None = None
     currency: server_settings_schema.Currency | None = None
+    theme: UsersTheme | None = None
+    accent_color: StrictStr | None = Field(default=None, max_length=20)
     photo_path: StrictStr | None = Field(default=None, max_length=250)
 
     model_config = ConfigDict(

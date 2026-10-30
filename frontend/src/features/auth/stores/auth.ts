@@ -5,6 +5,7 @@ import type { AuthTokenResponse } from '@/types'
 import type { LoginResponse, User } from '@/features/auth/types'
 
 import { useTelemetry } from '@/composables/useTelemetry'
+import { applyServerAppearance } from '@/composables/useTheme'
 import { useRealtime } from '@/composables/useRealtime'
 import { getLocaleForBackendLanguage, loadLocaleMessages, setI18nLocale } from '@/i18n'
 import { clearUserScopedStorage } from '@/lib/storage'
@@ -110,6 +111,7 @@ export const useAuthStore = defineStore('auth', () => {
     queryClient.setQueryData(queryKeys.currentUser(), nextUser)
     isAuthenticated.value = true
     await applyPreferredLocale(nextUser)
+    applyServerAppearance(nextUser)
     isReady.value = true
     // Open the realtime channel now that a session is established.
     useRealtime().connect()

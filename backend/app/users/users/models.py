@@ -183,6 +183,18 @@ class Users(Base):
         nullable=False,
         comment="User currency (euro, dollar, pound)",
     )
+    theme: Mapped[str] = mapped_column(
+        String(20),
+        default="system",
+        nullable=False,
+        comment="User UI theme (light, dark, system)",
+    )
+    accent_color: Mapped[str] = mapped_column(
+        String(20),
+        default="blue",
+        nullable=False,
+        comment="User UI accent color preset id",
+    )
     email_verified: Mapped[bool] = mapped_column(
         default=False,
         nullable=False,

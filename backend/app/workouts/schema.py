@@ -183,3 +183,25 @@ class AiPlanDraft(BaseModel):
     description: StrictStr | None = Field(default=None, max_length=1000)
     exercises: list[AiPlanDraftExercise] = []
     model: StrictStr | None = None
+
+
+class ExerciseTranslationRequest(BaseModel):
+    """Target language for on-demand exercise translation (default Russian)."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    language: StrictStr = Field(default="ru", max_length=10)
+
+
+class ExerciseTranslation(BaseModel):
+    """AI translation of one catalog exercise (stateless, nothing is stored).
+
+    The same shape feeds the future batch pipeline: a batch job calls this
+    endpoint per exercise and writes the results into
+    ``backend/assets/exercise_descriptions_ru.json`` for the snapshot build.
+    """
+
+    wger_id: StrictInt
+    language: StrictStr
+    description: StrictStr = ""
+    tip: StrictStr | None = None

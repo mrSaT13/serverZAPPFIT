@@ -149,6 +149,94 @@ async def generate_ai_plan(
         raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
 
 
+# ---- on-demand exercise translation (RU descriptions for the info dialog) ----
+
+
+def _strip_html(text: str) -> str:
+    """Plain-text version of a wger HTML fragment (keeps the prompt small)."""
+    import re
+
+    no_tags = re.sub(r"<br\s*/?>", "\n", text)
+    no_tags = re.sub(r"</p>", "\n\n", no_tags)
+    no_tags = re.sub(r"<[^>]+>", "", no_tags)
+    return re.sub(r"\n{3,}", "\n\n", no_tags).strip()
+
+
+@router.post("/exercises/{wger_id}/translate", response_model=workouts_schema.ExerciseTranslation)
+async def translate_catalog_exercise(
+    wger_id: int,
+    payload: workouts_schema.ExerciseTranslationRequest,
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> workouts_schema.ExerciseTranslation:
+    """Translate one catalog exercise's how-to + first tip via the shared AI provider.
+
+    Stateless: nothing is written to the DB. The batch pipeline reuses this
+    endpoint per exercise and stores results in
+    ``backend/assets/exercise_descriptions_ru.json``.
+    """
+    from sqlalchemy import select
+
+    import workouts.exercise_catalog as exercise_catalog
+
+    settings = nutrition_ai.get_ai_settings(db)
+    if not settings.configured:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="AI assistant is not configured. Ask your server administrator to enable it in server settings.",
+        )
+    row = db.scalars(
+        select(exercise_catalog.ExerciseCatalog).where(exercise_catalog.ExerciseCatalog.wger_id == wger_id)
+    ).first()
+    if not row:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Exercise not found in catalog")
+
+    language = payload.language.strip() or "ru"
+    en_desc = _strip_html(str(((row.translations or {}).get("en") or {}).get("description") or ""))[:2000]
+    en_tips = (row.tips or {}).get("en") or []
+    en_tip = _strip_html(str(en_tips[0]))[:500] if en_tips else ""
+    if not en_desc and not en_tip:
+        return workouts_schema.ExerciseTranslation(wger_id=wger_id, language=language)
+
+    prompt = (
+        "Translate the following fitness exercise description from English to Russian. "
+        "Use correct Russian fitness terminology. Reply in EXACTLY this format with nothing else:\n"
+        "DESCRIPTION: <translation, may span multiple lines>\n"
+        "TIP: <translation or empty>\n\n"
+        f"DESCRIPTION SOURCE:\n{en_desc or '(none)'}\n\nTIP SOURCE:\n{en_tip or '(none)'}"
+    )
+    try:
+        reply = await nutrition_ai.chat_completion(
+            settings.base_url,
+            settings.api_key,
+            settings.model,
+            [{"role": "user", "content": prompt}],
+        )
+    except nutrition_ai.AiAssistantError as e:
+        raise HTTPException(status_code=status.HTTP_502_BAD_GATEWAY, detail=str(e)) from e
+
+    description, tip = "", None
+    current: str | None = None
+    desc_lines: list[str] = []
+    tip_lines: list[str] = []
+    for line in reply.splitlines():
+        stripped = line.strip()
+        if stripped.upper().startswith("DESCRIPTION:"):
+            current = "desc"
+            desc_lines.append(stripped[len("DESCRIPTION:") :].strip())
+        elif stripped.upper().startswith("TIP:"):
+            current = "tip"
+            tip_lines.append(stripped[len("TIP:") :].strip())
+        elif current == "desc":
+            desc_lines.append(line.rstrip())
+        elif current == "tip":
+            tip_lines.append(line.rstrip())
+    description = "\n".join(desc_lines).strip()
+    tip_text = "\n".join(tip_lines).strip()
+    tip = tip_text or None
+    return workouts_schema.ExerciseTranslation(wger_id=wger_id, language=language, description=description, tip=tip)
+
+
 # ---- wger import ----
 
 
