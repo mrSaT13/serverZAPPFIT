@@ -149,6 +149,12 @@ function previousDay(): string {
   return last?.day_label ?? ''
 }
 
+/** Removes a draft row and closes any open "how to" block. */
+function removeExercise(idx: number): void {
+  exercises.value.splice(idx, 1)
+  expandedInfo.value = null
+}
+
 function onPicked(ex: CatalogExercise): void {
   exercises.value.push({
     day_label: previousDay(),
@@ -353,10 +359,7 @@ function save(): void {
                 size="sm"
                 variant="ghost"
                 class="text-destructive"
-                @click="
-                  exercises.splice(idx, 1)
-                  expandedInfo = null
-                "
+                @click="removeExercise(idx)"
               >
                 <Trash2 class="size-4" />
               </Button>
