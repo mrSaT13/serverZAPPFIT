@@ -682,6 +682,7 @@
     },
     "portionG": "Portion (g)",
     "product": "Product",
+    "favoritesHint": "You've had this — tap to fill in",
     "add": "Add",
     "scanner": "Scan",
     "manual": "Manual entry",

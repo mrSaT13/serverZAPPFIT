@@ -67,6 +67,23 @@ async def delete_log(
     nutrition_crud.delete_meal_log(token_user_id, log_id, db)
 
 
+@router.get("/favorites", response_model=list[nutrition_schema.FoodFavorite])
+async def favorite_foods(
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+    query: Annotated[str | None, Query(max_length=100)] = None,
+    limit: Annotated[int, Query(ge=1, le=25)] = 8,
+) -> list[nutrition_schema.FoodFavorite]:
+    """Repeat-food suggestions from the user's own log history.
+
+    Latest values per product name, most recent first. Stateless view —
+    offline clients use their local log history instead.
+    """
+    rows = nutrition_crud.recent_foods(token_user_id, query, limit, db)
+    return [nutrition_schema.FoodFavorite.model_validate(r) for r in rows]
+
+
 @router.get("/summary", response_model=nutrition_schema.NutritionSummary)
 async def summary(
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["nutrition:read"])],

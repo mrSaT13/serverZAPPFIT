@@ -63,6 +63,8 @@ const authUser: User = {
   hasLocalPassword: true,
   units: 'metric',
   currency: 'euro',
+  theme: 'system',
+  accentColor: 'blue',
 }
 
 describe('auth store', () => {
@@ -140,7 +142,8 @@ describe('auth store', () => {
     localStorage.setItem('endurain:theme', JSON.stringify('dark'))
     localStorage.setItem('endurain:locale', JSON.stringify('en'))
     vi.mocked(loginWithPassword).mockResolvedValue(tokenResponse)
-    vi.mocked(fetchCurrentUser).mockResolvedValue(authUser)
+    // Server appearance wins on login, then survives the logout (device-scoped).
+    vi.mocked(fetchCurrentUser).mockResolvedValue({ ...authUser, theme: 'dark' })
     vi.mocked(logoutSession).mockResolvedValue({ message: 'Logout successful' })
 
     const auth = useAuthStore()

@@ -200,7 +200,9 @@ export function applyServerAppearance(appearance: ServerAppearance): void {
 /** Resolves a theme preference (including ``system``) to an effective value. */
 function resolveEffective(value: Theme): 'light' | 'dark' {
   if (value === 'system') {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    // jsdom (unit tests) has no matchMedia — fall back to light there.
+    const mq = typeof window !== 'undefined' ? window.matchMedia?.('(prefers-color-scheme: dark)') : undefined
+    return mq?.matches ? 'dark' : 'light'
   }
   return value
 }
@@ -233,7 +235,8 @@ export function initTheme(): void {
 
   const storedTheme = getStorageItem<Theme>(THEME_STORAGE_KEY)
   const storedAccent = getStorageItem<string>(ACCENT_STORAGE_KEY)
-  const media = window.matchMedia('(prefers-color-scheme: dark)')
+  // jsdom (unit tests) has no matchMedia — skip the OS listener there.
+  const media = window.matchMedia?.('(prefers-color-scheme: dark)')
 
   if (storedAccent) {
     accentId.value = storedAccent
@@ -242,7 +245,7 @@ export function initTheme(): void {
   applyTheme(storedTheme ?? 'system')
 
   // Follow OS changes when the user preference is `system` (the default).
-  media.addEventListener('change', (event) => {
+  media?.addEventListener('change', (event) => {
     if (theme.value === 'system') {
       document.documentElement.classList.toggle('dark', event.matches)
       const preset = ACCENT_PRESETS.find((p) => p.id === accentId.value)

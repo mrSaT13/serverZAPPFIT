@@ -73,6 +73,50 @@ def delete_meal_log(user_id: int, log_id: int, db: Session) -> None:
 
 
 @core_decorators.handle_db_errors
+def recent_foods(user_id: int, query: str | None, limit: int, db: Session) -> list[dict]:
+    """Repeat-food suggestions: latest log row per product name.
+
+    Case-insensitive match, most recently logged first. Pure read over the
+    user's own meal logs — the same list on every client.
+    """
+    stmt = (
+        select(nutrition_models.MealLog)
+        .where(nutrition_models.MealLog.user_id == user_id)
+        .order_by(nutrition_models.MealLog.id.desc())
+        .limit(max(limit * 4, 20))
+    )
+    if query and query.strip():
+        stmt = stmt.where(nutrition_models.MealLog.product_name.ilike(f"%{query.strip()}%"))
+    rows = list(db.scalars(stmt).all())
+    seen: set[str] = set()
+    out: list[dict] = []
+    counts: dict[str, int] = {}
+    for r in rows:
+        counts[r.product_name.lower()] = counts.get(r.product_name.lower(), 0) + 1
+    for r in rows:
+        key = r.product_name.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(
+            {
+                "product_name": r.product_name,
+                "calories": r.calories,
+                "protein": r.protein,
+                "carbs": r.carbs,
+                "fat": r.fat,
+                "portion_g": r.portion_g,
+                "off_barcode": r.off_barcode,
+                "last_logged": r.date,
+                "times_logged": counts.get(key, 1),
+            }
+        )
+        if len(out) >= limit:
+            break
+    return out
+
+
+@core_decorators.handle_db_errors
 def summary_for_date(user_id: int, target_date: str, db: Session) -> dict:
     from sqlalchemy import func as sa_func
 

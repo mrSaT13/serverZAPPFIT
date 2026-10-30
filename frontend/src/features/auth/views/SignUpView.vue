@@ -120,6 +120,8 @@ async function submitForm(formValues: SignUpFormValues): Promise<void> {
     height: resolveHeightCm(formValues),
     first_day_of_week: formValues.firstDayOfWeek,
     currency: formValues.currency,
+    theme: 'system',
+    accent_color: 'blue',
   }
 
   try {

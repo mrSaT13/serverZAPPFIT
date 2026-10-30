@@ -49,6 +49,8 @@ function makeUserDto(overrides: Partial<UserDto> = {}): UserDto {
     height: 170,
     max_heart_rate: 190,
     photo_path: '/app/backend/data/user_images/7.png',
+    theme: 'system',
+    accent_color: 'blue',
     ...overrides,
   }
 }
@@ -158,6 +160,8 @@ describe('users service requests', () => {
         height: 180,
         max_heart_rate: 190,
         photo_path: null,
+        theme: 'system',
+        accent_color: 'blue',
       }),
     })
   })
@@ -206,6 +210,8 @@ describe('users service requests', () => {
         height: 170,
         max_heart_rate: 190,
         photo_path: '/app/backend/data/user_images/7.png',
+        theme: 'system',
+        accent_color: 'blue',
       }),
     })
   })

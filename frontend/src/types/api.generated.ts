@@ -3343,6 +3343,29 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/nutrition/favorites": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Favorite Foods
+         * @description Repeat-food suggestions from the user's own log history.
+         *
+         *     Latest values per product name, most recent first. Stateless view —
+         *     offline clients use their local log history instead.
+         */
+        get: operations["favorite_foods_api_v1_nutrition_favorites_get"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/nutrition/off/product/{barcode}": {
         parameters: {
             query?: never;
@@ -7677,6 +7700,37 @@ export interface components {
             following_id: number;
             /** Is Accepted */
             is_accepted: boolean;
+        };
+        /**
+         * FoodFavorite
+         * @description One repeat-food suggestion: the latest log row per product name.
+         *
+         *     A view over the user's own meal logs — no extra table, so it stays in
+         *     sync on every client automatically. Offline clients fall back to their
+         *     local log history.
+         */
+        FoodFavorite: {
+            /** Calories */
+            calories?: number | null;
+            /** Carbs */
+            carbs?: number | null;
+            /** Fat */
+            fat?: number | null;
+            /** Last Logged */
+            last_logged?: string | null;
+            /** Off Barcode */
+            off_barcode?: string | null;
+            /** Portion G */
+            portion_g?: number | null;
+            /** Product Name */
+            product_name: string;
+            /** Protein */
+            protein?: number | null;
+            /**
+             * Times Logged
+             * @default 0
+             */
+            times_logged: number;
         };
         /** GarminLogin */
         GarminLogin: {
@@ -19124,6 +19178,39 @@ export interface operations {
                 };
                 content: {
                     "application/json": components["schemas"]["nutrition__schema__AiStatusRead"];
+                };
+            };
+            /** @description Validation Error */
+            422: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HTTPValidationError"];
+                };
+            };
+        };
+    };
+    favorite_foods_api_v1_nutrition_favorites_get: {
+        parameters: {
+            query?: {
+                query?: string | null;
+                limit?: number;
+                api_key?: string | null;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description Successful Response */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["FoodFavorite"][];
                 };
             };
             /** @description Validation Error */

@@ -23,6 +23,8 @@ const baseDto: UserProfileDto = {
   has_local_password: true,
   units: 'metric',
   currency: 'euro',
+  theme: 'system',
+  accent_color: 'blue',
 }
 
 describe('mapUserProfile', () => {
@@ -44,6 +46,8 @@ describe('mapUserProfile', () => {
       hasLocalPassword: true,
       units: 'metric',
       currency: 'euro',
+      theme: 'system',
+      accentColor: 'blue',
     })
   })
 

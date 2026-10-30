@@ -73,7 +73,10 @@
     "howTo": "How to perform",
     "howToObject": "Show the exercise description",
     "englishOnly": "No translation available — description in English.",
-    "closeDetails": "Hide the description"
+    "closeDetails": "Hide the description",
+    "translate": "Translate to Russian",
+    "translating": "Translating…",
+    "translateFailed": "Translation failed — check that the AI assistant is configured on the server."
   },
   "session": {
     "start": "Start session",
