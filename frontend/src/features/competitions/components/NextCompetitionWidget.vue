@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { Calendar, Trophy } from '@lucide/vue'
+import { Calendar, Flag, MoonStar, Route, Trophy } from '@lucide/vue'
 
+import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import { useNextCompetitionQuery } from '@/features/competitions/composables/useCompetitions'
@@ -31,6 +32,42 @@ const raceDate = computed(() =>
 const isLoading = computed(() => query.isPending.value)
 const isHidden = computed(() => !isLoading.value && race.value === null)
 
+/** Rest days before the race, mirroring the mobile Preparation tab. */
+function restDays(distanceKm: number): number {
+  if (distanceKm <= 5) return 2
+  if (distanceKm <= 10) return 3
+  if (distanceKm <= 21.5) return 7
+  return 14
+}
+
+const taperStart = computed(() => {
+  if (!race.value) return ''
+  const [y, m, d] = race.value.competition_date.split('-').map(Number)
+  if (!y || !m || !d) return ''
+  const dt = new Date(y, m - 1, d)
+  dt.setDate(dt.getDate() - restDays(race.value.distance_km))
+  return formatMediumDate(
+    `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`,
+    locale.value,
+  )
+})
+
+const gapKm = computed(() =>
+  Math.max((next.value?.required_weekly_km ?? 0) - (next.value?.avg_weekly_km ?? 0), 0),
+)
+
+const statusKey = computed(() => {
+  if (readinessPct.value >= 100) return 'statusReady'
+  if (readinessPct.value >= 60) return 'statusBuilding'
+  return 'statusBase'
+})
+
+const suggestionKey = computed(() => {
+  if (readinessPct.value >= 100) return 'tipTaper'
+  if ((next.value?.avg_weekly_km ?? 0) <= 0) return 'tipBase'
+  return 'tipBuild'
+})
+
 /**
  * "in N day(s)" with correct plural forms — vue-i18n's built-in plural
  * syntax has no separate `few` bucket, so Russian picks its own key.
@@ -55,38 +92,70 @@ function daysLeftText(daysLeft: number): string {
 </script>
 
 <template>
-  <div>
+  <div v-if="!isHidden">
     <p class="text-card-heading">{{ t('health.competition.sectionTitle') }}</p>
     <div v-if="isLoading" class="mt-2">
-      <Skeleton class="h-28 w-full" />
+      <Skeleton class="h-44 w-full rounded-card" />
     </div>
-    <Card v-else-if="!isHidden && race" class="mt-2">
-      <div class="flex items-start justify-between gap-3">
-        <div class="min-w-0">
-          <div class="flex items-center gap-2">
-            <Trophy class="size-4 shrink-0 opacity-60" />
-            <p class="truncate text-body font-medium">{{ race.name }}</p>
+    <Card v-else-if="race" class="mt-2 overflow-hidden p-0">
+      <!-- Header band: race identity + countdown badge -->
+      <div class="flex items-start justify-between gap-3 bg-primary/5 p-4">
+        <div class="flex min-w-0 items-center gap-3">
+          <span
+            class="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/10"
+          >
+            <Trophy class="size-5 text-primary" />
+          </span>
+          <div class="min-w-0">
+            <p class="truncate text-body font-semibold">{{ race.name }}</p>
+            <p class="text-hint mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+              <span> <Calendar class="mr-1 inline size-3.5 -translate-y-px" />{{ raceDate }} </span>
+              <span class="inline-flex items-center gap-1">
+                <Route class="size-3.5" />{{ race.distance_km }} км
+              </span>
+            </p>
           </div>
-          <p class="text-hint mt-1">
-            <Calendar class="mr-1 inline size-3.5 -translate-y-px" />
-            {{ raceDate }} · {{ daysLeftText(next?.days_left ?? 0) }}
-          </p>
-          <p v-if="race.note" class="text-hint mt-1 line-clamp-1">{{ race.note }}</p>
         </div>
-        <div class="shrink-0 text-right">
-          <p class="text-card-heading">{{ readinessPct }}%</p>
-          <p class="text-hint">{{ t('health.competition.readiness') }}</p>
-        </div>
+        <Badge variant="secondary" class="shrink-0">
+          <Flag class="mr-1 size-3.5" />{{ daysLeftText(next?.days_left ?? 0) }}
+        </Badge>
       </div>
 
-      <div class="mt-3">
+      <div class="flex flex-col gap-3 p-4">
+        <!-- Readiness -->
+        <div class="flex items-end justify-between gap-3">
+          <div>
+            <p class="text-item-title leading-none">{{ readinessPct }}%</p>
+            <p class="text-hint mt-1">
+              {{ t('health.competition.readiness') }} · {{ t(`health.competition.${statusKey}`) }}
+            </p>
+          </div>
+          <p v-if="race.note" class="text-hint max-w-55 truncate text-right">{{ race.note }}</p>
+        </div>
         <div class="h-2 w-full overflow-hidden rounded-full bg-muted">
           <div
             class="h-full rounded-full bg-primary transition-all"
             :style="{ width: `${readinessPct}%` }"
           />
         </div>
-        <p class="text-hint mt-1">
+
+        <!-- Mini stats -->
+        <div class="grid grid-cols-3 gap-2">
+          <div class="rounded-input border px-2 py-1.5 text-center">
+            <p class="text-body font-semibold">{{ next?.avg_weekly_km ?? 0 }}</p>
+            <p class="text-hint">{{ t('health.competition.weekLabel') }}</p>
+          </div>
+          <div class="rounded-input border px-2 py-1.5 text-center">
+            <p class="text-body font-semibold">{{ next?.required_weekly_km ?? 0 }}</p>
+            <p class="text-hint">{{ t('health.competition.requiredLabel') }}</p>
+          </div>
+          <div class="rounded-input border px-2 py-1.5 text-center">
+            <p class="text-body font-semibold">+{{ gapKm.toFixed(1) }}</p>
+            <p class="text-hint">{{ t('health.competition.gapLabel') }}</p>
+          </div>
+        </div>
+
+        <p class="text-hint">
           {{
             t('health.competition.volumeHint', {
               actual: next?.avg_weekly_km ?? 0,
@@ -94,6 +163,15 @@ function daysLeftText(daysLeft: number): string {
             })
           }}
         </p>
+
+        <!-- Taper + tip -->
+        <div class="flex items-start gap-2 rounded-input bg-muted/60 px-3 py-2">
+          <MoonStar class="mt-0.5 size-4 shrink-0 text-primary" />
+          <p class="text-body">
+            {{ t('health.competition.taperFrom', { date: taperStart }) }} ·
+            {{ t(`health.competition.${suggestionKey}`) }}
+          </p>
+        </div>
       </div>
     </Card>
   </div>
