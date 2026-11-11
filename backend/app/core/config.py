@@ -429,7 +429,10 @@ class Settings(BaseSettings):
         if not self.GEAR_IMAGES_DIR:
             self.GEAR_IMAGES_DIR = f"{self.DATA_DIR}/gear_images"
         if not self.EXERCISE_MEDIA_DIR:
-            self.EXERCISE_MEDIA_DIR = f"{self.DATA_DIR}/exercise_media"
+            # Baked into the image next to the catalog snapshot (backend/assets)
+            # — NOT under DATA_DIR, which is a bind-mounted volume and would
+            # hide image-bundled files.
+            self.EXERCISE_MEDIA_DIR = f"{self.BACKEND_DIR}/assets/exercise_media"
         if not self.TRUSTED_PROXIES and self.ENVIRONMENT == "development" and "TRUSTED_PROXIES" not in os.environ:
             self.TRUSTED_PROXIES = ["*"]
         # ZAPFIT rebranding: prefer ZAPFIT_HOST, fall back to the legacy

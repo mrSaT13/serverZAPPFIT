@@ -568,7 +568,8 @@ def create_app() -> FastAPI:
         name="gear_images",
     )
     # Exercise media (GIF animations / thumbnails), one file per wger id:
-    # /exercise_media/{wger_id}.gif — filled by the dataset import script.
+    # /exercise_media/{wger_id}.gif — baked into the image under backend/assets
+    # (same mechanism as the exercise catalog snapshot).
     fastapi_app.mount(
         "/exercise_media",
         StaticFiles(directory=core_config.settings.EXERCISE_MEDIA_DIR),
