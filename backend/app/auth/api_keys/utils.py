@@ -20,6 +20,8 @@ SUPPORTED_API_KEY_SCOPES = frozenset(
         "nutrition:write",
         "workouts:read",
         "workouts:write",
+        "competitions:read",
+        "competitions:write",
         "notifications:read",
         "notifications:write",
         "profile",
