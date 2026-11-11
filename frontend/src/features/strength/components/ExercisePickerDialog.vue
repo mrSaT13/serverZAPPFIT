@@ -176,6 +176,13 @@ watch(open, (v) => {
             </button>
           </div>
           <div v-if="expandedId === ex.wger_id" class="border-t px-3 py-2">
+            <!-- GIF animation from /exercise_media (hidden silently when missing) -->
+            <img
+              :src="`/exercise_media/${ex.wger_id}.gif`"
+              :alt="ex.name"
+              class="mx-auto mb-2 max-h-44 rounded-lg"
+              @error="($event.target as HTMLImageElement).style.display = 'none'"
+            >
             <p class="text-hint mb-1 text-xs font-medium">
               {{ t('workouts.picker.howTo') }}
             </p>
