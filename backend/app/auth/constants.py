@@ -71,6 +71,10 @@ WORKOUTS_SCOPE: Final[tuple[str, ...]] = (
     "workouts:read",
     "workouts:write",
 )
+COMPETITIONS_SCOPE: Final[tuple[str, ...]] = (
+    "competitions:read",
+    "competitions:write",
+)
 NOTIFICATIONS_REGULAR_SCOPE: Final[tuple[str, ...]] = (
     "notifications:read",
     "notifications:write",
@@ -100,6 +104,8 @@ SCOPE_DICT: Final[dict[str, str]] = {
     "nutrition:write": "Write privileges over the nutrition diary",
     "workouts:read": "Read privileges over strength workouts",
     "workouts:write": "Write privileges over strength workouts",
+    "competitions:read": "Read privileges over competitions",
+    "competitions:write": "Write privileges over competitions",
     "notifications:read": "Read privileges over notifications",
     "notifications:write": "Write privileges over notifications",
     "server_settings:read": "Read privileges over server settings",
@@ -116,6 +122,7 @@ REGULAR_ACCESS_SCOPE: Final[tuple[str, ...]] = (
     + HEALTH_SCOPE
     + NUTRITION_SCOPE
     + WORKOUTS_SCOPE
+    + COMPETITIONS_SCOPE
     + NOTIFICATIONS_REGULAR_SCOPE
     + SERVER_SETTINGS_REGULAR_SCOPE
 )
