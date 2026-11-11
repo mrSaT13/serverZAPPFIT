@@ -1,0 +1,2186 @@
+[
+ {
+  "wger_id": 9,
+  "name": "2 Handed Kettlebell Swing"
+ },
+ {
+  "wger_id": 20,
+  "name": "Arnold Shoulder Press"
+ },
+ {
+  "wger_id": 31,
+  "name": "Axe Hold"
+ },
+ {
+  "wger_id": 41,
+  "name": "Barbell Ab Rollout"
+ },
+ {
+  "wger_id": 56,
+  "name": "Abdominal Stabilization"
+ },
+ {
+  "wger_id": 57,
+  "name": "Bear Walk 2"
+ },
+ {
+  "wger_id": 71,
+  "name": "Single Leg Extension"
+ },
+ {
+  "wger_id": 76,
+  "name": "Bench Press Narrow Grip"
+ },
+ {
+  "wger_id": 79,
+  "name": "Bent High Pulls"
+ },
+ {
+  "wger_id": 82,
+  "name": "Bent-over Lateral Raises"
+ },
+ {
+  "wger_id": 124,
+  "name": "Braced Squat"
+ },
+ {
+  "wger_id": 135,
+  "name": "Butterfly"
+ },
+ {
+  "wger_id": 137,
+  "name": "Butterfly Narrow Grip"
+ },
+ {
+  "wger_id": 139,
+  "name": "Butterfly Reverse"
+ },
+ {
+  "wger_id": 145,
+  "name": "Cable Woodchoppers"
+ },
+ {
+  "wger_id": 148,
+  "name": "Calf Raises on Hackenschmitt Machine"
+ },
+ {
+  "wger_id": 158,
+  "name": "Close-grip Lat Pull Down"
+ },
+ {
+  "wger_id": 161,
+  "name": "Cross-Bench Dumbbell Pullovers"
+ },
+ {
+  "wger_id": 165,
+  "name": "Ball crunches"
+ },
+ {
+  "wger_id": 167,
+  "name": "Crunches"
+ },
+ {
+  "wger_id": 171,
+  "name": "Incline Crunches"
+ },
+ {
+  "wger_id": 172,
+  "name": "Crunches on Machine"
+ },
+ {
+  "wger_id": 173,
+  "name": "Crunches With Cable"
+ },
+ {
+  "wger_id": 174,
+  "name": "Crunches With Legs Up"
+ },
+ {
+  "wger_id": 177,
+  "name": "Cycling"
+ },
+ {
+  "wger_id": 178,
+  "name": "Deadbug"
+ },
+ {
+  "wger_id": 182,
+  "name": "Deadhang"
+ },
+ {
+  "wger_id": 189,
+  "name": "Deficit Deadlift"
+ },
+ {
+  "wger_id": 193,
+  "name": "Diagonal Shoulder Press"
+ },
+ {
+  "wger_id": 208,
+  "name": "Dumbbells on Scott Machine"
+ },
+ {
+  "wger_id": 222,
+  "name": "Facepull"
+ },
+ {
+  "wger_id": 239,
+  "name": "Fly With Dumbbells, Decline Bench"
+ },
+ {
+  "wger_id": 245,
+  "name": "Skullcrusher Dumbbells"
+ },
+ {
+  "wger_id": 246,
+  "name": "Skullcrusher SZ-bar"
+ },
+ {
+  "wger_id": 254,
+  "name": "Front Raises with Plates"
+ },
+ {
+  "wger_id": 258,
+  "name": "Front pull wide"
+ },
+ {
+  "wger_id": 259,
+  "name": "Front Pull narrow"
+ },
+ {
+  "wger_id": 260,
+  "name": "Full Sit Outs"
+ },
+ {
+  "wger_id": 275,
+  "name": "Hammercurls on Cable"
+ },
+ {
+  "wger_id": 279,
+  "name": "Hand Grip"
+ },
+ {
+  "wger_id": 284,
+  "name": "Hercules Pillars"
+ },
+ {
+  "wger_id": 285,
+  "name": "High Knee Jumps"
+ },
+ {
+  "wger_id": 291,
+  "name": "Hindu Squats"
+ },
+ {
+  "wger_id": 294,
+  "name": "Hip Thrust"
+ },
+ {
+  "wger_id": 297,
+  "name": "Hollow Hold"
+ },
+ {
+  "wger_id": 312,
+  "name": "Incline Plank With Alternate Floor Touch"
+ },
+ {
+  "wger_id": 319,
+  "name": "Jogging"
+ },
+ {
+  "wger_id": 320,
+  "name": "Jumping Jacks"
+ },
+ {
+  "wger_id": 341,
+  "name": "Squats on Multipress"
+ },
+ {
+  "wger_id": 346,
+  "name": "Landmine press"
+ },
+ {
+  "wger_id": 349,
+  "name": "Lateral Rows on Cable, One Armed"
+ },
+ {
+  "wger_id": 354,
+  "name": "Lat Pull Down (Leaning Back)"
+ },
+ {
+  "wger_id": 355,
+  "name": "Lat Pull Down (Straight Back)"
+ },
+ {
+  "wger_id": 365,
+  "name": "Leg Curls (laying)"
+ },
+ {
+  "wger_id": 366,
+  "name": "Leg Curls (sitting)"
+ },
+ {
+  "wger_id": 373,
+  "name": "Leg Presses (narrow)"
+ },
+ {
+  "wger_id": 380,
+  "name": "Leverage Machine Iso Row"
+ },
+ {
+  "wger_id": 382,
+  "name": "L Hold"
+ },
+ {
+  "wger_id": 394,
+  "name": "Long-Pulley (low Row)"
+ },
+ {
+  "wger_id": 395,
+  "name": "Long-Pulley, Narrow"
+ },
+ {
+  "wger_id": 397,
+  "name": "Low Box Squat - Wide Stance"
+ },
+ {
+  "wger_id": 406,
+  "name": "Lying Rotator Cuff Exercise"
+ },
+ {
+  "wger_id": 418,
+  "name": "Military Press mit SZ-Bar"
+ },
+ {
+  "wger_id": 427,
+  "name": "Negative Crunches"
+ },
+ {
+  "wger_id": 445,
+  "name": "Pause Bench"
+ },
+ {
+  "wger_id": 448,
+  "name": "Pendelay Rows"
+ },
+ {
+  "wger_id": 458,
+  "name": "Plank"
+ },
+ {
+  "wger_id": 468,
+  "name": "Prone Scapular Retraction - Arms at Side"
+ },
+ {
+  "wger_id": 484,
+  "name": "Rack Deadlift"
+ },
+ {
+  "wger_id": 493,
+  "name": "Reverse Bar Curl"
+ },
+ {
+  "wger_id": 505,
+  "name": "Roman Chair"
+ },
+ {
+  "wger_id": 516,
+  "name": "Front Wood Chop"
+ },
+ {
+  "wger_id": 529,
+  "name": "Run - Interval Training"
+ },
+ {
+  "wger_id": 530,
+  "name": "Run - Treadmill"
+ },
+ {
+  "wger_id": 545,
+  "name": "Scissors"
+ },
+ {
+  "wger_id": 562,
+  "name": "Shotgun Row"
+ },
+ {
+  "wger_id": 569,
+  "name": "Shoulder Press, on Multi Press"
+ },
+ {
+  "wger_id": 570,
+  "name": "Shoulder Shrug"
+ },
+ {
+  "wger_id": 575,
+  "name": "Shrugs on Multipress"
+ },
+ {
+  "wger_id": 577,
+  "name": "Side Dumbbell Trunk Flexion"
+ },
+ {
+  "wger_id": 578,
+  "name": "Side-lying External Rotation"
+ },
+ {
+  "wger_id": 584,
+  "name": "Single-arm Preacher Curl"
+ },
+ {
+  "wger_id": 590,
+  "name": "Sitting Calf Raises"
+ },
+ {
+  "wger_id": 595,
+  "name": "Skipping - Standard"
+ },
+ {
+  "wger_id": 599,
+  "name": "Snach"
+ },
+ {
+  "wger_id": 604,
+  "name": "Speed Deadlift"
+ },
+ {
+  "wger_id": 607,
+  "name": "Splinter Sit-ups"
+ },
+ {
+  "wger_id": 616,
+  "name": "Squat Thrust"
+ },
+ {
+  "wger_id": 623,
+  "name": "Standing Rope Forearm"
+ },
+ {
+  "wger_id": 627,
+  "name": "Stiff-legged Deadlifts"
+ },
+ {
+  "wger_id": 628,
+  "name": "Straight-arm Pull Down (bar Attachment)"
+ },
+ {
+  "wger_id": 629,
+  "name": "Straight-arm Pull Down (rope Attachment)"
+ },
+ {
+  "wger_id": 636,
+  "name": "Superman"
+ },
+ {
+  "wger_id": 660,
+  "name": "Triceps Extensions on Cable With Bar"
+ },
+ {
+  "wger_id": 661,
+  "name": "Triceps on Machine"
+ },
+ {
+  "wger_id": 672,
+  "name": "Trunk Rotation With Cable"
+ },
+ {
+  "wger_id": 674,
+  "name": "Rowing with TRX band"
+ },
+ {
+  "wger_id": 684,
+  "name": "Underhand Lat Pull Down"
+ },
+ {
+  "wger_id": 688,
+  "name": "Upper External Oblique"
+ },
+ {
+  "wger_id": 691,
+  "name": "Upright Row, on Multi Press"
+ },
+ {
+  "wger_id": 702,
+  "name": "Calf raises, one legged"
+ },
+ {
+  "wger_id": 711,
+  "name": "Wall Handstand"
+ },
+ {
+  "wger_id": 716,
+  "name": "Wall Slides"
+ },
+ {
+  "wger_id": 718,
+  "name": "Wall Squat"
+ },
+ {
+  "wger_id": 722,
+  "name": "Weighted Step-ups"
+ },
+ {
+  "wger_id": 804,
+  "name": "Sloper hanging"
+ },
+ {
+  "wger_id": 805,
+  "name": "Tricep Pushdown on Cable"
+ },
+ {
+  "wger_id": 820,
+  "name": "Fingerboard 20 mm edge"
+ },
+ {
+  "wger_id": 821,
+  "name": "Pullup on fingerboard"
+ },
+ {
+  "wger_id": 827,
+  "name": "Front Plate Raise"
+ },
+ {
+  "wger_id": 828,
+  "name": "Incline Bench Reverse Fly"
+ },
+ {
+  "wger_id": 901,
+  "name": "Barbell Hip Thrust"
+ },
+ {
+  "wger_id": 908,
+  "name": "Zone 2 Running"
+ },
+ {
+  "wger_id": 909,
+  "name": "Reverse Nordic Curl"
+ },
+ {
+  "wger_id": 910,
+  "name": "Nordic Curl"
+ },
+ {
+  "wger_id": 911,
+  "name": "Incline Skull Crush"
+ },
+ {
+  "wger_id": 912,
+  "name": "Straight Bar Cable Curls"
+ },
+ {
+  "wger_id": 915,
+  "name": "BUS DRIVERS"
+ },
+ {
+  "wger_id": 917,
+  "name": "Straight Bar Cable Front Raise"
+ },
+ {
+  "wger_id": 922,
+  "name": "SEATED CABLE MID TRAP SHRUG"
+ },
+ {
+  "wger_id": 923,
+  "name": "LYING DUMBBELL ROW SS SEATED SHRUG"
+ },
+ {
+  "wger_id": 925,
+  "name": "SMITH MACHINE SLIGHT INCLINE PRESS"
+ },
+ {
+  "wger_id": 927,
+  "name": "Suspended crossess"
+ },
+ {
+  "wger_id": 957,
+  "name": "Quadriped Arm and Leg Raise"
+ },
+ {
+  "wger_id": 958,
+  "name": "Biceps with TRX"
+ },
+ {
+  "wger_id": 959,
+  "name": "TRX Rows"
+ },
+ {
+  "wger_id": 961,
+  "name": "Swimming 50m sprints"
+ },
+ {
+  "wger_id": 962,
+  "name": "Elliptical"
+ },
+ {
+  "wger_id": 974,
+  "name": "Curl with kettlebell two hands"
+ },
+ {
+  "wger_id": 975,
+  "name": "one-handed kettlebell curls"
+ },
+ {
+  "wger_id": 976,
+  "name": "Medicine ball booklet crunch"
+ },
+ {
+  "wger_id": 977,
+  "name": "Box squat"
+ },
+ {
+  "wger_id": 979,
+  "name": "Leg raises pull up bar"
+ },
+ {
+  "wger_id": 981,
+  "name": "Step-ups"
+ },
+ {
+  "wger_id": 988,
+  "name": "Bulgarian split squats left"
+ },
+ {
+  "wger_id": 989,
+  "name": "Bulgarian split squats right"
+ },
+ {
+  "wger_id": 990,
+  "name": "Kneeling kickbacks"
+ },
+ {
+  "wger_id": 994,
+  "name": "Forward arm circles"
+ },
+ {
+  "wger_id": 995,
+  "name": "Backward arm circles"
+ },
+ {
+  "wger_id": 997,
+  "name": "4-count burpees"
+ },
+ {
+  "wger_id": 998,
+  "name": "No push-up burpees"
+ },
+ {
+  "wger_id": 999,
+  "name": "Reverse lunges"
+ },
+ {
+  "wger_id": 1001,
+  "name": "High plank"
+ },
+ {
+  "wger_id": 1002,
+  "name": "Child's pose"
+ },
+ {
+  "wger_id": 1004,
+  "name": "Forward shoulder rotation"
+ },
+ {
+  "wger_id": 1005,
+  "name": "Backward shoulder rotation"
+ },
+ {
+  "wger_id": 1006,
+  "name": "Chin tuck"
+ },
+ {
+  "wger_id": 1007,
+  "name": "Head turns"
+ },
+ {
+  "wger_id": 1008,
+  "name": "Left neck stretch"
+ },
+ {
+  "wger_id": 1009,
+  "name": "Right neck stretch"
+ },
+ {
+  "wger_id": 1010,
+  "name": "Back neck stretch"
+ },
+ {
+  "wger_id": 1011,
+  "name": "Front neck stretch"
+ },
+ {
+  "wger_id": 1013,
+  "name": "Left levator scapulae stretch"
+ },
+ {
+  "wger_id": 1014,
+  "name": "Right levator scapulae stretch"
+ },
+ {
+  "wger_id": 1015,
+  "name": "Clockwise neck circles"
+ },
+ {
+  "wger_id": 1016,
+  "name": "Counterclockwise neck circles"
+ },
+ {
+  "wger_id": 1017,
+  "name": "Neck half circles"
+ },
+ {
+  "wger_id": 1018,
+  "name": "Head tilts"
+ },
+ {
+  "wger_id": 1019,
+  "name": "Side plank right"
+ },
+ {
+  "wger_id": 1020,
+  "name": "Pistol squats right"
+ },
+ {
+  "wger_id": 1021,
+  "name": "Calf raises, right leg"
+ },
+ {
+  "wger_id": 1022,
+  "name": "Single Arm Plank to Row"
+ },
+ {
+  "wger_id": 1027,
+  "name": "Elevated prayer stretch"
+ },
+ {
+  "wger_id": 1028,
+  "name": "Quadruped thoracic rotation left"
+ },
+ {
+  "wger_id": 1029,
+  "name": "Quadruped thoracic rotation right"
+ },
+ {
+  "wger_id": 1079,
+  "name": "Plate twist"
+ },
+ {
+  "wger_id": 1081,
+  "name": "Shoulder dislocates"
+ },
+ {
+  "wger_id": 1082,
+  "name": "Bent over row to external rotation"
+ },
+ {
+  "wger_id": 1083,
+  "name": "YWTs"
+ },
+ {
+  "wger_id": 1090,
+  "name": "Vpushup"
+ },
+ {
+  "wger_id": 1092,
+  "name": "Bag training"
+ },
+ {
+  "wger_id": 1096,
+  "name": "Abduction while standing"
+ },
+ {
+  "wger_id": 1098,
+  "name": "Seated rear delt rise"
+ },
+ {
+  "wger_id": 1099,
+  "name": "Dynamic side hold"
+ },
+ {
+  "wger_id": 1100,
+  "name": "Wall balls"
+ },
+ {
+  "wger_id": 1101,
+  "name": "Horizontal traction isometry"
+ },
+ {
+  "wger_id": 1102,
+  "name": "Alternate back lunges"
+ },
+ {
+  "wger_id": 1103,
+  "name": "walking bridge"
+ },
+ {
+  "wger_id": 1105,
+  "name": "Seated Knee Tuck"
+ },
+ {
+  "wger_id": 1106,
+  "name": "Seated Knee Tuck"
+ },
+ {
+  "wger_id": 1114,
+  "name": "Rest (for timed workouts)"
+ },
+ {
+  "wger_id": 1115,
+  "name": "3D lunge warmup"
+ },
+ {
+  "wger_id": 1116,
+  "name": "Dumbbell farmer's carry"
+ },
+ {
+  "wger_id": 1119,
+  "name": "Remo maquina agarre estrecho"
+ },
+ {
+  "wger_id": 1120,
+  "name": "Remo maquina agarre estrecho supino"
+ },
+ {
+  "wger_id": 1124,
+  "name": "Jalón abierto"
+ },
+ {
+  "wger_id": 1125,
+  "name": "Jalón abierto supino"
+ },
+ {
+  "wger_id": 1126,
+  "name": "Jalón cerrado"
+ },
+ {
+  "wger_id": 1127,
+  "name": "Jalón cerrado supino"
+ },
+ {
+  "wger_id": 1131,
+  "name": "Extensión de gluteos en polea"
+ },
+ {
+  "wger_id": 1132,
+  "name": "Extensión de gluteo en  máquina"
+ },
+ {
+  "wger_id": 1136,
+  "name": "JALONES PECHO NEUTRO"
+ },
+ {
+  "wger_id": 1137,
+  "name": "PULL OVER POLEA ALTA"
+ },
+ {
+  "wger_id": 1138,
+  "name": "JALON EN BANCO INCLINADO"
+ },
+ {
+  "wger_id": 1141,
+  "name": "Arabesque"
+ },
+ {
+  "wger_id": 1143,
+  "name": "Back extensión"
+ },
+ {
+  "wger_id": 1188,
+  "name": "Flexión lateral"
+ },
+ {
+  "wger_id": 1190,
+  "name": "Curl de biceps con agarre prono"
+ },
+ {
+  "wger_id": 1195,
+  "name": "Side Slides + Squats"
+ },
+ {
+  "wger_id": 1196,
+  "name": "Wall Drills"
+ },
+ {
+  "wger_id": 1200,
+  "name": "Tibialis raises"
+ },
+ {
+  "wger_id": 1201,
+  "name": "Dragon squat"
+ },
+ {
+  "wger_id": 1203,
+  "name": "Calf raises, left leg"
+ },
+ {
+  "wger_id": 1204,
+  "name": "Cycling cardio session"
+ },
+ {
+  "wger_id": 1207,
+  "name": "Scorpion Kick"
+ },
+ {
+  "wger_id": 1208,
+  "name": "Prisoner Squat"
+ },
+ {
+  "wger_id": 1209,
+  "name": "Shoulder width three-point push-up"
+ },
+ {
+  "wger_id": 1210,
+  "name": "Skydiver with arms in T-position"
+ },
+ {
+  "wger_id": 1215,
+  "name": "Reverse Snow Angel"
+ },
+ {
+  "wger_id": 1216,
+  "name": "Recruitment Pulls"
+ },
+ {
+  "wger_id": 1223,
+  "name": "Claps over the head"
+ },
+ {
+  "wger_id": 1224,
+  "name": "Dumbbell drag curls"
+ },
+ {
+  "wger_id": 1232,
+  "name": "Standing biceps stretch left"
+ },
+ {
+  "wger_id": 1233,
+  "name": "Standing biceps stretch right"
+ },
+ {
+  "wger_id": 1234,
+  "name": "Dumbbell Single-leg Hip Thrust"
+ },
+ {
+  "wger_id": 1238,
+  "name": "Frog stand"
+ },
+ {
+  "wger_id": 1240,
+  "name": "Standing Soleus Stretch"
+ },
+ {
+  "wger_id": 1241,
+  "name": "Exercise Band Dorsiflexion"
+ },
+ {
+  "wger_id": 1242,
+  "name": "Exercise Band Plantarflexion"
+ },
+ {
+  "wger_id": 1243,
+  "name": "Double Leg Calf Raise"
+ },
+ {
+  "wger_id": 1244,
+  "name": "Yoga exercise: Cow-cat"
+ },
+ {
+  "wger_id": 1246,
+  "name": "TRX roll out"
+ },
+ {
+  "wger_id": 1248,
+  "name": "Ice Scream maker"
+ },
+ {
+  "wger_id": 1252,
+  "name": "Front lever pull-up"
+ },
+ {
+  "wger_id": 1259,
+  "name": "TRX Obliques"
+ },
+ {
+  "wger_id": 1260,
+  "name": "TRX hammer curl"
+ },
+ {
+  "wger_id": 1261,
+  "name": "TRX gorilla biceps curl"
+ },
+ {
+  "wger_id": 1262,
+  "name": "Trx Single Arm Bicep Curl"
+ },
+ {
+  "wger_id": 1263,
+  "name": "Back bridge"
+ },
+ {
+  "wger_id": 1266,
+  "name": "TRX Tricep Extension"
+ },
+ {
+  "wger_id": 1269,
+  "name": "TRX dips"
+ },
+ {
+  "wger_id": 1271,
+  "name": "Low Pulley Cable fFly"
+ },
+ {
+  "wger_id": 1272,
+  "name": "Low Pulley Cable fFly"
+ },
+ {
+  "wger_id": 1274,
+  "name": "Sitting Calf Stretch (Dorsiflexion)"
+ },
+ {
+  "wger_id": 1275,
+  "name": "Plantarflexion Stretch with Band"
+ },
+ {
+  "wger_id": 1280,
+  "name": "Biceps Close Grip Pull Down"
+ },
+ {
+  "wger_id": 1282,
+  "name": "Isometria trazioni impugnatura inversa"
+ },
+ {
+  "wger_id": 1283,
+  "name": "Incline Chest-Supported Dumbbell Row"
+ },
+ {
+  "wger_id": 1285,
+  "name": "Talons fesses"
+ },
+ {
+  "wger_id": 1286,
+  "name": "Dynamic Planche"
+ },
+ {
+  "wger_id": 1287,
+  "name": "Reach ups"
+ },
+ {
+  "wger_id": 1288,
+  "name": "Planche de cote dynamique"
+ },
+ {
+  "wger_id": 1292,
+  "name": "Trazioni impugnatura inversa"
+ },
+ {
+  "wger_id": 1293,
+  "name": "One armed push-ups"
+ },
+ {
+  "wger_id": 1294,
+  "name": "Arco femorale una gamba"
+ },
+ {
+  "wger_id": 1296,
+  "name": "Low-Cable Cross-Over - NB"
+ },
+ {
+  "wger_id": 1297,
+  "name": "EZ-Bar Skullcrusher - NB"
+ },
+ {
+  "wger_id": 1298,
+  "name": "High-Cable Cross Tricep Extention - NB"
+ },
+ {
+  "wger_id": 1303,
+  "name": "Helms Row"
+ },
+ {
+  "wger_id": 1304,
+  "name": "Meadows Row"
+ },
+ {
+  "wger_id": 1312,
+  "name": "Bodyweight Squat HD"
+ },
+ {
+  "wger_id": 1314,
+  "name": "Jumping Jack HD"
+ },
+ {
+  "wger_id": 1315,
+  "name": "Bodyweight Squat HD"
+ },
+ {
+  "wger_id": 1316,
+  "name": "Jumping Jack HD"
+ },
+ {
+  "wger_id": 1317,
+  "name": "Plank"
+ },
+ {
+  "wger_id": 1318,
+  "name": "High Knee Skips HD"
+ },
+ {
+  "wger_id": 1319,
+  "name": "Crunches HD"
+ },
+ {
+  "wger_id": 1322,
+  "name": "Kopfüber Gewichtaufheben"
+ },
+ {
+  "wger_id": 1324,
+  "name": "Bodyweight lunge HD"
+ },
+ {
+  "wger_id": 1325,
+  "name": "Lateral Push Off"
+ },
+ {
+  "wger_id": 1333,
+  "name": "Forearm Curls (underhand grip)"
+ },
+ {
+  "wger_id": 1348,
+  "name": "Lower Back Extensions"
+ },
+ {
+  "wger_id": 1353,
+  "name": "Dumbbell Hex Press"
+ },
+ {
+  "wger_id": 1363,
+  "name": "Blackroll"
+ },
+ {
+  "wger_id": 1373,
+  "name": "box jumps"
+ },
+ {
+  "wger_id": 1374,
+  "name": "Rotary Torso Machine"
+ },
+ {
+  "wger_id": 1376,
+  "name": "Recumbent Bike"
+ },
+ {
+  "wger_id": 1377,
+  "name": "TORSO TWIST"
+ },
+ {
+  "wger_id": 1380,
+  "name": "Band pull-aparts"
+ },
+ {
+  "wger_id": 1387,
+  "name": "Hamstring Kicks"
+ },
+ {
+  "wger_id": 1388,
+  "name": "Single Leg RDL"
+ },
+ {
+  "wger_id": 1389,
+  "name": "Single Leg RDL"
+ },
+ {
+  "wger_id": 1391,
+  "name": "Elephant Walks"
+ },
+ {
+  "wger_id": 1394,
+  "name": "Sit & Reach"
+ },
+ {
+  "wger_id": 1395,
+  "name": "Crossbody Leg Swings"
+ },
+ {
+  "wger_id": 1396,
+  "name": "Standing Pancake"
+ },
+ {
+  "wger_id": 1397,
+  "name": "Standing Pancake Good Morning"
+ },
+ {
+  "wger_id": 1398,
+  "name": "Hamstring Chokes"
+ },
+ {
+  "wger_id": 1399,
+  "name": "Roll Down"
+ },
+ {
+  "wger_id": 1406,
+  "name": "Plank-to-Elbow Extension"
+ },
+ {
+  "wger_id": 1409,
+  "name": "Dragon-flag"
+ },
+ {
+  "wger_id": 1411,
+  "name": "Heel Touches"
+ },
+ {
+  "wger_id": 1412,
+  "name": "bicycle crunches"
+ },
+ {
+  "wger_id": 1415,
+  "name": "Dumbbell Crunches"
+ },
+ {
+  "wger_id": 1425,
+  "name": "Toe Taps"
+ },
+ {
+  "wger_id": 1426,
+  "name": "Standing Side Crunches"
+ },
+ {
+  "wger_id": 1430,
+  "name": "Plate Pinch Hold"
+ },
+ {
+  "wger_id": 1433,
+  "name": "Reverse Wood Chops"
+ },
+ {
+  "wger_id": 1434,
+  "name": "Lat Pull DB"
+ },
+ {
+  "wger_id": 1435,
+  "name": "Scapula Pulls"
+ },
+ {
+  "wger_id": 1436,
+  "name": "Pin Bench Press BB"
+ },
+ {
+  "wger_id": 1437,
+  "name": "Pin Squat"
+ },
+ {
+  "wger_id": 1439,
+  "name": "Pin OHP"
+ },
+ {
+  "wger_id": 1440,
+  "name": "Push OHP"
+ },
+ {
+  "wger_id": 1441,
+  "name": "Incline OHP DB"
+ },
+ {
+  "wger_id": 1442,
+  "name": "Kreis Press DB"
+ },
+ {
+  "wger_id": 1443,
+  "name": "Shoulder Raise Side and Front DB"
+ },
+ {
+  "wger_id": 1445,
+  "name": "Jerk OL"
+ },
+ {
+  "wger_id": 1446,
+  "name": "Clean and Jerk OL"
+ },
+ {
+  "wger_id": 1447,
+  "name": "Snatch OL"
+ },
+ {
+  "wger_id": 1449,
+  "name": "ClimbMill"
+ },
+ {
+  "wger_id": 1450,
+  "name": "Cobra Stretch"
+ },
+ {
+  "wger_id": 1451,
+  "name": "Torso rotation stretch"
+ },
+ {
+  "wger_id": 1452,
+  "name": "Knee to Chest Stretch"
+ },
+ {
+  "wger_id": 1455,
+  "name": "Towel Superman"
+ },
+ {
+  "wger_id": 1457,
+  "name": "Cable Press Around"
+ },
+ {
+  "wger_id": 1461,
+  "name": "No Leg Drive Dumbbell Chest Press"
+ },
+ {
+  "wger_id": 1462,
+  "name": "punches"
+ },
+ {
+  "wger_id": 1463,
+  "name": "Dumbbell Underhand Dead Row"
+ },
+ {
+  "wger_id": 1464,
+  "name": "Pause Hack Squats"
+ },
+ {
+  "wger_id": 1466,
+  "name": "Calf Raise using Hack Squat Machine"
+ },
+ {
+  "wger_id": 1468,
+  "name": "Floor Skull Crusher"
+ },
+ {
+  "wger_id": 1469,
+  "name": "Bent over Cable Flye"
+ },
+ {
+  "wger_id": 1470,
+  "name": "1-Arm Half-Kneeling Lat Pulldown"
+ },
+ {
+  "wger_id": 1471,
+  "name": "Kroc Row"
+ },
+ {
+  "wger_id": 1473,
+  "name": "Reverse Cable Flye"
+ },
+ {
+  "wger_id": 1474,
+  "name": "W-Raise"
+ },
+ {
+  "wger_id": 1475,
+  "name": "Black Widow Knee Slides"
+ },
+ {
+  "wger_id": 1476,
+  "name": "Butterfly Sit Up"
+ },
+ {
+  "wger_id": 1477,
+  "name": "Seated Corkscrew"
+ },
+ {
+  "wger_id": 1478,
+  "name": "Levitation Crunch"
+ },
+ {
+  "wger_id": 1479,
+  "name": "Sit Up Elbow Thrust"
+ },
+ {
+  "wger_id": 1481,
+  "name": "Drag Pushdown"
+ },
+ {
+  "wger_id": 1482,
+  "name": "Dumbbell Cheat Curl"
+ },
+ {
+  "wger_id": 1483,
+  "name": "Bizeps Curls Trifecta"
+ },
+ {
+  "wger_id": 1485,
+  "name": "Rocking Triceps Pushdown"
+ },
+ {
+  "wger_id": 1487,
+  "name": "Hyper Y W Combo"
+ },
+ {
+  "wger_id": 1489,
+  "name": "Plank Jacks"
+ },
+ {
+  "wger_id": 1490,
+  "name": "Lying Triceps Kickback"
+ },
+ {
+  "wger_id": 1491,
+  "name": "Remada unilateral no cabo"
+ },
+ {
+  "wger_id": 1493,
+  "name": "Bayesian Curl"
+ },
+ {
+  "wger_id": 1494,
+  "name": "Sitting Calf Raises"
+ },
+ {
+  "wger_id": 1496,
+  "name": "DB Upper Chest Variation"
+ },
+ {
+  "wger_id": 1497,
+  "name": "DB Underhand bench press"
+ },
+ {
+  "wger_id": 1498,
+  "name": "Elbows Tucked DB Bench Press"
+ },
+ {
+  "wger_id": 1499,
+  "name": "DB Skull Crushers"
+ },
+ {
+  "wger_id": 1500,
+  "name": "DB UCV"
+ },
+ {
+  "wger_id": 1501,
+  "name": "Alternative DB Gorilla rows"
+ },
+ {
+  "wger_id": 1503,
+  "name": "Dumbbell Frog Press"
+ },
+ {
+  "wger_id": 1508,
+  "name": "High-Incline Smith Machine Press"
+ },
+ {
+  "wger_id": 1510,
+  "name": "Neutral Grip Lat Pulldown"
+ },
+ {
+  "wger_id": 1511,
+  "name": "Kong Curl"
+ },
+ {
+  "wger_id": 1512,
+  "name": "Drop Curl"
+ },
+ {
+  "wger_id": 1514,
+  "name": "Lateral Walk"
+ },
+ {
+  "wger_id": 1515,
+  "name": "Leg Press Toe Press"
+ },
+ {
+  "wger_id": 1521,
+  "name": "Pendular hack"
+ },
+ {
+  "wger_id": 1524,
+  "name": "Battle Ropes"
+ },
+ {
+  "wger_id": 1527,
+  "name": "Pendulum Squat"
+ },
+ {
+  "wger_id": 1528,
+  "name": "Glute Drive"
+ },
+ {
+  "wger_id": 1529,
+  "name": "Toes to bar"
+ },
+ {
+  "wger_id": 1536,
+  "name": "Delt Stretch"
+ },
+ {
+  "wger_id": 1537,
+  "name": "Pull-up Isometric Hold"
+ },
+ {
+  "wger_id": 1546,
+  "name": "Larsen Press"
+ },
+ {
+  "wger_id": 1548,
+  "name": "Stair Master"
+ },
+ {
+  "wger_id": 1549,
+  "name": "Stair Master"
+ },
+ {
+  "wger_id": 1556,
+  "name": "Devil’s Press"
+ },
+ {
+  "wger_id": 1572,
+  "name": "Bird Dog"
+ },
+ {
+  "wger_id": 1573,
+  "name": "Ab wheel"
+ },
+ {
+  "wger_id": 1574,
+  "name": "Schwimmen"
+ },
+ {
+  "wger_id": 1576,
+  "name": "Snap Down"
+ },
+ {
+  "wger_id": 1577,
+  "name": "Bretzel stretch"
+ },
+ {
+  "wger_id": 1578,
+  "name": "Hip hinge"
+ },
+ {
+  "wger_id": 1579,
+  "name": "Bronco"
+ },
+ {
+  "wger_id": 1580,
+  "name": "Perpendicular Unilateral Landmine Row"
+ },
+ {
+  "wger_id": 1581,
+  "name": "Trap press"
+ },
+ {
+  "wger_id": 1582,
+  "name": "Side-laying interior rotation"
+ },
+ {
+  "wger_id": 1583,
+  "name": "Supine press"
+ },
+ {
+  "wger_id": 1584,
+  "name": "March or jog in place"
+ },
+ {
+  "wger_id": 1589,
+  "name": "Estiramiento de piernas y cadera"
+ },
+ {
+  "wger_id": 1590,
+  "name": "Estiramiento de brazos y cuello"
+ },
+ {
+  "wger_id": 1591,
+  "name": "Respiración profunda (de pie o sentado)"
+ },
+ {
+  "wger_id": 1592,
+  "name": "Meditación guiada o libre"
+ },
+ {
+  "wger_id": 1602,
+  "name": "Dumbbell Scaption"
+ },
+ {
+  "wger_id": 1603,
+  "name": "Leg curl with elastic"
+ },
+ {
+  "wger_id": 1604,
+  "name": "Sliding Lateral Lunge"
+ },
+ {
+  "wger_id": 1605,
+  "name": "Copenhagen Adduction Exercise"
+ },
+ {
+  "wger_id": 1606,
+  "name": "Arm Raises (T/Y/I)"
+ },
+ {
+  "wger_id": 1612,
+  "name": "kettlebell sumo deadlift"
+ },
+ {
+  "wger_id": 1613,
+  "name": "rubber band glute kickback"
+ },
+ {
+  "wger_id": 1614,
+  "name": "Dumbbell Hip Thrust"
+ },
+ {
+  "wger_id": 1615,
+  "name": "Treadmill Cardio"
+ },
+ {
+  "wger_id": 1616,
+  "name": "Patada de burro con mancuerna"
+ },
+ {
+  "wger_id": 1618,
+  "name": "Cardio en bicicleta estática"
+ },
+ {
+  "wger_id": 1621,
+  "name": "Unilateral Cable row"
+ },
+ {
+  "wger_id": 1630,
+  "name": "Blaze"
+ },
+ {
+  "wger_id": 1634,
+  "name": "Rope Pullover/row"
+ },
+ {
+  "wger_id": 1635,
+  "name": "Modified pulldown"
+ },
+ {
+  "wger_id": 1636,
+  "name": "Unilateral Cable row"
+ },
+ {
+  "wger_id": 1637,
+  "name": "Single arm row"
+ },
+ {
+  "wger_id": 1639,
+  "name": "Dumbbell Bent Over Face Pull"
+ },
+ {
+  "wger_id": 1641,
+  "name": "Kettlebell One Legged Deadlift"
+ },
+ {
+  "wger_id": 1642,
+  "name": "Dumbbell Hip Thrust"
+ },
+ {
+  "wger_id": 1654,
+  "name": "Machine lateral wise"
+ },
+ {
+  "wger_id": 1657,
+  "name": "Preacher Curl - Internally Rotated"
+ },
+ {
+  "wger_id": 1658,
+  "name": "Preacher Curl - Externally Rotated"
+ },
+ {
+  "wger_id": 1659,
+  "name": "Lat Pulldown - Cross Body Single Arm"
+ },
+ {
+  "wger_id": 1662,
+  "name": "Cable Tri Extension - Internal Rotation"
+ },
+ {
+  "wger_id": 1665,
+  "name": "Cable Tri Extension - External Rotation"
+ },
+ {
+  "wger_id": 1666,
+  "name": "Curl  - With Shoulder Elevated"
+ },
+ {
+  "wger_id": 1669,
+  "name": "Jumping Jacks"
+ },
+ {
+  "wger_id": 1670,
+  "name": "Leg Swings (Front–Back)"
+ },
+ {
+  "wger_id": 1679,
+  "name": "Wall Angels"
+ },
+ {
+  "wger_id": 1680,
+  "name": "seated figure four"
+ },
+ {
+  "wger_id": 1686,
+  "name": "Glute Bridge Single-Arm Press"
+ },
+ {
+  "wger_id": 1687,
+  "name": "Bear crawl pull through"
+ },
+ {
+  "wger_id": 1688,
+  "name": "Kickstand RDL"
+ },
+ {
+  "wger_id": 1691,
+  "name": "Cable Fly Lower Chest"
+ },
+ {
+  "wger_id": 1693,
+  "name": "Incline Static Hold"
+ },
+ {
+  "wger_id": 1694,
+  "name": "Flat Machine Press"
+ },
+ {
+  "wger_id": 1697,
+  "name": "Lat Pulldown (Wide Grip)"
+ },
+ {
+  "wger_id": 1698,
+  "name": "Barbell Row (Overhand)"
+ },
+ {
+  "wger_id": 1699,
+  "name": "Barbell Row (Underhand)"
+ },
+ {
+  "wger_id": 1702,
+  "name": "Jalón al pecho con agarre ancho"
+ },
+ {
+  "wger_id": 1703,
+  "name": "Patadas traseras"
+ },
+ {
+  "wger_id": 1704,
+  "name": "Tuck L-sit"
+ },
+ {
+  "wger_id": 1706,
+  "name": "Bulgarian Squat with Dumbbells"
+ },
+ {
+  "wger_id": 1707,
+  "name": "Elevación lateral polea"
+ },
+ {
+  "wger_id": 1710,
+  "name": "Butchers Block Stretch"
+ },
+ {
+  "wger_id": 1711,
+  "name": "Sleeper Stretch"
+ },
+ {
+  "wger_id": 1712,
+  "name": "Horizontal Shoulder Flexion Stretch"
+ },
+ {
+  "wger_id": 1713,
+  "name": "Doorway Pectoral Stretch"
+ },
+ {
+  "wger_id": 1714,
+  "name": "Shoulder Dumbbell Pendular Exercise"
+ },
+ {
+  "wger_id": 1716,
+  "name": "Incline Shoulder Press Up"
+ },
+ {
+  "wger_id": 1717,
+  "name": "Neck extension"
+ },
+ {
+  "wger_id": 1718,
+  "name": "Remo alto polea alta"
+ },
+ {
+  "wger_id": 1719,
+  "name": "Jalon caballero unialteral"
+ },
+ {
+  "wger_id": 1723,
+  "name": "Glute Kickback (Machine)"
+ },
+ {
+  "wger_id": 1724,
+  "name": "Standing Adduction (Cable)"
+ },
+ {
+  "wger_id": 1732,
+  "name": "Face pulls with yellow/green band"
+ },
+ {
+  "wger_id": 1733,
+  "name": "Isometric Squat to Failure"
+ },
+ {
+  "wger_id": 1734,
+  "name": "Single-Leg Lunge with Kettlebell:"
+ },
+ {
+  "wger_id": 1735,
+  "name": "Single-leg side glute press"
+ },
+ {
+  "wger_id": 1738,
+  "name": "Neutral-grip pull-ups or TRX rows"
+ },
+ {
+  "wger_id": 1739,
+  "name": "Shrimp Squad"
+ },
+ {
+  "wger_id": 1740,
+  "name": "Single Leg Glute Bridge"
+ },
+ {
+  "wger_id": 1743,
+  "name": "Windshield Wipers"
+ },
+ {
+  "wger_id": 1745,
+  "name": "Cable Front Raise with a small bar"
+ },
+ {
+  "wger_id": 1753,
+  "name": "Side lateral raise - Back (Cable)"
+ },
+ {
+  "wger_id": 1754,
+  "name": "45° lateral raises"
+ },
+ {
+  "wger_id": 1755,
+  "name": "Shoulder Y-pull cable"
+ },
+ {
+  "wger_id": 1757,
+  "name": "supino"
+ },
+ {
+  "wger_id": 1763,
+  "name": "supino"
+ },
+ {
+  "wger_id": 1766,
+  "name": "Plank Reach"
+ },
+ {
+  "wger_id": 1768,
+  "name": "bicep"
+ },
+ {
+  "wger_id": 1769,
+  "name": "cabel"
+ },
+ {
+  "wger_id": 1774,
+  "name": "Chair dips"
+ },
+ {
+  "wger_id": 1775,
+  "name": "Pec deck rear delt fly"
+ },
+ {
+  "wger_id": 1776,
+  "name": "Suitcase Carry"
+ },
+ {
+  "wger_id": 1778,
+  "name": "Supino inclinado"
+ },
+ {
+  "wger_id": 1779,
+  "name": "Landmine Rotation"
+ },
+ {
+  "wger_id": 1793,
+  "name": "Supino Inclinado"
+ },
+ {
+  "wger_id": 1795,
+  "name": "unilateral cross body cable pull down"
+ },
+ {
+  "wger_id": 1798,
+  "name": "Supino"
+ },
+ {
+  "wger_id": 1800,
+  "name": "Supino Inclinado"
+ },
+ {
+  "wger_id": 1803,
+  "name": "Trap Bar Squat"
+ },
+ {
+  "wger_id": 1804,
+  "name": "ankle dorsiflexion rocks"
+ },
+ {
+  "wger_id": 1806,
+  "name": "Lat Pull Down"
+ },
+ {
+  "wger_id": 1807,
+  "name": "Behind the Back Cable Lateral Raise"
+ },
+ {
+  "wger_id": 1808,
+  "name": "Parallel Bar Hold"
+ },
+ {
+  "wger_id": 1822,
+  "name": "Open Book"
+ },
+ {
+  "wger_id": 1823,
+  "name": "Clamshell"
+ },
+ {
+  "wger_id": 1824,
+  "name": "Dumbell Tate Press"
+ },
+ {
+  "wger_id": 1825,
+  "name": "Chest-Supported Rear Delt Raise"
+ },
+ {
+  "wger_id": 1826,
+  "name": "Band pull-apart with external rotation"
+ },
+ {
+  "wger_id": 1827,
+  "name": "Double-Leg Abdominal Press"
+ },
+ {
+  "wger_id": 1828,
+  "name": "Abdominal Draw-In"
+ },
+ {
+  "wger_id": 1829,
+  "name": "Landmine Squat to Press"
+ },
+ {
+  "wger_id": 1830,
+  "name": "Barbell Step Back Lunge"
+ },
+ {
+  "wger_id": 1832,
+  "name": "Ring Support Hold"
+ },
+ {
+  "wger_id": 1833,
+  "name": "Floor Glider Hamstring Curls"
+ },
+ {
+  "wger_id": 1834,
+  "name": "Trap-3 Raise"
+ },
+ {
+  "wger_id": 1835,
+  "name": "External Rotation Stretch"
+ },
+ {
+  "wger_id": 1838,
+  "name": "Banded Shoulder Drills"
+ },
+ {
+  "wger_id": 1839,
+  "name": "Solo Hip Flexor Stretch"
+ },
+ {
+  "wger_id": 1841,
+  "name": "Seated Shoulder Extension Stretch"
+ },
+ {
+  "wger_id": 1842,
+  "name": "Banded Clamshell"
+ },
+ {
+  "wger_id": 1843,
+  "name": "Butterfly Stretch"
+ },
+ {
+  "wger_id": 1846,
+  "name": "Horse Stance (Side Splits)"
+ },
+ {
+  "wger_id": 1847,
+  "name": "Straddle L-Sit"
+ },
+ {
+  "wger_id": 1853,
+  "name": "L-Sit (Foot Supported)"
+ },
+ {
+  "wger_id": 1854,
+  "name": "Calves foam roller"
+ },
+ {
+  "wger_id": 1855,
+  "name": "Hamstring Foam roller"
+ },
+ {
+  "wger_id": 1856,
+  "name": "Foam Roller Anterior tibialis"
+ },
+ {
+  "wger_id": 1857,
+  "name": "Foam Roller Iliotibial band"
+ },
+ {
+  "wger_id": 1858,
+  "name": "Foam Roller quadriceps"
+ },
+ {
+  "wger_id": 1859,
+  "name": "Foam Roller Gluteus"
+ },
+ {
+  "wger_id": 1860,
+  "name": "Foam Roller Adductors"
+ },
+ {
+  "wger_id": 1862,
+  "name": "Hip Circles"
+ },
+ {
+  "wger_id": 1863,
+  "name": "Hip Crossover"
+ },
+ {
+  "wger_id": 1864,
+  "name": "Ankle Roll"
+ },
+ {
+  "wger_id": 1865,
+  "name": "Banded Ankle Mobility"
+ },
+ {
+  "wger_id": 1869,
+  "name": "Lying Figure Four Stretch"
+ },
+ {
+  "wger_id": 1870,
+  "name": "Lying Hamstring Stretch with Band"
+ },
+ {
+  "wger_id": 1871,
+  "name": "Lying Knee to Chest Stretch"
+ },
+ {
+  "wger_id": 1872,
+  "name": "Pigeon Stretch"
+ },
+ {
+  "wger_id": 1875,
+  "name": "Standing IT Band Stretch"
+ },
+ {
+  "wger_id": 1876,
+  "name": "Supported Calf Stretch"
+ },
+ {
+  "wger_id": 1877,
+  "name": "Banded Scapular Retraction"
+ },
+ {
+  "wger_id": 1881,
+  "name": "DB Wrist Extension"
+ },
+ {
+  "wger_id": 1884,
+  "name": "Shinbox IR Stretch"
+ },
+ {
+  "wger_id": 1885,
+  "name": "YTWL Exercise"
+ },
+ {
+  "wger_id": 1886,
+  "name": "Supine Hip Abduction"
+ },
+ {
+  "wger_id": 1889,
+  "name": "Decline Bench Leg Raise"
+ },
+ {
+  "wger_id": 1900,
+  "name": "Tricep Rope Pushdowns"
+ },
+ {
+  "wger_id": 1904,
+  "name": "Pec Deck"
+ },
+ {
+  "wger_id": 1905,
+  "name": "Pullback"
+ },
+ {
+  "wger_id": 1907,
+  "name": "Unilateral Lunges"
+ },
+ {
+  "wger_id": 1908,
+  "name": "Butterfly Superman"
+ },
+ {
+  "wger_id": 1909,
+  "name": "Leg Wheel"
+ },
+ {
+  "wger_id": 1910,
+  "name": "Kneeling Superman"
+ },
+ {
+  "wger_id": 1911,
+  "name": "Cat Plank"
+ },
+ {
+  "wger_id": 1912,
+  "name": "Core Rotation"
+ },
+ {
+  "wger_id": 1913,
+  "name": "Unilateral Hip Thrust"
+ },
+ {
+  "wger_id": 1914,
+  "name": "Isometria alle parallele"
+ },
+ {
+  "wger_id": 1915,
+  "name": "Quadruped Hip Abduction"
+ },
+ {
+  "wger_id": 1916,
+  "name": "Tuck planche"
+ },
+ {
+  "wger_id": 1918,
+  "name": "Legend Chest Press"
+ },
+ {
+  "wger_id": 1919,
+  "name": "Extreme Pec Stretch"
+ },
+ {
+  "wger_id": 1920,
+  "name": "Extreme Shoulder Stretch"
+ },
+ {
+  "wger_id": 1921,
+  "name": "Extreme Lat Stretch"
+ },
+ {
+  "wger_id": 1924,
+  "name": "3008 Abdominal Crunch"
+ },
+ {
+  "wger_id": 1927,
+  "name": "Inverted Lat Pull Down"
+ },
+ {
+  "wger_id": 1928,
+  "name": "Seated V-Grip Row"
+ },
+ {
+  "wger_id": 1933,
+  "name": "Abdominal Crunch"
+ },
+ {
+  "wger_id": 1935,
+  "name": "Belt Squat"
+ },
+ {
+  "wger_id": 1936,
+  "name": "Cable Rear-Delt Fly (single arm)"
+ },
+ {
+  "wger_id": 12435,
+  "name": "Barbell Ab Rollout"
+ },
+ {
+  "wger_id": 14679,
+  "name": "Alternate Leg Diagonal Bound"
+ },
+ {
+  "wger_id": 19248,
+  "name": "Ab Crunch Machine"
+ },
+ {
+  "wger_id": 36904,
+  "name": "Band Pull Apart"
+ },
+ {
+  "wger_id": 39256,
+  "name": "Band Good Morning (Pull Through)"
+ },
+ {
+  "wger_id": 39822,
+  "name": "Alternating Deltoid Raise"
+ },
+ {
+  "wger_id": 41385,
+  "name": "Axle Deadlift"
+ },
+ {
+  "wger_id": 44336,
+  "name": "Around The Worlds"
+ },
+ {
+  "wger_id": 45674,
+  "name": "Atlas Stones"
+ },
+ {
+  "wger_id": 49031,
+  "name": "Arm Circles"
+ },
+ {
+  "wger_id": 49550,
+  "name": "Backward Medicine Ball Throw"
+ },
+ {
+  "wger_id": 49884,
+  "name": "Anterior Tibialis-SMR"
+ },
+ {
+  "wger_id": 58289,
+  "name": "90/90 Hamstring"
+ },
+ {
+  "wger_id": 68083,
+  "name": "Atlas Stone Trainer"
+ },
+ {
+  "wger_id": 70605,
+  "name": "Ab Roller"
+ },
+ {
+  "wger_id": 72422,
+  "name": "Adductor"
+ },
+ {
+  "wger_id": 76417,
+  "name": "Backward Drag"
+ },
+ {
+  "wger_id": 80989,
+  "name": "Back Flyes - With Bands"
+ },
+ {
+  "wger_id": 93616,
+  "name": "Adductor/Groin"
+ },
+ {
+  "wger_id": 98499,
+  "name": "Ankle On The Knee"
+ }
+]

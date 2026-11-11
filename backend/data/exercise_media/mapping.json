@@ -1,0 +1,2946 @@
+{
+ "12": {
+  "ds_id": "0598",
+  "ds_name": "lever seated hip adduction",
+  "our_name": "Seated Hip Adduction",
+  "score": 0.85,
+  "gif": "videos/0598-oHsrypV.gif",
+  "img": "images/0598-oHsrypV.jpg"
+ },
+ "43": {
+  "ds_id": "0046",
+  "ds_name": "barbell hack squat",
+  "our_name": "Barbell Hack Squats",
+  "score": 1.0,
+  "gif": "videos/0046-5VCj6iH.gif",
+  "img": "images/0046-5VCj6iH.jpg"
+ },
+ "46": {
+  "ds_id": "0054",
+  "ds_name": "barbell lunge",
+  "our_name": "Barbell Lunges Standing",
+  "score": 0.67,
+  "gif": "videos/0054-t8iSghb.gif",
+  "img": "images/0054-t8iSghb.jpg"
+ },
+ "48": {
+  "ds_id": "0082",
+  "ds_name": "barbell reverse wrist curl",
+  "our_name": "Barbell Reverse Wrist Curl",
+  "score": 1.0,
+  "gif": "videos/0082-LsZkfU6.gif",
+  "img": "images/0082-LsZkfU6.jpg"
+ },
+ "50": {
+  "ds_id": "0061",
+  "ds_name": "barbell lying triceps extension",
+  "our_name": "Barbell Triceps Extension",
+  "score": 0.85,
+  "gif": "videos/0061-iZop9xO.gif",
+  "img": "images/0061-iZop9xO.jpg"
+ },
+ "51": {
+  "ds_id": "0126",
+  "ds_name": "barbell wrist curl",
+  "our_name": "Barbell Wrist Curl",
+  "score": 1.0,
+  "gif": "videos/0126-82LxxkW.gif",
+  "img": "images/0126-82LxxkW.jpg"
+ },
+ "73": {
+  "ds_id": "1254",
+  "ds_name": "band bench press",
+  "our_name": "Bench Press",
+  "score": 0.8,
+  "gif": "videos/1254-khlHMqs.gif",
+  "img": "images/1254-khlHMqs.jpg"
+ },
+ "75": {
+  "ds_id": "0289",
+  "ds_name": "dumbbell bench press",
+  "our_name": "Benchpress Dumbbells",
+  "score": 1.0,
+  "gif": "videos/0289-SpYC0Kp.gif",
+  "img": "images/0289-SpYC0Kp.jpg"
+ },
+ "81": {
+  "ds_id": "0293",
+  "ds_name": "dumbbell bent over row",
+  "our_name": "Bent Over Dumbbell Rows",
+  "score": 1.0,
+  "gif": "videos/0293-BJ0Hz5L.gif",
+  "img": "images/0293-BJ0Hz5L.jpg"
+ },
+ "83": {
+  "ds_id": "0027",
+  "ds_name": "barbell bent over row",
+  "our_name": "Bent Over Rowing",
+  "score": 0.85,
+  "gif": "videos/0027-eZyBC3j.gif",
+  "img": "images/0027-eZyBC3j.jpg"
+ },
+ "84": {
+  "ds_id": "0118",
+  "ds_name": "barbell reverse grip bent over row",
+  "our_name": "Bent Over Rowing Reverse",
+  "score": 0.8,
+  "gif": "videos/0118-SzX3uzM.gif",
+  "img": "images/0118-SzX3uzM.jpg"
+ },
+ "91": {
+  "ds_id": "2407",
+  "ds_name": "barbell biceps curl (with arm blaster)",
+  "our_name": "Biceps Curls With Barbell",
+  "score": 0.8,
+  "gif": "videos/2407-aee2Fcj.gif",
+  "img": "images/2407-aee2Fcj.jpg"
+ },
+ "92": {
+  "ds_id": "1658",
+  "ds_name": "dumbbell lunge with bicep curl",
+  "our_name": "Biceps Curls With Dumbbell",
+  "score": 0.88,
+  "gif": "videos/1658-Mz6lLcW.gif",
+  "img": "images/1658-Mz6lLcW.jpg"
+ },
+ "94": {
+  "ds_id": "1658",
+  "ds_name": "dumbbell lunge with bicep curl",
+  "our_name": "Biceps Curls With SZ-bar",
+  "score": 0.82,
+  "gif": "videos/1658-Mz6lLcW.gif",
+  "img": "images/1658-Mz6lLcW.jpg"
+ },
+ "95": {
+  "ds_id": "2403",
+  "ds_name": "dumbbell alternate biceps curl (with arm blaster)",
+  "our_name": "Biceps Curl With Cable",
+  "score": 0.68,
+  "gif": "videos/2403-CfKsRbG.gif",
+  "img": "images/2403-CfKsRbG.jpg"
+ },
+ "112": {
+  "ds_id": "0870",
+  "ds_name": "butt-ups",
+  "our_name": "Body-Ups",
+  "score": 0.68,
+  "gif": "videos/0870-qcNN2FN.gif",
+  "img": "images/0870-qcNN2FN.jpg"
+ },
+ "129": {
+  "ds_id": "0577",
+  "ds_name": "lever chest press",
+  "our_name": "Chest Press",
+  "score": 0.8,
+  "gif": "videos/0577-T0yTjgW.gif",
+  "img": "images/0577-T0yTjgW.jpg"
+ },
+ "132": {
+  "ds_id": "1160",
+  "ds_name": "burpee",
+  "our_name": "Burpees",
+  "score": 1.0,
+  "gif": "videos/1160-dK9394r.gif",
+  "img": "images/1160-dK9394r.jpg"
+ },
+ "142": {
+  "ds_id": "0235",
+  "ds_name": "cable standing shoulder external rotation",
+  "our_name": "Cable External Rotation",
+  "score": 0.76,
+  "gif": "videos/0235-FWdVhcW.gif",
+  "img": "images/0235-FWdVhcW.jpg"
+ },
+ "146": {
+  "ds_id": "1391",
+  "ds_name": "sled calf press on leg press",
+  "our_name": "Calf Press Using Leg Press Machine",
+  "score": 0.64,
+  "gif": "videos/1391-ykHcWme.gif",
+  "img": "images/1391-ykHcWme.jpg"
+ },
+ "152": {
+  "ds_id": "1326",
+  "ds_name": "chin-up",
+  "our_name": "Chin Up",
+  "score": 1.0,
+  "gif": "videos/1326-T2mxWqc.gif",
+  "img": "images/1326-T2mxWqc.jpg"
+ },
+ "154": {
+  "ds_id": "1326",
+  "ds_name": "chin-up",
+  "our_name": "Chin-ups",
+  "score": 1.0,
+  "gif": "videos/1326-T2mxWqc.gif",
+  "img": "images/1326-T2mxWqc.jpg"
+ },
+ "184": {
+  "ds_id": "0032",
+  "ds_name": "barbell deadlift",
+  "our_name": "Deadlifts",
+  "score": 0.7,
+  "gif": "videos/0032-ila4NZS.gif",
+  "img": "images/0032-ila4NZS.jpg"
+ },
+ "185": {
+  "ds_id": "0033",
+  "ds_name": "barbell decline bench press",
+  "our_name": "Decline Bench Press Barbell",
+  "score": 1.0,
+  "gif": "videos/0033-GrO65fd.gif",
+  "img": "images/0033-GrO65fd.jpg"
+ },
+ "186": {
+  "ds_id": "0301",
+  "ds_name": "dumbbell decline bench press",
+  "our_name": "Decline Bench Press Dumbbell",
+  "score": 1.0,
+  "gif": "videos/0301-DwhEmmE.gif",
+  "img": "images/0301-DwhEmmE.jpg"
+ },
+ "188": {
+  "ds_id": "0279",
+  "ds_name": "decline push-up",
+  "our_name": "Decline Pushups",
+  "score": 1.0,
+  "gif": "videos/0279-i5cEhka.gif",
+  "img": "images/0279-i5cEhka.jpg"
+ },
+ "194": {
+  "ds_id": "0251",
+  "ds_name": "chest dip",
+  "our_name": "Dips",
+  "score": 0.7,
+  "gif": "videos/0251-9WTm7dq.gif",
+  "img": "images/0251-9WTm7dq.jpg"
+ },
+ "197": {
+  "ds_id": "0813",
+  "ds_name": "triceps dip (between benches)",
+  "our_name": "Dips Between Two Benches",
+  "score": 0.66,
+  "gif": "videos/0813-Wgbn9qo.gif",
+  "img": "images/0813-Wgbn9qo.jpg"
+ },
+ "202": {
+  "ds_id": "0297",
+  "ds_name": "dumbbell concentration curl",
+  "our_name": "Dumbbell Concentration Curl",
+  "score": 1.0,
+  "gif": "videos/0297-gvsWLQw.gif",
+  "img": "images/0297-gvsWLQw.jpg"
+ },
+ "203": {
+  "ds_id": "1760",
+  "ds_name": "dumbbell goblet squat",
+  "our_name": "Dumbbell Goblet Squat",
+  "score": 1.0,
+  "gif": "videos/1760-yn8yg1r.gif",
+  "img": "images/1760-yn8yg1r.jpg"
+ },
+ "204": {
+  "ds_id": "0318",
+  "ds_name": "dumbbell incline curl",
+  "our_name": "Dumbbell Incline Curl",
+  "score": 1.0,
+  "gif": "videos/0318-ae9UoXQ.gif",
+  "img": "images/0318-ae9UoXQ.jpg"
+ },
+ "205": {
+  "ds_id": "0336",
+  "ds_name": "dumbbell lunge",
+  "our_name": "Dumbbell Lunges Standing",
+  "score": 0.67,
+  "gif": "videos/0336-RRWFUcw.gif",
+  "img": "images/0336-RRWFUcw.jpg"
+ },
+ "206": {
+  "ds_id": "3655",
+  "ds_name": "walking high knees lunge",
+  "our_name": "Dumbbell Lunges Walking",
+  "score": 0.68,
+  "gif": "videos/3655-J9zIWig.gif",
+  "img": "images/3655-J9zIWig.jpg"
+ },
+ "211": {
+  "ds_id": "0306",
+  "ds_name": "dumbbell decline triceps extension",
+  "our_name": "Dumbbell Triceps Extension",
+  "score": 0.85,
+  "gif": "videos/0306-OTgkHwR.gif",
+  "img": "images/0306-OTgkHwR.jpg"
+ },
+ "235": {
+  "ds_id": "0459",
+  "ds_name": "flutter kicks",
+  "our_name": "Flutter Kicks",
+  "score": 1.0,
+  "gif": "videos/0459-UVo2Qs2.gif",
+  "img": "images/0459-UVo2Qs2.jpg"
+ },
+ "237": {
+  "ds_id": "0458",
+  "ds_name": "floor fly (with barbell)",
+  "our_name": "Fly With Cable",
+  "score": 0.78,
+  "gif": "videos/0458-neonEDL.gif",
+  "img": "images/0458-neonEDL.jpg"
+ },
+ "238": {
+  "ds_id": "0458",
+  "ds_name": "floor fly (with barbell)",
+  "our_name": "Fly With Dumbbells",
+  "score": 0.78,
+  "gif": "videos/0458-neonEDL.gif",
+  "img": "images/0458-neonEDL.jpg"
+ },
+ "256": {
+  "ds_id": "0978",
+  "ds_name": "band front raise",
+  "our_name": "Front Raises",
+  "score": 0.8,
+  "gif": "videos/0978-TFA88iB.gif",
+  "img": "images/0978-TFA88iB.jpg"
+ },
+ "257": {
+  "ds_id": "0042",
+  "ds_name": "barbell front squat",
+  "our_name": "Front Squats",
+  "score": 0.8,
+  "gif": "videos/0042-zG0zs85.gif",
+  "img": "images/0042-zG0zs85.jpg"
+ },
+ "265": {
+  "ds_id": "1409",
+  "ds_name": "barbell glute bridge",
+  "our_name": "Glute Bridge",
+  "score": 0.8,
+  "gif": "videos/1409-qKBpF7I.gif",
+  "img": "images/1409-qKBpF7I.jpg"
+ },
+ "268": {
+  "ds_id": "0044",
+  "ds_name": "barbell good morning",
+  "our_name": "Good Mornings",
+  "score": 0.8,
+  "gif": "videos/0044-XlZ4lAC.gif",
+  "img": "images/0044-XlZ4lAC.jpg"
+ },
+ "272": {
+  "ds_id": "0313",
+  "ds_name": "dumbbell hammer curl",
+  "our_name": "Hammer Curls",
+  "score": 0.8,
+  "gif": "videos/0313-slDvUAU.gif",
+  "img": "images/0313-slDvUAU.jpg"
+ },
+ "282": {
+  "ds_id": "0471",
+  "ds_name": "handstand push-up",
+  "our_name": "Handstand Pushup",
+  "score": 1.0,
+  "gif": "videos/0471-rQxwMxO.gif",
+  "img": "images/0471-rQxwMxO.jpg"
+ },
+ "283": {
+  "ds_id": "0472",
+  "ds_name": "hanging leg raise",
+  "our_name": "Hanging Leg Raises",
+  "score": 1.0,
+  "gif": "videos/0472-I3tsCnC.gif",
+  "img": "images/0472-I3tsCnC.jpg"
+ },
+ "289": {
+  "ds_id": "0548",
+  "ds_name": "kettlebell sumo high pull",
+  "our_name": "High Pull",
+  "score": 0.7,
+  "gif": "videos/0548-8ARQ9Hw.gif",
+  "img": "images/0548-8ARQ9Hw.jpg"
+ },
+ "292": {
+  "ds_id": "0865",
+  "ds_name": "lying leg-hip raise",
+  "our_name": "Hip Raise, Lying",
+  "score": 0.85,
+  "gif": "videos/0865-9IxJdtC.gif",
+  "img": "images/0865-9IxJdtC.jpg"
+ },
+ "301": {
+  "ds_id": "0489",
+  "ds_name": "hyperextension",
+  "our_name": "Hyperextensions",
+  "score": 1.0,
+  "gif": "videos/0489-zhMwOwE.gif",
+  "img": "images/0489-zhMwOwE.jpg"
+ },
+ "308": {
+  "ds_id": "0319",
+  "ds_name": "dumbbell incline fly",
+  "our_name": "Incline Dumbbell Fly",
+  "score": 1.0,
+  "gif": "videos/0319-ESOd5Pl.gif",
+  "img": "images/0319-ESOd5Pl.jpg"
+ },
+ "310": {
+  "ds_id": "0327",
+  "ds_name": "dumbbell incline row",
+  "our_name": "Incline Dumbbell Row",
+  "score": 1.0,
+  "gif": "videos/0327-7vG5o25.gif",
+  "img": "images/0327-7vG5o25.jpg"
+ },
+ "313": {
+  "ds_id": "0493",
+  "ds_name": "incline push-up",
+  "our_name": "Incline Push up",
+  "score": 1.0,
+  "gif": "videos/0493-B1EVP9F.gif",
+  "img": "images/0493-B1EVP9F.jpg"
+ },
+ "314": {
+  "ds_id": "0500",
+  "ds_name": "isometric wipers",
+  "our_name": "Isometric Wipers",
+  "score": 1.0,
+  "gif": "videos/0500-11wrviz.gif",
+  "img": "images/0500-11wrviz.jpg"
+ },
+ "323": {
+  "ds_id": "0155",
+  "ds_name": "cable cross-over variation",
+  "our_name": "Cable Cross-over",
+  "score": 0.85,
+  "gif": "videos/0155-0CXGHya.gif",
+  "img": "images/0155-0CXGHya.jpg"
+ },
+ "331": {
+  "ds_id": "0549",
+  "ds_name": "kettlebell swing",
+  "our_name": "Kettlebell Swings",
+  "score": 1.0,
+  "gif": "videos/0549-UHJlbu3.gif",
+  "img": "images/0549-UHJlbu3.jpg"
+ },
+ "348": {
+  "ds_id": "0178",
+  "ds_name": "cable lateral raise",
+  "our_name": "Lateral Raises",
+  "score": 0.8,
+  "gif": "videos/0178-goJ6ezq.gif",
+  "img": "images/0178-goJ6ezq.jpg"
+ },
+ "351": {
+  "ds_id": "0335",
+  "ds_name": "dumbbell lateral to front raise",
+  "our_name": "Lateral-to-Front Raises",
+  "score": 0.88,
+  "gif": "videos/0335-xMjBKwn.gif",
+  "img": "images/0335-xMjBKwn.jpg"
+ },
+ "364": {
+  "ds_id": "1770",
+  "ds_name": "biceps leg concentration curl",
+  "our_name": "Leg Curl",
+  "score": 0.7,
+  "gif": "videos/1770-sJFIDIp.gif",
+  "img": "images/1770-sJFIDIp.jpg"
+ },
+ "367": {
+  "ds_id": "0795",
+  "ds_name": "standing single leg curl",
+  "our_name": "Leg Curls (standing)",
+  "score": 0.85,
+  "gif": "videos/0795-C5jncD2.gif",
+  "img": "images/0795-C5jncD2.jpg"
+ },
+ "369": {
+  "ds_id": "0585",
+  "ds_name": "lever leg extension",
+  "our_name": "Leg Extension",
+  "score": 0.8,
+  "gif": "videos/0585-my33uHU.gif",
+  "img": "images/0585-my33uHU.jpg"
+ },
+ "371": {
+  "ds_id": "0760",
+  "ds_name": "smith leg press",
+  "our_name": "Leg Press",
+  "score": 0.8,
+  "gif": "videos/0760-7zdxRTl.gif",
+  "img": "images/0760-7zdxRTl.jpg"
+ },
+ "374": {
+  "ds_id": "0740",
+  "ds_name": "sled 45в° leg wide press",
+  "our_name": "Leg Presses (wide)",
+  "score": 0.76,
+  "gif": "videos/0740-tj41Nu6.gif",
+  "img": "images/0740-tj41Nu6.jpg"
+ },
+ "375": {
+  "ds_id": "1391",
+  "ds_name": "sled calf press on leg press",
+  "our_name": "Leg Press on Hackenschmidt Machine",
+  "score": 0.64,
+  "gif": "videos/1391-ykHcWme.gif",
+  "img": "images/1391-ykHcWme.jpg"
+ },
+ "376": {
+  "ds_id": "0472",
+  "ds_name": "hanging leg raise",
+  "our_name": "Leg Raise",
+  "score": 0.8,
+  "gif": "videos/0472-I3tsCnC.gif",
+  "img": "images/0472-I3tsCnC.jpg"
+ },
+ "377": {
+  "ds_id": "0865",
+  "ds_name": "lying leg-hip raise",
+  "our_name": "Leg Raises, Lying",
+  "score": 0.85,
+  "gif": "videos/0865-9IxJdtC.gif",
+  "img": "images/0865-9IxJdtC.jpg"
+ },
+ "378": {
+  "ds_id": "0108",
+  "ds_name": "barbell standing leg calf raise",
+  "our_name": "Leg Raises, Standing",
+  "score": 0.76,
+  "gif": "videos/0108-rGwhJ5o.gif",
+  "img": "images/0108-rGwhJ5o.jpg"
+ },
+ "379": {
+  "ds_id": "2144",
+  "ds_name": "cable seated chest press",
+  "our_name": "Leverage Machine Chest Press",
+  "score": 0.78,
+  "gif": "videos/2144-nIR4Rwl.gif",
+  "img": "images/2144-nIR4Rwl.jpg"
+ },
+ "386": {
+  "ds_id": "0283",
+  "ds_name": "diamond push-up",
+  "our_name": "Diamond push ups",
+  "score": 1.0,
+  "gif": "videos/0283-soIB2rj.gif",
+  "img": "images/0283-soIB2rj.jpg"
+ },
+ "423": {
+  "ds_id": "0631",
+  "ds_name": "muscle up",
+  "our_name": "Muscle up",
+  "score": 1.0,
+  "gif": "videos/0631-yJUHKTn.gif",
+  "img": "images/0631-yJUHKTn.jpg"
+ },
+ "439": {
+  "ds_id": "0868",
+  "ds_name": "cable curl",
+  "our_name": "Overhand Cable Curl",
+  "score": 0.67,
+  "gif": "videos/0868-G08RZcQ.gif",
+  "img": "images/0868-G08RZcQ.jpg"
+ },
+ "441": {
+  "ds_id": "0069",
+  "ds_name": "barbell overhead squat",
+  "our_name": "Overhead Squat",
+  "score": 0.8,
+  "gif": "videos/0069-gfk9kD4.gif",
+  "img": "images/0069-gfk9kD4.jpg"
+ },
+ "454": {
+  "ds_id": "1296",
+  "ds_name": "exercise ball pike push up",
+  "our_name": "Pike Push Ups",
+  "score": 0.76,
+  "gif": "videos/1296-sVvXT5J.gif",
+  "img": "images/1296-sVvXT5J.jpg"
+ },
+ "456": {
+  "ds_id": "0544",
+  "ds_name": "kettlebell pistol squat",
+  "our_name": "Pistol Squat",
+  "score": 0.8,
+  "gif": "videos/0544-5bpPTHv.gif",
+  "img": "images/0544-5bpPTHv.jpg"
+ },
+ "465": {
+  "ds_id": "0070",
+  "ds_name": "barbell preacher curl",
+  "our_name": "Preacher Curls",
+  "score": 0.8,
+  "gif": "videos/0070-qOgPVf6.gif",
+  "img": "images/0070-qOgPVf6.jpg"
+ },
+ "475": {
+  "ds_id": "0652",
+  "ds_name": "pull-up",
+  "our_name": "Pull-ups",
+  "score": 1.0,
+  "gif": "videos/0652-lBDjFxJ.gif",
+  "img": "images/0652-lBDjFxJ.jpg"
+ },
+ "477": {
+  "ds_id": "2400",
+  "ds_name": "inverse leg curl (on pull-up cable machine)",
+  "our_name": "Pull Ups on Machine",
+  "score": 0.7,
+  "gif": "videos/2400-0rHfvy9.gif",
+  "img": "images/2400-0rHfvy9.jpg"
+ },
+ "478": {
+  "ds_id": "1700",
+  "ds_name": "dumbbell push press",
+  "our_name": "Push Press",
+  "score": 0.8,
+  "gif": "videos/1700-FS63wTN.gif",
+  "img": "images/1700-FS63wTN.jpg"
+ },
+ "487": {
+  "ds_id": "0075",
+  "ds_name": "barbell rear delt raise",
+  "our_name": "Rear Delt Raises",
+  "score": 0.85,
+  "gif": "videos/0075-Ln9iTbU.gif",
+  "img": "images/0075-Ln9iTbU.jpg"
+ },
+ "490": {
+  "ds_id": "0521",
+  "ds_name": "kettlebell alternating renegade row",
+  "our_name": "Renegade Row",
+  "score": 0.7,
+  "gif": "videos/0521-b9kqlBy.gif",
+  "img": "images/0521-b9kqlBy.jpg"
+ },
+ "495": {
+  "ds_id": "0080",
+  "ds_name": "barbell reverse curl",
+  "our_name": "Reverse Curl",
+  "score": 0.8,
+  "gif": "videos/0080-xNrS20v.gif",
+  "img": "images/0080-xNrS20v.jpg"
+ },
+ "498": {
+  "ds_id": "2187",
+  "ds_name": "barbell reverse close-grip bench press",
+  "our_name": "Reverse Grip Bench Press",
+  "score": 0.8,
+  "gif": "videos/2187-YqJw82s.gif",
+  "img": "images/2187-YqJw82s.jpg"
+ },
+ "500": {
+  "ds_id": "3663",
+  "ds_name": "reverse plank with leg lift",
+  "our_name": "Reverse Plank",
+  "score": 0.64,
+  "gif": "videos/3663-tFToB7l.gif",
+  "img": "images/3663-tFToB7l.jpg"
+ },
+ "501": {
+  "ds_id": "0677",
+  "ds_name": "ring dips",
+  "our_name": "Ring Dips",
+  "score": 1.0,
+  "gif": "videos/0677-ezTvXcr.gif",
+  "img": "images/0677-ezTvXcr.jpg"
+ },
+ "507": {
+  "ds_id": "0085",
+  "ds_name": "barbell romanian deadlift",
+  "our_name": "Romanian Deadlift",
+  "score": 0.8,
+  "gif": "videos/0085-wQ2c4XD.gif",
+  "img": "images/0085-wQ2c4XD.jpg"
+ },
+ "508": {
+  "ds_id": "0499",
+  "ds_name": "inverted row",
+  "our_name": "Row",
+  "score": 0.7,
+  "gif": "videos/0499-bZGHsAZ.gif",
+  "img": "images/0499-bZGHsAZ.jpg"
+ },
+ "510": {
+  "ds_id": "2298",
+  "ds_name": "inverted row on bench",
+  "our_name": "Rowing, Lying on Bench",
+  "score": 0.66,
+  "gif": "videos/2298-Mxa7Cr8.gif",
+  "img": "images/2298-Mxa7Cr8.jpg"
+ },
+ "512": {
+  "ds_id": "0588",
+  "ds_name": "lever narrow grip seated row",
+  "our_name": "Rowing seated, narrow grip",
+  "score": 0.88,
+  "gif": "videos/0588-IGjKj1v.gif",
+  "img": "images/0588-IGjKj1v.jpg"
+ },
+ "513": {
+  "ds_id": "0606",
+  "ds_name": "lever t bar row",
+  "our_name": "Rowing, T-bar",
+  "score": 0.85,
+  "gif": "videos/0606-aaXr7ld.gif",
+  "img": "images/0606-aaXr7ld.jpg"
+ },
+ "525": {
+  "ds_id": "0118",
+  "ds_name": "barbell reverse grip bent over row",
+  "our_name": "Bent Over Rowing Reverse",
+  "score": 0.8,
+  "gif": "videos/0118-SzX3uzM.gif",
+  "img": "images/0118-SzX3uzM.jpg"
+ },
+ "527": {
+  "ds_id": "0685",
+  "ds_name": "run",
+  "our_name": "Run",
+  "score": 1.0,
+  "gif": "videos/0685-oLrKqDH.gif",
+  "img": "images/0685-oLrKqDH.jpg"
+ },
+ "537": {
+  "ds_id": "0314",
+  "ds_name": "dumbbell incline bench press",
+  "our_name": "Incline Bench Press - Dumbbell",
+  "score": 1.0,
+  "gif": "videos/0314-ns0SIbU.gif",
+  "img": "images/0314-ns0SIbU.jpg"
+ },
+ "538": {
+  "ds_id": "0047",
+  "ds_name": "barbell incline bench press",
+  "our_name": "Incline Bench Press - Barbell",
+  "score": 1.0,
+  "gif": "videos/0047-3TZduzM.gif",
+  "img": "images/0047-3TZduzM.jpg"
+ },
+ "539": {
+  "ds_id": "0047",
+  "ds_name": "barbell incline bench press",
+  "our_name": "Incline Bench Press - MP",
+  "score": 0.66,
+  "gif": "videos/0047-3TZduzM.gif",
+  "img": "images/0047-3TZduzM.jpg"
+ },
+ "543": {
+  "ds_id": "0997",
+  "ds_name": "band shoulder press",
+  "our_name": "Shoulder Press, on Machine",
+  "score": 0.65,
+  "gif": "videos/0997-peAeMR3.gif",
+  "img": "images/0997-peAeMR3.jpg"
+ },
+ "549": {
+  "ds_id": "0816",
+  "ds_name": "triceps press",
+  "our_name": "Seated Triceps Press",
+  "score": 0.67,
+  "gif": "videos/0816-fSrPP6B.gif",
+  "img": "images/0816-fSrPP6B.jpg"
+ },
+ "556": {
+  "ds_id": "0222",
+  "ds_name": "cable side bend",
+  "our_name": "Side Bends on Machine",
+  "score": 0.65,
+  "gif": "videos/0222-wPypxFY.gif",
+  "img": "images/0222-wPypxFY.jpg"
+ },
+ "566": {
+  "ds_id": "0091",
+  "ds_name": "barbell seated overhead press",
+  "our_name": "Shoulder Press, Barbell",
+  "score": 0.85,
+  "gif": "videos/0091-kTbSH9h.gif",
+  "img": "images/0091-kTbSH9h.jpg"
+ },
+ "567": {
+  "ds_id": "0405",
+  "ds_name": "dumbbell seated shoulder press",
+  "our_name": "Shoulder Press, Dumbbells",
+  "score": 0.85,
+  "gif": "videos/0405-znQUdHY.gif",
+  "img": "images/0405-znQUdHY.jpg"
+ },
+ "571": {
+  "ds_id": "0095",
+  "ds_name": "barbell shrug",
+  "our_name": "Shrugs, Barbells",
+  "score": 1.0,
+  "gif": "videos/0095-dG7tG5y.gif",
+  "img": "images/0095-dG7tG5y.jpg"
+ },
+ "572": {
+  "ds_id": "0406",
+  "ds_name": "dumbbell shrug",
+  "our_name": "Shrugs, Dumbbells",
+  "score": 1.0,
+  "gif": "videos/0406-NJzBsGJ.gif",
+  "img": "images/0406-NJzBsGJ.jpg"
+ },
+ "576": {
+  "ds_id": "0223",
+  "ds_name": "cable side crunch",
+  "our_name": "Side Crunch",
+  "score": 0.8,
+  "gif": "videos/0223-q2ADGqV.gif",
+  "img": "images/0223-q2ADGqV.jpg"
+ },
+ "580": {
+  "ds_id": "3544",
+  "ds_name": "bodyweight incline side plank",
+  "our_name": "Side Plank",
+  "score": 0.7,
+  "gif": "videos/3544-5VXmnV5.gif",
+  "img": "images/3544-5VXmnV5.jpg"
+ },
+ "583": {
+  "ds_id": "0664",
+  "ds_name": "push-up to side plank",
+  "our_name": "Side to Side Push Ups",
+  "score": 0.88,
+  "gif": "videos/0664-KhHJ338.gif",
+  "img": "images/0664-KhHJ338.jpg"
+ },
+ "591": {
+  "ds_id": "1758",
+  "ds_name": "assisted sit-up",
+  "our_name": "Sit-ups",
+  "score": 0.8,
+  "gif": "videos/1758-aumB2IV.gif",
+  "img": "images/1758-aumB2IV.jpg"
+ },
+ "598": {
+  "ds_id": "1625",
+  "ds_name": "smith machine decline close grip bench press",
+  "our_name": "Smith Machine Close-grip Bench Press",
+  "score": 0.91,
+  "gif": "videos/1625-yB9SvIF.gif",
+  "img": "images/1625-yB9SvIF.jpg"
+ },
+ "614": {
+  "ds_id": "0514",
+  "ds_name": "jump squat",
+  "our_name": "Squat Jumps",
+  "score": 1.0,
+  "gif": "videos/0514-LIlE5Tn.gif",
+  "img": "images/0514-LIlE5Tn.jpg"
+ },
+ "615": {
+  "ds_id": "1004",
+  "ds_name": "band squat",
+  "our_name": "Squats",
+  "score": 0.7,
+  "gif": "videos/1004-TUZLh71.gif",
+  "img": "images/1004-TUZLh71.jpg"
+ },
+ "621": {
+  "ds_id": "0416",
+  "ds_name": "dumbbell standing biceps curl",
+  "our_name": "Standing Bicep Curl",
+  "score": 0.85,
+  "gif": "videos/0416-3s4NnTh.gif",
+  "img": "images/0416-3s4NnTh.jpg"
+ },
+ "622": {
+  "ds_id": "1372",
+  "ds_name": "barbell standing calf raise",
+  "our_name": "Standing Calf Raises",
+  "score": 0.85,
+  "gif": "videos/1372-8ozhUIZ.gif",
+  "img": "images/1372-8ozhUIZ.jpg"
+ },
+ "624": {
+  "ds_id": "0798",
+  "ds_name": "stationary bike walk",
+  "our_name": "Stationary Bike",
+  "score": 0.8,
+  "gif": "videos/0798-a8VDgLw.gif",
+  "img": "images/0798-a8VDgLw.jpg"
+ },
+ "630": {
+  "ds_id": "0117",
+  "ds_name": "barbell sumo deadlift",
+  "our_name": "Sumo Deadlift",
+  "score": 0.8,
+  "gif": "videos/0117-KgI0tqW.gif",
+  "img": "images/0117-KgI0tqW.jpg"
+ },
+ "632": {
+  "ds_id": "3142",
+  "ds_name": "smith sumo squat",
+  "our_name": "Sumo Squats",
+  "score": 0.8,
+  "gif": "videos/3142-dzz6BiV.gif",
+  "img": "images/3142-dzz6BiV.jpg"
+ },
+ "650": {
+  "ds_id": "3305",
+  "ds_name": "barbell thruster",
+  "our_name": "Thruster",
+  "score": 0.7,
+  "gif": "videos/3305-f7Y9eDZ.gif",
+  "img": "images/3305-f7Y9eDZ.jpg"
+ },
+ "655": {
+  "ds_id": "1739",
+  "ds_name": "dumbbell standing alternating tricep kickback",
+  "our_name": "Tricep Dumbbell Kickback",
+  "score": 0.76,
+  "gif": "videos/1739-Gi2BXfK.gif",
+  "img": "images/1739-Gi2BXfK.jpg"
+ },
+ "659": {
+  "ds_id": "1726",
+  "ds_name": "cable rope lying on floor tricep extension",
+  "our_name": "Triceps Extensions on Cable",
+  "score": 0.74,
+  "gif": "videos/1726-U3ffHlY.gif",
+  "img": "images/1726-U3ffHlY.jpg"
+ },
+ "675": {
+  "ds_id": "0551",
+  "ds_name": "kettlebell turkish get up (squat style)",
+  "our_name": "Turkish Get-Up",
+  "score": 0.7,
+  "gif": "videos/0551-Ha7SZ3y.gif",
+  "img": "images/0551-Ha7SZ3y.jpg"
+ },
+ "683": {
+  "ds_id": "0648",
+  "ds_name": "power clean",
+  "our_name": "Power Clean",
+  "score": 1.0,
+  "gif": "videos/0648-SiWCcTN.gif",
+  "img": "images/0648-SiWCcTN.jpg"
+ },
+ "687": {
+  "ds_id": "0997",
+  "ds_name": "band shoulder press",
+  "our_name": "Overhead Press",
+  "score": 0.8,
+  "gif": "videos/0997-peAeMR3.gif",
+  "img": "images/0997-peAeMR3.jpg"
+ },
+ "693": {
+  "ds_id": "0246",
+  "ds_name": "cable upright row",
+  "our_name": "Upright Row, SZ-bar",
+  "score": 0.97,
+  "gif": "videos/0246-cALKspW.gif",
+  "img": "images/0246-cALKspW.jpg"
+ },
+ "694": {
+  "ds_id": "0437",
+  "ds_name": "dumbbell upright row",
+  "our_name": "Upright Row w/ Dumbbells",
+  "score": 0.75,
+  "gif": "videos/0437-ainizkb.gif",
+  "img": "images/0437-ainizkb.jpg"
+ },
+ "695": {
+  "ds_id": "2616",
+  "ds_name": "cable lateral pulldown with v-bar",
+  "our_name": "V-Bar Pulldown",
+  "score": 0.7,
+  "gif": "videos/2616-4c9BhzB.gif",
+  "img": "images/2616-4c9BhzB.jpg"
+ },
+ "713": {
+  "ds_id": "0659",
+  "ds_name": "push-up (wall)",
+  "our_name": "Wall Pushup",
+  "score": 1.0,
+  "gif": "videos/0659-LEH9jxP.gif",
+  "img": "images/0659-LEH9jxP.jpg"
+ },
+ "723": {
+  "ds_id": "1325",
+  "ds_name": "cable wide grip rear pulldown behind neck",
+  "our_name": "Wide-grip Pulldown",
+  "score": 0.66,
+  "gif": "videos/1325-CmEr4pM.gif",
+  "img": "images/1325-CmEr4pM.jpg"
+ },
+ "801": {
+  "ds_id": "0663",
+  "ds_name": "push-up medicine ball",
+  "our_name": "Dumbbell Push-Up",
+  "score": 0.97,
+  "gif": "videos/0663-W8KAlkI.gif",
+  "img": "images/0663-W8KAlkI.jpg"
+ },
+ "802": {
+  "ds_id": "3655",
+  "ds_name": "walking high knees lunge",
+  "our_name": "Barbell Lunges Walking",
+  "score": 0.68,
+  "gif": "videos/3655-J9zIWig.gif",
+  "img": "images/3655-J9zIWig.jpg"
+ },
+ "803": {
+  "ds_id": "0231",
+  "ds_name": "cable standing one arm triceps extension",
+  "our_name": "One Arm Triceps Extensions on Cable",
+  "score": 0.76,
+  "gif": "videos/0231-sYCcnon.gif",
+  "img": "images/0231-sYCcnon.jpg"
+ },
+ "822": {
+  "ds_id": "0378",
+  "ds_name": "dumbbell rear fly",
+  "our_name": "Cable Rear Delt Fly",
+  "score": 0.65,
+  "gif": "videos/0378-8DiFDVA.gif",
+  "img": "images/0378-8DiFDVA.jpg"
+ },
+ "829": {
+  "ds_id": "0075",
+  "ds_name": "barbell rear delt raise",
+  "our_name": "Rear Delt Raise",
+  "score": 0.85,
+  "gif": "videos/0075-Ln9iTbU.gif",
+  "img": "images/0075-Ln9iTbU.jpg"
+ },
+ "851": {
+  "ds_id": "0585",
+  "ds_name": "lever leg extension",
+  "our_name": "Leg Extension",
+  "score": 0.8,
+  "gif": "videos/0585-my33uHU.gif",
+  "img": "images/0585-my33uHU.jpg"
+ },
+ "907": {
+  "ds_id": "0471",
+  "ds_name": "handstand push-up",
+  "our_name": "Handstand Push Up",
+  "score": 1.0,
+  "gif": "videos/0471-rQxwMxO.gif",
+  "img": "images/0471-rQxwMxO.jpg"
+ },
+ "913": {
+  "ds_id": "1616",
+  "ds_name": "lever reverse grip preacher curl",
+  "our_name": "Reverse Preacher Curl (Close Grip)",
+  "score": 0.72,
+  "gif": "videos/1616-kj3hy6W.gif",
+  "img": "images/1616-kj3hy6W.jpg"
+ },
+ "914": {
+  "ds_id": "0080",
+  "ds_name": "barbell reverse curl",
+  "our_name": "Reverse EZ Bar Cable Curls",
+  "score": 0.65,
+  "gif": "videos/0080-xNrS20v.gif",
+  "img": "images/0080-xNrS20v.jpg"
+ },
+ "916": {
+  "ds_id": "0748",
+  "ds_name": "smith bench press",
+  "our_name": "Smith Press",
+  "score": 0.8,
+  "gif": "videos/0748-trqKQv2.gif",
+  "img": "images/0748-trqKQv2.jpg"
+ },
+ "918": {
+  "ds_id": "0396",
+  "ds_name": "dumbbell seated lateral raise",
+  "our_name": "Seated Dumbbell Side Lateral",
+  "score": 0.66,
+  "gif": "videos/0396-hxyTtWj.gif",
+  "img": "images/0396-hxyTtWj.jpg"
+ },
+ "919": {
+  "ds_id": "0606",
+  "ds_name": "lever t bar row",
+  "our_name": "T-Bar row",
+  "score": 0.85,
+  "gif": "videos/0606-aaXr7ld.gif",
+  "img": "images/0606-aaXr7ld.jpg"
+ },
+ "921": {
+  "ds_id": "0861",
+  "ds_name": "cable seated row",
+  "our_name": "Seated Cable Rows",
+  "score": 1.0,
+  "gif": "videos/0861-fUBheHs.gif",
+  "img": "images/0861-fUBheHs.jpg"
+ },
+ "924": {
+  "ds_id": "0308",
+  "ds_name": "dumbbell fly",
+  "our_name": "Cable Fly",
+  "score": 0.97,
+  "gif": "videos/0308-yz9nUhF.gif",
+  "img": "images/0308-yz9nUhF.jpg"
+ },
+ "926": {
+  "ds_id": "1262",
+  "ds_name": "cable one arm decline chest fly",
+  "our_name": "Machine chest fly",
+  "score": 0.62,
+  "gif": "videos/1262-w4dLzSx.gif",
+  "img": "images/1262-w4dLzSx.jpg"
+ },
+ "960": {
+  "ds_id": "0549",
+  "ds_name": "kettlebell swing",
+  "our_name": "Kettlebell Swing",
+  "score": 1.0,
+  "gif": "videos/0549-UHJlbu3.gif",
+  "img": "images/0549-UHJlbu3.jpg"
+ },
+ "978": {
+  "ds_id": "0011",
+  "ds_name": "assisted hanging knee raise",
+  "our_name": "Knee Raises",
+  "score": 0.7,
+  "gif": "videos/0011-03lzqwk.gif",
+  "img": "images/0011-03lzqwk.jpg"
+ },
+ "980": {
+  "ds_id": "0652",
+  "ds_name": "pull-up",
+  "our_name": "commando pull-ups",
+  "score": 0.67,
+  "gif": "videos/0652-lBDjFxJ.gif",
+  "img": "images/0652-lBDjFxJ.jpg"
+ },
+ "983": {
+  "ds_id": "3636",
+  "ds_name": "high knee against wall",
+  "our_name": "High knees",
+  "score": 0.7,
+  "gif": "videos/3636-ealLwvX.gif",
+  "img": "images/3636-ealLwvX.jpg"
+ },
+ "984": {
+  "ds_id": "0054",
+  "ds_name": "barbell lunge",
+  "our_name": "Lunges",
+  "score": 0.7,
+  "gif": "videos/0054-t8iSghb.gif",
+  "img": "images/0054-t8iSghb.jpg"
+ },
+ "985": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Push-up rotations",
+  "score": 0.67,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "986": {
+  "ds_id": "0098",
+  "ds_name": "barbell side split squat",
+  "our_name": "Side split squats left",
+  "score": 0.66,
+  "gif": "videos/0098-W31mMjd.gif",
+  "img": "images/0098-W31mMjd.jpg"
+ },
+ "987": {
+  "ds_id": "0098",
+  "ds_name": "barbell side split squat",
+  "our_name": "Side split squats right",
+  "score": 0.66,
+  "gif": "videos/0098-W31mMjd.gif",
+  "img": "images/0098-W31mMjd.jpg"
+ },
+ "991": {
+  "ds_id": "2368",
+  "ds_name": "split squats",
+  "our_name": "Split squats left",
+  "score": 0.67,
+  "gif": "videos/2368-9E25EOx.gif",
+  "img": "images/2368-9E25EOx.jpg"
+ },
+ "992": {
+  "ds_id": "2368",
+  "ds_name": "split squats",
+  "our_name": "Split squats right",
+  "score": 0.67,
+  "gif": "videos/2368-9E25EOx.gif",
+  "img": "images/2368-9E25EOx.jpg"
+ },
+ "993": {
+  "ds_id": "2612",
+  "ds_name": "jump rope",
+  "our_name": "Jump rope: basic jumps",
+  "score": 0.67,
+  "gif": "videos/2612-e1e76I2.gif",
+  "img": "images/2612-e1e76I2.jpg"
+ },
+ "996": {
+  "ds_id": "0630",
+  "ds_name": "mountain climber",
+  "our_name": "Mountain climbers",
+  "score": 1.0,
+  "gif": "videos/0630-RJgzwny.gif",
+  "img": "images/0630-RJgzwny.jpg"
+ },
+ "1000": {
+  "ds_id": "0815",
+  "ds_name": "triceps dips floor",
+  "our_name": "Floor dips",
+  "score": 0.8,
+  "gif": "videos/0815-7aVz15j.gif",
+  "img": "images/0815-7aVz15j.jpg"
+ },
+ "1003": {
+  "ds_id": "0032",
+  "ds_name": "barbell deadlift",
+  "our_name": "Kettlebell deadlifts",
+  "score": 0.97,
+  "gif": "videos/0032-ila4NZS.gif",
+  "img": "images/0032-ila4NZS.jpg"
+ },
+ "1012": {
+  "ds_id": "0968",
+  "ds_name": "band alternating biceps curl",
+  "our_name": "Alternating bicep curls",
+  "score": 0.85,
+  "gif": "videos/0968-3omWx6P.gif",
+  "img": "images/0968-3omWx6P.jpg"
+ },
+ "1080": {
+  "ds_id": "3217",
+  "ds_name": "modified hindu push-up (male)",
+  "our_name": "Hindu Pushups",
+  "score": 0.76,
+  "gif": "videos/3217-epOSYUZ.gif",
+  "img": "images/3217-epOSYUZ.jpg"
+ },
+ "1084": {
+  "ds_id": "0065",
+  "ds_name": "barbell one arm floor press",
+  "our_name": "Dumbbell Floor Press",
+  "score": 0.68,
+  "gif": "videos/0065-vtusOWT.gif",
+  "img": "images/0065-vtusOWT.jpg"
+ },
+ "1085": {
+  "ds_id": "0293",
+  "ds_name": "dumbbell bent over row",
+  "our_name": "Dumbbell Bent Over Row",
+  "score": 1.0,
+  "gif": "videos/0293-BJ0Hz5L.gif",
+  "img": "images/0293-BJ0Hz5L.jpg"
+ },
+ "1086": {
+  "ds_id": "1731",
+  "ds_name": "dumbbell close grip press",
+  "our_name": "Close-grip Press-ups",
+  "score": 0.66,
+  "gif": "videos/1731-7jGOBF3.gif",
+  "img": "images/1731-7jGOBF3.jpg"
+ },
+ "1087": {
+  "ds_id": "0535",
+  "ds_name": "kettlebell hang clean",
+  "our_name": "Dumbbell Hang Power Cleans",
+  "score": 0.65,
+  "gif": "videos/0535-LHWF7us.gif",
+  "img": "images/0535-LHWF7us.jpg"
+ },
+ "1088": {
+  "ds_id": "0300",
+  "ds_name": "dumbbell deadlift",
+  "our_name": "Dumbbell sumo deadlift",
+  "score": 0.67,
+  "gif": "videos/0300-nUwVh7b.gif",
+  "img": "images/0300-nUwVh7b.jpg"
+ },
+ "1089": {
+  "ds_id": "0243",
+  "ds_name": "cable twist",
+  "our_name": "Medicine ball twist",
+  "score": 0.97,
+  "gif": "videos/0243-aVs3BR3.gif",
+  "img": "images/0243-aVs3BR3.jpg"
+ },
+ "1091": {
+  "ds_id": "3239",
+  "ds_name": "kneeling plank tap shoulder (male)",
+  "our_name": "Plank Shoulder Taps",
+  "score": 0.76,
+  "gif": "videos/3239-h1ezqSu.gif",
+  "img": "images/3239-h1ezqSu.jpg"
+ },
+ "1093": {
+  "ds_id": "1003",
+  "ds_name": "band squat row",
+  "our_name": "Rowing Machine",
+  "score": 0.68,
+  "gif": "videos/1003-w1NOByi.gif",
+  "img": "images/1003-w1NOByi.jpg"
+ },
+ "1094": {
+  "ds_id": "0290",
+  "ds_name": "dumbbell bench seated press",
+  "our_name": "Seated Bench Press",
+  "score": 0.85,
+  "gif": "videos/0290-3d7wHyd.gif",
+  "img": "images/0290-3d7wHyd.jpg"
+ },
+ "1104": {
+  "ds_id": "1460",
+  "ds_name": "walking lunge",
+  "our_name": "Walking",
+  "score": 0.7,
+  "gif": "videos/1460-IZVHb27.gif",
+  "img": "images/1460-IZVHb27.jpg"
+ },
+ "1109": {
+  "ds_id": "1631",
+  "ds_name": "cable concentration curl",
+  "our_name": "Cable Concentration Curl",
+  "score": 1.0,
+  "gif": "videos/1631-NvfE43H.gif",
+  "img": "images/1631-NvfE43H.jpg"
+ },
+ "1111": {
+  "ds_id": "0493",
+  "ds_name": "incline push-up",
+  "our_name": "Push-Ups | Incline",
+  "score": 1.0,
+  "gif": "videos/0493-B1EVP9F.gif",
+  "img": "images/0493-B1EVP9F.jpg"
+ },
+ "1112": {
+  "ds_id": "0279",
+  "ds_name": "decline push-up",
+  "our_name": "Push-Ups | Decline",
+  "score": 1.0,
+  "gif": "videos/0279-i5cEhka.gif",
+  "img": "images/0279-i5cEhka.jpg"
+ },
+ "1113": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Push-Ups | Parallettes",
+  "score": 0.67,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "1117": {
+  "ds_id": "0861",
+  "ds_name": "cable seated row",
+  "our_name": "Seated Cable Row",
+  "score": 1.0,
+  "gif": "videos/0861-fUBheHs.gif",
+  "img": "images/0861-fUBheHs.jpg"
+ },
+ "1185": {
+  "ds_id": "1723",
+  "ds_name": "cable one arm tricep pushdown",
+  "our_name": "Triceps Pushdown",
+  "score": 0.64,
+  "gif": "videos/1723-qRZ5S1N.gif",
+  "img": "images/1723-qRZ5S1N.jpg"
+ },
+ "1186": {
+  "ds_id": "0064",
+  "ds_name": "barbell one arm bent over row",
+  "our_name": "One Arm Bent Row",
+  "score": 0.8,
+  "gif": "videos/0064-Jsgsc27.gif",
+  "img": "images/0064-Jsgsc27.jpg"
+ },
+ "1187": {
+  "ds_id": "0548",
+  "ds_name": "kettlebell sumo high pull",
+  "our_name": "High Pull",
+  "score": 0.7,
+  "gif": "videos/0548-8ARQ9Hw.gif",
+  "img": "images/0548-8ARQ9Hw.jpg"
+ },
+ "1192": {
+  "ds_id": "0968",
+  "ds_name": "band alternating biceps curl",
+  "our_name": "Alternating Biceps Curls With Dumbbell",
+  "score": 0.73,
+  "gif": "videos/0968-3omWx6P.gif",
+  "img": "images/0968-3omWx6P.jpg"
+ },
+ "1193": {
+  "ds_id": "0687",
+  "ds_name": "russian twist",
+  "our_name": "Russian Twist",
+  "score": 1.0,
+  "gif": "videos/0687-XVDdcoj.gif",
+  "img": "images/0687-XVDdcoj.jpg"
+ },
+ "1194": {
+  "ds_id": "0979",
+  "ds_name": "band horizontal pallof press",
+  "our_name": "PALLOF PRESS",
+  "score": 0.7,
+  "gif": "videos/0979-9pa4H5m.gif",
+  "img": "images/0979-9pa4H5m.jpg"
+ },
+ "1198": {
+  "ds_id": "0499",
+  "ds_name": "inverted row",
+  "our_name": "Inverted Rows",
+  "score": 1.0,
+  "gif": "videos/0499-bZGHsAZ.gif",
+  "img": "images/0499-bZGHsAZ.jpg"
+ },
+ "1202": {
+  "ds_id": "0710",
+  "ds_name": "side hip abduction",
+  "our_name": "Side Lying Hip Abduction",
+  "score": 0.75,
+  "gif": "videos/0710-7WaDzyL.gif",
+  "img": "images/0710-7WaDzyL.jpg"
+ },
+ "1205": {
+  "ds_id": "0385",
+  "ds_name": "dumbbell reverse wrist curl",
+  "our_name": "Wrist curl, dumbbells",
+  "score": 0.85,
+  "gif": "videos/0385-BLCvwr2.gif",
+  "img": "images/0385-BLCvwr2.jpg"
+ },
+ "1211": {
+  "ds_id": "1756",
+  "ds_name": "barbell single leg deadlift",
+  "our_name": "Romanian deadlift, single leg",
+  "score": 0.66,
+  "gif": "videos/1756-gEyURal.gif",
+  "img": "images/1756-gEyURal.jpg"
+ },
+ "1214": {
+  "ds_id": "3296",
+  "ds_name": "front lever",
+  "our_name": "Front lever tuck",
+  "score": 0.67,
+  "gif": "videos/3296-PkCN2lv.gif",
+  "img": "images/3296-PkCN2lv.jpg"
+ },
+ "1217": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Finger Pushup",
+  "score": 0.67,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "1218": {
+  "ds_id": "2398",
+  "ds_name": "close-grip push-up (on knees)",
+  "our_name": "knee push-ups",
+  "score": 0.7,
+  "gif": "videos/2398-v3vLFW0.gif",
+  "img": "images/2398-v3vLFW0.jpg"
+ },
+ "1219": {
+  "ds_id": "0652",
+  "ds_name": "pull-up",
+  "our_name": "Australian pull-ups",
+  "score": 0.67,
+  "gif": "videos/0652-lBDjFxJ.gif",
+  "img": "images/0652-lBDjFxJ.jpg"
+ },
+ "1225": {
+  "ds_id": "0294",
+  "ds_name": "dumbbell biceps curl",
+  "our_name": "Dumbbell wide bicep curls",
+  "score": 0.75,
+  "gif": "videos/0294-NbVPDMW.gif",
+  "img": "images/0294-NbVPDMW.jpg"
+ },
+ "1226": {
+  "ds_id": "3547",
+  "ds_name": "dumbbell seated biceps curl to shoulder press",
+  "our_name": "Dumbbell bicep curl to press",
+  "score": 0.83,
+  "gif": "videos/3547-OeL23VY.gif",
+  "img": "images/3547-OeL23VY.jpg"
+ },
+ "1227": {
+  "ds_id": "1328",
+  "ds_name": "dumbbell lying rear delt row",
+  "our_name": "Dumbbell rear delt row",
+  "score": 0.88,
+  "gif": "videos/1328-XUUD0Fs.gif",
+  "img": "images/1328-XUUD0Fs.jpg"
+ },
+ "1228": {
+  "ds_id": "1731",
+  "ds_name": "dumbbell close grip press",
+  "our_name": "Dumbbell close grip bench press",
+  "score": 0.8,
+  "gif": "videos/1731-7jGOBF3.gif",
+  "img": "images/1731-7jGOBF3.jpg"
+ },
+ "1229": {
+  "ds_id": "0437",
+  "ds_name": "dumbbell upright row",
+  "our_name": "Dumbbell upright-row",
+  "score": 1.0,
+  "gif": "videos/0437-ainizkb.gif",
+  "img": "images/0437-ainizkb.jpg"
+ },
+ "1230": {
+  "ds_id": "0817",
+  "ds_name": "triceps stretch",
+  "our_name": "Triceps stretch left",
+  "score": 0.67,
+  "gif": "videos/0817-uOV3Itw.gif",
+  "img": "images/0817-uOV3Itw.jpg"
+ },
+ "1231": {
+  "ds_id": "0817",
+  "ds_name": "triceps stretch",
+  "our_name": "Triceps stretch right",
+  "score": 0.67,
+  "gif": "videos/0817-uOV3Itw.gif",
+  "img": "images/0817-uOV3Itw.jpg"
+ },
+ "1239": {
+  "ds_id": "1398",
+  "ds_name": "standing calves calf stretch",
+  "our_name": "Standing Calf Stretch",
+  "score": 0.85,
+  "gif": "videos/1398-qOKcgVP.gif",
+  "img": "images/1398-qOKcgVP.jpg"
+ },
+ "1245": {
+  "ds_id": "3296",
+  "ds_name": "front lever",
+  "our_name": "Front Lever",
+  "score": 1.0,
+  "gif": "videos/3296-PkCN2lv.gif",
+  "img": "images/3296-PkCN2lv.jpg"
+ },
+ "1270": {
+  "ds_id": "0179",
+  "ds_name": "cable low fly",
+  "our_name": "Low Pulley Cable Fly",
+  "score": 0.75,
+  "gif": "videos/0179-FVmZVhk.gif",
+  "img": "images/0179-FVmZVhk.jpg"
+ },
+ "1273": {
+  "ds_id": "0073",
+  "ds_name": "barbell pullover",
+  "our_name": "Pullover",
+  "score": 0.7,
+  "gif": "videos/0073-i6LWjok.gif",
+  "img": "images/0073-i6LWjok.jpg"
+ },
+ "1276": {
+  "ds_id": "0314",
+  "ds_name": "dumbbell incline bench press",
+  "our_name": "Incline Dumbbell Bench Press",
+  "score": 1.0,
+  "gif": "videos/0314-ns0SIbU.gif",
+  "img": "images/0314-ns0SIbU.jpg"
+ },
+ "1277": {
+  "ds_id": "3545",
+  "ds_name": "dumbbell incline alternate press",
+  "our_name": "Incline Dumbbell Press",
+  "score": 0.85,
+  "gif": "videos/3545-TVdivgY.gif",
+  "img": "images/3545-TVdivgY.jpg"
+ },
+ "1278": {
+  "ds_id": "2144",
+  "ds_name": "cable seated chest press",
+  "our_name": "Dumbbell Chest Press",
+  "score": 0.78,
+  "gif": "videos/2144-nIR4Rwl.gif",
+  "img": "images/2144-nIR4Rwl.jpg"
+ },
+ "1284": {
+  "ds_id": "3327",
+  "ds_name": "full planche push-up",
+  "our_name": "Pseudo Planche Push-up",
+  "score": 0.66,
+  "gif": "videos/3327-gw9PqGk.gif",
+  "img": "images/3327-gw9PqGk.jpg"
+ },
+ "1289": {
+  "ds_id": "0391",
+  "ds_name": "dumbbell seated curl",
+  "our_name": "Seated Dumbbell Curls",
+  "score": 1.0,
+  "gif": "videos/0391-TiaZTxx.gif",
+  "img": "images/0391-TiaZTxx.jpg"
+ },
+ "1290": {
+  "ds_id": "0110",
+  "ds_name": "barbell standing reverse grip curl",
+  "our_name": "Reverse Grip Barbell Curls",
+  "score": 0.88,
+  "gif": "videos/0110-LWuA3aZ.gif",
+  "img": "images/0110-LWuA3aZ.jpg"
+ },
+ "1295": {
+  "ds_id": "0025",
+  "ds_name": "barbell bench press",
+  "our_name": "Barbell Bench Press - NB",
+  "score": 0.75,
+  "gif": "videos/0025-EIeI8Vf.gif",
+  "img": "images/0025-EIeI8Vf.jpg"
+ },
+ "1302": {
+  "ds_id": "0052",
+  "ds_name": "barbell jm bench press",
+  "our_name": "JM Press",
+  "score": 0.7,
+  "gif": "videos/0052-ZsiqXYa.gif",
+  "img": "images/0052-ZsiqXYa.jpg"
+ },
+ "1307": {
+  "ds_id": "2135",
+  "ds_name": "weighted front plank",
+  "our_name": "Front Plank",
+  "score": 0.8,
+  "gif": "videos/2135-VBAWRPG.gif",
+  "img": "images/2135-VBAWRPG.jpg"
+ },
+ "1313": {
+  "ds_id": "0865",
+  "ds_name": "lying leg-hip raise",
+  "our_name": "Lying Leg Raise",
+  "score": 0.85,
+  "gif": "videos/0865-9IxJdtC.gif",
+  "img": "images/0865-9IxJdtC.jpg"
+ },
+ "1320": {
+  "ds_id": "1399",
+  "ds_name": "bench dip on floor",
+  "our_name": "Bench Dips On Floor HD",
+  "score": 0.8,
+  "gif": "videos/1399-9RT8oQW.gif",
+  "img": "images/1399-9RT8oQW.jpg"
+ },
+ "1321": {
+  "ds_id": "3544",
+  "ds_name": "bodyweight incline side plank",
+  "our_name": "Side Plank",
+  "score": 0.7,
+  "gif": "videos/3544-5VXmnV5.gif",
+  "img": "images/3544-5VXmnV5.jpg"
+ },
+ "1336": {
+  "ds_id": "0092",
+  "ds_name": "barbell seated overhead triceps extension",
+  "our_name": "Triceps Overhead (Dumbbell)",
+  "score": 0.68,
+  "gif": "videos/0092-5uFK1xr.gif",
+  "img": "images/0092-5uFK1xr.jpg"
+ },
+ "1337": {
+  "ds_id": "0405",
+  "ds_name": "dumbbell seated shoulder press",
+  "our_name": "Shoulder Press (Dumbbell)",
+  "score": 0.85,
+  "gif": "videos/0405-znQUdHY.gif",
+  "img": "images/0405-znQUdHY.jpg"
+ },
+ "1338": {
+  "ds_id": "0376",
+  "ds_name": "dumbbell raise",
+  "our_name": "Schoulder Raise (Dumbbell)",
+  "score": 0.67,
+  "gif": "videos/0376-c9MnDRp.gif",
+  "img": "images/0376-c9MnDRp.jpg"
+ },
+ "1360": {
+  "ds_id": "0028",
+  "ds_name": "barbell clean and press",
+  "our_name": "Double Kettlebell Clean and Press",
+  "score": 0.73,
+  "gif": "videos/0028-SGY8Zui.gif",
+  "img": "images/0028-SGY8Zui.jpg"
+ },
+ "1361": {
+  "ds_id": "0533",
+  "ds_name": "kettlebell front squat",
+  "our_name": "Double Kettlebell Front Squat",
+  "score": 0.75,
+  "gif": "videos/0533-DB0n8AG.gif",
+  "img": "images/0533-DB0n8AG.jpg"
+ },
+ "1365": {
+  "ds_id": "0088",
+  "ds_name": "barbell seated calf raise",
+  "our_name": "Calf Raise with machine (seated)",
+  "score": 0.73,
+  "gif": "videos/0088-ktsFQAZ.gif",
+  "img": "images/0088-ktsFQAZ.jpg"
+ },
+ "1366": {
+  "ds_id": "0098",
+  "ds_name": "barbell side split squat",
+  "our_name": "Dumbbell Split Squat",
+  "score": 0.78,
+  "gif": "videos/0098-W31mMjd.gif",
+  "img": "images/0098-W31mMjd.jpg"
+ },
+ "1370": {
+  "ds_id": "0300",
+  "ds_name": "dumbbell deadlift",
+  "our_name": "Dumbbell Deadlift",
+  "score": 1.0,
+  "gif": "videos/0300-nUwVh7b.gif",
+  "img": "images/0300-nUwVh7b.jpg"
+ },
+ "1372": {
+  "ds_id": "0019",
+  "ds_name": "assisted triceps dip (kneeling)",
+  "our_name": "Triceps Dips (Assisted)",
+  "score": 0.85,
+  "gif": "videos/0019-J60bN17.gif",
+  "img": "images/0019-J60bN17.jpg"
+ },
+ "1378": {
+  "ds_id": "0192",
+  "ds_name": "cable one arm lateral raise",
+  "our_name": "Cable Lateral Raises (Single Arm)",
+  "score": 0.72,
+  "gif": "videos/0192-wEulIzp.gif",
+  "img": "images/0192-wEulIzp.jpg"
+ },
+ "1381": {
+  "ds_id": "1365",
+  "ds_name": "upper back stretch",
+  "our_name": "Upper Back",
+  "score": 0.8,
+  "gif": "videos/1365-GSDioYu.gif",
+  "img": "images/1365-GSDioYu.jpg"
+ },
+ "1384": {
+  "ds_id": "0073",
+  "ds_name": "barbell pullover",
+  "our_name": "Pullover Machine",
+  "score": 0.97,
+  "gif": "videos/0073-i6LWjok.gif",
+  "img": "images/0073-i6LWjok.jpg"
+ },
+ "1390": {
+  "ds_id": "3212",
+  "ds_name": "basic toe touch (male)",
+  "our_name": "Toe Touch",
+  "score": 0.7,
+  "gif": "videos/3212-BbfB8Gb.gif",
+  "img": "images/3212-BbfB8Gb.jpg"
+ },
+ "1392": {
+  "ds_id": "0044",
+  "ds_name": "barbell good morning",
+  "our_name": "Good Morning",
+  "score": 0.8,
+  "gif": "videos/0044-XlZ4lAC.gif",
+  "img": "images/0044-XlZ4lAC.jpg"
+ },
+ "1393": {
+  "ds_id": "1576",
+  "ds_name": "leg up hamstring stretch",
+  "our_name": "Single Leg Hamstring Stretch",
+  "score": 0.66,
+  "gif": "videos/1576-sU5BrfP.gif",
+  "img": "images/1576-sU5BrfP.jpg"
+ },
+ "1400": {
+  "ds_id": "1511",
+  "ds_name": "hamstring stretch",
+  "our_name": "Crossbody Hamstring Stretch",
+  "score": 0.67,
+  "gif": "videos/1511-99rWm7w.gif",
+  "img": "images/1511-99rWm7w.jpg"
+ },
+ "1407": {
+  "ds_id": "3643",
+  "ds_name": "weighted cossack squats (male)",
+  "our_name": "Cossack squat",
+  "score": 0.7,
+  "gif": "videos/3643-GWoKnIm.gif",
+  "img": "images/3643-GWoKnIm.jpg"
+ },
+ "1408": {
+  "ds_id": "0624",
+  "ds_name": "march sit (wall)",
+  "our_name": "Wall-sit",
+  "score": 0.8,
+  "gif": "videos/0624-sVQCCeG.gif",
+  "img": "images/0624-sVQCCeG.jpg"
+ },
+ "1410": {
+  "ds_id": "3663",
+  "ds_name": "reverse plank with leg lift",
+  "our_name": "Plank with Alternating Leg Lift",
+  "score": 0.72,
+  "gif": "videos/3663-tFToB7l.gif",
+  "img": "images/3663-tFToB7l.jpg"
+ },
+ "1414": {
+  "ds_id": "0046",
+  "ds_name": "barbell hack squat",
+  "our_name": "Hack Squats",
+  "score": 0.8,
+  "gif": "videos/0046-5VCj6iH.gif",
+  "img": "images/0046-5VCj6iH.jpg"
+ },
+ "1424": {
+  "ds_id": "1683",
+  "ds_name": "smith machine bicep curl",
+  "our_name": "Biceps Curl Machine",
+  "score": 0.85,
+  "gif": "videos/1683-zILLZ98.gif",
+  "img": "images/1683-zILLZ98.jpg"
+ },
+ "1429": {
+  "ds_id": "0863",
+  "ds_name": "dumbbell lying external shoulder rotation",
+  "our_name": "Dumbbell Shoulder Rotations",
+  "score": 0.76,
+  "gif": "videos/0863-bmBf7LN.gif",
+  "img": "images/0863-bmBf7LN.jpg"
+ },
+ "1438": {
+  "ds_id": "0295",
+  "ds_name": "dumbbell clean",
+  "our_name": "Clean",
+  "score": 0.7,
+  "gif": "videos/0295-7Hg55JG.gif",
+  "img": "images/0295-7Hg55JG.jpg"
+ },
+ "1444": {
+  "ds_id": "1299",
+  "ds_name": "lever incline chest press",
+  "our_name": "Incline Chest Press DB",
+  "score": 0.66,
+  "gif": "videos/1299-jHAnWmT.gif",
+  "img": "images/1299-jHAnWmT.jpg"
+ },
+ "1448": {
+  "ds_id": "1458",
+  "ds_name": "ez barbell seated curls",
+  "our_name": "Seated W Curl",
+  "score": 0.65,
+  "gif": "videos/1458-jtFKbt5.gif",
+  "img": "images/1458-jtFKbt5.jpg"
+ },
+ "1458": {
+  "ds_id": "1017",
+  "ds_name": "band y-raise",
+  "our_name": "Cross-Body Cable Y-Raise",
+  "score": 0.65,
+  "gif": "videos/1017-aHDy5O5.gif",
+  "img": "images/1017-aHDy5O5.jpg"
+ },
+ "1465": {
+  "ds_id": "1675",
+  "ds_name": "dumbbell reverse spider curl",
+  "our_name": "Spider Curl",
+  "score": 0.7,
+  "gif": "videos/1675-6sMAmNv.gif",
+  "img": "images/1675-6sMAmNv.jpg"
+ },
+ "1467": {
+  "ds_id": "1719",
+  "ds_name": "barbell incline close grip bench press",
+  "our_name": "Incline Close Grip Barbell Bench Press",
+  "score": 1.0,
+  "gif": "videos/1719-gx7s7uF.gif",
+  "img": "images/1719-gx7s7uF.jpg"
+ },
+ "1472": {
+  "ds_id": "0220",
+  "ds_name": "cable shrug",
+  "our_name": "Cable Shrug-In",
+  "score": 0.67,
+  "gif": "videos/0220-Eg98Ft9.gif",
+  "img": "images/0220-Eg98Ft9.jpg"
+ },
+ "1480": {
+  "ds_id": "0061",
+  "ds_name": "barbell lying triceps extension",
+  "our_name": "Lying Triceps Extensions",
+  "score": 0.85,
+  "gif": "videos/0061-iZop9xO.gif",
+  "img": "images/0061-iZop9xO.jpg"
+ },
+ "1484": {
+  "ds_id": "0155",
+  "ds_name": "cable cross-over variation",
+  "our_name": "Omni Cable Cross-over",
+  "score": 0.66,
+  "gif": "videos/0155-0CXGHya.gif",
+  "img": "images/0155-0CXGHya.jpg"
+ },
+ "1486": {
+  "ds_id": "0167",
+  "ds_name": "cable high row (kneeling)",
+  "our_name": "Alternating High Cable Row",
+  "score": 0.66,
+  "gif": "videos/0167-ZSJNetl.gif",
+  "img": "images/0167-ZSJNetl.jpg"
+ },
+ "1488": {
+  "ds_id": "0375",
+  "ds_name": "dumbbell pullover",
+  "our_name": "Dumbbell Pullover",
+  "score": 1.0,
+  "gif": "videos/0375-9XjtHvS.gif",
+  "img": "images/0375-9XjtHvS.jpg"
+ },
+ "1492": {
+  "ds_id": "0581",
+  "ds_name": "lever high row",
+  "our_name": "High Row",
+  "score": 0.8,
+  "gif": "videos/0581-nZZZy9m.gif",
+  "img": "images/0581-nZZZy9m.jpg"
+ },
+ "1502": {
+  "ds_id": "0298",
+  "ds_name": "dumbbell cross body hammer curl",
+  "our_name": "DB Cross Body Hammer Curls",
+  "score": 0.72,
+  "gif": "videos/0298-Qyk5J3p.gif",
+  "img": "images/0298-Qyk5J3p.jpg"
+ },
+ "1504": {
+  "ds_id": "0105",
+  "ds_name": "barbell standing bradford press",
+  "our_name": "Dumbbell Bradford press",
+  "score": 0.78,
+  "gif": "videos/0105-dCPESfR.gif",
+  "img": "images/0105-dCPESfR.jpg"
+ },
+ "1509": {
+  "ds_id": "1728",
+  "ds_name": "cable two arm tricep kickback",
+  "our_name": "Cable Tricep Kickback",
+  "score": 0.76,
+  "gif": "videos/1728-vvNjDJS.gif",
+  "img": "images/1728-vvNjDJS.jpg"
+ },
+ "1513": {
+  "ds_id": "1722",
+  "ds_name": "cable high pulley overhead tricep extension",
+  "our_name": "Overhead Cable Tricep Extension",
+  "score": 0.8,
+  "gif": "videos/1722-1xHyxys.gif",
+  "img": "images/1722-1xHyxys.jpg"
+ },
+ "1516": {
+  "ds_id": "3302",
+  "ds_name": "handstand",
+  "our_name": "Handstand",
+  "score": 1.0,
+  "gif": "videos/3302-XooAdhl.gif",
+  "img": "images/3302-XooAdhl.jpg"
+ },
+ "1519": {
+  "ds_id": "0092",
+  "ds_name": "barbell seated overhead triceps extension",
+  "our_name": "Overhead Triceps Extension",
+  "score": 0.76,
+  "gif": "videos/0092-5uFK1xr.gif",
+  "img": "images/0092-5uFK1xr.jpg"
+ },
+ "1523": {
+  "ds_id": "1700",
+  "ds_name": "dumbbell push press",
+  "our_name": "Sled Push",
+  "score": 0.68,
+  "gif": "videos/1700-FS63wTN.gif",
+  "img": "images/1700-FS63wTN.jpg"
+ },
+ "1525": {
+  "ds_id": "1354",
+  "ds_name": "medicine ball overhead slam",
+  "our_name": "Ball Slams",
+  "score": 0.7,
+  "gif": "videos/1354-oHg8eop.gif",
+  "img": "images/1354-oHg8eop.jpg"
+ },
+ "1526": {
+  "ds_id": "2142",
+  "ds_name": "ski ergometer",
+  "our_name": "Ski Machine",
+  "score": 0.68,
+  "gif": "videos/2142-vpQaQkH.gif",
+  "img": "images/2142-vpQaQkH.jpg"
+ },
+ "1530": {
+  "ds_id": "0350",
+  "ds_name": "dumbbell lying supine curl",
+  "our_name": "Lying Dumbbell Curls",
+  "score": 0.85,
+  "gif": "videos/0350-KUaZst7.gif",
+  "img": "images/0350-KUaZst7.jpg"
+ },
+ "1531": {
+  "ds_id": "0868",
+  "ds_name": "cable curl",
+  "our_name": "Cable Curls",
+  "score": 1.0,
+  "gif": "videos/0868-G08RZcQ.gif",
+  "img": "images/0868-G08RZcQ.jpg"
+ },
+ "1535": {
+  "ds_id": "1634",
+  "ds_name": "cable lying bicep curl",
+  "our_name": "lying bicep curl",
+  "score": 0.85,
+  "gif": "videos/1634-otqIxU4.gif",
+  "img": "images/1634-otqIxU4.jpg"
+ },
+ "1542": {
+  "ds_id": "1429",
+  "ds_name": "wide grip pull-up",
+  "our_name": "Wide Pull Up",
+  "score": 0.85,
+  "gif": "videos/1429-Qqi7bko.gif",
+  "img": "images/1429-Qqi7bko.jpg"
+ },
+ "1545": {
+  "ds_id": "3293",
+  "ds_name": "archer pull up",
+  "our_name": "Archer Pull Up",
+  "score": 1.0,
+  "gif": "videos/3293-72BC5Za.gif",
+  "img": "images/3293-72BC5Za.jpg"
+ },
+ "1551": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Push-Up",
+  "score": 1.0,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "1554": {
+  "ds_id": "1273",
+  "ds_name": "clap push up",
+  "our_name": "Clap Push-UP",
+  "score": 1.0,
+  "gif": "videos/1273-wigSg76.gif",
+  "img": "images/1273-wigSg76.jpg"
+ },
+ "1567": {
+  "ds_id": "0313",
+  "ds_name": "dumbbell hammer curl",
+  "our_name": "Alternating dumbbell hammer curl",
+  "score": 0.75,
+  "gif": "videos/0313-slDvUAU.gif",
+  "img": "images/0313-slDvUAU.jpg"
+ },
+ "1575": {
+  "ds_id": "0426",
+  "ds_name": "dumbbell standing overhead press",
+  "our_name": "Standing Dowel Shoulder press",
+  "score": 0.66,
+  "gif": "videos/0426-A6wtbuL.gif",
+  "img": "images/0426-A6wtbuL.jpg"
+ },
+ "1593": {
+  "ds_id": "2368",
+  "ds_name": "split squats",
+  "our_name": "Smith Machine Split Squat",
+  "score": 0.97,
+  "gif": "videos/2368-9E25EOx.gif",
+  "img": "images/2368-9E25EOx.jpg"
+ },
+ "1594": {
+  "ds_id": "2368",
+  "ds_name": "split squats",
+  "our_name": "Smith Machine Split Squat",
+  "score": 0.97,
+  "gif": "videos/2368-9E25EOx.gif",
+  "img": "images/2368-9E25EOx.jpg"
+ },
+ "1607": {
+  "ds_id": "0652",
+  "ds_name": "pull-up",
+  "our_name": "Typewriter Pull-ups",
+  "score": 0.67,
+  "gif": "videos/0652-lBDjFxJ.gif",
+  "img": "images/0652-lBDjFxJ.jpg"
+ },
+ "1608": {
+  "ds_id": "1769",
+  "ds_name": "bodyweight side lying biceps curl",
+  "our_name": "Bodyweight Biceps Curl",
+  "score": 0.76,
+  "gif": "videos/1769-gscGLOU.gif",
+  "img": "images/1769-gscGLOU.jpg"
+ },
+ "1620": {
+  "ds_id": "1379",
+  "ds_name": "dumbbell seated calf raise",
+  "our_name": "Seated Dumbbell Calf Raise",
+  "score": 1.0,
+  "gif": "videos/1379-r29jP7S.gif",
+  "img": "images/1379-r29jP7S.jpg"
+ },
+ "1627": {
+  "ds_id": "1004",
+  "ds_name": "band squat",
+  "our_name": "Barbell squat",
+  "score": 0.97,
+  "gif": "videos/1004-TUZLh71.gif",
+  "img": "images/1004-TUZLh71.jpg"
+ },
+ "1638": {
+  "ds_id": "0028",
+  "ds_name": "barbell clean and press",
+  "our_name": "Barbell Clean and press",
+  "score": 1.0,
+  "gif": "videos/0028-SGY8Zui.gif",
+  "img": "images/0028-SGY8Zui.jpg"
+ },
+ "1640": {
+  "ds_id": "0024",
+  "ds_name": "barbell bench front squat",
+  "our_name": "Dumbbell Front Squat",
+  "score": 0.78,
+  "gif": "videos/0024-Y7YcmIJ.gif",
+  "img": "images/0024-Y7YcmIJ.jpg"
+ },
+ "1643": {
+  "ds_id": "0319",
+  "ds_name": "dumbbell incline fly",
+  "our_name": "Dumbbell Incline Fly",
+  "score": 1.0,
+  "gif": "videos/0319-ESOd5Pl.gif",
+  "img": "images/0319-ESOd5Pl.jpg"
+ },
+ "1645": {
+  "ds_id": "0406",
+  "ds_name": "dumbbell shrug",
+  "our_name": "Dumbbell Shrug",
+  "score": 1.0,
+  "gif": "videos/0406-NJzBsGJ.gif",
+  "img": "images/0406-NJzBsGJ.jpg"
+ },
+ "1648": {
+  "ds_id": "0832",
+  "ds_name": "weighted crunch",
+  "our_name": "Weighted Crunch",
+  "score": 1.0,
+  "gif": "videos/0832-s8nrDXF.gif",
+  "img": "images/0832-s8nrDXF.jpg"
+ },
+ "1649": {
+  "ds_id": "0976",
+  "ds_name": "band concentration curl",
+  "our_name": "Concentration Curl",
+  "score": 0.8,
+  "gif": "videos/0976-kmVVAfu.gif",
+  "img": "images/0976-kmVVAfu.jpg"
+ },
+ "1650": {
+  "ds_id": "0407",
+  "ds_name": "dumbbell side bend",
+  "our_name": "Dumbbell Side Bend",
+  "score": 1.0,
+  "gif": "videos/0407-IpONWYv.gif",
+  "img": "images/0407-IpONWYv.jpg"
+ },
+ "1651": {
+  "ds_id": "0381",
+  "ds_name": "dumbbell rear lunge",
+  "our_name": "Dumbbell Rear Lunge",
+  "score": 1.0,
+  "gif": "videos/0381-SSsBDwB.gif",
+  "img": "images/0381-SSsBDwB.jpg"
+ },
+ "1652": {
+  "ds_id": "1459",
+  "ds_name": "dumbbell romanian deadlift",
+  "our_name": "Dumbbell Romanian Deadlift",
+  "score": 1.0,
+  "gif": "videos/1459-rR0LJzx.gif",
+  "img": "images/1459-rR0LJzx.jpg"
+ },
+ "1653": {
+  "ds_id": "0098",
+  "ds_name": "barbell side split squat",
+  "our_name": "Dumbbell Side Squat",
+  "score": 0.78,
+  "gif": "videos/0098-W31mMjd.gif",
+  "img": "images/0098-W31mMjd.jpg"
+ },
+ "1655": {
+  "ds_id": "1301",
+  "ds_name": "machine inner chest press",
+  "our_name": "Machine Chest Press Exercise",
+  "score": 0.66,
+  "gif": "videos/1301-wDN97Ca.gif",
+  "img": "images/1301-wDN97Ca.jpg"
+ },
+ "1656": {
+  "ds_id": "1261",
+  "ds_name": "cable decline press",
+  "our_name": "Cable Chest Press - Decline",
+  "score": 0.75,
+  "gif": "videos/1261-2Pya1cP.gif",
+  "img": "images/1261-2Pya1cP.jpg"
+ },
+ "1660": {
+  "ds_id": "0169",
+  "ds_name": "cable incline bench press",
+  "our_name": "Cable Chest Press - Incline",
+  "score": 0.66,
+  "gif": "videos/0169-Vh0GsK4.gif",
+  "img": "images/0169-Vh0GsK4.jpg"
+ },
+ "1661": {
+  "ds_id": "0816",
+  "ds_name": "triceps press",
+  "our_name": "Cable Triceps Press",
+  "score": 0.67,
+  "gif": "videos/0816-fSrPP6B.gif",
+  "img": "images/0816-fSrPP6B.jpg"
+ },
+ "1668": {
+  "ds_id": "1727",
+  "ds_name": "cable standing reverse grip one arm overhead tricep extension",
+  "our_name": "One Arm Overhead Cable Tricep Extension",
+  "score": 0.8,
+  "gif": "videos/1727-i11JWU7.gif",
+  "img": "images/1727-i11JWU7.jpg"
+ },
+ "1672": {
+  "ds_id": "0597",
+  "ds_name": "lever seated hip abduction",
+  "our_name": "Seated Hip Abduction",
+  "score": 0.85,
+  "gif": "videos/0597-CHpahtl.gif",
+  "img": "images/0597-CHpahtl.jpg"
+ },
+ "1674": {
+  "ds_id": "0065",
+  "ds_name": "barbell one arm floor press",
+  "our_name": "Dumbbell Floor Press",
+  "score": 0.68,
+  "gif": "videos/0065-vtusOWT.gif",
+  "img": "images/0065-vtusOWT.jpg"
+ },
+ "1675": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Push-Ups",
+  "score": 1.0,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "1676": {
+  "ds_id": "0289",
+  "ds_name": "dumbbell bench press",
+  "our_name": "Dumbbell Bench Press",
+  "score": 1.0,
+  "gif": "videos/0289-SpYC0Kp.gif",
+  "img": "images/0289-SpYC0Kp.jpg"
+ },
+ "1683": {
+  "ds_id": "0439",
+  "ds_name": "dumbbell zottman curl",
+  "our_name": "Zottman curl",
+  "score": 0.8,
+  "gif": "videos/0439-kXaIn5A.gif",
+  "img": "images/0439-kXaIn5A.jpg"
+ },
+ "1684": {
+  "ds_id": "3305",
+  "ds_name": "barbell thruster",
+  "our_name": "Dumbbell Thruster",
+  "score": 0.97,
+  "gif": "videos/3305-f7Y9eDZ.gif",
+  "img": "images/3305-f7Y9eDZ.jpg"
+ },
+ "1689": {
+  "ds_id": "0188",
+  "ds_name": "cable middle fly",
+  "our_name": "Cable Fly Middle Chest",
+  "score": 0.75,
+  "gif": "videos/0188-xLYSdtg.gif",
+  "img": "images/0188-xLYSdtg.jpg"
+ },
+ "1690": {
+  "ds_id": "1270",
+  "ds_name": "cable upper chest crossovers",
+  "our_name": "Cable Fly Upper Chest",
+  "score": 0.66,
+  "gif": "videos/1270-j7XMAyn.gif",
+  "img": "images/1270-j7XMAyn.jpg"
+ },
+ "1692": {
+  "ds_id": "0757",
+  "ds_name": "smith incline bench press",
+  "our_name": "Incline Smith Press",
+  "score": 0.85,
+  "gif": "videos/0757-5v7KYld.gif",
+  "img": "images/0757-5v7KYld.jpg"
+ },
+ "1695": {
+  "ds_id": "1429",
+  "ds_name": "wide grip pull-up",
+  "our_name": "Pull-Ups (Wide Grip)",
+  "score": 1.0,
+  "gif": "videos/1429-Qqi7bko.gif",
+  "img": "images/1429-Qqi7bko.jpg"
+ },
+ "1696": {
+  "ds_id": "0651",
+  "ds_name": "pull up (neutral grip)",
+  "our_name": "Pull-Ups (Neutral Grip)",
+  "score": 1.0,
+  "gif": "videos/0651-0V2YQjW.gif",
+  "img": "images/0651-0V2YQjW.jpg"
+ },
+ "1700": {
+  "ds_id": "0085",
+  "ds_name": "barbell romanian deadlift",
+  "our_name": "Barbell Romanian Deadlift (RDL)",
+  "score": 0.75,
+  "gif": "videos/0085-wQ2c4XD.gif",
+  "img": "images/0085-wQ2c4XD.jpg"
+ },
+ "1701": {
+  "ds_id": "0541",
+  "ds_name": "kettlebell one arm row",
+  "our_name": "One-Arm Heavy Row",
+  "score": 0.66,
+  "gif": "videos/0541-g9AsZ8P.gif",
+  "img": "images/0541-g9AsZ8P.jpg"
+ },
+ "1709": {
+  "ds_id": "0225",
+  "ds_name": "cable standing cross-over high reverse fly",
+  "our_name": "Reverse Fly Standing",
+  "score": 0.66,
+  "gif": "videos/0225-P5p0j8B.gif",
+  "img": "images/0225-P5p0j8B.jpg"
+ },
+ "1715": {
+  "ds_id": "0863",
+  "ds_name": "dumbbell lying external shoulder rotation",
+  "our_name": "Shoulder External Rotation with Dumbbell",
+  "score": 0.72,
+  "gif": "videos/0863-bmBf7LN.gif",
+  "img": "images/0863-bmBf7LN.jpg"
+ },
+ "1725": {
+  "ds_id": "0180",
+  "ds_name": "cable low seated row",
+  "our_name": "Seated Row (Machine)",
+  "score": 0.78,
+  "gif": "videos/0180-hvV79Si.gif",
+  "img": "images/0180-hvV79Si.jpg"
+ },
+ "1726": {
+  "ds_id": "0238",
+  "ds_name": "cable straight arm pulldown",
+  "our_name": "Straight-Arm Pulldown (Cable)",
+  "score": 1.0,
+  "gif": "videos/0238-x69MAlq.gif",
+  "img": "images/0238-x69MAlq.jpg"
+ },
+ "1727": {
+  "ds_id": "0238",
+  "ds_name": "cable straight arm pulldown",
+  "our_name": "Side Straight-Arm Pulldown (Cable)",
+  "score": 0.8,
+  "gif": "videos/0238-x69MAlq.gif",
+  "img": "images/0238-x69MAlq.jpg"
+ },
+ "1728": {
+  "ds_id": "0216",
+  "ds_name": "cable seated shoulder internal rotation",
+  "our_name": "Shoulder Internal Rotation (Cable)",
+  "score": 0.88,
+  "gif": "videos/0216-YPoVrBi.gif",
+  "img": "images/0216-YPoVrBi.jpg"
+ },
+ "1729": {
+  "ds_id": "0235",
+  "ds_name": "cable standing shoulder external rotation",
+  "our_name": "Shoulder External Rotation (Cable)",
+  "score": 0.88,
+  "gif": "videos/0235-FWdVhcW.gif",
+  "img": "images/0235-FWdVhcW.jpg"
+ },
+ "1730": {
+  "ds_id": "0178",
+  "ds_name": "cable lateral raise",
+  "our_name": "Side Lateral Raise (Cable)",
+  "score": 0.75,
+  "gif": "videos/0178-goJ6ezq.gif",
+  "img": "images/0178-goJ6ezq.jpg"
+ },
+ "1731": {
+  "ds_id": "0162",
+  "ds_name": "cable front raise",
+  "our_name": "Front Raise (Cable)",
+  "score": 1.0,
+  "gif": "videos/0162-u2X71Np.gif",
+  "img": "images/0162-u2X71Np.jpg"
+ },
+ "1736": {
+  "ds_id": "2805",
+  "ds_name": "dumbbell single leg deadlift with stepbox support",
+  "our_name": "Single-Leg Deadlift with Dumbbell",
+  "score": 0.83,
+  "gif": "videos/2805-daBmy1Y.gif",
+  "img": "images/2805-daBmy1Y.jpg"
+ },
+ "1737": {
+  "ds_id": "1431",
+  "ds_name": "assisted standing chin-up",
+  "our_name": "Assisted chin-ups",
+  "score": 0.85,
+  "gif": "videos/1431-7OeHptV.gif",
+  "img": "images/1431-7OeHptV.jpg"
+ },
+ "1741": {
+  "ds_id": "3418",
+  "ds_name": "l-pull-up",
+  "our_name": "L-Sit Pull-ups",
+  "score": 0.75,
+  "gif": "videos/3418-d1GgzTU.gif",
+  "img": "images/3418-d1GgzTU.jpg"
+ },
+ "1742": {
+  "ds_id": "3297",
+  "ds_name": "back lever",
+  "our_name": "Back Lever",
+  "score": 1.0,
+  "gif": "videos/3297-GaSzzuh.gif",
+  "img": "images/3297-GaSzzuh.jpg"
+ },
+ "1744": {
+  "ds_id": "0178",
+  "ds_name": "cable lateral raise",
+  "our_name": "Machine Side Lateral Raises",
+  "score": 0.65,
+  "gif": "videos/0178-goJ6ezq.gif",
+  "img": "images/0178-goJ6ezq.jpg"
+ },
+ "1746": {
+  "ds_id": "0289",
+  "ds_name": "dumbbell bench press",
+  "our_name": "Floor dumbbell bench press",
+  "score": 0.75,
+  "gif": "videos/0289-SpYC0Kp.gif",
+  "img": "images/0289-SpYC0Kp.jpg"
+ },
+ "1747": {
+  "ds_id": "1004",
+  "ds_name": "band squat",
+  "our_name": "Smith machine squat",
+  "score": 0.97,
+  "gif": "videos/1004-TUZLh71.gif",
+  "img": "images/1004-TUZLh71.jpg"
+ },
+ "1748": {
+  "ds_id": "0597",
+  "ds_name": "lever seated hip abduction",
+  "our_name": "Machine Hip Abduction",
+  "score": 0.68,
+  "gif": "videos/0597-CHpahtl.gif",
+  "img": "images/0597-CHpahtl.jpg"
+ },
+ "1749": {
+  "ds_id": "0816",
+  "ds_name": "triceps press",
+  "our_name": "Seated Triceps Press",
+  "score": 0.67,
+  "gif": "videos/0816-fSrPP6B.gif",
+  "img": "images/0816-fSrPP6B.jpg"
+ },
+ "1750": {
+  "ds_id": "0085",
+  "ds_name": "barbell romanian deadlift",
+  "our_name": "Romanian Deadlift",
+  "score": 0.8,
+  "gif": "videos/0085-wQ2c4XD.gif",
+  "img": "images/0085-wQ2c4XD.jpg"
+ },
+ "1751": {
+  "ds_id": "2808",
+  "ds_name": "dumbbell sumo pull through",
+  "our_name": "Cable pull through",
+  "score": 0.78,
+  "gif": "videos/2808-BmrwWzo.gif",
+  "img": "images/2808-BmrwWzo.jpg"
+ },
+ "1752": {
+  "ds_id": "0977",
+  "ds_name": "band front lateral raise",
+  "our_name": "Side lateral raise - Front (Cable)",
+  "score": 0.73,
+  "gif": "videos/0977-sTg7iys.gif",
+  "img": "images/0977-sTg7iys.jpg"
+ },
+ "1765": {
+  "ds_id": "1429",
+  "ds_name": "wide grip pull-up",
+  "our_name": "Pull-Ups (Wide Grip)",
+  "score": 1.0,
+  "gif": "videos/1429-Qqi7bko.gif",
+  "img": "images/1429-Qqi7bko.jpg"
+ },
+ "1770": {
+  "ds_id": "0180",
+  "ds_name": "cable low seated row",
+  "our_name": "Seated machine row",
+  "score": 0.78,
+  "gif": "videos/0180-hvV79Si.gif",
+  "img": "images/0180-hvV79Si.jpg"
+ },
+ "1771": {
+  "ds_id": "0247",
+  "ds_name": "cable wrist curl",
+  "our_name": "Wrist curl, cable",
+  "score": 1.0,
+  "gif": "videos/0247-LrV4s90.gif",
+  "img": "images/0247-LrV4s90.jpg"
+ },
+ "1772": {
+  "ds_id": "0872",
+  "ds_name": "reverse crunch",
+  "our_name": "Reverse crunch",
+  "score": 1.0,
+  "gif": "videos/0872-nCU1Ekp.gif",
+  "img": "images/0872-nCU1Ekp.jpg"
+ },
+ "1773": {
+  "ds_id": "0047",
+  "ds_name": "barbell incline bench press",
+  "our_name": "Legend Incline Bench Press",
+  "score": 0.66,
+  "gif": "videos/0047-3TZduzM.gif",
+  "img": "images/0047-3TZduzM.jpg"
+ },
+ "1777": {
+  "ds_id": "0662",
+  "ds_name": "push-up",
+  "our_name": "Deficit Push ups",
+  "score": 0.67,
+  "gif": "videos/0662-I4hDWkc.gif",
+  "img": "images/0662-I4hDWkc.jpg"
+ },
+ "1801": {
+  "ds_id": "0043",
+  "ds_name": "barbell full squat",
+  "our_name": "Barbell Full Squat",
+  "score": 1.0,
+  "gif": "videos/0043-qXTaZnJ.gif",
+  "img": "images/0043-qXTaZnJ.jpg"
+ },
+ "1805": {
+  "ds_id": "1004",
+  "ds_name": "band squat",
+  "our_name": "Barbell Squat",
+  "score": 0.97,
+  "gif": "videos/1004-TUZLh71.gif",
+  "img": "images/1004-TUZLh71.jpg"
+ },
+ "1809": {
+  "ds_id": "0593",
+  "ds_name": "lever reverse hyperextension",
+  "our_name": "Reverse Hyperextension",
+  "score": 0.8,
+  "gif": "videos/0593-Krmb3cB.gif",
+  "img": "images/0593-Krmb3cB.jpg"
+ },
+ "1810": {
+  "ds_id": "1362",
+  "ds_name": "sphinx",
+  "our_name": "Sphinx",
+  "score": 1.0,
+  "gif": "videos/1362-DIVyqrU.gif",
+  "img": "images/1362-DIVyqrU.jpg"
+ },
+ "1831": {
+  "ds_id": "1300",
+  "ds_name": "lever decline chest press",
+  "our_name": "Hammerstrength Decline Chest Press",
+  "score": 0.66,
+  "gif": "videos/1300-vsVoPHt.gif",
+  "img": "images/1300-vsVoPHt.jpg"
+ },
+ "1840": {
+  "ds_id": "1576",
+  "ds_name": "leg up hamstring stretch",
+  "our_name": "Bent-Leg Hamstring Stretch",
+  "score": 0.66,
+  "gif": "videos/1576-sU5BrfP.gif",
+  "img": "images/1576-sU5BrfP.jpg"
+ },
+ "1844": {
+  "ds_id": "2571",
+  "ds_name": "rocking frog stretch",
+  "our_name": "Frog Stretch",
+  "score": 0.8,
+  "gif": "videos/2571-2Dk4xQV.gif",
+  "img": "images/2571-2Dk4xQV.jpg"
+ },
+ "1845": {
+  "ds_id": "0090",
+  "ds_name": "barbell seated good morning",
+  "our_name": "Seated Pancake Good Morning",
+  "score": 0.66,
+  "gif": "videos/0090-d960PgE.gif",
+  "img": "images/0090-d960PgE.jpg"
+ },
+ "1852": {
+  "ds_id": "3419",
+  "ds_name": "l-sit on floor",
+  "our_name": "L-sit",
+  "score": 0.7,
+  "gif": "videos/3419-UpWmA5E.gif",
+  "img": "images/3419-UpWmA5E.jpg"
+ },
+ "1861": {
+  "ds_id": "1403",
+  "ds_name": "neck side stretch",
+  "our_name": "Side stretch",
+  "score": 0.8,
+  "gif": "videos/1403-x2chWLO.gif",
+  "img": "images/1403-x2chWLO.jpg"
+ },
+ "1867": {
+  "ds_id": "1559",
+  "ds_name": "exercise ball hip flexor stretch",
+  "our_name": "Hip Flexor Stretch",
+  "score": 0.76,
+  "gif": "videos/1559-2LQkNPW.gif",
+  "img": "images/1559-2LQkNPW.jpg"
+ },
+ "1868": {
+  "ds_id": "1688",
+  "ds_name": "lunge with twist",
+  "our_name": "Lunge with Twist Stretch",
+  "score": 0.75,
+  "gif": "videos/1688-K9VL0Jq.gif",
+  "img": "images/1688-K9VL0Jq.jpg"
+ },
+ "1873": {
+  "ds_id": "0613",
+  "ds_name": "lying (side) quads stretch",
+  "our_name": "Quad Stretch",
+  "score": 0.7,
+  "gif": "videos/0613-BWnJR72.gif",
+  "img": "images/0613-BWnJR72.jpg"
+ },
+ "1874": {
+  "ds_id": "1585",
+  "ds_name": "runners stretch",
+  "our_name": "Runners Lunge Stretch",
+  "score": 0.67,
+  "gif": "videos/1585-0mB6wHO.gif",
+  "img": "images/1585-0mB6wHO.jpg"
+ },
+ "1879": {
+  "ds_id": "3541",
+  "ds_name": "dumbbell incline y-raise",
+  "our_name": "Incline DB Y-Raise",
+  "score": 0.66,
+  "gif": "videos/3541-PbzNu7c.gif",
+  "img": "images/3541-PbzNu7c.jpg"
+ },
+ "1880": {
+  "ds_id": "1429",
+  "ds_name": "wide grip pull-up",
+  "our_name": "Wide Grip Pull Up",
+  "score": 1.0,
+  "gif": "videos/1429-Qqi7bko.gif",
+  "img": "images/1429-Qqi7bko.jpg"
+ },
+ "1882": {
+  "ds_id": "0178",
+  "ds_name": "cable lateral raise",
+  "our_name": "High-Cable Lateral Raise",
+  "score": 0.75,
+  "gif": "videos/0178-goJ6ezq.gif",
+  "img": "images/0178-goJ6ezq.jpg"
+ },
+ "1883": {
+  "ds_id": "1301",
+  "ds_name": "machine inner chest press",
+  "our_name": "Machine Chest Press",
+  "score": 0.85,
+  "gif": "videos/1301-wDN97Ca.gif",
+  "img": "images/1301-wDN97Ca.jpg"
+ },
+ "1893": {
+  "ds_id": "0091",
+  "ds_name": "barbell seated overhead press",
+  "our_name": "Overhead Barbell Press",
+  "score": 0.85,
+  "gif": "videos/0091-kTbSH9h.gif",
+  "img": "images/0091-kTbSH9h.jpg"
+ },
+ "1897": {
+  "ds_id": "0030",
+  "ds_name": "barbell close-grip bench press",
+  "our_name": "Close-Grip Bench Press",
+  "score": 0.88,
+  "gif": "videos/0030-J6Dx1Mu.gif",
+  "img": "images/0030-J6Dx1Mu.jpg"
+ },
+ "1901": {
+  "ds_id": "0028",
+  "ds_name": "barbell clean and press",
+  "our_name": "Clean and Press",
+  "score": 0.85,
+  "gif": "videos/0028-SGY8Zui.gif",
+  "img": "images/0028-SGY8Zui.jpg"
+ },
+ "1902": {
+  "ds_id": "1310",
+  "ds_name": "weighted drop push up",
+  "our_name": "Weighted push-ups",
+  "score": 0.85,
+  "gif": "videos/1310-PSlvNMs.gif",
+  "img": "images/1310-PSlvNMs.jpg"
+ },
+ "1903": {
+  "ds_id": "1460",
+  "ds_name": "walking lunge",
+  "our_name": "Walking Lunges",
+  "score": 1.0,
+  "gif": "videos/1460-IZVHb27.gif",
+  "img": "images/1460-IZVHb27.jpg"
+ },
+ "1906": {
+  "ds_id": "1774",
+  "ds_name": "side bridge hip abduction",
+  "our_name": "Hip Bridge",
+  "score": 0.7,
+  "gif": "videos/1774-WL4EmxJ.gif",
+  "img": "images/1774-WL4EmxJ.jpg"
+ },
+ "1922": {
+  "ds_id": "2144",
+  "ds_name": "cable seated chest press",
+  "our_name": "Seated Cable chest fly",
+  "score": 0.66,
+  "gif": "videos/2144-nIR4Rwl.gif",
+  "img": "images/2144-nIR4Rwl.jpg"
+ },
+ "1925": {
+  "ds_id": "0095",
+  "ds_name": "barbell shrug",
+  "our_name": "Barbell Silverback Shrug",
+  "score": 0.67,
+  "gif": "videos/0095-dG7tG5y.gif",
+  "img": "images/0095-dG7tG5y.jpg"
+ },
+ "1929": {
+  "ds_id": "0017",
+  "ds_name": "assisted pull-up",
+  "our_name": "Assisted Pull-Up",
+  "score": 1.0,
+  "gif": "videos/0017-kiJ4Z2K.gif",
+  "img": "images/0017-kiJ4Z2K.jpg"
+ },
+ "1931": {
+  "ds_id": "0031",
+  "ds_name": "barbell curl",
+  "our_name": "Dumbbell Curl",
+  "score": 0.97,
+  "gif": "videos/0031-25GPyDY.gif",
+  "img": "images/0031-25GPyDY.jpg"
+ },
+ "1932": {
+  "ds_id": "0313",
+  "ds_name": "dumbbell hammer curl",
+  "our_name": "Hammer Curl",
+  "score": 0.8,
+  "gif": "videos/0313-slDvUAU.gif",
+  "img": "images/0313-slDvUAU.jpg"
+ },
+ "18878": {
+  "ds_id": "1770",
+  "ds_name": "biceps leg concentration curl",
+  "our_name": "Ball Leg Curl",
+  "score": 0.68,
+  "gif": "videos/1770-sJFIDIp.gif",
+  "img": "images/1770-sJFIDIp.jpg"
+ },
+ "20823": {
+  "ds_id": "1646",
+  "ds_name": "dumbbell alternate hammer preacher curl",
+  "our_name": "Alternate Hammer Curl",
+  "score": 0.76,
+  "gif": "videos/1646-fy7Tgy4.gif",
+  "img": "images/1646-fy7Tgy4.jpg"
+ },
+ "22006": {
+  "ds_id": "0219",
+  "ds_name": "cable shoulder press",
+  "our_name": "Alternating Cable Shoulder Press",
+  "score": 0.75,
+  "gif": "videos/0219-PzQanLE.gif",
+  "img": "images/0219-PzQanLE.jpg"
+ },
+ "31349": {
+  "ds_id": "1512",
+  "ds_name": "all fours squad stretch",
+  "our_name": "All Fours Quad Stretch",
+  "score": 0.66,
+  "gif": "videos/1512-qBcKorM.gif",
+  "img": "images/1512-qBcKorM.jpg"
+ },
+ "31391": {
+  "ds_id": "0970",
+  "ds_name": "band assisted pull-up",
+  "our_name": "Band Assisted Pull-Up",
+  "score": 1.0,
+  "gif": "videos/0970-r1XNRYB.gif",
+  "img": "images/0970-r1XNRYB.jpg"
+ },
+ "45190": {
+  "ds_id": "0006",
+  "ds_name": "alternate heel touchers",
+  "our_name": "Alternate Heel Touchers",
+  "score": 1.0,
+  "gif": "videos/0006-qaZVsGk.gif",
+  "img": "images/0006-qaZVsGk.jpg"
+ },
+ "51800": {
+  "ds_id": "0598",
+  "ds_name": "lever seated hip adduction",
+  "our_name": "Band Hip Adductions",
+  "score": 0.68,
+  "gif": "videos/0598-oHsrypV.gif",
+  "img": "images/0598-oHsrypV.jpg"
+ },
+ "57375": {
+  "ds_id": "0520",
+  "ds_name": "kettlebell alternating press",
+  "our_name": "Alternating Kettlebell Press",
+  "score": 1.0,
+  "gif": "videos/0520-5KLbZWx.gif",
+  "img": "images/0520-5KLbZWx.jpg"
+ },
+ "60688": {
+  "ds_id": "0020",
+  "ds_name": "balance board",
+  "our_name": "Balance Board",
+  "score": 1.0,
+  "gif": "videos/0020-xAySMB0.gif",
+  "img": "images/0020-xAySMB0.jpg"
+ },
+ "68078": {
+  "ds_id": "0518",
+  "ds_name": "kettlebell alternating hang clean",
+  "our_name": "Alternating Hang Clean",
+  "score": 0.85,
+  "gif": "videos/0518-I4tibZG.gif",
+  "img": "images/0518-I4tibZG.jpg"
+ },
+ "68079": {
+  "ds_id": "0060",
+  "ds_name": "barbell lying triceps extension skull crusher",
+  "our_name": "Band Skull Crusher",
+  "score": 0.62,
+  "gif": "videos/0060-h8LFzo9.gif",
+  "img": "images/0060-h8LFzo9.jpg"
+ },
+ "68125": {
+  "ds_id": "0318",
+  "ds_name": "dumbbell incline curl",
+  "our_name": "Alternate Incline Dumbbell Curl",
+  "score": 0.75,
+  "gif": "videos/0318-ae9UoXQ.gif",
+  "img": "images/0318-ae9UoXQ.jpg"
+ },
+ "73858": {
+  "ds_id": "0521",
+  "ds_name": "kettlebell alternating renegade row",
+  "our_name": "Alternating Renegade Row",
+  "score": 0.85,
+  "gif": "videos/0521-b9kqlBy.gif",
+  "img": "images/0521-b9kqlBy.jpg"
+ },
+ "74804": {
+  "ds_id": "0001",
+  "ds_name": "3/4 sit-up",
+  "our_name": "3/4 Sit-Up",
+  "score": 1.0,
+  "gif": "videos/0001-2gPfomN.gif",
+  "img": "images/0001-2gPfomN.jpg"
+ },
+ "81633": {
+  "ds_id": "1368",
+  "ds_name": "ankle circles",
+  "our_name": "Ankle Circles",
+  "score": 1.0,
+  "gif": "videos/1368-uL9CsKm.gif",
+  "img": "images/1368-uL9CsKm.jpg"
+ },
+ "81710": {
+  "ds_id": "0519",
+  "ds_name": "kettlebell alternating press on floor",
+  "our_name": "Alternating Floor Press",
+  "score": 0.76,
+  "gif": "videos/0519-7w6i0vE.gif",
+  "img": "images/0519-7w6i0vE.jpg"
+ },
+ "83047": {
+  "ds_id": "0522",
+  "ds_name": "kettlebell alternating row",
+  "our_name": "Alternating Kettlebell Row",
+  "score": 1.0,
+  "gif": "videos/0522-Ca76jUE.gif",
+  "img": "images/0522-Ca76jUE.jpg"
+ },
+ "88045": {
+  "ds_id": "0517",
+  "ds_name": "kettlebell advanced windmill",
+  "our_name": "Advanced Kettlebell Windmill",
+  "score": 1.0,
+  "gif": "videos/0517-Kal9cQQ.gif",
+  "img": "images/0517-Kal9cQQ.jpg"
+ },
+ "89008": {
+  "ds_id": "2137",
+  "ds_name": "dumbbell arnold press",
+  "our_name": "Arnold Dumbbell Press",
+  "score": 1.0,
+  "gif": "videos/2137-Xy4jlWA.gif",
+  "img": "images/2137-Xy4jlWA.jpg"
+ },
+ "89247": {
+  "ds_id": "0090",
+  "ds_name": "barbell seated good morning",
+  "our_name": "Band Good Morning",
+  "score": 0.78,
+  "gif": "videos/0090-d960PgE.gif",
+  "img": "images/0090-d960PgE.jpg"
+ },
+ "97493": {
+  "ds_id": "0445",
+  "ds_name": "ez barbell anti gravity press",
+  "our_name": "Anti-Gravity Press",
+  "score": 0.76,
+  "gif": "videos/0445-fprd84i.gif",
+  "img": "images/0445-fprd84i.jpg"
+ },
+ "99952": {
+  "ds_id": "0003",
+  "ds_name": "air bike",
+  "our_name": "Air Bike",
+  "score": 1.0,
+  "gif": "videos/0003-1ZFqTDN.gif",
+  "img": "images/0003-1ZFqTDN.jpg"
+ }
+}
