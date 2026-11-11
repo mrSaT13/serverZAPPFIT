@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { storeToRefs } from 'pinia'
-import { Monitor, Trash2 } from '@lucide/vue'
+import { ChevronDown, Monitor, Trash2 } from '@lucide/vue'
 
 import type { SecuritySession } from '@/features/security/types'
 
@@ -32,6 +32,8 @@ const { sessionId } = storeToRefs(useAuthStore())
 
 const { data, isPending, isError, refetch } = useSessionsQuery()
 const sessions = computed(() => data.value ?? [])
+
+const expanded = ref(false)
 
 const revokeMutation = useRevokeSessionMutation()
 const isConfirmOpen = ref(false)
@@ -95,76 +97,95 @@ function confirmRevokeOthers(): void {
 
 <template>
   <Card class="flex flex-col gap-3">
-    <div class="flex flex-wrap items-start justify-between gap-2">
-      <div class="flex flex-col gap-1">
-        <h2 class="text-card-heading">{{ t('settings.security.sessions.title') }}</h2>
+    <button
+      type="button"
+      class="flex w-full flex-wrap items-start justify-between gap-2 text-left"
+      :aria-expanded="expanded"
+      @click="expanded = !expanded"
+    >
+      <div class="flex min-w-0 flex-col gap-1">
+        <h2 class="text-card-heading flex items-center gap-2">
+          {{ t('settings.security.sessions.title') }}
+          <Badge v-if="sessions.length > 0" variant="secondary" class="shrink-0">
+            {{ sessions.length }}
+          </Badge>
+        </h2>
         <p class="text-hint">{{ t('settings.security.sessions.subtitle') }}</p>
       </div>
-      <Button
-        v-if="otherSessionsCount > 0"
-        variant="outline"
-        size="sm"
-        @click="isRevokeOthersOpen = true"
-      >
-        {{ t('settings.security.sessions.revokeOthers') }}
-      </Button>
-    </div>
-
-    <!-- Loading -->
-    <div v-if="isPending" class="flex flex-col gap-2" aria-busy="true">
-      <Skeleton v-for="n in 2" :key="n" class="h-14 w-full rounded-input" />
-    </div>
-
-    <!-- Error -->
-    <div v-else-if="isError" class="flex flex-col items-start gap-2">
-      <p class="text-hint">{{ t('settings.security.sessions.error') }}</p>
-      <Button variant="outline" size="sm" @click="() => refetch()">
-        {{ t('settings.security.retry') }}
-      </Button>
-    </div>
-
-    <!-- Empty -->
-    <p v-else-if="sessions.length === 0" class="text-hint">
-      {{ t('settings.security.sessions.empty') }}
-    </p>
-
-    <!-- List -->
-    <ul v-else class="divide-y divide-border overflow-hidden rounded-card border border-border">
-      <li
-        v-for="session in sessions"
-        :key="session.id"
-        class="flex items-center justify-between gap-3 px-4 py-3"
-      >
-        <div class="flex min-w-0 items-center gap-3">
-          <Monitor class="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
-          <div class="min-w-0">
-            <div class="flex min-w-0 items-center gap-2">
-              <p class="text-body">{{ sessionLabel(session) }}</p>
-              <Badge v-if="isCurrent(session)" variant="secondary" class="shrink-0">
-                {{ t('settings.security.sessions.current') }}
-              </Badge>
-            </div>
-            <p class="text-hint">
-              {{ session.ipAddress }} ·
-              {{
-                t('settings.security.sessions.lastActive', {
-                  date: formatDate(session.lastActivityAt),
-                })
-              }}
-            </p>
-          </div>
-        </div>
+      <div class="flex shrink-0 items-center gap-2">
         <Button
-          variant="ghostDestructive"
-          size="icon-sm"
-          :disabled="isCurrent(session)"
-          :aria-label="t('settings.security.sessions.revoke')"
-          @click="openRevoke(session)"
+          v-if="expanded && otherSessionsCount > 0"
+          variant="outline"
+          size="sm"
+          @click.stop="isRevokeOthersOpen = true"
         >
-          <Trash2 class="size-4" aria-hidden="true" />
+          {{ t('settings.security.sessions.revokeOthers') }}
         </Button>
-      </li>
-    </ul>
+        <ChevronDown
+          class="size-5 shrink-0 text-muted-foreground transition-transform"
+          :class="{ 'rotate-180': expanded }"
+          aria-hidden="true"
+        />
+      </div>
+    </button>
+
+    <template v-if="expanded">
+      <!-- Loading -->
+      <div v-if="isPending" class="flex flex-col gap-2" aria-busy="true">
+        <Skeleton v-for="n in 2" :key="n" class="h-14 w-full rounded-input" />
+      </div>
+
+      <!-- Error -->
+      <div v-else-if="isError" class="flex flex-col items-start gap-2">
+        <p class="text-hint">{{ t('settings.security.sessions.error') }}</p>
+        <Button variant="outline" size="sm" @click="() => refetch()">
+          {{ t('settings.security.retry') }}
+        </Button>
+      </div>
+
+      <!-- Empty -->
+      <p v-else-if="sessions.length === 0" class="text-hint">
+        {{ t('settings.security.sessions.empty') }}
+      </p>
+
+      <!-- List -->
+      <ul v-else class="divide-y divide-border overflow-hidden rounded-card border border-border">
+        <li
+          v-for="session in sessions"
+          :key="session.id"
+          class="flex items-center justify-between gap-3 px-4 py-3"
+        >
+          <div class="flex min-w-0 items-center gap-3">
+            <Monitor class="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+            <div class="min-w-0">
+              <div class="flex min-w-0 items-center gap-2">
+                <p class="text-body">{{ sessionLabel(session) }}</p>
+                <Badge v-if="isCurrent(session)" variant="secondary" class="shrink-0">
+                  {{ t('settings.security.sessions.current') }}
+                </Badge>
+              </div>
+              <p class="text-hint">
+                {{ session.ipAddress }} ·
+                {{
+                  t('settings.security.sessions.lastActive', {
+                    date: formatDate(session.lastActivityAt),
+                  })
+                }}
+              </p>
+            </div>
+          </div>
+          <Button
+            variant="ghostDestructive"
+            size="icon-sm"
+            :disabled="isCurrent(session)"
+            :aria-label="t('settings.security.sessions.revoke')"
+            @click="openRevoke(session)"
+          >
+            <Trash2 class="size-4" aria-hidden="true" />
+          </Button>
+        </li>
+      </ul>
+    </template>
 
     <ConfirmDialog
       v-model:open="isConfirmOpen"
