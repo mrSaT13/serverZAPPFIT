@@ -125,6 +125,7 @@ class Settings(BaseSettings):
     ACTIVITY_MEDIA_DIR: str = ""
     ACTIVITY_THUMBNAILS_DIR: str = ""
     GEAR_IMAGES_DIR: str = ""
+    EXERCISE_MEDIA_DIR: str = ""
 
     # --- Rate limiting ---
     RATE_LIMIT_ENABLED: bool = True
@@ -427,6 +428,8 @@ class Settings(BaseSettings):
             self.ACTIVITY_THUMBNAILS_DIR = f"{self.DATA_DIR}/activity_thumbnails"
         if not self.GEAR_IMAGES_DIR:
             self.GEAR_IMAGES_DIR = f"{self.DATA_DIR}/gear_images"
+        if not self.EXERCISE_MEDIA_DIR:
+            self.EXERCISE_MEDIA_DIR = f"{self.DATA_DIR}/exercise_media"
         if not self.TRUSTED_PROXIES and self.ENVIRONMENT == "development" and "TRUSTED_PROXIES" not in os.environ:
             self.TRUSTED_PROXIES = ["*"]
         # ZAPFIT rebranding: prefer ZAPFIT_HOST, fall back to the legacy
@@ -759,6 +762,7 @@ def check_required_dirs():
         settings.ACTIVITY_MEDIA_DIR,
         settings.ACTIVITY_THUMBNAILS_DIR,
         settings.GEAR_IMAGES_DIR,
+        settings.EXERCISE_MEDIA_DIR,
         settings.FILES_DIR,
         FILES_PROCESSED_DIR,
         FILES_BULK_IMPORT_DIR,

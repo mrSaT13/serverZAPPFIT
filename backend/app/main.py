@@ -567,6 +567,13 @@ def create_app() -> FastAPI:
         StaticFiles(directory=core_config.settings.GEAR_IMAGES_DIR),
         name="gear_images",
     )
+    # Exercise media (GIF animations / thumbnails), one file per wger id:
+    # /exercise_media/{wger_id}.gif — filled by the dataset import script.
+    fastapi_app.mount(
+        "/exercise_media",
+        StaticFiles(directory=core_config.settings.EXERCISE_MEDIA_DIR),
+        name="exercise_media",
+    )
 
     # Router files
     fastapi_app.include_router(api_router)
