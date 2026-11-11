@@ -53,6 +53,27 @@ class WorkoutPlanRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class WorkoutScheduleEntryIn(BaseModel):
+    """One planned workout date (from the mobile app's plan_schedule)."""
+
+    plan_id: StrictInt | None = None
+    plan_name: StrictStr | None = Field(default=None, max_length=250)
+    date: date
+    time: StrictStr | None = Field(default=None, max_length=5)
+    reminder_minutes: StrictInt | None = Field(default=None, ge=0)
+    completed: bool = False
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class WorkoutScheduleRead(WorkoutScheduleEntryIn):
+    id: StrictInt
+    user_id: StrictInt
+    created_at: datetime | None = None
+
+    model_config = ConfigDict(from_attributes=True)
+
+
 class WorkoutSetLogIn(BaseModel):
     exercise_name: StrictStr = Field(..., max_length=250)
     wger_exercise_id: StrictInt | None = None

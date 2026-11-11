@@ -75,6 +75,43 @@ async def create_workout_session(
     return workouts_schema.WorkoutSessionRead.model_validate(row)
 
 
+# ---- schedule (planned workout dates, synced from the mobile calendar) ----
+
+
+@router.get("/schedule", response_model=list[workouts_schema.WorkoutScheduleRead])
+async def list_workout_schedule(
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+    date_from: Annotated[str | None, Query()] = None,
+    date_to: Annotated[str | None, Query()] = None,
+) -> list[workouts_schema.WorkoutScheduleRead]:
+    rows = workouts_crud.list_schedule(token_user_id, date_from, date_to, db)
+    return [workouts_schema.WorkoutScheduleRead.model_validate(r) for r in rows]
+
+
+@router.post("/schedule", response_model=list[workouts_schema.WorkoutScheduleRead], status_code=status.HTTP_201_CREATED)
+async def upsert_workout_schedule(
+    payload: list[workouts_schema.WorkoutScheduleEntryIn],
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:write"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> list[workouts_schema.WorkoutScheduleRead]:
+    """Bulk push from a client; (plan_id, date) duplicates are updated in place."""
+    rows = workouts_crud.upsert_schedule(token_user_id, payload, db)
+    return [workouts_schema.WorkoutScheduleRead.model_validate(r) for r in rows]
+
+
+@router.delete("/schedule/{schedule_id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_workout_schedule(
+    schedule_id: int,
+    _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:write"])],
+    token_user_id: Annotated[int, Depends(auth_dependencies.get_user_id_from_auth)],
+    db: Annotated[Session, Depends(core_database.get_db)],
+) -> None:
+    workouts_crud.delete_schedule_entry(token_user_id, schedule_id, db)
+
+
 @router.get("/statistics", response_model=workouts_schema.WorkoutStatistics)
 async def get_workout_statistics(
     _check_scopes: Annotated[Callable, Security(auth_dependencies.check_auth_scopes, scopes=["workouts:read"])],

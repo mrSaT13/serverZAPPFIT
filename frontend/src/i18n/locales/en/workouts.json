@@ -14,6 +14,9 @@
     "today": "Today",
     "legendSession": "workout",
     "legendRace": "race",
+    "legendPlanned": "planned",
+    "plannedWorkout": "Scheduled workout",
+    "done": "completed",
     "emptyDay": "No workouts on this day — pick another date or log a session."
   },
   "plansEmpty": {

@@ -24,6 +24,7 @@ import {
   deleteSession,
   fetchPlans,
   fetchProgress,
+  fetchSchedule,
   fetchSessions,
   fetchWorkoutStatistics,
   updatePlan,
@@ -49,6 +50,10 @@ const plansQuery = useQuery({ queryKey: queryKeys.workouts.plans(), queryFn: fet
 const sessionsQuery = useQuery({
   queryKey: queryKeys.workouts.sessions(),
   queryFn: () => fetchSessions(),
+})
+const scheduleQuery = useQuery({
+  queryKey: queryKeys.workouts.schedule(),
+  queryFn: () => fetchSchedule(),
 })
 const progressQuery = useQuery({ queryKey: queryKeys.workouts.progress(), queryFn: fetchProgress })
 const statisticsQuery = useQuery({
@@ -282,7 +287,8 @@ function planDays(plan: WorkoutPlan): string[] {
       <WorkoutCalendar
         :sessions="sessions"
         :competitions="competitionsQuery.data.value ?? []"
-        :is-loading="sessionsQuery.isPending.value || competitionsQuery.isPending.value"
+        :schedule="scheduleQuery.data.value ?? []"
+        :is-loading="sessionsQuery.isPending.value || competitionsQuery.isPending.value || scheduleQuery.isPending.value"
         @log-session="openSession(null)"
       />
     </template>

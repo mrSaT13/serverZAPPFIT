@@ -11,7 +11,7 @@ Design notes:
 from datetime import date as date_type
 from datetime import datetime as datetime_type
 
-from sqlalchemy import Date, DateTime, Float, ForeignKey, Integer, String
+from sqlalchemy import Boolean, Date, DateTime, Float, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.sql import func
 
@@ -61,6 +61,32 @@ class WorkoutExercise(Base):
     rest_s: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
     plan: Mapped["WorkoutPlan"] = relationship(back_populates="exercises")
+
+
+class WorkoutSchedule(Base):
+    """A planned (not yet completed) workout date — client calendar sync.
+
+    Rows are pushed by the mobile app (its local ``plan_schedule`` table) and
+    rendered on the web dashboard calendar. ``plan_id`` may dangle to NULL
+    (plan deleted locally); ``plan_name`` snapshot keeps the web display.
+    """
+
+    __tablename__ = "workout_schedule"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    plan_id: Mapped[int | None] = mapped_column(
+        ForeignKey("workout_plans.id", ondelete="SET NULL"), nullable=True, index=True
+    )
+    plan_name: Mapped[str | None] = mapped_column(String(250), nullable=True)
+    date: Mapped[date_type] = mapped_column(Date, nullable=False, index=True)
+    # Local "HH:MM" start time as scheduled on the device (optional).
+    time: Mapped[str | None] = mapped_column(String(5), nullable=True)
+    reminder_minutes: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    completed: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
+    created_at: Mapped[datetime_type] = mapped_column(
+        DateTime(timezone=True), server_default=func.now(), nullable=False
+    )
 
 
 class WorkoutSession(Base):

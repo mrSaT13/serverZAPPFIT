@@ -14,11 +14,12 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Skeleton } from '@/components/ui/skeleton'
 import type { Competition } from '@/features/competitions/services/competitions'
-import type { WorkoutSession } from '@/features/strength/services/workouts'
+import type { WorkoutScheduleEntry, WorkoutSession } from '@/features/strength/services/workouts'
 
 const props = defineProps<{
   sessions: WorkoutSession[]
   competitions: Competition[]
+  schedule?: WorkoutScheduleEntry[]
   isLoading: boolean
 }>()
 
@@ -67,6 +68,7 @@ interface DayCell {
   sessionCount: number
   setCount: number
   races: Competition[]
+  planned: WorkoutScheduleEntry[]
 }
 
 const weeks = computed<DayCell[][]>(() => {
@@ -93,11 +95,27 @@ const weeks = computed<DayCell[][]>(() => {
     list.push(c)
     racesByDay.set(day, list)
   }
+  const plannedByDay = new Map<string, WorkoutScheduleEntry[]>()
+  for (const p of props.schedule ?? []) {
+    const day = (p.date ?? '').slice(0, 10)
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue
+    const list = plannedByDay.get(day) ?? []
+    list.push(p)
+    plannedByDay.set(day, list)
+  }
 
   const cells: DayCell[] = []
-  for (let i = 0; i < leading; i++) {
-    cells.push({ key: `blank-${i}`, label: null, iso: null, isToday: false, sessionCount: 0, setCount: 0, races: [] })
-  }
+  const blank = (key: string): DayCell => ({
+    key,
+    label: null,
+    iso: null,
+    isToday: false,
+    sessionCount: 0,
+    setCount: 0,
+    races: [],
+    planned: [],
+  })
+  for (let i = 0; i < leading; i++) cells.push(blank(`blank-${i}`))
   for (let d = 1; d <= daysInMonth; d++) {
     const iso = isoDay(year, month, d)
     const daySessions = sessionsByDay.get(iso) ?? []
@@ -109,15 +127,18 @@ const weeks = computed<DayCell[][]>(() => {
       sessionCount: daySessions.length,
       setCount: daySessions.reduce((sum, s) => sum + (s.sets?.length ?? 0), 0),
       races: racesByDay.get(iso) ?? [],
+      planned: plannedByDay.get(iso) ?? [],
     })
   }
-  while (cells.length % 7 !== 0) {
-    cells.push({ key: `trail-${cells.length}`, label: null, iso: null, isToday: false, sessionCount: 0, setCount: 0, races: [] })
-  }
+  while (cells.length % 7 !== 0) cells.push(blank(`trail-${cells.length}`))
   const rows: DayCell[][] = []
   for (let i = 0; i < cells.length; i += 7) rows.push(cells.slice(i, i + 7))
   return rows
 })
+
+const selectedPlanned = computed(() =>
+  (props.schedule ?? []).filter((p) => (p.date ?? '').slice(0, 10) === selectedDay.value),
+)
 
 const selectedSessions = computed(() =>
   props.sessions.filter((s) => (s.date ?? '').slice(0, 10) === selectedDay.value),
@@ -211,6 +232,7 @@ function goToday(): void {
                 class="size-3.5 text-warning"
                 aria-hidden="true"
               />
+              <span v-if="cell.planned.length > 0 && cell.sessionCount === 0" class="size-1.5 rounded-full border border-primary" aria-hidden="true" />
             </button>
           </template>
         </div>
@@ -218,6 +240,7 @@ function goToday(): void {
         <div class="flex items-center gap-2 text-xs">
           <span class="flex items-center gap-1"><span class="size-1.5 rounded-full bg-primary" /> {{ t('workouts.calendar.legendSession') }}</span>
           <span class="flex items-center gap-1"><Trophy class="size-3.5 text-warning" /> {{ t('workouts.calendar.legendRace') }}</span>
+          <span v-if="(schedule?.length ?? 0) > 0" class="flex items-center gap-1"><span class="size-1.5 rounded-full border border-primary" /> {{ t('workouts.calendar.legendPlanned') }}</span>
         </div>
       </Card>
 
@@ -239,6 +262,19 @@ function goToday(): void {
             <Badge variant="secondary" class="shrink-0">{{ race.distance_km }} км</Badge>
           </div>
         </div>
+        <div v-if="selectedPlanned.length > 0" class="flex flex-col gap-1">
+          <div
+            v-for="p in selectedPlanned"
+            :key="p.id"
+            class="flex items-center gap-2 rounded-input border border-primary/30 bg-primary/5 px-3 py-2"
+          >
+            <CalendarDays class="size-4 shrink-0 text-primary" />
+            <span class="min-w-0 flex-1 truncate text-body font-medium">
+              {{ p.plan_name || t('workouts.calendar.plannedWorkout') }}
+            </span>
+            <Badge v-if="p.completed" variant="secondary" class="shrink-0">{{ t('workouts.calendar.done') }}</Badge>
+          </div>
+        </div>
         <div v-if="selectedSessions.length > 0" class="flex flex-col gap-1">
           <div
             v-for="s in selectedSessions"
@@ -254,7 +290,10 @@ function goToday(): void {
             </div>
           </div>
         </div>
-        <p v-if="selectedSessions.length === 0 && selectedRaces.length === 0" class="text-hint">
+        <p
+          v-if="selectedSessions.length === 0 && selectedRaces.length === 0 && selectedPlanned.length === 0"
+          class="text-hint"
+        >
           {{ t('workouts.calendar.emptyDay') }}
         </p>
       </Card>

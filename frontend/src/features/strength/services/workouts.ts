@@ -60,6 +60,19 @@ export interface WorkoutSession {
   sets: Array<SetLog & { id: number; session_id: number }>
 }
 
+/** Planned (not yet completed) workout date, synced from the mobile app. */
+export interface WorkoutScheduleEntry {
+  id: number
+  user_id: number
+  plan_id?: number | null
+  plan_name?: string | null
+  date: string
+  time?: string | null
+  reminder_minutes?: number | null
+  completed: boolean
+  created_at?: string | null
+}
+
 export interface ExercisePoint {
   date: string
   best_weight_kg?: number | null
@@ -240,6 +253,16 @@ export function createSession(body: {
 
 export async function deleteSession(id: number): Promise<void> {
   await apiFetch<void>(`/workouts/sessions/${id}`, { method: 'DELETE', responseType: 'void' })
+}
+
+// ---- schedule (planned workout dates, synced from the mobile app) ----
+
+export function fetchSchedule(dateFrom?: string, dateTo?: string): Promise<WorkoutScheduleEntry[]> {
+  const qs = new URLSearchParams()
+  if (dateFrom) qs.set('date_from', dateFrom)
+  if (dateTo) qs.set('date_to', dateTo)
+  const q = qs.size ? `?${qs}` : ''
+  return apiFetch<WorkoutScheduleEntry[]>(`/workouts/schedule${q}`)
 }
 
 // ---- progress ----

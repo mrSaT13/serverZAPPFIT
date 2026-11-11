@@ -11,6 +11,68 @@ import core.decorators as core_decorators
 import workouts.models as workouts_models
 import workouts.schema as workouts_schema
 
+# ---- schedule (planned workout dates, synced from the mobile calendar) ----
+
+
+@core_decorators.handle_db_errors
+def list_schedule(
+    user_id: int,
+    date_from: str | None,
+    date_to: str | None,
+    db: Session,
+) -> list[workouts_models.WorkoutSchedule]:
+    stmt = select(workouts_models.WorkoutSchedule).where(workouts_models.WorkoutSchedule.user_id == user_id)
+    if date_from:
+        stmt = stmt.where(workouts_models.WorkoutSchedule.date >= date_from)
+    if date_to:
+        stmt = stmt.where(workouts_models.WorkoutSchedule.date <= date_to)
+    stmt = stmt.order_by(workouts_models.WorkoutSchedule.date)
+    return list(db.scalars(stmt).all())
+
+
+@core_decorators.handle_db_errors
+def upsert_schedule(
+    user_id: int,
+    items: list[workouts_schema.WorkoutScheduleEntryIn],
+    db: Session,
+) -> list[workouts_models.WorkoutSchedule]:
+    """Push schedule entries from a client; existing (plan_id, date) rows are
+    updated instead of duplicated so re-syncs stay idempotent."""
+    result: list[workouts_models.WorkoutSchedule] = []
+    for item in items:
+        stmt = select(workouts_models.WorkoutSchedule).where(
+            workouts_models.WorkoutSchedule.user_id == user_id,
+            workouts_models.WorkoutSchedule.plan_id == item.plan_id,
+            workouts_models.WorkoutSchedule.date == item.date,
+        )
+        row = db.scalars(stmt).first()
+        if row:
+            row.plan_name = item.plan_name
+            row.time = item.time
+            row.reminder_minutes = item.reminder_minutes
+            row.completed = item.completed
+        else:
+            row = workouts_models.WorkoutSchedule(**item.model_dump(), user_id=user_id)
+            db.add(row)
+        result.append(row)
+    db.commit()
+    for row in result:
+        db.refresh(row)
+    return result
+
+
+@core_decorators.handle_db_errors
+def delete_schedule_entry(user_id: int, schedule_id: int, db: Session) -> None:
+    stmt = select(workouts_models.WorkoutSchedule).where(
+        workouts_models.WorkoutSchedule.id == schedule_id, workouts_models.WorkoutSchedule.user_id == user_id
+    )
+    row = db.scalars(stmt).first()
+    if not row:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Schedule entry not found")
+    db.delete(row)
+    db.commit()
+
+
 # ---- plans ----
 
 
